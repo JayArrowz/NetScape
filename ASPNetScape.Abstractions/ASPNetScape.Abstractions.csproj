@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="BouncyCastle" Version="1.8.5" />
+    <PackageReference Include="DotNetty.Codecs" Version="0.6.0" />
+    <PackageReference Include="DotNetty.Transport" Version="0.6.0" />
+    <PackageReference Include="SevenZip" Version="19.0.0" />
+    <PackageReference Include="SharpZipLib" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\IO\Messaging\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ASPNetScape.GameServer\ASPNetScape.Modules.Server.csproj" />
+    <ProjectReference Include="..\ASPNetScape.Modules.Logging.SeriLog\ASPNetScape.Modules.Logging.SeriLog.csproj" />
+    <ProjectReference Include="..\ASPNetScape.Modules.LoginProtocolSevenOneEight\ASPNetScape.Modules.SevenOneEight.LoginProtocol.csproj" />
+    <ProjectReference Include="..\ASPNetScape.Modules.Rs2LoginProtocol\ASPNetScape.Modules.ThreeOneSeven.LoginProtocol.csproj" />
+    <ProjectReference Include="..\ASPNetScape.Modules.SevenOneEight.Cache\ASPNetScape.Modules.SevenOneEight.Cache.csproj" />
+  </ItemGroup>
+
+</Project>
