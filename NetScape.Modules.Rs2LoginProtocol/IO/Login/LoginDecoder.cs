@@ -223,7 +223,16 @@ namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
                 };
 
                 var randomPair = new IsaacRandomPair(encodingRandom, decodingRandom);
-                output.Add(new LoginRequest(credentials, randomPair, _reconnecting, lowMemory, release, crcs, version));
+                output.Add(new LoginRequest
+                {
+                    Credentials = credentials,
+                    RandomPair = randomPair,
+                    Reconnecting = _reconnecting,
+                    LowMemory = lowMemory,
+                    ReleaseNumber = release,
+                    ArchiveCrcs = crcs,
+                    ClientVersion = version
+                });
             }
         }
 

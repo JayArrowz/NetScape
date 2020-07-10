@@ -233,8 +233,9 @@ namespace NetScape.Abstractions.Model
         /// <returns> {@code true} if this position is inside the specified region, otherwise {@code false}. </returns>
         public bool Inside(Region region)
         {
-            RegionCoordinates coordinates = region.Coordinates;
-            return coordinates.Equals(RegionCoordinates);
+            //RegionCoordinates coordinates = region.Coordinates;
+            //return coordinates.Equals(RegionCoordinates);
+            return true;
         }
 
         /// <summary>
