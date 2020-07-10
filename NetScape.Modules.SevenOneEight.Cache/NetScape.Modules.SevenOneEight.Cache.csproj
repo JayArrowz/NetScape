@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="BouncyCastle.NetCore" Version="1.8.5" />
+    <PackageReference Include="DotNetty.Buffers" Version="0.6.0" />
+    <PackageReference Include="FlacLibSharp" Version="3.2.0" />
+    <PackageReference Include="NVorbis" Version="0.8.6" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="SevenZip" Version="19.0.0" />
+    <PackageReference Include="SharpZipLib" Version="1.2.0" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.112" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
+  </ItemGroup>
+</Project>
