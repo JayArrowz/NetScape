@@ -2,7 +2,7 @@
 {
     public enum HandshakeType
     {
-        SERVICE_GAME = 14,
-        SERVICE_UPDATE = 15
+        ServiceGame = 14,
+        ServiceUpdate = 15
     }
 }

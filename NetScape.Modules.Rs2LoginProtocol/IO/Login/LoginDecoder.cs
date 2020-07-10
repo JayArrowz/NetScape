@@ -213,7 +213,15 @@ namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
 
                 var encodingRandom = new IsaacRandom(seed);
 
-                var credentials = new PlayerCredentials(username, password, _usernameHash, uid, hostAddress);
+                var credentials = new PlayerCredentials
+                {
+                    Username = username,
+                    Password = password,
+                    EncodedUsername = _usernameHash,
+                    Uid = uid,
+                    HostAddress = hostAddress
+                };
+
                 var randomPair = new IsaacRandomPair(encodingRandom, decodingRandom);
                 output.Add(new LoginRequest(credentials, randomPair, _reconnecting, lowMemory, release, crcs, version));
             }

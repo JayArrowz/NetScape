@@ -23,14 +23,14 @@ namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
                 return;
             }
 
-            int id = buffer.ReadByte();
-            _logger.Debug($"Incoming Handshake Decoder Opcode: {id}");
+            var id = (int) buffer.ReadByte();
+            var handshakeType = (HandshakeType)id;
+            _logger.Debug($"Incoming Handshake Decoder Opcode: {id} Type: {handshakeType}");
             switch (id)
             {
-                case (int)HandshakeType.SERVICE_GAME:
+                case (int)HandshakeType.ServiceGame:
                     ctx.Channel.Pipeline.AddLast(nameof(LoginEncoder), new LoginEncoder());
                     ctx.Channel.Pipeline.AddAfter(nameof(LoginEncoder), nameof(LoginDecoder), new LoginDecoder(_logger));
-                    ctx.Channel.Pipeline.AddAfter(nameof(LoginDecoder), nameof(LoginHandler), new LoginHandler());
                     break;
 
                 //case HandshakeType.SERVICE_UPDATE:
@@ -47,7 +47,6 @@ namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
             }
 
             ctx.Channel.Pipeline.Remove(this);
-            var handshakeType = (HandshakeType)id;
             output.Add(handshakeType);
         }
     }
