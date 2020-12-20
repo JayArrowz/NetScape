@@ -14,6 +14,7 @@ using NetScape.Abstractions.Login.Model;
 using NetScape.Abstractions.Util;
 using NetScape.Abstractions.IO.Util;
 using NetScape.Abstractions.Interfaces.Login;
+using System.Threading.Tasks;
 
 namespace NetScape.Modules.LoginProtocol.Handlers
 {
@@ -56,7 +57,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
 
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output, LoginDecoderState state)
         {
-            _logger.Debug("Login Request Recieved: {0}", state);
+            _logger.Debug("Login Request Recieved: {0} IP: {1}", state, context.Channel.RemoteAddress);
             switch (state)
             {
                 case LoginDecoderState.LoginHandshake:
@@ -196,13 +197,6 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 var socketAddress = (IPEndPoint)ctx.Channel.RemoteAddress;
                 var hostAddress = socketAddress.Address.ToString();
 
-                if (password.Length < 4 || password.Length > 20 || string.IsNullOrEmpty(username) || username.Length > 12)
-                {
-                    _logger.Information("Username ('{0}') or password did not pass validation.", username);
-                    WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
-                    return;
-                }
-
                 var seed = new int[4];
                 seed[0] = (int)(clientSeed >> 32);
                 seed[1] = (int)clientSeed;
@@ -237,26 +231,16 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                     ArchiveCrcs = crcs,
                     ClientVersion = version
                 };
-                
-                var response = _loginProcessor.Process(request);
-                ctx.WriteAndFlushAsync(response).ContinueWith(request =>
+
+                _loginProcessor.ProcessAsync(request).ContinueWith(loginTask =>
                 {
-                    if(response.Status != LoginStatus.StatusOk)
+                    var loginResult = loginTask.Result;
+                    ctx.WriteAndFlushAsync(loginResult).ContinueWith(sendResultTask =>
                     {
-                        ctx.DisconnectAsync();
-                    }
+                        sendResultTask.Wait();
+                        HandleLoginResponseFuture(loginResult.Status, sendResultTask, ctx);
+                    });
                 });
-                /*output.Add(new LoginRequest
-                {
-                    Credentials = credentials,
-                    RandomPair = randomPair,
-                    Reconnecting = _reconnecting,
-                    LowMemory = lowMemory,
-                    ReleaseNumber = release,
-                    ArchiveCrcs = crcs,
-                    ClientVersion = version
-                });*/
-                //ctx.WriteAndFlushAsync(new LoginResponse { Status = LoginStatus.StatusOk, Rights = 0 });
             }
         }
 
@@ -271,10 +255,18 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             var buffer = ctx.Allocator.Buffer(sizeof(byte));
             buffer.WriteByte((int)response);
             var future = ctx.WriteAndFlushAsync(buffer);
+            HandleLoginResponseFuture(response, future, ctx);
+        }
 
+        private void HandleLoginResponseFuture(LoginStatus response, Task future, IChannelHandlerContext ctx)
+        {
             if (response != LoginStatus.StatusOk)
             {
                 future.ContinueWith(v => ctx.CloseAsync());
+            } else
+            {
+                ctx.Channel.Pipeline.Remove(nameof(LoginEncoder));
+                ctx.Channel.Pipeline.Remove(nameof(LoginDecoder));
             }
         }
     }

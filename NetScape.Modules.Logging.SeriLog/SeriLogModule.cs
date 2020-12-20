@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Reflection;
 using Autofac;
+using Microsoft.Extensions.Configuration;
 using Serilog;
+using Serilog.Extensions.Logging;
 using Serilog.Events;
 using Module = Autofac.Module;
 
@@ -9,16 +11,17 @@ namespace NetScape.Modules.Logging.SeriLog
 {
     public sealed class SeriLogModule : Module
     {
+        private readonly IConfigurationRoot _configurationRoot;
+
+        public SeriLogModule(IConfigurationRoot configurationRoot)
+        {
+            _configurationRoot = configurationRoot;
+        }
+
         protected override void Load(ContainerBuilder builder)
         {
-            var loggingDir = AppDomain.CurrentDomain.GetData("DataDirectory") + "/Log-{Date}.txt";
-
             var loggerConfig = new LoggerConfiguration()
-                .WriteTo.Console()
-                .WriteTo.File(loggingDir,
-                    rollingInterval: RollingInterval.Day,
-                    outputTemplate: "{Timestamp:HH:mm:ss} [{Level:u3}] ({MachineName}/{ThreadId}) {Message} ({SourceContext}){NewLine}{Exception}");
-            loggerConfig.MinimumLevel.Verbose();
+                .ReadFrom.Configuration(_configurationRoot);
 
             var logger = loggerConfig.CreateLogger()
                 .ForContext(MethodBase.GetCurrentMethod().DeclaringType);

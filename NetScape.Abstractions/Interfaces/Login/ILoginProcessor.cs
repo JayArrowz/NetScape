@@ -1,9 +1,10 @@
 ﻿using NetScape.Abstractions.Login.Model;
+using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.Interfaces.Login
 {
     public interface ILoginProcessor<TResponse>
     {
-        LoginResponse<TResponse> Process(LoginRequest request);
+        Task<LoginResponse<TResponse>> ProcessAsync(LoginRequest request);
     }
 }
