@@ -234,14 +234,15 @@ namespace NetScape.Modules.LoginProtocol.Handlers
 
                 _loginProcessor.ProcessAsync(request).ContinueWith(loginTask =>
                 {
+                    //TODO proper cancellation
+                    if (!loginTask.Wait(10000))
+                    {
+                        WriteResponseCode(ctx, LoginStatus.StatusLoginServerOffline);
+                    }
+
                     var loginResult = loginTask.Result;
                     ctx.WriteAndFlushAsync(loginResult).ContinueWith(sendResultTask =>
                     {
-                        //TODO proper cancellation
-                        if(!sendResultTask.Wait(10000))
-                        {
-                            WriteResponseCode(ctx, LoginStatus.StatusLoginServerOffline);
-                        }
                         HandleLoginResponseFuture(loginResult.Status, sendResultTask, ctx);
                     });
                 });
