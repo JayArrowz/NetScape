@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using NetScape.DAL;
+using NetScape.Modules.DAL;
 
 namespace NetScape
 {

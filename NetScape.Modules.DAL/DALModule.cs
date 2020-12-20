@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using NetScape.Abstractions.FileSystem;
 
-namespace NetScape.DAL
+namespace NetScape.Modules.DAL
 {
     public class DALModule : Module
     {

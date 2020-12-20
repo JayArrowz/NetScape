@@ -6,7 +6,7 @@ using NetScape.Abstractions.Model.IO.Login;
 using System;
 using System.Threading.Tasks;
 
-namespace NetScape.DAL
+namespace NetScape.Modules.DAL
 {
     public class EntityFrameworkPlayerSerializer : IPlayerSerializer
     {

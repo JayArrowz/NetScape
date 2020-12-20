@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.LoginProto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Cache", "NetScape.Modules.Cache\NetScape.Modules.Cache.csproj", "{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.DAL", "NetScape.DAL\NetScape.DAL.csproj", "{22C15816-2EB8-403F-B166-7A508ED73470}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.DAL", "NetScape.Modules.DAL\NetScape.Modules.DAL.csproj", "{22C15816-2EB8-403F-B166-7A508ED73470}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

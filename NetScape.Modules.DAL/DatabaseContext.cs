@@ -6,7 +6,7 @@ using NetScape.Abstractions.Model.Game;
 
 #nullable disable
 
-namespace NetScape.DAL
+namespace NetScape.Modules.DAL
 {
     public partial class DatabaseContext : DbContext
     {
