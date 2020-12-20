@@ -9,6 +9,9 @@ namespace NetScape.Modules.LoginProtocol
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<LoginProvider>().As<ILoginProvider>();
+            builder.RegisterType<HandshakeDecoder>();
+            builder.RegisterType<LoginEncoder>();
+            builder.RegisterType<LoginDecoder>();
         }
     }
 }

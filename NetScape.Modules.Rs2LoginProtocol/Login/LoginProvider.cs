@@ -2,20 +2,22 @@
 using NetScape.Abstractions.Interfaces.Login;
 using DotNetty.Transport.Channels;
 using Serilog;
+using Autofac;
+using NetScape.Abstractions.Interfaces;
 
 namespace NetScape.Modules.LoginProtocol.Login
 {
     public class LoginProvider : ILoginProvider
     {
-        private readonly ILogger _logger;
+        private readonly IContainer _container;
 
-        public LoginProvider(ILogger logger)
+        public LoginProvider(ContainerProvider containerProvider)
         {
-            _logger = logger;
+            _container = containerProvider.Container;
         }
 
-        public Func<IChannelHandler[]> Handlers => () => new IChannelHandler[] { 
-            new HandshakeDecoder(_logger) 
+        public Func<IChannelHandler[]> Handlers => () => new IChannelHandler[] {
+            _container.Resolve<HandshakeDecoder>() 
         };
     }
 }

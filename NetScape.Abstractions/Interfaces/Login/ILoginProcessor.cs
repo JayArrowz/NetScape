@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NetScape.Abstractions.Login.Model;
 
 namespace NetScape.Abstractions.Interfaces.Login
 {
-    interface ILoginProcessor
+    public interface ILoginProcessor<TResponse>
     {
+        TResponse Process(LoginRequest request);
     }
 }

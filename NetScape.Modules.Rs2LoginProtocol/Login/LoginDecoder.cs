@@ -52,7 +52,7 @@ namespace NetScape.Modules.LoginProtocol.Login
 
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output, LoginDecoderState state)
         {
-            _logger.Debug($"Login Request Recieved: {state}");
+            _logger.Debug("Login Request Recieved: {0}", state);
             switch (state)
             {
                 case LoginDecoderState.LoginHandshake:
@@ -137,7 +137,7 @@ namespace NetScape.Modules.LoginProtocol.Login
                 var memoryStatus = payload.ReadByte();
                 if (memoryStatus != 0 && memoryStatus != 1)
                 {
-                    _logger.Information("Login memoryStatus (" + memoryStatus + ") not in expected range of [0, 1].");
+                    _logger.Information("Login memoryStatus ({0}) not in expected range of [0, 1].", memoryStatus);
                     WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
@@ -153,7 +153,7 @@ namespace NetScape.Modules.LoginProtocol.Login
                 var length = payload.ReadByte();
                 if (length != _loginLength - 41)
                 {
-                    _logger.Information("Login packet unexpected length (" + length + ")");
+                    _logger.Information("Login packet unexpected length ({0})", length);
                     WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
@@ -194,7 +194,7 @@ namespace NetScape.Modules.LoginProtocol.Login
 
                 if (password.Length < 4 || password.Length > 20 || string.IsNullOrEmpty(username) || username.Length > 12)
                 {
-                    _logger.Information("Username ('" + username + "') or password did not pass validation.");
+                    _logger.Information("Username ('{0}') or password did not pass validation.", username);
                     WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }

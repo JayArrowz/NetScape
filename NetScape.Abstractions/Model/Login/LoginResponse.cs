@@ -5,7 +5,7 @@
      *
      * @author Graham
      */
-    public sealed class LoginResponse<T>
+    public sealed class LoginResponse<TResponse>
     {
 
         /**
@@ -21,7 +21,7 @@
         /**
          * The login status.
          */
-        public T Status { get; set; }
+        public TResponse Status { get; set; }
 
     }
 }

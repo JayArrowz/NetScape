@@ -22,7 +22,7 @@ namespace NetScape.Modules.Logging.SeriLog
 
             var logger = loggerConfig.CreateLogger()
                 .ForContext(MethodBase.GetCurrentMethod().DeclaringType);
-
+            Log.Logger = logger;
             builder.RegisterInstance(logger).As<ILogger>();
         }
     }

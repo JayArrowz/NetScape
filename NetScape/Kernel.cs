@@ -7,6 +7,7 @@ using System;
 using NetScape.Modules.SevenOneEight.Cache;
 using System.Threading.Tasks;
 using NetScape.Modules.LoginProtocol;
+using NetScape.Abstractions.Interfaces;
 
 namespace NetScape
 {
@@ -20,13 +21,17 @@ namespace NetScape
             containerBuilder.RegisterModule(new CacheModule());
             containerBuilder.RegisterModule(new GameServerModule("127.0.0.1", 43594));
             containerBuilder.RegisterType<FileSystem>().As<IFileSystem>();
-            var container = containerBuilder.Build();
-            var gameServer = container.Resolve<IGameServer>();
-            _ = gameServer.BindAsync();
+            containerBuilder.RegisterType<ContainerProvider>().SingleInstance();
 
-            //TODO: Better way
-            Console.ReadLine();
-            await container.DisposeAsync();
+            var container = containerBuilder.Build();
+            container.Resolve<ContainerProvider>().Container = container;
+
+            using (ILifetimeScope scope = container.BeginLifetimeScope())
+            {
+                var gameServer = container.Resolve<IGameServer>();
+                _ = gameServer.BindAsync();
+                Console.ReadLine();
+            }
         }
     }
 }

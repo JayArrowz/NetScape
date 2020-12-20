@@ -10,10 +10,14 @@ namespace NetScape.Modules.LoginProtocol.Login
     public class HandshakeDecoder : ByteToMessageDecoder
     {
         private readonly ILogger _logger;
+        private readonly LoginEncoder _loginEncoder;
+        private readonly LoginDecoder _loginDecoder;
 
-        public HandshakeDecoder(ILogger logger)
+        public HandshakeDecoder(ILogger logger, LoginEncoder loginEncoder, LoginDecoder loginDecoder)
         {
             _logger = logger;
+            _loginEncoder = loginEncoder;
+            _loginDecoder = loginDecoder;
         }
 
         protected override void Decode(IChannelHandlerContext ctx, IByteBuffer buffer, List<object> output)
@@ -25,12 +29,12 @@ namespace NetScape.Modules.LoginProtocol.Login
 
             var id = buffer.ReadByte();
             var handshakeType = (HandshakeType)id;
-            _logger.Debug($"Incoming Handshake Decoder Opcode: {id} Type: {handshakeType}");
+            _logger.Debug("Incoming Handshake Decoder Opcode: {0} Type: {1}", id, handshakeType);
             switch (handshakeType)
             {
                 case HandshakeType.ServiceGame:
-                    ctx.Channel.Pipeline.AddLast(nameof(LoginEncoder), new LoginEncoder());
-                    ctx.Channel.Pipeline.AddAfter(nameof(LoginEncoder), nameof(LoginDecoder), new LoginDecoder(_logger));
+                    ctx.Channel.Pipeline.AddLast(nameof(LoginEncoder), _loginEncoder);
+                    ctx.Channel.Pipeline.AddAfter(nameof(LoginEncoder), nameof(LoginDecoder), _loginDecoder);
                     break;
 
                 //case HandshakeType.SERVICE_UPDATE:
@@ -42,7 +46,7 @@ namespace NetScape.Modules.LoginProtocol.Login
                 //    break;
 
                 default:
-                    _logger.Information($"Unexpected handshake request received: {id}");
+                    _logger.Information("Unexpected handshake request received: {0}", id);
                     return;
             }
 
