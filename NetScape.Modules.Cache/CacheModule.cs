@@ -3,7 +3,7 @@ using NetScape.Modules.Cache;
 using NetScape.Modules.Cache.RuneTek5;
 using Autofac;
 
-namespace NetScape.Modules.SevenOneEight.Cache
+namespace NetScape.Modules.Cache
 {
     public class CacheModule : Module
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Exceptions
+namespace NetScape.Modules.Cache.Exceptions
 {
     [Serializable]
     public class SoundtrackException : Exception

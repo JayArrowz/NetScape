@@ -10,7 +10,7 @@ using NetScape.DAL;
 using NetScape.Modules.Logging.SeriLog;
 using NetScape.Modules.LoginProtocol;
 using NetScape.Modules.Server;
-using NetScape.Modules.SevenOneEight.Cache;
+using NetScape.Modules.Cache;
 using System;
 using System.IO;
 

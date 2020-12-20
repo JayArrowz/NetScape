@@ -38,8 +38,8 @@
     <ProjectReference Include="..\NetScape.DAL\NetScape.DAL.csproj" />
     <ProjectReference Include="..\NetScape.GameServer\NetScape.Modules.Server.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Logging.SeriLog\NetScape.Modules.Logging.SeriLog.csproj" />
-    <ProjectReference Include="..\NetScape.Modules.Rs2LoginProtocol\NetScape.Modules.LoginProtocol.csproj" />
-    <ProjectReference Include="..\NetScape.Modules.SevenOneEight.Cache\NetScape.Modules.Cache.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.LoginProtocol\NetScape.Modules.LoginProtocol.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Cache\NetScape.Modules.Cache.csproj" />
   </ItemGroup>
 
 </Project>
