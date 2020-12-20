@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NetScape.Abstractions.FileSystem;
+using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.IO.Login;
 using System;
@@ -59,7 +60,7 @@ namespace NetScape.DAL
                 var playerInDatabase = await GetAsync(playerCredentials.Username, dbContext);
                 if(playerInDatabase == null)
                 {
-                    var defaultPlayer = new Player { Username = playerCredentials.Username, Password = playerCredentials.Password };
+                    var defaultPlayer = new Player { Username = playerCredentials.Username, Password = playerCredentials.Password, Position = new Position(3333, 3333) };
                     dbContext.Attach(defaultPlayer);
                     dbContext.Add(defaultPlayer);
                     await dbContext.SaveChangesAsync();

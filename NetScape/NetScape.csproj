@@ -42,4 +42,8 @@
     <ProjectReference Include="..\NetScape.Modules.Cache\NetScape.Modules.Cache.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

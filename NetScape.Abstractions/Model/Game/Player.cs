@@ -2,7 +2,7 @@
 
 namespace NetScape.Abstractions.Model.Game
 {
-    public class Player
+    public class Player : Entity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

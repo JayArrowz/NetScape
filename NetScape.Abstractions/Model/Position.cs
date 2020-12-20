@@ -1,5 +1,7 @@
-﻿using NetScape.Abstractions.Model.Area;
+﻿using Microsoft.EntityFrameworkCore;
+using NetScape.Abstractions.Model.Area;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NetScape.Abstractions.Model
 {
@@ -8,7 +10,8 @@ namespace NetScape.Abstractions.Model
     /// 
     /// @author Graham
     /// </summary>
-    public sealed class Position
+    [Owned]
+    public class Position
     {
 
         /// <summary>
@@ -22,17 +25,17 @@ namespace NetScape.Abstractions.Model
         public const int MAX_DISTANCE = 15;
 
         /// <summary>
-        /// The packed integer containing the {@code height, x}, and {@code y} variables.
-        /// </summary>
-        private readonly int packed;
-
-        /// <summary>
         /// Creates a position at the default height.
         /// </summary>
         /// <param name="x"> The x coordinate. </param>
         /// <param name="y"> The y coordinate. </param>
         public Position(int x, int y) : this(x, y, 0)
         {
+        }
+
+        public Position() : this(0, 0, 0)
+        {
+
         }
 
         /// <summary>
@@ -43,7 +46,9 @@ namespace NetScape.Abstractions.Model
         /// <param name="height"> The height. </param>
         public Position(int x, int y, int height)
         {
-            packed = height << 30 | (y & 0x7FFF) << 15 | x & 0x7FFF;
+            X = x;
+            Y = y;
+            Height = height;
         }
 
         public override bool Equals(object obj)
@@ -51,7 +56,7 @@ namespace NetScape.Abstractions.Model
             if (obj is Position)
             {
                 Position other = (Position)obj;
-                return packed == other.packed;
+                return GetHashCode() == other.GetHashCode();
             }
 
             return false;
@@ -61,6 +66,7 @@ namespace NetScape.Abstractions.Model
         /// Gets the x coordinate of the central region.
         /// </summary>
         /// <returns> The x coordinate of the central region. </returns>
+        [NotMapped]
         public int CentralRegionX
         {
             get
@@ -73,6 +79,7 @@ namespace NetScape.Abstractions.Model
         /// Gets the y coordinate of the central region.
         /// </summary>
         /// <returns> The y coordinate of the central region. </returns>
+        [NotMapped]
         public int CentralRegionY
         {
             get
@@ -86,7 +93,7 @@ namespace NetScape.Abstractions.Model
         /// </summary>
         /// <param name="other"> The other position. </param>
         /// <returns> The distance. </returns>
-        public int getDistance(Position other)
+        public int GetDistance(Position other)
         {
             int deltaX = X - other.X;
             int deltaY = Y - other.Y;
@@ -99,16 +106,15 @@ namespace NetScape.Abstractions.Model
         /// <returns> The height level. </returns>
         public int Height
         {
-            get
-            {
-                return (int)((uint)packed >> 30);
-            }
+            get;
+            set;
         }
 
         /// <summary>
         /// Gets the x coordinate inside the region of this position.
         /// </summary>
         /// <returns> The local x coordinate. </returns>
+        [NotMapped]
         public int LocalX
         {
             get
@@ -131,11 +137,12 @@ namespace NetScape.Abstractions.Model
         /// Gets the y coordinate inside the region of this position.
         /// </summary>
         /// <returns> The local y coordinate. </returns>
+        [NotMapped]
         public int LocalY
         {
             get
             {
-                return getLocalY(this);
+                return GetLocalY(this);
             }
         }
 
@@ -144,7 +151,7 @@ namespace NetScape.Abstractions.Model
         /// </summary>
         /// <param name="base"> The base position. </param>
         /// <returns> The local y coordinate. </returns>
-        public int getLocalY(Position @base)
+        public int GetLocalY(Position @base)
         {
             return Y - @base.TopLeftRegionY * 8;
         }
@@ -154,7 +161,7 @@ namespace NetScape.Abstractions.Model
         /// </summary>
         /// <param name="other"> The other position. </param>
         /// <returns> The longest horizontal or vertical delta. </returns>
-        public int getLongestDelta(Position other)
+        public int GetLongestDelta(Position other)
         {
             int deltaX = Math.Abs(X - other.X);
             int deltaY = Math.Abs(Y - other.Y);
@@ -165,6 +172,7 @@ namespace NetScape.Abstractions.Model
         /// Returns the <seealso cref="RegionCoordinates"/> of the <seealso cref="Region"/> this position is inside.
         /// </summary>
         /// <returns> The region coordinates. </returns>
+        [NotMapped]
         public RegionCoordinates RegionCoordinates
         {
             get
@@ -177,6 +185,7 @@ namespace NetScape.Abstractions.Model
         /// Gets the x coordinate of the region this position is in.
         /// </summary>
         /// <returns> The region x coordinate. </returns>
+        [NotMapped]
         public int TopLeftRegionX
         {
             get
@@ -189,6 +198,7 @@ namespace NetScape.Abstractions.Model
         /// Gets the y coordinate of the region this position is in.
         /// </summary>
         /// <returns> The region y coordinate. </returns>
+        [NotMapped]
         public int TopLeftRegionY
         {
             get
@@ -203,10 +213,8 @@ namespace NetScape.Abstractions.Model
         /// <returns> The x coordinate. </returns>
         public int X
         {
-            get
-            {
-                return packed & 0x7FFF;
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -215,15 +223,13 @@ namespace NetScape.Abstractions.Model
         /// <returns> The y coordinate. </returns>
         public int Y
         {
-            get
-            {
-                return packed >> 15 & 0x7FFF;
-            }
+            get;
+            set;
         }
 
         public override int GetHashCode()
         {
-            return packed;
+            return Height << 30 | (Y & 0x7FFF) << 15 | X & 0x7FFF;
         }
 
         /// <summary>

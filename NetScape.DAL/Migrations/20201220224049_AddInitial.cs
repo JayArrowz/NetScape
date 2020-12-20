@@ -14,7 +14,10 @@ namespace NetScape.DAL.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Username = table.Column<string>(type: "text", nullable: true),
-                    Password = table.Column<string>(type: "text", nullable: true)
+                    Password = table.Column<string>(type: "text", nullable: true),
+                    Position_Height = table.Column<int>(type: "integer", nullable: true),
+                    Position_X = table.Column<int>(type: "integer", nullable: true),
+                    Position_Y = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {

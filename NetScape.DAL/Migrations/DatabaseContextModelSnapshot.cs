@@ -36,6 +36,35 @@ namespace NetScape.DAL.Migrations
 
                     b.ToTable("Players");
                 });
+
+            modelBuilder.Entity("NetScape.Abstractions.Model.Game.Player", b =>
+                {
+                    b.OwnsOne("NetScape.Abstractions.Model.Position", "Position", b1 =>
+                        {
+                            b1.Property<int>("PlayerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("integer")
+                                .UseIdentityByDefaultColumn();
+
+                            b1.Property<int>("Height")
+                                .HasColumnType("integer");
+
+                            b1.Property<int>("X")
+                                .HasColumnType("integer");
+
+                            b1.Property<int>("Y")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("PlayerId");
+
+                            b1.ToTable("Players");
+
+                            b1.WithOwner()
+                                .HasForeignKey("PlayerId");
+                        });
+
+                    b.Navigation("Position");
+                });
 #pragma warning restore 612, 618
         }
     }
