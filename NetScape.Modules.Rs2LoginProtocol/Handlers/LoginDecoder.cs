@@ -238,6 +238,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                     if (!loginTask.Wait(10000))
                     {
                         WriteResponseCode(ctx, LoginStatus.StatusLoginServerOffline);
+                        return;
                     }
 
                     var loginResult = loginTask.Result;
