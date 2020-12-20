@@ -2,7 +2,7 @@
 {
     public class Entity
     {
-        public int Id { get; set; }
+        public int Index { get; set; }
         public Position Position { get; set; }
     }
 }

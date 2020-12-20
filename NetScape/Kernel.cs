@@ -1,10 +1,12 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NetScape.Abstractions.FileSystem;
 using NetScape.Abstractions.Interfaces;
 using NetScape.Abstractions.Interfaces.IO;
+using NetScape.DAL;
 using NetScape.Modules.Logging.SeriLog;
 using NetScape.Modules.LoginProtocol;
 using NetScape.Modules.Server;
@@ -16,8 +18,8 @@ namespace NetScape
 {
     public class Kernel
     {
-        private static IConfigurationRoot _configurationRoot;
-        public static void Main(string[] args)
+        public static IConfigurationRoot ConfigurationRoot { get; set; }
+        public static void Main()
         {
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
@@ -38,29 +40,44 @@ namespace NetScape
             }
         }
 
+        private static void BuildDbOptions(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseNpgsql(ConfigurationRoot.GetConnectionString("NetScape"),
+                 x => x.MigrationsAssembly(typeof(DatabaseContext)
+                    .Assembly.GetName().Name));
+        }
+
         private static void ConfigureAutofac(ContainerBuilder containerBuilder)
         {
-            containerBuilder.RegisterModule(new SeriLogModule(_configurationRoot));
+            containerBuilder.RegisterModule(new SeriLogModule(ConfigurationRoot));
             containerBuilder.RegisterModule(new LoginModule());
             containerBuilder.RegisterModule(new CacheModule());
-            containerBuilder.RegisterModule(new GameServerModule("127.0.0.1", 43594));
+            containerBuilder.RegisterModule(new DALModule());
+            containerBuilder.RegisterModule(new GameServerModule(ConfigurationRoot["BindAddr"], ushort.Parse(ConfigurationRoot["BindPort"])));
             containerBuilder.RegisterType<FileSystem>().As<IFileSystem>();
             containerBuilder.RegisterType<ContainerProvider>().SingleInstance();
         }
 
-        private static void ConfigureServices(IServiceCollection serviceCollection)
+        public static void SetConfigRoot()
         {
-            // Add logging
-            serviceCollection.AddLogging();
-
-            // Build configuration
-            _configurationRoot = new ConfigurationBuilder()
+            ConfigurationRoot = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetParent(AppContext.BaseDirectory).FullName)
                 .AddJsonFile("appsettings.json", false)
                 .Build();
+        }
+
+        private static void ConfigureServices(IServiceCollection serviceCollection)
+        {
+            SetConfigRoot();
+
+            // Add logging
+            serviceCollection.AddLogging();
+
+            //Build DB Connection
+            serviceCollection.AddDbContextFactory<DatabaseContext>(BuildDbOptions);
 
             // Add access to generic IConfigurationRoot
-            serviceCollection.AddSingleton(_configurationRoot);
+            serviceCollection.AddSingleton(ConfigurationRoot);
         }
 
     }

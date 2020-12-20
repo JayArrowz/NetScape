@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.LoginProto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Cache", "NetScape.Modules.SevenOneEight.Cache\NetScape.Modules.Cache.csproj", "{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.DAL", "NetScape.DAL\NetScape.DAL.csproj", "{22C15816-2EB8-403F-B166-7A508ED73470}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C15816-2EB8-403F-B166-7A508ED73470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C15816-2EB8-403F-B166-7A508ED73470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C15816-2EB8-403F-B166-7A508ED73470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C15816-2EB8-403F-B166-7A508ED73470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
