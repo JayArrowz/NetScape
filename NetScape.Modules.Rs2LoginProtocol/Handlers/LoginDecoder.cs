@@ -237,7 +237,11 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                     var loginResult = loginTask.Result;
                     ctx.WriteAndFlushAsync(loginResult).ContinueWith(sendResultTask =>
                     {
-                        sendResultTask.Wait();
+                        //TODO proper cancellation
+                        if(!sendResultTask.Wait(10000))
+                        {
+                            WriteResponseCode(ctx, LoginStatus.StatusLoginServerOffline);
+                        }
                         HandleLoginResponseFuture(loginResult.Status, sendResultTask, ctx);
                     });
                 });
