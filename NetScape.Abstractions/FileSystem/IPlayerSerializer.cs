@@ -8,7 +8,6 @@ namespace NetScape.Abstractions.FileSystem
     {
         Task<Player> GetAsync(string name);
         Task<Player> GetOrCreateAsync(PlayerCredentials playerCredentials);
-
         Task<int> AddOrUpdateAsync(Player player);
     }
 }
