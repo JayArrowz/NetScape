@@ -5,7 +5,7 @@ using NetScape.DAL;
 
 namespace NetScape
 {
-    public class NetScapeContextDesignTimeFactory : IDesignTimeDbContextFactory<DatabaseContext>
+    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<DatabaseContext>
     {
         public DatabaseContext CreateDbContext(string[] args)
         {
