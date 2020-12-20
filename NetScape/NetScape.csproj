@@ -29,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetScape.DAL\NetScape.Modules.DAL.csproj" />
     <ProjectReference Include="..\NetScape.GameServer\NetScape.Modules.Server.csproj" />
     <ProjectReference Include="..\NetScape.Modules.DAL\NetScape.Modules.DAL.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Logging.SeriLog\NetScape.Modules.Logging.SeriLog.csproj" />
