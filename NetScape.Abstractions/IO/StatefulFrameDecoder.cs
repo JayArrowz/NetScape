@@ -5,7 +5,7 @@ using DotNetty.Buffers;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 
-namespace NetScape.Abstractions.IO.Login
+namespace NetScape.Abstractions.IO
 {
     /**
      * A stateful implementation of a {@link ByteToMessageDecoder} which may be extended and used by other classes. The

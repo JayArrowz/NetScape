@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetScape.Abstractions.IO
+namespace NetScape.Abstractions.Util
 {
     /// <summary>
     /// The Isaac Random
