@@ -1,4 +1,4 @@
-﻿using NetScape.Abstractions.IO;
+﻿using NetScape.Abstractions.IO.Util;
 using NetScape.Abstractions.Model.IO.Login;
 
 namespace NetScape.Abstractions.Login.Model

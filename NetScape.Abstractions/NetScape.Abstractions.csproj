@@ -13,8 +13,4 @@
     <PackageReference Include="SharpZipLib" Version="1.3.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Model\IO\Messaging\" />
-  </ItemGroup>
-
 </Project>

@@ -1,7 +1,6 @@
 ﻿using NetScape.Abstractions;
 using NetScape.Abstractions.Extensions;
 using NetScape.Abstractions.IO;
-using NetScape.Abstractions.IO.Login;
 using NetScape.Abstractions.Model.IO.Login;
 using DotNetty.Buffers;
 using DotNetty.Common.Utilities;
@@ -12,6 +11,8 @@ using System.Collections.Generic;
 using System.Net;
 using NetScape.Modules.LoginProtocol.IO.Model;
 using NetScape.Abstractions.Login.Model;
+using NetScape.Abstractions.Util;
+using NetScape.Abstractions.IO.Util;
 
 namespace NetScape.Modules.LoginProtocol.Login
 {

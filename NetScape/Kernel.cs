@@ -13,7 +13,7 @@ namespace NetScape
 {
     public class Kernel
     {
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
             var containerBuilder = new ContainerBuilder();
             containerBuilder.RegisterModule(new SeriLogModule());
