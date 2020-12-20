@@ -4,17 +4,11 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="appsettings.json" />
-  </ItemGroup>
-
   <ItemGroup>
     <Content Include="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.1.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
@@ -40,10 +34,6 @@
     <ProjectReference Include="..\NetScape.Modules.Logging.SeriLog\NetScape.Modules.Logging.SeriLog.csproj" />
     <ProjectReference Include="..\NetScape.Modules.LoginProtocol\NetScape.Modules.LoginProtocol.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Cache\NetScape.Modules.Cache.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>
