@@ -1,9 +1,9 @@
 ﻿using System;
-using NetScape.Abstractions.Interfaces.IO.Login;
+using NetScape.Abstractions.Interfaces.Login;
 using DotNetty.Transport.Channels;
 using Serilog;
 
-namespace NetScape.Modules.LoginProtocol.IO.Login
+namespace NetScape.Modules.LoginProtocol.Login
 {
     public class LoginProvider : ILoginProvider
     {

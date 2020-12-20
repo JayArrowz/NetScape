@@ -1,11 +1,11 @@
-﻿namespace NetScape.Modules.LoginProtocol.IO.Model
+﻿namespace NetScape.Abstractions.Login.Model
 {
     /**
      * Represents a login response.
      *
      * @author Graham
      */
-    public sealed class LoginResponse
+    public sealed class LoginResponse<T>
     {
 
         /**
@@ -21,7 +21,7 @@
         /**
          * The login status.
          */
-        public LoginStatus Status { get; set; }
+        public T Status { get; set; }
 
     }
 }

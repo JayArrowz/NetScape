@@ -1,7 +1,7 @@
 ﻿using System;
 using DotNetty.Transport.Channels;
 
-namespace NetScape.Abstractions.Interfaces.IO.Login
+namespace NetScape.Abstractions.Interfaces.Login
 {
     public interface ILoginProvider
     {

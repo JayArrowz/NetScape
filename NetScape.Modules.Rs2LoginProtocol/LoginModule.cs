@@ -1,8 +1,8 @@
-﻿using NetScape.Abstractions.Interfaces.IO.Login;
-using NetScape.Modules.LoginProtocol.IO.Login;
-using Autofac;
+﻿using Autofac;
+using NetScape.Modules.LoginProtocol.Login;
+using NetScape.Abstractions.Interfaces.Login;
 
-namespace NetScape.Modules.ThreeOneSeven.LoginProtocol
+namespace NetScape.Modules.LoginProtocol
 {
     public class LoginModule : Module
     {

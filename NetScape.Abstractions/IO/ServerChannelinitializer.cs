@@ -1,5 +1,5 @@
-﻿using NetScape.Abstractions.Interfaces.IO.Login;
-using DotNetty.Transport.Channels;
+﻿using DotNetty.Transport.Channels;
+using NetScape.Abstractions.Interfaces.Login;
 
 namespace NetScape.Abstractions.IO
 {

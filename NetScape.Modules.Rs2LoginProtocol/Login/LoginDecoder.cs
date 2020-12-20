@@ -3,7 +3,6 @@ using NetScape.Abstractions.Extensions;
 using NetScape.Abstractions.IO;
 using NetScape.Abstractions.IO.Login;
 using NetScape.Abstractions.Model.IO.Login;
-using NetScape.Modules.LoginProtocol.IO.Model;
 using DotNetty.Buffers;
 using DotNetty.Common.Utilities;
 using DotNetty.Transport.Channels;
@@ -11,8 +10,10 @@ using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Net;
+using NetScape.Modules.LoginProtocol.IO.Model;
+using NetScape.Abstractions.Login.Model;
 
-namespace NetScape.Modules.LoginProtocol.IO.Login
+namespace NetScape.Modules.LoginProtocol.Login
 {
     /**
      * @author Graham
@@ -246,11 +247,11 @@ namespace NetScape.Modules.LoginProtocol.IO.Login
         {
             var buffer = ctx.Allocator.Buffer(sizeof(byte));
             buffer.WriteByte((int)response);
-            ctx.WriteAndFlushAsync(buffer);
+            var future = ctx.WriteAndFlushAsync(buffer);
 
             if (response != LoginStatus.StatusOk)
             {
-                ctx.DisconnectAsync();
+                future.ContinueWith(v => ctx.CloseAsync());
             }
         }
     }

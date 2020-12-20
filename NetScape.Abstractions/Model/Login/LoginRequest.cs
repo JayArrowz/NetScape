@@ -1,7 +1,7 @@
 ﻿using NetScape.Abstractions.IO;
 using NetScape.Abstractions.Model.IO.Login;
 
-namespace NetScape.Modules.LoginProtocol.IO.Model
+namespace NetScape.Abstractions.Login.Model
 {
     /**
      * Represents a login request.
