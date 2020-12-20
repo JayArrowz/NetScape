@@ -1,4 +1,4 @@
-﻿namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Model
+﻿namespace NetScape.Modules.LoginProtocol.IO.Model
 {
     public enum LoginStatus
     {

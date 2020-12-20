@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.Interfaces.IO
 {
-    public interface IGameServer : IDisposable
+    public interface IGameServer : IAsyncDisposable
     {
         /// <summary>
         /// Server Channel

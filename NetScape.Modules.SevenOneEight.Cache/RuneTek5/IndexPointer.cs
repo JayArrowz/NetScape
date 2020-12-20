@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using NetScape.Abstractions.Extensions;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache.RuneTek5
+namespace NetScape.Modules.Cache.RuneTek5
 {
     /// <summary>
     /// An <see cref="IndexPointer" /> points to a file inside a <see cref="FileStore" />.

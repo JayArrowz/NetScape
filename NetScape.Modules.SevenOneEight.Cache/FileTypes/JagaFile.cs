@@ -4,7 +4,7 @@ using System.Text;
 using NetScape.Abstractions.Cache;
 using NetScape.Abstractions.Extensions;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache.FileTypes
+namespace NetScape.Modules.Cache.FileTypes
 {
     /// <summary>
     /// A file that serves as a map to stitch audio chunks together in the right order while also containing the first chunk.

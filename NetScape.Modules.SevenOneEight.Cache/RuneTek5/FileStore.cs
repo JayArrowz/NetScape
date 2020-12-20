@@ -8,7 +8,7 @@ using NetScape.Abstractions.FileSystem;
 using NetScape.Abstractions.Interfaces.Cache;
 using Autofac;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache.RuneTek5
+namespace NetScape.Modules.Cache.RuneTek5
 {
     /// <summary>
     ///     A file store holds multiple files inside a "virtual" file system made up of several index files and a single data

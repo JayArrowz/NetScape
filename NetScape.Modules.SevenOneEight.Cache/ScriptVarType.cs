@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache
+namespace NetScape.Modules.Cache
 {
     public class ScriptVarType
     {

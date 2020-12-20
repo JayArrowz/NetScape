@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache.FileTypes
+namespace NetScape.Modules.Cache.FileTypes
 {
     /// <summary>
     /// Contains the properties of an item.

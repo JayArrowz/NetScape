@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Logging.Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Messages", "NetScape.Modules.Messages\NetScape.Modules.Messages.csproj", "{0AA24266-93AE-4453-9E20-0932ED6D50B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.ThreeOneSeven.LoginProtocol", "NetScape.Modules.Rs2LoginProtocol\NetScape.Modules.ThreeOneSeven.LoginProtocol.csproj", "{EC2A333A-9419-40B8-A006-D7D830E4739E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.LoginProtocol", "NetScape.Modules.Rs2LoginProtocol\NetScape.Modules.LoginProtocol.csproj", "{EC2A333A-9419-40B8-A006-D7D830E4739E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.SevenOneEight.Cache", "NetScape.Modules.SevenOneEight.Cache\NetScape.Modules.SevenOneEight.Cache.csproj", "{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Cache", "NetScape.Modules.SevenOneEight.Cache\NetScape.Modules.Cache.csproj", "{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

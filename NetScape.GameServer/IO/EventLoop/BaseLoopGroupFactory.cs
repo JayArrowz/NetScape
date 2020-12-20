@@ -23,10 +23,10 @@ namespace NetScape.Modules.Server.IO.EventLoop
         private readonly List<IEventLoopGroup> _eventLoopGroupList;
 
         /// <summary>The handler worker event loop group</summary>
-        internal IEventLoopGroup HandlerWorkerEventLoopGroup;
+        internal IEventLoopGroup WorkerEventLoopGroup;
 
         /// <summary>The socket io event loop group</summary>
-        internal IEventLoopGroup SocketIoEventLoopGroup;
+        internal IEventLoopGroup BossEventLoopGroup;
 
         /// <summary>Initializes a new instance of the <see cref="BaseLoopGroupFactory"/> class.</summary>
         public BaseLoopGroupFactory()
@@ -37,25 +37,21 @@ namespace NetScape.Modules.Server.IO.EventLoop
         /// <summary>Creates new Event Loop Group.</summary>
         /// <param name="nEventLoop">The number of event loops.</param>
         /// <returns></returns>
-        internal IEventLoopGroup NewEventLoopGroup(int nEventLoop)
+        internal IEventLoopGroup NewEventLoopGroup(int? nEventLoop = null)
         {
-            var eventLoopGroup = new MultithreadEventLoopGroup(nEventLoop);
+            var eventLoopGroup = CreateLoopGroup(nEventLoop);
             _eventLoopGroupList.Add(eventLoopGroup);
             return eventLoopGroup;
         }
 
-        /// <summary>Creates new event loop group with the default amount of event loops <see cref="DotNetty.Transport.Channels.MultithreadEventLoopGroup"/>.</summary>
-        /// <returns></returns>
-        internal IEventLoopGroup NewEventLoopGroup()
+        private MultithreadEventLoopGroup CreateLoopGroup(int? nEventLoop)
         {
-            var eventLoopGroup = new MultithreadEventLoopGroup();
-            _eventLoopGroupList.Add(eventLoopGroup);
-            return eventLoopGroup;
+            return nEventLoop.HasValue ? new MultithreadEventLoopGroup(nEventLoop.Value) : new MultithreadEventLoopGroup();
         }
 
-        public IEventLoopGroup GetOrCreateSocketIoEventLoopGroup()
+        public IEventLoopGroup GetOrCreateSocketIoEventLoopGroup(int? nEventLoop = null)
         {
-            return SocketIoEventLoopGroup ?? (SocketIoEventLoopGroup = NewEventLoopGroup());
+            return BossEventLoopGroup ?? (BossEventLoopGroup = NewEventLoopGroup(nEventLoop));
         }
 
         protected virtual void Dispose(bool disposing)
@@ -71,8 +67,8 @@ namespace NetScape.Modules.Server.IO.EventLoop
 
             Task.WaitAll(disposeTasks, TimeSpan.FromMilliseconds(QuietPeriod * 4 * disposeTasks.Length));
             _eventLoopGroupList.Clear();
-            HandlerWorkerEventLoopGroup = null;
-            SocketIoEventLoopGroup = null;
+            WorkerEventLoopGroup = null;
+            BossEventLoopGroup = null;
         }
 
         public void Dispose()

@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache
+namespace NetScape.Modules.Cache
 {
     /// <summary>
     /// A cache that stores information on its files in reference tables in index 255.

@@ -1,4 +1,4 @@
-﻿namespace NetScape.Modules.SevenOneEight.Cache.Cache
+﻿namespace NetScape.Modules.Cache
 {
     public enum Language
     {

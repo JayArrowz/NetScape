@@ -1,5 +1,5 @@
 ﻿using NetScape.Abstractions.Cache;
-using NetScape.Modules.SevenOneEight.Cache.Cache.FileTypes;
+using NetScape.Modules.Cache.FileTypes;
 using NetScape.Abstractions.Extensions;
 using Serilog;
 using System;
@@ -8,7 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache.FlatFile
+namespace NetScape.Modules.Cache.FlatFile
 {
     public class FlatFileCache : CacheBase
     {

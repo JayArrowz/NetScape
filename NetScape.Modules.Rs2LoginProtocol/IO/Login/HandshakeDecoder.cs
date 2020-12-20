@@ -5,7 +5,7 @@ using DotNetty.Transport.Channels;
 using Serilog;
 using System.Collections.Generic;
 
-namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
+namespace NetScape.Modules.LoginProtocol.IO.Login
 {
     public class HandshakeDecoder : ByteToMessageDecoder
     {
@@ -23,12 +23,12 @@ namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
                 return;
             }
 
-            var id = (int) buffer.ReadByte();
+            var id = buffer.ReadByte();
             var handshakeType = (HandshakeType)id;
             _logger.Debug($"Incoming Handshake Decoder Opcode: {id} Type: {handshakeType}");
-            switch (id)
+            switch (handshakeType)
             {
-                case (int)HandshakeType.ServiceGame:
+                case HandshakeType.ServiceGame:
                     ctx.Channel.Pipeline.AddLast(nameof(LoginEncoder), new LoginEncoder());
                     ctx.Channel.Pipeline.AddAfter(nameof(LoginEncoder), nameof(LoginDecoder), new LoginDecoder(_logger));
                     break;

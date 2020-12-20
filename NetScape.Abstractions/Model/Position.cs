@@ -244,7 +244,7 @@ namespace NetScape.Abstractions.Model
         /// <param name="other"> The other position. </param>
         /// <param name="distance"> The distance. </param>
         /// <returns> {@code true} if so, {@code false} if not. </returns>
-        public bool isWithinDistance(Position other, int distance)
+        public bool IsWithinDistance(Position other, int distance)
         {
             int deltaX = Math.Abs(X - other.X);
             int deltaY = Math.Abs(Y - other.Y);
@@ -257,7 +257,7 @@ namespace NetScape.Abstractions.Model
         /// <param name="num"> The number of steps to make. </param>
         /// <param name="direction"> The direction to make steps in. </param>
         /// <returns> A new {@code Position} that is {@code num} steps in {@code direction} ahead of this one. </returns>
-        public Position step(int num, Direction direction)
+        public Position Step(int num, Direction direction)
         {
             return new Position(X + (num * direction.DeltaX()), Y + (num * direction.DeltaY()), Height);
         }

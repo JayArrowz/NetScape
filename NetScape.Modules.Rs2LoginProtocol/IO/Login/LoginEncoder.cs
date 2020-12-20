@@ -1,23 +1,22 @@
 ﻿using NetScape.Abstractions.Model.IO.Login;
-using NetScape.Modules.LoginProtocolThreeOneSeven.IO.Model;
+using NetScape.Modules.LoginProtocol.IO.Model;
 using DotNetty.Buffers;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 
-namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
+namespace NetScape.Modules.LoginProtocol.IO.Login
 {
     public class LoginEncoder : MessageToByteEncoder<LoginResponse>
     {
         protected override void Encode(IChannelHandlerContext context, LoginResponse message, IByteBuffer output)
         {
-            output.WriteByte((int)message.GetStatus());
+            output.WriteByte((int) message.Status);
 
-            if (message.GetStatus() == LoginStatus.StatusOk)
+            if (message.Status == LoginStatus.StatusOk)
             {
-                output.WriteByte(message.GetRights());
-                output.WriteByte(message.IsFlagged() ? 1 : 0);
+                output.WriteByte(message.Rights);
+                output.WriteByte(message.Flagged ? 1 : 0);
             }
-
         }
     }
 }

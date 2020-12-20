@@ -3,7 +3,7 @@ using NetScape.Abstractions.Interfaces.IO.Login;
 using DotNetty.Transport.Channels;
 using Serilog;
 
-namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
+namespace NetScape.Modules.LoginProtocol.IO.Login
 {
     public class LoginProvider : ILoginProvider
     {

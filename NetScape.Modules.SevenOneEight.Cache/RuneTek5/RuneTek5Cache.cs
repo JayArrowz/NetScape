@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache.RuneTek5
+namespace NetScape.Modules.Cache.RuneTek5
 {
     /// <summary>
     /// Can read and write to a RuneTek5 type cache consisting of a single data (.dat2) file and some index (.id#) files.

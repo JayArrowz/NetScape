@@ -6,7 +6,7 @@ using NetScape.Abstractions.Cache;
 using NetScape.Abstractions.Interfaces.Cache;
 using NetScape.Abstractions.Extensions;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache.RuneTek5
+namespace NetScape.Modules.Cache.RuneTek5
 {
     /// <summary>
     ///     Represents a sector in the data file, containing some metadata and the actual data contained in the sector.

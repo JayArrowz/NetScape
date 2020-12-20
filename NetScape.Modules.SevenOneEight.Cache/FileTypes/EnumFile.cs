@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache.FileTypes
+namespace NetScape.Modules.Cache.FileTypes
 {
     /// <summary>
     /// Represents a list of values or references to values located elsewhere in the cache.

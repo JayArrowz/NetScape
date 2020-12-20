@@ -3,7 +3,7 @@ using NetScape.Abstractions.Extensions;
 using NetScape.Abstractions.IO;
 using NetScape.Abstractions.IO.Login;
 using NetScape.Abstractions.Model.IO.Login;
-using NetScape.Modules.LoginProtocolThreeOneSeven.IO.Model;
+using NetScape.Modules.LoginProtocol.IO.Model;
 using DotNetty.Buffers;
 using DotNetty.Common.Utilities;
 using DotNetty.Transport.Channels;
@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 
-namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
+namespace NetScape.Modules.LoginProtocol.IO.Login
 {
     /**
      * @author Graham
@@ -87,7 +87,6 @@ namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
                 response.WriteLong(0);
                 response.WriteLong(_serverSeed);
                 ctx.Channel.WriteAndFlushAsync(response);
-
                 SetState(LoginDecoderState.LoginHeader);
             }
         }
@@ -192,7 +191,7 @@ namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
                 var socketAddress = (IPEndPoint)ctx.Channel.RemoteAddress;
                 var hostAddress = socketAddress.Address.ToString();
 
-                if (password.Length < 6 || password.Length > 20 || string.IsNullOrEmpty(username) || username.Length > 12)
+                if (password.Length < 4 || password.Length > 20 || string.IsNullOrEmpty(username) || username.Length > 12)
                 {
                     _logger.Information("Username ('" + username + "') or password did not pass validation.");
                     WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
@@ -233,6 +232,7 @@ namespace NetScape.Modules.LoginProtocolThreeOneSeven.IO.Login
                     ArchiveCrcs = crcs,
                     ClientVersion = version
                 });
+                //ctx.WriteAndFlushAsync(new LoginResponse { Status = LoginStatus.StatusOk, Rights = 0 });
             }
         }
 

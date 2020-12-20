@@ -32,8 +32,8 @@ namespace NetScape.Modules.Server.IO
 
         public async Task BindAsync()
         {
-            var bossGroup = _eventLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup();
-            var workerGroup = _eventLoopGroupFactory.GetOrCreateHandlerWorkerEventLoopGroup();
+            var bossGroup = _eventLoopGroupFactory.GetBossGroup();
+            var workerGroup = _eventLoopGroupFactory.GetWorkerGroup();
             var bootstrap = new ServerBootstrap();
 
             bootstrap.ChannelFactory(() => new TcpServerSocketChannel());
@@ -41,12 +41,13 @@ namespace NetScape.Modules.Server.IO
             bootstrap.ChildHandler(_serverChannelInitializer);
 
             Channel = await bootstrap.BindAsync(IPAddress.Parse(_gameServerParameters.BindAddress), _gameServerParameters.Port);
-            _logger.Information($"Network Bound NIC IP: {_gameServerParameters.BindAddress} Port: {_gameServerParameters.Port}");
+            _logger.Information("Network Bound NIC IP: {0} Port: {1}", _gameServerParameters.BindAddress, _gameServerParameters.Port);
         }
 
-        public void Dispose()
+        public async ValueTask DisposeAsync()
         {
-            _ = Channel.DisconnectAsync();
+            await Channel.DisconnectAsync();
+            _eventLoopGroupFactory.Dispose();
         }
     }
 }

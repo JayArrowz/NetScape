@@ -1,11 +1,11 @@
 ﻿using NetScape.Abstractions.Interfaces.Cache;
-using NetScape.Modules.SevenOneEight.Cache.Cache;
-using NetScape.Modules.SevenOneEight.Cache.Cache.RuneTek5;
+using NetScape.Modules.Cache;
+using NetScape.Modules.Cache.RuneTek5;
 using Autofac;
 
 namespace NetScape.Modules.SevenOneEight.Cache
 {
-    public class SevenOneEightCacheModule : Module
+    public class CacheModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

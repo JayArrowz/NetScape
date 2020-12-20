@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using NetScape.Abstractions.Cache;
-using NetScape.Modules.SevenOneEight.Cache.Cache.FileTypes;
+using NetScape.Modules.Cache.FileTypes;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache
+namespace NetScape.Modules.Cache
 {
     /// <summary>
     /// Base class for cache systems.

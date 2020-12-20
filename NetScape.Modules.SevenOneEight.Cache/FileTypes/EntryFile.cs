@@ -5,7 +5,7 @@ using System.Linq;
 using NetScape.Abstractions.Cache;
 using NetScape.Abstractions.Extensions;
 
-namespace NetScape.Modules.SevenOneEight.Cache.Cache.FileTypes
+namespace NetScape.Modules.Cache.FileTypes
 {
     /// <summary>
     /// A cache file that contains multiple files.

@@ -276,7 +276,7 @@ namespace NetScape.Abstractions.Model
 		/// Gets the direction as an integer as used orientation in the client maps (WNES as opposed to NESW).
 		/// </summary>
 		/// <returns> The direction as an integer. </returns>
-		public int toOrientationInteger()
+		public int ToOrientationInteger()
 		{
 			switch (Value)
 			{
@@ -298,11 +298,6 @@ namespace NetScape.Abstractions.Model
 
 		}
 
-		public static Direction[] values()
-		{
-			return Values.ToArray();
-		}
-
 		public int Ordinal()
 		{
 			return _ordinalValue;
@@ -315,7 +310,7 @@ namespace NetScape.Abstractions.Model
 
 		public static Direction valueOf(string name)
 		{
-			foreach (Direction enumInstance in Direction.Values)
+			foreach (Direction enumInstance in Values)
 			{
 				if (enumInstance._nameValue == name)
 				{
