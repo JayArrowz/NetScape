@@ -3,7 +3,7 @@ using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 using NetScape.Abstractions.Login.Model;
 
-namespace NetScape.Modules.LoginProtocol.Login
+namespace NetScape.Modules.LoginProtocol.Handlers
 {
     public class LoginEncoder : MessageToByteEncoder<LoginResponse<LoginStatus>>
     {

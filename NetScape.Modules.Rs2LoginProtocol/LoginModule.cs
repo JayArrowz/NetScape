@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using NetScape.Modules.LoginProtocol.Login;
+using NetScape.Modules.LoginProtocol.Handlers;
 using NetScape.Abstractions.Interfaces.Login;
 
 namespace NetScape.Modules.LoginProtocol
@@ -8,10 +8,11 @@ namespace NetScape.Modules.LoginProtocol
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<LoginProvider>().As<ILoginProvider>();
+            builder.RegisterType<LoginProvider>().As<ILoginProvider>().SingleInstance();
             builder.RegisterType<HandshakeDecoder>();
             builder.RegisterType<LoginEncoder>();
             builder.RegisterType<LoginDecoder>();
+            builder.RegisterType<LoginProcessor>().As<ILoginProcessor<LoginStatus>>().SingleInstance();
         }
     }
 }

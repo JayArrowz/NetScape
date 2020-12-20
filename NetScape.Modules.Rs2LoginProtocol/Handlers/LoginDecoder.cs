@@ -13,8 +13,9 @@ using NetScape.Modules.LoginProtocol.IO.Model;
 using NetScape.Abstractions.Login.Model;
 using NetScape.Abstractions.Util;
 using NetScape.Abstractions.IO.Util;
+using NetScape.Abstractions.Interfaces.Login;
 
-namespace NetScape.Modules.LoginProtocol.Login
+namespace NetScape.Modules.LoginProtocol.Handlers
 {
     /**
      * @author Graham
@@ -45,10 +46,12 @@ namespace NetScape.Modules.LoginProtocol.Login
         private int _usernameHash;
 
         private readonly ILogger _logger;
+        private readonly ILoginProcessor<LoginStatus> _loginProcessor;
 
-        public LoginDecoder(ILogger logger) : base(LoginDecoderState.LoginHandshake)
+        public LoginDecoder(ILogger logger, ILoginProcessor<LoginStatus> loginProcessor) : base(LoginDecoderState.LoginHandshake)
         {
             _logger = logger;
+            _loginProcessor = loginProcessor;
         }
 
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output, LoginDecoderState state)
@@ -224,7 +227,7 @@ namespace NetScape.Modules.LoginProtocol.Login
                 };
 
                 var randomPair = new IsaacRandomPair(encodingRandom, decodingRandom);
-                output.Add(new LoginRequest
+                var request = new LoginRequest
                 {
                     Credentials = credentials,
                     RandomPair = randomPair,
@@ -233,7 +236,26 @@ namespace NetScape.Modules.LoginProtocol.Login
                     ReleaseNumber = release,
                     ArchiveCrcs = crcs,
                     ClientVersion = version
+                };
+                
+                var response = _loginProcessor.Process(request);
+                ctx.WriteAndFlushAsync(response).ContinueWith(request =>
+                {
+                    if(response.Status != LoginStatus.StatusOk)
+                    {
+                        ctx.DisconnectAsync();
+                    }
                 });
+                /*output.Add(new LoginRequest
+                {
+                    Credentials = credentials,
+                    RandomPair = randomPair,
+                    Reconnecting = _reconnecting,
+                    LowMemory = lowMemory,
+                    ReleaseNumber = release,
+                    ArchiveCrcs = crcs,
+                    ClientVersion = version
+                });*/
                 //ctx.WriteAndFlushAsync(new LoginResponse { Status = LoginStatus.StatusOk, Rights = 0 });
             }
         }

@@ -4,6 +4,6 @@ namespace NetScape.Abstractions.Interfaces.Login
 {
     public interface ILoginProcessor<TResponse>
     {
-        TResponse Process(LoginRequest request);
+        LoginResponse<TResponse> Process(LoginRequest request);
     }
 }

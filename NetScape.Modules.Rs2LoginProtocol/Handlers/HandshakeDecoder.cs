@@ -5,7 +5,7 @@ using DotNetty.Transport.Channels;
 using Serilog;
 using System.Collections.Generic;
 
-namespace NetScape.Modules.LoginProtocol.Login
+namespace NetScape.Modules.LoginProtocol.Handlers
 {
     public class HandshakeDecoder : ByteToMessageDecoder
     {
