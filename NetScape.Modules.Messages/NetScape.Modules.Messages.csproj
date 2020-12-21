@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="outgoing-messages.json">
+    <AdditionalFiles Include="encoder-messages.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>

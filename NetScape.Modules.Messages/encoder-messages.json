@@ -3,17 +3,17 @@
   "Type": "Encoder",
   "Messages": [
     {
-      "Name": "ChangeRegionMessage",
+      "Name": "RegionChangeMessage",
       "Id": 73,
       "FrameType": "Fixed",
       "Params": [
         {
-          "Name": "RegionX",
+          "Name": "CentralRegionX",
           "Type": "Short",
           "Transform": "Add"
         },
         {
-          "Name": "RegionY",
+          "Name": "CentralRegionY",
           "Type": "Short"
         }
       ]
