@@ -2,6 +2,6 @@ namespace NetScape.Modules.Messages.Builder
 {
     public enum DataOrder
     {
-        Little, Middle, InversedMiddle, Big
+        Big, Little, Middle, InversedMiddle
     }
 }
