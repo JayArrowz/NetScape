@@ -25,9 +25,4 @@
     <Folder Include="Decoders\" />
     <Folder Include="Encoders\Impl\" />
   </ItemGroup>
-  <ItemGroup>
-    <AdditionalFiles Include="outgoing-messages.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AdditionalFiles>
-  </ItemGroup>
 </Project>
