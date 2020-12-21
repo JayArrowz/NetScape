@@ -16,7 +16,13 @@ These instructions will get you a copy of the project up and running on your loc
 3. Go to your Terminal (Make sure its current directory is matching the root of this repo) or VS Console then type:
 ```
 dotnet tool install -g dotnet-ef
+dotnet build
 dotnet ef database update --project NetScape
+```
+
+To Run in Terminal: 
+```
+dotnet run --project netscape
 ```
 
 ## Contributing
