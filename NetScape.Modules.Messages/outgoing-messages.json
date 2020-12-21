@@ -4,12 +4,17 @@
   "Messages": [
     {
       "Name": "ChangeRegionMessage",
-      "Id": 78,
+      "Id": 73,
+      "FrameType": "Fixed",
       "Params": [
         {
           "Name": "RegionX",
           "Type": "Short",
           "Transform": "Add"
+        },
+        {
+          "Name": "RegionY",
+          "Type": "Short"
         }
       ]
     }
