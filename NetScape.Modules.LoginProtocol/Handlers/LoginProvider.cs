@@ -16,7 +16,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             _container = containerProvider.Container;
         }
 
-        public Func<IChannelHandler[]> Handlers => () => new IChannelHandler[] {
+        public Func<IChannelHandler[]> Provide => () => new IChannelHandler[] {
             _container.Resolve<HandshakeDecoder>() 
         };
     }

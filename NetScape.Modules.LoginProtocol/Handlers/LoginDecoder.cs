@@ -1,22 +1,22 @@
-﻿using NetScape.Abstractions;
-using NetScape.Abstractions.Extensions;
-using NetScape.Abstractions.IO;
-using NetScape.Abstractions.Model.IO.Login;
-using DotNetty.Buffers;
+﻿using DotNetty.Buffers;
+using DotNetty.Codecs;
 using DotNetty.Common.Utilities;
 using DotNetty.Transport.Channels;
+using NetScape.Abstractions;
+using NetScape.Abstractions.Extensions;
+using NetScape.Abstractions.Interfaces.Login;
+using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Abstractions.IO;
+using NetScape.Abstractions.IO.Util;
+using NetScape.Abstractions.Model.Login;
+using NetScape.Abstractions.Model.Messages;
+using NetScape.Abstractions.Util;
 using Serilog;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
-using NetScape.Modules.LoginProtocol.IO.Model;
-using NetScape.Abstractions.Login.Model;
-using NetScape.Abstractions.Util;
-using NetScape.Abstractions.IO.Util;
-using NetScape.Abstractions.Interfaces.Login;
 using System.Threading.Tasks;
-using System.Threading;
-using Microsoft.Extensions.Configuration;
 
 namespace NetScape.Modules.LoginProtocol.Handlers
 {
@@ -49,10 +49,12 @@ namespace NetScape.Modules.LoginProtocol.Handlers
         private int _usernameHash;
         private readonly ILogger _logger;
         private readonly ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> _loginProcessor;
+        private readonly IMessageProvider _gameMessageProvider;
 
-        public LoginDecoder(ILogger logger, ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> loginProcessor) : base(LoginDecoderState.LoginHandshake)
+        public LoginDecoder(ILogger logger, ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> loginProcessor, IMessageProvider gameMessageProvider) : base(LoginDecoderState.LoginHandshake)
         {
             _logger = logger;
+            _gameMessageProvider = gameMessageProvider;
             _loginProcessor = loginProcessor;
         }
 
@@ -234,11 +236,11 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 };
 
                 _loginProcessor.Enqueue(request);
-                _loginProcessor.GetResultAsync(request).ContinueWith(loginTask => WriteProcessorResponse(loginTask, ctx));
+                _loginProcessor.GetResultAsync(request).ContinueWith(loginTask => WriteProcessorResponse(loginTask, ctx, randomPair));
             }
         }
 
-        private void WriteProcessorResponse(Task<Rs2LoginResponse> loginTask, IChannelHandlerContext ctx)
+        private void WriteProcessorResponse(Task<Rs2LoginResponse> loginTask, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
         {
             Rs2LoginResponse loginResult = null;
             try
@@ -253,7 +255,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             }
             ctx.WriteAndFlushAsync(loginResult).ContinueWith(sendResultTask =>
             {
-                HandleLoginResponseFuture(loginResult.Status, sendResultTask, ctx);
+                HandleLoginResponseFuture(loginResult.Status, sendResultTask, ctx, randomPair);
             });
         }
 
@@ -268,10 +270,10 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             var buffer = ctx.Allocator.Buffer(sizeof(byte));
             buffer.WriteByte((int)response);
             var future = ctx.WriteAndFlushAsync(buffer);
-            HandleLoginResponseFuture(response, future, ctx);
+            HandleLoginResponseFuture(response, future, ctx, null);
         }
 
-        private void HandleLoginResponseFuture(LoginStatus response, Task future, IChannelHandlerContext ctx)
+        private void HandleLoginResponseFuture(LoginStatus response, Task future, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
         {
             if (response != LoginStatus.StatusOk)
             {
@@ -281,6 +283,12 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             {
                 ctx.Channel.Pipeline.Remove(nameof(LoginEncoder));
                 ctx.Channel.Pipeline.Remove(nameof(LoginDecoder));
+                var gameMessageHandlers = _gameMessageProvider.Provide();
+                gameMessageHandlers.Where(t => t is ICipheredHandler && t is MessageToByteEncoder<MessageFrame>)
+                    .Cast<ICipheredHandler>()
+                    .ToList()
+                    .ForEach(encoder => encoder.Cipher = randomPair.EncodingRandom);
+                ctx.Channel.Pipeline.AddFirst(gameMessageHandlers);
             }
         }
     }

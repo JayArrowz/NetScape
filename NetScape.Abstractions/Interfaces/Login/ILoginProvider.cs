@@ -1,10 +1,8 @@
-﻿using System;
-using DotNetty.Transport.Channels;
+﻿using NetScape.Abstractions.Interfaces.IO;
 
 namespace NetScape.Abstractions.Interfaces.Login
 {
-    public interface ILoginProvider
+    public interface ILoginProvider : IChannelHandlerProvider
     {
-        Func<IChannelHandler[]> Handlers { get; }
     }
 }

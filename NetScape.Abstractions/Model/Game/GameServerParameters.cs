@@ -1,6 +1,6 @@
 ﻿using NetScape.Abstractions.Interfaces.IO;
 
-namespace NetScape.Abstractions.Model.IO
+namespace NetScape.Abstractions.Model.Game
 {
     public sealed class GameServerParameters : IGameServerParameters
     {

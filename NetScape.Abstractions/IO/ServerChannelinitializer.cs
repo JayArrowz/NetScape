@@ -15,7 +15,7 @@ namespace NetScape.Abstractions.IO
         protected override void InitChannel(IChannel channel)
         {
             var pipeline = channel.Pipeline;
-            pipeline.AddLast(_loginProvider.Handlers());
+            pipeline.AddLast(_loginProvider.Provide());
         }
     }
 }

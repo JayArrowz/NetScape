@@ -1,4 +1,4 @@
-﻿using NetScape.Abstractions.Login.Model;
+﻿using NetScape.Abstractions.Model.Login;
 
 namespace NetScape.Modules.LoginProtocol
 {

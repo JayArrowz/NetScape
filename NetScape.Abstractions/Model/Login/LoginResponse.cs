@@ -1,4 +1,4 @@
-﻿namespace NetScape.Abstractions.Login.Model
+﻿namespace NetScape.Abstractions.Model.Login
 {
     /**
      * Represents a login response.

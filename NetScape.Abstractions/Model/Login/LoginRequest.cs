@@ -1,8 +1,7 @@
 ﻿using DotNetty.Transport.Channels;
 using NetScape.Abstractions.IO.Util;
-using NetScape.Abstractions.Model.IO.Login;
 
-namespace NetScape.Abstractions.Login.Model
+namespace NetScape.Abstractions.Model.Login
 {
     /**
      * Represents a login request.

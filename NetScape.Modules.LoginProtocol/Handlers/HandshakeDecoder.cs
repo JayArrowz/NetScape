@@ -1,9 +1,9 @@
-﻿using NetScape.Abstractions.Model.IO;
-using DotNetty.Buffers;
+﻿using DotNetty.Buffers;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 using Serilog;
 using System.Collections.Generic;
+using NetScape.Abstractions.Model.Login;
 
 namespace NetScape.Modules.LoginProtocol.Handlers
 {

@@ -1,0 +1,22 @@
+﻿using Autofac;
+using DotNetty.Transport.Channels;
+using NetScape.Abstractions.Interfaces;
+using NetScape.Abstractions.Interfaces.Messages;
+using System;
+
+namespace NetScape.Modules.Messages
+{
+    public class MessageProvider : IMessageProvider
+    {
+        private readonly IContainer _container;
+
+        public MessageProvider(ContainerProvider containerProvider)
+        {
+            _container = containerProvider.Container;
+        }
+
+        public Func<IChannelHandler[]> Provide => () => new IChannelHandler[] {
+            _container.Resolve<MessageFrameEncoder>()
+        };
+    }
+}

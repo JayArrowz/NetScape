@@ -1,4 +1,4 @@
-﻿using NetScape.Abstractions.Login.Model;
+﻿using NetScape.Abstractions.Model.Login;
 using System.Threading;
 using System.Threading.Tasks;
 

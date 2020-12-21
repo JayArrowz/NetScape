@@ -1,4 +1,4 @@
-﻿namespace NetScape.Abstractions.Model.IO.Login
+﻿namespace NetScape.Abstractions.Model.Login
 {
     /**
      * Holds the credentials for a player.

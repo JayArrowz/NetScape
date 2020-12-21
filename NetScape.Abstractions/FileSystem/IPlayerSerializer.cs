@@ -1,5 +1,5 @@
 ﻿using NetScape.Abstractions.Model.Game;
-using NetScape.Abstractions.Model.IO.Login;
+using NetScape.Abstractions.Model.Login;
 using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.FileSystem

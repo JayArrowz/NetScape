@@ -1,7 +1,7 @@
 ﻿using DotNetty.Buffers;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
-using NetScape.Abstractions.Login.Model;
+using NetScape.Abstractions.Model.Login;
 
 namespace NetScape.Modules.LoginProtocol.Handlers
 {

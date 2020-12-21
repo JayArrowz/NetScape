@@ -1,4 +1,4 @@
-﻿namespace NetScape.Abstractions.Model.IO
+﻿namespace NetScape.Abstractions.Model.Login
 {
     public enum HandshakeType : byte
     {
