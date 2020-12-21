@@ -12,7 +12,8 @@ namespace NetScape.Modules.LoginProtocol
             builder.RegisterType<HandshakeDecoder>();
             builder.RegisterType<LoginEncoder>();
             builder.RegisterType<LoginDecoder>();
-            builder.RegisterType<LoginProcessor>().As<ILoginProcessor<LoginStatus>>().SingleInstance();
+            builder.RegisterType<LoginProcessor>().As<ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse>>()
+                .As<IStartable>().SingleInstance();
         }
     }
 }

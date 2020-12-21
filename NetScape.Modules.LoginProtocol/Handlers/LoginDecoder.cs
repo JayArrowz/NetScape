@@ -15,6 +15,8 @@ using NetScape.Abstractions.Util;
 using NetScape.Abstractions.IO.Util;
 using NetScape.Abstractions.Interfaces.Login;
 using System.Threading.Tasks;
+using System.Threading;
+using Microsoft.Extensions.Configuration;
 
 namespace NetScape.Modules.LoginProtocol.Handlers
 {
@@ -45,11 +47,10 @@ namespace NetScape.Modules.LoginProtocol.Handlers
          * The username hash.
          */
         private int _usernameHash;
-
         private readonly ILogger _logger;
-        private readonly ILoginProcessor<LoginStatus> _loginProcessor;
+        private readonly ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> _loginProcessor;
 
-        public LoginDecoder(ILogger logger, ILoginProcessor<LoginStatus> loginProcessor) : base(LoginDecoderState.LoginHandshake)
+        public LoginDecoder(ILogger logger, ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> loginProcessor, IConfigurationRoot configurationRoot) : base(LoginDecoderState.LoginHandshake)
         {
             _logger = logger;
             _loginProcessor = loginProcessor;
@@ -221,7 +222,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 };
 
                 var randomPair = new IsaacRandomPair(encodingRandom, decodingRandom);
-                var request = new LoginRequest
+                var request = new Rs2LoginRequest
                 {
                     Credentials = credentials,
                     RandomPair = randomPair,
@@ -232,22 +233,28 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                     ClientVersion = version
                 };
 
-                _loginProcessor.ProcessAsync(request).ContinueWith(loginTask =>
-                {
-                    //TODO proper cancellation
-                    if (!loginTask.Wait(10000))
-                    {
-                        WriteResponseCode(ctx, LoginStatus.StatusLoginServerOffline);
-                        return;
-                    }
-
-                    var loginResult = loginTask.Result;
-                    ctx.WriteAndFlushAsync(loginResult).ContinueWith(sendResultTask =>
-                    {
-                        HandleLoginResponseFuture(loginResult.Status, sendResultTask, ctx);
-                    });
-                });
+                _loginProcessor.Enqueue(request);
+                _loginProcessor.GetResultAsync(request).ContinueWith(loginTask => WriteProcessorResponse(loginTask, ctx));
             }
+        }
+
+        private void WriteProcessorResponse(Task<Rs2LoginResponse> loginTask, IChannelHandlerContext ctx)
+        {
+            Rs2LoginResponse loginResult = null;
+            try
+            {
+                loginResult = loginTask.Result;
+            }
+            catch (Exception exception)
+            {
+                _logger.Error(exception, nameof(DecodePayload));
+                WriteResponseCode(ctx, LoginStatus.StatusLoginServerOffline);
+                return;
+            }
+            ctx.WriteAndFlushAsync(loginResult).ContinueWith(sendResultTask =>
+            {
+                HandleLoginResponseFuture(loginResult.Status, sendResultTask, ctx);
+            });
         }
 
         /**
@@ -269,7 +276,8 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             if (response != LoginStatus.StatusOk)
             {
                 future.ContinueWith(v => ctx.CloseAsync());
-            } else
+            }
+            else
             {
                 ctx.Channel.Pipeline.Remove(nameof(LoginEncoder));
                 ctx.Channel.Pipeline.Remove(nameof(LoginDecoder));

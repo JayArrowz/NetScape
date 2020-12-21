@@ -9,7 +9,7 @@ namespace NetScape.Abstractions.Login.Model
      *
      * @author Graham
      */
-    public sealed class LoginRequest
+    public record LoginRequest<TRes>
     {
         public int[] ArchiveCrcs { get; set; }
 
@@ -24,5 +24,6 @@ namespace NetScape.Abstractions.Login.Model
         public bool Reconnecting { get; set; }
 
         public int ReleaseNumber { get; set; }
+        public TRes Result { get; set; }
     }
 }

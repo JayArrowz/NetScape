@@ -5,7 +5,7 @@
      *
      * @author Graham
      */
-    public sealed class PlayerCredentials
+    public sealed record PlayerCredentials
     {
 
         /**

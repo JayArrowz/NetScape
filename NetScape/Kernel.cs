@@ -19,6 +19,7 @@ namespace NetScape
     public class Kernel
     {
         public static IConfigurationRoot ConfigurationRoot { get; set; }
+        public static bool Exited { get; set; }
         public static void Main()
         {
             var serviceCollection = new ServiceCollection();
@@ -36,7 +37,10 @@ namespace NetScape
             {
                 var gameServer = serviceProvider.GetRequiredService<IGameServer>();
                 _ = gameServer.BindAsync();
+                
+                //TODO Make better
                 Console.ReadLine();
+                Exited = true;
             }
         }
 

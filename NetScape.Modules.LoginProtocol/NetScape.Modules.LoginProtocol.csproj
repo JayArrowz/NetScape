@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetty.Codecs" Version="0.6.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
     <PackageReference Include="Serilog" Version="2.10.0" />
   </ItemGroup>
 
