@@ -7,11 +7,9 @@ One Paragraph of project description goes here
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
-
-What things you need to install the software and how to install them
-
 ```
 https://www.postgresql.org/download/
+https://dotnet.microsoft.com/download/dotnet/5.0
 ```
 
 ### Installing
@@ -19,6 +17,12 @@ https://www.postgresql.org/download/
 A step by step series of examples that tell you how to get a development env running
 
 1. Create the folder ```AspNetServerData\Cache``` in your home folder
+2. Go to [appsettings.json](https://github.com/JayArrowz/NetScape/blob/master/NetScape/appsettings.json) and ensure the ConnectionString to your database is correct
+3. Go to your Terminal (Make sure its current directory is matching the root of this repo) or VS Console then type:
+```
+dotnet ef database update --project NetScape
+```
+This should generate the tables in the postgresDB
 
 ## Contributing
 
