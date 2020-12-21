@@ -6,10 +6,9 @@ Modular Runescape Private Server
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
-```
-https://www.postgresql.org/download/
-https://dotnet.microsoft.com/download/dotnet/5.0
-```
+[PostgresSQL](https://www.postgresql.org/download/)
+[Net5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
+
 
 ### Installing
 1. Create the folder ```AspNetServerData\Cache``` in your users home folder and add the 317 cache (Currently NetScape only supports the 317 protocol)
