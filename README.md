@@ -1,6 +1,5 @@
-# Project Title
-
-One Paragraph of project description goes here
+# NetScape
+Modular Runescape Private Server
 
 ## Getting Started
 
@@ -13,16 +12,12 @@ https://dotnet.microsoft.com/download/dotnet/5.0
 ```
 
 ### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
 1. Create the folder ```AspNetServerData\Cache``` in your home folder
 2. Go to [appsettings.json](https://github.com/JayArrowz/NetScape/blob/master/NetScape/appsettings.json) and ensure the ConnectionString to your database is correct
 3. Go to your Terminal (Make sure its current directory is matching the root of this repo) or VS Console then type:
 ```
 dotnet ef database update --project NetScape
 ```
-This should generate the tables in the postgresDB
 
 ## Contributing
 
