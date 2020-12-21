@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape", "NetScape\NetScape.csproj", "{296CC515-8375-48A8-AB79-82131981BF46}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0F0D905-D443-4C5B-90AF-35F0954510F7} = {B0F0D905-D443-4C5B-90AF-35F0954510F7}
+		{12AECAA9-122D-4A3E-9B48-36DF0BFBE01F} = {12AECAA9-122D-4A3E-9B48-36DF0BFBE01F}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Server", "NetScape.GameServer\NetScape.Modules.Server.csproj", "{6FC700EE-6C8B-4F7A-95D6-4815CE04312A}"
 EndProject
@@ -22,8 +26,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Messages.Generator", "NetScape.Modules.Messages.Generator\NetScape.Modules.Messages.Generator.csproj", "{B0F0D905-D443-4C5B-90AF-35F0954510F7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Messages.Builder", "NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj", "{12AECAA9-122D-4A3E-9B48-36DF0BFBE01F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Messages.Generated", "NetScape.Modules.Messages.Generated\NetScape.Modules.Messages.Generated.csproj", "{538CCAE3-6D0C-4206-B8A6-208687AD76B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +73,6 @@ Global
 		{12AECAA9-122D-4A3E-9B48-36DF0BFBE01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12AECAA9-122D-4A3E-9B48-36DF0BFBE01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12AECAA9-122D-4A3E-9B48-36DF0BFBE01F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{538CCAE3-6D0C-4206-B8A6-208687AD76B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{538CCAE3-6D0C-4206-B8A6-208687AD76B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{538CCAE3-6D0C-4206-B8A6-208687AD76B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{538CCAE3-6D0C-4206-B8A6-208687AD76B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

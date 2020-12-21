@@ -49,7 +49,7 @@ using NetScape.Modules.Messages.Builder;
                     getMethod.Append("            return bldr.ToMessageFrame();");
                     strBuilder.Replace("{Fields}", fieldsBuilder.ToString());
                     strBuilder.Replace("{GetMethod}", getMethod.ToString());
-                    context.AddSource($"{message.Name}", SourceText.From(strBuilder.ToString(), Encoding.UTF8));
+                    context.AddSource($"{message.Name}.cs", SourceText.From(strBuilder.ToString(), Encoding.UTF8));
                 }
             }
 
