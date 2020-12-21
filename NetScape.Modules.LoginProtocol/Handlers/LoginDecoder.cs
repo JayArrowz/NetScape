@@ -50,7 +50,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
         private readonly ILogger _logger;
         private readonly ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> _loginProcessor;
 
-        public LoginDecoder(ILogger logger, ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> loginProcessor, IConfigurationRoot configurationRoot) : base(LoginDecoderState.LoginHandshake)
+        public LoginDecoder(ILogger logger, ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> loginProcessor) : base(LoginDecoderState.LoginHandshake)
         {
             _logger = logger;
             _loginProcessor = loginProcessor;
