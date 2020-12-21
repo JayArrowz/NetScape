@@ -15,6 +15,7 @@ These instructions will get you a copy of the project up and running on your loc
 2. Go to [appsettings.json](https://github.com/JayArrowz/NetScape/blob/master/NetScape/appsettings.json) and ensure the ConnectionString to your database is correct
 3. Go to your Terminal (Make sure its current directory is matching the root of this repo) or VS Console then type:
 ```
+dotnet tool install -g dotnet-ef
 dotnet ef database update --project NetScape
 ```
 
