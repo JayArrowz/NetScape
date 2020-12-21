@@ -5,4 +5,6 @@ Credits:
 JayArrowz
 Graham
 Major
-Discarded's Cache Lib
+
+Repos:
+https://github.com/villermen/runescape-cache-tools
