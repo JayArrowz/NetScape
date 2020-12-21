@@ -1,0 +1,17 @@
+{
+  "Namespace": "NetScape.Modules.Messages",
+  "Type": "Encoder",
+  "Messages": [
+    {
+      "Name": "ChangeRegionMessage",
+      "Id": 78,
+      "Params": [
+        {
+          "Name": "RegionX",
+          "Type": "Short",
+          "Transform": "Add"
+        }
+      ]
+    }
+  ]
+}

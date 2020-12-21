@@ -1,6 +1,6 @@
 ﻿using DotNetty.Buffers;
 
-namespace NetScape.Abstractions.Model.Messages
+namespace NetScape.Modules.Messages.Builder
 {
     /**
     * @author Graham

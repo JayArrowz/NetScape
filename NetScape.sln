@@ -19,6 +19,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Cache", "N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.DAL", "NetScape.Modules.DAL\NetScape.Modules.DAL.csproj", "{22C15816-2EB8-403F-B166-7A508ED73470}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Messages.Generator", "NetScape.Modules.Messages.Generator\NetScape.Modules.Messages.Generator.csproj", "{B0F0D905-D443-4C5B-90AF-35F0954510F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Messages.Builder", "NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj", "{12AECAA9-122D-4A3E-9B48-36DF0BFBE01F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Messages.Generated", "NetScape.Modules.Messages.Generated\NetScape.Modules.Messages.Generated.csproj", "{538CCAE3-6D0C-4206-B8A6-208687AD76B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +63,18 @@ Global
 		{22C15816-2EB8-403F-B166-7A508ED73470}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22C15816-2EB8-403F-B166-7A508ED73470}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22C15816-2EB8-403F-B166-7A508ED73470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F0D905-D443-4C5B-90AF-35F0954510F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F0D905-D443-4C5B-90AF-35F0954510F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F0D905-D443-4C5B-90AF-35F0954510F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F0D905-D443-4C5B-90AF-35F0954510F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12AECAA9-122D-4A3E-9B48-36DF0BFBE01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12AECAA9-122D-4A3E-9B48-36DF0BFBE01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12AECAA9-122D-4A3E-9B48-36DF0BFBE01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12AECAA9-122D-4A3E-9B48-36DF0BFBE01F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{538CCAE3-6D0C-4206-B8A6-208687AD76B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{538CCAE3-6D0C-4206-B8A6-208687AD76B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{538CCAE3-6D0C-4206-B8A6-208687AD76B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{538CCAE3-6D0C-4206-B8A6-208687AD76B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

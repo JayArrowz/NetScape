@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static NetScape.Abstractions.Model.Messages.MessageFrame;
 
-namespace NetScape.Abstractions.Model.Messages
+namespace NetScape.Modules.Messages.Builder
 {
     /**
      * @author Graham

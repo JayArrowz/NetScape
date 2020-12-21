@@ -1,4 +1,4 @@
-namespace NetScape.Abstractions.Model.Messages
+namespace NetScape.Modules.Messages.Builder
 {
     public enum MessageType
     {

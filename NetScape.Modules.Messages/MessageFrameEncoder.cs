@@ -2,9 +2,8 @@
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 using NetScape.Abstractions.Interfaces.Messages;
-using NetScape.Abstractions.Model.Messages;
 using NetScape.Abstractions.Util;
-using static NetScape.Abstractions.Model.Messages.MessageFrame;
+using NetScape.Modules.Messages.Builder;
 
 namespace NetScape.Modules.Messages
 {
@@ -22,7 +21,6 @@ namespace NetScape.Modules.Messages
             {
                 opcode += (int) Cipher.NextInt();
             }
-
             output.WriteByte(opcode);
             if (type == MessageFrame.MessageType.VariableByte)
                 output.WriteByte(payload.ReadableBytes);
