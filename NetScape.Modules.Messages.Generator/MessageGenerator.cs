@@ -24,35 +24,50 @@ namespace NetScape.Messages.Generator
             var stringBuilder = new StringBuilder();
             foreach (var param in generatorParams)
             {
+                var isEncoder = param.Type == GeneratorMessageType.Encoder;
                 foreach (var message in param.Messages)
                 {
-                    var strBuilder = new StringBuilder();
-                    var fieldsBuilder = new StringBuilder();
-                    var getMethod = new StringBuilder();
-                    strBuilder.Append($@"namespace {param.Namespace}.Generated {{
+                    if(isEncoder)
+                    {
+                        context = GenerateEncoders(message, param, context);
+                    }
+                }
+            }
+
+        }
+
+        private GeneratorExecutionContext GenerateEncoders(GeneratorData message, GeneratorParams param, GeneratorExecutionContext context)
+        {
+            var strBuilder = new StringBuilder();
+            var fieldsBuilder = new StringBuilder();
+            var getMethod = new StringBuilder();
+            AppendEncoderTemplate(strBuilder, param.Namespace, message.Name);
+
+            getMethod.AppendLine($"            var bldr = new MessageFrameBuilder(alloc, {message.Id}, MessageFrame.MessageType.{message.FrameType});");
+            foreach (var fields in message.Params)
+            {
+                getMethod.AppendLine($"            bldr.Put(MessageType.{fields.Type}, DataOrder.{fields.Order}, DataTransformation.{fields.Transform}, {fields.Name});");
+                fieldsBuilder.AppendLine($"        public {MessageTypeToString(fields.Type)} {fields.Name} {{ get; set; }}");
+            }
+            getMethod.Append("            return bldr.ToMessageFrame();");
+            strBuilder.Replace("{Fields}", fieldsBuilder.ToString());
+            strBuilder.Replace("{GetMethod}", getMethod.ToString());
+            context.AddSource($"{message.Name}.cs", SourceText.From(strBuilder.ToString(), Encoding.UTF8));
+            return context;
+        }
+
+        private void AppendEncoderTemplate(StringBuilder strBuilder, string generatedNameSpace, string className)
+        {
+            strBuilder.Append($@"namespace {generatedNameSpace}.Generated {{
 using DotNetty.Buffers;
 using NetScape.Modules.Messages.Builder;
-    public class {message.Name} {{
+    public class {className} {{
 {{Fields}}        
         public MessageFrame ToMessageFrame(IByteBufferAllocator alloc) {{
 {{GetMethod}}
         }}
     }}
 }}");
-
-                    getMethod.AppendLine($"            var bldr = new MessageFrameBuilder(alloc, {message.Id}, MessageFrame.MessageType.{message.FrameType});");
-                    foreach (var fields in message.Params)
-                    {
-                        getMethod.AppendLine($"            bldr.Put(MessageType.{fields.Type}, DataOrder.{fields.Order}, DataTransformation.{fields.Transform}, {fields.Name});");
-                        fieldsBuilder.AppendLine($"        public {MessageTypeToString(fields.Type)} {fields.Name} {{ get; set; }}");
-                    }
-                    getMethod.Append("            return bldr.ToMessageFrame();");
-                    strBuilder.Replace("{Fields}", fieldsBuilder.ToString());
-                    strBuilder.Replace("{GetMethod}", getMethod.ToString());
-                    context.AddSource($"{message.Name}.cs", SourceText.From(strBuilder.ToString(), Encoding.UTF8));
-                }
-            }
-
         }
 
         private string MessageTypeToString(MessageType type)
