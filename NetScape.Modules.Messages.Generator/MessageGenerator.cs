@@ -46,19 +46,19 @@ namespace NetScape.Messages.Generator
             getMethod.AppendLine($"            var bldr = new MessageFrameBuilder(alloc, {message.Id}, MessageFrame.MessageType.{message.FrameType});");
             foreach (var fields in message.Params)
             {
-                getMethod.AppendLine($"            bldr.Put(MessageType.{fields.Type}, DataOrder.{fields.Order}, DataTransformation.{fields.Transform}, {fields.Name});");
+                getMethod.AppendLine($"            bldr.Put(MessageType.{fields.Type}, DataOrder.{fields?.Order ?? DataOrder.Big}, DataTransformation.{fields?.Transform ?? DataTransformation.None}, {fields.Name});");
                 fieldsBuilder.AppendLine($"        public {MessageTypeToString(fields.Type)} {fields.Name} {{ get; set; }}");
             }
             getMethod.Append("            return bldr.ToMessageFrame();");
             strBuilder.Replace("{Fields}", fieldsBuilder.ToString());
             strBuilder.Replace("{GetMethod}", getMethod.ToString());
-            context.AddSource($"{message.Name}.cs", SourceText.From(strBuilder.ToString(), Encoding.UTF8));
+            context.AddSource($"{message.Name}.SourceGenerated.cs", SourceText.From(strBuilder.ToString(), Encoding.UTF8));
             return context;
         }
 
         private void AppendEncoderTemplate(StringBuilder strBuilder, string generatedNameSpace, string className)
         {
-            strBuilder.Append($@"namespace {generatedNameSpace}.Generated {{
+            strBuilder.Append($@"namespace {generatedNameSpace} {{
 using DotNetty.Buffers;
 using NetScape.Modules.Messages.Builder;
     public class {className} {{

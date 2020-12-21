@@ -36,3 +36,4 @@ msbuild.wrn
 # Visual Studio 2015
 .vs/
 ASPNetScape/Properties/PublishProfiles/FolderProfile.pubxml
+NetScape.Modules.Messages/Generated/

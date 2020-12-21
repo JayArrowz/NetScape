@@ -1,5 +1,5 @@
 {
-  "Namespace": "NetScape.Modules.Messages",
+  "Namespace": "NetScape.Modules.Messages.Encoders",
   "Type": "Encoder",
   "Messages": [
     {
