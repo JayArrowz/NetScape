@@ -48,7 +48,7 @@ namespace NetScape.Abstractions.Model.Messages
             Type = type;
         }
 
-        public MessageFrame ToGameFrame()
+        public MessageFrame ToMessageFrame()
         {
             if (Type == MessageFrame.MessageType.Raw)
                 throw new ArgumentException("Raw builders cannot be converted to frames");
