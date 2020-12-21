@@ -43,3 +43,4 @@ See also the list of [contributors](https://github.com/JayArrowz/NetScape/contri
 * JayArrowz
 * Graham
 * Major
+* https://github.com/villermen/runescape-cache-tools
