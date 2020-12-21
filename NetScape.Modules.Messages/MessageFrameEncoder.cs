@@ -17,16 +17,13 @@ namespace NetScape.Modules.Messages
             IByteBuffer payload = frame.Payload;
             int opcode = frame.Id;
 
-            if (Cipher != null)
-            {
-                opcode += (int) Cipher.NextInt();
-            }
+            opcode += (int) (Cipher?.NextInt() ?? 0);
+            
             output.WriteByte(opcode);
             if (type == MessageFrame.MessageType.VariableByte)
                 output.WriteByte(payload.ReadableBytes);
             else if (type == MessageFrame.MessageType.VariableShort)
                 output.WriteShort(payload.ReadableBytes);
-
             output.WriteBytes(payload);
         }
     }
