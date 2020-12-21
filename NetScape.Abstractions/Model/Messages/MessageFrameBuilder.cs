@@ -434,7 +434,7 @@ namespace NetScape.Abstractions.Model.Messages
                 throw new ArgumentException("Number of bits must be between 1 and 31 inclusive");
             }
 
-            checkBitAccess();
+            CheckBitAccess();
 
             int bytePos = bitIndex >> 3;
             int bitOffset = 8 - (bitIndex & 7);
@@ -484,7 +484,7 @@ namespace NetScape.Abstractions.Model.Messages
 		 * Checks that this builder is in the bit access mode.
 		 * @throws IllegalStateException if the builder is not in bit access mode.
 		 */
-        private void checkBitAccess()
+        private void CheckBitAccess()
         {
             if (Mode != AccessMode.Bit)
             {
