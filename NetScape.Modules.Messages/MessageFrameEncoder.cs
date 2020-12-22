@@ -20,9 +20,9 @@ namespace NetScape.Modules.Messages
             opcode += (int) (Cipher?.NextInt() ?? 0);
             
             output.WriteByte(opcode);
-            if (type == MessageFrame.MessageType.VariableByte)
+            if (type == MessageFrame.FrameType.VariableByte)
                 output.WriteByte(payload.ReadableBytes);
-            else if (type == MessageFrame.MessageType.VariableShort)
+            else if (type == MessageFrame.FrameType.VariableShort)
                 output.WriteShort(payload.ReadableBytes);
             output.WriteBytes(payload);
         }
