@@ -242,10 +242,8 @@ namespace NetScape.Modules.LoginProtocol.Handlers
 
         private async Task WriteProcessorResponseAsync(Rs2LoginResponse loginResult, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
         {
-            await ctx.WriteAndFlushAsync(loginResult).ContinueWith(sendResultTask =>
-            {
-                HandleLoginResponseFuture(loginResult.Status, sendResultTask, ctx, randomPair);
-            });
+            await ctx.WriteAndFlushAsync(loginResult);
+            HandleLoginResponseFuture(loginResult.Status, ctx, randomPair);
         }
 
         /**
@@ -259,14 +257,14 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             var buffer = ctx.Allocator.Buffer(sizeof(byte));
             buffer.WriteByte((int)response);
             var future = ctx.WriteAndFlushAsync(buffer);
-            HandleLoginResponseFuture(response, future, ctx, null);
+            HandleLoginResponseFuture(response, ctx, null);
         }
 
-        private void HandleLoginResponseFuture(LoginStatus response, Task future, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
+        private void HandleLoginResponseFuture(LoginStatus response, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
         {
             if (response != LoginStatus.StatusOk)
             {
-                future.ContinueWith(v => ctx.CloseAsync());
+                ctx.CloseAsync();
             }
             else
             {
