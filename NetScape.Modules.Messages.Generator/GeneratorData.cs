@@ -7,7 +7,7 @@ namespace NetScape.Messages.Generator
         public string Name { get; set; }
         public int Id { get; set; }
         public MessageParams[] Params { get; set; }
-        public MessageFrame.FrameType FrameType { get; set; }
+        public FrameType FrameType { get; set; }
     }
 
     public class MessageParams

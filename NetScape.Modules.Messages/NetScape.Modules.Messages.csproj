@@ -29,8 +29,4 @@
     <ProjectReference Include="..\NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Messages.Generator\NetScape.Modules.Messages.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Generated\NetScape.Modules.Messages.Generator\NetScape.Messages.Generator.MessageGenerator\" />
-  </ItemGroup>
 </Project>

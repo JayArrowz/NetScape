@@ -18,10 +18,5 @@ namespace NetScape.Modules.Messages.Builder
             Payload = payload;
         }
 
-        public enum FrameType
-        {
-            Raw, Fixed, VariableByte, VariableShort
-        }
-
     }
 }

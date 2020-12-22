@@ -25,21 +25,21 @@ namespace NetScape.Modules.Messages.Builder
             -1 };
 
         private int OpCode { get; }
-        private MessageFrame.FrameType Type { get; }
+        private FrameType Type { get; }
         private IByteBufferAllocator Alloc { get; }
         private IByteBuffer Buffer { get; }
         private AccessMode Mode { get; set; } = AccessMode.Byte;
         private int bitIndex;
 
-        public MessageFrameBuilder(IByteBufferAllocator alloc) : this(alloc, -1, MessageFrame.FrameType.Raw)
+        public MessageFrameBuilder(IByteBufferAllocator alloc) : this(alloc, -1, FrameType.Raw)
         {
         }
 
-        public MessageFrameBuilder(IByteBufferAllocator alloc, int opcode) : this(alloc, opcode, MessageFrame.FrameType.Fixed)
+        public MessageFrameBuilder(IByteBufferAllocator alloc, int opcode) : this(alloc, opcode, FrameType.Fixed)
         {
         }
 
-        public MessageFrameBuilder(IByteBufferAllocator alloc, int opcode, MessageFrame.FrameType type)
+        public MessageFrameBuilder(IByteBufferAllocator alloc, int opcode, FrameType type)
         {
             Alloc = alloc;
             Buffer = alloc.Buffer();
@@ -49,7 +49,7 @@ namespace NetScape.Modules.Messages.Builder
 
         public MessageFrame ToMessageFrame()
         {
-            if (Type == MessageFrame.FrameType.Raw)
+            if (Type == FrameType.Raw)
                 throw new ArgumentException("Raw builders cannot be converted to frames");
 
             if (Mode != AccessMode.Byte)
@@ -87,7 +87,7 @@ namespace NetScape.Modules.Messages.Builder
         public void PutRawBuilder(MessageFrameBuilder builder)
         {
             CheckByteAccess();
-            if (builder.Type != MessageFrame.FrameType.Raw)
+            if (builder.Type != FrameType.Raw)
             {
                 throw new ArgumentException("Builder must be raw!");
             }
@@ -103,7 +103,7 @@ namespace NetScape.Modules.Messages.Builder
         public void PutRawBuilderReverse(MessageFrameBuilder builder)
         {
             CheckByteAccess();
-            if (builder.Type != MessageFrame.FrameType.Raw)
+            if (builder.Type != FrameType.Raw)
             {
                 throw new ArgumentException("Builder must be raw!");
             }

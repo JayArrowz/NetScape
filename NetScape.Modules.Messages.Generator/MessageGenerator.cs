@@ -43,7 +43,7 @@ namespace NetScape.Messages.Generator
             var getMethod = new StringBuilder();
             AppendEncoderTemplate(strBuilder, param.Namespace, message.Name);
 
-            getMethod.AppendLine($"            var bldr = new MessageFrameBuilder(alloc, {message.Id}, MessageFrame.MessageType.{message.FrameType});");
+            getMethod.AppendLine($"            var bldr = new MessageFrameBuilder(alloc, {message.Id}, FrameType.{message.FrameType});");
             foreach (var fields in message.Params)
             {
                 getMethod.AppendLine($"            bldr.Put(MessageType.{fields.Type}, DataOrder.{fields?.Order ?? DataOrder.Big}, DataTransformation.{fields?.Transform ?? DataTransformation.None}, {fields.Name});");
