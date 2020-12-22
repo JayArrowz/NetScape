@@ -13,7 +13,7 @@ namespace NetScape.Modules.LoginProtocol
 {
     public class LoginProcessor : ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse>, IStartable, IDisposable
     {
-        private ILogger _logger;
+        private readonly ILogger _logger;
         private readonly IPlayerSerializer _playerSerializer;
         private readonly List<Rs2LoginRequest> _loginRequests = new List<Rs2LoginRequest>();
 
