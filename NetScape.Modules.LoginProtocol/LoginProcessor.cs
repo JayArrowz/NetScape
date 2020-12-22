@@ -15,17 +15,15 @@ namespace NetScape.Modules.LoginProtocol
     {
         private ILogger _logger;
         private readonly IPlayerSerializer _playerSerializer;
-        private readonly HashSet<Rs2LoginRequest> _loginRequests = new HashSet<Rs2LoginRequest>();
-        private readonly HashSet<Rs2LoginRequest> _completedRequests = new HashSet<Rs2LoginRequest>();
+        private readonly List<Rs2LoginRequest> _loginRequests = new List<Rs2LoginRequest>();
+
         private readonly object _lockObject = new object();
-        private readonly TimeSpan _loginProcessorTimeout;
 
         private CancellationToken _cancellationToken;
         private CancellationTokenSource _cancellationTokenSource;
 
-        public LoginProcessor(ILogger logger, IPlayerSerializer playerSerializer, IConfigurationRoot configurationRoot)
+        public LoginProcessor(ILogger logger, IPlayerSerializer playerSerializer)
         {
-            _loginProcessorTimeout = TimeSpan.FromMilliseconds(int.Parse(configurationRoot["LoginProcessorTimeout"]));
             _logger = logger;
             _playerSerializer = playerSerializer;
         }
@@ -42,31 +40,6 @@ namespace NetScape.Modules.LoginProtocol
                     _loginRequests.Add(request);
                 }
             }
-        }
-
-        public async Task<Rs2LoginResponse> GetResultAsync(Rs2LoginRequest request)
-        {
-            using (var cancellationTokenSource =
-                new CancellationTokenSource(_loginProcessorTimeout))
-            {
-                var cancellationToken = cancellationTokenSource.Token;
-                while (!cancellationToken.IsCancellationRequested)
-                {
-                    if (!_completedRequests.Contains(request))
-                    {
-                        //Wait 100MS for result
-                        await Task.Delay(100);
-                        continue;
-                    } else
-                    {
-                        _completedRequests.Remove(request);
-                        break;
-                    }
-                }
-
-                cancellationToken.ThrowIfCancellationRequested();
-            }
-            return request.Result;
         }
 
         private async Task<Rs2LoginResponse> Process(Rs2LoginRequest request)
@@ -107,7 +80,7 @@ namespace NetScape.Modules.LoginProtocol
                         _loginRequests.Remove(loginRequest);
                         loginRequest.Result = loginResult;
                         _logger.Debug("Processed Login Request: {@LoginRequest}", loginRequest);
-                        _completedRequests.Add(loginRequest);
+                        _ = loginRequest.OnResult(loginResult);
                     }
                 }
                 await Task.Delay(600);

@@ -232,28 +232,17 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                     LowMemory = lowMemory,
                     ReleaseNumber = release,
                     ArchiveCrcs = crcs,
-                    ClientVersion = version
+                    ClientVersion = version,
+                    OnResult = loginTask => WriteProcessorResponseAsync(loginTask, ctx, randomPair)
                 };
 
                 _loginProcessor.Enqueue(request);
-                _loginProcessor.GetResultAsync(request).ContinueWith(loginTask => WriteProcessorResponse(loginTask, ctx, randomPair));
             }
         }
 
-        private void WriteProcessorResponse(Task<Rs2LoginResponse> loginTask, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
+        private async Task WriteProcessorResponseAsync(Rs2LoginResponse loginResult, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
         {
-            Rs2LoginResponse loginResult = null;
-            try
-            {
-                loginResult = loginTask.Result;
-            }
-            catch (Exception exception)
-            {
-                _logger.Error(exception, nameof(DecodePayload));
-                WriteResponseCode(ctx, LoginStatus.StatusLoginServerOffline);
-                return;
-            }
-            ctx.WriteAndFlushAsync(loginResult).ContinueWith(sendResultTask =>
+            await ctx.WriteAndFlushAsync(loginResult).ContinueWith(sendResultTask =>
             {
                 HandleLoginResponseFuture(loginResult.Status, sendResultTask, ctx, randomPair);
             });
