@@ -6,15 +6,7 @@ namespace NetScape.Messages.Generator
     {
         public string Name { get; set; }
         public int Id { get; set; }
-        public MessageParams[] Params { get; set; }
+        public MessageParameters[] Params { get; set; }
         public FrameType FrameType { get; set; }
-    }
-
-    public class MessageParams
-    {
-        public string Name { get; set; }
-        public MessageType Type { get; set; }
-        public DataOrder? Order { get; set; }
-        public DataTransformation? Transform { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace NetScape.Messages.Generator
                 .Select(t =>
                 {
                     var fileText = File.ReadAllText(t.Path);
-                    return Newtonsoft.Json.JsonConvert.DeserializeObject<GeneratorParams>(fileText);
+                    return Newtonsoft.Json.JsonConvert.DeserializeObject<FrameParameters>(fileText);
                 })
                 .ToList();
             var stringBuilder = new StringBuilder();
@@ -36,7 +36,7 @@ namespace NetScape.Messages.Generator
 
         }
 
-        private GeneratorExecutionContext GenerateEncoders(GeneratorData message, GeneratorParams param, GeneratorExecutionContext context)
+        private GeneratorExecutionContext GenerateEncoders(GeneratorData message, FrameParameters param, GeneratorExecutionContext context)
         {
             var strBuilder = new StringBuilder();
             var fieldsBuilder = new StringBuilder();

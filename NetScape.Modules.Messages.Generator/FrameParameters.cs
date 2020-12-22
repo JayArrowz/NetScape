@@ -2,7 +2,7 @@
 
 namespace NetScape.Messages.Generator
 {
-    public class GeneratorParams
+    public class FrameParameters
     {
         public string Namespace { get; set; }
         public GeneratorMessageType Type { get; set; }
