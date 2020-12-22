@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Model.Area
+  commentId: N:NetScape.Abstractions.Model.Area
+  id: NetScape.Abstractions.Model.Area
+  children:
+  - NetScape.Abstractions.Model.Area.Region
+  - NetScape.Abstractions.Model.Area.RegionCoordinates
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Abstractions.Model.Area
+  nameWithType: NetScape.Abstractions.Model.Area
+  fullName: NetScape.Abstractions.Model.Area
+  type: Namespace
+  assemblies:
+  - NetScape.Abstractions
+references:
+- uid: NetScape.Abstractions.Model.Area.Region
+  commentId: T:NetScape.Abstractions.Model.Area.Region
+  parent: NetScape.Abstractions.Model.Area
+  name: Region
+  nameWithType: Region
+  fullName: NetScape.Abstractions.Model.Area.Region
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates
+  commentId: T:NetScape.Abstractions.Model.Area.RegionCoordinates
+  parent: NetScape.Abstractions.Model.Area
+  name: RegionCoordinates
+  nameWithType: RegionCoordinates
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates
+- uid: NetScape.Abstractions.Model.Area
+  commentId: N:NetScape.Abstractions.Model.Area
+  name: NetScape.Abstractions.Model.Area
+  nameWithType: NetScape.Abstractions.Model.Area
+  fullName: NetScape.Abstractions.Model.Area

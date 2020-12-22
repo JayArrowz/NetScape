@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.BaseVarType
+  commentId: T:NetScape.Modules.Cache.BaseVarType
+  id: BaseVarType
+  parent: NetScape.Modules.Cache
+  children:
+  - NetScape.Modules.Cache.BaseVarType.Integer
+  - NetScape.Modules.Cache.BaseVarType.Long
+  - NetScape.Modules.Cache.BaseVarType.None
+  - NetScape.Modules.Cache.BaseVarType.String
+  - NetScape.Modules.Cache.BaseVarType.Vector3
+  langs:
+  - csharp
+  - vb
+  name: BaseVarType
+  nameWithType: BaseVarType
+  fullName: NetScape.Modules.Cache.BaseVarType
+  type: Enum
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/BaseVarType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: BaseVarType
+    path: src/NetScape.Modules.Cache/BaseVarType.cs
+    startLine: 2
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache
+  syntax:
+    content: public enum BaseVarType
+    content.vb: Public Enum BaseVarType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NetScape.Modules.Cache.BaseVarType.None
+  commentId: F:NetScape.Modules.Cache.BaseVarType.None
+  id: None
+  parent: NetScape.Modules.Cache.BaseVarType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: BaseVarType.None
+  fullName: NetScape.Modules.Cache.BaseVarType.None
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/BaseVarType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: None
+    path: src/NetScape.Modules.Cache/BaseVarType.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache
+  syntax:
+    content: None = 0
+    return:
+      type: NetScape.Modules.Cache.BaseVarType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.BaseVarType.Integer
+  commentId: F:NetScape.Modules.Cache.BaseVarType.Integer
+  id: Integer
+  parent: NetScape.Modules.Cache.BaseVarType
+  langs:
+  - csharp
+  - vb
+  name: Integer
+  nameWithType: BaseVarType.Integer
+  fullName: NetScape.Modules.Cache.BaseVarType.Integer
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/BaseVarType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Integer
+    path: src/NetScape.Modules.Cache/BaseVarType.cs
+    startLine: 6
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache
+  syntax:
+    content: Integer = 1
+    return:
+      type: NetScape.Modules.Cache.BaseVarType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.BaseVarType.Long
+  commentId: F:NetScape.Modules.Cache.BaseVarType.Long
+  id: Long
+  parent: NetScape.Modules.Cache.BaseVarType
+  langs:
+  - csharp
+  - vb
+  name: Long
+  nameWithType: BaseVarType.Long
+  fullName: NetScape.Modules.Cache.BaseVarType.Long
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/BaseVarType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Long
+    path: src/NetScape.Modules.Cache/BaseVarType.cs
+    startLine: 7
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache
+  syntax:
+    content: Long = 2
+    return:
+      type: NetScape.Modules.Cache.BaseVarType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.BaseVarType.String
+  commentId: F:NetScape.Modules.Cache.BaseVarType.String
+  id: String
+  parent: NetScape.Modules.Cache.BaseVarType
+  langs:
+  - csharp
+  - vb
+  name: String
+  nameWithType: BaseVarType.String
+  fullName: NetScape.Modules.Cache.BaseVarType.String
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/BaseVarType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: String
+    path: src/NetScape.Modules.Cache/BaseVarType.cs
+    startLine: 8
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache
+  syntax:
+    content: String = 3
+    return:
+      type: NetScape.Modules.Cache.BaseVarType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.BaseVarType.Vector3
+  commentId: F:NetScape.Modules.Cache.BaseVarType.Vector3
+  id: Vector3
+  parent: NetScape.Modules.Cache.BaseVarType
+  langs:
+  - csharp
+  - vb
+  name: Vector3
+  nameWithType: BaseVarType.Vector3
+  fullName: NetScape.Modules.Cache.BaseVarType.Vector3
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/BaseVarType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Vector3
+    path: src/NetScape.Modules.Cache/BaseVarType.cs
+    startLine: 9
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache
+  syntax:
+    content: Vector3 = 4
+    return:
+      type: NetScape.Modules.Cache.BaseVarType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NetScape.Modules.Cache
+  commentId: N:NetScape.Modules.Cache
+  name: NetScape.Modules.Cache
+  nameWithType: NetScape.Modules.Cache
+  fullName: NetScape.Modules.Cache
+- uid: NetScape.Modules.Cache.BaseVarType
+  commentId: T:NetScape.Modules.Cache.BaseVarType
+  parent: NetScape.Modules.Cache
+  name: BaseVarType
+  nameWithType: BaseVarType
+  fullName: NetScape.Modules.Cache.BaseVarType

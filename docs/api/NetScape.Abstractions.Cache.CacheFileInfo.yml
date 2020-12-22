@@ -1,0 +1,1269 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Cache.CacheFileInfo
+  commentId: T:NetScape.Abstractions.Cache.CacheFileInfo
+  id: CacheFileInfo
+  parent: NetScape.Abstractions.Cache
+  children:
+  - NetScape.Abstractions.Cache.CacheFileInfo.Clone
+  - NetScape.Abstractions.Cache.CacheFileInfo.CompressedSize
+  - NetScape.Abstractions.Cache.CacheFileInfo.CompressionType
+  - NetScape.Abstractions.Cache.CacheFileInfo.Crc
+  - NetScape.Abstractions.Cache.CacheFileInfo.EncryptionKey
+  - NetScape.Abstractions.Cache.CacheFileInfo.EntryId
+  - NetScape.Abstractions.Cache.CacheFileInfo.EntryInfo
+  - NetScape.Abstractions.Cache.CacheFileInfo.FileId
+  - NetScape.Abstractions.Cache.CacheFileInfo.Identifier
+  - NetScape.Abstractions.Cache.CacheFileInfo.Index
+  - NetScape.Abstractions.Cache.CacheFileInfo.MysteryHash
+  - NetScape.Abstractions.Cache.CacheFileInfo.Options
+  - NetScape.Abstractions.Cache.CacheFileInfo.UncompressedSize
+  - NetScape.Abstractions.Cache.CacheFileInfo.UsesEntries
+  - NetScape.Abstractions.Cache.CacheFileInfo.Version
+  - NetScape.Abstractions.Cache.CacheFileInfo.WhirlpoolDigest
+  langs:
+  - csharp
+  - vb
+  name: CacheFileInfo
+  nameWithType: CacheFileInfo
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: CacheFileInfo
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 8
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\nContains detailed information on a file in the cache.\n"
+  example: []
+  syntax:
+    content: public class CacheFileInfo
+    content.vb: Public Class CacheFileInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Options
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.Options
+  id: Options
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: Options
+  nameWithType: CacheFileInfo.Options
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Options
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Options
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 10
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public CacheFileOptions Options { get; set; }
+    parameters: []
+    return:
+      type: NetScape.Abstractions.Cache.CacheFileOptions
+    content.vb: Public Property Options As CacheFileOptions
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.Options*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.CompressedSize
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.CompressedSize
+  id: CompressedSize
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: CompressedSize
+  nameWithType: CacheFileInfo.CompressedSize
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.CompressedSize
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: CompressedSize
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 15
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\nThe compressed size of this entry.\n"
+  example: []
+  syntax:
+    content: public int? CompressedSize { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property CompressedSize As Integer?
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.CompressedSize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.CompressionType
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.CompressionType
+  id: CompressionType
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: CompressionType
+  nameWithType: CacheFileInfo.CompressionType
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.CompressionType
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: CompressionType
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 17
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public CompressionType CompressionType { get; set; }
+    parameters: []
+    return:
+      type: NetScape.Abstractions.Cache.CompressionType
+    content.vb: Public Property CompressionType As CompressionType
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.CompressionType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Crc
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.Crc
+  id: Crc
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: Crc
+  nameWithType: CacheFileInfo.Crc
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Crc
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Crc
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 19
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public int? Crc { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Crc As Integer?
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.Crc*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.EntryInfo
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.EntryInfo
+  id: EntryInfo
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: EntryInfo
+  nameWithType: CacheFileInfo.EntryInfo
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.EntryInfo
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EntryInfo
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 24
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\nThe children in this entry.\n"
+  example: []
+  syntax:
+    content: public SortedDictionary<int, CacheFileEntryInfo> EntryInfo { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.SortedDictionary{System.Int32,NetScape.Abstractions.Cache.CacheFileEntryInfo}
+    content.vb: Public Property EntryInfo As SortedDictionary(Of Integer, CacheFileEntryInfo)
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.EntryInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.FileId
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.FileId
+  id: FileId
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: FileId
+  nameWithType: CacheFileInfo.FileId
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.FileId
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: FileId
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 27
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public int? FileId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property FileId As Integer?
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.FileId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.EntryId
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.EntryId
+  id: EntryId
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: EntryId
+  nameWithType: CacheFileInfo.EntryId
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.EntryId
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EntryId
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 32
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\nIf this file is an entry, this will be set to its index.\n"
+  example: []
+  syntax:
+    content: public int? EntryId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property EntryId As Integer?
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.EntryId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Identifier
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.Identifier
+  id: Identifier
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: Identifier
+  nameWithType: CacheFileInfo.Identifier
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Identifier
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Identifier
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 34
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public int? Identifier { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Identifier As Integer?
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.Identifier*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Index
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.Index
+  id: Index
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: CacheFileInfo.Index
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Index
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Index
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 36
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public CacheIndex Index { get; set; }
+    parameters: []
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+    content.vb: Public Property Index As CacheIndex
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.Index*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.MysteryHash
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.MysteryHash
+  id: MysteryHash
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: MysteryHash
+  nameWithType: CacheFileInfo.MysteryHash
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.MysteryHash
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: MysteryHash
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 42
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\nSome unknown hash added on build 816.\nIt is hard to pinpoint what exactly this is because it is not used in the client.\n"
+  example: []
+  syntax:
+    content: public int? MysteryHash { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property MysteryHash As Integer?
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.MysteryHash*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.UncompressedSize
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.UncompressedSize
+  id: UncompressedSize
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: UncompressedSize
+  nameWithType: CacheFileInfo.UncompressedSize
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.UncompressedSize
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: UncompressedSize
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 47
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\nThe uncompressed size of this entry.\n"
+  example: []
+  syntax:
+    content: public int? UncompressedSize { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property UncompressedSize As Integer?
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.UncompressedSize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Version
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.Version
+  id: Version
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: CacheFileInfo.Version
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Version
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Version
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 49
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public int? Version { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Version As Integer?
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.Version*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.WhirlpoolDigest
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.WhirlpoolDigest
+  id: WhirlpoolDigest
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: WhirlpoolDigest
+  nameWithType: CacheFileInfo.WhirlpoolDigest
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.WhirlpoolDigest
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: WhirlpoolDigest
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 51
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public byte[] WhirlpoolDigest { get; set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property WhirlpoolDigest As Byte()
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.WhirlpoolDigest*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.EncryptionKey
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.EncryptionKey
+  id: EncryptionKey
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: EncryptionKey
+  nameWithType: CacheFileInfo.EncryptionKey
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.EncryptionKey
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EncryptionKey
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 56
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\nKey used for encrypting and decrypting the file to and from cache.\n"
+  example: []
+  syntax:
+    content: public byte[] EncryptionKey { get; set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property EncryptionKey As Byte()
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.EncryptionKey*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.UsesEntries
+  commentId: P:NetScape.Abstractions.Cache.CacheFileInfo.UsesEntries
+  id: UsesEntries
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: UsesEntries
+  nameWithType: CacheFileInfo.UsesEntries
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.UsesEntries
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: UsesEntries
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 62
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\nA file is an entry file when there are multiple entries defined in the info.\nA non-entry file only has one entry defined.\n"
+  example: []
+  syntax:
+    content: public bool UsesEntries { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property UsesEntries As Boolean
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.UsesEntries*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Clone
+  commentId: M:NetScape.Abstractions.Cache.CacheFileInfo.Clone
+  id: Clone
+  parent: NetScape.Abstractions.Cache.CacheFileInfo
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: CacheFileInfo.Clone()
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Clone()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Clone
+    path: src/NetScape.Abstractions/Cache/CacheFileInfo.cs
+    startLine: 69
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\nCreates a new <xref href=\"NetScape.Abstractions.Cache.CacheFileInfo\" data-throw-if-not-resolved=\"false\"></xref> with the same values as this one.\nEntries will also be cloned to the new object.\n"
+  example: []
+  syntax:
+    content: public CacheFileInfo Clone()
+    return:
+      type: NetScape.Abstractions.Cache.CacheFileInfo
+      description: ''
+    content.vb: Public Function Clone As CacheFileInfo
+  overload: NetScape.Abstractions.Cache.CacheFileInfo.Clone*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NetScape.Abstractions.Cache
+  commentId: N:NetScape.Abstractions.Cache
+  name: NetScape.Abstractions.Cache
+  nameWithType: NetScape.Abstractions.Cache
+  fullName: NetScape.Abstractions.Cache
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Options*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.Options
+  name: Options
+  nameWithType: CacheFileInfo.Options
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Options
+- uid: NetScape.Abstractions.Cache.CacheFileOptions
+  commentId: T:NetScape.Abstractions.Cache.CacheFileOptions
+  parent: NetScape.Abstractions.Cache
+  name: CacheFileOptions
+  nameWithType: CacheFileOptions
+  fullName: NetScape.Abstractions.Cache.CacheFileOptions
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.CompressedSize*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.CompressedSize
+  name: CompressedSize
+  nameWithType: CacheFileInfo.CompressedSize
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.CompressedSize
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.CompressionType*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.CompressionType
+  name: CompressionType
+  nameWithType: CacheFileInfo.CompressionType
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.CompressionType
+- uid: NetScape.Abstractions.Cache.CompressionType
+  commentId: T:NetScape.Abstractions.Cache.CompressionType
+  parent: NetScape.Abstractions.Cache
+  name: CompressionType
+  nameWithType: CompressionType
+  fullName: NetScape.Abstractions.Cache.CompressionType
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Crc*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.Crc
+  name: Crc
+  nameWithType: CacheFileInfo.Crc
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Crc
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.EntryInfo*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.EntryInfo
+  name: EntryInfo
+  nameWithType: CacheFileInfo.EntryInfo
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.EntryInfo
+- uid: System.Collections.Generic.SortedDictionary{System.Int32,NetScape.Abstractions.Cache.CacheFileEntryInfo}
+  commentId: T:System.Collections.Generic.SortedDictionary{System.Int32,NetScape.Abstractions.Cache.CacheFileEntryInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.SortedDictionary`2
+  name: SortedDictionary<Int32, CacheFileEntryInfo>
+  nameWithType: SortedDictionary<Int32, CacheFileEntryInfo>
+  fullName: System.Collections.Generic.SortedDictionary<System.Int32, NetScape.Abstractions.Cache.CacheFileEntryInfo>
+  nameWithType.vb: SortedDictionary(Of Int32, CacheFileEntryInfo)
+  fullName.vb: System.Collections.Generic.SortedDictionary(Of System.Int32, NetScape.Abstractions.Cache.CacheFileEntryInfo)
+  name.vb: SortedDictionary(Of Int32, CacheFileEntryInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.SortedDictionary`2
+    name: SortedDictionary
+    nameWithType: SortedDictionary
+    fullName: System.Collections.Generic.SortedDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NetScape.Abstractions.Cache.CacheFileEntryInfo
+    name: CacheFileEntryInfo
+    nameWithType: CacheFileEntryInfo
+    fullName: NetScape.Abstractions.Cache.CacheFileEntryInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.SortedDictionary`2
+    name: SortedDictionary
+    nameWithType: SortedDictionary
+    fullName: System.Collections.Generic.SortedDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NetScape.Abstractions.Cache.CacheFileEntryInfo
+    name: CacheFileEntryInfo
+    nameWithType: CacheFileEntryInfo
+    fullName: NetScape.Abstractions.Cache.CacheFileEntryInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.SortedDictionary`2
+  commentId: T:System.Collections.Generic.SortedDictionary`2
+  isExternal: true
+  name: SortedDictionary<TKey, TValue>
+  nameWithType: SortedDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.SortedDictionary<TKey, TValue>
+  nameWithType.vb: SortedDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.SortedDictionary(Of TKey, TValue)
+  name.vb: SortedDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.SortedDictionary`2
+    name: SortedDictionary
+    nameWithType: SortedDictionary
+    fullName: System.Collections.Generic.SortedDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.SortedDictionary`2
+    name: SortedDictionary
+    nameWithType: SortedDictionary
+    fullName: System.Collections.Generic.SortedDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.FileId*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.FileId
+  name: FileId
+  nameWithType: CacheFileInfo.FileId
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.FileId
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.EntryId*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.EntryId
+  name: EntryId
+  nameWithType: CacheFileInfo.EntryId
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.EntryId
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Identifier*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.Identifier
+  name: Identifier
+  nameWithType: CacheFileInfo.Identifier
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Identifier
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Index*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.Index
+  name: Index
+  nameWithType: CacheFileInfo.Index
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Index
+- uid: NetScape.Abstractions.Cache.CacheIndex
+  commentId: T:NetScape.Abstractions.Cache.CacheIndex
+  parent: NetScape.Abstractions.Cache
+  name: CacheIndex
+  nameWithType: CacheIndex
+  fullName: NetScape.Abstractions.Cache.CacheIndex
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.MysteryHash*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.MysteryHash
+  name: MysteryHash
+  nameWithType: CacheFileInfo.MysteryHash
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.MysteryHash
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.UncompressedSize*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.UncompressedSize
+  name: UncompressedSize
+  nameWithType: CacheFileInfo.UncompressedSize
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.UncompressedSize
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Version*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.Version
+  name: Version
+  nameWithType: CacheFileInfo.Version
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Version
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.WhirlpoolDigest*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.WhirlpoolDigest
+  name: WhirlpoolDigest
+  nameWithType: CacheFileInfo.WhirlpoolDigest
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.WhirlpoolDigest
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.EncryptionKey*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.EncryptionKey
+  name: EncryptionKey
+  nameWithType: CacheFileInfo.EncryptionKey
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.EncryptionKey
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.UsesEntries*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.UsesEntries
+  name: UsesEntries
+  nameWithType: CacheFileInfo.UsesEntries
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.UsesEntries
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NetScape.Abstractions.Cache.CacheFileInfo
+  commentId: T:NetScape.Abstractions.Cache.CacheFileInfo
+  parent: NetScape.Abstractions.Cache
+  name: CacheFileInfo
+  nameWithType: CacheFileInfo
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo
+- uid: NetScape.Abstractions.Cache.CacheFileInfo.Clone*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileInfo.Clone
+  name: Clone
+  nameWithType: CacheFileInfo.Clone
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo.Clone

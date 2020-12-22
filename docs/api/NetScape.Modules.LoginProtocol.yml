@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.LoginProtocol
+  commentId: N:NetScape.Modules.LoginProtocol
+  id: NetScape.Modules.LoginProtocol
+  children:
+  - NetScape.Modules.LoginProtocol.HandshakeType
+  - NetScape.Modules.LoginProtocol.LoginModule
+  - NetScape.Modules.LoginProtocol.LoginProcessor
+  - NetScape.Modules.LoginProtocol.LoginStatus
+  - NetScape.Modules.LoginProtocol.Rs2LoginResponse
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Modules.LoginProtocol
+  nameWithType: NetScape.Modules.LoginProtocol
+  fullName: NetScape.Modules.LoginProtocol
+  type: Namespace
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+references:
+- uid: NetScape.Modules.LoginProtocol.HandshakeType
+  commentId: T:NetScape.Modules.LoginProtocol.HandshakeType
+  parent: NetScape.Modules.LoginProtocol
+  name: HandshakeType
+  nameWithType: HandshakeType
+  fullName: NetScape.Modules.LoginProtocol.HandshakeType
+- uid: NetScape.Modules.LoginProtocol.LoginModule
+  commentId: T:NetScape.Modules.LoginProtocol.LoginModule
+  name: LoginModule
+  nameWithType: LoginModule
+  fullName: NetScape.Modules.LoginProtocol.LoginModule
+- uid: NetScape.Modules.LoginProtocol.LoginProcessor
+  commentId: T:NetScape.Modules.LoginProtocol.LoginProcessor
+  name: LoginProcessor
+  nameWithType: LoginProcessor
+  fullName: NetScape.Modules.LoginProtocol.LoginProcessor
+- uid: NetScape.Modules.LoginProtocol.LoginStatus
+  commentId: T:NetScape.Modules.LoginProtocol.LoginStatus
+  parent: NetScape.Modules.LoginProtocol
+  name: LoginStatus
+  nameWithType: LoginStatus
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus
+- uid: NetScape.Modules.LoginProtocol.Rs2LoginResponse
+  commentId: T:NetScape.Modules.LoginProtocol.Rs2LoginResponse
+  name: Rs2LoginResponse
+  nameWithType: Rs2LoginResponse
+  fullName: NetScape.Modules.LoginProtocol.Rs2LoginResponse
+- uid: NetScape.Modules.LoginProtocol
+  commentId: N:NetScape.Modules.LoginProtocol
+  name: NetScape.Modules.LoginProtocol
+  nameWithType: NetScape.Modules.LoginProtocol
+  fullName: NetScape.Modules.LoginProtocol

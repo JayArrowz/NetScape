@@ -1,0 +1,973 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile
+  commentId: T:NetScape.Modules.Cache.FileTypes.JagaFile
+  id: JagaFile
+  parent: NetScape.Modules.Cache.FileTypes
+  children:
+  - NetScape.Modules.Cache.FileTypes.JagaFile.ChunkCount
+  - NetScape.Modules.Cache.FileTypes.JagaFile.ChunkDescriptors
+  - NetScape.Modules.Cache.FileTypes.JagaFile.ContainedChunkData
+  - NetScape.Modules.Cache.FileTypes.JagaFile.Decode(System.Byte[])
+  - NetScape.Modules.Cache.FileTypes.JagaFile.Encode
+  - NetScape.Modules.Cache.FileTypes.JagaFile.MagicNumber
+  - NetScape.Modules.Cache.FileTypes.JagaFile.SampleFrequency
+  - NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger1
+  - NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger2
+  - NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger3
+  langs:
+  - csharp
+  - vb
+  name: JagaFile
+  nameWithType: JagaFile
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: JagaFile
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 11
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  summary: "\nA file that serves as a map to stitch audio chunks together in the right order while also containing the first chunk.\n"
+  example: []
+  syntax:
+    content: 'public class JagaFile : CacheFileBase'
+    content.vb: >-
+      Public Class JagaFile
+          Inherits CacheFileBase
+  inheritance:
+  - System.Object
+  - NetScape.Abstractions.Cache.CacheFileBase
+  inheritedMembers:
+  - NetScape.Abstractions.Cache.CacheFileBase.Info
+  - NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  - NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.MagicNumber
+  commentId: F:NetScape.Modules.Cache.FileTypes.JagaFile.MagicNumber
+  id: MagicNumber
+  parent: NetScape.Modules.Cache.FileTypes.JagaFile
+  langs:
+  - csharp
+  - vb
+  name: MagicNumber
+  nameWithType: JagaFile.MagicNumber
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.MagicNumber
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: MagicNumber
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 13
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public static byte[] MagicNumber
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared MagicNumber As Byte()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.ChunkCount
+  commentId: P:NetScape.Modules.Cache.FileTypes.JagaFile.ChunkCount
+  id: ChunkCount
+  parent: NetScape.Modules.Cache.FileTypes.JagaFile
+  langs:
+  - csharp
+  - vb
+  name: ChunkCount
+  nameWithType: JagaFile.ChunkCount
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.ChunkCount
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ChunkCount
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 15
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public int ChunkCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ChunkCount As Integer
+  overload: NetScape.Modules.Cache.FileTypes.JagaFile.ChunkCount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.ChunkDescriptors
+  commentId: P:NetScape.Modules.Cache.FileTypes.JagaFile.ChunkDescriptors
+  id: ChunkDescriptors
+  parent: NetScape.Modules.Cache.FileTypes.JagaFile
+  langs:
+  - csharp
+  - vb
+  name: ChunkDescriptors
+  nameWithType: JagaFile.ChunkDescriptors
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.ChunkDescriptors
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ChunkDescriptors
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 17
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public JagaFile.AudioChunkDescriptor[] ChunkDescriptors { get; set; }
+    parameters: []
+    return:
+      type: NetScape.Modules.Cache.FileTypes.JagaFile.AudioChunkDescriptor[]
+    content.vb: Public Property ChunkDescriptors As JagaFile.AudioChunkDescriptor()
+  overload: NetScape.Modules.Cache.FileTypes.JagaFile.ChunkDescriptors*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.ContainedChunkData
+  commentId: P:NetScape.Modules.Cache.FileTypes.JagaFile.ContainedChunkData
+  id: ContainedChunkData
+  parent: NetScape.Modules.Cache.FileTypes.JagaFile
+  langs:
+  - csharp
+  - vb
+  name: ContainedChunkData
+  nameWithType: JagaFile.ContainedChunkData
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.ContainedChunkData
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ContainedChunkData
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 19
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public byte[] ContainedChunkData { get; set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property ContainedChunkData As Byte()
+  overload: NetScape.Modules.Cache.FileTypes.JagaFile.ContainedChunkData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.SampleFrequency
+  commentId: P:NetScape.Modules.Cache.FileTypes.JagaFile.SampleFrequency
+  id: SampleFrequency
+  parent: NetScape.Modules.Cache.FileTypes.JagaFile
+  langs:
+  - csharp
+  - vb
+  name: SampleFrequency
+  nameWithType: JagaFile.SampleFrequency
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.SampleFrequency
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SampleFrequency
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 21
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public int SampleFrequency { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property SampleFrequency As Integer
+  overload: NetScape.Modules.Cache.FileTypes.JagaFile.SampleFrequency*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger1
+  commentId: P:NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger1
+  id: UnknownInteger1
+  parent: NetScape.Modules.Cache.FileTypes.JagaFile
+  langs:
+  - csharp
+  - vb
+  name: UnknownInteger1
+  nameWithType: JagaFile.UnknownInteger1
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger1
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: UnknownInteger1
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 23
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public int UnknownInteger1 { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property UnknownInteger1 As Integer
+  overload: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger2
+  commentId: P:NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger2
+  id: UnknownInteger2
+  parent: NetScape.Modules.Cache.FileTypes.JagaFile
+  langs:
+  - csharp
+  - vb
+  name: UnknownInteger2
+  nameWithType: JagaFile.UnknownInteger2
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger2
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: UnknownInteger2
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 28
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  summary: "\nSomething to do with length?\n"
+  example: []
+  syntax:
+    content: public int UnknownInteger2 { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property UnknownInteger2 As Integer
+  overload: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger3
+  commentId: P:NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger3
+  id: UnknownInteger3
+  parent: NetScape.Modules.Cache.FileTypes.JagaFile
+  langs:
+  - csharp
+  - vb
+  name: UnknownInteger3
+  nameWithType: JagaFile.UnknownInteger3
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger3
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: UnknownInteger3
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 30
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public int UnknownInteger3 { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property UnknownInteger3 As Integer
+  overload: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger3*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.Decode(System.Byte[])
+  commentId: M:NetScape.Modules.Cache.FileTypes.JagaFile.Decode(System.Byte[])
+  id: Decode(System.Byte[])
+  parent: NetScape.Modules.Cache.FileTypes.JagaFile
+  langs:
+  - csharp
+  - vb
+  name: Decode(Byte[])
+  nameWithType: JagaFile.Decode(Byte[])
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.Decode(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Decode
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 32
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public override void Decode(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    content.vb: Public Overrides Sub Decode(data As Byte())
+  overridden: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  overload: NetScape.Modules.Cache.FileTypes.JagaFile.Decode*
+  nameWithType.vb: JagaFile.Decode(Byte())
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: NetScape.Modules.Cache.FileTypes.JagaFile.Decode(System.Byte())
+  name.vb: Decode(Byte())
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.Encode
+  commentId: M:NetScape.Modules.Cache.FileTypes.JagaFile.Encode
+  id: Encode
+  parent: NetScape.Modules.Cache.FileTypes.JagaFile
+  langs:
+  - csharp
+  - vb
+  name: Encode()
+  nameWithType: JagaFile.Encode()
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.Encode()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Encode
+    path: src/NetScape.Modules.Cache/FileTypes/JagaFile.cs
+    startLine: 64
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public override byte[] Encode()
+    return:
+      type: System.Byte[]
+    content.vb: Public Overrides Function Encode As Byte()
+  overridden: NetScape.Abstractions.Cache.CacheFileBase.Encode
+  overload: NetScape.Modules.Cache.FileTypes.JagaFile.Encode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: NetScape.Modules.Cache.FileTypes
+  commentId: N:NetScape.Modules.Cache.FileTypes
+  name: NetScape.Modules.Cache.FileTypes
+  nameWithType: NetScape.Modules.Cache.FileTypes
+  fullName: NetScape.Modules.Cache.FileTypes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NetScape.Abstractions.Cache.CacheFileBase
+  commentId: T:NetScape.Abstractions.Cache.CacheFileBase
+  parent: NetScape.Abstractions.Cache
+  name: CacheFileBase
+  nameWithType: CacheFileBase
+  fullName: NetScape.Abstractions.Cache.CacheFileBase
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Info
+  commentId: P:NetScape.Abstractions.Cache.CacheFileBase.Info
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  name: Info
+  nameWithType: CacheFileBase.Info
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Info
+- uid: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  name: FromBinaryFile(BinaryFile)
+  nameWithType: CacheFileBase.FromBinaryFile(BinaryFile)
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  spec.csharp:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+    name: FromBinaryFile
+    nameWithType: CacheFileBase.FromBinaryFile
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.BinaryFile
+    name: BinaryFile
+    nameWithType: BinaryFile
+    fullName: NetScape.Abstractions.Cache.BinaryFile
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+    name: FromBinaryFile
+    nameWithType: CacheFileBase.FromBinaryFile
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.BinaryFile
+    name: BinaryFile
+    nameWithType: BinaryFile
+    fullName: NetScape.Abstractions.Cache.BinaryFile
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  name: ToBinaryFile()
+  nameWithType: CacheFileBase.ToBinaryFile()
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile()
+  spec.csharp:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+    name: ToBinaryFile
+    nameWithType: CacheFileBase.ToBinaryFile
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+    name: ToBinaryFile
+    nameWithType: CacheFileBase.ToBinaryFile
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Cache
+  commentId: N:NetScape.Abstractions.Cache
+  name: NetScape.Abstractions.Cache
+  nameWithType: NetScape.Abstractions.Cache
+  fullName: NetScape.Abstractions.Cache
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.ChunkCount*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.JagaFile.ChunkCount
+  name: ChunkCount
+  nameWithType: JagaFile.ChunkCount
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.ChunkCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.ChunkDescriptors*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.JagaFile.ChunkDescriptors
+  name: ChunkDescriptors
+  nameWithType: JagaFile.ChunkDescriptors
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.ChunkDescriptors
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.AudioChunkDescriptor[]
+  isExternal: true
+  name: JagaFile.AudioChunkDescriptor[]
+  nameWithType: JagaFile.AudioChunkDescriptor[]
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.AudioChunkDescriptor[]
+  nameWithType.vb: JagaFile.AudioChunkDescriptor()
+  fullName.vb: NetScape.Modules.Cache.FileTypes.JagaFile.AudioChunkDescriptor()
+  name.vb: JagaFile.AudioChunkDescriptor()
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.FileTypes.JagaFile.AudioChunkDescriptor
+    name: JagaFile.AudioChunkDescriptor
+    nameWithType: JagaFile.AudioChunkDescriptor
+    fullName: NetScape.Modules.Cache.FileTypes.JagaFile.AudioChunkDescriptor
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: NetScape.Modules.Cache.FileTypes.JagaFile.AudioChunkDescriptor
+    name: JagaFile.AudioChunkDescriptor
+    nameWithType: JagaFile.AudioChunkDescriptor
+    fullName: NetScape.Modules.Cache.FileTypes.JagaFile.AudioChunkDescriptor
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.ContainedChunkData*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.JagaFile.ContainedChunkData
+  name: ContainedChunkData
+  nameWithType: JagaFile.ContainedChunkData
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.ContainedChunkData
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.SampleFrequency*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.JagaFile.SampleFrequency
+  name: SampleFrequency
+  nameWithType: JagaFile.SampleFrequency
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.SampleFrequency
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger1*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger1
+  name: UnknownInteger1
+  nameWithType: JagaFile.UnknownInteger1
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger1
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger2*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger2
+  name: UnknownInteger2
+  nameWithType: JagaFile.UnknownInteger2
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger2
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger3*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger3
+  name: UnknownInteger3
+  nameWithType: JagaFile.UnknownInteger3
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.UnknownInteger3
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  isExternal: true
+  name: Decode(Byte[])
+  nameWithType: CacheFileBase.Decode(Byte[])
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  nameWithType.vb: CacheFileBase.Decode(Byte())
+  fullName.vb: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte())
+  name.vb: Decode(Byte())
+  spec.csharp:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+    name: Decode
+    nameWithType: CacheFileBase.Decode
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.Decode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+    name: Decode
+    nameWithType: CacheFileBase.Decode
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.Decode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.Decode*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.JagaFile.Decode
+  name: Decode
+  nameWithType: JagaFile.Decode
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.Decode
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Encode
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.Encode
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  name: Encode()
+  nameWithType: CacheFileBase.Encode()
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Encode()
+  spec.csharp:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.Encode
+    name: Encode
+    nameWithType: CacheFileBase.Encode
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.Encode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.Encode
+    name: Encode
+    nameWithType: CacheFileBase.Encode
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.Encode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FileTypes.JagaFile.Encode*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.JagaFile.Encode
+  name: Encode
+  nameWithType: JagaFile.Encode
+  fullName: NetScape.Modules.Cache.FileTypes.JagaFile.Encode

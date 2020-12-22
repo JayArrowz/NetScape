@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.Messages
+  commentId: N:NetScape.Abstractions.Interfaces.Messages
+  id: NetScape.Abstractions.Interfaces.Messages
+  children:
+  - NetScape.Abstractions.Interfaces.Messages.ICipheredHandler
+  - NetScape.Abstractions.Interfaces.Messages.IMessageProvider
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Abstractions.Interfaces.Messages
+  nameWithType: NetScape.Abstractions.Interfaces.Messages
+  fullName: NetScape.Abstractions.Interfaces.Messages
+  type: Namespace
+  assemblies:
+  - NetScape.Abstractions
+references:
+- uid: NetScape.Abstractions.Interfaces.Messages.ICipheredHandler
+  commentId: T:NetScape.Abstractions.Interfaces.Messages.ICipheredHandler
+  parent: NetScape.Abstractions.Interfaces.Messages
+  name: ICipheredHandler
+  nameWithType: ICipheredHandler
+  fullName: NetScape.Abstractions.Interfaces.Messages.ICipheredHandler
+- uid: NetScape.Abstractions.Interfaces.Messages.IMessageProvider
+  commentId: T:NetScape.Abstractions.Interfaces.Messages.IMessageProvider
+  parent: NetScape.Abstractions.Interfaces.Messages
+  name: IMessageProvider
+  nameWithType: IMessageProvider
+  fullName: NetScape.Abstractions.Interfaces.Messages.IMessageProvider
+- uid: NetScape.Abstractions.Interfaces.Messages
+  commentId: N:NetScape.Abstractions.Interfaces.Messages
+  name: NetScape.Abstractions.Interfaces.Messages
+  nameWithType: NetScape.Abstractions.Interfaces.Messages
+  fullName: NetScape.Abstractions.Interfaces.Messages

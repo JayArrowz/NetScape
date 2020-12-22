@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Messages.Builder.AccessMode
+  commentId: T:NetScape.Modules.Messages.Builder.AccessMode
+  id: AccessMode
+  parent: NetScape.Modules.Messages.Builder
+  children:
+  - NetScape.Modules.Messages.Builder.AccessMode.Bit
+  - NetScape.Modules.Messages.Builder.AccessMode.Byte
+  langs:
+  - csharp
+  - vb
+  name: AccessMode
+  nameWithType: AccessMode
+  fullName: NetScape.Modules.Messages.Builder.AccessMode
+  type: Enum
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/AccessMode.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: AccessMode
+    path: src/NetScape.Modules.Messages.Builder/AccessMode.cs
+    startLine: 2
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: public enum AccessMode
+    content.vb: Public Enum AccessMode
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NetScape.Modules.Messages.Builder.AccessMode.Byte
+  commentId: F:NetScape.Modules.Messages.Builder.AccessMode.Byte
+  id: Byte
+  parent: NetScape.Modules.Messages.Builder.AccessMode
+  langs:
+  - csharp
+  - vb
+  name: Byte
+  nameWithType: AccessMode.Byte
+  fullName: NetScape.Modules.Messages.Builder.AccessMode.Byte
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/AccessMode.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Byte
+    path: src/NetScape.Modules.Messages.Builder/AccessMode.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: Byte = 0
+    return:
+      type: NetScape.Modules.Messages.Builder.AccessMode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Messages.Builder.AccessMode.Bit
+  commentId: F:NetScape.Modules.Messages.Builder.AccessMode.Bit
+  id: Bit
+  parent: NetScape.Modules.Messages.Builder.AccessMode
+  langs:
+  - csharp
+  - vb
+  name: Bit
+  nameWithType: AccessMode.Bit
+  fullName: NetScape.Modules.Messages.Builder.AccessMode.Bit
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/AccessMode.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Bit
+    path: src/NetScape.Modules.Messages.Builder/AccessMode.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: Bit = 1
+    return:
+      type: NetScape.Modules.Messages.Builder.AccessMode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NetScape.Modules.Messages.Builder
+  commentId: N:NetScape.Modules.Messages.Builder
+  name: NetScape.Modules.Messages.Builder
+  nameWithType: NetScape.Modules.Messages.Builder
+  fullName: NetScape.Modules.Messages.Builder
+- uid: NetScape.Modules.Messages.Builder.AccessMode
+  commentId: T:NetScape.Modules.Messages.Builder.AccessMode
+  parent: NetScape.Modules.Messages.Builder
+  name: AccessMode
+  nameWithType: AccessMode
+  fullName: NetScape.Modules.Messages.Builder.AccessMode

@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.Exceptions
+  commentId: N:NetScape.Modules.Cache.Exceptions
+  id: NetScape.Modules.Cache.Exceptions
+  children:
+  - NetScape.Modules.Cache.Exceptions.DownloaderException
+  - NetScape.Modules.Cache.Exceptions.SoundtrackException
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Modules.Cache.Exceptions
+  nameWithType: NetScape.Modules.Cache.Exceptions
+  fullName: NetScape.Modules.Cache.Exceptions
+  type: Namespace
+  assemblies:
+  - NetScape.Modules.Cache
+references:
+- uid: NetScape.Modules.Cache.Exceptions.DownloaderException
+  commentId: T:NetScape.Modules.Cache.Exceptions.DownloaderException
+  name: DownloaderException
+  nameWithType: DownloaderException
+  fullName: NetScape.Modules.Cache.Exceptions.DownloaderException
+- uid: NetScape.Modules.Cache.Exceptions.SoundtrackException
+  commentId: T:NetScape.Modules.Cache.Exceptions.SoundtrackException
+  name: SoundtrackException
+  nameWithType: SoundtrackException
+  fullName: NetScape.Modules.Cache.Exceptions.SoundtrackException

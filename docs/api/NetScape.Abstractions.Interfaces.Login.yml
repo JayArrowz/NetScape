@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.Login
+  commentId: N:NetScape.Abstractions.Interfaces.Login
+  id: NetScape.Abstractions.Interfaces.Login
+  children:
+  - NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+  - NetScape.Abstractions.Interfaces.Login.ILoginProvider
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Abstractions.Interfaces.Login
+  nameWithType: NetScape.Abstractions.Interfaces.Login
+  fullName: NetScape.Abstractions.Interfaces.Login
+  type: Namespace
+  assemblies:
+  - NetScape.Abstractions
+references:
+- uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+  commentId: T:NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+  name: ILoginProcessor<TRequest, TResponse>
+  nameWithType: ILoginProcessor<TRequest, TResponse>
+  fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor<TRequest, TResponse>
+  nameWithType.vb: ILoginProcessor(Of TRequest, TResponse)
+  fullName.vb: NetScape.Abstractions.Interfaces.Login.ILoginProcessor(Of TRequest, TResponse)
+  name.vb: ILoginProcessor(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+    name: ILoginProcessor
+    nameWithType: ILoginProcessor
+    fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+    name: ILoginProcessor
+    nameWithType: ILoginProcessor
+    fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Interfaces.Login.ILoginProvider
+  commentId: T:NetScape.Abstractions.Interfaces.Login.ILoginProvider
+  parent: NetScape.Abstractions.Interfaces.Login
+  name: ILoginProvider
+  nameWithType: ILoginProvider
+  fullName: NetScape.Abstractions.Interfaces.Login.ILoginProvider
+- uid: NetScape.Abstractions.Interfaces.Login
+  commentId: N:NetScape.Abstractions.Interfaces.Login
+  name: NetScape.Abstractions.Interfaces.Login
+  nameWithType: NetScape.Abstractions.Interfaces.Login
+  fullName: NetScape.Abstractions.Interfaces.Login

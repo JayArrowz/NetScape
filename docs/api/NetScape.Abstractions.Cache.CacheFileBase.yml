@@ -1,0 +1,594 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Cache.CacheFileBase
+  commentId: T:NetScape.Abstractions.Cache.CacheFileBase
+  id: CacheFileBase
+  parent: NetScape.Abstractions.Cache
+  children:
+  - NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  - NetScape.Abstractions.Cache.CacheFileBase.Encode
+  - NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  - NetScape.Abstractions.Cache.CacheFileBase.Info
+  - NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  langs:
+  - csharp
+  - vb
+  name: CacheFileBase
+  nameWithType: CacheFileBase
+  fullName: NetScape.Abstractions.Cache.CacheFileBase
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileBase.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: CacheFileBase
+    path: src/NetScape.Abstractions/Cache/CacheFileBase.cs
+    startLine: 8
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\nBase type for all cache files.\nChild types must implement methods to convert to and from bytes.\n"
+  example: []
+  syntax:
+    content: public abstract class CacheFileBase
+    content.vb: Public MustInherit Class CacheFileBase
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - NetScape.Abstractions.Cache.BinaryFile
+  - NetScape.Abstractions.Cache.ReferenceTableFile
+  - NetScape.Modules.Cache.FileTypes.EntryFile
+  - NetScape.Modules.Cache.FileTypes.EnumFile
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile
+  - NetScape.Modules.Cache.FileTypes.JagaFile
+  - NetScape.Modules.Cache.FileTypes.MasterReferenceTableFile
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Info
+  commentId: P:NetScape.Abstractions.Cache.CacheFileBase.Info
+  id: Info
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: CacheFileBase.Info
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Info
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileBase.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Info
+    path: src/NetScape.Abstractions/Cache/CacheFileBase.cs
+    startLine: 10
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public CacheFileInfo Info { get; set; }
+    parameters: []
+    return:
+      type: NetScape.Abstractions.Cache.CacheFileInfo
+    content.vb: Public Property Info As CacheFileInfo
+  overload: NetScape.Abstractions.Cache.CacheFileBase.Info*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  id: FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  langs:
+  - csharp
+  - vb
+  name: FromBinaryFile(BinaryFile)
+  nameWithType: CacheFileBase.FromBinaryFile(BinaryFile)
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileBase.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: FromBinaryFile
+    path: src/NetScape.Abstractions/Cache/CacheFileBase.cs
+    startLine: 12
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public void FromBinaryFile(BinaryFile file)
+    parameters:
+    - id: file
+      type: NetScape.Abstractions.Cache.BinaryFile
+    content.vb: Public Sub FromBinaryFile(file As BinaryFile)
+  overload: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  id: Decode(System.Byte[])
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  langs:
+  - csharp
+  - vb
+  name: Decode(Byte[])
+  nameWithType: CacheFileBase.Decode(Byte[])
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileBase.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Decode
+    path: src/NetScape.Abstractions/Cache/CacheFileBase.cs
+    startLine: 28
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public abstract void Decode(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    content.vb: Public MustOverride Sub Decode(data As Byte())
+  overload: NetScape.Abstractions.Cache.CacheFileBase.Decode*
+  nameWithType.vb: CacheFileBase.Decode(Byte())
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte())
+  name.vb: Decode(Byte())
+- uid: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  id: ToBinaryFile
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  langs:
+  - csharp
+  - vb
+  name: ToBinaryFile()
+  nameWithType: CacheFileBase.ToBinaryFile()
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileBase.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ToBinaryFile
+    path: src/NetScape.Abstractions/Cache/CacheFileBase.cs
+    startLine: 30
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public BinaryFile ToBinaryFile()
+    return:
+      type: NetScape.Abstractions.Cache.BinaryFile
+    content.vb: Public Function ToBinaryFile As BinaryFile
+  overload: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Encode
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.Encode
+  id: Encode
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  langs:
+  - csharp
+  - vb
+  name: Encode()
+  nameWithType: CacheFileBase.Encode()
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Encode()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheFileBase.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Encode
+    path: src/NetScape.Abstractions/Cache/CacheFileBase.cs
+    startLine: 41
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: public abstract byte[] Encode()
+    return:
+      type: System.Byte[]
+    content.vb: Public MustOverride Function Encode As Byte()
+  overload: NetScape.Abstractions.Cache.CacheFileBase.Encode*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+references:
+- uid: NetScape.Abstractions.Cache
+  commentId: N:NetScape.Abstractions.Cache
+  name: NetScape.Abstractions.Cache
+  nameWithType: NetScape.Abstractions.Cache
+  fullName: NetScape.Abstractions.Cache
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Info*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileBase.Info
+  name: Info
+  nameWithType: CacheFileBase.Info
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Info
+- uid: NetScape.Abstractions.Cache.CacheFileInfo
+  commentId: T:NetScape.Abstractions.Cache.CacheFileInfo
+  parent: NetScape.Abstractions.Cache
+  name: CacheFileInfo
+  nameWithType: CacheFileInfo
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo
+- uid: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile
+  name: FromBinaryFile
+  nameWithType: CacheFileBase.FromBinaryFile
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile
+- uid: NetScape.Abstractions.Cache.BinaryFile
+  commentId: T:NetScape.Abstractions.Cache.BinaryFile
+  parent: NetScape.Abstractions.Cache
+  name: BinaryFile
+  nameWithType: BinaryFile
+  fullName: NetScape.Abstractions.Cache.BinaryFile
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Decode*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileBase.Decode
+  name: Decode
+  nameWithType: CacheFileBase.Decode
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Decode
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  name: ToBinaryFile
+  nameWithType: CacheFileBase.ToBinaryFile
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Encode*
+  commentId: Overload:NetScape.Abstractions.Cache.CacheFileBase.Encode
+  name: Encode
+  nameWithType: CacheFileBase.Encode
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Encode

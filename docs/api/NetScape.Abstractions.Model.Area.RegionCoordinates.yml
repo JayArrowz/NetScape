@@ -1,0 +1,728 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates
+  commentId: T:NetScape.Abstractions.Model.Area.RegionCoordinates
+  id: RegionCoordinates
+  parent: NetScape.Abstractions.Model.Area
+  children:
+  - NetScape.Abstractions.Model.Area.RegionCoordinates.#ctor(System.Int32,System.Int32)
+  - NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteX
+  - NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteY
+  - NetScape.Abstractions.Model.Area.RegionCoordinates.Equals(System.Object)
+  - NetScape.Abstractions.Model.Area.RegionCoordinates.FromPosition(NetScape.Abstractions.Model.Position)
+  - NetScape.Abstractions.Model.Area.RegionCoordinates.GetHashCode
+  - NetScape.Abstractions.Model.Area.RegionCoordinates.X
+  - NetScape.Abstractions.Model.Area.RegionCoordinates.Y
+  langs:
+  - csharp
+  - vb
+  name: RegionCoordinates
+  nameWithType: RegionCoordinates
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: RegionCoordinates
+    path: src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+    startLine: 9
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model.Area
+  summary: "\nAn immutable class representing the coordinates of a region, where the coordinates ({@code x, y}) are the top-left of\nthe region.\n\n@author Graham\n@author Major\n"
+  example: []
+  syntax:
+    content: public sealed class RegionCoordinates
+    content.vb: Public NotInheritable Class RegionCoordinates
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.FromPosition(NetScape.Abstractions.Model.Position)
+  commentId: M:NetScape.Abstractions.Model.Area.RegionCoordinates.FromPosition(NetScape.Abstractions.Model.Position)
+  id: FromPosition(NetScape.Abstractions.Model.Position)
+  parent: NetScape.Abstractions.Model.Area.RegionCoordinates
+  langs:
+  - csharp
+  - vb
+  name: FromPosition(Position)
+  nameWithType: RegionCoordinates.FromPosition(Position)
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.FromPosition(NetScape.Abstractions.Model.Position)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: FromPosition
+    path: src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+    startLine: 17
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model.Area
+  summary: "\nGets the RegionCoordinates for the specified <xref href=\"NetScape.Abstractions.Model.Position\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static RegionCoordinates FromPosition(Position position)
+    parameters:
+    - id: position
+      type: NetScape.Abstractions.Model.Position
+      description: 'The Position. '
+    return:
+      type: NetScape.Abstractions.Model.Area.RegionCoordinates
+      description: 'The RegionCoordinates. '
+    content.vb: Public Shared Function FromPosition(position As Position) As RegionCoordinates
+  overload: NetScape.Abstractions.Model.Area.RegionCoordinates.FromPosition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.#ctor(System.Int32,System.Int32)
+  commentId: M:NetScape.Abstractions.Model.Area.RegionCoordinates.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: NetScape.Abstractions.Model.Area.RegionCoordinates
+  langs:
+  - csharp
+  - vb
+  name: RegionCoordinates(Int32, Int32)
+  nameWithType: RegionCoordinates.RegionCoordinates(Int32, Int32)
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.RegionCoordinates(System.Int32, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+    startLine: 27
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model.Area
+  summary: "\nCreates the RegionCoordinates.\n"
+  example: []
+  syntax:
+    content: public RegionCoordinates(int x, int y)
+    parameters:
+    - id: x
+      type: System.Int32
+      description: 'The x coordinate. '
+    - id: y
+      type: System.Int32
+      description: 'The y coordinate. '
+    content.vb: Public Sub New(x As Integer, y As Integer)
+  overload: NetScape.Abstractions.Model.Area.RegionCoordinates.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.Equals(System.Object)
+  commentId: M:NetScape.Abstractions.Model.Area.RegionCoordinates.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: NetScape.Abstractions.Model.Area.RegionCoordinates
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: RegionCoordinates.Equals(Object)
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Equals
+    path: src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+    startLine: 33
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model.Area
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: NetScape.Abstractions.Model.Area.RegionCoordinates.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteX
+  commentId: P:NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteX
+  id: AbsoluteX
+  parent: NetScape.Abstractions.Model.Area.RegionCoordinates
+  langs:
+  - csharp
+  - vb
+  name: AbsoluteX
+  nameWithType: RegionCoordinates.AbsoluteX
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteX
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: AbsoluteX
+    path: src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+    startLine: 48
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model.Area
+  summary: "\nGets the absolute x coordinate of this Region (which can be compared directly against <seealso cref=\"!:Position.getX()\"></seealso>.\n"
+  example: []
+  syntax:
+    content: public int AbsoluteX { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: 'The absolute x coordinate. '
+    content.vb: Public ReadOnly Property AbsoluteX As Integer
+  overload: NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteX*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteY
+  commentId: P:NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteY
+  id: AbsoluteY
+  parent: NetScape.Abstractions.Model.Area.RegionCoordinates
+  langs:
+  - csharp
+  - vb
+  name: AbsoluteY
+  nameWithType: RegionCoordinates.AbsoluteY
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteY
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: AbsoluteY
+    path: src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+    startLine: 60
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model.Area
+  summary: "\nGets the absolute y coordinate of this Region (which can be compared directly against <seealso cref=\"!:Position.getY()\"></seealso>.\n"
+  example: []
+  syntax:
+    content: public int AbsoluteY { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: 'The absolute y coordinate. '
+    content.vb: Public ReadOnly Property AbsoluteY As Integer
+  overload: NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteY*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.X
+  commentId: P:NetScape.Abstractions.Model.Area.RegionCoordinates.X
+  id: X
+  parent: NetScape.Abstractions.Model.Area.RegionCoordinates
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: RegionCoordinates.X
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.X
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: X
+    path: src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+    startLine: 72
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model.Area
+  summary: "\nGets the x coordinate (equivalent to the <seealso cref=\"!:Position.getTopLeftRegionX()\"></seealso> of a position within this region).\n"
+  example: []
+  syntax:
+    content: public int X { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: 'The x coordinate. '
+    content.vb: Public ReadOnly Property X As Integer
+  overload: NetScape.Abstractions.Model.Area.RegionCoordinates.X*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.Y
+  commentId: P:NetScape.Abstractions.Model.Area.RegionCoordinates.Y
+  id: Y
+  parent: NetScape.Abstractions.Model.Area.RegionCoordinates
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: RegionCoordinates.Y
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.Y
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Y
+    path: src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+    startLine: 78
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model.Area
+  summary: "\nGets the y coordinate (equivalent to the <seealso cref=\"!:Position.getTopLeftRegionY()\"></seealso> of a position within this region).\n"
+  example: []
+  syntax:
+    content: public int Y { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: 'The y coordinate. '
+    content.vb: Public ReadOnly Property Y As Integer
+  overload: NetScape.Abstractions.Model.Area.RegionCoordinates.Y*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.GetHashCode
+  commentId: M:NetScape.Abstractions.Model.Area.RegionCoordinates.GetHashCode
+  id: GetHashCode
+  parent: NetScape.Abstractions.Model.Area.RegionCoordinates
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: RegionCoordinates.GetHashCode()
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetHashCode
+    path: src/NetScape.Abstractions/Model/Area/RegionCoordinates.cs
+    startLine: 80
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model.Area
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: NetScape.Abstractions.Model.Area.RegionCoordinates.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: NetScape.Abstractions.Model.Area
+  commentId: N:NetScape.Abstractions.Model.Area
+  name: NetScape.Abstractions.Model.Area
+  nameWithType: NetScape.Abstractions.Model.Area
+  fullName: NetScape.Abstractions.Model.Area
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Model.Position
+  commentId: T:NetScape.Abstractions.Model.Position
+  parent: NetScape.Abstractions.Model
+  name: Position
+  nameWithType: Position
+  fullName: NetScape.Abstractions.Model.Position
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.FromPosition*
+  commentId: Overload:NetScape.Abstractions.Model.Area.RegionCoordinates.FromPosition
+  name: FromPosition
+  nameWithType: RegionCoordinates.FromPosition
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.FromPosition
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates
+  commentId: T:NetScape.Abstractions.Model.Area.RegionCoordinates
+  parent: NetScape.Abstractions.Model.Area
+  name: RegionCoordinates
+  nameWithType: RegionCoordinates
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates
+- uid: NetScape.Abstractions.Model
+  commentId: N:NetScape.Abstractions.Model
+  name: NetScape.Abstractions.Model
+  nameWithType: NetScape.Abstractions.Model
+  fullName: NetScape.Abstractions.Model
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.#ctor*
+  commentId: Overload:NetScape.Abstractions.Model.Area.RegionCoordinates.#ctor
+  name: RegionCoordinates
+  nameWithType: RegionCoordinates.RegionCoordinates
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.RegionCoordinates
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.Equals*
+  commentId: Overload:NetScape.Abstractions.Model.Area.RegionCoordinates.Equals
+  name: Equals
+  nameWithType: RegionCoordinates.Equals
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteX*
+  commentId: Overload:NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteX
+  name: AbsoluteX
+  nameWithType: RegionCoordinates.AbsoluteX
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteX
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteY*
+  commentId: Overload:NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteY
+  name: AbsoluteY
+  nameWithType: RegionCoordinates.AbsoluteY
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.AbsoluteY
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.X*
+  commentId: Overload:NetScape.Abstractions.Model.Area.RegionCoordinates.X
+  name: X
+  nameWithType: RegionCoordinates.X
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.X
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.Y*
+  commentId: Overload:NetScape.Abstractions.Model.Area.RegionCoordinates.Y
+  name: Y
+  nameWithType: RegionCoordinates.Y
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.Y
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Model.Area.RegionCoordinates.GetHashCode*
+  commentId: Overload:NetScape.Abstractions.Model.Area.RegionCoordinates.GetHashCode
+  name: GetHashCode
+  nameWithType: RegionCoordinates.GetHashCode
+  fullName: NetScape.Abstractions.Model.Area.RegionCoordinates.GetHashCode

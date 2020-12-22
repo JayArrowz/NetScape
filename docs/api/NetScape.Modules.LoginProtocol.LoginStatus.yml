@@ -1,0 +1,772 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.LoginProtocol.LoginStatus
+  commentId: T:NetScape.Modules.LoginProtocol.LoginStatus
+  id: LoginStatus
+  parent: NetScape.Modules.LoginProtocol
+  children:
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusAccountDisabled
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusAccountOnline
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusBadSessionId
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusCouldNotComplete
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusDelay
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusExchangeData
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusGameUpdated
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusInMembersArea
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusInvalidCredentials
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusInvalidLoginServer
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusLoginServerOffline
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusLoginServerRejectedSession
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusMembersAccountRequired
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusOk
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusProfileTransfer
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusReconnectionOk
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusServerFull
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusTooManyConnections
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusTooManyLogins
+  - NetScape.Modules.LoginProtocol.LoginStatus.StatusUpdating
+  - NetScape.Modules.LoginProtocol.LoginStatus.TypeReconnection
+  - NetScape.Modules.LoginProtocol.LoginStatus.TypeStandard
+  langs:
+  - csharp
+  - vb
+  name: LoginStatus
+  nameWithType: LoginStatus
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus
+  type: Enum
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: LoginStatus
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 2
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: public enum LoginStatus
+    content.vb: Public Enum LoginStatus
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusExchangeData
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusExchangeData
+  id: StatusExchangeData
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusExchangeData
+  nameWithType: LoginStatus.StatusExchangeData
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusExchangeData
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusExchangeData
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusExchangeData = 0
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusDelay
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusDelay
+  id: StatusDelay
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusDelay
+  nameWithType: LoginStatus.StatusDelay
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusDelay
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusDelay
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 5
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusDelay = 1
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusOk
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusOk
+  id: StatusOk
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusOk
+  nameWithType: LoginStatus.StatusOk
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusOk
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusOk
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 6
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusOk = 2
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusInvalidCredentials
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusInvalidCredentials
+  id: StatusInvalidCredentials
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusInvalidCredentials
+  nameWithType: LoginStatus.StatusInvalidCredentials
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusInvalidCredentials
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusInvalidCredentials
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 7
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusInvalidCredentials = 3
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusAccountDisabled
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusAccountDisabled
+  id: StatusAccountDisabled
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusAccountDisabled
+  nameWithType: LoginStatus.StatusAccountDisabled
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusAccountDisabled
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusAccountDisabled
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 8
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusAccountDisabled = 4
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusAccountOnline
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusAccountOnline
+  id: StatusAccountOnline
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusAccountOnline
+  nameWithType: LoginStatus.StatusAccountOnline
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusAccountOnline
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusAccountOnline
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 9
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusAccountOnline = 5
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusGameUpdated
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusGameUpdated
+  id: StatusGameUpdated
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusGameUpdated
+  nameWithType: LoginStatus.StatusGameUpdated
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusGameUpdated
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusGameUpdated
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 10
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusGameUpdated = 6
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusServerFull
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusServerFull
+  id: StatusServerFull
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusServerFull
+  nameWithType: LoginStatus.StatusServerFull
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusServerFull
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusServerFull
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 11
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusServerFull = 7
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusLoginServerOffline
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusLoginServerOffline
+  id: StatusLoginServerOffline
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusLoginServerOffline
+  nameWithType: LoginStatus.StatusLoginServerOffline
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusLoginServerOffline
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusLoginServerOffline
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 12
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusLoginServerOffline = 8
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusTooManyConnections
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusTooManyConnections
+  id: StatusTooManyConnections
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusTooManyConnections
+  nameWithType: LoginStatus.StatusTooManyConnections
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusTooManyConnections
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusTooManyConnections
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 13
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusTooManyConnections = 9
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusBadSessionId
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusBadSessionId
+  id: StatusBadSessionId
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusBadSessionId
+  nameWithType: LoginStatus.StatusBadSessionId
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusBadSessionId
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusBadSessionId
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 14
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusBadSessionId = 10
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusLoginServerRejectedSession
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusLoginServerRejectedSession
+  id: StatusLoginServerRejectedSession
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusLoginServerRejectedSession
+  nameWithType: LoginStatus.StatusLoginServerRejectedSession
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusLoginServerRejectedSession
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusLoginServerRejectedSession
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 15
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusLoginServerRejectedSession = 11
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusMembersAccountRequired
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusMembersAccountRequired
+  id: StatusMembersAccountRequired
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusMembersAccountRequired
+  nameWithType: LoginStatus.StatusMembersAccountRequired
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusMembersAccountRequired
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusMembersAccountRequired
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 16
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusMembersAccountRequired = 12
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusCouldNotComplete
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusCouldNotComplete
+  id: StatusCouldNotComplete
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusCouldNotComplete
+  nameWithType: LoginStatus.StatusCouldNotComplete
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusCouldNotComplete
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusCouldNotComplete
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 17
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusCouldNotComplete = 13
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusUpdating
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusUpdating
+  id: StatusUpdating
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusUpdating
+  nameWithType: LoginStatus.StatusUpdating
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusUpdating
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusUpdating
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 18
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusUpdating = 14
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusReconnectionOk
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusReconnectionOk
+  id: StatusReconnectionOk
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusReconnectionOk
+  nameWithType: LoginStatus.StatusReconnectionOk
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusReconnectionOk
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusReconnectionOk
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 19
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusReconnectionOk = 15
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusTooManyLogins
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusTooManyLogins
+  id: StatusTooManyLogins
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusTooManyLogins
+  nameWithType: LoginStatus.StatusTooManyLogins
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusTooManyLogins
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusTooManyLogins
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 20
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusTooManyLogins = 16
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusInMembersArea
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusInMembersArea
+  id: StatusInMembersArea
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusInMembersArea
+  nameWithType: LoginStatus.StatusInMembersArea
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusInMembersArea
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusInMembersArea
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 21
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusInMembersArea = 17
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusInvalidLoginServer
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusInvalidLoginServer
+  id: StatusInvalidLoginServer
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusInvalidLoginServer
+  nameWithType: LoginStatus.StatusInvalidLoginServer
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusInvalidLoginServer
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusInvalidLoginServer
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 22
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusInvalidLoginServer = 20
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.StatusProfileTransfer
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.StatusProfileTransfer
+  id: StatusProfileTransfer
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: StatusProfileTransfer
+  nameWithType: LoginStatus.StatusProfileTransfer
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.StatusProfileTransfer
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StatusProfileTransfer
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 23
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: StatusProfileTransfer = 21
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.TypeStandard
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.TypeStandard
+  id: TypeStandard
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: TypeStandard
+  nameWithType: LoginStatus.TypeStandard
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.TypeStandard
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: TypeStandard
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 24
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: TypeStandard = 16
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.LoginProtocol.LoginStatus.TypeReconnection
+  commentId: F:NetScape.Modules.LoginProtocol.LoginStatus.TypeReconnection
+  id: TypeReconnection
+  parent: NetScape.Modules.LoginProtocol.LoginStatus
+  langs:
+  - csharp
+  - vb
+  name: TypeReconnection
+  nameWithType: LoginStatus.TypeReconnection
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus.TypeReconnection
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: TypeReconnection
+    path: src/NetScape.Modules.LoginProtocol/LoginStatus.cs
+    startLine: 25
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: TypeReconnection = 18
+    return:
+      type: NetScape.Modules.LoginProtocol.LoginStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NetScape.Modules.LoginProtocol
+  commentId: N:NetScape.Modules.LoginProtocol
+  name: NetScape.Modules.LoginProtocol
+  nameWithType: NetScape.Modules.LoginProtocol
+  fullName: NetScape.Modules.LoginProtocol
+- uid: NetScape.Modules.LoginProtocol.LoginStatus
+  commentId: T:NetScape.Modules.LoginProtocol.LoginStatus
+  parent: NetScape.Modules.LoginProtocol
+  name: LoginStatus
+  nameWithType: LoginStatus
+  fullName: NetScape.Modules.LoginProtocol.LoginStatus

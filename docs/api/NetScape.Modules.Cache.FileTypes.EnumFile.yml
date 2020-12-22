@@ -1,0 +1,1503 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile
+  commentId: T:NetScape.Modules.Cache.FileTypes.EnumFile
+  id: EnumFile
+  parent: NetScape.Modules.Cache.FileTypes
+  children:
+  - NetScape.Modules.Cache.FileTypes.EnumFile.ContainsKey(System.Int32)
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Decode(System.Byte[])
+  - NetScape.Modules.Cache.FileTypes.EnumFile.DefaultInteger
+  - NetScape.Modules.Cache.FileTypes.EnumFile.DefaultString
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Encode
+  - NetScape.Modules.Cache.FileTypes.EnumFile.GetEnumerator
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Item(System.Int32)
+  - NetScape.Modules.Cache.FileTypes.EnumFile.KeyType
+  - NetScape.Modules.Cache.FileTypes.EnumFile.System#Collections#IEnumerable#GetEnumerator
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Values
+  - NetScape.Modules.Cache.FileTypes.EnumFile.ValueType
+  langs:
+  - csharp
+  - vb
+  name: EnumFile
+  nameWithType: EnumFile
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EnumFile
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 12
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  summary: "\nRepresents a list of values or references to values located elsewhere in the cache.\n"
+  example: []
+  syntax:
+    content: 'public class EnumFile : CacheFileBase, IEnumerable<KeyValuePair<int, object>>, IEnumerable'
+    content.vb: >-
+      Public Class EnumFile
+          Inherits CacheFileBase
+          Implements IEnumerable(Of KeyValuePair(Of Integer, Object)), IEnumerable
+  inheritance:
+  - System.Object
+  - NetScape.Abstractions.Cache.CacheFileBase
+  implements:
+  - System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.Object}}
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - NetScape.Abstractions.Cache.CacheFileBase.Info
+  - NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  - NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.DefaultInteger
+  commentId: P:NetScape.Modules.Cache.FileTypes.EnumFile.DefaultInteger
+  id: DefaultInteger
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: DefaultInteger
+  nameWithType: EnumFile.DefaultInteger
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.DefaultInteger
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: DefaultInteger
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 14
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public int DefaultInteger { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DefaultInteger As Integer
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.DefaultInteger*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.DefaultString
+  commentId: P:NetScape.Modules.Cache.FileTypes.EnumFile.DefaultString
+  id: DefaultString
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: DefaultString
+  nameWithType: EnumFile.DefaultString
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.DefaultString
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: DefaultString
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 15
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public string DefaultString { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultString As String
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.DefaultString*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.KeyType
+  commentId: P:NetScape.Modules.Cache.FileTypes.EnumFile.KeyType
+  id: KeyType
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: KeyType
+  nameWithType: EnumFile.KeyType
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.KeyType
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: KeyType
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 17
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public ScriptVarType KeyType { get; set; }
+    parameters: []
+    return:
+      type: NetScape.Modules.Cache.ScriptVarType
+    content.vb: Public Property KeyType As ScriptVarType
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.KeyType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Values
+  commentId: P:NetScape.Modules.Cache.FileTypes.EnumFile.Values
+  id: Values
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: Values
+  nameWithType: EnumFile.Values
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Values
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Values
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 18
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public Dictionary<int, object> Values { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,System.Object}
+    content.vb: Public Property Values As Dictionary(Of Integer, Object)
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.Values*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.ValueType
+  commentId: P:NetScape.Modules.Cache.FileTypes.EnumFile.ValueType
+  id: ValueType
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: ValueType
+  nameWithType: EnumFile.ValueType
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.ValueType
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ValueType
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 19
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public ScriptVarType ValueType { get; set; }
+    parameters: []
+    return:
+      type: NetScape.Modules.Cache.ScriptVarType
+    content.vb: Public Property ValueType As ScriptVarType
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.ValueType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Item(System.Int32)
+  commentId: P:NetScape.Modules.Cache.FileTypes.EnumFile.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: EnumFile.Item[Int32]
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Item[System.Int32]
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: this[]
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 21
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public object this[int key] { get; }
+    parameters:
+    - id: key
+      type: System.Int32
+    return:
+      type: System.Object
+    content.vb: Public ReadOnly Property Item(key As Integer) As Object
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.Item*
+  nameWithType.vb: EnumFile.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: NetScape.Modules.Cache.FileTypes.EnumFile.Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.ContainsKey(System.Int32)
+  commentId: M:NetScape.Modules.Cache.FileTypes.EnumFile.ContainsKey(System.Int32)
+  id: ContainsKey(System.Int32)
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: ContainsKey(Int32)
+  nameWithType: EnumFile.ContainsKey(Int32)
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.ContainsKey(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ContainsKey
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 23
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public bool ContainsKey(int key)
+    parameters:
+    - id: key
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function ContainsKey(key As Integer) As Boolean
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.ContainsKey*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.GetEnumerator
+  commentId: M:NetScape.Modules.Cache.FileTypes.EnumFile.GetEnumerator
+  id: GetEnumerator
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: EnumFile.GetEnumerator()
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetEnumerator
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 28
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public IEnumerator<KeyValuePair<int, object>> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{System.Collections.Generic.KeyValuePair{System.Int32,System.Object}}
+    content.vb: Public Function GetEnumerator As IEnumerator(Of KeyValuePair(Of Integer, Object))
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.Object}}.GetEnumerator
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.System#Collections#IEnumerable#GetEnumerator
+  commentId: M:NetScape.Modules.Cache.FileTypes.EnumFile.System#Collections#IEnumerable#GetEnumerator
+  id: System#Collections#IEnumerable#GetEnumerator
+  isEii: true
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: IEnumerable.GetEnumerator()
+  nameWithType: EnumFile.IEnumerable.GetEnumerator()
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.System.Collections.IEnumerable.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: System.Collections.IEnumerable.GetEnumerator
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 33
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: IEnumerator IEnumerable.GetEnumerator()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function System.Collections.IEnumerable.GetEnumerator As IEnumerator Implements IEnumerable.GetEnumerator
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.System#Collections#IEnumerable#GetEnumerator*
+  implements:
+  - System.Collections.IEnumerable.GetEnumerator
+  nameWithType.vb: EnumFile.System.Collections.IEnumerable.GetEnumerator()
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Decode(System.Byte[])
+  commentId: M:NetScape.Modules.Cache.FileTypes.EnumFile.Decode(System.Byte[])
+  id: Decode(System.Byte[])
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: Decode(Byte[])
+  nameWithType: EnumFile.Decode(Byte[])
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Decode(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Decode
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 38
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public override void Decode(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    content.vb: Public Overrides Sub Decode(data As Byte())
+  overridden: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.Decode*
+  nameWithType.vb: EnumFile.Decode(Byte())
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: NetScape.Modules.Cache.FileTypes.EnumFile.Decode(System.Byte())
+  name.vb: Decode(Byte())
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Encode
+  commentId: M:NetScape.Modules.Cache.FileTypes.EnumFile.Encode
+  id: Encode
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile
+  langs:
+  - csharp
+  - vb
+  name: Encode()
+  nameWithType: EnumFile.Encode()
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Encode()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Encode
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 146
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public override byte[] Encode()
+    return:
+      type: System.Byte[]
+    content.vb: Public Overrides Function Encode As Byte()
+  overridden: NetScape.Abstractions.Cache.CacheFileBase.Encode
+  overload: NetScape.Modules.Cache.FileTypes.EnumFile.Encode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: NetScape.Modules.Cache.FileTypes
+  commentId: N:NetScape.Modules.Cache.FileTypes
+  name: NetScape.Modules.Cache.FileTypes
+  nameWithType: NetScape.Modules.Cache.FileTypes
+  fullName: NetScape.Modules.Cache.FileTypes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NetScape.Abstractions.Cache.CacheFileBase
+  commentId: T:NetScape.Abstractions.Cache.CacheFileBase
+  parent: NetScape.Abstractions.Cache
+  name: CacheFileBase
+  nameWithType: CacheFileBase
+  fullName: NetScape.Abstractions.Cache.CacheFileBase
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.Object}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.Object}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<KeyValuePair<Int32, Object>>
+  nameWithType: IEnumerable<KeyValuePair<Int32, Object>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Int32, System.Object>>
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of Int32, Object))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.Int32, System.Object))
+  name.vb: IEnumerable(Of KeyValuePair(Of Int32, Object))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Info
+  commentId: P:NetScape.Abstractions.Cache.CacheFileBase.Info
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  name: Info
+  nameWithType: CacheFileBase.Info
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Info
+- uid: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  name: FromBinaryFile(BinaryFile)
+  nameWithType: CacheFileBase.FromBinaryFile(BinaryFile)
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  spec.csharp:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+    name: FromBinaryFile
+    nameWithType: CacheFileBase.FromBinaryFile
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.BinaryFile
+    name: BinaryFile
+    nameWithType: BinaryFile
+    fullName: NetScape.Abstractions.Cache.BinaryFile
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+    name: FromBinaryFile
+    nameWithType: CacheFileBase.FromBinaryFile
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.FromBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.BinaryFile
+    name: BinaryFile
+    nameWithType: BinaryFile
+    fullName: NetScape.Abstractions.Cache.BinaryFile
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  name: ToBinaryFile()
+  nameWithType: CacheFileBase.ToBinaryFile()
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile()
+  spec.csharp:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+    name: ToBinaryFile
+    nameWithType: CacheFileBase.ToBinaryFile
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+    name: ToBinaryFile
+    nameWithType: CacheFileBase.ToBinaryFile
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.ToBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Cache
+  commentId: N:NetScape.Abstractions.Cache
+  name: NetScape.Abstractions.Cache
+  nameWithType: NetScape.Abstractions.Cache
+  fullName: NetScape.Abstractions.Cache
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.DefaultInteger*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.DefaultInteger
+  name: DefaultInteger
+  nameWithType: EnumFile.DefaultInteger
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.DefaultInteger
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.DefaultString*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.DefaultString
+  name: DefaultString
+  nameWithType: EnumFile.DefaultString
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.DefaultString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.KeyType*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.KeyType
+  name: KeyType
+  nameWithType: EnumFile.KeyType
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.KeyType
+- uid: NetScape.Modules.Cache.ScriptVarType
+  commentId: T:NetScape.Modules.Cache.ScriptVarType
+  parent: NetScape.Modules.Cache
+  name: ScriptVarType
+  nameWithType: ScriptVarType
+  fullName: NetScape.Modules.Cache.ScriptVarType
+- uid: NetScape.Modules.Cache
+  commentId: N:NetScape.Modules.Cache
+  name: NetScape.Modules.Cache
+  nameWithType: NetScape.Modules.Cache
+  fullName: NetScape.Modules.Cache
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Values*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.Values
+  name: Values
+  nameWithType: EnumFile.Values
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Values
+- uid: System.Collections.Generic.Dictionary{System.Int32,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<Int32, Object>
+  nameWithType: Dictionary<Int32, Object>
+  fullName: System.Collections.Generic.Dictionary<System.Int32, System.Object>
+  nameWithType.vb: Dictionary(Of Int32, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Int32, System.Object)
+  name.vb: Dictionary(Of Int32, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.ValueType*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.ValueType
+  name: ValueType
+  nameWithType: EnumFile.ValueType
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.ValueType
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Item*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.Item
+  name: Item
+  nameWithType: EnumFile.Item
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Item
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.ContainsKey*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.ContainsKey
+  name: ContainsKey
+  nameWithType: EnumFile.ContainsKey
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.ContainsKey
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.GetEnumerator*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.GetEnumerator
+  name: GetEnumerator
+  nameWithType: EnumFile.GetEnumerator
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.Object}}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.Object}}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.Object}}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<KeyValuePair<Int32, Object>>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Int32, System.Object>>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of Int32, Object)).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.Int32, System.Object)).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable<KeyValuePair<Int32, Object>>.GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Int32, System.Object>>.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable(Of KeyValuePair(Of Int32, Object)).GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.Int32, System.Object)).GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator{System.Collections.Generic.KeyValuePair{System.Int32,System.Object}}
+  commentId: T:System.Collections.Generic.IEnumerator{System.Collections.Generic.KeyValuePair{System.Int32,System.Object}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  name: IEnumerator<KeyValuePair<Int32, Object>>
+  nameWithType: IEnumerator<KeyValuePair<Int32, Object>>
+  fullName: System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<System.Int32, System.Object>>
+  nameWithType.vb: IEnumerator(Of KeyValuePair(Of Int32, Object))
+  fullName.vb: System.Collections.Generic.IEnumerator(Of System.Collections.Generic.KeyValuePair(Of System.Int32, System.Object))
+  name.vb: IEnumerator(Of KeyValuePair(Of Int32, Object))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable<T>.GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable(Of T).GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable(Of T).GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.System#Collections#IEnumerable#GetEnumerator*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator
+  nameWithType: EnumFile.IEnumerable.GetEnumerator
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.System.Collections.IEnumerable.GetEnumerator
+  nameWithType.vb: EnumFile.System.Collections.IEnumerable.GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+- uid: System.Collections.IEnumerable.GetEnumerator
+  commentId: M:System.Collections.IEnumerable.GetEnumerator
+  parent: System.Collections.IEnumerable
+  isExternal: true
+  name: GetEnumerator()
+  nameWithType: IEnumerable.GetEnumerator()
+  fullName: System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable.GetEnumerator
+    fullName: System.Collections.IEnumerable.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable.GetEnumerator
+    fullName: System.Collections.IEnumerable.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  isExternal: true
+  name: Decode(Byte[])
+  nameWithType: CacheFileBase.Decode(Byte[])
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+  nameWithType.vb: CacheFileBase.Decode(Byte())
+  fullName.vb: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte())
+  name.vb: Decode(Byte())
+  spec.csharp:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+    name: Decode
+    nameWithType: CacheFileBase.Decode
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.Decode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.Decode(System.Byte[])
+    name: Decode
+    nameWithType: CacheFileBase.Decode
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.Decode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Decode*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.Decode
+  name: Decode
+  nameWithType: EnumFile.Decode
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Decode
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NetScape.Abstractions.Cache.CacheFileBase.Encode
+  commentId: M:NetScape.Abstractions.Cache.CacheFileBase.Encode
+  parent: NetScape.Abstractions.Cache.CacheFileBase
+  name: Encode()
+  nameWithType: CacheFileBase.Encode()
+  fullName: NetScape.Abstractions.Cache.CacheFileBase.Encode()
+  spec.csharp:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.Encode
+    name: Encode
+    nameWithType: CacheFileBase.Encode
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.Encode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Cache.CacheFileBase.Encode
+    name: Encode
+    nameWithType: CacheFileBase.Encode
+    fullName: NetScape.Abstractions.Cache.CacheFileBase.Encode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Encode*
+  commentId: Overload:NetScape.Modules.Cache.FileTypes.EnumFile.Encode
+  name: Encode
+  nameWithType: EnumFile.Encode
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Encode

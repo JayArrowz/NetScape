@@ -1,0 +1,323 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.FileSystem.IPlayerSerializer
+  commentId: T:NetScape.Abstractions.FileSystem.IPlayerSerializer
+  id: IPlayerSerializer
+  parent: NetScape.Abstractions.FileSystem
+  children:
+  - NetScape.Abstractions.FileSystem.IPlayerSerializer.AddOrUpdateAsync(NetScape.Abstractions.Model.Game.Player)
+  - NetScape.Abstractions.FileSystem.IPlayerSerializer.GetAsync(System.String)
+  - NetScape.Abstractions.FileSystem.IPlayerSerializer.GetOrCreateAsync(PlayerCredentials)
+  langs:
+  - csharp
+  - vb
+  name: IPlayerSerializer
+  nameWithType: IPlayerSerializer
+  fullName: NetScape.Abstractions.FileSystem.IPlayerSerializer
+  type: Interface
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/FileSystem/IPlayerSerializer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IPlayerSerializer
+    path: src/NetScape.Abstractions/FileSystem/IPlayerSerializer.cs
+    startLine: 6
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.FileSystem
+  syntax:
+    content: public interface IPlayerSerializer
+    content.vb: Public Interface IPlayerSerializer
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: NetScape.Abstractions.FileSystem.IPlayerSerializer.GetAsync(System.String)
+  commentId: M:NetScape.Abstractions.FileSystem.IPlayerSerializer.GetAsync(System.String)
+  id: GetAsync(System.String)
+  parent: NetScape.Abstractions.FileSystem.IPlayerSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(String)
+  nameWithType: IPlayerSerializer.GetAsync(String)
+  fullName: NetScape.Abstractions.FileSystem.IPlayerSerializer.GetAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/FileSystem/IPlayerSerializer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetAsync
+    path: src/NetScape.Abstractions/FileSystem/IPlayerSerializer.cs
+    startLine: 13
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.FileSystem
+  summary: "\nRetrive player for name\n"
+  example: []
+  syntax:
+    content: Task<Player> GetAsync(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The player name.
+    return:
+      type: System.Threading.Tasks.Task{NetScape.Abstractions.Model.Game.Player}
+      description: Player
+    content.vb: Function GetAsync(name As String) As Task(Of Player)
+  overload: NetScape.Abstractions.FileSystem.IPlayerSerializer.GetAsync*
+- uid: NetScape.Abstractions.FileSystem.IPlayerSerializer.GetOrCreateAsync(PlayerCredentials)
+  commentId: M:NetScape.Abstractions.FileSystem.IPlayerSerializer.GetOrCreateAsync(PlayerCredentials)
+  id: GetOrCreateAsync(PlayerCredentials)
+  parent: NetScape.Abstractions.FileSystem.IPlayerSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetOrCreateAsync(PlayerCredentials)
+  nameWithType: IPlayerSerializer.GetOrCreateAsync(PlayerCredentials)
+  fullName: NetScape.Abstractions.FileSystem.IPlayerSerializer.GetOrCreateAsync(PlayerCredentials)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/FileSystem/IPlayerSerializer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetOrCreateAsync
+    path: src/NetScape.Abstractions/FileSystem/IPlayerSerializer.cs
+    startLine: 20
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.FileSystem
+  summary: "\nRetrive player for player credentials\n"
+  example: []
+  syntax:
+    content: Task<Player> GetOrCreateAsync(PlayerCredentials playerCredentials)
+    parameters:
+    - id: playerCredentials
+      type: PlayerCredentials
+      description: The player credentials.
+    return:
+      type: System.Threading.Tasks.Task{NetScape.Abstractions.Model.Game.Player}
+      description: Player
+    content.vb: Function GetOrCreateAsync(playerCredentials As PlayerCredentials) As Task(Of Player)
+  overload: NetScape.Abstractions.FileSystem.IPlayerSerializer.GetOrCreateAsync*
+- uid: NetScape.Abstractions.FileSystem.IPlayerSerializer.AddOrUpdateAsync(NetScape.Abstractions.Model.Game.Player)
+  commentId: M:NetScape.Abstractions.FileSystem.IPlayerSerializer.AddOrUpdateAsync(NetScape.Abstractions.Model.Game.Player)
+  id: AddOrUpdateAsync(NetScape.Abstractions.Model.Game.Player)
+  parent: NetScape.Abstractions.FileSystem.IPlayerSerializer
+  langs:
+  - csharp
+  - vb
+  name: AddOrUpdateAsync(Player)
+  nameWithType: IPlayerSerializer.AddOrUpdateAsync(Player)
+  fullName: NetScape.Abstractions.FileSystem.IPlayerSerializer.AddOrUpdateAsync(NetScape.Abstractions.Model.Game.Player)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/FileSystem/IPlayerSerializer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: AddOrUpdateAsync
+    path: src/NetScape.Abstractions/FileSystem/IPlayerSerializer.cs
+    startLine: 27
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.FileSystem
+  summary: "\nAdds player if the player does not exist, otherwise the player is updated\n"
+  example: []
+  syntax:
+    content: Task<int> AddOrUpdateAsync(Player player)
+    parameters:
+    - id: player
+      type: NetScape.Abstractions.Model.Game.Player
+      description: The player.
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+      description: Number of rows updated
+    content.vb: Function AddOrUpdateAsync(player As Player) As Task(Of Integer)
+  overload: NetScape.Abstractions.FileSystem.IPlayerSerializer.AddOrUpdateAsync*
+references:
+- uid: NetScape.Abstractions.FileSystem
+  commentId: N:NetScape.Abstractions.FileSystem
+  name: NetScape.Abstractions.FileSystem
+  nameWithType: NetScape.Abstractions.FileSystem
+  fullName: NetScape.Abstractions.FileSystem
+- uid: NetScape.Abstractions.FileSystem.IPlayerSerializer.GetAsync*
+  commentId: Overload:NetScape.Abstractions.FileSystem.IPlayerSerializer.GetAsync
+  name: GetAsync
+  nameWithType: IPlayerSerializer.GetAsync
+  fullName: NetScape.Abstractions.FileSystem.IPlayerSerializer.GetAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Threading.Tasks.Task{NetScape.Abstractions.Model.Game.Player}
+  commentId: T:System.Threading.Tasks.Task{NetScape.Abstractions.Model.Game.Player}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Player>
+  nameWithType: Task<Player>
+  fullName: System.Threading.Tasks.Task<NetScape.Abstractions.Model.Game.Player>
+  nameWithType.vb: Task(Of Player)
+  fullName.vb: System.Threading.Tasks.Task(Of NetScape.Abstractions.Model.Game.Player)
+  name.vb: Task(Of Player)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NetScape.Abstractions.Model.Game.Player
+    name: Player
+    nameWithType: Player
+    fullName: NetScape.Abstractions.Model.Game.Player
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NetScape.Abstractions.Model.Game.Player
+    name: Player
+    nameWithType: Player
+    fullName: NetScape.Abstractions.Model.Game.Player
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: NetScape.Abstractions.FileSystem.IPlayerSerializer.GetOrCreateAsync*
+  commentId: Overload:NetScape.Abstractions.FileSystem.IPlayerSerializer.GetOrCreateAsync
+  name: GetOrCreateAsync
+  nameWithType: IPlayerSerializer.GetOrCreateAsync
+  fullName: NetScape.Abstractions.FileSystem.IPlayerSerializer.GetOrCreateAsync
+- uid: PlayerCredentials
+  isExternal: true
+  name: PlayerCredentials
+  nameWithType: PlayerCredentials
+  fullName: PlayerCredentials
+- uid: NetScape.Abstractions.FileSystem.IPlayerSerializer.AddOrUpdateAsync*
+  commentId: Overload:NetScape.Abstractions.FileSystem.IPlayerSerializer.AddOrUpdateAsync
+  name: AddOrUpdateAsync
+  nameWithType: IPlayerSerializer.AddOrUpdateAsync
+  fullName: NetScape.Abstractions.FileSystem.IPlayerSerializer.AddOrUpdateAsync
+- uid: NetScape.Abstractions.Model.Game.Player
+  commentId: T:NetScape.Abstractions.Model.Game.Player
+  parent: NetScape.Abstractions.Model.Game
+  name: Player
+  nameWithType: Player
+  fullName: NetScape.Abstractions.Model.Game.Player
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Int32>
+  nameWithType: Task<Int32>
+  fullName: System.Threading.Tasks.Task<System.Int32>
+  nameWithType.vb: Task(Of Int32)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Int32)
+  name.vb: Task(Of Int32)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Model.Game
+  commentId: N:NetScape.Abstractions.Model.Game
+  name: NetScape.Abstractions.Model.Game
+  nameWithType: NetScape.Abstractions.Model.Game
+  fullName: NetScape.Abstractions.Model.Game

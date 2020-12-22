@@ -1,0 +1,756 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory
+  commentId: T:NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory
+  id: GameServerEventLoopGroupFactory
+  parent: NetScape.Modules.Server.IO.EventLoop
+  children:
+  - NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.#ctor(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  - NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.Dispose(System.Boolean)
+  - NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetBossGroup
+  - NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetWorkerGroup
+  langs:
+  - csharp
+  - vb
+  name: GameServerEventLoopGroupFactory
+  nameWithType: GameServerEventLoopGroupFactory
+  fullName: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.GameServer/IO/EventLoop/GameServerEventLoopGroupFactory.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GameServerEventLoopGroupFactory
+    path: src/NetScape.GameServer/IO/EventLoop/GameServerEventLoopGroupFactory.cs
+    startLine: 7
+  assemblies:
+  - NetScape.Modules.Server
+  namespace: NetScape.Modules.Server.IO.EventLoop
+  syntax:
+    content: 'public class GameServerEventLoopGroupFactory : BaseLoopGroupFactory, IEventLoopGroupFactory, IDisposable'
+    content.vb: >-
+      Public Class GameServerEventLoopGroupFactory
+          Inherits BaseLoopGroupFactory
+          Implements IEventLoopGroupFactory, IDisposable
+  inheritance:
+  - System.Object
+  - NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory
+  implements:
+  - NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  - System.IDisposable
+  inheritedMembers:
+  - NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup(System.Nullable{System.Int32})
+  - NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.#ctor(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  commentId: M:NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.#ctor(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  id: '#ctor(Microsoft.Extensions.Configuration.IConfigurationRoot)'
+  parent: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory
+  langs:
+  - csharp
+  - vb
+  name: GameServerEventLoopGroupFactory(IConfigurationRoot)
+  nameWithType: GameServerEventLoopGroupFactory.GameServerEventLoopGroupFactory(IConfigurationRoot)
+  fullName: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GameServerEventLoopGroupFactory(Microsoft.Extensions.Configuration.IConfigurationRoot)
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.GameServer/IO/EventLoop/GameServerEventLoopGroupFactory.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.GameServer/IO/EventLoop/GameServerEventLoopGroupFactory.cs
+    startLine: 13
+  assemblies:
+  - NetScape.Modules.Server
+  namespace: NetScape.Modules.Server.IO.EventLoop
+  syntax:
+    content: public GameServerEventLoopGroupFactory(IConfigurationRoot configurationRoot)
+    parameters:
+    - id: configurationRoot
+      type: Microsoft.Extensions.Configuration.IConfigurationRoot
+    content.vb: Public Sub New(configurationRoot As IConfigurationRoot)
+  overload: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetBossGroup
+  commentId: M:NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetBossGroup
+  id: GetBossGroup
+  parent: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory
+  langs:
+  - csharp
+  - vb
+  name: GetBossGroup()
+  nameWithType: GameServerEventLoopGroupFactory.GetBossGroup()
+  fullName: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetBossGroup()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.GameServer/IO/EventLoop/GameServerEventLoopGroupFactory.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetBossGroup
+    path: src/NetScape.GameServer/IO/EventLoop/GameServerEventLoopGroupFactory.cs
+    startLine: 18
+  assemblies:
+  - NetScape.Modules.Server
+  namespace: NetScape.Modules.Server.IO.EventLoop
+  syntax:
+    content: public IEventLoopGroup GetBossGroup()
+    return:
+      type: DotNetty.Transport.Channels.IEventLoopGroup
+    content.vb: Public Function GetBossGroup As IEventLoopGroup
+  overload: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetBossGroup*
+  implements:
+  - NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetWorkerGroup
+  commentId: M:NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetWorkerGroup
+  id: GetWorkerGroup
+  parent: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory
+  langs:
+  - csharp
+  - vb
+  name: GetWorkerGroup()
+  nameWithType: GameServerEventLoopGroupFactory.GetWorkerGroup()
+  fullName: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetWorkerGroup()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.GameServer/IO/EventLoop/GameServerEventLoopGroupFactory.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetWorkerGroup
+    path: src/NetScape.GameServer/IO/EventLoop/GameServerEventLoopGroupFactory.cs
+    startLine: 23
+  assemblies:
+  - NetScape.Modules.Server
+  namespace: NetScape.Modules.Server.IO.EventLoop
+  syntax:
+    content: public IEventLoopGroup GetWorkerGroup()
+    return:
+      type: DotNetty.Transport.Channels.IEventLoopGroup
+    content.vb: Public Function GetWorkerGroup As IEventLoopGroup
+  overload: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetWorkerGroup*
+  implements:
+  - NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.Dispose(System.Boolean)
+  commentId: M:NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory
+  langs:
+  - csharp
+  - vb
+  name: Dispose(Boolean)
+  nameWithType: GameServerEventLoopGroupFactory.Dispose(Boolean)
+  fullName: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.Dispose(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.GameServer/IO/EventLoop/GameServerEventLoopGroupFactory.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Dispose
+    path: src/NetScape.GameServer/IO/EventLoop/GameServerEventLoopGroupFactory.cs
+    startLine: 28
+  assemblies:
+  - NetScape.Modules.Server
+  namespace: NetScape.Modules.Server.IO.EventLoop
+  syntax:
+    content: protected override void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overrides Sub Dispose(disposing As Boolean)
+  overridden: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose(System.Boolean)
+  overload: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.Dispose*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: NetScape.Modules.Server.IO.EventLoop
+  commentId: N:NetScape.Modules.Server.IO.EventLoop
+  name: NetScape.Modules.Server.IO.EventLoop
+  nameWithType: NetScape.Modules.Server.IO.EventLoop
+  fullName: NetScape.Modules.Server.IO.EventLoop
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory
+  commentId: T:NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory
+  parent: NetScape.Modules.Server.IO.EventLoop
+  name: BaseLoopGroupFactory
+  nameWithType: BaseLoopGroupFactory
+  fullName: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  commentId: T:NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  parent: NetScape.Abstractions.Interfaces.IO.EventLoop
+  name: IEventLoopGroupFactory
+  nameWithType: IEventLoopGroupFactory
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup(System.Nullable{System.Int32})
+  commentId: M:NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup(System.Nullable{System.Int32})
+  parent: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory
+  isExternal: true
+  name: GetOrCreateSocketIoEventLoopGroup(Nullable<Int32>)
+  nameWithType: BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup(Nullable<Int32>)
+  fullName: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup(System.Nullable<System.Int32>)
+  nameWithType.vb: BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup(Nullable(Of Int32))
+  fullName.vb: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup(System.Nullable(Of System.Int32))
+  name.vb: GetOrCreateSocketIoEventLoopGroup(Nullable(Of Int32))
+  spec.csharp:
+  - uid: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup(System.Nullable{System.Int32})
+    name: GetOrCreateSocketIoEventLoopGroup
+    nameWithType: BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup
+    fullName: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup(System.Nullable{System.Int32})
+    name: GetOrCreateSocketIoEventLoopGroup
+    nameWithType: BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup
+    fullName: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.GetOrCreateSocketIoEventLoopGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose
+  commentId: M:NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose
+  parent: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory
+  name: Dispose()
+  nameWithType: BaseLoopGroupFactory.Dispose()
+  fullName: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose()
+  spec.csharp:
+  - uid: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose
+    name: Dispose
+    nameWithType: BaseLoopGroupFactory.Dispose
+    fullName: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose
+    name: Dispose
+    nameWithType: BaseLoopGroupFactory.Dispose
+    fullName: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop
+  commentId: N:NetScape.Abstractions.Interfaces.IO.EventLoop
+  name: NetScape.Abstractions.Interfaces.IO.EventLoop
+  nameWithType: NetScape.Abstractions.Interfaces.IO.EventLoop
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop
+- uid: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.#ctor*
+  commentId: Overload:NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.#ctor
+  name: GameServerEventLoopGroupFactory
+  nameWithType: GameServerEventLoopGroupFactory.GameServerEventLoopGroupFactory
+  fullName: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GameServerEventLoopGroupFactory
+- uid: Microsoft.Extensions.Configuration.IConfigurationRoot
+  commentId: T:Microsoft.Extensions.Configuration.IConfigurationRoot
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  name: IConfigurationRoot
+  nameWithType: IConfigurationRoot
+  fullName: Microsoft.Extensions.Configuration.IConfigurationRoot
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+- uid: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetBossGroup*
+  commentId: Overload:NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetBossGroup
+  name: GetBossGroup
+  nameWithType: GameServerEventLoopGroupFactory.GetBossGroup
+  fullName: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetBossGroup
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+  commentId: M:NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+  parent: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  name: GetBossGroup()
+  nameWithType: IEventLoopGroupFactory.GetBossGroup()
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup()
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+    name: GetBossGroup
+    nameWithType: IEventLoopGroupFactory.GetBossGroup
+    fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+    name: GetBossGroup
+    nameWithType: IEventLoopGroupFactory.GetBossGroup
+    fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetty.Transport.Channels.IEventLoopGroup
+  commentId: T:DotNetty.Transport.Channels.IEventLoopGroup
+  parent: DotNetty.Transport.Channels
+  isExternal: true
+  name: IEventLoopGroup
+  nameWithType: IEventLoopGroup
+  fullName: DotNetty.Transport.Channels.IEventLoopGroup
+- uid: DotNetty.Transport.Channels
+  commentId: N:DotNetty.Transport.Channels
+  isExternal: true
+  name: DotNetty.Transport.Channels
+  nameWithType: DotNetty.Transport.Channels
+  fullName: DotNetty.Transport.Channels
+- uid: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetWorkerGroup*
+  commentId: Overload:NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetWorkerGroup
+  name: GetWorkerGroup
+  nameWithType: GameServerEventLoopGroupFactory.GetWorkerGroup
+  fullName: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.GetWorkerGroup
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+  commentId: M:NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+  parent: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  name: GetWorkerGroup()
+  nameWithType: IEventLoopGroupFactory.GetWorkerGroup()
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup()
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+    name: GetWorkerGroup
+    nameWithType: IEventLoopGroupFactory.GetWorkerGroup
+    fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+    name: GetWorkerGroup
+    nameWithType: IEventLoopGroupFactory.GetWorkerGroup
+    fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose(System.Boolean)
+  commentId: M:NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose(System.Boolean)
+  parent: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory
+  isExternal: true
+  name: Dispose(Boolean)
+  nameWithType: BaseLoopGroupFactory.Dispose(Boolean)
+  fullName: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose(System.Boolean)
+  spec.csharp:
+  - uid: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: BaseLoopGroupFactory.Dispose
+    fullName: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: BaseLoopGroupFactory.Dispose
+    fullName: NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.Dispose*
+  commentId: Overload:NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.Dispose
+  name: Dispose
+  nameWithType: GameServerEventLoopGroupFactory.Dispose
+  fullName: NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.Dispose
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

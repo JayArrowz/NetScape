@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.DAL
+  commentId: N:NetScape.Modules.DAL
+  id: NetScape.Modules.DAL
+  children:
+  - NetScape.Modules.DAL.DALModule
+  - NetScape.Modules.DAL.DatabaseContext
+  - NetScape.Modules.DAL.EntityFrameworkPlayerSerializer
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Modules.DAL
+  nameWithType: NetScape.Modules.DAL
+  fullName: NetScape.Modules.DAL
+  type: Namespace
+  assemblies:
+  - NetScape.Modules.DAL
+references:
+- uid: NetScape.Modules.DAL.DALModule
+  commentId: T:NetScape.Modules.DAL.DALModule
+  name: DALModule
+  nameWithType: DALModule
+  fullName: NetScape.Modules.DAL.DALModule
+- uid: NetScape.Modules.DAL.DatabaseContext
+  commentId: T:NetScape.Modules.DAL.DatabaseContext
+  parent: NetScape.Modules.DAL
+  name: DatabaseContext
+  nameWithType: DatabaseContext
+  fullName: NetScape.Modules.DAL.DatabaseContext
+- uid: NetScape.Modules.DAL.EntityFrameworkPlayerSerializer
+  commentId: T:NetScape.Modules.DAL.EntityFrameworkPlayerSerializer
+  name: EntityFrameworkPlayerSerializer
+  nameWithType: EntityFrameworkPlayerSerializer
+  fullName: NetScape.Modules.DAL.EntityFrameworkPlayerSerializer
+- uid: NetScape.Modules.DAL
+  commentId: N:NetScape.Modules.DAL
+  name: NetScape.Modules.DAL
+  nameWithType: NetScape.Modules.DAL
+  fullName: NetScape.Modules.DAL

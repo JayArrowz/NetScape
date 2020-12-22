@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+  commentId: T:NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+  id: ILoginProcessor`2
+  parent: NetScape.Abstractions.Interfaces.Login
+  children:
+  - NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue(`0)
+  langs:
+  - csharp
+  - vb
+  name: ILoginProcessor<TRequest, TResponse>
+  nameWithType: ILoginProcessor<TRequest, TResponse>
+  fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor<TRequest, TResponse>
+  type: Interface
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Login/ILoginProcessor.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ILoginProcessor
+    path: src/NetScape.Abstractions/Interfaces/Login/ILoginProcessor.cs
+    startLine: 9
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Login
+  summary: "\nThe login processor is in-charge of processing logins in a async manner\n"
+  example: []
+  syntax:
+    content: >-
+      public interface ILoginProcessor<TRequest, TResponse>
+          where TRequest : LoginRequest<TResponse>
+    typeParameters:
+    - id: TRequest
+      description: The type of the request.
+    - id: TResponse
+      description: The type of the response.
+    content.vb: Public Interface ILoginProcessor(Of TRequest As LoginRequest(Of TResponse), TResponse)
+  nameWithType.vb: ILoginProcessor(Of TRequest, TResponse)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: NetScape.Abstractions.Interfaces.Login.ILoginProcessor(Of TRequest, TResponse)
+  name.vb: ILoginProcessor(Of TRequest, TResponse)
+- uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue(`0)
+  commentId: M:NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue(`0)
+  id: Enqueue(`0)
+  parent: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+  langs:
+  - csharp
+  - vb
+  name: Enqueue(TRequest)
+  nameWithType: ILoginProcessor<TRequest, TResponse>.Enqueue(TRequest)
+  fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor<TRequest, TResponse>.Enqueue(TRequest)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Login/ILoginProcessor.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Enqueue
+    path: src/NetScape.Abstractions/Interfaces/Login/ILoginProcessor.cs
+    startLine: 15
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Login
+  summary: "\nEnqueues the specified request.\n"
+  example: []
+  syntax:
+    content: void Enqueue(TRequest request)
+    parameters:
+    - id: request
+      type: '{TRequest}'
+      description: The request.
+    content.vb: Sub Enqueue(request As TRequest)
+  overload: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue*
+  nameWithType.vb: ILoginProcessor(Of TRequest, TResponse).Enqueue(TRequest)
+  fullName.vb: NetScape.Abstractions.Interfaces.Login.ILoginProcessor(Of TRequest, TResponse).Enqueue(TRequest)
+references:
+- uid: NetScape.Abstractions.Interfaces.Login
+  commentId: N:NetScape.Abstractions.Interfaces.Login
+  name: NetScape.Abstractions.Interfaces.Login
+  nameWithType: NetScape.Abstractions.Interfaces.Login
+  fullName: NetScape.Abstractions.Interfaces.Login
+- uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue*
+  commentId: Overload:NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue
+  name: Enqueue
+  nameWithType: ILoginProcessor<TRequest, TResponse>.Enqueue
+  fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor<TRequest, TResponse>.Enqueue
+  nameWithType.vb: ILoginProcessor(Of TRequest, TResponse).Enqueue
+  fullName.vb: NetScape.Abstractions.Interfaces.Login.ILoginProcessor(Of TRequest, TResponse).Enqueue
+- uid: '{TRequest}'
+  commentId: '!:TRequest'
+  definition: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: TRequest
+  commentId: '!:TRequest'
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest

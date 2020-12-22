@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Messages.Builder
+  commentId: N:NetScape.Modules.Messages.Builder
+  id: NetScape.Modules.Messages.Builder
+  children:
+  - NetScape.Modules.Messages.Builder.AccessMode
+  - NetScape.Modules.Messages.Builder.DataOrder
+  - NetScape.Modules.Messages.Builder.DataTransformation
+  - NetScape.Modules.Messages.Builder.FrameType
+  - NetScape.Modules.Messages.Builder.MessageFrame
+  - NetScape.Modules.Messages.Builder.MessageFrameBuilder
+  - NetScape.Modules.Messages.Builder.MessageType
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Modules.Messages.Builder
+  nameWithType: NetScape.Modules.Messages.Builder
+  fullName: NetScape.Modules.Messages.Builder
+  type: Namespace
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+references:
+- uid: NetScape.Modules.Messages.Builder.AccessMode
+  commentId: T:NetScape.Modules.Messages.Builder.AccessMode
+  parent: NetScape.Modules.Messages.Builder
+  name: AccessMode
+  nameWithType: AccessMode
+  fullName: NetScape.Modules.Messages.Builder.AccessMode
+- uid: NetScape.Modules.Messages.Builder.DataOrder
+  commentId: T:NetScape.Modules.Messages.Builder.DataOrder
+  parent: NetScape.Modules.Messages.Builder
+  name: DataOrder
+  nameWithType: DataOrder
+  fullName: NetScape.Modules.Messages.Builder.DataOrder
+- uid: NetScape.Modules.Messages.Builder.DataTransformation
+  commentId: T:NetScape.Modules.Messages.Builder.DataTransformation
+  parent: NetScape.Modules.Messages.Builder
+  name: DataTransformation
+  nameWithType: DataTransformation
+  fullName: NetScape.Modules.Messages.Builder.DataTransformation
+- uid: NetScape.Modules.Messages.Builder.FrameType
+  commentId: T:NetScape.Modules.Messages.Builder.FrameType
+  parent: NetScape.Modules.Messages.Builder
+  name: FrameType
+  nameWithType: FrameType
+  fullName: NetScape.Modules.Messages.Builder.FrameType
+- uid: NetScape.Modules.Messages.Builder.MessageFrame
+  commentId: T:NetScape.Modules.Messages.Builder.MessageFrame
+  parent: NetScape.Modules.Messages.Builder
+  name: MessageFrame
+  nameWithType: MessageFrame
+  fullName: NetScape.Modules.Messages.Builder.MessageFrame
+- uid: NetScape.Modules.Messages.Builder.MessageFrameBuilder
+  commentId: T:NetScape.Modules.Messages.Builder.MessageFrameBuilder
+  parent: NetScape.Modules.Messages.Builder
+  name: MessageFrameBuilder
+  nameWithType: MessageFrameBuilder
+  fullName: NetScape.Modules.Messages.Builder.MessageFrameBuilder
+- uid: NetScape.Modules.Messages.Builder.MessageType
+  commentId: T:NetScape.Modules.Messages.Builder.MessageType
+  parent: NetScape.Modules.Messages.Builder
+  name: MessageType
+  nameWithType: MessageType
+  fullName: NetScape.Modules.Messages.Builder.MessageType
+- uid: NetScape.Modules.Messages.Builder
+  commentId: N:NetScape.Modules.Messages.Builder
+  name: NetScape.Modules.Messages.Builder
+  nameWithType: NetScape.Modules.Messages.Builder
+  fullName: NetScape.Modules.Messages.Builder

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions
+  commentId: N:NetScape.Abstractions
+  id: NetScape.Abstractions
+  children:
+  - NetScape.Abstractions.Constants
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Abstractions
+  nameWithType: NetScape.Abstractions
+  fullName: NetScape.Abstractions
+  type: Namespace
+  assemblies:
+  - NetScape.Abstractions
+references:
+- uid: NetScape.Abstractions.Constants
+  commentId: T:NetScape.Abstractions.Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: NetScape.Abstractions.Constants

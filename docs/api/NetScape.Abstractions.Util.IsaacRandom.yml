@@ -1,0 +1,559 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Util.IsaacRandom
+  commentId: T:NetScape.Abstractions.Util.IsaacRandom
+  id: IsaacRandom
+  parent: NetScape.Abstractions.Util
+  children:
+  - NetScape.Abstractions.Util.IsaacRandom.#ctor(System.Int32[])
+  - NetScape.Abstractions.Util.IsaacRandom.#ctor(System.String)
+  - NetScape.Abstractions.Util.IsaacRandom.NextByte
+  - NetScape.Abstractions.Util.IsaacRandom.NextInt
+  langs:
+  - csharp
+  - vb
+  name: IsaacRandom
+  nameWithType: IsaacRandom
+  fullName: NetScape.Abstractions.Util.IsaacRandom
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Util/IsaacRandom.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IsaacRandom
+    path: src/NetScape.Abstractions/Util/IsaacRandom.cs
+    startLine: 8
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Util
+  summary: "\nThe Isaac Random\nSee www.rosettacode.org/wiki/The_ISAAC_Cipher\n"
+  example: []
+  syntax:
+    content: public sealed class IsaacRandom
+    content.vb: Public NotInheritable Class IsaacRandom
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: NetScape.Abstractions.Util.IsaacRandom.#ctor(System.String)
+  commentId: M:NetScape.Abstractions.Util.IsaacRandom.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: NetScape.Abstractions.Util.IsaacRandom
+  langs:
+  - csharp
+  - vb
+  name: IsaacRandom(String)
+  nameWithType: IsaacRandom.IsaacRandom(String)
+  fullName: NetScape.Abstractions.Util.IsaacRandom.IsaacRandom(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Util/IsaacRandom.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.Abstractions/Util/IsaacRandom.cs
+    startLine: 171
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Util
+  summary: Initializes a new instance of the <xref href="NetScape.Abstractions.Util.IsaacRandom" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public IsaacRandom(string seed)
+    parameters:
+    - id: seed
+      type: System.String
+      description: The seed.
+    content.vb: Public Sub New(seed As String)
+  overload: NetScape.Abstractions.Util.IsaacRandom.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Util.IsaacRandom.#ctor(System.Int32[])
+  commentId: M:NetScape.Abstractions.Util.IsaacRandom.#ctor(System.Int32[])
+  id: '#ctor(System.Int32[])'
+  parent: NetScape.Abstractions.Util.IsaacRandom
+  langs:
+  - csharp
+  - vb
+  name: IsaacRandom(Int32[])
+  nameWithType: IsaacRandom.IsaacRandom(Int32[])
+  fullName: NetScape.Abstractions.Util.IsaacRandom.IsaacRandom(System.Int32[])
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Util/IsaacRandom.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.Abstractions/Util/IsaacRandom.cs
+    startLine: 185
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Util
+  summary: Initializes a new instance of the <xref href="NetScape.Abstractions.Util.IsaacRandom" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public IsaacRandom(int[] seed)
+    parameters:
+    - id: seed
+      type: System.Int32[]
+      description: The seed.
+    content.vb: Public Sub New(seed As Integer())
+  overload: NetScape.Abstractions.Util.IsaacRandom.#ctor*
+  nameWithType.vb: IsaacRandom.IsaacRandom(Int32())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NetScape.Abstractions.Util.IsaacRandom.IsaacRandom(System.Int32())
+  name.vb: IsaacRandom(Int32())
+- uid: NetScape.Abstractions.Util.IsaacRandom.NextInt
+  commentId: M:NetScape.Abstractions.Util.IsaacRandom.NextInt
+  id: NextInt
+  parent: NetScape.Abstractions.Util.IsaacRandom
+  langs:
+  - csharp
+  - vb
+  name: NextInt()
+  nameWithType: IsaacRandom.NextInt()
+  fullName: NetScape.Abstractions.Util.IsaacRandom.NextInt()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Util/IsaacRandom.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: NextInt
+    path: src/NetScape.Abstractions/Util/IsaacRandom.cs
+    startLine: 199
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Util
+  example: []
+  syntax:
+    content: public uint NextInt()
+    return:
+      type: System.UInt32
+    content.vb: Public Function NextInt As UInteger
+  overload: NetScape.Abstractions.Util.IsaacRandom.NextInt*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Abstractions.Util.IsaacRandom.NextByte
+  commentId: M:NetScape.Abstractions.Util.IsaacRandom.NextByte
+  id: NextByte
+  parent: NetScape.Abstractions.Util.IsaacRandom
+  langs:
+  - csharp
+  - vb
+  name: NextByte()
+  nameWithType: IsaacRandom.NextByte()
+  fullName: NetScape.Abstractions.Util.IsaacRandom.NextByte()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Util/IsaacRandom.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: NextByte
+    path: src/NetScape.Abstractions/Util/IsaacRandom.cs
+    startLine: 215
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Util
+  example: []
+  syntax:
+    content: public byte NextByte()
+    return:
+      type: System.Byte
+    content.vb: Public Function NextByte As Byte
+  overload: NetScape.Abstractions.Util.IsaacRandom.NextByte*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NetScape.Abstractions.Util
+  commentId: N:NetScape.Abstractions.Util
+  name: NetScape.Abstractions.Util
+  nameWithType: NetScape.Abstractions.Util
+  fullName: NetScape.Abstractions.Util
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Util.IsaacRandom
+  commentId: T:NetScape.Abstractions.Util.IsaacRandom
+  parent: NetScape.Abstractions.Util
+  name: IsaacRandom
+  nameWithType: IsaacRandom
+  fullName: NetScape.Abstractions.Util.IsaacRandom
+- uid: NetScape.Abstractions.Util.IsaacRandom.#ctor*
+  commentId: Overload:NetScape.Abstractions.Util.IsaacRandom.#ctor
+  name: IsaacRandom
+  nameWithType: IsaacRandom.IsaacRandom
+  fullName: NetScape.Abstractions.Util.IsaacRandom.IsaacRandom
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32[]
+  isExternal: true
+  name: Int32[]
+  nameWithType: Int32[]
+  fullName: System.Int32[]
+  nameWithType.vb: Int32()
+  fullName.vb: System.Int32()
+  name.vb: Int32()
+  spec.csharp:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NetScape.Abstractions.Util.IsaacRandom.NextInt*
+  commentId: Overload:NetScape.Abstractions.Util.IsaacRandom.NextInt
+  name: NextInt
+  nameWithType: IsaacRandom.NextInt
+  fullName: NetScape.Abstractions.Util.IsaacRandom.NextInt
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: NetScape.Abstractions.Util.IsaacRandom.NextByte*
+  commentId: Overload:NetScape.Abstractions.Util.IsaacRandom.NextByte
+  name: NextByte
+  nameWithType: IsaacRandom.NextByte
+  fullName: NetScape.Abstractions.Util.IsaacRandom.NextByte
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte

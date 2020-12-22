@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Model
+  commentId: N:NetScape.Abstractions.Model
+  id: NetScape.Abstractions.Model
+  children:
+  - NetScape.Abstractions.Model.Direction
+  - NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  - NetScape.Abstractions.Model.Position
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Abstractions.Model
+  nameWithType: NetScape.Abstractions.Model
+  fullName: NetScape.Abstractions.Model
+  type: Namespace
+  assemblies:
+  - NetScape.Abstractions
+references:
+- uid: NetScape.Abstractions.Model.Direction
+  commentId: T:NetScape.Abstractions.Model.Direction
+  parent: NetScape.Abstractions.Model
+  name: Direction
+  nameWithType: Direction
+  fullName: NetScape.Abstractions.Model.Direction
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  commentId: T:NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  parent: NetScape.Abstractions.Model
+  name: Direction.InnerDirectionValue
+  nameWithType: Direction.InnerDirectionValue
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+- uid: NetScape.Abstractions.Model.Position
+  commentId: T:NetScape.Abstractions.Model.Position
+  parent: NetScape.Abstractions.Model
+  name: Position
+  nameWithType: Position
+  fullName: NetScape.Abstractions.Model.Position
+- uid: NetScape.Abstractions.Model
+  commentId: N:NetScape.Abstractions.Model
+  name: NetScape.Abstractions.Model
+  nameWithType: NetScape.Abstractions.Model
+  fullName: NetScape.Abstractions.Model

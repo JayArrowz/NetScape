@@ -1,0 +1,838 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  commentId: T:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  id: ItemDefinitionFile.PropertyKey
+  parent: NetScape.Modules.Cache.FileTypes
+  children:
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.ArmourBonus
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.Broken
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.DestroyText
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipLevelRequired
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption1
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption2
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption3
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption4
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipSkillRequired
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.LifePointBonus
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.MagicAffinity
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.MeleeAffinity
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.PortentOfDegradationHealAmount
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.PotionEffectValue
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.RangedAffinity
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilCooldown
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilCooldownDefault
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilMaxCharges
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackCost
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackDescription
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackName
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.UnknownFayreTokenRelated
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.UnknownMtxDescription
+  - NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.ZarosItem
+  langs:
+  - csharp
+  - vb
+  name: ItemDefinitionFile.PropertyKey
+  nameWithType: ItemDefinitionFile.PropertyKey
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  type: Enum
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: PropertyKey
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 676
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public enum PropertyKey
+    content.vb: Public Enum PropertyKey
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption1
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption1
+  id: EquipOption1
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: EquipOption1
+  nameWithType: ItemDefinitionFile.PropertyKey.EquipOption1
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption1
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EquipOption1
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 678
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: EquipOption1 = 528
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption2
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption2
+  id: EquipOption2
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: EquipOption2
+  nameWithType: ItemDefinitionFile.PropertyKey.EquipOption2
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption2
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EquipOption2
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 679
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: EquipOption2 = 529
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption3
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption3
+  id: EquipOption3
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: EquipOption3
+  nameWithType: ItemDefinitionFile.PropertyKey.EquipOption3
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption3
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EquipOption3
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 680
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: EquipOption3 = 530
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption4
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption4
+  id: EquipOption4
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: EquipOption4
+  nameWithType: ItemDefinitionFile.PropertyKey.EquipOption4
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipOption4
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EquipOption4
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 681
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: EquipOption4 = 531
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipSkillRequired
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipSkillRequired
+  id: EquipSkillRequired
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: EquipSkillRequired
+  nameWithType: ItemDefinitionFile.PropertyKey.EquipSkillRequired
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipSkillRequired
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EquipSkillRequired
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 682
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: EquipSkillRequired = 749
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipLevelRequired
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipLevelRequired
+  id: EquipLevelRequired
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: EquipLevelRequired
+  nameWithType: ItemDefinitionFile.PropertyKey.EquipLevelRequired
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.EquipLevelRequired
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EquipLevelRequired
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 683
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: EquipLevelRequired = 750
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.LifePointBonus
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.LifePointBonus
+  id: LifePointBonus
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: LifePointBonus
+  nameWithType: ItemDefinitionFile.PropertyKey.LifePointBonus
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.LifePointBonus
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: LifePointBonus
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 684
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: LifePointBonus = 1326
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.MeleeAffinity
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.MeleeAffinity
+  id: MeleeAffinity
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: MeleeAffinity
+  nameWithType: ItemDefinitionFile.PropertyKey.MeleeAffinity
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.MeleeAffinity
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: MeleeAffinity
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 685
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: MeleeAffinity = 2866
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.RangedAffinity
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.RangedAffinity
+  id: RangedAffinity
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: RangedAffinity
+  nameWithType: ItemDefinitionFile.PropertyKey.RangedAffinity
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.RangedAffinity
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: RangedAffinity
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 686
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: RangedAffinity = 2867
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.MagicAffinity
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.MagicAffinity
+  id: MagicAffinity
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: MagicAffinity
+  nameWithType: ItemDefinitionFile.PropertyKey.MagicAffinity
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.MagicAffinity
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: MagicAffinity
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 687
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: MagicAffinity = 2868
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.ArmourBonus
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.ArmourBonus
+  id: ArmourBonus
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: ArmourBonus
+  nameWithType: ItemDefinitionFile.PropertyKey.ArmourBonus
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.ArmourBonus
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ArmourBonus
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 688
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: ArmourBonus = 2870
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.PotionEffectValue
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.PotionEffectValue
+  id: PotionEffectValue
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: PotionEffectValue
+  nameWithType: ItemDefinitionFile.PropertyKey.PotionEffectValue
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.PotionEffectValue
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: PotionEffectValue
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 689
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: PotionEffectValue = 3000
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.PortentOfDegradationHealAmount
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.PortentOfDegradationHealAmount
+  id: PortentOfDegradationHealAmount
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: PortentOfDegradationHealAmount
+  nameWithType: ItemDefinitionFile.PropertyKey.PortentOfDegradationHealAmount
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.PortentOfDegradationHealAmount
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: PortentOfDegradationHealAmount
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 690
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: PortentOfDegradationHealAmount = 3698
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.Broken
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.Broken
+  id: Broken
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: Broken
+  nameWithType: ItemDefinitionFile.PropertyKey.Broken
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.Broken
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Broken
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 691
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: Broken = 3793
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.UnknownMtxDescription
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.UnknownMtxDescription
+  id: UnknownMtxDescription
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: UnknownMtxDescription
+  nameWithType: ItemDefinitionFile.PropertyKey.UnknownMtxDescription
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.UnknownMtxDescription
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: UnknownMtxDescription
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 692
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: UnknownMtxDescription = 4085
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackCost
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackCost
+  id: SpecialAttackCost
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: SpecialAttackCost
+  nameWithType: ItemDefinitionFile.PropertyKey.SpecialAttackCost
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackCost
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SpecialAttackCost
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 693
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: SpecialAttackCost = 4332
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackName
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackName
+  id: SpecialAttackName
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: SpecialAttackName
+  nameWithType: ItemDefinitionFile.PropertyKey.SpecialAttackName
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackName
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SpecialAttackName
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 694
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: SpecialAttackName = 4333
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackDescription
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackDescription
+  id: SpecialAttackDescription
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: SpecialAttackDescription
+  nameWithType: ItemDefinitionFile.PropertyKey.SpecialAttackDescription
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SpecialAttackDescription
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SpecialAttackDescription
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 695
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: SpecialAttackDescription = 4334
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.DestroyText
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.DestroyText
+  id: DestroyText
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: DestroyText
+  nameWithType: ItemDefinitionFile.PropertyKey.DestroyText
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.DestroyText
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: DestroyText
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 696
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: DestroyText = 5417
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.ZarosItem
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.ZarosItem
+  id: ZarosItem
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: ZarosItem
+  nameWithType: ItemDefinitionFile.PropertyKey.ZarosItem
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.ZarosItem
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ZarosItem
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 697
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: ZarosItem = 5440
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.UnknownFayreTokenRelated
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.UnknownFayreTokenRelated
+  id: UnknownFayreTokenRelated
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: UnknownFayreTokenRelated
+  nameWithType: ItemDefinitionFile.PropertyKey.UnknownFayreTokenRelated
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.UnknownFayreTokenRelated
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: UnknownFayreTokenRelated
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 698
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: UnknownFayreTokenRelated = 6405
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilCooldownDefault
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilCooldownDefault
+  id: SigilCooldownDefault
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: SigilCooldownDefault
+  nameWithType: ItemDefinitionFile.PropertyKey.SigilCooldownDefault
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilCooldownDefault
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SigilCooldownDefault
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 699
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: SigilCooldownDefault = 6520
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilCooldown
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilCooldown
+  id: SigilCooldown
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: SigilCooldown
+  nameWithType: ItemDefinitionFile.PropertyKey.SigilCooldown
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilCooldown
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SigilCooldown
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 700
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: SigilCooldown = 6521
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilMaxCharges
+  commentId: F:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilMaxCharges
+  id: SigilMaxCharges
+  parent: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  langs:
+  - csharp
+  - vb
+  name: SigilMaxCharges
+  nameWithType: ItemDefinitionFile.PropertyKey.SigilMaxCharges
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.SigilMaxCharges
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SigilMaxCharges
+    path: src/NetScape.Modules.Cache/FileTypes/ItemDefinitionFile.cs
+    startLine: 701
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: SigilMaxCharges = 6522
+    return:
+      type: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NetScape.Modules.Cache.FileTypes
+  commentId: N:NetScape.Modules.Cache.FileTypes
+  name: NetScape.Modules.Cache.FileTypes
+  nameWithType: NetScape.Modules.Cache.FileTypes
+  fullName: NetScape.Modules.Cache.FileTypes
+- uid: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  commentId: T:NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey
+  parent: NetScape.Modules.Cache.FileTypes
+  name: ItemDefinitionFile.PropertyKey
+  nameWithType: ItemDefinitionFile.PropertyKey
+  fullName: NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey

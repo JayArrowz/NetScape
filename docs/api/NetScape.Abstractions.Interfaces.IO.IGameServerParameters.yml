@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.IO.IGameServerParameters
+  commentId: T:NetScape.Abstractions.Interfaces.IO.IGameServerParameters
+  id: IGameServerParameters
+  parent: NetScape.Abstractions.Interfaces.IO
+  children:
+  - NetScape.Abstractions.Interfaces.IO.IGameServerParameters.BindAddress
+  - NetScape.Abstractions.Interfaces.IO.IGameServerParameters.Port
+  langs:
+  - csharp
+  - vb
+  name: IGameServerParameters
+  nameWithType: IGameServerParameters
+  fullName: NetScape.Abstractions.Interfaces.IO.IGameServerParameters
+  type: Interface
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/IGameServerParameters.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IGameServerParameters
+    path: src/NetScape.Abstractions/Interfaces/IO/IGameServerParameters.cs
+    startLine: 2
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO
+  syntax:
+    content: public interface IGameServerParameters
+    content.vb: Public Interface IGameServerParameters
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: NetScape.Abstractions.Interfaces.IO.IGameServerParameters.BindAddress
+  commentId: P:NetScape.Abstractions.Interfaces.IO.IGameServerParameters.BindAddress
+  id: BindAddress
+  parent: NetScape.Abstractions.Interfaces.IO.IGameServerParameters
+  langs:
+  - csharp
+  - vb
+  name: BindAddress
+  nameWithType: IGameServerParameters.BindAddress
+  fullName: NetScape.Abstractions.Interfaces.IO.IGameServerParameters.BindAddress
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/IGameServerParameters.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: BindAddress
+    path: src/NetScape.Abstractions/Interfaces/IO/IGameServerParameters.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO
+  syntax:
+    content: string BindAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Property BindAddress As String
+  overload: NetScape.Abstractions.Interfaces.IO.IGameServerParameters.BindAddress*
+  modifiers.csharp:
+  - get
+  - set
+- uid: NetScape.Abstractions.Interfaces.IO.IGameServerParameters.Port
+  commentId: P:NetScape.Abstractions.Interfaces.IO.IGameServerParameters.Port
+  id: Port
+  parent: NetScape.Abstractions.Interfaces.IO.IGameServerParameters
+  langs:
+  - csharp
+  - vb
+  name: Port
+  nameWithType: IGameServerParameters.Port
+  fullName: NetScape.Abstractions.Interfaces.IO.IGameServerParameters.Port
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/IGameServerParameters.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Port
+    path: src/NetScape.Abstractions/Interfaces/IO/IGameServerParameters.cs
+    startLine: 6
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO
+  syntax:
+    content: ushort Port { get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Property Port As UShort
+  overload: NetScape.Abstractions.Interfaces.IO.IGameServerParameters.Port*
+  modifiers.csharp:
+  - get
+  - set
+references:
+- uid: NetScape.Abstractions.Interfaces.IO
+  commentId: N:NetScape.Abstractions.Interfaces.IO
+  name: NetScape.Abstractions.Interfaces.IO
+  nameWithType: NetScape.Abstractions.Interfaces.IO
+  fullName: NetScape.Abstractions.Interfaces.IO
+- uid: NetScape.Abstractions.Interfaces.IO.IGameServerParameters.BindAddress*
+  commentId: Overload:NetScape.Abstractions.Interfaces.IO.IGameServerParameters.BindAddress
+  name: BindAddress
+  nameWithType: IGameServerParameters.BindAddress
+  fullName: NetScape.Abstractions.Interfaces.IO.IGameServerParameters.BindAddress
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Interfaces.IO.IGameServerParameters.Port*
+  commentId: Overload:NetScape.Abstractions.Interfaces.IO.IGameServerParameters.Port
+  name: Port
+  nameWithType: IGameServerParameters.Port
+  fullName: NetScape.Abstractions.Interfaces.IO.IGameServerParameters.Port
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16

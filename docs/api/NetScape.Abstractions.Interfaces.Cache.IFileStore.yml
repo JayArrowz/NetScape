@@ -1,0 +1,426 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  commentId: T:NetScape.Abstractions.Interfaces.Cache.IFileStore
+  id: IFileStore
+  parent: NetScape.Abstractions.Interfaces.Cache
+  children:
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: IFileStore
+  nameWithType: IFileStore
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  type: Interface
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IFileStore
+    path: src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+    startLine: 6
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Cache
+  syntax:
+    content: 'public interface IFileStore : IDisposable'
+    content.vb: >-
+      Public Interface IFileStore
+          Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory
+  id: CacheDirectory
+  parent: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  langs:
+  - csharp
+  - vb
+  name: CacheDirectory
+  nameWithType: IFileStore.CacheDirectory
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: CacheDirectory
+    path: src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+    startLine: 8
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Cache
+  syntax:
+    content: string CacheDirectory { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property CacheDirectory As String
+  overload: NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly
+  id: ReadOnly
+  parent: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  langs:
+  - csharp
+  - vb
+  name: ReadOnly
+  nameWithType: IFileStore.ReadOnly
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ReadOnly
+    path: src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+    startLine: 9
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Cache
+  syntax:
+    content: bool ReadOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property ReadOnly As Boolean
+  overload: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+  commentId: M:NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+  id: GetIndexes
+  parent: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  langs:
+  - csharp
+  - vb
+  name: GetIndexes()
+  nameWithType: IFileStore.GetIndexes()
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetIndexes
+    path: src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+    startLine: 10
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Cache
+  syntax:
+    content: IEnumerable<CacheIndex> GetIndexes()
+    return:
+      type: System.Collections.Generic.IEnumerable{NetScape.Abstractions.Cache.CacheIndex}
+    content.vb: Function GetIndexes As IEnumerable(Of CacheIndex)
+  overload: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes*
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  commentId: M:NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  id: ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  parent: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  langs:
+  - csharp
+  - vb
+  name: ReadFileData(CacheIndex, Int32)
+  nameWithType: IFileStore.ReadFileData(CacheIndex, Int32)
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ReadFileData
+    path: src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+    startLine: 11
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Cache
+  syntax:
+    content: byte[] ReadFileData(CacheIndex index, int value)
+    parameters:
+    - id: index
+      type: NetScape.Abstractions.Cache.CacheIndex
+    - id: value
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Function ReadFileData(index As CacheIndex, value As Integer) As Byte()
+  overload: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData*
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  commentId: M:NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  id: WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  parent: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  langs:
+  - csharp
+  - vb
+  name: WriteFileData(CacheIndex, Int32, Byte[])
+  nameWithType: IFileStore.WriteFileData(CacheIndex, Int32, Byte[])
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex, System.Int32, System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: WriteFileData
+    path: src/NetScape.Abstractions/Interfaces/Cache/IFileStore.cs
+    startLine: 12
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Cache
+  syntax:
+    content: void WriteFileData(CacheIndex index, int value, byte[] v)
+    parameters:
+    - id: index
+      type: NetScape.Abstractions.Cache.CacheIndex
+    - id: value
+      type: System.Int32
+    - id: v
+      type: System.Byte[]
+    content.vb: Sub WriteFileData(index As CacheIndex, value As Integer, v As Byte())
+  overload: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData*
+  nameWithType.vb: IFileStore.WriteFileData(CacheIndex, Int32, Byte())
+  fullName.vb: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex, System.Int32, System.Byte())
+  name.vb: WriteFileData(CacheIndex, Int32, Byte())
+references:
+- uid: NetScape.Abstractions.Interfaces.Cache
+  commentId: N:NetScape.Abstractions.Interfaces.Cache
+  name: NetScape.Abstractions.Interfaces.Cache
+  nameWithType: NetScape.Abstractions.Interfaces.Cache
+  fullName: NetScape.Abstractions.Interfaces.Cache
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory*
+  commentId: Overload:NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory
+  name: CacheDirectory
+  nameWithType: IFileStore.CacheDirectory
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly*
+  commentId: Overload:NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly
+  name: ReadOnly
+  nameWithType: IFileStore.ReadOnly
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes*
+  commentId: Overload:NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+  name: GetIndexes
+  nameWithType: IFileStore.GetIndexes
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+- uid: System.Collections.Generic.IEnumerable{NetScape.Abstractions.Cache.CacheIndex}
+  commentId: T:System.Collections.Generic.IEnumerable{NetScape.Abstractions.Cache.CacheIndex}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<CacheIndex>
+  nameWithType: IEnumerable<CacheIndex>
+  fullName: System.Collections.Generic.IEnumerable<NetScape.Abstractions.Cache.CacheIndex>
+  nameWithType.vb: IEnumerable(Of CacheIndex)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of NetScape.Abstractions.Cache.CacheIndex)
+  name.vb: IEnumerable(Of CacheIndex)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData*
+  commentId: Overload:NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData
+  name: ReadFileData
+  nameWithType: IFileStore.ReadFileData
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData
+- uid: NetScape.Abstractions.Cache.CacheIndex
+  commentId: T:NetScape.Abstractions.Cache.CacheIndex
+  parent: NetScape.Abstractions.Cache
+  name: CacheIndex
+  nameWithType: CacheIndex
+  fullName: NetScape.Abstractions.Cache.CacheIndex
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NetScape.Abstractions.Cache
+  commentId: N:NetScape.Abstractions.Cache
+  name: NetScape.Abstractions.Cache
+  nameWithType: NetScape.Abstractions.Cache
+  fullName: NetScape.Abstractions.Cache
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData*
+  commentId: Overload:NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData
+  name: WriteFileData
+  nameWithType: IFileStore.WriteFileData
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData

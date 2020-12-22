@@ -1,0 +1,173 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  commentId: T:NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  id: IEventLoopGroupFactory
+  parent: NetScape.Abstractions.Interfaces.IO.EventLoop
+  children:
+  - NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+  - NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+  langs:
+  - csharp
+  - vb
+  name: IEventLoopGroupFactory
+  nameWithType: IEventLoopGroupFactory
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  type: Interface
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/EventLoop/IEventLoopGroupFactory.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IEventLoopGroupFactory
+    path: src/NetScape.Abstractions/Interfaces/IO/EventLoop/IEventLoopGroupFactory.cs
+    startLine: 5
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO.EventLoop
+  syntax:
+    content: 'public interface IEventLoopGroupFactory : IDisposable'
+    content.vb: >-
+      Public Interface IEventLoopGroupFactory
+          Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+  commentId: M:NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+  id: GetWorkerGroup
+  parent: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  langs:
+  - csharp
+  - vb
+  name: GetWorkerGroup()
+  nameWithType: IEventLoopGroupFactory.GetWorkerGroup()
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/EventLoop/IEventLoopGroupFactory.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetWorkerGroup
+    path: src/NetScape.Abstractions/Interfaces/IO/EventLoop/IEventLoopGroupFactory.cs
+    startLine: 8
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO.EventLoop
+  summary: Gets or Creates new loop group for the netty handlers.
+  example: []
+  syntax:
+    content: IEventLoopGroup GetWorkerGroup()
+    return:
+      type: DotNetty.Transport.Channels.IEventLoopGroup
+    content.vb: Function GetWorkerGroup As IEventLoopGroup
+  overload: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup*
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+  commentId: M:NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+  id: GetBossGroup
+  parent: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  langs:
+  - csharp
+  - vb
+  name: GetBossGroup()
+  nameWithType: IEventLoopGroupFactory.GetBossGroup()
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/EventLoop/IEventLoopGroupFactory.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetBossGroup
+    path: src/NetScape.Abstractions/Interfaces/IO/EventLoop/IEventLoopGroupFactory.cs
+    startLine: 11
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO.EventLoop
+  summary: Gets or Creates new loop group for the socket IO.
+  example: []
+  syntax:
+    content: IEventLoopGroup GetBossGroup()
+    return:
+      type: DotNetty.Transport.Channels.IEventLoopGroup
+    content.vb: Function GetBossGroup As IEventLoopGroup
+  overload: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup*
+references:
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop
+  commentId: N:NetScape.Abstractions.Interfaces.IO.EventLoop
+  name: NetScape.Abstractions.Interfaces.IO.EventLoop
+  nameWithType: NetScape.Abstractions.Interfaces.IO.EventLoop
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup*
+  commentId: Overload:NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+  name: GetWorkerGroup
+  nameWithType: IEventLoopGroupFactory.GetWorkerGroup
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetWorkerGroup
+- uid: DotNetty.Transport.Channels.IEventLoopGroup
+  commentId: T:DotNetty.Transport.Channels.IEventLoopGroup
+  parent: DotNetty.Transport.Channels
+  isExternal: true
+  name: IEventLoopGroup
+  nameWithType: IEventLoopGroup
+  fullName: DotNetty.Transport.Channels.IEventLoopGroup
+- uid: DotNetty.Transport.Channels
+  commentId: N:DotNetty.Transport.Channels
+  isExternal: true
+  name: DotNetty.Transport.Channels
+  nameWithType: DotNetty.Transport.Channels
+  fullName: DotNetty.Transport.Channels
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup*
+  commentId: Overload:NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup
+  name: GetBossGroup
+  nameWithType: IEventLoopGroupFactory.GetBossGroup
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.GetBossGroup

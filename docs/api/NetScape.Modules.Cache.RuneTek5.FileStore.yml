@@ -1,0 +1,1165 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore
+  commentId: T:NetScape.Modules.Cache.RuneTek5.FileStore
+  id: FileStore
+  parent: NetScape.Modules.Cache.RuneTek5
+  children:
+  - NetScape.Modules.Cache.RuneTek5.FileStore.#ctor(NetScape.Abstractions.FileSystem.IFileSystem)
+  - NetScape.Modules.Cache.RuneTek5.FileStore.CacheDirectory
+  - NetScape.Modules.Cache.RuneTek5.FileStore.Dispose
+  - NetScape.Modules.Cache.RuneTek5.FileStore.GetIndexes
+  - NetScape.Modules.Cache.RuneTek5.FileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  - NetScape.Modules.Cache.RuneTek5.FileStore.ReadOnly
+  - NetScape.Modules.Cache.RuneTek5.FileStore.ReferenceTableCache
+  - NetScape.Modules.Cache.RuneTek5.FileStore.Start
+  - NetScape.Modules.Cache.RuneTek5.FileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: FileStore
+  nameWithType: FileStore
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: FileStore
+    path: src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+    startLine: 20
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nA file store holds multiple files inside a &quot;virtual&quot; file system made up of several index files and a single data\nfile.\n"
+  example: []
+  syntax:
+    content: 'public class FileStore : IFileStore, IDisposable, IStartable'
+    content.vb: >-
+      Public Class FileStore
+          Implements IFileStore, IDisposable, IStartable
+  inheritance:
+  - System.Object
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore
+  - System.IDisposable
+  - Autofac.IStartable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.#ctor(NetScape.Abstractions.FileSystem.IFileSystem)
+  commentId: M:NetScape.Modules.Cache.RuneTek5.FileStore.#ctor(NetScape.Abstractions.FileSystem.IFileSystem)
+  id: '#ctor(NetScape.Abstractions.FileSystem.IFileSystem)'
+  parent: NetScape.Modules.Cache.RuneTek5.FileStore
+  langs:
+  - csharp
+  - vb
+  name: FileStore(IFileSystem)
+  nameWithType: FileStore.FileStore(IFileSystem)
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.FileStore(NetScape.Abstractions.FileSystem.IFileSystem)
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+    startLine: 34
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nOpens the file store in the specified directory.\n"
+  example: []
+  syntax:
+    content: public FileStore(IFileSystem fileSystem)
+    parameters:
+    - id: fileSystem
+      type: NetScape.Abstractions.FileSystem.IFileSystem
+    content.vb: Public Sub New(fileSystem As IFileSystem)
+  overload: NetScape.Modules.Cache.RuneTek5.FileStore.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.ReadOnly
+  commentId: P:NetScape.Modules.Cache.RuneTek5.FileStore.ReadOnly
+  id: ReadOnly
+  parent: NetScape.Modules.Cache.RuneTek5.FileStore
+  langs:
+  - csharp
+  - vb
+  name: ReadOnly
+  nameWithType: FileStore.ReadOnly
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.ReadOnly
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ReadOnly
+    path: src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+    startLine: 40
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  syntax:
+    content: public bool ReadOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ReadOnly As Boolean
+  overload: NetScape.Modules.Cache.RuneTek5.FileStore.ReadOnly*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.CacheDirectory
+  commentId: P:NetScape.Modules.Cache.RuneTek5.FileStore.CacheDirectory
+  id: CacheDirectory
+  parent: NetScape.Modules.Cache.RuneTek5.FileStore
+  langs:
+  - csharp
+  - vb
+  name: CacheDirectory
+  nameWithType: FileStore.CacheDirectory
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.CacheDirectory
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: CacheDirectory
+    path: src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+    startLine: 41
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  syntax:
+    content: public string CacheDirectory { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property CacheDirectory As String
+  overload: NetScape.Modules.Cache.RuneTek5.FileStore.CacheDirectory*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.ReferenceTableCache
+  commentId: P:NetScape.Modules.Cache.RuneTek5.FileStore.ReferenceTableCache
+  id: ReferenceTableCache
+  parent: NetScape.Modules.Cache.RuneTek5.FileStore
+  langs:
+  - csharp
+  - vb
+  name: ReferenceTableCache
+  nameWithType: FileStore.ReferenceTableCache
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.ReferenceTableCache
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ReferenceTableCache
+    path: src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+    startLine: 42
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  syntax:
+    content: public IReferenceTableCache ReferenceTableCache { get; set; }
+    parameters: []
+    return:
+      type: NetScape.Abstractions.Interfaces.Cache.IReferenceTableCache
+    content.vb: Public Property ReferenceTableCache As IReferenceTableCache
+  overload: NetScape.Modules.Cache.RuneTek5.FileStore.ReferenceTableCache*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.GetIndexes
+  commentId: M:NetScape.Modules.Cache.RuneTek5.FileStore.GetIndexes
+  id: GetIndexes
+  parent: NetScape.Modules.Cache.RuneTek5.FileStore
+  langs:
+  - csharp
+  - vb
+  name: GetIndexes()
+  nameWithType: FileStore.GetIndexes()
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.GetIndexes()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetIndexes
+    path: src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+    startLine: 47
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nThe loaded/existing indexes.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<CacheIndex> GetIndexes()
+    return:
+      type: System.Collections.Generic.IEnumerable{NetScape.Abstractions.Cache.CacheIndex}
+    content.vb: Public Function GetIndexes As IEnumerable(Of CacheIndex)
+  overload: NetScape.Modules.Cache.RuneTek5.FileStore.GetIndexes*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  commentId: M:NetScape.Modules.Cache.RuneTek5.FileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  id: ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  parent: NetScape.Modules.Cache.RuneTek5.FileStore
+  langs:
+  - csharp
+  - vb
+  name: ReadFileData(CacheIndex, Int32)
+  nameWithType: FileStore.ReadFileData(CacheIndex, Int32)
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ReadFileData
+    path: src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+    startLine: 64
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nReads the sectors\n"
+  example: []
+  syntax:
+    content: public byte[] ReadFileData(CacheIndex index, int fileId)
+    parameters:
+    - id: index
+      type: NetScape.Abstractions.Cache.CacheIndex
+      description: ''
+    - id: fileId
+      type: System.Int32
+      description: ''
+    return:
+      type: System.Byte[]
+      description: ''
+    content.vb: Public Function ReadFileData(index As CacheIndex, fileId As Integer) As Byte()
+  overload: NetScape.Modules.Cache.RuneTek5.FileStore.ReadFileData*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  commentId: M:NetScape.Modules.Cache.RuneTek5.FileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  id: WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  parent: NetScape.Modules.Cache.RuneTek5.FileStore
+  langs:
+  - csharp
+  - vb
+  name: WriteFileData(CacheIndex, Int32, Byte[])
+  nameWithType: FileStore.WriteFileData(CacheIndex, Int32, Byte[])
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex, System.Int32, System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: WriteFileData
+    path: src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+    startLine: 143
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nIf available, overwrites the space allocated to the previous file first to save space.\n"
+  example: []
+  syntax:
+    content: public void WriteFileData(CacheIndex index, int fileId, byte[] data)
+    parameters:
+    - id: index
+      type: NetScape.Abstractions.Cache.CacheIndex
+      description: ''
+    - id: fileId
+      type: System.Int32
+      description: ''
+    - id: data
+      type: System.Byte[]
+      description: ''
+    content.vb: Public Sub WriteFileData(index As CacheIndex, fileId As Integer, data As Byte())
+  overload: NetScape.Modules.Cache.RuneTek5.FileStore.WriteFileData*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  nameWithType.vb: FileStore.WriteFileData(CacheIndex, Int32, Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NetScape.Modules.Cache.RuneTek5.FileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex, System.Int32, System.Byte())
+  name.vb: WriteFileData(CacheIndex, Int32, Byte())
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.Dispose
+  commentId: M:NetScape.Modules.Cache.RuneTek5.FileStore.Dispose
+  id: Dispose
+  parent: NetScape.Modules.Cache.RuneTek5.FileStore
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: FileStore.Dispose()
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.Dispose()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Dispose
+    path: src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+    startLine: 230
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: NetScape.Modules.Cache.RuneTek5.FileStore.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.Start
+  commentId: M:NetScape.Modules.Cache.RuneTek5.FileStore.Start
+  id: Start
+  parent: NetScape.Modules.Cache.RuneTek5.FileStore
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: FileStore.Start()
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.Start()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Start
+    path: src/NetScape.Modules.Cache/RuneTek5/FileStore.cs
+    startLine: 240
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: NetScape.Modules.Cache.RuneTek5.FileStore.Start*
+  implements:
+  - Autofac.IStartable.Start
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NetScape.Modules.Cache.RuneTek5
+  commentId: N:NetScape.Modules.Cache.RuneTek5
+  name: NetScape.Modules.Cache.RuneTek5
+  nameWithType: NetScape.Modules.Cache.RuneTek5
+  fullName: NetScape.Modules.Cache.RuneTek5
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  commentId: T:NetScape.Abstractions.Interfaces.Cache.IFileStore
+  parent: NetScape.Abstractions.Interfaces.Cache
+  name: IFileStore
+  nameWithType: IFileStore
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Autofac.IStartable
+  commentId: T:Autofac.IStartable
+  parent: Autofac
+  isExternal: true
+  name: IStartable
+  nameWithType: IStartable
+  fullName: Autofac.IStartable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Interfaces.Cache
+  commentId: N:NetScape.Abstractions.Interfaces.Cache
+  name: NetScape.Abstractions.Interfaces.Cache
+  nameWithType: NetScape.Abstractions.Interfaces.Cache
+  fullName: NetScape.Abstractions.Interfaces.Cache
+- uid: Autofac
+  commentId: N:Autofac
+  isExternal: true
+  name: Autofac
+  nameWithType: Autofac
+  fullName: Autofac
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.#ctor*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.FileStore.#ctor
+  name: FileStore
+  nameWithType: FileStore.FileStore
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.FileStore
+- uid: NetScape.Abstractions.FileSystem.IFileSystem
+  commentId: T:NetScape.Abstractions.FileSystem.IFileSystem
+  parent: NetScape.Abstractions.FileSystem
+  name: IFileSystem
+  nameWithType: IFileSystem
+  fullName: NetScape.Abstractions.FileSystem.IFileSystem
+- uid: NetScape.Abstractions.FileSystem
+  commentId: N:NetScape.Abstractions.FileSystem
+  name: NetScape.Abstractions.FileSystem
+  nameWithType: NetScape.Abstractions.FileSystem
+  fullName: NetScape.Abstractions.FileSystem
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.ReadOnly*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.FileStore.ReadOnly
+  name: ReadOnly
+  nameWithType: FileStore.ReadOnly
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.ReadOnly
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly
+  parent: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  name: ReadOnly
+  nameWithType: IFileStore.ReadOnly
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadOnly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.CacheDirectory*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.FileStore.CacheDirectory
+  name: CacheDirectory
+  nameWithType: FileStore.CacheDirectory
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.CacheDirectory
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory
+  parent: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  name: CacheDirectory
+  nameWithType: IFileStore.CacheDirectory
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.CacheDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.ReferenceTableCache*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.FileStore.ReferenceTableCache
+  name: ReferenceTableCache
+  nameWithType: FileStore.ReferenceTableCache
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.ReferenceTableCache
+- uid: NetScape.Abstractions.Interfaces.Cache.IReferenceTableCache
+  commentId: T:NetScape.Abstractions.Interfaces.Cache.IReferenceTableCache
+  parent: NetScape.Abstractions.Interfaces.Cache
+  name: IReferenceTableCache
+  nameWithType: IReferenceTableCache
+  fullName: NetScape.Abstractions.Interfaces.Cache.IReferenceTableCache
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.GetIndexes*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.FileStore.GetIndexes
+  name: GetIndexes
+  nameWithType: FileStore.GetIndexes
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.GetIndexes
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+  commentId: M:NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+  parent: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  name: GetIndexes()
+  nameWithType: IFileStore.GetIndexes()
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes()
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+    name: GetIndexes
+    nameWithType: IFileStore.GetIndexes
+    fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+    name: GetIndexes
+    nameWithType: IFileStore.GetIndexes
+    fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.GetIndexes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{NetScape.Abstractions.Cache.CacheIndex}
+  commentId: T:System.Collections.Generic.IEnumerable{NetScape.Abstractions.Cache.CacheIndex}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<CacheIndex>
+  nameWithType: IEnumerable<CacheIndex>
+  fullName: System.Collections.Generic.IEnumerable<NetScape.Abstractions.Cache.CacheIndex>
+  nameWithType.vb: IEnumerable(Of CacheIndex)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of NetScape.Abstractions.Cache.CacheIndex)
+  name.vb: IEnumerable(Of CacheIndex)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.ReadFileData*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.FileStore.ReadFileData
+  name: ReadFileData
+  nameWithType: FileStore.ReadFileData
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.ReadFileData
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  commentId: M:NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  parent: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  isExternal: true
+  name: ReadFileData(CacheIndex, Int32)
+  nameWithType: IFileStore.ReadFileData(CacheIndex, Int32)
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex, System.Int32)
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+    name: ReadFileData
+    nameWithType: IFileStore.ReadFileData
+    fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+    name: ReadFileData
+    nameWithType: IFileStore.ReadFileData
+    fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.ReadFileData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Cache.CacheIndex
+  commentId: T:NetScape.Abstractions.Cache.CacheIndex
+  parent: NetScape.Abstractions.Cache
+  name: CacheIndex
+  nameWithType: CacheIndex
+  fullName: NetScape.Abstractions.Cache.CacheIndex
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NetScape.Abstractions.Cache
+  commentId: N:NetScape.Abstractions.Cache
+  name: NetScape.Abstractions.Cache
+  nameWithType: NetScape.Abstractions.Cache
+  fullName: NetScape.Abstractions.Cache
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.WriteFileData*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.FileStore.WriteFileData
+  name: WriteFileData
+  nameWithType: FileStore.WriteFileData
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.WriteFileData
+- uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  commentId: M:NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+  parent: NetScape.Abstractions.Interfaces.Cache.IFileStore
+  isExternal: true
+  name: WriteFileData(CacheIndex, Int32, Byte[])
+  nameWithType: IFileStore.WriteFileData(CacheIndex, Int32, Byte[])
+  fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex, System.Int32, System.Byte[])
+  nameWithType.vb: IFileStore.WriteFileData(CacheIndex, Int32, Byte())
+  fullName.vb: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex, System.Int32, System.Byte())
+  name.vb: WriteFileData(CacheIndex, Int32, Byte())
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+    name: WriteFileData
+    nameWithType: IFileStore.WriteFileData
+    fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData(NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Byte[])
+    name: WriteFileData
+    nameWithType: IFileStore.WriteFileData
+    fullName: NetScape.Abstractions.Interfaces.Cache.IFileStore.WriteFileData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.Dispose*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.FileStore.Dispose
+  name: Dispose
+  nameWithType: FileStore.Dispose
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore.Start*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.FileStore.Start
+  name: Start
+  nameWithType: FileStore.Start
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore.Start
+- uid: Autofac.IStartable.Start
+  commentId: M:Autofac.IStartable.Start
+  parent: Autofac.IStartable
+  isExternal: true
+  name: Start()
+  nameWithType: IStartable.Start()
+  fullName: Autofac.IStartable.Start()
+  spec.csharp:
+  - uid: Autofac.IStartable.Start
+    name: Start
+    nameWithType: IStartable.Start
+    fullName: Autofac.IStartable.Start
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Autofac.IStartable.Start
+    name: Start
+    nameWithType: IStartable.Start
+    fullName: Autofac.IStartable.Start
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

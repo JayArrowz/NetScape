@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.RuneTek5
+  commentId: N:NetScape.Modules.Cache.RuneTek5
+  id: NetScape.Modules.Cache.RuneTek5
+  children:
+  - NetScape.Modules.Cache.RuneTek5.FileStore
+  - NetScape.Modules.Cache.RuneTek5.IndexPointer
+  - NetScape.Modules.Cache.RuneTek5.RuneTek5Cache
+  - NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Modules.Cache.RuneTek5
+  nameWithType: NetScape.Modules.Cache.RuneTek5
+  fullName: NetScape.Modules.Cache.RuneTek5
+  type: Namespace
+  assemblies:
+  - NetScape.Modules.Cache
+references:
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore
+  commentId: T:NetScape.Modules.Cache.RuneTek5.FileStore
+  name: FileStore
+  nameWithType: FileStore
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer
+  commentId: T:NetScape.Modules.Cache.RuneTek5.IndexPointer
+  parent: NetScape.Modules.Cache.RuneTek5
+  name: IndexPointer
+  nameWithType: IndexPointer
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer
+- uid: NetScape.Modules.Cache.RuneTek5.RuneTek5Cache
+  commentId: T:NetScape.Modules.Cache.RuneTek5.RuneTek5Cache
+  name: RuneTek5Cache
+  nameWithType: RuneTek5Cache
+  fullName: NetScape.Modules.Cache.RuneTek5.RuneTek5Cache
+- uid: NetScape.Modules.Cache.RuneTek5.Sector
+  commentId: T:NetScape.Modules.Cache.RuneTek5.Sector
+  name: Sector
+  nameWithType: Sector
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector
+- uid: NetScape.Modules.Cache.RuneTek5
+  commentId: N:NetScape.Modules.Cache.RuneTek5
+  name: NetScape.Modules.Cache.RuneTek5
+  nameWithType: NetScape.Modules.Cache.RuneTek5
+  fullName: NetScape.Modules.Cache.RuneTek5

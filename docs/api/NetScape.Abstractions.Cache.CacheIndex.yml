@@ -1,0 +1,1764 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Cache.CacheIndex
+  commentId: T:NetScape.Abstractions.Cache.CacheIndex
+  id: CacheIndex
+  parent: NetScape.Abstractions.Cache
+  children:
+  - NetScape.Abstractions.Cache.CacheIndex.AnimationFrameBases
+  - NetScape.Abstractions.Cache.CacheIndex.AnimationFrames
+  - NetScape.Abstractions.Cache.CacheIndex.Billboards
+  - NetScape.Abstractions.Cache.CacheIndex.ClientScripts
+  - NetScape.Abstractions.Cache.CacheIndex.Cutscenes
+  - NetScape.Abstractions.Cache.CacheIndex.DatabaseTableIndex
+  - NetScape.Abstractions.Cache.CacheIndex.Defaults
+  - NetScape.Abstractions.Cache.CacheIndex.DxtDiffuseTextures
+  - NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown1
+  - NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown2
+  - NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown3
+  - NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeGfxConfigs
+  - NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeJingles
+  - NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeMidis
+  - NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeSoundEffects
+  - NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeTextures
+  - NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeVorbisFiles
+  - NetScape.Abstractions.Cache.CacheIndex.Enums
+  - NetScape.Abstractions.Cache.CacheIndex.FontMetrics
+  - NetScape.Abstractions.Cache.CacheIndex.GlobalQuickchat
+  - NetScape.Abstractions.Cache.CacheIndex.HuffmanEncoding
+  - NetScape.Abstractions.Cache.CacheIndex.Interfaces
+  - NetScape.Abstractions.Cache.CacheIndex.ItemDefinitions
+  - NetScape.Abstractions.Cache.CacheIndex.LoadingScreens
+  - NetScape.Abstractions.Cache.CacheIndex.LoadingSprites
+  - NetScape.Abstractions.Cache.CacheIndex.Locations
+  - NetScape.Abstractions.Cache.CacheIndex.Maps
+  - NetScape.Abstractions.Cache.CacheIndex.Materials
+  - NetScape.Abstractions.Cache.CacheIndex.MippedPngHdrTextures
+  - NetScape.Abstractions.Cache.CacheIndex.Miscellaneous
+  - NetScape.Abstractions.Cache.CacheIndex.Models
+  - NetScape.Abstractions.Cache.CacheIndex.Music
+  - NetScape.Abstractions.Cache.CacheIndex.NativeLibraries
+  - NetScape.Abstractions.Cache.CacheIndex.Npcs
+  - NetScape.Abstractions.Cache.CacheIndex.Particles
+  - NetScape.Abstractions.Cache.CacheIndex.PngDiffuseTextures
+  - NetScape.Abstractions.Cache.CacheIndex.PngHdrTextures
+  - NetScape.Abstractions.Cache.CacheIndex.Quickchat
+  - NetScape.Abstractions.Cache.CacheIndex.RawLoadingSprites
+  - NetScape.Abstractions.Cache.CacheIndex.ReferenceTables
+  - NetScape.Abstractions.Cache.CacheIndex.RuneTek7Animations
+  - NetScape.Abstractions.Cache.CacheIndex.RuneTek7Models
+  - NetScape.Abstractions.Cache.CacheIndex.Sequences
+  - NetScape.Abstractions.Cache.CacheIndex.Shaders
+  - NetScape.Abstractions.Cache.CacheIndex.SoundEffects
+  - NetScape.Abstractions.Cache.CacheIndex.SpotAnimations
+  - NetScape.Abstractions.Cache.CacheIndex.Sprites
+  - NetScape.Abstractions.Cache.CacheIndex.Structs
+  - NetScape.Abstractions.Cache.CacheIndex.Undefined
+  - NetScape.Abstractions.Cache.CacheIndex.WorldMapAreas
+  - NetScape.Abstractions.Cache.CacheIndex.WorldMapInfo
+  - NetScape.Abstractions.Cache.CacheIndex.WorldMapLabels
+  langs:
+  - csharp
+  - vb
+  name: CacheIndex
+  nameWithType: CacheIndex
+  fullName: NetScape.Abstractions.Cache.CacheIndex
+  type: Enum
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: CacheIndex
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 6
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  summary: "\n"
+  example: []
+  syntax:
+    content: public enum CacheIndex
+    content.vb: Public Enum CacheIndex
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NetScape.Abstractions.Cache.CacheIndex.Undefined
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Undefined
+  id: Undefined
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Undefined
+  nameWithType: CacheIndex.Undefined
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Undefined
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Undefined
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 8
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Undefined = -1
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.AnimationFrames
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.AnimationFrames
+  id: AnimationFrames
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: AnimationFrames
+  nameWithType: CacheIndex.AnimationFrames
+  fullName: NetScape.Abstractions.Cache.CacheIndex.AnimationFrames
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: AnimationFrames
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 9
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: AnimationFrames = 0
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.AnimationFrameBases
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.AnimationFrameBases
+  id: AnimationFrameBases
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: AnimationFrameBases
+  nameWithType: CacheIndex.AnimationFrameBases
+  fullName: NetScape.Abstractions.Cache.CacheIndex.AnimationFrameBases
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: AnimationFrameBases
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 10
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: AnimationFrameBases = 1
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Miscellaneous
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Miscellaneous
+  id: Miscellaneous
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Miscellaneous
+  nameWithType: CacheIndex.Miscellaneous
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Miscellaneous
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Miscellaneous
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 11
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Miscellaneous = 2
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Interfaces
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Interfaces
+  id: Interfaces
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Interfaces
+  nameWithType: CacheIndex.Interfaces
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Interfaces
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Interfaces
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 12
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Interfaces = 3
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeSoundEffects
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeSoundEffects
+  id: EmptyUsedToBeSoundEffects
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: EmptyUsedToBeSoundEffects
+  nameWithType: CacheIndex.EmptyUsedToBeSoundEffects
+  fullName: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeSoundEffects
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EmptyUsedToBeSoundEffects
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 13
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: EmptyUsedToBeSoundEffects = 4
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Maps
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Maps
+  id: Maps
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Maps
+  nameWithType: CacheIndex.Maps
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Maps
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Maps
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 14
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Maps = 5
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeMidis
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeMidis
+  id: EmptyUsedToBeMidis
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: EmptyUsedToBeMidis
+  nameWithType: CacheIndex.EmptyUsedToBeMidis
+  fullName: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeMidis
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EmptyUsedToBeMidis
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 15
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: EmptyUsedToBeMidis = 6
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Models
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Models
+  id: Models
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Models
+  nameWithType: CacheIndex.Models
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Models
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Models
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 16
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Models = 7
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Sprites
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Sprites
+  id: Sprites
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Sprites
+  nameWithType: CacheIndex.Sprites
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Sprites
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Sprites
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 17
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Sprites = 8
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeTextures
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeTextures
+  id: EmptyUsedToBeTextures
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: EmptyUsedToBeTextures
+  nameWithType: CacheIndex.EmptyUsedToBeTextures
+  fullName: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeTextures
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EmptyUsedToBeTextures
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 18
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: EmptyUsedToBeTextures = 9
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.HuffmanEncoding
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.HuffmanEncoding
+  id: HuffmanEncoding
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: HuffmanEncoding
+  nameWithType: CacheIndex.HuffmanEncoding
+  fullName: NetScape.Abstractions.Cache.CacheIndex.HuffmanEncoding
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: HuffmanEncoding
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 19
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: HuffmanEncoding = 10
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeJingles
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeJingles
+  id: EmptyUsedToBeJingles
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: EmptyUsedToBeJingles
+  nameWithType: CacheIndex.EmptyUsedToBeJingles
+  fullName: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeJingles
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EmptyUsedToBeJingles
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 20
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: EmptyUsedToBeJingles = 11
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.ClientScripts
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.ClientScripts
+  id: ClientScripts
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: ClientScripts
+  nameWithType: CacheIndex.ClientScripts
+  fullName: NetScape.Abstractions.Cache.CacheIndex.ClientScripts
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ClientScripts
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 21
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: ClientScripts = 12
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.FontMetrics
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.FontMetrics
+  id: FontMetrics
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: FontMetrics
+  nameWithType: CacheIndex.FontMetrics
+  fullName: NetScape.Abstractions.Cache.CacheIndex.FontMetrics
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: FontMetrics
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 22
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: FontMetrics = 13
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.SoundEffects
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.SoundEffects
+  id: SoundEffects
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: SoundEffects
+  nameWithType: CacheIndex.SoundEffects
+  fullName: NetScape.Abstractions.Cache.CacheIndex.SoundEffects
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SoundEffects
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 23
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: SoundEffects = 14
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown1
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown1
+  id: EmptyUnknown1
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: EmptyUnknown1
+  nameWithType: CacheIndex.EmptyUnknown1
+  fullName: NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown1
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EmptyUnknown1
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 24
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: EmptyUnknown1 = 15
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Locations
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Locations
+  id: Locations
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Locations
+  nameWithType: CacheIndex.Locations
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Locations
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Locations
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 25
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Locations = 16
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Enums
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Enums
+  id: Enums
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Enums
+  nameWithType: CacheIndex.Enums
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Enums
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Enums
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 26
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Enums = 17
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Npcs
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Npcs
+  id: Npcs
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Npcs
+  nameWithType: CacheIndex.Npcs
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Npcs
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Npcs
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 27
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Npcs = 18
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.ItemDefinitions
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.ItemDefinitions
+  id: ItemDefinitions
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: ItemDefinitions
+  nameWithType: CacheIndex.ItemDefinitions
+  fullName: NetScape.Abstractions.Cache.CacheIndex.ItemDefinitions
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ItemDefinitions
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 28
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: ItemDefinitions = 19
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Sequences
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Sequences
+  id: Sequences
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Sequences
+  nameWithType: CacheIndex.Sequences
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Sequences
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Sequences
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 29
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Sequences = 20
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.SpotAnimations
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.SpotAnimations
+  id: SpotAnimations
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: SpotAnimations
+  nameWithType: CacheIndex.SpotAnimations
+  fullName: NetScape.Abstractions.Cache.CacheIndex.SpotAnimations
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SpotAnimations
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 30
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: SpotAnimations = 21
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Structs
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Structs
+  id: Structs
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Structs
+  nameWithType: CacheIndex.Structs
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Structs
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Structs
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 31
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Structs = 22
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.WorldMapInfo
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.WorldMapInfo
+  id: WorldMapInfo
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: WorldMapInfo
+  nameWithType: CacheIndex.WorldMapInfo
+  fullName: NetScape.Abstractions.Cache.CacheIndex.WorldMapInfo
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: WorldMapInfo
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 32
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: WorldMapInfo = 23
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Quickchat
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Quickchat
+  id: Quickchat
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Quickchat
+  nameWithType: CacheIndex.Quickchat
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Quickchat
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Quickchat
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 33
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Quickchat = 24
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.GlobalQuickchat
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.GlobalQuickchat
+  id: GlobalQuickchat
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: GlobalQuickchat
+  nameWithType: CacheIndex.GlobalQuickchat
+  fullName: NetScape.Abstractions.Cache.CacheIndex.GlobalQuickchat
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GlobalQuickchat
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 34
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: GlobalQuickchat = 25
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Materials
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Materials
+  id: Materials
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Materials
+  nameWithType: CacheIndex.Materials
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Materials
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Materials
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 35
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Materials = 26
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Particles
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Particles
+  id: Particles
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Particles
+  nameWithType: CacheIndex.Particles
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Particles
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Particles
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 36
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Particles = 27
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Defaults
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Defaults
+  id: Defaults
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Defaults
+  nameWithType: CacheIndex.Defaults
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Defaults
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Defaults
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 37
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Defaults = 28
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Billboards
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Billboards
+  id: Billboards
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Billboards
+  nameWithType: CacheIndex.Billboards
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Billboards
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Billboards
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 38
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Billboards = 29
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.NativeLibraries
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.NativeLibraries
+  id: NativeLibraries
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: NativeLibraries
+  nameWithType: CacheIndex.NativeLibraries
+  fullName: NetScape.Abstractions.Cache.CacheIndex.NativeLibraries
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: NativeLibraries
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 39
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: NativeLibraries = 30
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Shaders
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Shaders
+  id: Shaders
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Shaders
+  nameWithType: CacheIndex.Shaders
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Shaders
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Shaders
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 40
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Shaders = 31
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.LoadingSprites
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.LoadingSprites
+  id: LoadingSprites
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: LoadingSprites
+  nameWithType: CacheIndex.LoadingSprites
+  fullName: NetScape.Abstractions.Cache.CacheIndex.LoadingSprites
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: LoadingSprites
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 41
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: LoadingSprites = 32
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.LoadingScreens
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.LoadingScreens
+  id: LoadingScreens
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: LoadingScreens
+  nameWithType: CacheIndex.LoadingScreens
+  fullName: NetScape.Abstractions.Cache.CacheIndex.LoadingScreens
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: LoadingScreens
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 42
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: LoadingScreens = 33
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.RawLoadingSprites
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.RawLoadingSprites
+  id: RawLoadingSprites
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: RawLoadingSprites
+  nameWithType: CacheIndex.RawLoadingSprites
+  fullName: NetScape.Abstractions.Cache.CacheIndex.RawLoadingSprites
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: RawLoadingSprites
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 43
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: RawLoadingSprites = 34
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Cutscenes
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Cutscenes
+  id: Cutscenes
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Cutscenes
+  nameWithType: CacheIndex.Cutscenes
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Cutscenes
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Cutscenes
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 44
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Cutscenes = 35
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeVorbisFiles
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeVorbisFiles
+  id: EmptyUsedToBeVorbisFiles
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: EmptyUsedToBeVorbisFiles
+  nameWithType: CacheIndex.EmptyUsedToBeVorbisFiles
+  fullName: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeVorbisFiles
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EmptyUsedToBeVorbisFiles
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 45
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: EmptyUsedToBeVorbisFiles = 36
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeGfxConfigs
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeGfxConfigs
+  id: EmptyUsedToBeGfxConfigs
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: EmptyUsedToBeGfxConfigs
+  nameWithType: CacheIndex.EmptyUsedToBeGfxConfigs
+  fullName: NetScape.Abstractions.Cache.CacheIndex.EmptyUsedToBeGfxConfigs
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EmptyUsedToBeGfxConfigs
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 46
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: EmptyUsedToBeGfxConfigs = 37
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown2
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown2
+  id: EmptyUnknown2
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: EmptyUnknown2
+  nameWithType: CacheIndex.EmptyUnknown2
+  fullName: NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown2
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EmptyUnknown2
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 47
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: EmptyUnknown2 = 38
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown3
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown3
+  id: EmptyUnknown3
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: EmptyUnknown3
+  nameWithType: CacheIndex.EmptyUnknown3
+  fullName: NetScape.Abstractions.Cache.CacheIndex.EmptyUnknown3
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: EmptyUnknown3
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 48
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: EmptyUnknown3 = 39
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.Music
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.Music
+  id: Music
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: Music
+  nameWithType: CacheIndex.Music
+  fullName: NetScape.Abstractions.Cache.CacheIndex.Music
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Music
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 49
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: Music = 40
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.WorldMapAreas
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.WorldMapAreas
+  id: WorldMapAreas
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: WorldMapAreas
+  nameWithType: CacheIndex.WorldMapAreas
+  fullName: NetScape.Abstractions.Cache.CacheIndex.WorldMapAreas
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: WorldMapAreas
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 50
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: WorldMapAreas = 41
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.WorldMapLabels
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.WorldMapLabels
+  id: WorldMapLabels
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: WorldMapLabels
+  nameWithType: CacheIndex.WorldMapLabels
+  fullName: NetScape.Abstractions.Cache.CacheIndex.WorldMapLabels
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: WorldMapLabels
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 51
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: WorldMapLabels = 42
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.PngDiffuseTextures
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.PngDiffuseTextures
+  id: PngDiffuseTextures
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: PngDiffuseTextures
+  nameWithType: CacheIndex.PngDiffuseTextures
+  fullName: NetScape.Abstractions.Cache.CacheIndex.PngDiffuseTextures
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: PngDiffuseTextures
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 52
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: PngDiffuseTextures = 43
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.PngHdrTextures
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.PngHdrTextures
+  id: PngHdrTextures
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: PngHdrTextures
+  nameWithType: CacheIndex.PngHdrTextures
+  fullName: NetScape.Abstractions.Cache.CacheIndex.PngHdrTextures
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: PngHdrTextures
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 53
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: PngHdrTextures = 44
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.DxtDiffuseTextures
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.DxtDiffuseTextures
+  id: DxtDiffuseTextures
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: DxtDiffuseTextures
+  nameWithType: CacheIndex.DxtDiffuseTextures
+  fullName: NetScape.Abstractions.Cache.CacheIndex.DxtDiffuseTextures
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: DxtDiffuseTextures
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 54
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: DxtDiffuseTextures = 45
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.MippedPngHdrTextures
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.MippedPngHdrTextures
+  id: MippedPngHdrTextures
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: MippedPngHdrTextures
+  nameWithType: CacheIndex.MippedPngHdrTextures
+  fullName: NetScape.Abstractions.Cache.CacheIndex.MippedPngHdrTextures
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: MippedPngHdrTextures
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 55
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: MippedPngHdrTextures = 46
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.RuneTek7Models
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.RuneTek7Models
+  id: RuneTek7Models
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: RuneTek7Models
+  nameWithType: CacheIndex.RuneTek7Models
+  fullName: NetScape.Abstractions.Cache.CacheIndex.RuneTek7Models
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: RuneTek7Models
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 56
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: RuneTek7Models = 47
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.RuneTek7Animations
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.RuneTek7Animations
+  id: RuneTek7Animations
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: RuneTek7Animations
+  nameWithType: CacheIndex.RuneTek7Animations
+  fullName: NetScape.Abstractions.Cache.CacheIndex.RuneTek7Animations
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: RuneTek7Animations
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 57
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: RuneTek7Animations = 48
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.DatabaseTableIndex
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.DatabaseTableIndex
+  id: DatabaseTableIndex
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: DatabaseTableIndex
+  nameWithType: CacheIndex.DatabaseTableIndex
+  fullName: NetScape.Abstractions.Cache.CacheIndex.DatabaseTableIndex
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: DatabaseTableIndex
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 58
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: DatabaseTableIndex = 49
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Cache.CacheIndex.ReferenceTables
+  commentId: F:NetScape.Abstractions.Cache.CacheIndex.ReferenceTables
+  id: ReferenceTables
+  parent: NetScape.Abstractions.Cache.CacheIndex
+  langs:
+  - csharp
+  - vb
+  name: ReferenceTables
+  nameWithType: CacheIndex.ReferenceTables
+  fullName: NetScape.Abstractions.Cache.CacheIndex.ReferenceTables
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Cache/CacheIndex.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ReferenceTables
+    path: src/NetScape.Abstractions/Cache/CacheIndex.cs
+    startLine: 59
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Cache
+  syntax:
+    content: ReferenceTables = 255
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NetScape.Abstractions.Cache
+  commentId: N:NetScape.Abstractions.Cache
+  name: NetScape.Abstractions.Cache
+  nameWithType: NetScape.Abstractions.Cache
+  fullName: NetScape.Abstractions.Cache
+- uid: NetScape.Abstractions.Cache.CacheIndex
+  commentId: T:NetScape.Abstractions.Cache.CacheIndex
+  parent: NetScape.Abstractions.Cache
+  name: CacheIndex
+  nameWithType: CacheIndex
+  fullName: NetScape.Abstractions.Cache.CacheIndex

@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.FileSystem.IFileSystem
+  commentId: T:NetScape.Abstractions.FileSystem.IFileSystem
+  id: IFileSystem
+  parent: NetScape.Abstractions.FileSystem
+  children:
+  - NetScape.Abstractions.FileSystem.IFileSystem.BasePath
+  - NetScape.Abstractions.FileSystem.IFileSystem.CachePath
+  langs:
+  - csharp
+  - vb
+  name: IFileSystem
+  nameWithType: IFileSystem
+  fullName: NetScape.Abstractions.FileSystem.IFileSystem
+  type: Interface
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/FileSystem/IFileSystem.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IFileSystem
+    path: src/NetScape.Abstractions/FileSystem/IFileSystem.cs
+    startLine: 2
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.FileSystem
+  syntax:
+    content: public interface IFileSystem
+    content.vb: Public Interface IFileSystem
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: NetScape.Abstractions.FileSystem.IFileSystem.BasePath
+  commentId: P:NetScape.Abstractions.FileSystem.IFileSystem.BasePath
+  id: BasePath
+  parent: NetScape.Abstractions.FileSystem.IFileSystem
+  langs:
+  - csharp
+  - vb
+  name: BasePath
+  nameWithType: IFileSystem.BasePath
+  fullName: NetScape.Abstractions.FileSystem.IFileSystem.BasePath
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/FileSystem/IFileSystem.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: BasePath
+    path: src/NetScape.Abstractions/FileSystem/IFileSystem.cs
+    startLine: 10
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.FileSystem
+  summary: "\nGets the base file system path.\n"
+  example: []
+  syntax:
+    content: string BasePath { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe file system base path.\n"
+    content.vb: ReadOnly Property BasePath As String
+  overload: NetScape.Abstractions.FileSystem.IFileSystem.BasePath*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: NetScape.Abstractions.FileSystem.IFileSystem.CachePath
+  commentId: P:NetScape.Abstractions.FileSystem.IFileSystem.CachePath
+  id: CachePath
+  parent: NetScape.Abstractions.FileSystem.IFileSystem
+  langs:
+  - csharp
+  - vb
+  name: CachePath
+  nameWithType: IFileSystem.CachePath
+  fullName: NetScape.Abstractions.FileSystem.IFileSystem.CachePath
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/FileSystem/IFileSystem.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: CachePath
+    path: src/NetScape.Abstractions/FileSystem/IFileSystem.cs
+    startLine: 18
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.FileSystem
+  summary: "\nGets the cache path.\n"
+  example: []
+  syntax:
+    content: string CachePath { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe cache path.\n"
+    content.vb: ReadOnly Property CachePath As String
+  overload: NetScape.Abstractions.FileSystem.IFileSystem.CachePath*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: NetScape.Abstractions.FileSystem
+  commentId: N:NetScape.Abstractions.FileSystem
+  name: NetScape.Abstractions.FileSystem
+  nameWithType: NetScape.Abstractions.FileSystem
+  fullName: NetScape.Abstractions.FileSystem
+- uid: NetScape.Abstractions.FileSystem.IFileSystem.BasePath*
+  commentId: Overload:NetScape.Abstractions.FileSystem.IFileSystem.BasePath
+  name: BasePath
+  nameWithType: IFileSystem.BasePath
+  fullName: NetScape.Abstractions.FileSystem.IFileSystem.BasePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.FileSystem.IFileSystem.CachePath*
+  commentId: Overload:NetScape.Abstractions.FileSystem.IFileSystem.CachePath
+  name: CachePath
+  nameWithType: IFileSystem.CachePath
+  fullName: NetScape.Abstractions.FileSystem.IFileSystem.CachePath

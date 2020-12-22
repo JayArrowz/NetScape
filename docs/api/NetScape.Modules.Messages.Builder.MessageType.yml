@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Messages.Builder.MessageType
+  commentId: T:NetScape.Modules.Messages.Builder.MessageType
+  id: MessageType
+  parent: NetScape.Modules.Messages.Builder
+  children:
+  - NetScape.Modules.Messages.Builder.MessageType.Byte
+  - NetScape.Modules.Messages.Builder.MessageType.Int
+  - NetScape.Modules.Messages.Builder.MessageType.Long
+  - NetScape.Modules.Messages.Builder.MessageType.Short
+  - NetScape.Modules.Messages.Builder.MessageType.TriByte
+  langs:
+  - csharp
+  - vb
+  name: MessageType
+  nameWithType: MessageType
+  fullName: NetScape.Modules.Messages.Builder.MessageType
+  type: Enum
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/MessageType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: MessageType
+    path: src/NetScape.Modules.Messages.Builder/MessageType.cs
+    startLine: 2
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: public enum MessageType
+    content.vb: Public Enum MessageType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NetScape.Modules.Messages.Builder.MessageType.Byte
+  commentId: F:NetScape.Modules.Messages.Builder.MessageType.Byte
+  id: Byte
+  parent: NetScape.Modules.Messages.Builder.MessageType
+  langs:
+  - csharp
+  - vb
+  name: Byte
+  nameWithType: MessageType.Byte
+  fullName: NetScape.Modules.Messages.Builder.MessageType.Byte
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/MessageType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Byte
+    path: src/NetScape.Modules.Messages.Builder/MessageType.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: Byte = 1
+    return:
+      type: NetScape.Modules.Messages.Builder.MessageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Messages.Builder.MessageType.Short
+  commentId: F:NetScape.Modules.Messages.Builder.MessageType.Short
+  id: Short
+  parent: NetScape.Modules.Messages.Builder.MessageType
+  langs:
+  - csharp
+  - vb
+  name: Short
+  nameWithType: MessageType.Short
+  fullName: NetScape.Modules.Messages.Builder.MessageType.Short
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/MessageType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Short
+    path: src/NetScape.Modules.Messages.Builder/MessageType.cs
+    startLine: 5
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: Short = 2
+    return:
+      type: NetScape.Modules.Messages.Builder.MessageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Messages.Builder.MessageType.TriByte
+  commentId: F:NetScape.Modules.Messages.Builder.MessageType.TriByte
+  id: TriByte
+  parent: NetScape.Modules.Messages.Builder.MessageType
+  langs:
+  - csharp
+  - vb
+  name: TriByte
+  nameWithType: MessageType.TriByte
+  fullName: NetScape.Modules.Messages.Builder.MessageType.TriByte
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/MessageType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: TriByte
+    path: src/NetScape.Modules.Messages.Builder/MessageType.cs
+    startLine: 6
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: TriByte = 3
+    return:
+      type: NetScape.Modules.Messages.Builder.MessageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Messages.Builder.MessageType.Int
+  commentId: F:NetScape.Modules.Messages.Builder.MessageType.Int
+  id: Int
+  parent: NetScape.Modules.Messages.Builder.MessageType
+  langs:
+  - csharp
+  - vb
+  name: Int
+  nameWithType: MessageType.Int
+  fullName: NetScape.Modules.Messages.Builder.MessageType.Int
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/MessageType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Int
+    path: src/NetScape.Modules.Messages.Builder/MessageType.cs
+    startLine: 7
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: Int = 4
+    return:
+      type: NetScape.Modules.Messages.Builder.MessageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Messages.Builder.MessageType.Long
+  commentId: F:NetScape.Modules.Messages.Builder.MessageType.Long
+  id: Long
+  parent: NetScape.Modules.Messages.Builder.MessageType
+  langs:
+  - csharp
+  - vb
+  name: Long
+  nameWithType: MessageType.Long
+  fullName: NetScape.Modules.Messages.Builder.MessageType.Long
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/MessageType.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Long
+    path: src/NetScape.Modules.Messages.Builder/MessageType.cs
+    startLine: 8
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: Long = 8
+    return:
+      type: NetScape.Modules.Messages.Builder.MessageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NetScape.Modules.Messages.Builder
+  commentId: N:NetScape.Modules.Messages.Builder
+  name: NetScape.Modules.Messages.Builder
+  nameWithType: NetScape.Modules.Messages.Builder
+  fullName: NetScape.Modules.Messages.Builder
+- uid: NetScape.Modules.Messages.Builder.MessageType
+  commentId: T:NetScape.Modules.Messages.Builder.MessageType
+  parent: NetScape.Modules.Messages.Builder
+  name: MessageType
+  nameWithType: MessageType
+  fullName: NetScape.Modules.Messages.Builder.MessageType

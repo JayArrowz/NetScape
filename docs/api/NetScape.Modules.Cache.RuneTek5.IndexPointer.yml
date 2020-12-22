@@ -1,0 +1,586 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer
+  commentId: T:NetScape.Modules.Cache.RuneTek5.IndexPointer
+  id: IndexPointer
+  parent: NetScape.Modules.Cache.RuneTek5
+  children:
+  - NetScape.Modules.Cache.RuneTek5.IndexPointer.Decode(System.IO.Stream)
+  - NetScape.Modules.Cache.RuneTek5.IndexPointer.Encode(System.IO.Stream)
+  - NetScape.Modules.Cache.RuneTek5.IndexPointer.Filesize
+  - NetScape.Modules.Cache.RuneTek5.IndexPointer.FirstSectorPosition
+  - NetScape.Modules.Cache.RuneTek5.IndexPointer.Length
+  langs:
+  - csharp
+  - vb
+  name: IndexPointer
+  nameWithType: IndexPointer
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IndexPointer
+    path: src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+    startLine: 11
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nAn <xref href=\"NetScape.Modules.Cache.RuneTek5.IndexPointer\" data-throw-if-not-resolved=\"false\"></xref> points to a file inside a <xref href=\"NetScape.Modules.Cache.RuneTek5.FileStore\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public class IndexPointer
+    content.vb: Public Class IndexPointer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer.Length
+  commentId: F:NetScape.Modules.Cache.RuneTek5.IndexPointer.Length
+  id: Length
+  parent: NetScape.Modules.Cache.RuneTek5.IndexPointer
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: IndexPointer.Length
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer.Length
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Length
+    path: src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+    startLine: 16
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nLength of index data in bytes.\n"
+  example: []
+  syntax:
+    content: public const int Length = 6
+    return:
+      type: System.Int32
+    content.vb: Public Const Length As Integer = 6
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer.FirstSectorPosition
+  commentId: P:NetScape.Modules.Cache.RuneTek5.IndexPointer.FirstSectorPosition
+  id: FirstSectorPosition
+  parent: NetScape.Modules.Cache.RuneTek5.IndexPointer
+  langs:
+  - csharp
+  - vb
+  name: FirstSectorPosition
+  nameWithType: IndexPointer.FirstSectorPosition
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer.FirstSectorPosition
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: FirstSectorPosition
+    path: src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+    startLine: 21
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nThe number of the first sector that contains the file.\n"
+  example: []
+  syntax:
+    content: public int FirstSectorPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property FirstSectorPosition As Integer
+  overload: NetScape.Modules.Cache.RuneTek5.IndexPointer.FirstSectorPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer.Filesize
+  commentId: P:NetScape.Modules.Cache.RuneTek5.IndexPointer.Filesize
+  id: Filesize
+  parent: NetScape.Modules.Cache.RuneTek5.IndexPointer
+  langs:
+  - csharp
+  - vb
+  name: Filesize
+  nameWithType: IndexPointer.Filesize
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer.Filesize
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Filesize
+    path: src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+    startLine: 26
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nThe size of the file in bytes.\n"
+  example: []
+  syntax:
+    content: public int Filesize { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Filesize As Integer
+  overload: NetScape.Modules.Cache.RuneTek5.IndexPointer.Filesize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer.Decode(System.IO.Stream)
+  commentId: M:NetScape.Modules.Cache.RuneTek5.IndexPointer.Decode(System.IO.Stream)
+  id: Decode(System.IO.Stream)
+  parent: NetScape.Modules.Cache.RuneTek5.IndexPointer
+  langs:
+  - csharp
+  - vb
+  name: Decode(Stream)
+  nameWithType: IndexPointer.Decode(Stream)
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer.Decode(System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Decode
+    path: src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+    startLine: 33
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nDecodes an <xref href=\"NetScape.Modules.Cache.RuneTek5.IndexPointer\" data-throw-if-not-resolved=\"false\"></xref> object from the given stream and advances the stream&apos;s position by 6 bytes.\n"
+  example: []
+  syntax:
+    content: public static IndexPointer Decode(Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: ''
+    return:
+      type: NetScape.Modules.Cache.RuneTek5.IndexPointer
+      description: ''
+    content.vb: Public Shared Function Decode(stream As Stream) As IndexPointer
+  overload: NetScape.Modules.Cache.RuneTek5.IndexPointer.Decode*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer.Encode(System.IO.Stream)
+  commentId: M:NetScape.Modules.Cache.RuneTek5.IndexPointer.Encode(System.IO.Stream)
+  id: Encode(System.IO.Stream)
+  parent: NetScape.Modules.Cache.RuneTek5.IndexPointer
+  langs:
+  - csharp
+  - vb
+  name: Encode(Stream)
+  nameWithType: IndexPointer.Encode(Stream)
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer.Encode(System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Encode
+    path: src/NetScape.Modules.Cache/RuneTek5/IndexPointer.cs
+    startLine: 48
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nEncodes the <xref href=\"NetScape.Modules.Cache.RuneTek5.IndexPointer\" data-throw-if-not-resolved=\"false\"></xref> to the given stream, advancing its position by 6 bytes.\n"
+  example: []
+  syntax:
+    content: public void Encode(Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: ''
+    content.vb: Public Sub Encode(stream As Stream)
+  overload: NetScape.Modules.Cache.RuneTek5.IndexPointer.Encode*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer
+  commentId: T:NetScape.Modules.Cache.RuneTek5.IndexPointer
+  parent: NetScape.Modules.Cache.RuneTek5
+  name: IndexPointer
+  nameWithType: IndexPointer
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore
+  commentId: T:NetScape.Modules.Cache.RuneTek5.FileStore
+  name: FileStore
+  nameWithType: FileStore
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore
+- uid: NetScape.Modules.Cache.RuneTek5
+  commentId: N:NetScape.Modules.Cache.RuneTek5
+  name: NetScape.Modules.Cache.RuneTek5
+  nameWithType: NetScape.Modules.Cache.RuneTek5
+  fullName: NetScape.Modules.Cache.RuneTek5
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer.FirstSectorPosition*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.IndexPointer.FirstSectorPosition
+  name: FirstSectorPosition
+  nameWithType: IndexPointer.FirstSectorPosition
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer.FirstSectorPosition
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer.Filesize*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.IndexPointer.Filesize
+  name: Filesize
+  nameWithType: IndexPointer.Filesize
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer.Filesize
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer.Decode*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.IndexPointer.Decode
+  name: Decode
+  nameWithType: IndexPointer.Decode
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer.Decode
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: NetScape.Modules.Cache.RuneTek5.IndexPointer.Encode*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.IndexPointer.Encode
+  name: Encode
+  nameWithType: IndexPointer.Encode
+  fullName: NetScape.Modules.Cache.RuneTek5.IndexPointer.Encode

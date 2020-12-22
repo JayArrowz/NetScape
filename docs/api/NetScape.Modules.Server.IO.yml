@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Server.IO
+  commentId: N:NetScape.Modules.Server.IO
+  id: NetScape.Modules.Server.IO
+  children:
+  - NetScape.Modules.Server.IO.GameServer
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Modules.Server.IO
+  nameWithType: NetScape.Modules.Server.IO
+  fullName: NetScape.Modules.Server.IO
+  type: Namespace
+  assemblies:
+  - NetScape.Modules.Server
+references:
+- uid: NetScape.Modules.Server.IO.GameServer
+  commentId: T:NetScape.Modules.Server.IO.GameServer
+  name: GameServer
+  nameWithType: GameServer
+  fullName: NetScape.Modules.Server.IO.GameServer

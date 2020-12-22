@@ -1,0 +1,1338 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  commentId: T:NetScape.Modules.Cache.FlatFile.FlatFileCache
+  id: FlatFileCache
+  parent: NetScape.Modules.Cache.FlatFile
+  children:
+  - NetScape.Modules.Cache.FlatFile.FlatFileCache.#ctor(Serilog.ILogger)
+  - NetScape.Modules.Cache.FlatFile.FlatFileCache.#ctor(System.String)
+  - NetScape.Modules.Cache.FlatFile.FlatFileCache.BaseDirectory
+  - NetScape.Modules.Cache.FlatFile.FlatFileCache.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+  - NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+  - NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileInfo(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  - NetScape.Modules.Cache.FlatFile.FlatFileCache.GetIndexes
+  - NetScape.Modules.Cache.FlatFile.FlatFileCache.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  - NetScape.Modules.Cache.FlatFile.FlatFileCache.PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+  langs:
+  - csharp
+  - vb
+  name: FlatFileCache
+  nameWithType: FlatFileCache
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: FlatFileCache
+    path: src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+    startLine: 12
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FlatFile
+  syntax:
+    content: 'public class FlatFileCache : CacheBase, IDisposable'
+    content.vb: >-
+      Public Class FlatFileCache
+          Inherits CacheBase
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  - NetScape.Modules.Cache.CacheBase
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - NetScape.Modules.Cache.CacheBase.GetFile``1(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  - NetScape.Modules.Cache.CacheBase.PutFile(NetScape.Abstractions.Cache.CacheFileBase)
+  - NetScape.Modules.Cache.CacheBase.CopyFile(NetScape.Abstractions.Cache.CacheIndex,System.Int32,NetScape.Modules.Cache.CacheBase)
+  - NetScape.Modules.Cache.CacheBase.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.#ctor(Serilog.ILogger)
+  commentId: M:NetScape.Modules.Cache.FlatFile.FlatFileCache.#ctor(Serilog.ILogger)
+  id: '#ctor(Serilog.ILogger)'
+  parent: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  langs:
+  - csharp
+  - vb
+  name: FlatFileCache(ILogger)
+  nameWithType: FlatFileCache.FlatFileCache(ILogger)
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.FlatFileCache(Serilog.ILogger)
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+    startLine: 16
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FlatFile
+  syntax:
+    content: public FlatFileCache(ILogger logger)
+    parameters:
+    - id: logger
+      type: Serilog.ILogger
+    content.vb: Public Sub New(logger As ILogger)
+  overload: NetScape.Modules.Cache.FlatFile.FlatFileCache.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.BaseDirectory
+  commentId: P:NetScape.Modules.Cache.FlatFile.FlatFileCache.BaseDirectory
+  id: BaseDirectory
+  parent: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  langs:
+  - csharp
+  - vb
+  name: BaseDirectory
+  nameWithType: FlatFileCache.BaseDirectory
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.BaseDirectory
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: BaseDirectory
+    path: src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+    startLine: 28
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FlatFile
+  summary: "\nThe base directory where all files will be stored in/retrieved from.\n"
+  example: []
+  syntax:
+    content: public string BaseDirectory { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BaseDirectory As String
+  overload: NetScape.Modules.Cache.FlatFile.FlatFileCache.BaseDirectory*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetIndexes
+  commentId: M:NetScape.Modules.Cache.FlatFile.FlatFileCache.GetIndexes
+  id: GetIndexes
+  parent: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  langs:
+  - csharp
+  - vb
+  name: GetIndexes()
+  nameWithType: FlatFileCache.GetIndexes()
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetIndexes()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetIndexes
+    path: src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+    startLine: 34
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FlatFile
+  syntax:
+    content: public override IEnumerable<CacheIndex> GetIndexes()
+    return:
+      type: System.Collections.Generic.IEnumerable{NetScape.Abstractions.Cache.CacheIndex}
+    content.vb: Public Overrides Function GetIndexes As IEnumerable(Of CacheIndex)
+  overridden: NetScape.Modules.Cache.CacheBase.GetIndexes
+  overload: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetIndexes*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+  commentId: M:NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+  id: GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+  parent: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  langs:
+  - csharp
+  - vb
+  name: GetFileIds(CacheIndex)
+  nameWithType: FlatFileCache.GetFileIds(CacheIndex)
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetFileIds
+    path: src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+    startLine: 52
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FlatFile
+  syntax:
+    content: public override IEnumerable<int> GetFileIds(CacheIndex index)
+    parameters:
+    - id: index
+      type: NetScape.Abstractions.Cache.CacheIndex
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    content.vb: Public Overrides Function GetFileIds(index As CacheIndex) As IEnumerable(Of Integer)
+  overridden: NetScape.Modules.Cache.CacheBase.GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+  overload: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileIds*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileInfo(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  commentId: M:NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileInfo(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  id: GetFileInfo(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  parent: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  langs:
+  - csharp
+  - vb
+  name: GetFileInfo(CacheIndex, Int32)
+  nameWithType: FlatFileCache.GetFileInfo(CacheIndex, Int32)
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileInfo(NetScape.Abstractions.Cache.CacheIndex, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetFileInfo
+    path: src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+    startLine: 68
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FlatFile
+  syntax:
+    content: public override CacheFileInfo GetFileInfo(CacheIndex index, int fileId)
+    parameters:
+    - id: index
+      type: NetScape.Abstractions.Cache.CacheIndex
+    - id: fileId
+      type: System.Int32
+    return:
+      type: NetScape.Abstractions.Cache.CacheFileInfo
+    content.vb: Public Overrides Function GetFileInfo(index As CacheIndex, fileId As Integer) As CacheFileInfo
+  overridden: NetScape.Modules.Cache.CacheBase.GetFileInfo(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  overload: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileInfo*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+  commentId: M:NetScape.Modules.Cache.FlatFile.FlatFileCache.PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+  id: PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+  parent: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  langs:
+  - csharp
+  - vb
+  name: PutFileInfo(CacheFileInfo)
+  nameWithType: FlatFileCache.PutFileInfo(CacheFileInfo)
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: PutFileInfo
+    path: src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+    startLine: 108
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FlatFile
+  syntax:
+    content: protected override void PutFileInfo(CacheFileInfo fileInfo)
+    parameters:
+    - id: fileInfo
+      type: NetScape.Abstractions.Cache.CacheFileInfo
+    content.vb: Protected Overrides Sub PutFileInfo(fileInfo As CacheFileInfo)
+  overridden: NetScape.Modules.Cache.CacheBase.PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+  overload: NetScape.Modules.Cache.FlatFile.FlatFileCache.PutFileInfo*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.#ctor(System.String)
+  commentId: M:NetScape.Modules.Cache.FlatFile.FlatFileCache.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  langs:
+  - csharp
+  - vb
+  name: FlatFileCache(String)
+  nameWithType: FlatFileCache.FlatFileCache(String)
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.FlatFileCache(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+    startLine: 113
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FlatFile
+  syntax:
+    content: public FlatFileCache(string baseDirectory)
+    parameters:
+    - id: baseDirectory
+      type: System.String
+    content.vb: Public Sub New(baseDirectory As String)
+  overload: NetScape.Modules.Cache.FlatFile.FlatFileCache.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+  commentId: M:NetScape.Modules.Cache.FlatFile.FlatFileCache.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+  id: GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+  parent: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  langs:
+  - csharp
+  - vb
+  name: GetBinaryFile(CacheFileInfo)
+  nameWithType: FlatFileCache.GetBinaryFile(CacheFileInfo)
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: GetBinaryFile
+    path: src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+    startLine: 118
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FlatFile
+  syntax:
+    content: protected override BinaryFile GetBinaryFile(CacheFileInfo fileInfo)
+    parameters:
+    - id: fileInfo
+      type: NetScape.Abstractions.Cache.CacheFileInfo
+    return:
+      type: NetScape.Abstractions.Cache.BinaryFile
+    content.vb: Protected Overrides Function GetBinaryFile(fileInfo As CacheFileInfo) As BinaryFile
+  overridden: NetScape.Modules.Cache.CacheBase.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+  overload: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetBinaryFile*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  commentId: M:NetScape.Modules.Cache.FlatFile.FlatFileCache.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  id: PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  parent: NetScape.Modules.Cache.FlatFile.FlatFileCache
+  langs:
+  - csharp
+  - vb
+  name: PutBinaryFile(BinaryFile)
+  nameWithType: FlatFileCache.PutBinaryFile(BinaryFile)
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: PutBinaryFile
+    path: src/NetScape.Modules.Cache/FlatFile/FlatFileCache.cs
+    startLine: 145
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FlatFile
+  syntax:
+    content: protected override void PutBinaryFile(BinaryFile file)
+    parameters:
+    - id: file
+      type: NetScape.Abstractions.Cache.BinaryFile
+    content.vb: Protected Overrides Sub PutBinaryFile(file As BinaryFile)
+  overridden: NetScape.Modules.Cache.CacheBase.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  overload: NetScape.Modules.Cache.FlatFile.FlatFileCache.PutBinaryFile*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: NetScape.Modules.Cache.FlatFile
+  commentId: N:NetScape.Modules.Cache.FlatFile
+  name: NetScape.Modules.Cache.FlatFile
+  nameWithType: NetScape.Modules.Cache.FlatFile
+  fullName: NetScape.Modules.Cache.FlatFile
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NetScape.Modules.Cache.CacheBase
+  commentId: T:NetScape.Modules.Cache.CacheBase
+  parent: NetScape.Modules.Cache
+  name: CacheBase
+  nameWithType: CacheBase
+  fullName: NetScape.Modules.Cache.CacheBase
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: NetScape.Modules.Cache.CacheBase.GetFile``1(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  commentId: M:NetScape.Modules.Cache.CacheBase.GetFile``1(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  parent: NetScape.Modules.Cache.CacheBase
+  isExternal: true
+  name: GetFile<T>(CacheIndex, Int32)
+  nameWithType: CacheBase.GetFile<T>(CacheIndex, Int32)
+  fullName: NetScape.Modules.Cache.CacheBase.GetFile<T>(NetScape.Abstractions.Cache.CacheIndex, System.Int32)
+  nameWithType.vb: CacheBase.GetFile(Of T)(CacheIndex, Int32)
+  fullName.vb: NetScape.Modules.Cache.CacheBase.GetFile(Of T)(NetScape.Abstractions.Cache.CacheIndex, System.Int32)
+  name.vb: GetFile(Of T)(CacheIndex, Int32)
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.CacheBase.GetFile``1(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+    name: GetFile<T>
+    nameWithType: CacheBase.GetFile<T>
+    fullName: NetScape.Modules.Cache.CacheBase.GetFile<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Cache.CacheBase.GetFile``1(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+    name: GetFile(Of T)
+    nameWithType: CacheBase.GetFile(Of T)
+    fullName: NetScape.Modules.Cache.CacheBase.GetFile(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.CacheBase.PutFile(NetScape.Abstractions.Cache.CacheFileBase)
+  commentId: M:NetScape.Modules.Cache.CacheBase.PutFile(NetScape.Abstractions.Cache.CacheFileBase)
+  parent: NetScape.Modules.Cache.CacheBase
+  name: PutFile(CacheFileBase)
+  nameWithType: CacheBase.PutFile(CacheFileBase)
+  fullName: NetScape.Modules.Cache.CacheBase.PutFile(NetScape.Abstractions.Cache.CacheFileBase)
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.CacheBase.PutFile(NetScape.Abstractions.Cache.CacheFileBase)
+    name: PutFile
+    nameWithType: CacheBase.PutFile
+    fullName: NetScape.Modules.Cache.CacheBase.PutFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheFileBase
+    name: CacheFileBase
+    nameWithType: CacheFileBase
+    fullName: NetScape.Abstractions.Cache.CacheFileBase
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Cache.CacheBase.PutFile(NetScape.Abstractions.Cache.CacheFileBase)
+    name: PutFile
+    nameWithType: CacheBase.PutFile
+    fullName: NetScape.Modules.Cache.CacheBase.PutFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheFileBase
+    name: CacheFileBase
+    nameWithType: CacheFileBase
+    fullName: NetScape.Abstractions.Cache.CacheFileBase
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.CacheBase.CopyFile(NetScape.Abstractions.Cache.CacheIndex,System.Int32,NetScape.Modules.Cache.CacheBase)
+  commentId: M:NetScape.Modules.Cache.CacheBase.CopyFile(NetScape.Abstractions.Cache.CacheIndex,System.Int32,NetScape.Modules.Cache.CacheBase)
+  parent: NetScape.Modules.Cache.CacheBase
+  isExternal: true
+  name: CopyFile(CacheIndex, Int32, CacheBase)
+  nameWithType: CacheBase.CopyFile(CacheIndex, Int32, CacheBase)
+  fullName: NetScape.Modules.Cache.CacheBase.CopyFile(NetScape.Abstractions.Cache.CacheIndex, System.Int32, NetScape.Modules.Cache.CacheBase)
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.CacheBase.CopyFile(NetScape.Abstractions.Cache.CacheIndex,System.Int32,NetScape.Modules.Cache.CacheBase)
+    name: CopyFile
+    nameWithType: CacheBase.CopyFile
+    fullName: NetScape.Modules.Cache.CacheBase.CopyFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NetScape.Modules.Cache.CacheBase
+    name: CacheBase
+    nameWithType: CacheBase
+    fullName: NetScape.Modules.Cache.CacheBase
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Cache.CacheBase.CopyFile(NetScape.Abstractions.Cache.CacheIndex,System.Int32,NetScape.Modules.Cache.CacheBase)
+    name: CopyFile
+    nameWithType: CacheBase.CopyFile
+    fullName: NetScape.Modules.Cache.CacheBase.CopyFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NetScape.Modules.Cache.CacheBase
+    name: CacheBase
+    nameWithType: CacheBase
+    fullName: NetScape.Modules.Cache.CacheBase
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.CacheBase.Dispose
+  commentId: M:NetScape.Modules.Cache.CacheBase.Dispose
+  parent: NetScape.Modules.Cache.CacheBase
+  name: Dispose()
+  nameWithType: CacheBase.Dispose()
+  fullName: NetScape.Modules.Cache.CacheBase.Dispose()
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.CacheBase.Dispose
+    name: Dispose
+    nameWithType: CacheBase.Dispose
+    fullName: NetScape.Modules.Cache.CacheBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Cache.CacheBase.Dispose
+    name: Dispose
+    nameWithType: CacheBase.Dispose
+    fullName: NetScape.Modules.Cache.CacheBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Modules.Cache
+  commentId: N:NetScape.Modules.Cache
+  name: NetScape.Modules.Cache
+  nameWithType: NetScape.Modules.Cache
+  fullName: NetScape.Modules.Cache
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.#ctor*
+  commentId: Overload:NetScape.Modules.Cache.FlatFile.FlatFileCache.#ctor
+  name: FlatFileCache
+  nameWithType: FlatFileCache.FlatFileCache
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.FlatFileCache
+- uid: Serilog.ILogger
+  commentId: T:Serilog.ILogger
+  parent: Serilog
+  isExternal: true
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Serilog.ILogger
+- uid: Serilog
+  commentId: N:Serilog
+  isExternal: true
+  name: Serilog
+  nameWithType: Serilog
+  fullName: Serilog
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.BaseDirectory*
+  commentId: Overload:NetScape.Modules.Cache.FlatFile.FlatFileCache.BaseDirectory
+  name: BaseDirectory
+  nameWithType: FlatFileCache.BaseDirectory
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.BaseDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NetScape.Modules.Cache.CacheBase.GetIndexes
+  commentId: M:NetScape.Modules.Cache.CacheBase.GetIndexes
+  parent: NetScape.Modules.Cache.CacheBase
+  name: GetIndexes()
+  nameWithType: CacheBase.GetIndexes()
+  fullName: NetScape.Modules.Cache.CacheBase.GetIndexes()
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.CacheBase.GetIndexes
+    name: GetIndexes
+    nameWithType: CacheBase.GetIndexes
+    fullName: NetScape.Modules.Cache.CacheBase.GetIndexes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Cache.CacheBase.GetIndexes
+    name: GetIndexes
+    nameWithType: CacheBase.GetIndexes
+    fullName: NetScape.Modules.Cache.CacheBase.GetIndexes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetIndexes*
+  commentId: Overload:NetScape.Modules.Cache.FlatFile.FlatFileCache.GetIndexes
+  name: GetIndexes
+  nameWithType: FlatFileCache.GetIndexes
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetIndexes
+- uid: System.Collections.Generic.IEnumerable{NetScape.Abstractions.Cache.CacheIndex}
+  commentId: T:System.Collections.Generic.IEnumerable{NetScape.Abstractions.Cache.CacheIndex}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<CacheIndex>
+  nameWithType: IEnumerable<CacheIndex>
+  fullName: System.Collections.Generic.IEnumerable<NetScape.Abstractions.Cache.CacheIndex>
+  nameWithType.vb: IEnumerable(Of CacheIndex)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of NetScape.Abstractions.Cache.CacheIndex)
+  name.vb: IEnumerable(Of CacheIndex)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: NetScape.Modules.Cache.CacheBase.GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+  commentId: M:NetScape.Modules.Cache.CacheBase.GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+  parent: NetScape.Modules.Cache.CacheBase
+  name: GetFileIds(CacheIndex)
+  nameWithType: CacheBase.GetFileIds(CacheIndex)
+  fullName: NetScape.Modules.Cache.CacheBase.GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.CacheBase.GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+    name: GetFileIds
+    nameWithType: CacheBase.GetFileIds
+    fullName: NetScape.Modules.Cache.CacheBase.GetFileIds
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Cache.CacheBase.GetFileIds(NetScape.Abstractions.Cache.CacheIndex)
+    name: GetFileIds
+    nameWithType: CacheBase.GetFileIds
+    fullName: NetScape.Modules.Cache.CacheBase.GetFileIds
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileIds*
+  commentId: Overload:NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileIds
+  name: GetFileIds
+  nameWithType: FlatFileCache.GetFileIds
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileIds
+- uid: NetScape.Abstractions.Cache.CacheIndex
+  commentId: T:NetScape.Abstractions.Cache.CacheIndex
+  parent: NetScape.Abstractions.Cache
+  name: CacheIndex
+  nameWithType: CacheIndex
+  fullName: NetScape.Abstractions.Cache.CacheIndex
+- uid: System.Collections.Generic.IEnumerable{System.Int32}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Int32>
+  nameWithType: IEnumerable<Int32>
+  fullName: System.Collections.Generic.IEnumerable<System.Int32>
+  nameWithType.vb: IEnumerable(Of Int32)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Int32)
+  name.vb: IEnumerable(Of Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Cache
+  commentId: N:NetScape.Abstractions.Cache
+  name: NetScape.Abstractions.Cache
+  nameWithType: NetScape.Abstractions.Cache
+  fullName: NetScape.Abstractions.Cache
+- uid: NetScape.Modules.Cache.CacheBase.GetFileInfo(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  commentId: M:NetScape.Modules.Cache.CacheBase.GetFileInfo(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  parent: NetScape.Modules.Cache.CacheBase
+  isExternal: true
+  name: GetFileInfo(CacheIndex, Int32)
+  nameWithType: CacheBase.GetFileInfo(CacheIndex, Int32)
+  fullName: NetScape.Modules.Cache.CacheBase.GetFileInfo(NetScape.Abstractions.Cache.CacheIndex, System.Int32)
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.CacheBase.GetFileInfo(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+    name: GetFileInfo
+    nameWithType: CacheBase.GetFileInfo
+    fullName: NetScape.Modules.Cache.CacheBase.GetFileInfo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Cache.CacheBase.GetFileInfo(NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+    name: GetFileInfo
+    nameWithType: CacheBase.GetFileInfo
+    fullName: NetScape.Modules.Cache.CacheBase.GetFileInfo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheIndex
+    name: CacheIndex
+    nameWithType: CacheIndex
+    fullName: NetScape.Abstractions.Cache.CacheIndex
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileInfo*
+  commentId: Overload:NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileInfo
+  name: GetFileInfo
+  nameWithType: FlatFileCache.GetFileInfo
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetFileInfo
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NetScape.Abstractions.Cache.CacheFileInfo
+  commentId: T:NetScape.Abstractions.Cache.CacheFileInfo
+  parent: NetScape.Abstractions.Cache
+  name: CacheFileInfo
+  nameWithType: CacheFileInfo
+  fullName: NetScape.Abstractions.Cache.CacheFileInfo
+- uid: NetScape.Modules.Cache.CacheBase.PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+  commentId: M:NetScape.Modules.Cache.CacheBase.PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+  parent: NetScape.Modules.Cache.CacheBase
+  name: PutFileInfo(CacheFileInfo)
+  nameWithType: CacheBase.PutFileInfo(CacheFileInfo)
+  fullName: NetScape.Modules.Cache.CacheBase.PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.CacheBase.PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+    name: PutFileInfo
+    nameWithType: CacheBase.PutFileInfo
+    fullName: NetScape.Modules.Cache.CacheBase.PutFileInfo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheFileInfo
+    name: CacheFileInfo
+    nameWithType: CacheFileInfo
+    fullName: NetScape.Abstractions.Cache.CacheFileInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Cache.CacheBase.PutFileInfo(NetScape.Abstractions.Cache.CacheFileInfo)
+    name: PutFileInfo
+    nameWithType: CacheBase.PutFileInfo
+    fullName: NetScape.Modules.Cache.CacheBase.PutFileInfo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheFileInfo
+    name: CacheFileInfo
+    nameWithType: CacheFileInfo
+    fullName: NetScape.Abstractions.Cache.CacheFileInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.PutFileInfo*
+  commentId: Overload:NetScape.Modules.Cache.FlatFile.FlatFileCache.PutFileInfo
+  name: PutFileInfo
+  nameWithType: FlatFileCache.PutFileInfo
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.PutFileInfo
+- uid: NetScape.Modules.Cache.CacheBase.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+  commentId: M:NetScape.Modules.Cache.CacheBase.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+  parent: NetScape.Modules.Cache.CacheBase
+  name: GetBinaryFile(CacheFileInfo)
+  nameWithType: CacheBase.GetBinaryFile(CacheFileInfo)
+  fullName: NetScape.Modules.Cache.CacheBase.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.CacheBase.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+    name: GetBinaryFile
+    nameWithType: CacheBase.GetBinaryFile
+    fullName: NetScape.Modules.Cache.CacheBase.GetBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheFileInfo
+    name: CacheFileInfo
+    nameWithType: CacheFileInfo
+    fullName: NetScape.Abstractions.Cache.CacheFileInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Cache.CacheBase.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)
+    name: GetBinaryFile
+    nameWithType: CacheBase.GetBinaryFile
+    fullName: NetScape.Modules.Cache.CacheBase.GetBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.CacheFileInfo
+    name: CacheFileInfo
+    nameWithType: CacheFileInfo
+    fullName: NetScape.Abstractions.Cache.CacheFileInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetBinaryFile*
+  commentId: Overload:NetScape.Modules.Cache.FlatFile.FlatFileCache.GetBinaryFile
+  name: GetBinaryFile
+  nameWithType: FlatFileCache.GetBinaryFile
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.GetBinaryFile
+- uid: NetScape.Abstractions.Cache.BinaryFile
+  commentId: T:NetScape.Abstractions.Cache.BinaryFile
+  parent: NetScape.Abstractions.Cache
+  name: BinaryFile
+  nameWithType: BinaryFile
+  fullName: NetScape.Abstractions.Cache.BinaryFile
+- uid: NetScape.Modules.Cache.CacheBase.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  commentId: M:NetScape.Modules.Cache.CacheBase.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  parent: NetScape.Modules.Cache.CacheBase
+  name: PutBinaryFile(BinaryFile)
+  nameWithType: CacheBase.PutBinaryFile(BinaryFile)
+  fullName: NetScape.Modules.Cache.CacheBase.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+  spec.csharp:
+  - uid: NetScape.Modules.Cache.CacheBase.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+    name: PutBinaryFile
+    nameWithType: CacheBase.PutBinaryFile
+    fullName: NetScape.Modules.Cache.CacheBase.PutBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.BinaryFile
+    name: BinaryFile
+    nameWithType: BinaryFile
+    fullName: NetScape.Abstractions.Cache.BinaryFile
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Modules.Cache.CacheBase.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)
+    name: PutBinaryFile
+    nameWithType: CacheBase.PutBinaryFile
+    fullName: NetScape.Modules.Cache.CacheBase.PutBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NetScape.Abstractions.Cache.BinaryFile
+    name: BinaryFile
+    nameWithType: BinaryFile
+    fullName: NetScape.Abstractions.Cache.BinaryFile
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.FlatFile.FlatFileCache.PutBinaryFile*
+  commentId: Overload:NetScape.Modules.Cache.FlatFile.FlatFileCache.PutBinaryFile
+  name: PutBinaryFile
+  nameWithType: FlatFileCache.PutBinaryFile
+  fullName: NetScape.Modules.Cache.FlatFile.FlatFileCache.PutBinaryFile

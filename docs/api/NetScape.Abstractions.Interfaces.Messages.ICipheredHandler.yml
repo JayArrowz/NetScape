@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.Messages.ICipheredHandler
+  commentId: T:NetScape.Abstractions.Interfaces.Messages.ICipheredHandler
+  id: ICipheredHandler
+  parent: NetScape.Abstractions.Interfaces.Messages
+  children:
+  - NetScape.Abstractions.Interfaces.Messages.ICipheredHandler.Cipher
+  langs:
+  - csharp
+  - vb
+  name: ICipheredHandler
+  nameWithType: ICipheredHandler
+  fullName: NetScape.Abstractions.Interfaces.Messages.ICipheredHandler
+  type: Interface
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Messages/ICipheredHandler.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ICipheredHandler
+    path: src/NetScape.Abstractions/Interfaces/Messages/ICipheredHandler.cs
+    startLine: 7
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Messages
+  summary: "\nA handler which has a cipher <xref href=\"NetScape.Abstractions.Util.IsaacRandom\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public interface ICipheredHandler
+    content.vb: Public Interface ICipheredHandler
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: NetScape.Abstractions.Interfaces.Messages.ICipheredHandler.Cipher
+  commentId: P:NetScape.Abstractions.Interfaces.Messages.ICipheredHandler.Cipher
+  id: Cipher
+  parent: NetScape.Abstractions.Interfaces.Messages.ICipheredHandler
+  langs:
+  - csharp
+  - vb
+  name: Cipher
+  nameWithType: ICipheredHandler.Cipher
+  fullName: NetScape.Abstractions.Interfaces.Messages.ICipheredHandler.Cipher
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Messages/ICipheredHandler.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Cipher
+    path: src/NetScape.Abstractions/Interfaces/Messages/ICipheredHandler.cs
+    startLine: 15
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Messages
+  summary: "\nGets or sets the cipher.\n"
+  example: []
+  syntax:
+    content: IsaacRandom Cipher { get; set; }
+    parameters: []
+    return:
+      type: NetScape.Abstractions.Util.IsaacRandom
+      description: "\nThe cipher.\n"
+    content.vb: Property Cipher As IsaacRandom
+  overload: NetScape.Abstractions.Interfaces.Messages.ICipheredHandler.Cipher*
+  modifiers.csharp:
+  - get
+  - set
+references:
+- uid: NetScape.Abstractions.Util.IsaacRandom
+  commentId: T:NetScape.Abstractions.Util.IsaacRandom
+  parent: NetScape.Abstractions.Util
+  name: IsaacRandom
+  nameWithType: IsaacRandom
+  fullName: NetScape.Abstractions.Util.IsaacRandom
+- uid: NetScape.Abstractions.Interfaces.Messages
+  commentId: N:NetScape.Abstractions.Interfaces.Messages
+  name: NetScape.Abstractions.Interfaces.Messages
+  nameWithType: NetScape.Abstractions.Interfaces.Messages
+  fullName: NetScape.Abstractions.Interfaces.Messages
+- uid: NetScape.Abstractions.Util
+  commentId: N:NetScape.Abstractions.Util
+  name: NetScape.Abstractions.Util
+  nameWithType: NetScape.Abstractions.Util
+  fullName: NetScape.Abstractions.Util
+- uid: NetScape.Abstractions.Interfaces.Messages.ICipheredHandler.Cipher*
+  commentId: Overload:NetScape.Abstractions.Interfaces.Messages.ICipheredHandler.Cipher
+  name: Cipher
+  nameWithType: ICipheredHandler.Cipher
+  fullName: NetScape.Abstractions.Interfaces.Messages.ICipheredHandler.Cipher

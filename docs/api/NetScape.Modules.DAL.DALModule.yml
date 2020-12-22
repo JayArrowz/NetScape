@@ -1,0 +1,630 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.DAL.DALModule
+  commentId: T:NetScape.Modules.DAL.DALModule
+  id: DALModule
+  parent: NetScape.Modules.DAL
+  children:
+  - NetScape.Modules.DAL.DALModule.Load(Autofac.ContainerBuilder)
+  langs:
+  - csharp
+  - vb
+  name: DALModule
+  nameWithType: DALModule
+  fullName: NetScape.Modules.DAL.DALModule
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.DAL/DALModule.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: DALModule
+    path: src/NetScape.Modules.DAL/DALModule.cs
+    startLine: 5
+  assemblies:
+  - NetScape.Modules.DAL
+  namespace: NetScape.Modules.DAL
+  syntax:
+    content: 'public class DALModule : Module, IModule'
+    content.vb: >-
+      Public Class DALModule
+          Inherits
+           Module  Implements IModule
+  inheritance:
+  - System.Object
+  - Autofac.Module
+  implements:
+  - Autofac.Core.IModule
+  inheritedMembers:
+  - Autofac.Module.Configure(Autofac.Core.Registration.IComponentRegistryBuilder)
+  - Autofac.Module.AttachToComponentRegistration(Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Core.IComponentRegistration)
+  - Autofac.Module.AttachToRegistrationSource(Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Core.IRegistrationSource)
+  - Autofac.Module.ThisAssembly
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Modules.DAL.DALModule.Load(Autofac.ContainerBuilder)
+  commentId: M:NetScape.Modules.DAL.DALModule.Load(Autofac.ContainerBuilder)
+  id: Load(Autofac.ContainerBuilder)
+  parent: NetScape.Modules.DAL.DALModule
+  langs:
+  - csharp
+  - vb
+  name: Load(ContainerBuilder)
+  nameWithType: DALModule.Load(ContainerBuilder)
+  fullName: NetScape.Modules.DAL.DALModule.Load(Autofac.ContainerBuilder)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.DAL/DALModule.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Load
+    path: src/NetScape.Modules.DAL/DALModule.cs
+    startLine: 7
+  assemblies:
+  - NetScape.Modules.DAL
+  namespace: NetScape.Modules.DAL
+  syntax:
+    content: protected override void Load(ContainerBuilder builder)
+    parameters:
+    - id: builder
+      type: Autofac.ContainerBuilder
+    content.vb: Protected Overrides Sub Load(builder As ContainerBuilder)
+  overridden: Autofac.Module.Load(Autofac.ContainerBuilder)
+  overload: NetScape.Modules.DAL.DALModule.Load*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: NetScape.Modules.DAL
+  commentId: N:NetScape.Modules.DAL
+  name: NetScape.Modules.DAL
+  nameWithType: NetScape.Modules.DAL
+  fullName: NetScape.Modules.DAL
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Autofac.Module
+  commentId: T:Autofac.Module
+  parent: Autofac
+  isExternal: true
+  name: Module
+  nameWithType: Module
+  fullName: Autofac.Module
+- uid: Autofac.Core.IModule
+  commentId: T:Autofac.Core.IModule
+  parent: Autofac.Core
+  isExternal: true
+  name: IModule
+  nameWithType: IModule
+  fullName: Autofac.Core.IModule
+- uid: Autofac.Module.Configure(Autofac.Core.Registration.IComponentRegistryBuilder)
+  commentId: M:Autofac.Module.Configure(Autofac.Core.Registration.IComponentRegistryBuilder)
+  parent: Autofac.Module
+  isExternal: true
+  name: Configure(IComponentRegistryBuilder)
+  nameWithType: Module.Configure(IComponentRegistryBuilder)
+  fullName: Autofac.Module.Configure(Autofac.Core.Registration.IComponentRegistryBuilder)
+  spec.csharp:
+  - uid: Autofac.Module.Configure(Autofac.Core.Registration.IComponentRegistryBuilder)
+    name: Configure
+    nameWithType: Module.Configure
+    fullName: Autofac.Module.Configure
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Autofac.Core.Registration.IComponentRegistryBuilder
+    name: IComponentRegistryBuilder
+    nameWithType: IComponentRegistryBuilder
+    fullName: Autofac.Core.Registration.IComponentRegistryBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Autofac.Module.Configure(Autofac.Core.Registration.IComponentRegistryBuilder)
+    name: Configure
+    nameWithType: Module.Configure
+    fullName: Autofac.Module.Configure
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Autofac.Core.Registration.IComponentRegistryBuilder
+    name: IComponentRegistryBuilder
+    nameWithType: IComponentRegistryBuilder
+    fullName: Autofac.Core.Registration.IComponentRegistryBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Autofac.Module.AttachToComponentRegistration(Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Core.IComponentRegistration)
+  commentId: M:Autofac.Module.AttachToComponentRegistration(Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Core.IComponentRegistration)
+  parent: Autofac.Module
+  isExternal: true
+  name: AttachToComponentRegistration(IComponentRegistryBuilder, IComponentRegistration)
+  nameWithType: Module.AttachToComponentRegistration(IComponentRegistryBuilder, IComponentRegistration)
+  fullName: Autofac.Module.AttachToComponentRegistration(Autofac.Core.Registration.IComponentRegistryBuilder, Autofac.Core.IComponentRegistration)
+  spec.csharp:
+  - uid: Autofac.Module.AttachToComponentRegistration(Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Core.IComponentRegistration)
+    name: AttachToComponentRegistration
+    nameWithType: Module.AttachToComponentRegistration
+    fullName: Autofac.Module.AttachToComponentRegistration
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Autofac.Core.Registration.IComponentRegistryBuilder
+    name: IComponentRegistryBuilder
+    nameWithType: IComponentRegistryBuilder
+    fullName: Autofac.Core.Registration.IComponentRegistryBuilder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Autofac.Core.IComponentRegistration
+    name: IComponentRegistration
+    nameWithType: IComponentRegistration
+    fullName: Autofac.Core.IComponentRegistration
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Autofac.Module.AttachToComponentRegistration(Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Core.IComponentRegistration)
+    name: AttachToComponentRegistration
+    nameWithType: Module.AttachToComponentRegistration
+    fullName: Autofac.Module.AttachToComponentRegistration
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Autofac.Core.Registration.IComponentRegistryBuilder
+    name: IComponentRegistryBuilder
+    nameWithType: IComponentRegistryBuilder
+    fullName: Autofac.Core.Registration.IComponentRegistryBuilder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Autofac.Core.IComponentRegistration
+    name: IComponentRegistration
+    nameWithType: IComponentRegistration
+    fullName: Autofac.Core.IComponentRegistration
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Autofac.Module.AttachToRegistrationSource(Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Core.IRegistrationSource)
+  commentId: M:Autofac.Module.AttachToRegistrationSource(Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Core.IRegistrationSource)
+  parent: Autofac.Module
+  isExternal: true
+  name: AttachToRegistrationSource(IComponentRegistryBuilder, IRegistrationSource)
+  nameWithType: Module.AttachToRegistrationSource(IComponentRegistryBuilder, IRegistrationSource)
+  fullName: Autofac.Module.AttachToRegistrationSource(Autofac.Core.Registration.IComponentRegistryBuilder, Autofac.Core.IRegistrationSource)
+  spec.csharp:
+  - uid: Autofac.Module.AttachToRegistrationSource(Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Core.IRegistrationSource)
+    name: AttachToRegistrationSource
+    nameWithType: Module.AttachToRegistrationSource
+    fullName: Autofac.Module.AttachToRegistrationSource
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Autofac.Core.Registration.IComponentRegistryBuilder
+    name: IComponentRegistryBuilder
+    nameWithType: IComponentRegistryBuilder
+    fullName: Autofac.Core.Registration.IComponentRegistryBuilder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Autofac.Core.IRegistrationSource
+    name: IRegistrationSource
+    nameWithType: IRegistrationSource
+    fullName: Autofac.Core.IRegistrationSource
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Autofac.Module.AttachToRegistrationSource(Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Core.IRegistrationSource)
+    name: AttachToRegistrationSource
+    nameWithType: Module.AttachToRegistrationSource
+    fullName: Autofac.Module.AttachToRegistrationSource
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Autofac.Core.Registration.IComponentRegistryBuilder
+    name: IComponentRegistryBuilder
+    nameWithType: IComponentRegistryBuilder
+    fullName: Autofac.Core.Registration.IComponentRegistryBuilder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Autofac.Core.IRegistrationSource
+    name: IRegistrationSource
+    nameWithType: IRegistrationSource
+    fullName: Autofac.Core.IRegistrationSource
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Autofac.Module.ThisAssembly
+  commentId: P:Autofac.Module.ThisAssembly
+  parent: Autofac.Module
+  isExternal: true
+  name: ThisAssembly
+  nameWithType: Module.ThisAssembly
+  fullName: Autofac.Module.ThisAssembly
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Autofac
+  commentId: N:Autofac
+  isExternal: true
+  name: Autofac
+  nameWithType: Autofac
+  fullName: Autofac
+- uid: Autofac.Core
+  commentId: N:Autofac.Core
+  isExternal: true
+  name: Autofac.Core
+  nameWithType: Autofac.Core
+  fullName: Autofac.Core
+- uid: Autofac.Module.Load(Autofac.ContainerBuilder)
+  commentId: M:Autofac.Module.Load(Autofac.ContainerBuilder)
+  parent: Autofac.Module
+  isExternal: true
+  name: Load(ContainerBuilder)
+  nameWithType: Module.Load(ContainerBuilder)
+  fullName: Autofac.Module.Load(Autofac.ContainerBuilder)
+  spec.csharp:
+  - uid: Autofac.Module.Load(Autofac.ContainerBuilder)
+    name: Load
+    nameWithType: Module.Load
+    fullName: Autofac.Module.Load
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Autofac.ContainerBuilder
+    name: ContainerBuilder
+    nameWithType: ContainerBuilder
+    fullName: Autofac.ContainerBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Autofac.Module.Load(Autofac.ContainerBuilder)
+    name: Load
+    nameWithType: Module.Load
+    fullName: Autofac.Module.Load
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Autofac.ContainerBuilder
+    name: ContainerBuilder
+    nameWithType: ContainerBuilder
+    fullName: Autofac.ContainerBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.DAL.DALModule.Load*
+  commentId: Overload:NetScape.Modules.DAL.DALModule.Load
+  name: Load
+  nameWithType: DALModule.Load
+  fullName: NetScape.Modules.DAL.DALModule.Load
+- uid: Autofac.ContainerBuilder
+  commentId: T:Autofac.ContainerBuilder
+  parent: Autofac
+  isExternal: true
+  name: ContainerBuilder
+  nameWithType: ContainerBuilder
+  fullName: Autofac.ContainerBuilder

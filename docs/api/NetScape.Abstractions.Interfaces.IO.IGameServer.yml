@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.IO.IGameServer
+  commentId: T:NetScape.Abstractions.Interfaces.IO.IGameServer
+  id: IGameServer
+  parent: NetScape.Abstractions.Interfaces.IO
+  children:
+  - NetScape.Abstractions.Interfaces.IO.IGameServer.BindAsync
+  - NetScape.Abstractions.Interfaces.IO.IGameServer.Channel
+  langs:
+  - csharp
+  - vb
+  name: IGameServer
+  nameWithType: IGameServer
+  fullName: NetScape.Abstractions.Interfaces.IO.IGameServer
+  type: Interface
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/IGameServer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IGameServer
+    path: src/NetScape.Abstractions/Interfaces/IO/IGameServer.cs
+    startLine: 6
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO
+  syntax:
+    content: 'public interface IGameServer : IAsyncDisposable'
+    content.vb: >-
+      Public Interface IGameServer
+          Inherits IAsyncDisposable
+  inheritedMembers:
+  - System.IAsyncDisposable.DisposeAsync
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: NetScape.Abstractions.Interfaces.IO.IGameServer.Channel
+  commentId: P:NetScape.Abstractions.Interfaces.IO.IGameServer.Channel
+  id: Channel
+  parent: NetScape.Abstractions.Interfaces.IO.IGameServer
+  langs:
+  - csharp
+  - vb
+  name: Channel
+  nameWithType: IGameServer.Channel
+  fullName: NetScape.Abstractions.Interfaces.IO.IGameServer.Channel
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/IGameServer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Channel
+    path: src/NetScape.Abstractions/Interfaces/IO/IGameServer.cs
+    startLine: 11
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO
+  summary: "\nThe Server Channel\n"
+  example: []
+  syntax:
+    content: IChannel Channel { get; set; }
+    parameters: []
+    return:
+      type: DotNetty.Transport.Channels.IChannel
+    content.vb: Property Channel As IChannel
+  overload: NetScape.Abstractions.Interfaces.IO.IGameServer.Channel*
+  modifiers.csharp:
+  - get
+  - set
+- uid: NetScape.Abstractions.Interfaces.IO.IGameServer.BindAsync
+  commentId: M:NetScape.Abstractions.Interfaces.IO.IGameServer.BindAsync
+  id: BindAsync
+  parent: NetScape.Abstractions.Interfaces.IO.IGameServer
+  langs:
+  - csharp
+  - vb
+  name: BindAsync()
+  nameWithType: IGameServer.BindAsync()
+  fullName: NetScape.Abstractions.Interfaces.IO.IGameServer.BindAsync()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/IGameServer.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: BindAsync
+    path: src/NetScape.Abstractions/Interfaces/IO/IGameServer.cs
+    startLine: 16
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO
+  summary: "\nBinds the game server\n"
+  example: []
+  syntax:
+    content: Task BindAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function BindAsync As Task
+  overload: NetScape.Abstractions.Interfaces.IO.IGameServer.BindAsync*
+references:
+- uid: NetScape.Abstractions.Interfaces.IO
+  commentId: N:NetScape.Abstractions.Interfaces.IO
+  name: NetScape.Abstractions.Interfaces.IO
+  nameWithType: NetScape.Abstractions.Interfaces.IO
+  fullName: NetScape.Abstractions.Interfaces.IO
+- uid: System.IAsyncDisposable.DisposeAsync
+  commentId: M:System.IAsyncDisposable.DisposeAsync
+  parent: System.IAsyncDisposable
+  isExternal: true
+  name: DisposeAsync()
+  nameWithType: IAsyncDisposable.DisposeAsync()
+  fullName: System.IAsyncDisposable.DisposeAsync()
+  spec.csharp:
+  - uid: System.IAsyncDisposable.DisposeAsync
+    name: DisposeAsync
+    nameWithType: IAsyncDisposable.DisposeAsync
+    fullName: System.IAsyncDisposable.DisposeAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IAsyncDisposable.DisposeAsync
+    name: DisposeAsync
+    nameWithType: IAsyncDisposable.DisposeAsync
+    fullName: System.IAsyncDisposable.DisposeAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IAsyncDisposable
+  commentId: T:System.IAsyncDisposable
+  parent: System
+  isExternal: true
+  name: IAsyncDisposable
+  nameWithType: IAsyncDisposable
+  fullName: System.IAsyncDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Interfaces.IO.IGameServer.Channel*
+  commentId: Overload:NetScape.Abstractions.Interfaces.IO.IGameServer.Channel
+  name: Channel
+  nameWithType: IGameServer.Channel
+  fullName: NetScape.Abstractions.Interfaces.IO.IGameServer.Channel
+- uid: DotNetty.Transport.Channels.IChannel
+  commentId: T:DotNetty.Transport.Channels.IChannel
+  parent: DotNetty.Transport.Channels
+  isExternal: true
+  name: IChannel
+  nameWithType: IChannel
+  fullName: DotNetty.Transport.Channels.IChannel
+- uid: DotNetty.Transport.Channels
+  commentId: N:DotNetty.Transport.Channels
+  isExternal: true
+  name: DotNetty.Transport.Channels
+  nameWithType: DotNetty.Transport.Channels
+  fullName: DotNetty.Transport.Channels
+- uid: NetScape.Abstractions.Interfaces.IO.IGameServer.BindAsync*
+  commentId: Overload:NetScape.Abstractions.Interfaces.IO.IGameServer.BindAsync
+  name: BindAsync
+  nameWithType: IGameServer.BindAsync
+  fullName: NetScape.Abstractions.Interfaces.IO.IGameServer.BindAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

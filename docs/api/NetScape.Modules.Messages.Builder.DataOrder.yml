@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Messages.Builder.DataOrder
+  commentId: T:NetScape.Modules.Messages.Builder.DataOrder
+  id: DataOrder
+  parent: NetScape.Modules.Messages.Builder
+  children:
+  - NetScape.Modules.Messages.Builder.DataOrder.Big
+  - NetScape.Modules.Messages.Builder.DataOrder.InversedMiddle
+  - NetScape.Modules.Messages.Builder.DataOrder.Little
+  - NetScape.Modules.Messages.Builder.DataOrder.Middle
+  langs:
+  - csharp
+  - vb
+  name: DataOrder
+  nameWithType: DataOrder
+  fullName: NetScape.Modules.Messages.Builder.DataOrder
+  type: Enum
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/DataOrder.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: DataOrder
+    path: src/NetScape.Modules.Messages.Builder/DataOrder.cs
+    startLine: 2
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: public enum DataOrder
+    content.vb: Public Enum DataOrder
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NetScape.Modules.Messages.Builder.DataOrder.Big
+  commentId: F:NetScape.Modules.Messages.Builder.DataOrder.Big
+  id: Big
+  parent: NetScape.Modules.Messages.Builder.DataOrder
+  langs:
+  - csharp
+  - vb
+  name: Big
+  nameWithType: DataOrder.Big
+  fullName: NetScape.Modules.Messages.Builder.DataOrder.Big
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/DataOrder.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Big
+    path: src/NetScape.Modules.Messages.Builder/DataOrder.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: Big = 0
+    return:
+      type: NetScape.Modules.Messages.Builder.DataOrder
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Messages.Builder.DataOrder.Little
+  commentId: F:NetScape.Modules.Messages.Builder.DataOrder.Little
+  id: Little
+  parent: NetScape.Modules.Messages.Builder.DataOrder
+  langs:
+  - csharp
+  - vb
+  name: Little
+  nameWithType: DataOrder.Little
+  fullName: NetScape.Modules.Messages.Builder.DataOrder.Little
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/DataOrder.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Little
+    path: src/NetScape.Modules.Messages.Builder/DataOrder.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: Little = 1
+    return:
+      type: NetScape.Modules.Messages.Builder.DataOrder
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Messages.Builder.DataOrder.Middle
+  commentId: F:NetScape.Modules.Messages.Builder.DataOrder.Middle
+  id: Middle
+  parent: NetScape.Modules.Messages.Builder.DataOrder
+  langs:
+  - csharp
+  - vb
+  name: Middle
+  nameWithType: DataOrder.Middle
+  fullName: NetScape.Modules.Messages.Builder.DataOrder.Middle
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/DataOrder.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Middle
+    path: src/NetScape.Modules.Messages.Builder/DataOrder.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: Middle = 2
+    return:
+      type: NetScape.Modules.Messages.Builder.DataOrder
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Messages.Builder.DataOrder.InversedMiddle
+  commentId: F:NetScape.Modules.Messages.Builder.DataOrder.InversedMiddle
+  id: InversedMiddle
+  parent: NetScape.Modules.Messages.Builder.DataOrder
+  langs:
+  - csharp
+  - vb
+  name: InversedMiddle
+  nameWithType: DataOrder.InversedMiddle
+  fullName: NetScape.Modules.Messages.Builder.DataOrder.InversedMiddle
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Builder/DataOrder.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: InversedMiddle
+    path: src/NetScape.Modules.Messages.Builder/DataOrder.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Modules.Messages.Builder
+  namespace: NetScape.Modules.Messages.Builder
+  syntax:
+    content: InversedMiddle = 3
+    return:
+      type: NetScape.Modules.Messages.Builder.DataOrder
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NetScape.Modules.Messages.Builder
+  commentId: N:NetScape.Modules.Messages.Builder
+  name: NetScape.Modules.Messages.Builder
+  nameWithType: NetScape.Modules.Messages.Builder
+  fullName: NetScape.Modules.Messages.Builder
+- uid: NetScape.Modules.Messages.Builder.DataOrder
+  commentId: T:NetScape.Modules.Messages.Builder.DataOrder
+  parent: NetScape.Modules.Messages.Builder
+  name: DataOrder
+  nameWithType: DataOrder
+  fullName: NetScape.Modules.Messages.Builder.DataOrder

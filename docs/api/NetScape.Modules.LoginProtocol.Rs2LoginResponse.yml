@@ -1,0 +1,477 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.LoginProtocol.Rs2LoginResponse
+  commentId: T:NetScape.Modules.LoginProtocol.Rs2LoginResponse
+  id: Rs2LoginResponse
+  parent: NetScape.Modules.LoginProtocol
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: Rs2LoginResponse
+  nameWithType: Rs2LoginResponse
+  fullName: NetScape.Modules.LoginProtocol.Rs2LoginResponse
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/Rs2LoginResponse.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Rs2LoginResponse
+    path: src/NetScape.Modules.LoginProtocol/Rs2LoginResponse.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: 'public class Rs2LoginResponse : LoginResponse<LoginStatus>'
+    content.vb: >-
+      Public Class Rs2LoginResponse
+          Inherits LoginResponse(Of LoginStatus)
+  inheritance:
+  - System.Object
+  - NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}
+  inheritedMembers:
+  - NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}.Flagged
+  - NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}.Rights
+  - NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}.Status
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: NetScape.Modules.LoginProtocol
+  commentId: N:NetScape.Modules.LoginProtocol
+  name: NetScape.Modules.LoginProtocol
+  nameWithType: NetScape.Modules.LoginProtocol
+  fullName: NetScape.Modules.LoginProtocol
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}
+  commentId: T:NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}
+  parent: NetScape.Abstractions.Model.Login
+  definition: NetScape.Abstractions.Model.Login.LoginResponse`1
+  name: LoginResponse<LoginStatus>
+  nameWithType: LoginResponse<LoginStatus>
+  fullName: NetScape.Abstractions.Model.Login.LoginResponse<NetScape.Modules.LoginProtocol.LoginStatus>
+  nameWithType.vb: LoginResponse(Of LoginStatus)
+  fullName.vb: NetScape.Abstractions.Model.Login.LoginResponse(Of NetScape.Modules.LoginProtocol.LoginStatus)
+  name.vb: LoginResponse(Of LoginStatus)
+  spec.csharp:
+  - uid: NetScape.Abstractions.Model.Login.LoginResponse`1
+    name: LoginResponse
+    nameWithType: LoginResponse
+    fullName: NetScape.Abstractions.Model.Login.LoginResponse
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NetScape.Modules.LoginProtocol.LoginStatus
+    name: LoginStatus
+    nameWithType: LoginStatus
+    fullName: NetScape.Modules.LoginProtocol.LoginStatus
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NetScape.Abstractions.Model.Login.LoginResponse`1
+    name: LoginResponse
+    nameWithType: LoginResponse
+    fullName: NetScape.Abstractions.Model.Login.LoginResponse
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NetScape.Modules.LoginProtocol.LoginStatus
+    name: LoginStatus
+    nameWithType: LoginStatus
+    fullName: NetScape.Modules.LoginProtocol.LoginStatus
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}.Flagged
+  commentId: P:NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}.Flagged
+  parent: NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}
+  definition: NetScape.Abstractions.Model.Login.LoginResponse`1.Flagged
+  name: Flagged
+  nameWithType: LoginResponse<LoginStatus>.Flagged
+  fullName: NetScape.Abstractions.Model.Login.LoginResponse<NetScape.Modules.LoginProtocol.LoginStatus>.Flagged
+  nameWithType.vb: LoginResponse(Of LoginStatus).Flagged
+  fullName.vb: NetScape.Abstractions.Model.Login.LoginResponse(Of NetScape.Modules.LoginProtocol.LoginStatus).Flagged
+- uid: NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}.Rights
+  commentId: P:NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}.Rights
+  parent: NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}
+  definition: NetScape.Abstractions.Model.Login.LoginResponse`1.Rights
+  name: Rights
+  nameWithType: LoginResponse<LoginStatus>.Rights
+  fullName: NetScape.Abstractions.Model.Login.LoginResponse<NetScape.Modules.LoginProtocol.LoginStatus>.Rights
+  nameWithType.vb: LoginResponse(Of LoginStatus).Rights
+  fullName.vb: NetScape.Abstractions.Model.Login.LoginResponse(Of NetScape.Modules.LoginProtocol.LoginStatus).Rights
+- uid: NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}.Status
+  commentId: P:NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}.Status
+  parent: NetScape.Abstractions.Model.Login.LoginResponse{NetScape.Modules.LoginProtocol.LoginStatus}
+  definition: NetScape.Abstractions.Model.Login.LoginResponse`1.Status
+  name: Status
+  nameWithType: LoginResponse<LoginStatus>.Status
+  fullName: NetScape.Abstractions.Model.Login.LoginResponse<NetScape.Modules.LoginProtocol.LoginStatus>.Status
+  nameWithType.vb: LoginResponse(Of LoginStatus).Status
+  fullName.vb: NetScape.Abstractions.Model.Login.LoginResponse(Of NetScape.Modules.LoginProtocol.LoginStatus).Status
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Model.Login.LoginResponse`1
+  commentId: T:NetScape.Abstractions.Model.Login.LoginResponse`1
+  name: LoginResponse<TStatus>
+  nameWithType: LoginResponse<TStatus>
+  fullName: NetScape.Abstractions.Model.Login.LoginResponse<TStatus>
+  nameWithType.vb: LoginResponse(Of TStatus)
+  fullName.vb: NetScape.Abstractions.Model.Login.LoginResponse(Of TStatus)
+  name.vb: LoginResponse(Of TStatus)
+  spec.csharp:
+  - uid: NetScape.Abstractions.Model.Login.LoginResponse`1
+    name: LoginResponse
+    nameWithType: LoginResponse
+    fullName: NetScape.Abstractions.Model.Login.LoginResponse
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TStatus
+    nameWithType: TStatus
+    fullName: TStatus
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NetScape.Abstractions.Model.Login.LoginResponse`1
+    name: LoginResponse
+    nameWithType: LoginResponse
+    fullName: NetScape.Abstractions.Model.Login.LoginResponse
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TStatus
+    nameWithType: TStatus
+    fullName: TStatus
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Model.Login
+  commentId: N:NetScape.Abstractions.Model.Login
+  name: NetScape.Abstractions.Model.Login
+  nameWithType: NetScape.Abstractions.Model.Login
+  fullName: NetScape.Abstractions.Model.Login
+- uid: NetScape.Abstractions.Model.Login.LoginResponse`1.Flagged
+  commentId: P:NetScape.Abstractions.Model.Login.LoginResponse`1.Flagged
+  name: Flagged
+  nameWithType: LoginResponse<TStatus>.Flagged
+  fullName: NetScape.Abstractions.Model.Login.LoginResponse<TStatus>.Flagged
+  nameWithType.vb: LoginResponse(Of TStatus).Flagged
+  fullName.vb: NetScape.Abstractions.Model.Login.LoginResponse(Of TStatus).Flagged
+- uid: NetScape.Abstractions.Model.Login.LoginResponse`1.Rights
+  commentId: P:NetScape.Abstractions.Model.Login.LoginResponse`1.Rights
+  name: Rights
+  nameWithType: LoginResponse<TStatus>.Rights
+  fullName: NetScape.Abstractions.Model.Login.LoginResponse<TStatus>.Rights
+  nameWithType.vb: LoginResponse(Of TStatus).Rights
+  fullName.vb: NetScape.Abstractions.Model.Login.LoginResponse(Of TStatus).Rights
+- uid: NetScape.Abstractions.Model.Login.LoginResponse`1.Status
+  commentId: P:NetScape.Abstractions.Model.Login.LoginResponse`1.Status
+  name: Status
+  nameWithType: LoginResponse<TStatus>.Status
+  fullName: NetScape.Abstractions.Model.Login.LoginResponse<TStatus>.Status
+  nameWithType.vb: LoginResponse(Of TStatus).Status
+  fullName.vb: NetScape.Abstractions.Model.Login.LoginResponse(Of TStatus).Status

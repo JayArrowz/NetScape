@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  commentId: T:NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  id: Direction.InnerDirectionValue
+  parent: NetScape.Abstractions.Model
+  children:
+  - NetScape.Abstractions.Model.Direction.InnerDirectionValue.East
+  - NetScape.Abstractions.Model.Direction.InnerDirectionValue.None
+  - NetScape.Abstractions.Model.Direction.InnerDirectionValue.North
+  - NetScape.Abstractions.Model.Direction.InnerDirectionValue.NorthEast
+  - NetScape.Abstractions.Model.Direction.InnerDirectionValue.NorthWest
+  - NetScape.Abstractions.Model.Direction.InnerDirectionValue.South
+  - NetScape.Abstractions.Model.Direction.InnerDirectionValue.SouthEast
+  - NetScape.Abstractions.Model.Direction.InnerDirectionValue.SouthWest
+  - NetScape.Abstractions.Model.Direction.InnerDirectionValue.West
+  langs:
+  - csharp
+  - vb
+  name: Direction.InnerDirectionValue
+  nameWithType: Direction.InnerDirectionValue
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  type: Enum
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Direction.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: InnerDirectionValue
+    path: src/NetScape.Abstractions/Model/Direction.cs
+    startLine: 31
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model
+  syntax:
+    content: public enum InnerDirectionValue
+    content.vb: Public Enum InnerDirectionValue
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue.None
+  commentId: F:NetScape.Abstractions.Model.Direction.InnerDirectionValue.None
+  id: None
+  parent: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Direction.InnerDirectionValue.None
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue.None
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Direction.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: None
+    path: src/NetScape.Abstractions/Model/Direction.cs
+    startLine: 33
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model
+  syntax:
+    content: None = 0
+    return:
+      type: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue.NorthWest
+  commentId: F:NetScape.Abstractions.Model.Direction.InnerDirectionValue.NorthWest
+  id: NorthWest
+  parent: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  langs:
+  - csharp
+  - vb
+  name: NorthWest
+  nameWithType: Direction.InnerDirectionValue.NorthWest
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue.NorthWest
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Direction.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: NorthWest
+    path: src/NetScape.Abstractions/Model/Direction.cs
+    startLine: 34
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model
+  syntax:
+    content: NorthWest = 1
+    return:
+      type: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue.North
+  commentId: F:NetScape.Abstractions.Model.Direction.InnerDirectionValue.North
+  id: North
+  parent: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  langs:
+  - csharp
+  - vb
+  name: North
+  nameWithType: Direction.InnerDirectionValue.North
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue.North
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Direction.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: North
+    path: src/NetScape.Abstractions/Model/Direction.cs
+    startLine: 35
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model
+  syntax:
+    content: North = 2
+    return:
+      type: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue.NorthEast
+  commentId: F:NetScape.Abstractions.Model.Direction.InnerDirectionValue.NorthEast
+  id: NorthEast
+  parent: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  langs:
+  - csharp
+  - vb
+  name: NorthEast
+  nameWithType: Direction.InnerDirectionValue.NorthEast
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue.NorthEast
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Direction.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: NorthEast
+    path: src/NetScape.Abstractions/Model/Direction.cs
+    startLine: 36
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model
+  syntax:
+    content: NorthEast = 3
+    return:
+      type: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue.West
+  commentId: F:NetScape.Abstractions.Model.Direction.InnerDirectionValue.West
+  id: West
+  parent: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  langs:
+  - csharp
+  - vb
+  name: West
+  nameWithType: Direction.InnerDirectionValue.West
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue.West
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Direction.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: West
+    path: src/NetScape.Abstractions/Model/Direction.cs
+    startLine: 37
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model
+  syntax:
+    content: West = 4
+    return:
+      type: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue.East
+  commentId: F:NetScape.Abstractions.Model.Direction.InnerDirectionValue.East
+  id: East
+  parent: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  langs:
+  - csharp
+  - vb
+  name: East
+  nameWithType: Direction.InnerDirectionValue.East
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue.East
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Direction.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: East
+    path: src/NetScape.Abstractions/Model/Direction.cs
+    startLine: 38
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model
+  syntax:
+    content: East = 5
+    return:
+      type: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue.SouthWest
+  commentId: F:NetScape.Abstractions.Model.Direction.InnerDirectionValue.SouthWest
+  id: SouthWest
+  parent: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  langs:
+  - csharp
+  - vb
+  name: SouthWest
+  nameWithType: Direction.InnerDirectionValue.SouthWest
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue.SouthWest
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Direction.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SouthWest
+    path: src/NetScape.Abstractions/Model/Direction.cs
+    startLine: 39
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model
+  syntax:
+    content: SouthWest = 6
+    return:
+      type: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue.South
+  commentId: F:NetScape.Abstractions.Model.Direction.InnerDirectionValue.South
+  id: South
+  parent: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  langs:
+  - csharp
+  - vb
+  name: South
+  nameWithType: Direction.InnerDirectionValue.South
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue.South
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Direction.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: South
+    path: src/NetScape.Abstractions/Model/Direction.cs
+    startLine: 40
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model
+  syntax:
+    content: South = 7
+    return:
+      type: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue.SouthEast
+  commentId: F:NetScape.Abstractions.Model.Direction.InnerDirectionValue.SouthEast
+  id: SouthEast
+  parent: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  langs:
+  - csharp
+  - vb
+  name: SouthEast
+  nameWithType: Direction.InnerDirectionValue.SouthEast
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue.SouthEast
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Model/Direction.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: SouthEast
+    path: src/NetScape.Abstractions/Model/Direction.cs
+    startLine: 41
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Model
+  syntax:
+    content: SouthEast = 8
+    return:
+      type: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NetScape.Abstractions.Model
+  commentId: N:NetScape.Abstractions.Model
+  name: NetScape.Abstractions.Model
+  nameWithType: NetScape.Abstractions.Model
+  fullName: NetScape.Abstractions.Model
+- uid: NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  commentId: T:NetScape.Abstractions.Model.Direction.InnerDirectionValue
+  parent: NetScape.Abstractions.Model
+  name: Direction.InnerDirectionValue
+  nameWithType: Direction.InnerDirectionValue
+  fullName: NetScape.Abstractions.Model.Direction.InnerDirectionValue

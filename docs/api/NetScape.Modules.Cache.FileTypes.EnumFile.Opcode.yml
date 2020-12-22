@@ -1,0 +1,409 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  commentId: T:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  id: EnumFile.Opcode
+  parent: NetScape.Modules.Cache.FileTypes
+  children:
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.ByteKeyType
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.ByteValueType
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.CharKeyType
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.CharValueType
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.DefaultInteger
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.DefaultString
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.End
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.IntegerDataArray
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.IntegerDataDictionary
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.StringDataArray
+  - NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.StringDataDictionary
+  langs:
+  - csharp
+  - vb
+  name: EnumFile.Opcode
+  nameWithType: EnumFile.Opcode
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  type: Enum
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Opcode
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 151
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: public enum Opcode
+    content.vb: Public Enum Opcode
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.End
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.End
+  id: End
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: EnumFile.Opcode.End
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.End
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: End
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 153
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: End = 0
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.CharKeyType
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.CharKeyType
+  id: CharKeyType
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: CharKeyType
+  nameWithType: EnumFile.Opcode.CharKeyType
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.CharKeyType
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: CharKeyType
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 154
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: CharKeyType = 1
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.CharValueType
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.CharValueType
+  id: CharValueType
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: CharValueType
+  nameWithType: EnumFile.Opcode.CharValueType
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.CharValueType
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: CharValueType
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 155
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: CharValueType = 2
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.DefaultString
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.DefaultString
+  id: DefaultString
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: DefaultString
+  nameWithType: EnumFile.Opcode.DefaultString
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.DefaultString
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: DefaultString
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 156
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: DefaultString = 3
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.DefaultInteger
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.DefaultInteger
+  id: DefaultInteger
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: DefaultInteger
+  nameWithType: EnumFile.Opcode.DefaultInteger
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.DefaultInteger
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: DefaultInteger
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 157
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: DefaultInteger = 4
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.StringDataDictionary
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.StringDataDictionary
+  id: StringDataDictionary
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: StringDataDictionary
+  nameWithType: EnumFile.Opcode.StringDataDictionary
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.StringDataDictionary
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StringDataDictionary
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 158
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: StringDataDictionary = 5
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.IntegerDataDictionary
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.IntegerDataDictionary
+  id: IntegerDataDictionary
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: IntegerDataDictionary
+  nameWithType: EnumFile.Opcode.IntegerDataDictionary
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.IntegerDataDictionary
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IntegerDataDictionary
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 159
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: IntegerDataDictionary = 6
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.StringDataArray
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.StringDataArray
+  id: StringDataArray
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: StringDataArray
+  nameWithType: EnumFile.Opcode.StringDataArray
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.StringDataArray
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: StringDataArray
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 160
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: StringDataArray = 7
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.IntegerDataArray
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.IntegerDataArray
+  id: IntegerDataArray
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: IntegerDataArray
+  nameWithType: EnumFile.Opcode.IntegerDataArray
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.IntegerDataArray
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IntegerDataArray
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 161
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: IntegerDataArray = 8
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.ByteKeyType
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.ByteKeyType
+  id: ByteKeyType
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: ByteKeyType
+  nameWithType: EnumFile.Opcode.ByteKeyType
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.ByteKeyType
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ByteKeyType
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 162
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: ByteKeyType = 101
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.ByteValueType
+  commentId: F:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.ByteValueType
+  id: ByteValueType
+  parent: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  langs:
+  - csharp
+  - vb
+  name: ByteValueType
+  nameWithType: EnumFile.Opcode.ByteValueType
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.ByteValueType
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ByteValueType
+    path: src/NetScape.Modules.Cache/FileTypes/EnumFile.cs
+    startLine: 163
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.FileTypes
+  syntax:
+    content: ByteValueType = 102
+    return:
+      type: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NetScape.Modules.Cache.FileTypes
+  commentId: N:NetScape.Modules.Cache.FileTypes
+  name: NetScape.Modules.Cache.FileTypes
+  nameWithType: NetScape.Modules.Cache.FileTypes
+  fullName: NetScape.Modules.Cache.FileTypes
+- uid: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  commentId: T:NetScape.Modules.Cache.FileTypes.EnumFile.Opcode
+  parent: NetScape.Modules.Cache.FileTypes
+  name: EnumFile.Opcode
+  nameWithType: EnumFile.Opcode
+  fullName: NetScape.Modules.Cache.FileTypes.EnumFile.Opcode

@@ -1,0 +1,1110 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Cache.RuneTek5.Sector
+  commentId: T:NetScape.Modules.Cache.RuneTek5.Sector
+  id: Sector
+  parent: NetScape.Modules.Cache.RuneTek5
+  children:
+  - NetScape.Modules.Cache.RuneTek5.Sector.#ctor
+  - NetScape.Modules.Cache.RuneTek5.Sector.#ctor(System.Int32,NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Int32,System.Byte[])
+  - NetScape.Modules.Cache.RuneTek5.Sector.ChunkId
+  - NetScape.Modules.Cache.RuneTek5.Sector.Data
+  - NetScape.Modules.Cache.RuneTek5.Sector.Encode
+  - NetScape.Modules.Cache.RuneTek5.Sector.FileId
+  - NetScape.Modules.Cache.RuneTek5.Sector.FromData(System.Byte[],NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  - NetScape.Modules.Cache.RuneTek5.Sector.Index
+  - NetScape.Modules.Cache.RuneTek5.Sector.IsExtended
+  - NetScape.Modules.Cache.RuneTek5.Sector.Length
+  - NetScape.Modules.Cache.RuneTek5.Sector.NextSectorPosition
+  - NetScape.Modules.Cache.RuneTek5.Sector.Position
+  langs:
+  - csharp
+  - vb
+  name: Sector
+  nameWithType: Sector
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Sector
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 16
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nRepresents a sector in the data file, containing some metadata and the actual data contained in the sector.\n"
+  example: []
+  syntax:
+    content: 'public class Sector : ICacheSector'
+    content.vb: >-
+      Public Class Sector
+          Implements ICacheSector
+  inheritance:
+  - System.Object
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.Length
+  commentId: F:NetScape.Modules.Cache.RuneTek5.Sector.Length
+  id: Length
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: Sector.Length
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Length
+  type: Field
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Length
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 21
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nThe total size of a sector in bytes.\n"
+  example: []
+  syntax:
+    content: public const int Length = 520
+    return:
+      type: System.Int32
+    content.vb: Public Const Length As Integer = 520
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.#ctor
+  commentId: M:NetScape.Modules.Cache.RuneTek5.Sector.#ctor
+  id: '#ctor'
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: Sector()
+  nameWithType: Sector.Sector()
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Sector()
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 43
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  syntax:
+    content: public Sector()
+    content.vb: Public Sub New
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.#ctor(System.Int32,NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Int32,System.Byte[])
+  commentId: M:NetScape.Modules.Cache.RuneTek5.Sector.#ctor(System.Int32,NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Int32,System.Byte[])
+  id: '#ctor(System.Int32,NetScape.Abstractions.Cache.CacheIndex,System.Int32,System.Int32,System.Byte[])'
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: Sector(Int32, CacheIndex, Int32, Int32, Byte[])
+  nameWithType: Sector.Sector(Int32, CacheIndex, Int32, Int32, Byte[])
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Sector(System.Int32, NetScape.Abstractions.Cache.CacheIndex, System.Int32, System.Int32, System.Byte[])
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 54
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nDecodes the given byte array into a <xref href=\"NetScape.Modules.Cache.RuneTek5.Sector\" data-throw-if-not-resolved=\"false\"></xref> object.\n"
+  example: []
+  syntax:
+    content: public Sector(int position, CacheIndex expectedIndex, int expectedFileId, int expectedChunkId, byte[] data)
+    parameters:
+    - id: position
+      type: System.Int32
+      description: ''
+    - id: expectedIndex
+      type: NetScape.Abstractions.Cache.CacheIndex
+      description: ''
+    - id: expectedFileId
+      type: System.Int32
+      description: ''
+    - id: expectedChunkId
+      type: System.Int32
+      description: ''
+    - id: data
+      type: System.Byte[]
+      description: ''
+    content.vb: Public Sub New(position As Integer, expectedIndex As CacheIndex, expectedFileId As Integer, expectedChunkId As Integer, data As Byte())
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.#ctor*
+  nameWithType.vb: Sector.Sector(Int32, CacheIndex, Int32, Int32, Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NetScape.Modules.Cache.RuneTek5.Sector.Sector(System.Int32, NetScape.Abstractions.Cache.CacheIndex, System.Int32, System.Int32, System.Byte())
+  name.vb: Sector(Int32, CacheIndex, Int32, Int32, Byte())
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.Position
+  commentId: P:NetScape.Modules.Cache.RuneTek5.Sector.Position
+  id: Position
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Sector.Position
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Position
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Position
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 92
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  syntax:
+    content: public int Position { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Position As Integer
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.Position*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.ICacheSector.Position
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.ChunkId
+  commentId: P:NetScape.Modules.Cache.RuneTek5.Sector.ChunkId
+  id: ChunkId
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: ChunkId
+  nameWithType: Sector.ChunkId
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.ChunkId
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ChunkId
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 97
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nThe chunk within the file that this sector contains.\n"
+  example: []
+  syntax:
+    content: public int ChunkId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ChunkId As Integer
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.ChunkId*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.ICacheSector.ChunkId
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.Data
+  commentId: P:NetScape.Modules.Cache.RuneTek5.Sector.Data
+  id: Data
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: Sector.Data
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Data
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Data
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 102
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nThe data in this sector.\n"
+  example: []
+  syntax:
+    content: public byte[] Data { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Data As Byte()
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.Data*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.ICacheSector.Data
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.FileId
+  commentId: P:NetScape.Modules.Cache.RuneTek5.Sector.FileId
+  id: FileId
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: FileId
+  nameWithType: Sector.FileId
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.FileId
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: FileId
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 107
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nThe id of the file this sector contains.\n"
+  example: []
+  syntax:
+    content: public int FileId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property FileId As Integer
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.FileId*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.ICacheSector.FileId
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.Index
+  commentId: P:NetScape.Modules.Cache.RuneTek5.Sector.Index
+  id: Index
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: Sector.Index
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Index
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Index
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 112
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nThe type of file this sector contains.\n"
+  example: []
+  syntax:
+    content: public CacheIndex Index { get; set; }
+    parameters: []
+    return:
+      type: NetScape.Abstractions.Cache.CacheIndex
+    content.vb: Public Property Index As CacheIndex
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.Index*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.ICacheSector.Index
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.NextSectorPosition
+  commentId: P:NetScape.Modules.Cache.RuneTek5.Sector.NextSectorPosition
+  id: NextSectorPosition
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: NextSectorPosition
+  nameWithType: Sector.NextSectorPosition
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.NextSectorPosition
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: NextSectorPosition
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 117
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nThe position of next sector.\n"
+  example: []
+  syntax:
+    content: public int NextSectorPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NextSectorPosition As Integer
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.NextSectorPosition*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.ICacheSector.NextSectorPosition
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.IsExtended
+  commentId: P:NetScape.Modules.Cache.RuneTek5.Sector.IsExtended
+  id: IsExtended
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: IsExtended
+  nameWithType: Sector.IsExtended
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.IsExtended
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IsExtended
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 124
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nGets whether the sector uses the extended format.\nExtended sectors use 4 bytes instead of 2 for the file id (and have 2 bytes less to use for the data).\nJagex did not expect file indexes to surpass the size of a short =)\n"
+  example: []
+  syntax:
+    content: public bool IsExtended { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsExtended As Boolean
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.IsExtended*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.ICacheSector.IsExtended
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.Encode
+  commentId: M:NetScape.Modules.Cache.RuneTek5.Sector.Encode
+  id: Encode
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: Encode()
+  nameWithType: Sector.Encode()
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Encode()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Encode
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 130
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nEncodes this <xref href=\"NetScape.Modules.Cache.RuneTek5.Sector\" data-throw-if-not-resolved=\"false\"></xref> into a byte array.\n"
+  example: []
+  syntax:
+    content: public byte[] Encode()
+    return:
+      type: System.Byte[]
+      description: ''
+    content.vb: Public Function Encode As Byte()
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.Encode*
+  implements:
+  - NetScape.Abstractions.Interfaces.Cache.ICacheSector.Encode
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.FromData(System.Byte[],NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  commentId: M:NetScape.Modules.Cache.RuneTek5.Sector.FromData(System.Byte[],NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  id: FromData(System.Byte[],NetScape.Abstractions.Cache.CacheIndex,System.Int32)
+  parent: NetScape.Modules.Cache.RuneTek5.Sector
+  langs:
+  - csharp
+  - vb
+  name: FromData(Byte[], CacheIndex, Int32)
+  nameWithType: Sector.FromData(Byte[], CacheIndex, Int32)
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.FromData(System.Byte[], NetScape.Abstractions.Cache.CacheIndex, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: FromData
+    path: src/NetScape.Modules.Cache/RuneTek5/Sector.cs
+    startLine: 158
+  assemblies:
+  - NetScape.Modules.Cache
+  namespace: NetScape.Modules.Cache.RuneTek5
+  summary: "\nReturns the given data converted to sectors.\nSectors will not have NextSectorId set.\nThis is up to the <xref href=\"NetScape.Modules.Cache.RuneTek5.FileStore\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Sector> FromData(byte[] data, CacheIndex index, int fileId)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    - id: index
+      type: NetScape.Abstractions.Cache.CacheIndex
+    - id: fileId
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.IEnumerable{NetScape.Modules.Cache.RuneTek5.Sector}
+      description: ''
+    content.vb: Public Shared Function FromData(data As Byte(), index As CacheIndex, fileId As Integer) As IEnumerable(Of Sector)
+  overload: NetScape.Modules.Cache.RuneTek5.Sector.FromData*
+  nameWithType.vb: Sector.FromData(Byte(), CacheIndex, Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: NetScape.Modules.Cache.RuneTek5.Sector.FromData(System.Byte(), NetScape.Abstractions.Cache.CacheIndex, System.Int32)
+  name.vb: FromData(Byte(), CacheIndex, Int32)
+references:
+- uid: NetScape.Modules.Cache.RuneTek5
+  commentId: N:NetScape.Modules.Cache.RuneTek5
+  name: NetScape.Modules.Cache.RuneTek5
+  nameWithType: NetScape.Modules.Cache.RuneTek5
+  fullName: NetScape.Modules.Cache.RuneTek5
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  commentId: T:NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  parent: NetScape.Abstractions.Interfaces.Cache
+  name: ICacheSector
+  nameWithType: ICacheSector
+  fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Interfaces.Cache
+  commentId: N:NetScape.Abstractions.Interfaces.Cache
+  name: NetScape.Abstractions.Interfaces.Cache
+  nameWithType: NetScape.Abstractions.Interfaces.Cache
+  fullName: NetScape.Abstractions.Interfaces.Cache
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.#ctor*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.Sector.#ctor
+  name: Sector
+  nameWithType: Sector.Sector
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Sector
+- uid: NetScape.Modules.Cache.RuneTek5.Sector
+  commentId: T:NetScape.Modules.Cache.RuneTek5.Sector
+  name: Sector
+  nameWithType: Sector
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector
+- uid: NetScape.Abstractions.Cache.CacheIndex
+  commentId: T:NetScape.Abstractions.Cache.CacheIndex
+  parent: NetScape.Abstractions.Cache
+  name: CacheIndex
+  nameWithType: CacheIndex
+  fullName: NetScape.Abstractions.Cache.CacheIndex
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NetScape.Abstractions.Cache
+  commentId: N:NetScape.Abstractions.Cache
+  name: NetScape.Abstractions.Cache
+  nameWithType: NetScape.Abstractions.Cache
+  fullName: NetScape.Abstractions.Cache
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.Position*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.Sector.Position
+  name: Position
+  nameWithType: Sector.Position
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Position
+- uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Position
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.ICacheSector.Position
+  parent: NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  name: Position
+  nameWithType: ICacheSector.Position
+  fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Position
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.ChunkId*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.Sector.ChunkId
+  name: ChunkId
+  nameWithType: Sector.ChunkId
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.ChunkId
+- uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector.ChunkId
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.ICacheSector.ChunkId
+  parent: NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  name: ChunkId
+  nameWithType: ICacheSector.ChunkId
+  fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector.ChunkId
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.Data*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.Sector.Data
+  name: Data
+  nameWithType: Sector.Data
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Data
+- uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Data
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.ICacheSector.Data
+  parent: NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  name: Data
+  nameWithType: ICacheSector.Data
+  fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Data
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.FileId*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.Sector.FileId
+  name: FileId
+  nameWithType: Sector.FileId
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.FileId
+- uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector.FileId
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.ICacheSector.FileId
+  parent: NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  name: FileId
+  nameWithType: ICacheSector.FileId
+  fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector.FileId
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.Index*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.Sector.Index
+  name: Index
+  nameWithType: Sector.Index
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Index
+- uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Index
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.ICacheSector.Index
+  parent: NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  name: Index
+  nameWithType: ICacheSector.Index
+  fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Index
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.NextSectorPosition*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.Sector.NextSectorPosition
+  name: NextSectorPosition
+  nameWithType: Sector.NextSectorPosition
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.NextSectorPosition
+- uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector.NextSectorPosition
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.ICacheSector.NextSectorPosition
+  parent: NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  name: NextSectorPosition
+  nameWithType: ICacheSector.NextSectorPosition
+  fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector.NextSectorPosition
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.IsExtended*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.Sector.IsExtended
+  name: IsExtended
+  nameWithType: Sector.IsExtended
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.IsExtended
+- uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector.IsExtended
+  commentId: P:NetScape.Abstractions.Interfaces.Cache.ICacheSector.IsExtended
+  parent: NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  name: IsExtended
+  nameWithType: ICacheSector.IsExtended
+  fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector.IsExtended
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.Encode*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.Sector.Encode
+  name: Encode
+  nameWithType: Sector.Encode
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.Encode
+- uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Encode
+  commentId: M:NetScape.Abstractions.Interfaces.Cache.ICacheSector.Encode
+  parent: NetScape.Abstractions.Interfaces.Cache.ICacheSector
+  name: Encode()
+  nameWithType: ICacheSector.Encode()
+  fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Encode()
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Encode
+    name: Encode
+    nameWithType: ICacheSector.Encode
+    fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Encode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Encode
+    name: Encode
+    nameWithType: ICacheSector.Encode
+    fullName: NetScape.Abstractions.Interfaces.Cache.ICacheSector.Encode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.Cache.RuneTek5.FileStore
+  commentId: T:NetScape.Modules.Cache.RuneTek5.FileStore
+  name: FileStore
+  nameWithType: FileStore
+  fullName: NetScape.Modules.Cache.RuneTek5.FileStore
+- uid: NetScape.Modules.Cache.RuneTek5.Sector.FromData*
+  commentId: Overload:NetScape.Modules.Cache.RuneTek5.Sector.FromData
+  name: FromData
+  nameWithType: Sector.FromData
+  fullName: NetScape.Modules.Cache.RuneTek5.Sector.FromData
+- uid: System.Collections.Generic.IEnumerable{NetScape.Modules.Cache.RuneTek5.Sector}
+  commentId: T:System.Collections.Generic.IEnumerable{NetScape.Modules.Cache.RuneTek5.Sector}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Sector>
+  nameWithType: IEnumerable<Sector>
+  fullName: System.Collections.Generic.IEnumerable<NetScape.Modules.Cache.RuneTek5.Sector>
+  nameWithType.vb: IEnumerable(Of Sector)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of NetScape.Modules.Cache.RuneTek5.Sector)
+  name.vb: IEnumerable(Of Sector)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NetScape.Modules.Cache.RuneTek5.Sector
+    name: Sector
+    nameWithType: Sector
+    fullName: NetScape.Modules.Cache.RuneTek5.Sector
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NetScape.Modules.Cache.RuneTek5.Sector
+    name: Sector
+    nameWithType: Sector
+    fullName: NetScape.Modules.Cache.RuneTek5.Sector
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

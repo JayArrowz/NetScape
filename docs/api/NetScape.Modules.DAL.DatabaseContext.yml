@@ -1,0 +1,3670 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.DAL.DatabaseContext
+  commentId: T:NetScape.Modules.DAL.DatabaseContext
+  id: DatabaseContext
+  parent: NetScape.Modules.DAL
+  children:
+  - NetScape.Modules.DAL.DatabaseContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{NetScape.Modules.DAL.DatabaseContext},Microsoft.Extensions.Logging.ILoggerFactory)
+  - NetScape.Modules.DAL.DatabaseContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  - NetScape.Modules.DAL.DatabaseContext.Players
+  langs:
+  - csharp
+  - vb
+  name: DatabaseContext
+  nameWithType: DatabaseContext
+  fullName: NetScape.Modules.DAL.DatabaseContext
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.DAL/DatabaseContext.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: DatabaseContext
+    path: src/NetScape.Modules.DAL/DatabaseContext.cs
+    startLine: 10
+  assemblies:
+  - NetScape.Modules.DAL
+  namespace: NetScape.Modules.DAL
+  syntax:
+    content: 'public class DatabaseContext : DbContext, IInfrastructure<IServiceProvider>, IDbContextDependencies, IDbSetCache, IDbContextPoolable, IDisposable, IAsyncDisposable, IResettableService'
+    content.vb: >-
+      Public Class DatabaseContext
+          Inherits DbContext
+          Implements IInfrastructure(Of IServiceProvider), IDbContextDependencies, IDbSetCache, IDbContextPoolable, IDisposable, IAsyncDisposable, IResettableService
+  inheritance:
+  - System.Object
+  - Microsoft.EntityFrameworkCore.DbContext
+  implements:
+  - Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure{System.IServiceProvider}
+  - Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies
+  - Microsoft.EntityFrameworkCore.Internal.IDbSetCache
+  - Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable
+  - System.IDisposable
+  - System.IAsyncDisposable
+  - Microsoft.EntityFrameworkCore.Infrastructure.IResettableService
+  inheritedMembers:
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbSetCache#GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource,System.Type)
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbSetCache#GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource,System.String,System.Type)
+  - Microsoft.EntityFrameworkCore.DbContext.Set``1
+  - Microsoft.EntityFrameworkCore.DbContext.Set``1(System.String)
+  - Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+  - Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+  - Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+  - Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean,System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#ClearLease
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#SetLease(Microsoft.EntityFrameworkCore.Internal.DbContextLease)
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#SnapshotConfiguration
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IResettableService#ResetState
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IResettableService#ResetStateAsync(System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.Dispose
+  - Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+  - Microsoft.EntityFrameworkCore.DbContext.Entry``1({TEntity})
+  - Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+  - Microsoft.EntityFrameworkCore.DbContext.Add``1({TEntity})
+  - Microsoft.EntityFrameworkCore.DbContext.AddAsync``1({TEntity},System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.Attach``1({TEntity})
+  - Microsoft.EntityFrameworkCore.DbContext.Update``1({TEntity})
+  - Microsoft.EntityFrameworkCore.DbContext.Remove``1({TEntity})
+  - Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+  - Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+  - Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+  - Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+  - Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable{System.Object})
+  - Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable{System.Object})
+  - Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable{System.Object})
+  - Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable{System.Object})
+  - Microsoft.EntityFrameworkCore.DbContext.Find(System.Type,System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[],System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.Find``1(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[],System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{{TResult}}}})
+  - Microsoft.EntityFrameworkCore.DbContext.Database
+  - Microsoft.EntityFrameworkCore.DbContext.ChangeTracker
+  - Microsoft.EntityFrameworkCore.DbContext.Model
+  - Microsoft.EntityFrameworkCore.DbContext.ContextId
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#SetSource
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#EntityFinderFactory
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#QueryProvider
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#StateManager
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#ChangeDetector
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#EntityGraphAttacher
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#UpdateLogger
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#InfrastructureLogger
+  - Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IInfrastructure{System#IServiceProvider}#Instance
+  - Microsoft.EntityFrameworkCore.DbContext.SavingChanges
+  - Microsoft.EntityFrameworkCore.DbContext.SavedChanges
+  - Microsoft.EntityFrameworkCore.DbContext.SaveChangesFailed
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Modules.DAL.DatabaseContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{NetScape.Modules.DAL.DatabaseContext},Microsoft.Extensions.Logging.ILoggerFactory)
+  commentId: M:NetScape.Modules.DAL.DatabaseContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{NetScape.Modules.DAL.DatabaseContext},Microsoft.Extensions.Logging.ILoggerFactory)
+  id: '#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{NetScape.Modules.DAL.DatabaseContext},Microsoft.Extensions.Logging.ILoggerFactory)'
+  parent: NetScape.Modules.DAL.DatabaseContext
+  langs:
+  - csharp
+  - vb
+  name: DatabaseContext(DbContextOptions<DatabaseContext>, ILoggerFactory)
+  nameWithType: DatabaseContext.DatabaseContext(DbContextOptions<DatabaseContext>, ILoggerFactory)
+  fullName: NetScape.Modules.DAL.DatabaseContext.DatabaseContext(Microsoft.EntityFrameworkCore.DbContextOptions<NetScape.Modules.DAL.DatabaseContext>, Microsoft.Extensions.Logging.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.DAL/DatabaseContext.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.Modules.DAL/DatabaseContext.cs
+    startLine: 14
+  assemblies:
+  - NetScape.Modules.DAL
+  namespace: NetScape.Modules.DAL
+  syntax:
+    content: public DatabaseContext(DbContextOptions<DatabaseContext> options, ILoggerFactory loggerFactory = null)
+    parameters:
+    - id: options
+      type: Microsoft.EntityFrameworkCore.DbContextOptions{NetScape.Modules.DAL.DatabaseContext}
+    - id: loggerFactory
+      type: Microsoft.Extensions.Logging.ILoggerFactory
+    content.vb: Public Sub New(options As DbContextOptions(Of DatabaseContext), loggerFactory As ILoggerFactory = Nothing)
+  overload: NetScape.Modules.DAL.DatabaseContext.#ctor*
+  nameWithType.vb: DatabaseContext.DatabaseContext(DbContextOptions(Of DatabaseContext), ILoggerFactory)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NetScape.Modules.DAL.DatabaseContext.DatabaseContext(Microsoft.EntityFrameworkCore.DbContextOptions(Of NetScape.Modules.DAL.DatabaseContext), Microsoft.Extensions.Logging.ILoggerFactory)
+  name.vb: DatabaseContext(DbContextOptions(Of DatabaseContext), ILoggerFactory)
+- uid: NetScape.Modules.DAL.DatabaseContext.Players
+  commentId: P:NetScape.Modules.DAL.DatabaseContext.Players
+  id: Players
+  parent: NetScape.Modules.DAL.DatabaseContext
+  langs:
+  - csharp
+  - vb
+  name: Players
+  nameWithType: DatabaseContext.Players
+  fullName: NetScape.Modules.DAL.DatabaseContext.Players
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.DAL/DatabaseContext.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Players
+    path: src/NetScape.Modules.DAL/DatabaseContext.cs
+    startLine: 20
+  assemblies:
+  - NetScape.Modules.DAL
+  namespace: NetScape.Modules.DAL
+  syntax:
+    content: public DbSet<Player> Players { get; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NetScape.Abstractions.Model.Game.Player}
+    content.vb: Public ReadOnly Property Players As DbSet(Of Player)
+  overload: NetScape.Modules.DAL.DatabaseContext.Players*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NetScape.Modules.DAL.DatabaseContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:NetScape.Modules.DAL.DatabaseContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  id: OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: NetScape.Modules.DAL.DatabaseContext
+  langs:
+  - csharp
+  - vb
+  name: OnModelCreating(ModelBuilder)
+  nameWithType: DatabaseContext.OnModelCreating(ModelBuilder)
+  fullName: NetScape.Modules.DAL.DatabaseContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.DAL/DatabaseContext.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: OnModelCreating
+    path: src/NetScape.Modules.DAL/DatabaseContext.cs
+    startLine: 22
+  assemblies:
+  - NetScape.Modules.DAL
+  namespace: NetScape.Modules.DAL
+  syntax:
+    content: protected override void OnModelCreating(ModelBuilder modelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+    content.vb: Protected Overrides Sub OnModelCreating(modelBuilder As ModelBuilder)
+  overridden: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  overload: NetScape.Modules.DAL.DatabaseContext.OnModelCreating*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: NetScape.Modules.DAL
+  commentId: N:NetScape.Modules.DAL
+  name: NetScape.Modules.DAL
+  nameWithType: NetScape.Modules.DAL
+  fullName: NetScape.Modules.DAL
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Microsoft.EntityFrameworkCore.DbContext
+  commentId: T:Microsoft.EntityFrameworkCore.DbContext
+  parent: Microsoft.EntityFrameworkCore
+  isExternal: true
+  name: DbContext
+  nameWithType: DbContext
+  fullName: Microsoft.EntityFrameworkCore.DbContext
+- uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure{System.IServiceProvider}
+  commentId: T:Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure{System.IServiceProvider}
+  parent: Microsoft.EntityFrameworkCore.Infrastructure
+  definition: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+  name: IInfrastructure<IServiceProvider>
+  nameWithType: IInfrastructure<IServiceProvider>
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<System.IServiceProvider>
+  nameWithType.vb: IInfrastructure(Of IServiceProvider)
+  fullName.vb: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure(Of System.IServiceProvider)
+  name.vb: IInfrastructure(Of IServiceProvider)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+    name: IInfrastructure
+    nameWithType: IInfrastructure
+    fullName: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: System.IServiceProvider
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+    name: IInfrastructure
+    nameWithType: IInfrastructure
+    fullName: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: System.IServiceProvider
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies
+  commentId: T:Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies
+  parent: Microsoft.EntityFrameworkCore.Internal
+  isExternal: true
+  name: IDbContextDependencies
+  nameWithType: IDbContextDependencies
+  fullName: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies
+- uid: Microsoft.EntityFrameworkCore.Internal.IDbSetCache
+  commentId: T:Microsoft.EntityFrameworkCore.Internal.IDbSetCache
+  parent: Microsoft.EntityFrameworkCore.Internal
+  isExternal: true
+  name: IDbSetCache
+  nameWithType: IDbSetCache
+  fullName: Microsoft.EntityFrameworkCore.Internal.IDbSetCache
+- uid: Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable
+  commentId: T:Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable
+  parent: Microsoft.EntityFrameworkCore.Internal
+  isExternal: true
+  name: IDbContextPoolable
+  nameWithType: IDbContextPoolable
+  fullName: Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.IAsyncDisposable
+  commentId: T:System.IAsyncDisposable
+  parent: System
+  isExternal: true
+  name: IAsyncDisposable
+  nameWithType: IAsyncDisposable
+  fullName: System.IAsyncDisposable
+- uid: Microsoft.EntityFrameworkCore.Infrastructure.IResettableService
+  commentId: T:Microsoft.EntityFrameworkCore.Infrastructure.IResettableService
+  parent: Microsoft.EntityFrameworkCore.Infrastructure
+  isExternal: true
+  name: IResettableService
+  nameWithType: IResettableService
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure.IResettableService
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbSetCache#GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource,System.Type)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbSetCache#GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource,System.Type)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbSetCache.GetOrAddSet(IDbSetSource, Type)
+  nameWithType: DbContext.IDbSetCache.GetOrAddSet(IDbSetSource, Type)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource, System.Type)
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet(IDbSetSource, Type)
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet(IDbSetSource, Type)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbSetCache#GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource,System.Type)
+    name: IDbSetCache.GetOrAddSet
+    nameWithType: DbContext.IDbSetCache.GetOrAddSet
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.EntityFrameworkCore.Internal.IDbSetSource
+    name: IDbSetSource
+    nameWithType: IDbSetSource
+    fullName: Microsoft.EntityFrameworkCore.Internal.IDbSetSource
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbSetCache#GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource,System.Type)
+    name: Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet
+    nameWithType: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.EntityFrameworkCore.Internal.IDbSetSource
+    name: IDbSetSource
+    nameWithType: IDbSetSource
+    fullName: Microsoft.EntityFrameworkCore.Internal.IDbSetSource
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbSetCache#GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource,System.String,System.Type)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbSetCache#GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource,System.String,System.Type)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbSetCache.GetOrAddSet(IDbSetSource, String, Type)
+  nameWithType: DbContext.IDbSetCache.GetOrAddSet(IDbSetSource, String, Type)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource, System.String, System.Type)
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet(IDbSetSource, String, Type)
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet(IDbSetSource, String, Type)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbSetCache#GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource,System.String,System.Type)
+    name: IDbSetCache.GetOrAddSet
+    nameWithType: DbContext.IDbSetCache.GetOrAddSet
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.EntityFrameworkCore.Internal.IDbSetSource
+    name: IDbSetSource
+    nameWithType: IDbSetSource
+    fullName: Microsoft.EntityFrameworkCore.Internal.IDbSetSource
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbSetCache#GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource,System.String,System.Type)
+    name: Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet
+    nameWithType: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.EntityFrameworkCore.Internal.IDbSetSource
+    name: IDbSetSource
+    nameWithType: IDbSetSource
+    fullName: Microsoft.EntityFrameworkCore.Internal.IDbSetSource
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Set``1
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Set``1
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Set<TEntity>()
+  nameWithType: DbContext.Set<TEntity>()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Set<TEntity>()
+  nameWithType.vb: DbContext.Set(Of TEntity)()
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Set(Of TEntity)()
+  name.vb: Set(Of TEntity)()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Set``1
+    name: Set<TEntity>
+    nameWithType: DbContext.Set<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Set<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Set``1
+    name: Set(Of TEntity)
+    nameWithType: DbContext.Set(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Set(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Set``1(System.String)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Set``1(System.String)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Set<TEntity>(String)
+  nameWithType: DbContext.Set<TEntity>(String)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Set<TEntity>(System.String)
+  nameWithType.vb: DbContext.Set(Of TEntity)(String)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Set(Of TEntity)(System.String)
+  name.vb: Set(Of TEntity)(String)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Set``1(System.String)
+    name: Set<TEntity>
+    nameWithType: DbContext.Set<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Set<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Set``1(System.String)
+    name: Set(Of TEntity)
+    nameWithType: DbContext.Set(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Set(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: OnConfiguring(DbContextOptionsBuilder)
+  nameWithType: DbContext.OnConfiguring(DbContextOptionsBuilder)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+    name: OnConfiguring
+    nameWithType: DbContext.OnConfiguring
+    fullName: Microsoft.EntityFrameworkCore.DbContext.OnConfiguring
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder
+    name: DbContextOptionsBuilder
+    nameWithType: DbContextOptionsBuilder
+    fullName: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+    name: OnConfiguring
+    nameWithType: DbContext.OnConfiguring
+    fullName: Microsoft.EntityFrameworkCore.DbContext.OnConfiguring
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder
+    name: DbContextOptionsBuilder
+    nameWithType: DbContextOptionsBuilder
+    fullName: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: SaveChanges()
+  nameWithType: DbContext.SaveChanges()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+    name: SaveChanges
+    nameWithType: DbContext.SaveChanges
+    fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+    name: SaveChanges
+    nameWithType: DbContext.SaveChanges
+    fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: SaveChanges(Boolean)
+  nameWithType: DbContext.SaveChanges(Boolean)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+    name: SaveChanges
+    nameWithType: DbContext.SaveChanges
+    fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+    name: SaveChanges
+    nameWithType: DbContext.SaveChanges
+    fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: SaveChangesAsync(CancellationToken)
+  nameWithType: DbContext.SaveChangesAsync(CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean,System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean,System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: SaveChangesAsync(Boolean, CancellationToken)
+  nameWithType: DbContext.SaveChangesAsync(Boolean, CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean,System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean,System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#ClearLease
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#ClearLease
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextPoolable.ClearLease()
+  nameWithType: DbContext.IDbContextPoolable.ClearLease()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.ClearLease()
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.ClearLease()
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.ClearLease()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#ClearLease
+    name: IDbContextPoolable.ClearLease
+    nameWithType: DbContext.IDbContextPoolable.ClearLease
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.ClearLease
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#ClearLease
+    name: Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.ClearLease
+    nameWithType: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.ClearLease
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.ClearLease
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#SetLease(Microsoft.EntityFrameworkCore.Internal.DbContextLease)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#SetLease(Microsoft.EntityFrameworkCore.Internal.DbContextLease)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextPoolable.SetLease(DbContextLease)
+  nameWithType: DbContext.IDbContextPoolable.SetLease(DbContextLease)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SetLease(Microsoft.EntityFrameworkCore.Internal.DbContextLease)
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SetLease(DbContextLease)
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SetLease(DbContextLease)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#SetLease(Microsoft.EntityFrameworkCore.Internal.DbContextLease)
+    name: IDbContextPoolable.SetLease
+    nameWithType: DbContext.IDbContextPoolable.SetLease
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SetLease
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.EntityFrameworkCore.Internal.DbContextLease
+    name: DbContextLease
+    nameWithType: DbContextLease
+    fullName: Microsoft.EntityFrameworkCore.Internal.DbContextLease
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#SetLease(Microsoft.EntityFrameworkCore.Internal.DbContextLease)
+    name: Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SetLease
+    nameWithType: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SetLease
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SetLease
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.EntityFrameworkCore.Internal.DbContextLease
+    name: DbContextLease
+    nameWithType: DbContextLease
+    fullName: Microsoft.EntityFrameworkCore.Internal.DbContextLease
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#SnapshotConfiguration
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#SnapshotConfiguration
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextPoolable.SnapshotConfiguration()
+  nameWithType: DbContext.IDbContextPoolable.SnapshotConfiguration()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SnapshotConfiguration()
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SnapshotConfiguration()
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SnapshotConfiguration()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#SnapshotConfiguration
+    name: IDbContextPoolable.SnapshotConfiguration
+    nameWithType: DbContext.IDbContextPoolable.SnapshotConfiguration
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SnapshotConfiguration
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextPoolable#SnapshotConfiguration
+    name: Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SnapshotConfiguration
+    nameWithType: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SnapshotConfiguration
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SnapshotConfiguration
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IResettableService#ResetState
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IResettableService#ResetState
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IResettableService.ResetState()
+  nameWithType: DbContext.IResettableService.ResetState()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+  name.vb: Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IResettableService#ResetState
+    name: IResettableService.ResetState
+    nameWithType: DbContext.IResettableService.ResetState
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IResettableService#ResetState
+    name: Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState
+    nameWithType: DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetState
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IResettableService#ResetStateAsync(System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IResettableService#ResetStateAsync(System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IResettableService.ResetStateAsync(CancellationToken)
+  nameWithType: DbContext.IResettableService.ResetStateAsync(CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetStateAsync(System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetStateAsync(CancellationToken)
+  name.vb: Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetStateAsync(CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IResettableService#ResetStateAsync(System.Threading.CancellationToken)
+    name: IResettableService.ResetStateAsync
+    nameWithType: DbContext.IResettableService.ResetStateAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetStateAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IResettableService#ResetStateAsync(System.Threading.CancellationToken)
+    name: Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetStateAsync
+    nameWithType: DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetStateAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IResettableService.ResetStateAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Dispose
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Dispose
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Dispose()
+  nameWithType: DbContext.Dispose()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Dispose()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Dispose
+    name: Dispose
+    nameWithType: DbContext.Dispose
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Dispose
+    name: Dispose
+    nameWithType: DbContext.Dispose
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: DisposeAsync()
+  nameWithType: DbContext.DisposeAsync()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.DisposeAsync()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+    name: DisposeAsync
+    nameWithType: DbContext.DisposeAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+    name: DisposeAsync
+    nameWithType: DbContext.DisposeAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1({TEntity})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+  name: Entry<TEntity>(TEntity)
+  nameWithType: DbContext.Entry<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Entry<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Entry(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Entry(Of TEntity)(TEntity)
+  name.vb: Entry(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+    name: Entry<TEntity>
+    nameWithType: DbContext.Entry<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Entry<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+    name: Entry(Of TEntity)
+    nameWithType: DbContext.Entry(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Entry(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Entry(Object)
+  nameWithType: DbContext.Entry(Object)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+    name: Entry
+    nameWithType: DbContext.Entry
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Entry
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+    name: Entry
+    nameWithType: DbContext.Entry
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Entry
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Add``1({TEntity})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+  name: Add<TEntity>(TEntity)
+  nameWithType: DbContext.Add<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Add<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Add(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Add(Of TEntity)(TEntity)
+  name.vb: Add(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+    name: Add<TEntity>
+    nameWithType: DbContext.Add<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Add<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+    name: Add(Of TEntity)
+    nameWithType: DbContext.Add(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Add(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1({TEntity},System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+  name: AddAsync<TEntity>(TEntity, CancellationToken)
+  nameWithType: DbContext.AddAsync<TEntity>(TEntity, CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync<TEntity>(TEntity, System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.AddAsync(Of TEntity)(TEntity, CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddAsync(Of TEntity)(TEntity, System.Threading.CancellationToken)
+  name.vb: AddAsync(Of TEntity)(TEntity, CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+    name: AddAsync<TEntity>
+    nameWithType: DbContext.AddAsync<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+    name: AddAsync(Of TEntity)
+    nameWithType: DbContext.AddAsync(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1({TEntity})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+  name: Attach<TEntity>(TEntity)
+  nameWithType: DbContext.Attach<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Attach<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Attach(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Attach(Of TEntity)(TEntity)
+  name.vb: Attach(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+    name: Attach<TEntity>
+    nameWithType: DbContext.Attach<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Attach<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+    name: Attach(Of TEntity)
+    nameWithType: DbContext.Attach(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Attach(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Update``1({TEntity})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+  name: Update<TEntity>(TEntity)
+  nameWithType: DbContext.Update<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Update<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Update(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Update(Of TEntity)(TEntity)
+  name.vb: Update(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+    name: Update<TEntity>
+    nameWithType: DbContext.Update<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Update<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+    name: Update(Of TEntity)
+    nameWithType: DbContext.Update(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Update(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1({TEntity})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+  name: Remove<TEntity>(TEntity)
+  nameWithType: DbContext.Remove<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Remove<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Remove(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Remove(Of TEntity)(TEntity)
+  name.vb: Remove(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+    name: Remove<TEntity>
+    nameWithType: DbContext.Remove<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Remove<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+    name: Remove(Of TEntity)
+    nameWithType: DbContext.Remove(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Remove(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Add(Object)
+  nameWithType: DbContext.Add(Object)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+    name: Add
+    nameWithType: DbContext.Add
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+    name: Add
+    nameWithType: DbContext.Add
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: AddAsync(Object, CancellationToken)
+  nameWithType: DbContext.AddAsync(Object, CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken)
+    name: AddAsync
+    nameWithType: DbContext.AddAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken)
+    name: AddAsync
+    nameWithType: DbContext.AddAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Attach(Object)
+  nameWithType: DbContext.Attach(Object)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+    name: Attach
+    nameWithType: DbContext.Attach
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Attach
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+    name: Attach
+    nameWithType: DbContext.Attach
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Attach
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Update(Object)
+  nameWithType: DbContext.Update(Object)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+    name: Update
+    nameWithType: DbContext.Update
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Update
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+    name: Update
+    nameWithType: DbContext.Update
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Update
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Remove(Object)
+  nameWithType: DbContext.Remove(Object)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+    name: Remove
+    nameWithType: DbContext.Remove
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+    name: Remove
+    nameWithType: DbContext.Remove
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: AddRange(Object[])
+  nameWithType: DbContext.AddRange(Object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+  nameWithType.vb: DbContext.AddRange(Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object())
+  name.vb: AddRange(Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+    name: AddRange
+    nameWithType: DbContext.AddRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+    name: AddRange
+    nameWithType: DbContext.AddRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: AddRangeAsync(Object[])
+  nameWithType: DbContext.AddRangeAsync(Object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+  nameWithType.vb: DbContext.AddRangeAsync(Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object())
+  name.vb: AddRangeAsync(Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+    name: AddRangeAsync
+    nameWithType: DbContext.AddRangeAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+    name: AddRangeAsync
+    nameWithType: DbContext.AddRangeAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: AttachRange(Object[])
+  nameWithType: DbContext.AttachRange(Object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+  nameWithType.vb: DbContext.AttachRange(Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object())
+  name.vb: AttachRange(Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+    name: AttachRange
+    nameWithType: DbContext.AttachRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AttachRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+    name: AttachRange
+    nameWithType: DbContext.AttachRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AttachRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: UpdateRange(Object[])
+  nameWithType: DbContext.UpdateRange(Object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+  nameWithType.vb: DbContext.UpdateRange(Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object())
+  name.vb: UpdateRange(Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+    name: UpdateRange
+    nameWithType: DbContext.UpdateRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.UpdateRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+    name: UpdateRange
+    nameWithType: DbContext.UpdateRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.UpdateRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: RemoveRange(Object[])
+  nameWithType: DbContext.RemoveRange(Object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+  nameWithType.vb: DbContext.RemoveRange(Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object())
+  name.vb: RemoveRange(Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+    name: RemoveRange
+    nameWithType: DbContext.RemoveRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.RemoveRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+    name: RemoveRange
+    nameWithType: DbContext.RemoveRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.RemoveRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable{System.Object})
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: AddRange(IEnumerable<Object>)
+  nameWithType: DbContext.AddRange(IEnumerable<Object>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable<System.Object>)
+  nameWithType.vb: DbContext.AddRange(IEnumerable(Of Object))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable(Of System.Object))
+  name.vb: AddRange(IEnumerable(Of Object))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: AddRange
+    nameWithType: DbContext.AddRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: AddRange
+    nameWithType: DbContext.AddRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: AddRangeAsync(IEnumerable<Object>, CancellationToken)
+  nameWithType: DbContext.AddRangeAsync(IEnumerable<Object>, CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable<System.Object>, System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.AddRangeAsync(IEnumerable(Of Object), CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable(Of System.Object), System.Threading.CancellationToken)
+  name.vb: AddRangeAsync(IEnumerable(Of Object), CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)
+    name: AddRangeAsync
+    nameWithType: DbContext.AddRangeAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)
+    name: AddRangeAsync
+    nameWithType: DbContext.AddRangeAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable{System.Object})
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: AttachRange(IEnumerable<Object>)
+  nameWithType: DbContext.AttachRange(IEnumerable<Object>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable<System.Object>)
+  nameWithType.vb: DbContext.AttachRange(IEnumerable(Of Object))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable(Of System.Object))
+  name.vb: AttachRange(IEnumerable(Of Object))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: AttachRange
+    nameWithType: DbContext.AttachRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AttachRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: AttachRange
+    nameWithType: DbContext.AttachRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AttachRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable{System.Object})
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: UpdateRange(IEnumerable<Object>)
+  nameWithType: DbContext.UpdateRange(IEnumerable<Object>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable<System.Object>)
+  nameWithType.vb: DbContext.UpdateRange(IEnumerable(Of Object))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable(Of System.Object))
+  name.vb: UpdateRange(IEnumerable(Of Object))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: UpdateRange
+    nameWithType: DbContext.UpdateRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.UpdateRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: UpdateRange
+    nameWithType: DbContext.UpdateRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.UpdateRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable{System.Object})
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: RemoveRange(IEnumerable<Object>)
+  nameWithType: DbContext.RemoveRange(IEnumerable<Object>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable<System.Object>)
+  nameWithType.vb: DbContext.RemoveRange(IEnumerable(Of Object))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable(Of System.Object))
+  name.vb: RemoveRange(IEnumerable(Of Object))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: RemoveRange
+    nameWithType: DbContext.RemoveRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.RemoveRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: RemoveRange
+    nameWithType: DbContext.RemoveRange
+    fullName: Microsoft.EntityFrameworkCore.DbContext.RemoveRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Find(System.Type,System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Find(System.Type,System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Find(Type, Object[])
+  nameWithType: DbContext.Find(Type, Object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Find(System.Type, System.Object[])
+  nameWithType.vb: DbContext.Find(Type, Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Find(System.Type, System.Object())
+  name.vb: Find(Type, Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Find(System.Type,System.Object[])
+    name: Find
+    nameWithType: DbContext.Find
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Find
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Find(System.Type,System.Object[])
+    name: Find
+    nameWithType: DbContext.Find
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Find
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: FindAsync(Type, Object[])
+  nameWithType: DbContext.FindAsync(Type, Object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type, System.Object[])
+  nameWithType.vb: DbContext.FindAsync(Type, Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type, System.Object())
+  name.vb: FindAsync(Type, Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[])
+    name: FindAsync
+    nameWithType: DbContext.FindAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[])
+    name: FindAsync
+    nameWithType: DbContext.FindAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[],System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[],System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: FindAsync(Type, Object[], CancellationToken)
+  nameWithType: DbContext.FindAsync(Type, Object[], CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type, System.Object[], System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.FindAsync(Type, Object(), CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type, System.Object(), System.Threading.CancellationToken)
+  name.vb: FindAsync(Type, Object(), CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[],System.Threading.CancellationToken)
+    name: FindAsync
+    nameWithType: DbContext.FindAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[],System.Threading.CancellationToken)
+    name: FindAsync
+    nameWithType: DbContext.FindAsync
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Find``1(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Find``1(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Find<TEntity>(Object[])
+  nameWithType: DbContext.Find<TEntity>(Object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Find<TEntity>(System.Object[])
+  nameWithType.vb: DbContext.Find(Of TEntity)(Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Find(Of TEntity)(System.Object())
+  name.vb: Find(Of TEntity)(Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Find``1(System.Object[])
+    name: Find<TEntity>
+    nameWithType: DbContext.Find<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Find<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Find``1(System.Object[])
+    name: Find(Of TEntity)
+    nameWithType: DbContext.Find(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Find(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: FindAsync<TEntity>(Object[])
+  nameWithType: DbContext.FindAsync<TEntity>(Object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync<TEntity>(System.Object[])
+  nameWithType.vb: DbContext.FindAsync(Of TEntity)(Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FindAsync(Of TEntity)(System.Object())
+  name.vb: FindAsync(Of TEntity)(Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[])
+    name: FindAsync<TEntity>
+    nameWithType: DbContext.FindAsync<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[])
+    name: FindAsync(Of TEntity)
+    nameWithType: DbContext.FindAsync(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[],System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[],System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: FindAsync<TEntity>(Object[], CancellationToken)
+  nameWithType: DbContext.FindAsync<TEntity>(Object[], CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync<TEntity>(System.Object[], System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.FindAsync(Of TEntity)(Object(), CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FindAsync(Of TEntity)(System.Object(), System.Threading.CancellationToken)
+  name.vb: FindAsync(Of TEntity)(Object(), CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[],System.Threading.CancellationToken)
+    name: FindAsync<TEntity>
+    nameWithType: DbContext.FindAsync<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[],System.Threading.CancellationToken)
+    name: FindAsync(Of TEntity)
+    nameWithType: DbContext.FindAsync(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{{TResult}}}})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+  name: FromExpression<TResult>(Expression<Func<IQueryable<TResult>>>)
+  nameWithType: DbContext.FromExpression<TResult>(Expression<Func<IQueryable<TResult>>>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FromExpression<TResult>(System.Linq.Expressions.Expression<System.Func<System.Linq.IQueryable<TResult>>>)
+  nameWithType.vb: DbContext.FromExpression(Of TResult)(Expression(Of Func(Of IQueryable(Of TResult))))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FromExpression(Of TResult)(System.Linq.Expressions.Expression(Of System.Func(Of System.Linq.IQueryable(Of TResult))))
+  name.vb: FromExpression(Of TResult)(Expression(Of Func(Of IQueryable(Of TResult))))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+    name: FromExpression<TResult>
+    nameWithType: DbContext.FromExpression<TResult>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FromExpression<TResult>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: System.Linq.IQueryable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+    name: FromExpression(Of TResult)
+    nameWithType: DbContext.FromExpression(Of TResult)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FromExpression(Of TResult)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: System.Linq.IQueryable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Database
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Database
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Database
+  nameWithType: DbContext.Database
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Database
+- uid: Microsoft.EntityFrameworkCore.DbContext.ChangeTracker
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.ChangeTracker
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: ChangeTracker
+  nameWithType: DbContext.ChangeTracker
+  fullName: Microsoft.EntityFrameworkCore.DbContext.ChangeTracker
+- uid: Microsoft.EntityFrameworkCore.DbContext.Model
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Model
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: Model
+  nameWithType: DbContext.Model
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Model
+- uid: Microsoft.EntityFrameworkCore.DbContext.ContextId
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.ContextId
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: ContextId
+  nameWithType: DbContext.ContextId
+  fullName: Microsoft.EntityFrameworkCore.DbContext.ContextId
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#SetSource
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#SetSource
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextDependencies.SetSource
+  nameWithType: DbContext.IDbContextDependencies.SetSource
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.SetSource
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.SetSource
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.SetSource
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#EntityFinderFactory
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#EntityFinderFactory
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextDependencies.EntityFinderFactory
+  nameWithType: DbContext.IDbContextDependencies.EntityFinderFactory
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.EntityFinderFactory
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.EntityFinderFactory
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.EntityFinderFactory
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#QueryProvider
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#QueryProvider
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextDependencies.QueryProvider
+  nameWithType: DbContext.IDbContextDependencies.QueryProvider
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.QueryProvider
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.QueryProvider
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.QueryProvider
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#StateManager
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#StateManager
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextDependencies.StateManager
+  nameWithType: DbContext.IDbContextDependencies.StateManager
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.StateManager
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.StateManager
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.StateManager
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#ChangeDetector
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#ChangeDetector
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextDependencies.ChangeDetector
+  nameWithType: DbContext.IDbContextDependencies.ChangeDetector
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.ChangeDetector
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.ChangeDetector
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.ChangeDetector
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#EntityGraphAttacher
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#EntityGraphAttacher
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextDependencies.EntityGraphAttacher
+  nameWithType: DbContext.IDbContextDependencies.EntityGraphAttacher
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.EntityGraphAttacher
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.EntityGraphAttacher
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.EntityGraphAttacher
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#UpdateLogger
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#UpdateLogger
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextDependencies.UpdateLogger
+  nameWithType: DbContext.IDbContextDependencies.UpdateLogger
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.UpdateLogger
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.UpdateLogger
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.UpdateLogger
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#InfrastructureLogger
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Internal#IDbContextDependencies#InfrastructureLogger
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IDbContextDependencies.InfrastructureLogger
+  nameWithType: DbContext.IDbContextDependencies.InfrastructureLogger
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.InfrastructureLogger
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.InfrastructureLogger
+  name.vb: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.InfrastructureLogger
+- uid: Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IInfrastructure{System#IServiceProvider}#Instance
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Microsoft#EntityFrameworkCore#Infrastructure#IInfrastructure{System#IServiceProvider}#Instance
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: IInfrastructure<IServiceProvider>.Instance
+  nameWithType: DbContext.IInfrastructure<IServiceProvider>.Instance
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<System.IServiceProvider>.Instance
+  nameWithType.vb: DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<System.IServiceProvider>.Instance
+  name.vb: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<System.IServiceProvider>.Instance
+- uid: Microsoft.EntityFrameworkCore.DbContext.SavingChanges
+  commentId: E:Microsoft.EntityFrameworkCore.DbContext.SavingChanges
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: SavingChanges
+  nameWithType: DbContext.SavingChanges
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SavingChanges
+- uid: Microsoft.EntityFrameworkCore.DbContext.SavedChanges
+  commentId: E:Microsoft.EntityFrameworkCore.DbContext.SavedChanges
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: SavedChanges
+  nameWithType: DbContext.SavedChanges
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SavedChanges
+- uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesFailed
+  commentId: E:Microsoft.EntityFrameworkCore.DbContext.SaveChangesFailed
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: SaveChangesFailed
+  nameWithType: DbContext.SaveChangesFailed
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChangesFailed
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.EntityFrameworkCore
+  commentId: N:Microsoft.EntityFrameworkCore
+  isExternal: true
+  name: Microsoft.EntityFrameworkCore
+  nameWithType: Microsoft.EntityFrameworkCore
+  fullName: Microsoft.EntityFrameworkCore
+- uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+  commentId: T:Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+  isExternal: true
+  name: IInfrastructure<T>
+  nameWithType: IInfrastructure<T>
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<T>
+  nameWithType.vb: IInfrastructure(Of T)
+  fullName.vb: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure(Of T)
+  name.vb: IInfrastructure(Of T)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+    name: IInfrastructure
+    nameWithType: IInfrastructure
+    fullName: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+    name: IInfrastructure
+    nameWithType: IInfrastructure
+    fullName: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.Infrastructure
+  commentId: N:Microsoft.EntityFrameworkCore.Infrastructure
+  isExternal: true
+  name: Microsoft.EntityFrameworkCore.Infrastructure
+  nameWithType: Microsoft.EntityFrameworkCore.Infrastructure
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure
+- uid: Microsoft.EntityFrameworkCore.Internal
+  commentId: N:Microsoft.EntityFrameworkCore.Internal
+  isExternal: true
+  name: Microsoft.EntityFrameworkCore.Internal
+  nameWithType: Microsoft.EntityFrameworkCore.Internal
+  fullName: Microsoft.EntityFrameworkCore.Internal
+- uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+  isExternal: true
+  name: Entry<TEntity>(TEntity)
+  nameWithType: DbContext.Entry<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Entry<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Entry(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Entry(Of TEntity)(TEntity)
+  name.vb: Entry(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+    name: Entry<TEntity>
+    nameWithType: DbContext.Entry<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Entry<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+    name: Entry(Of TEntity)
+    nameWithType: DbContext.Entry(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Entry(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+  isExternal: true
+  name: Add<TEntity>(TEntity)
+  nameWithType: DbContext.Add<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Add<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Add(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Add(Of TEntity)(TEntity)
+  name.vb: Add(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+    name: Add<TEntity>
+    nameWithType: DbContext.Add<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Add<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+    name: Add(Of TEntity)
+    nameWithType: DbContext.Add(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Add(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+  isExternal: true
+  name: AddAsync<TEntity>(TEntity, CancellationToken)
+  nameWithType: DbContext.AddAsync<TEntity>(TEntity, CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync<TEntity>(TEntity, System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.AddAsync(Of TEntity)(TEntity, CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddAsync(Of TEntity)(TEntity, System.Threading.CancellationToken)
+  name.vb: AddAsync(Of TEntity)(TEntity, CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+    name: AddAsync<TEntity>
+    nameWithType: DbContext.AddAsync<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+    name: AddAsync(Of TEntity)
+    nameWithType: DbContext.AddAsync(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+  isExternal: true
+  name: Attach<TEntity>(TEntity)
+  nameWithType: DbContext.Attach<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Attach<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Attach(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Attach(Of TEntity)(TEntity)
+  name.vb: Attach(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+    name: Attach<TEntity>
+    nameWithType: DbContext.Attach<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Attach<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+    name: Attach(Of TEntity)
+    nameWithType: DbContext.Attach(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Attach(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+  isExternal: true
+  name: Update<TEntity>(TEntity)
+  nameWithType: DbContext.Update<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Update<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Update(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Update(Of TEntity)(TEntity)
+  name.vb: Update(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+    name: Update<TEntity>
+    nameWithType: DbContext.Update<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Update<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+    name: Update(Of TEntity)
+    nameWithType: DbContext.Update(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Update(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+  isExternal: true
+  name: Remove<TEntity>(TEntity)
+  nameWithType: DbContext.Remove<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Remove<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Remove(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Remove(Of TEntity)(TEntity)
+  name.vb: Remove(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+    name: Remove<TEntity>
+    nameWithType: DbContext.Remove<TEntity>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Remove<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+    name: Remove(Of TEntity)
+    nameWithType: DbContext.Remove(Of TEntity)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.Remove(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+  isExternal: true
+  name: FromExpression<TResult>(Expression<Func<IQueryable<TResult>>>)
+  nameWithType: DbContext.FromExpression<TResult>(Expression<Func<IQueryable<TResult>>>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FromExpression<TResult>(System.Linq.Expressions.Expression<System.Func<System.Linq.IQueryable<TResult>>>)
+  nameWithType.vb: DbContext.FromExpression(Of TResult)(Expression(Of Func(Of IQueryable(Of TResult))))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FromExpression(Of TResult)(System.Linq.Expressions.Expression(Of System.Func(Of System.Linq.IQueryable(Of TResult))))
+  name.vb: FromExpression(Of TResult)(Expression(Of Func(Of IQueryable(Of TResult))))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+    name: FromExpression<TResult>
+    nameWithType: DbContext.FromExpression<TResult>
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FromExpression<TResult>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: System.Linq.IQueryable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+    name: FromExpression(Of TResult)
+    nameWithType: DbContext.FromExpression(Of TResult)
+    fullName: Microsoft.EntityFrameworkCore.DbContext.FromExpression(Of TResult)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: System.Linq.IQueryable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.DAL.DatabaseContext.#ctor*
+  commentId: Overload:NetScape.Modules.DAL.DatabaseContext.#ctor
+  name: DatabaseContext
+  nameWithType: DatabaseContext.DatabaseContext
+  fullName: NetScape.Modules.DAL.DatabaseContext.DatabaseContext
+- uid: Microsoft.EntityFrameworkCore.DbContextOptions{NetScape.Modules.DAL.DatabaseContext}
+  commentId: T:Microsoft.EntityFrameworkCore.DbContextOptions{NetScape.Modules.DAL.DatabaseContext}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbContextOptions`1
+  name: DbContextOptions<DatabaseContext>
+  nameWithType: DbContextOptions<DatabaseContext>
+  fullName: Microsoft.EntityFrameworkCore.DbContextOptions<NetScape.Modules.DAL.DatabaseContext>
+  nameWithType.vb: DbContextOptions(Of DatabaseContext)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContextOptions(Of NetScape.Modules.DAL.DatabaseContext)
+  name.vb: DbContextOptions(Of DatabaseContext)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    nameWithType: DbContextOptions
+    fullName: Microsoft.EntityFrameworkCore.DbContextOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NetScape.Modules.DAL.DatabaseContext
+    name: DatabaseContext
+    nameWithType: DatabaseContext
+    fullName: NetScape.Modules.DAL.DatabaseContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    nameWithType: DbContextOptions
+    fullName: Microsoft.EntityFrameworkCore.DbContextOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NetScape.Modules.DAL.DatabaseContext
+    name: DatabaseContext
+    nameWithType: DatabaseContext
+    fullName: NetScape.Modules.DAL.DatabaseContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Logging.ILoggerFactory
+  commentId: T:Microsoft.Extensions.Logging.ILoggerFactory
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Microsoft.Extensions.Logging.ILoggerFactory
+- uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+  commentId: T:Microsoft.EntityFrameworkCore.DbContextOptions`1
+  isExternal: true
+  name: DbContextOptions<TContext>
+  nameWithType: DbContextOptions<TContext>
+  fullName: Microsoft.EntityFrameworkCore.DbContextOptions<TContext>
+  nameWithType.vb: DbContextOptions(Of TContext)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContextOptions(Of TContext)
+  name.vb: DbContextOptions(Of TContext)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    nameWithType: DbContextOptions
+    fullName: Microsoft.EntityFrameworkCore.DbContextOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    nameWithType: DbContextOptions
+    fullName: Microsoft.EntityFrameworkCore.DbContextOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+- uid: NetScape.Modules.DAL.DatabaseContext.Players*
+  commentId: Overload:NetScape.Modules.DAL.DatabaseContext.Players
+  name: Players
+  nameWithType: DatabaseContext.Players
+  fullName: NetScape.Modules.DAL.DatabaseContext.Players
+- uid: Microsoft.EntityFrameworkCore.DbSet{NetScape.Abstractions.Model.Game.Player}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NetScape.Abstractions.Model.Game.Player}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  name: DbSet<Player>
+  nameWithType: DbSet<Player>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NetScape.Abstractions.Model.Game.Player>
+  nameWithType.vb: DbSet(Of Player)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NetScape.Abstractions.Model.Game.Player)
+  name.vb: DbSet(Of Player)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NetScape.Abstractions.Model.Game.Player
+    name: Player
+    nameWithType: Player
+    fullName: NetScape.Abstractions.Model.Game.Player
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NetScape.Abstractions.Model.Game.Player
+    name: Player
+    nameWithType: Player
+    fullName: NetScape.Abstractions.Model.Game.Player
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbSet`1
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet`1
+  isExternal: true
+  name: DbSet<TEntity>
+  nameWithType: DbSet<TEntity>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<TEntity>
+  nameWithType.vb: DbSet(Of TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of TEntity)
+  name.vb: DbSet(Of TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  name: OnModelCreating(ModelBuilder)
+  nameWithType: DbContext.OnModelCreating(ModelBuilder)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+    name: OnModelCreating
+    nameWithType: DbContext.OnModelCreating
+    fullName: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.EntityFrameworkCore.ModelBuilder
+    name: ModelBuilder
+    nameWithType: ModelBuilder
+    fullName: Microsoft.EntityFrameworkCore.ModelBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+    name: OnModelCreating
+    nameWithType: DbContext.OnModelCreating
+    fullName: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.EntityFrameworkCore.ModelBuilder
+    name: ModelBuilder
+    nameWithType: ModelBuilder
+    fullName: Microsoft.EntityFrameworkCore.ModelBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.DAL.DatabaseContext.OnModelCreating*
+  commentId: Overload:NetScape.Modules.DAL.DatabaseContext.OnModelCreating
+  name: OnModelCreating
+  nameWithType: DatabaseContext.OnModelCreating
+  fullName: NetScape.Modules.DAL.DatabaseContext.OnModelCreating
+- uid: Microsoft.EntityFrameworkCore.ModelBuilder
+  commentId: T:Microsoft.EntityFrameworkCore.ModelBuilder
+  parent: Microsoft.EntityFrameworkCore
+  isExternal: true
+  name: ModelBuilder
+  nameWithType: ModelBuilder
+  fullName: Microsoft.EntityFrameworkCore.ModelBuilder

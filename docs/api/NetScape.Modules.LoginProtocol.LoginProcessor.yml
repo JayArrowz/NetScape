@@ -1,0 +1,817 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.LoginProtocol.LoginProcessor
+  commentId: T:NetScape.Modules.LoginProtocol.LoginProcessor
+  id: LoginProcessor
+  parent: NetScape.Modules.LoginProtocol
+  children:
+  - NetScape.Modules.LoginProtocol.LoginProcessor.#ctor(Serilog.ILogger,NetScape.Abstractions.FileSystem.IPlayerSerializer)
+  - NetScape.Modules.LoginProtocol.LoginProcessor.Dispose
+  - NetScape.Modules.LoginProtocol.LoginProcessor.Enqueue(Rs2LoginRequest)
+  - NetScape.Modules.LoginProtocol.LoginProcessor.Start
+  langs:
+  - csharp
+  - vb
+  name: LoginProcessor
+  nameWithType: LoginProcessor
+  fullName: NetScape.Modules.LoginProtocol.LoginProcessor
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginProcessor.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: LoginProcessor
+    path: src/NetScape.Modules.LoginProtocol/LoginProcessor.cs
+    startLine: 13
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: 'public class LoginProcessor : ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse>, IStartable, IDisposable'
+    content.vb: >-
+      Public Class LoginProcessor
+          Implements ILoginProcessor(Of Rs2LoginRequest, Rs2LoginResponse), IStartable, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - NetScape.Abstractions.Interfaces.Login.ILoginProcessor{Rs2LoginRequest,NetScape.Modules.LoginProtocol.Rs2LoginResponse}
+  - Autofac.IStartable
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Modules.LoginProtocol.LoginProcessor.#ctor(Serilog.ILogger,NetScape.Abstractions.FileSystem.IPlayerSerializer)
+  commentId: M:NetScape.Modules.LoginProtocol.LoginProcessor.#ctor(Serilog.ILogger,NetScape.Abstractions.FileSystem.IPlayerSerializer)
+  id: '#ctor(Serilog.ILogger,NetScape.Abstractions.FileSystem.IPlayerSerializer)'
+  parent: NetScape.Modules.LoginProtocol.LoginProcessor
+  langs:
+  - csharp
+  - vb
+  name: LoginProcessor(ILogger, IPlayerSerializer)
+  nameWithType: LoginProcessor.LoginProcessor(ILogger, IPlayerSerializer)
+  fullName: NetScape.Modules.LoginProtocol.LoginProcessor.LoginProcessor(Serilog.ILogger, NetScape.Abstractions.FileSystem.IPlayerSerializer)
+  type: Constructor
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginProcessor.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: .ctor
+    path: src/NetScape.Modules.LoginProtocol/LoginProcessor.cs
+    startLine: 24
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  syntax:
+    content: public LoginProcessor(ILogger logger, IPlayerSerializer playerSerializer)
+    parameters:
+    - id: logger
+      type: Serilog.ILogger
+    - id: playerSerializer
+      type: NetScape.Abstractions.FileSystem.IPlayerSerializer
+    content.vb: Public Sub New(logger As ILogger, playerSerializer As IPlayerSerializer)
+  overload: NetScape.Modules.LoginProtocol.LoginProcessor.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.LoginProtocol.LoginProcessor.Enqueue(Rs2LoginRequest)
+  commentId: M:NetScape.Modules.LoginProtocol.LoginProcessor.Enqueue(Rs2LoginRequest)
+  id: Enqueue(Rs2LoginRequest)
+  parent: NetScape.Modules.LoginProtocol.LoginProcessor
+  langs:
+  - csharp
+  - vb
+  name: Enqueue(Rs2LoginRequest)
+  nameWithType: LoginProcessor.Enqueue(Rs2LoginRequest)
+  fullName: NetScape.Modules.LoginProtocol.LoginProcessor.Enqueue(Rs2LoginRequest)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginProcessor.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Enqueue
+    path: src/NetScape.Modules.LoginProtocol/LoginProcessor.cs
+    startLine: 35
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  summary: "\nEnqueues the specified request.\n"
+  example: []
+  syntax:
+    content: public void Enqueue(Rs2LoginRequest request)
+    parameters:
+    - id: request
+      type: Rs2LoginRequest
+      description: The request.
+    content.vb: Public Sub Enqueue(request As Rs2LoginRequest)
+  overload: NetScape.Modules.LoginProtocol.LoginProcessor.Enqueue*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Login already exists
+  implements:
+  - NetScape.Abstractions.Interfaces.Login.ILoginProcessor{Rs2LoginRequest,NetScape.Modules.LoginProtocol.Rs2LoginResponse}.Enqueue(Rs2LoginRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.LoginProtocol.LoginProcessor.Start
+  commentId: M:NetScape.Modules.LoginProtocol.LoginProcessor.Start
+  id: Start
+  parent: NetScape.Modules.LoginProtocol.LoginProcessor
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: LoginProcessor.Start()
+  fullName: NetScape.Modules.LoginProtocol.LoginProcessor.Start()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginProcessor.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Start
+    path: src/NetScape.Modules.LoginProtocol/LoginProcessor.cs
+    startLine: 107
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  summary: "\nPerform once-off startup processing.\n"
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: NetScape.Modules.LoginProtocol.LoginProcessor.Start*
+  implements:
+  - Autofac.IStartable.Start
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Modules.LoginProtocol.LoginProcessor.Dispose
+  commentId: M:NetScape.Modules.LoginProtocol.LoginProcessor.Dispose
+  id: Dispose
+  parent: NetScape.Modules.LoginProtocol.LoginProcessor
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: LoginProcessor.Dispose()
+  fullName: NetScape.Modules.LoginProtocol.LoginProcessor.Dispose()
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.LoginProtocol/LoginProcessor.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Dispose
+    path: src/NetScape.Modules.LoginProtocol/LoginProcessor.cs
+    startLine: 117
+  assemblies:
+  - NetScape.Modules.LoginProtocol
+  namespace: NetScape.Modules.LoginProtocol
+  summary: "\nPerforms application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.\n"
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: NetScape.Modules.LoginProtocol.LoginProcessor.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NetScape.Modules.LoginProtocol
+  commentId: N:NetScape.Modules.LoginProtocol
+  name: NetScape.Modules.LoginProtocol
+  nameWithType: NetScape.Modules.LoginProtocol
+  fullName: NetScape.Modules.LoginProtocol
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor{Rs2LoginRequest,NetScape.Modules.LoginProtocol.Rs2LoginResponse}
+  commentId: T:NetScape.Abstractions.Interfaces.Login.ILoginProcessor{Rs2LoginRequest,NetScape.Modules.LoginProtocol.Rs2LoginResponse}
+  parent: NetScape.Abstractions.Interfaces.Login
+  definition: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+  name: ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse>
+  nameWithType: ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse>
+  fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor<Rs2LoginRequest, NetScape.Modules.LoginProtocol.Rs2LoginResponse>
+  nameWithType.vb: ILoginProcessor(Of Rs2LoginRequest, Rs2LoginResponse)
+  fullName.vb: NetScape.Abstractions.Interfaces.Login.ILoginProcessor(Of Rs2LoginRequest, NetScape.Modules.LoginProtocol.Rs2LoginResponse)
+  name.vb: ILoginProcessor(Of Rs2LoginRequest, Rs2LoginResponse)
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+    name: ILoginProcessor
+    nameWithType: ILoginProcessor
+    fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Rs2LoginRequest
+    name: Rs2LoginRequest
+    nameWithType: Rs2LoginRequest
+    fullName: Rs2LoginRequest
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NetScape.Modules.LoginProtocol.Rs2LoginResponse
+    name: Rs2LoginResponse
+    nameWithType: Rs2LoginResponse
+    fullName: NetScape.Modules.LoginProtocol.Rs2LoginResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+    name: ILoginProcessor
+    nameWithType: ILoginProcessor
+    fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Rs2LoginRequest
+    name: Rs2LoginRequest
+    nameWithType: Rs2LoginRequest
+    fullName: Rs2LoginRequest
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NetScape.Modules.LoginProtocol.Rs2LoginResponse
+    name: Rs2LoginResponse
+    nameWithType: Rs2LoginResponse
+    fullName: NetScape.Modules.LoginProtocol.Rs2LoginResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Autofac.IStartable
+  commentId: T:Autofac.IStartable
+  parent: Autofac
+  isExternal: true
+  name: IStartable
+  nameWithType: IStartable
+  fullName: Autofac.IStartable
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+  commentId: T:NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+  name: ILoginProcessor<TRequest, TResponse>
+  nameWithType: ILoginProcessor<TRequest, TResponse>
+  fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor<TRequest, TResponse>
+  nameWithType.vb: ILoginProcessor(Of TRequest, TResponse)
+  fullName.vb: NetScape.Abstractions.Interfaces.Login.ILoginProcessor(Of TRequest, TResponse)
+  name.vb: ILoginProcessor(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+    name: ILoginProcessor
+    nameWithType: ILoginProcessor
+    fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2
+    name: ILoginProcessor
+    nameWithType: ILoginProcessor
+    fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Abstractions.Interfaces.Login
+  commentId: N:NetScape.Abstractions.Interfaces.Login
+  name: NetScape.Abstractions.Interfaces.Login
+  nameWithType: NetScape.Abstractions.Interfaces.Login
+  fullName: NetScape.Abstractions.Interfaces.Login
+- uid: Autofac
+  commentId: N:Autofac
+  isExternal: true
+  name: Autofac
+  nameWithType: Autofac
+  fullName: Autofac
+- uid: NetScape.Modules.LoginProtocol.LoginProcessor.#ctor*
+  commentId: Overload:NetScape.Modules.LoginProtocol.LoginProcessor.#ctor
+  name: LoginProcessor
+  nameWithType: LoginProcessor.LoginProcessor
+  fullName: NetScape.Modules.LoginProtocol.LoginProcessor.LoginProcessor
+- uid: Serilog.ILogger
+  commentId: T:Serilog.ILogger
+  parent: Serilog
+  isExternal: true
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Serilog.ILogger
+- uid: NetScape.Abstractions.FileSystem.IPlayerSerializer
+  commentId: T:NetScape.Abstractions.FileSystem.IPlayerSerializer
+  parent: NetScape.Abstractions.FileSystem
+  name: IPlayerSerializer
+  nameWithType: IPlayerSerializer
+  fullName: NetScape.Abstractions.FileSystem.IPlayerSerializer
+- uid: Serilog
+  commentId: N:Serilog
+  isExternal: true
+  name: Serilog
+  nameWithType: Serilog
+  fullName: Serilog
+- uid: NetScape.Abstractions.FileSystem
+  commentId: N:NetScape.Abstractions.FileSystem
+  name: NetScape.Abstractions.FileSystem
+  nameWithType: NetScape.Abstractions.FileSystem
+  fullName: NetScape.Abstractions.FileSystem
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+- uid: NetScape.Modules.LoginProtocol.LoginProcessor.Enqueue*
+  commentId: Overload:NetScape.Modules.LoginProtocol.LoginProcessor.Enqueue
+  name: Enqueue
+  nameWithType: LoginProcessor.Enqueue
+  fullName: NetScape.Modules.LoginProtocol.LoginProcessor.Enqueue
+- uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor{Rs2LoginRequest,NetScape.Modules.LoginProtocol.Rs2LoginResponse}.Enqueue(Rs2LoginRequest)
+  commentId: M:NetScape.Abstractions.Interfaces.Login.ILoginProcessor{Rs2LoginRequest,NetScape.Modules.LoginProtocol.Rs2LoginResponse}.Enqueue(Rs2LoginRequest)
+  parent: NetScape.Abstractions.Interfaces.Login.ILoginProcessor{Rs2LoginRequest,NetScape.Modules.LoginProtocol.Rs2LoginResponse}
+  definition: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue(`0)
+  name: Enqueue(Rs2LoginRequest)
+  nameWithType: ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse>.Enqueue(Rs2LoginRequest)
+  fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor<Rs2LoginRequest, NetScape.Modules.LoginProtocol.Rs2LoginResponse>.Enqueue(Rs2LoginRequest)
+  nameWithType.vb: ILoginProcessor(Of Rs2LoginRequest, Rs2LoginResponse).Enqueue(Rs2LoginRequest)
+  fullName.vb: NetScape.Abstractions.Interfaces.Login.ILoginProcessor(Of Rs2LoginRequest, NetScape.Modules.LoginProtocol.Rs2LoginResponse).Enqueue(Rs2LoginRequest)
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue(`0)
+    name: Enqueue
+    nameWithType: ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse>.Enqueue
+    fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor<Rs2LoginRequest, NetScape.Modules.LoginProtocol.Rs2LoginResponse>.Enqueue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Rs2LoginRequest
+    name: Rs2LoginRequest
+    nameWithType: Rs2LoginRequest
+    fullName: Rs2LoginRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue(`0)
+    name: Enqueue
+    nameWithType: ILoginProcessor(Of Rs2LoginRequest, Rs2LoginResponse).Enqueue
+    fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor(Of Rs2LoginRequest, NetScape.Modules.LoginProtocol.Rs2LoginResponse).Enqueue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Rs2LoginRequest
+    name: Rs2LoginRequest
+    nameWithType: Rs2LoginRequest
+    fullName: Rs2LoginRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Rs2LoginRequest
+  commentId: '!:Rs2LoginRequest'
+  isExternal: true
+  name: Rs2LoginRequest
+  nameWithType: Rs2LoginRequest
+  fullName: Rs2LoginRequest
+- uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue(`0)
+  commentId: M:NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue(`0)
+  name: Enqueue(TRequest)
+  nameWithType: ILoginProcessor<TRequest, TResponse>.Enqueue(TRequest)
+  fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor<TRequest, TResponse>.Enqueue(TRequest)
+  nameWithType.vb: ILoginProcessor(Of TRequest, TResponse).Enqueue(TRequest)
+  fullName.vb: NetScape.Abstractions.Interfaces.Login.ILoginProcessor(Of TRequest, TResponse).Enqueue(TRequest)
+  spec.csharp:
+  - uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue(`0)
+    name: Enqueue
+    nameWithType: ILoginProcessor<TRequest, TResponse>.Enqueue
+    fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor<TRequest, TResponse>.Enqueue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NetScape.Abstractions.Interfaces.Login.ILoginProcessor`2.Enqueue(`0)
+    name: Enqueue
+    nameWithType: ILoginProcessor(Of TRequest, TResponse).Enqueue
+    fullName: NetScape.Abstractions.Interfaces.Login.ILoginProcessor(Of TRequest, TResponse).Enqueue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.LoginProtocol.LoginProcessor.Start*
+  commentId: Overload:NetScape.Modules.LoginProtocol.LoginProcessor.Start
+  name: Start
+  nameWithType: LoginProcessor.Start
+  fullName: NetScape.Modules.LoginProtocol.LoginProcessor.Start
+- uid: Autofac.IStartable.Start
+  commentId: M:Autofac.IStartable.Start
+  parent: Autofac.IStartable
+  isExternal: true
+  name: Start()
+  nameWithType: IStartable.Start()
+  fullName: Autofac.IStartable.Start()
+  spec.csharp:
+  - uid: Autofac.IStartable.Start
+    name: Start
+    nameWithType: IStartable.Start
+    fullName: Autofac.IStartable.Start
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Autofac.IStartable.Start
+    name: Start
+    nameWithType: IStartable.Start
+    fullName: Autofac.IStartable.Start
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NetScape.Modules.LoginProtocol.LoginProcessor.Dispose*
+  commentId: Overload:NetScape.Modules.LoginProtocol.LoginProcessor.Dispose
+  name: Dispose
+  nameWithType: LoginProcessor.Dispose
+  fullName: NetScape.Modules.LoginProtocol.LoginProcessor.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

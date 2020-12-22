@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.Login.ILoginProvider
+  commentId: T:NetScape.Abstractions.Interfaces.Login.ILoginProvider
+  id: ILoginProvider
+  parent: NetScape.Abstractions.Interfaces.Login
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ILoginProvider
+  nameWithType: ILoginProvider
+  fullName: NetScape.Abstractions.Interfaces.Login.ILoginProvider
+  type: Interface
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/Login/ILoginProvider.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: ILoginProvider
+    path: src/NetScape.Abstractions/Interfaces/Login/ILoginProvider.cs
+    startLine: 4
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.Login
+  syntax:
+    content: 'public interface ILoginProvider : IChannelHandlerProvider'
+    content.vb: >-
+      Public Interface ILoginProvider
+          Inherits IChannelHandlerProvider
+  inheritedMembers:
+  - NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: NetScape.Abstractions.Interfaces.Login
+  commentId: N:NetScape.Abstractions.Interfaces.Login
+  name: NetScape.Abstractions.Interfaces.Login
+  nameWithType: NetScape.Abstractions.Interfaces.Login
+  fullName: NetScape.Abstractions.Interfaces.Login
+- uid: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide
+  commentId: P:NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide
+  parent: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider
+  name: Provide
+  nameWithType: IChannelHandlerProvider.Provide
+  fullName: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide
+- uid: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider
+  commentId: T:NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider
+  parent: NetScape.Abstractions.Interfaces.IO
+  name: IChannelHandlerProvider
+  nameWithType: IChannelHandlerProvider
+  fullName: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider
+- uid: NetScape.Abstractions.Interfaces.IO
+  commentId: N:NetScape.Abstractions.Interfaces.IO
+  name: NetScape.Abstractions.Interfaces.IO
+  nameWithType: NetScape.Abstractions.Interfaces.IO
+  fullName: NetScape.Abstractions.Interfaces.IO

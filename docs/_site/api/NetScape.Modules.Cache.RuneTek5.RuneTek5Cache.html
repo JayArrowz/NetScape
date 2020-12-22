@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RuneTek5Cache
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RuneTek5Cache
+   ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache">
+  
+  
+  <h1 id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache" class="text-break">Class RuneTek5Cache
+  </h1>
+  <div class="markdown level0 summary"><p>Can read and write to a RuneTek5 type cache consisting of a single data (.dat2) file and some index (.id#) files.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NetScape.Modules.Cache.CacheBase.html">CacheBase</a></div>
+    <div class="level2"><a class="xref" href="NetScape.Modules.Cache.ReferenceTableCacheBase.html">ReferenceTableCacheBase</a></div>
+    <div class="level3"><span class="xref">RuneTek5Cache</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NetScape.Abstractions.Interfaces.Cache.IReferenceTableCache.html">IReferenceTableCache</a></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NetScape.Modules.Cache.ReferenceTableCacheBase.html#NetScape_Modules_Cache_ReferenceTableCacheBase_CachedReferenceTables">ReferenceTableCacheBase.CachedReferenceTables</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Modules.Cache.ReferenceTableCacheBase.html#NetScape_Modules_Cache_ReferenceTableCacheBase_GetReferenceTable_NetScape_Abstractions_Cache_CacheIndex_System_Boolean_">ReferenceTableCacheBase.GetReferenceTable(CacheIndex, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Modules.Cache.ReferenceTableCacheBase.html#NetScape_Modules_Cache_ReferenceTableCacheBase_GetFileInfo_NetScape_Abstractions_Cache_CacheIndex_System_Int32_">ReferenceTableCacheBase.GetFileInfo(CacheIndex, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Modules.Cache.ReferenceTableCacheBase.html#NetScape_Modules_Cache_ReferenceTableCacheBase_PutFileInfo_NetScape_Abstractions_Cache_CacheFileInfo_">ReferenceTableCacheBase.PutFileInfo(CacheFileInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Modules.Cache.ReferenceTableCacheBase.html#NetScape_Modules_Cache_ReferenceTableCacheBase_GetFileIds_NetScape_Abstractions_Cache_CacheIndex_">ReferenceTableCacheBase.GetFileIds(CacheIndex)</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Modules.Cache.ReferenceTableCacheBase.html#NetScape_Modules_Cache_ReferenceTableCacheBase_FlushCachedReferenceTables">ReferenceTableCacheBase.FlushCachedReferenceTables()</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Modules.Cache.CacheBase.html#NetScape_Modules_Cache_CacheBase_GetFile__1_NetScape_Abstractions_Cache_CacheIndex_System_Int32_">CacheBase.GetFile&lt;T&gt;(CacheIndex, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Modules.Cache.CacheBase.html#NetScape_Modules_Cache_CacheBase_PutFile_NetScape_Abstractions_Cache_CacheFileBase_">CacheBase.PutFile(CacheFileBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Modules.Cache.CacheBase.html#NetScape_Modules_Cache_CacheBase_CopyFile_NetScape_Abstractions_Cache_CacheIndex_System_Int32_NetScape_Modules_Cache_CacheBase_">CacheBase.CopyFile(CacheIndex, Int32, CacheBase)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NetScape.Modules.Cache.RuneTek5.html">NetScape.Modules.Cache.RuneTek5</a></h6>
+  <h6><strong>Assembly</strong>: NetScape.Modules.Cache.dll</h6>
+  <h5 id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RuneTek5Cache : ReferenceTableCacheBase, IReferenceTableCache, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Cache_RuneTek5_RuneTek5Cache__ctor_NetScape_Abstractions_Interfaces_Cache_IFileStore_.md&amp;value=---%0Auid%3A%20NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.%23ctor(NetScape.Abstractions.Interfaces.Cache.IFileStore)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/docfx_project/src/NetScape.Modules.Cache/RuneTek5/RuneTek5Cache.cs/#L27">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache__ctor_" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.#ctor*"></a>
+  <h4 id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache__ctor_NetScape_Abstractions_Interfaces_Cache_IFileStore_" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.#ctor(NetScape.Abstractions.Interfaces.Cache.IFileStore)">RuneTek5Cache(IFileStore)</h4>
+  <div class="markdown level1 summary"><p>Creates an interface on the cache stored in the given directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RuneTek5Cache(IFileStore fileStore)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Interfaces.Cache.IFileStore.html">IFileStore</a></td>
+        <td><span class="parametername">fileStore</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_Dispose.md&amp;value=---%0Auid%3A%20NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/docfx_project/src/NetScape.Modules.Cache/RuneTek5/RuneTek5Cache.cs/#L55">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_Dispose_" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.Dispose*"></a>
+  <h4 id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_Dispose" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Dispose()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NetScape.Modules.Cache.ReferenceTableCacheBase.html#NetScape_Modules_Cache_ReferenceTableCacheBase_Dispose">ReferenceTableCacheBase.Dispose()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_GetBinaryFile_NetScape_Abstractions_Cache_CacheFileInfo_.md&amp;value=---%0Auid%3A%20NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/docfx_project/src/NetScape.Modules.Cache/RuneTek5/RuneTek5Cache.cs/#L37">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_GetBinaryFile_" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.GetBinaryFile*"></a>
+  <h4 id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_GetBinaryFile_NetScape_Abstractions_Cache_CacheFileInfo_" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.GetBinaryFile(NetScape.Abstractions.Cache.CacheFileInfo)">GetBinaryFile(CacheFileInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override BinaryFile GetBinaryFile(CacheFileInfo fileInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Cache.CacheFileInfo.html">CacheFileInfo</a></td>
+        <td><span class="parametername">fileInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Cache.BinaryFile.html">BinaryFile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NetScape.Modules.Cache.CacheBase.html#NetScape_Modules_Cache_CacheBase_GetBinaryFile_NetScape_Abstractions_Cache_CacheFileInfo_">CacheBase.GetBinaryFile(CacheFileInfo)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_GetIndexes.md&amp;value=---%0Auid%3A%20NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.GetIndexes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/docfx_project/src/NetScape.Modules.Cache/RuneTek5/RuneTek5Cache.cs/#L32">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_GetIndexes_" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.GetIndexes*"></a>
+  <h4 id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_GetIndexes" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.GetIndexes">GetIndexes()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;CacheIndex&gt; GetIndexes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="NetScape.Abstractions.Cache.CacheIndex.html">CacheIndex</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NetScape.Modules.Cache.CacheBase.html#NetScape_Modules_Cache_CacheBase_GetIndexes">CacheBase.GetIndexes()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_PutBinaryFile_NetScape_Abstractions_Cache_BinaryFile_.md&amp;value=---%0Auid%3A%20NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/docfx_project/src/NetScape.Modules.Cache/RuneTek5/RuneTek5Cache.cs/#L49">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_PutBinaryFile_" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.PutBinaryFile*"></a>
+  <h4 id="NetScape_Modules_Cache_RuneTek5_RuneTek5Cache_PutBinaryFile_NetScape_Abstractions_Cache_BinaryFile_" data-uid="NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.PutBinaryFile(NetScape.Abstractions.Cache.BinaryFile)">PutBinaryFile(BinaryFile)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void PutBinaryFile(BinaryFile file)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Cache.BinaryFile.html">BinaryFile</a></td>
+        <td><span class="parametername">file</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NetScape.Modules.Cache.CacheBase.html#NetScape_Modules_Cache_CacheBase_PutBinaryFile_NetScape_Abstractions_Cache_BinaryFile_">CacheBase.PutBinaryFile(BinaryFile)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NetScape.Abstractions.Interfaces.Cache.IReferenceTableCache.html">IReferenceTableCache</a>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Cache_RuneTek5_RuneTek5Cache.md&amp;value=---%0Auid%3A%20NetScape.Modules.Cache.RuneTek5.RuneTek5Cache%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/blob/master/docfx_project/src/NetScape.Modules.Cache/RuneTek5/RuneTek5Cache.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

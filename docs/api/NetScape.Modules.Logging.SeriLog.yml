@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Modules.Logging.SeriLog
+  commentId: N:NetScape.Modules.Logging.SeriLog
+  id: NetScape.Modules.Logging.SeriLog
+  children:
+  - NetScape.Modules.Logging.SeriLog.SeriLogModule
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Modules.Logging.SeriLog
+  nameWithType: NetScape.Modules.Logging.SeriLog
+  fullName: NetScape.Modules.Logging.SeriLog
+  type: Namespace
+  assemblies:
+  - NetScape.Modules.Logging.SeriLog
+references:
+- uid: NetScape.Modules.Logging.SeriLog.SeriLogModule
+  commentId: T:NetScape.Modules.Logging.SeriLog.SeriLogModule
+  name: SeriLogModule
+  nameWithType: SeriLogModule
+  fullName: NetScape.Modules.Logging.SeriLog.SeriLogModule

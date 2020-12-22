@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop
+  commentId: N:NetScape.Abstractions.Interfaces.IO.EventLoop
+  id: NetScape.Abstractions.Interfaces.IO.EventLoop
+  children:
+  - NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Abstractions.Interfaces.IO.EventLoop
+  nameWithType: NetScape.Abstractions.Interfaces.IO.EventLoop
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop
+  type: Namespace
+  assemblies:
+  - NetScape.Abstractions
+references:
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  commentId: T:NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+  parent: NetScape.Abstractions.Interfaces.IO.EventLoop
+  name: IEventLoopGroupFactory
+  nameWithType: IEventLoopGroupFactory
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory
+- uid: NetScape.Abstractions.Interfaces.IO.EventLoop
+  commentId: N:NetScape.Abstractions.Interfaces.IO.EventLoop
+  name: NetScape.Abstractions.Interfaces.IO.EventLoop
+  nameWithType: NetScape.Abstractions.Interfaces.IO.EventLoop
+  fullName: NetScape.Abstractions.Interfaces.IO.EventLoop

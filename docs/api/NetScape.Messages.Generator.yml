@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Messages.Generator
+  commentId: N:NetScape.Messages.Generator
+  id: NetScape.Messages.Generator
+  children:
+  - NetScape.Messages.Generator.FrameParameters
+  - NetScape.Messages.Generator.GeneratorData
+  - NetScape.Messages.Generator.GeneratorMessageType
+  - NetScape.Messages.Generator.MessageGenerator
+  - NetScape.Messages.Generator.MessageParameters
+  langs:
+  - csharp
+  - vb
+  name: NetScape.Messages.Generator
+  nameWithType: NetScape.Messages.Generator
+  fullName: NetScape.Messages.Generator
+  type: Namespace
+  assemblies:
+  - NetScape.Modules.Messages.Generator
+references:
+- uid: NetScape.Messages.Generator.FrameParameters
+  commentId: T:NetScape.Messages.Generator.FrameParameters
+  name: FrameParameters
+  nameWithType: FrameParameters
+  fullName: NetScape.Messages.Generator.FrameParameters
+- uid: NetScape.Messages.Generator.GeneratorMessageType
+  commentId: T:NetScape.Messages.Generator.GeneratorMessageType
+  parent: NetScape.Messages.Generator
+  name: GeneratorMessageType
+  nameWithType: GeneratorMessageType
+  fullName: NetScape.Messages.Generator.GeneratorMessageType
+- uid: NetScape.Messages.Generator.GeneratorData
+  commentId: T:NetScape.Messages.Generator.GeneratorData
+  name: GeneratorData
+  nameWithType: GeneratorData
+  fullName: NetScape.Messages.Generator.GeneratorData
+- uid: NetScape.Messages.Generator.MessageGenerator
+  commentId: T:NetScape.Messages.Generator.MessageGenerator
+  name: MessageGenerator
+  nameWithType: MessageGenerator
+  fullName: NetScape.Messages.Generator.MessageGenerator
+- uid: NetScape.Messages.Generator.MessageParameters
+  commentId: T:NetScape.Messages.Generator.MessageParameters
+  name: MessageParameters
+  nameWithType: MessageParameters
+  fullName: NetScape.Messages.Generator.MessageParameters
+- uid: NetScape.Messages.Generator
+  commentId: N:NetScape.Messages.Generator
+  name: NetScape.Messages.Generator
+  nameWithType: NetScape.Messages.Generator
+  fullName: NetScape.Messages.Generator

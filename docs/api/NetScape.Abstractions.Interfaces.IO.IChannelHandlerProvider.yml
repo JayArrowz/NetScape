@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider
+  commentId: T:NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider
+  id: IChannelHandlerProvider
+  parent: NetScape.Abstractions.Interfaces.IO
+  children:
+  - NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide
+  langs:
+  - csharp
+  - vb
+  name: IChannelHandlerProvider
+  nameWithType: IChannelHandlerProvider
+  fullName: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider
+  type: Interface
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/IChannelHandlerProvider.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: IChannelHandlerProvider
+    path: src/NetScape.Abstractions/Interfaces/IO/IChannelHandlerProvider.cs
+    startLine: 8
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO
+  summary: "\nProvides channel handlers\n"
+  example: []
+  syntax:
+    content: public interface IChannelHandlerProvider
+    content.vb: Public Interface IChannelHandlerProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide
+  commentId: P:NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide
+  id: Provide
+  parent: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider
+  langs:
+  - csharp
+  - vb
+  name: Provide
+  nameWithType: IChannelHandlerProvider.Provide
+  fullName: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide
+  type: Property
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Abstractions/Interfaces/IO/IChannelHandlerProvider.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Provide
+    path: src/NetScape.Abstractions/Interfaces/IO/IChannelHandlerProvider.cs
+    startLine: 10
+  assemblies:
+  - NetScape.Abstractions
+  namespace: NetScape.Abstractions.Interfaces.IO
+  syntax:
+    content: Func<IChannelHandler[]> Provide { get; }
+    parameters: []
+    return:
+      type: System.Func{DotNetty.Transport.Channels.IChannelHandler[]}
+    content.vb: ReadOnly Property Provide As Func(Of IChannelHandler())
+  overload: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: NetScape.Abstractions.Interfaces.IO
+  commentId: N:NetScape.Abstractions.Interfaces.IO
+  name: NetScape.Abstractions.Interfaces.IO
+  nameWithType: NetScape.Abstractions.Interfaces.IO
+  fullName: NetScape.Abstractions.Interfaces.IO
+- uid: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide*
+  commentId: Overload:NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide
+  name: Provide
+  nameWithType: IChannelHandlerProvider.Provide
+  fullName: NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.Provide
+- uid: System.Func{DotNetty.Transport.Channels.IChannelHandler[]}
+  commentId: T:System.Func{DotNetty.Transport.Channels.IChannelHandler[]}
+  parent: System
+  definition: System.Func`1
+  name: Func<IChannelHandler[]>
+  nameWithType: Func<IChannelHandler[]>
+  fullName: System.Func<DotNetty.Transport.Channels.IChannelHandler[]>
+  nameWithType.vb: Func(Of IChannelHandler())
+  fullName.vb: System.Func(Of DotNetty.Transport.Channels.IChannelHandler())
+  name.vb: Func(Of IChannelHandler())
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DotNetty.Transport.Channels.IChannelHandler
+    name: IChannelHandler
+    nameWithType: IChannelHandler
+    fullName: DotNetty.Transport.Channels.IChannelHandler
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DotNetty.Transport.Channels.IChannelHandler
+    name: IChannelHandler
+    nameWithType: IChannelHandler
+    fullName: DotNetty.Transport.Channels.IChannelHandler
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

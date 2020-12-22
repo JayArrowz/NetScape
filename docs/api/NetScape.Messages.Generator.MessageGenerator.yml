@@ -1,0 +1,546 @@
+### YamlMime:ManagedReference
+items:
+- uid: NetScape.Messages.Generator.MessageGenerator
+  commentId: T:NetScape.Messages.Generator.MessageGenerator
+  id: MessageGenerator
+  parent: NetScape.Messages.Generator
+  children:
+  - NetScape.Messages.Generator.MessageGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+  - NetScape.Messages.Generator.MessageGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+  langs:
+  - csharp
+  - vb
+  name: MessageGenerator
+  nameWithType: MessageGenerator
+  fullName: NetScape.Messages.Generator.MessageGenerator
+  type: Class
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Generator/MessageGenerator.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: MessageGenerator
+    path: src/NetScape.Modules.Messages.Generator/MessageGenerator.cs
+    startLine: 10
+  assemblies:
+  - NetScape.Modules.Messages.Generator
+  namespace: NetScape.Messages.Generator
+  syntax:
+    content: >-
+      [Generator]
+
+      public class MessageGenerator : ISourceGenerator
+    content.vb: >-
+      <Generator>
+
+      Public Class MessageGenerator
+          Implements ISourceGenerator
+  inheritance:
+  - System.Object
+  implements:
+  - Microsoft.CodeAnalysis.ISourceGenerator
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Microsoft.CodeAnalysis.GeneratorAttribute
+    ctor: Microsoft.CodeAnalysis.GeneratorAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NetScape.Messages.Generator.MessageGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+  commentId: M:NetScape.Messages.Generator.MessageGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+  id: Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+  parent: NetScape.Messages.Generator.MessageGenerator
+  langs:
+  - csharp
+  - vb
+  name: Execute(GeneratorExecutionContext)
+  nameWithType: MessageGenerator.Execute(GeneratorExecutionContext)
+  fullName: NetScape.Messages.Generator.MessageGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Generator/MessageGenerator.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Execute
+    path: src/NetScape.Modules.Messages.Generator/MessageGenerator.cs
+    startLine: 13
+  assemblies:
+  - NetScape.Modules.Messages.Generator
+  namespace: NetScape.Messages.Generator
+  syntax:
+    content: public void Execute(GeneratorExecutionContext context)
+    parameters:
+    - id: context
+      type: Microsoft.CodeAnalysis.GeneratorExecutionContext
+    content.vb: Public Sub Execute(context As GeneratorExecutionContext)
+  overload: NetScape.Messages.Generator.MessageGenerator.Execute*
+  implements:
+  - Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NetScape.Messages.Generator.MessageGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+  commentId: M:NetScape.Messages.Generator.MessageGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+  id: Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+  parent: NetScape.Messages.Generator.MessageGenerator
+  langs:
+  - csharp
+  - vb
+  name: Initialize(GeneratorInitializationContext)
+  nameWithType: MessageGenerator.Initialize(GeneratorInitializationContext)
+  fullName: NetScape.Messages.Generator.MessageGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+  type: Method
+  source:
+    remote:
+      path: docfx_project/src/NetScape.Modules.Messages.Generator/MessageGenerator.cs
+      branch: master
+      repo: https://github.com/JayArrowz/NetScape.git
+    id: Initialize
+    path: src/NetScape.Modules.Messages.Generator/MessageGenerator.cs
+    startLine: 90
+  assemblies:
+  - NetScape.Modules.Messages.Generator
+  namespace: NetScape.Messages.Generator
+  syntax:
+    content: public void Initialize(GeneratorInitializationContext context)
+    parameters:
+    - id: context
+      type: Microsoft.CodeAnalysis.GeneratorInitializationContext
+    content.vb: Public Sub Initialize(context As GeneratorInitializationContext)
+  overload: NetScape.Messages.Generator.MessageGenerator.Initialize*
+  implements:
+  - Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NetScape.Messages.Generator
+  commentId: N:NetScape.Messages.Generator
+  name: NetScape.Messages.Generator
+  nameWithType: NetScape.Messages.Generator
+  fullName: NetScape.Messages.Generator
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Microsoft.CodeAnalysis.ISourceGenerator
+  commentId: T:Microsoft.CodeAnalysis.ISourceGenerator
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  name: ISourceGenerator
+  nameWithType: ISourceGenerator
+  fullName: Microsoft.CodeAnalysis.ISourceGenerator
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+- uid: NetScape.Messages.Generator.MessageGenerator.Execute*
+  commentId: Overload:NetScape.Messages.Generator.MessageGenerator.Execute
+  name: Execute
+  nameWithType: MessageGenerator.Execute
+  fullName: NetScape.Messages.Generator.MessageGenerator.Execute
+- uid: Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+  commentId: M:Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+  parent: Microsoft.CodeAnalysis.ISourceGenerator
+  isExternal: true
+  name: Execute(GeneratorExecutionContext)
+  nameWithType: ISourceGenerator.Execute(GeneratorExecutionContext)
+  fullName: Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+  spec.csharp:
+  - uid: Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+    name: Execute
+    nameWithType: ISourceGenerator.Execute
+    fullName: Microsoft.CodeAnalysis.ISourceGenerator.Execute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.CodeAnalysis.GeneratorExecutionContext
+    name: GeneratorExecutionContext
+    nameWithType: GeneratorExecutionContext
+    fullName: Microsoft.CodeAnalysis.GeneratorExecutionContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)
+    name: Execute
+    nameWithType: ISourceGenerator.Execute
+    fullName: Microsoft.CodeAnalysis.ISourceGenerator.Execute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.CodeAnalysis.GeneratorExecutionContext
+    name: GeneratorExecutionContext
+    nameWithType: GeneratorExecutionContext
+    fullName: Microsoft.CodeAnalysis.GeneratorExecutionContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.CodeAnalysis.GeneratorExecutionContext
+  commentId: T:Microsoft.CodeAnalysis.GeneratorExecutionContext
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  name: GeneratorExecutionContext
+  nameWithType: GeneratorExecutionContext
+  fullName: Microsoft.CodeAnalysis.GeneratorExecutionContext
+- uid: NetScape.Messages.Generator.MessageGenerator.Initialize*
+  commentId: Overload:NetScape.Messages.Generator.MessageGenerator.Initialize
+  name: Initialize
+  nameWithType: MessageGenerator.Initialize
+  fullName: NetScape.Messages.Generator.MessageGenerator.Initialize
+- uid: Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+  commentId: M:Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+  parent: Microsoft.CodeAnalysis.ISourceGenerator
+  isExternal: true
+  name: Initialize(GeneratorInitializationContext)
+  nameWithType: ISourceGenerator.Initialize(GeneratorInitializationContext)
+  fullName: Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+  spec.csharp:
+  - uid: Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+    name: Initialize
+    nameWithType: ISourceGenerator.Initialize
+    fullName: Microsoft.CodeAnalysis.ISourceGenerator.Initialize
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.CodeAnalysis.GeneratorInitializationContext
+    name: GeneratorInitializationContext
+    nameWithType: GeneratorInitializationContext
+    fullName: Microsoft.CodeAnalysis.GeneratorInitializationContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)
+    name: Initialize
+    nameWithType: ISourceGenerator.Initialize
+    fullName: Microsoft.CodeAnalysis.ISourceGenerator.Initialize
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.CodeAnalysis.GeneratorInitializationContext
+    name: GeneratorInitializationContext
+    nameWithType: GeneratorInitializationContext
+    fullName: Microsoft.CodeAnalysis.GeneratorInitializationContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.CodeAnalysis.GeneratorInitializationContext
+  commentId: T:Microsoft.CodeAnalysis.GeneratorInitializationContext
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  name: GeneratorInitializationContext
+  nameWithType: GeneratorInitializationContext
+  fullName: Microsoft.CodeAnalysis.GeneratorInitializationContext
