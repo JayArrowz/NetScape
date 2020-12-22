@@ -7,7 +7,7 @@ namespace NetScape.Abstractions.Interfaces.IO
     public interface IGameServer : IAsyncDisposable
     {
         /// <summary>
-        /// Server Channel
+        /// The Server Channel
         /// </summary>
         IChannel Channel { get; set; }
 

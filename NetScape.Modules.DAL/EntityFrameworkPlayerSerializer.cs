@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace NetScape.Modules.DAL
 {
+    /// <summary>
+    /// Serializes/Deserializes players using entity framework
+    /// </summary>
+    /// <seealso cref="NetScape.Abstractions.FileSystem.IPlayerSerializer" />
     public class EntityFrameworkPlayerSerializer : IPlayerSerializer
     {
         private readonly IDbContextFactory<DatabaseContext> _dbContextFactory;

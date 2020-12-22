@@ -28,6 +28,11 @@ namespace NetScape.Modules.LoginProtocol
             _playerSerializer = playerSerializer;
         }
 
+        /// <summary>
+        /// Enqueues the specified request.
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <exception cref="InvalidOperationException">Login already exists</exception>
         public void Enqueue(Rs2LoginRequest request)
         {
             lock (_lockObject)
@@ -35,14 +40,21 @@ namespace NetScape.Modules.LoginProtocol
                 var loginExists = _loginRequests.Any(t => t.Credentials.Username.Equals(request.Credentials.Username, StringComparison.InvariantCultureIgnoreCase)
                 && t.Credentials.Password.Equals(request.Credentials.Password, StringComparison.InvariantCultureIgnoreCase));
 
-                if (!loginExists)
+                if (loginExists)
                 {
-                    _loginRequests.Add(request);
+                    throw new InvalidOperationException("Login already exists");
                 }
+
+                _loginRequests.Add(request);
             }
         }
 
-        private async Task<Rs2LoginResponse> Process(Rs2LoginRequest request)
+        /// <summary>
+        /// Processes a single by retriving the player from <see cref="IPlayerSerializer"/>
+        /// </summary>
+        /// <param name="request">The login request.</param>
+        /// <returns></returns>
+        private async Task<Rs2LoginResponse> ProcessAsync(Rs2LoginRequest request)
         {
             var password = request.Credentials.Password;
             var username = request.Credentials.Username;
@@ -67,6 +79,9 @@ namespace NetScape.Modules.LoginProtocol
             return new Rs2LoginResponse { Status = LoginStatus.StatusOk };
         }
 
+        /// <summary>
+        /// Handles the login queue
+        /// </summary>
         private async Task ProcessLoginsAsync()
         {
             while (!_cancellationToken.IsCancellationRequested)
@@ -76,7 +91,7 @@ namespace NetScape.Modules.LoginProtocol
                     var requests = _loginRequests.ToList();
                     foreach (var loginRequest in requests)
                     {
-                        var loginResult = await Process(loginRequest);
+                        var loginResult = await ProcessAsync(loginRequest);
                         _loginRequests.Remove(loginRequest);
                         loginRequest.Result = loginResult;
                         _logger.Debug("Processed Login Request: {@LoginRequest}", loginRequest);
@@ -87,6 +102,9 @@ namespace NetScape.Modules.LoginProtocol
             }
         }
 
+        /// <summary>
+        /// Perform once-off startup processing.
+        /// </summary>
         public void Start()
         {
             _cancellationTokenSource = new CancellationTokenSource();
@@ -94,6 +112,9 @@ namespace NetScape.Modules.LoginProtocol
             Task.Factory.StartNew(ProcessLoginsAsync, _cancellationToken, TaskCreationOptions.LongRunning, TaskScheduler.Default);
         }
 
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
         public void Dispose()
         {
             _cancellationTokenSource?.Cancel();

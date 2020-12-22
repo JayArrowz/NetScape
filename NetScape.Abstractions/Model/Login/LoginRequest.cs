@@ -3,11 +3,6 @@ using NetScape.Abstractions.IO.Util;
 
 namespace NetScape.Abstractions.Model.Login
 {
-    /**
-     * Represents a login request.
-     *
-     * @author Graham
-     */
     public record LoginRequest<TRes>
     {
         public int[] ArchiveCrcs { get; set; }
