@@ -16,7 +16,7 @@ namespace NetScape.Abstractions.Model
 
 		private static List<Direction> Values { get; } = new List<Direction>();
 
-		static Direction()
+        static Direction()
 		{
 			Values.Add(None);
 			Values.Add(NorthWest);
@@ -174,7 +174,6 @@ namespace NetScape.Abstractions.Model
 		internal Direction(string name, InnerDirectionValue innerEnum, int intValue)
 		{
 			this.intValue = intValue;
-
 			_nameValue = name;
 			_ordinalValue = _nextOrdinal++;
 			Value = innerEnum;
@@ -266,10 +265,7 @@ namespace NetScape.Abstractions.Model
 		/// Gets the direction as an integer which the client can understand.
 		/// </summary>
 		/// <returns> The movement as an integer. </returns>
-		public int toInteger()
-		{
-			return intValue;
-		}
+		public int IntValue => intValue;
 
 
 		/// <summary>
