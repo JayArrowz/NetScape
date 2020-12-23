@@ -8,214 +8,185 @@ namespace NetScape.Abstractions.Util
     /// </summary>
     public sealed class IsaacRandom
     {
-        // external results 
-        private readonly uint[] _randRsl = new uint[256];
-        private uint _randCnt;
+        public const int SIZEL = 8;              /* log of size of rsl[] and mem[] */
+        public const int SIZE = 1 << SIZEL;               /* size of rsl[] and mem[] */
+        public const int MASK = (SIZE - 1) << 2;            /* for pseudorandom lookup */
+        public int count;                           /* count through the results in rsl[] */
+        public int[] rsl;                                /* the results given to the user */
+        private int[] mem;                                   /* the internal state */
+        private int a;                                              /* accumulator */
+        private int b;                                          /* the last result */
+        private int c;              /* counter, guarantees cycle is at least 2^^40 */
 
-        // internal state 
-        private readonly uint[] _mm = new uint[256];
-        private uint _aa;
-        private uint _bb;
-        private uint _cc;
 
-        private void Isaac()
+        /* no seed, equivalent to randinit(ctx,FALSE) in C */
+        public IsaacRandom()
         {
-            uint i;
-            _cc++; // _cc just gets incremented once per 256 results 
-            _bb += _cc; // then combined with _bb 
-
-            for (i = 0; i <= 255; i++)
-            {
-                var x = _mm[i];
-                switch (i & 3)
-                {
-                    case 0:
-                        _aa ^= _aa << 13;
-                        break;
-                    case 1:
-                        _aa ^= _aa >> 6;
-                        break;
-                    case 2:
-                        _aa ^= _aa << 2;
-                        break;
-                    case 3:
-                        _aa ^= _aa >> 16;
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-
-                _aa = _mm[(i + 128) & 255] + _aa;
-                var y = _mm[(x >> 2) & 255] + _aa + _bb;
-                _mm[i] = y;
-                _bb = _mm[(y >> 10) & 255] + x;
-                _randRsl[i] = _bb;
-            }
+            mem = new int[SIZE];
+            rsl = new int[SIZE];
+            Init(false);
         }
 
-        void Mix(ref uint a, ref uint b, ref uint c, ref uint d, ref uint e, ref uint f, ref uint g, ref uint h)
-        {
-            a ^= b << 11;
-            d += a;
-            b += c;
-            b ^= c >> 2;
-            e += b;
-            c += d;
-            c ^= d << 8;
-            f += c;
-            d += e;
-            d ^= e >> 16;
-            g += d;
-            e += f;
-            e ^= f << 10;
-            h += e;
-            f += g;
-            f ^= g >> 4;
-            a += f;
-            g += h;
-            g ^= h << 8;
-            b += g;
-            h += a;
-            h ^= a >> 9;
-            c += h;
-            a += b;
-        }
-
-        /// <summary>Initializes the instance.</summary>
-        /// <param name="flag">if set to <c>true</c> [flag]
-        /// use the contents of _randRsl[] to initialize _mm[].
-        /// </param>
-        private void Init(bool flag)
-        {
-            short i;
-
-            _aa = 0;
-            _bb = 0;
-            _cc = 0;
-            var goldenRatio = 0x9e3779b9;
-            var b = goldenRatio;
-            var c = goldenRatio;
-            var d = goldenRatio;
-            var e = goldenRatio;
-            var f = goldenRatio;
-            var g = goldenRatio;
-            var h = goldenRatio;
-
-            for (i = 0; i <= 3; i++)
-            {
-                // scramble it 
-                Mix(ref goldenRatio, ref b, ref c, ref d, ref e, ref f, ref g, ref h);
-            }
-
-            i = 0;
-            do
-            {
-                // fill in _mm[] with messy stuff  
-                if (flag)
-                {
-                    // use all the information in the seed 
-                    goldenRatio += _randRsl[i];
-                    b += _randRsl[i + 1];
-                    c += _randRsl[i + 2];
-                    d += _randRsl[i + 3];
-                    e += _randRsl[i + 4];
-                    f += _randRsl[i + 5];
-                    g += _randRsl[i + 6];
-                    h += _randRsl[i + 7];
-                } // if flag
-
-                Mix(ref goldenRatio, ref b, ref c, ref d, ref e, ref f, ref g, ref h);
-                _mm[i] = goldenRatio;
-                _mm[i + 1] = b;
-                _mm[i + 2] = c;
-                _mm[i + 3] = d;
-                _mm[i + 4] = e;
-                _mm[i + 5] = f;
-                _mm[i + 6] = g;
-                _mm[i + 7] = h;
-                i += 8;
-            } while (i < 255);
-
-            if (flag)
-            {
-                // do a second pass to make all of the seed affect all of _mm 
-                i = 0;
-                do
-                {
-                    goldenRatio += _mm[i];
-                    b += _mm[i + 1];
-                    c += _mm[i + 2];
-                    d += _mm[i + 3];
-                    e += _mm[i + 4];
-                    f += _mm[i + 5];
-                    g += _mm[i + 6];
-                    h += _mm[i + 7];
-                    Mix(ref goldenRatio, ref b, ref c, ref d, ref e, ref f, ref g, ref h);
-                    _mm[i] = goldenRatio;
-                    _mm[i + 1] = b;
-                    _mm[i + 2] = c;
-                    _mm[i + 3] = d;
-                    _mm[i + 4] = e;
-                    _mm[i + 5] = f;
-                    _mm[i + 6] = g;
-                    _mm[i + 7] = h;
-                    i += 8;
-                } while (i < 255);
-            }
-
-            Isaac(); // fill in the first set of results 
-            _randCnt = 0; // prepare to use the first set of results 
-        }
-
-        /// <summary>Initializes a new instance of the <see cref="IsaacRandom"/> class.</summary>
-        /// <param name="seed">The seed.</param>
-        public IsaacRandom(string seed)
-        {
-            var m = seed.Length;
-            for (var i = 0; i < m; i++)
-            {
-                _randRsl[i] = seed[i];
-            }
-
-            // initialize ISAAC with seed
-            Init(true);
-        }
-
-        /// <summary>Initializes a new instance of the <see cref="IsaacRandom"/> class.</summary>
-        /// <param name="seed">The seed.</param>
+        /* equivalent to randinit(ctx, TRUE) after putting seed in randctx in C */
         public IsaacRandom(int[] seed)
         {
-            var m = seed.Length;
-            for (var i = 0; i < m; i++)
+            mem = new int[SIZE];
+            rsl = new int[SIZE];
+            for (int i = 0; i < seed.Length; ++i)
             {
-                _randRsl[i] = (uint) seed[i];
+                rsl[i] = seed[i];
             }
-
-            // initialize ISAAC with seed
             Init(true);
         }
 
 
-        /// <inhertdoc/>
-        public uint NextInt()
+        /* Generate 256 results.  This is a fast (not small) implementation. */
+        private void Isaac()
         {
-            var result = _randRsl[_randCnt];
-            _randCnt++;
-            if (_randCnt <= 255)
+            int i, j, x, y;
+
+            b += ++c;
+            for (i = 0, j = SIZE / 2; i < SIZE / 2;)
             {
-                return result;
+                x = mem[i];
+                a ^= a << 13;
+                a += mem[j++];
+                mem[i] = y = mem[(x & MASK) >> 2] + a + b;
+                rsl[i++] = b = mem[((y >> SIZEL) & MASK) >> 2] + x;
+
+                x = mem[i];
+                a ^= (int)((uint)a >> 6);
+                a += mem[j++];
+                mem[i] = y = mem[(x & MASK) >> 2] + a + b;
+                rsl[i++] = b = mem[((y >> SIZEL) & MASK) >> 2] + x;
+
+                x = mem[i];
+                a ^= a << 2;
+                a += mem[j++];
+                mem[i] = y = mem[(x & MASK) >> 2] + a + b;
+                rsl[i++] = b = mem[((y >> SIZEL) & MASK) >> 2] + x;
+
+                x = mem[i];
+                a ^= (int)((uint)a >> 16);
+                a += mem[j++];
+                mem[i] = y = mem[(x & MASK) >> 2] + a + b;
+                rsl[i++] = b = mem[((y >> SIZEL) & MASK) >> 2] + x;
+            }
+
+            for (j = 0; j < SIZE / 2;)
+            {
+                x = mem[i];
+                a ^= a << 13;
+                a += mem[j++];
+                mem[i] = y = mem[(x & MASK) >> 2] + a + b;
+                rsl[i++] = b = mem[((y >> SIZEL) & MASK) >> 2] + x;
+
+                x = mem[i];
+                a ^= (int)((uint)a >> 6);
+                a += mem[j++];
+                mem[i] = y = mem[(x & MASK) >> 2] + a + b;
+                rsl[i++] = b = mem[((y >> SIZEL) & MASK) >> 2] + x;
+
+                x = mem[i];
+                a ^= a << 2;
+                a += mem[j++];
+                mem[i] = y = mem[(x & MASK) >> 2] + a + b;
+                rsl[i++] = b = mem[((y >> SIZEL) & MASK) >> 2] + x;
+
+                x = mem[i];
+                a ^= (int)((uint)a >> 16);
+                a += mem[j++];
+                mem[i] = y = mem[(x & MASK) >> 2] + a + b;
+                rsl[i++] = b = mem[((y >> SIZEL) & MASK) >> 2] + x;
+            }
+        }
+
+
+        /* initialize, or reinitialize, this instance of rand */
+        public /*final*/ void Init(bool flag)
+        {
+            int i;
+            int a, b, c, d, e, f, g, h;
+            a = b = c = d = e = f = g = h = unchecked((int)0x9e3779b9);                        /* the golden ratio */
+
+            for (i = 0; i < 4; ++i)
+            {
+                a ^= b << 11; d += a; b += c;
+                b ^= (int)((uint)c >> 2); e += b; c += d;
+                c ^= d << 8; f += c; d += e;
+                d ^= (int)((uint)e >> 16); g += d; e += f;
+                e ^= f << 10; h += e; f += g;
+                f ^= (int)((uint)g >> 4); a += f; g += h;
+                g ^= h << 8; b += g; h += a;
+                h ^= (int)((uint)a >> 9); c += h; a += b;
+            }
+
+            for (i = 0; i < SIZE; i += 8)
+            {              /* fill in mem[] with messy stuff */
+                if (flag)
+                {
+                    a += rsl[i]; b += rsl[i + 1]; c += rsl[i + 2]; d += rsl[i + 3];
+                    e += rsl[i + 4]; f += rsl[i + 5]; g += rsl[i + 6]; h += rsl[i + 7];
+                }
+                a ^= b << 11; d += a; b += c;
+                b ^= (int)((uint)c >> 2); e += b; c += d;
+                c ^= d << 8; f += c; d += e;
+                d ^= (int)((uint)e >> 16); g += d; e += f;
+                e ^= f << 10; h += e; f += g;
+                f ^= (int)((uint)g >> 4); a += f; g += h;
+                g ^= h << 8; b += g; h += a;
+                h ^= (int)((uint)a >> 9); c += h; a += b;
+                mem[i] = a; mem[i + 1] = b; mem[i + 2] = c; mem[i + 3] = d;
+                mem[i + 4] = e; mem[i + 5] = f; mem[i + 6] = g; mem[i + 7] = h;
+            }
+
+            if (flag)
+            {           /* second pass makes all of seed affect all of mem */
+                for (i = 0; i < SIZE; i += 8)
+                {
+                    a += mem[i]; b += mem[i + 1]; c += mem[i + 2]; d += mem[i + 3];
+                    e += mem[i + 4]; f += mem[i + 5]; g += mem[i + 6]; h += mem[i + 7];
+                    a ^= b << 11; d += a; b += c;
+                    b ^= (int)((uint)c >> 2); e += b; c += d;
+                    c ^= d << 8; f += c; d += e;
+                    d ^= (int)((uint)e >> 16); g += d; e += f;
+                    e ^= f << 10; h += e; f += g;
+                    f ^= (int)((uint)g >> 4); a += f; g += h;
+                    g ^= h << 8; b += g; h += a;
+                    h ^= (int)((uint)a >> 9); c += h; a += b;
+                    mem[i] = a; mem[i + 1] = b; mem[i + 2] = c; mem[i + 3] = d;
+                    mem[i + 4] = e; mem[i + 5] = f; mem[i + 6] = g; mem[i + 7] = h;
+                }
             }
 
             Isaac();
-            _randCnt = 0;
-
-            return result;
+            count = SIZE;
         }
 
-        /// <inheritdoc />
-        public byte NextByte()
+
+        /* Call rand.val() to get a random value */
+        public /*final*/ int NextInt()
         {
-            return (byte)(NextInt() % 95 + 32);
+            if (0 == count--)
+            {
+                Isaac();
+                count = SIZE - 1;
+            }
+            return rsl[count];
         }
+
+        //public static void main(String[] args) {
+        //  int[]  seed = new int[256];
+        //  Rand x = new Rand(seed);
+        //  for (int i=0; i<2; ++i) {
+        //    x.Isaac();
+        //    for (int j=0; j<Rand.SIZE; ++j) {
+        //  //String z = Integer.toHexString(x.rsl[j]);
+        //  //while (z.length() < 8) z = "0"+z;
+        //  Console.WriteLine("{0:X8}", x.rsl[j]);
+        //      if ((j&7)==7) Console.WriteLine("");
+        //    }
+        //  }
+        //}
     }
 }

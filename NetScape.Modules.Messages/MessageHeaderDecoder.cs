@@ -22,7 +22,8 @@ namespace NetScape.Modules.Messages
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output)
         {
             int opcode = input.ReadByte();
-            opcode += (int)(CipherPair?.DecodingRandom?.NextInt() ?? 0);
+            var isaacValue = CipherPair.DecodingRandom.NextInt();
+            opcode = opcode - ((int)isaacValue) & 0xFF;
             _logger.Debug("Decoding Opcode: {0} Player Name: {1} from {2}", opcode, Player.Username, context.Channel.RemoteAddress);
         }
     }
