@@ -5,8 +5,6 @@ Modular Runescape Private Server
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Note: Only 317 protocol is supported currently and the project is still in an on-going state, so its far from done.
-
 ### Prerequisites
 * [PostgresSQL](https://www.postgresql.org/download/)
 * [Net5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
