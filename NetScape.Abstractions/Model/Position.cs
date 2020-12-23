@@ -17,12 +17,12 @@ namespace NetScape.Abstractions.Model
         /// <summary>
         /// The number of height levels, (0, 3] inclusive.
         /// </summary>
-        public const int HEIGHT_LEVELS = 4;
+        public const int HeightLevels = 4;
 
         /// <summary>
         /// The maximum distance players/NPCs can 'see'.
         /// </summary>
-        public const int MAX_DISTANCE = 15;
+        public const int MaxDistance = 15;
 
         /// <summary>
         /// Creates a position at the default height.
