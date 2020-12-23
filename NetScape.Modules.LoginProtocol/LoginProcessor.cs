@@ -74,9 +74,9 @@ namespace NetScape.Modules.LoginProtocol
             }
 
             var createdNewPlayer = playerInDatabase == null;
-            var player = await _playerSerializer.GetOrCreateAsync(request.Credentials);
 
-            return new Rs2LoginResponse { Status = LoginStatus.StatusOk };
+            var player = await _playerSerializer.GetOrCreateAsync(request.Credentials);
+            return new Rs2LoginResponse { Status = LoginStatus.StatusOk, Player = player, Created = createdNewPlayer };
         }
 
         /// <summary>

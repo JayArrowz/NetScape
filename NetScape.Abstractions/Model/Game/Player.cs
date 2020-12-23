@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NetScape.Abstractions.Model.Game
 {
@@ -6,6 +7,8 @@ namespace NetScape.Abstractions.Model.Game
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
+        [Key]
         public string Username { get; set; }
         public string Password { get; set; }
     }

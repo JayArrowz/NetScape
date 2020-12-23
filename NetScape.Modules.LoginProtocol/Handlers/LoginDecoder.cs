@@ -1,5 +1,4 @@
 ﻿using DotNetty.Buffers;
-using DotNetty.Codecs;
 using DotNetty.Common.Utilities;
 using DotNetty.Transport.Channels;
 using NetScape.Abstractions;
@@ -8,9 +7,9 @@ using NetScape.Abstractions.Interfaces.Login;
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.IO;
 using NetScape.Abstractions.IO.Util;
+using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Login;
 using NetScape.Abstractions.Util;
-using NetScape.Modules.Messages.Builder;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -233,7 +232,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                     ReleaseNumber = release,
                     ArchiveCrcs = crcs,
                     ClientVersion = version,
-                    OnResult = loginTask => WriteProcessorResponseAsync(loginTask, ctx, randomPair)
+                    OnResult = (loginTask) => WriteProcessorResponseAsync(loginTask, ctx, randomPair)
                 };
 
                 _loginProcessor.Enqueue(request);
@@ -243,7 +242,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
         private async Task WriteProcessorResponseAsync(Rs2LoginResponse loginResult, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
         {
             await ctx.WriteAndFlushAsync(loginResult);
-            HandleLoginResponseFuture(loginResult.Status, ctx, randomPair);
+            HandleLoginProcessorResponse(loginResult.Player, loginResult.Status, ctx, randomPair);
         }
 
         /**
@@ -256,11 +255,11 @@ namespace NetScape.Modules.LoginProtocol.Handlers
         {
             var buffer = ctx.Allocator.Buffer(sizeof(byte));
             buffer.WriteByte((int)response);
-            var future = ctx.WriteAndFlushAsync(buffer);
-            HandleLoginResponseFuture(response, ctx, null);
+            ctx.WriteAndFlushAsync(buffer);
+            HandleLoginProcessorResponse(null, response, ctx, null);
         }
 
-        private void HandleLoginResponseFuture(LoginStatus response, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
+        private void HandleLoginProcessorResponse(Player player, LoginStatus response, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
         {
             if (response != LoginStatus.StatusOk)
             {
@@ -268,13 +267,26 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             }
             else
             {
+                if (player == null)
+                {
+                    ctx.CloseAsync();
+                    throw new InvalidOperationException("Cannot initialize player is null");
+                }
+
                 ctx.Channel.Pipeline.Remove(nameof(LoginEncoder));
                 ctx.Channel.Pipeline.Remove(nameof(LoginDecoder));
                 var gameMessageHandlers = _gameMessageProvider.Provide();
-                gameMessageHandlers.Where(t => t is ICipheredHandler && t is MessageToByteEncoder<MessageFrame>)
-                    .Cast<ICipheredHandler>()
+
+                gameMessageHandlers.Where(t => t is ICipherAwareHandler)
+                    .Cast<ICipherAwareHandler>()
                     .ToList()
-                    .ForEach(encoder => encoder.Cipher = randomPair.EncodingRandom);
+                    .ForEach(handler => handler.CipherPair = randomPair);
+
+                gameMessageHandlers.Where(t => t is IPlayerAwareHandler)
+                    .Cast<IPlayerAwareHandler>()
+                    .ToList()
+                    .ForEach(handler => handler.Player = player);
+
                 ctx.Channel.Pipeline.AddFirst(gameMessageHandlers);
             }
         }

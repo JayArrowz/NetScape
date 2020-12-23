@@ -16,6 +16,7 @@ namespace NetScape.Modules.Messages
         }
 
         public Func<IChannelHandler[]> Provide => () => new IChannelHandler[] {
+            _container.Resolve<MessageHeaderDecoder>(),
             _container.Resolve<MessageFrameEncoder>()
         };
     }
