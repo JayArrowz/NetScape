@@ -23,7 +23,7 @@ namespace NetScape.Modules.Messages
         {
             int opcode = input.ReadByte();
             var isaacValue = CipherPair.DecodingRandom.NextInt();
-            opcode = opcode - ((int)isaacValue) & 0xFF;
+            opcode = opcode - isaacValue & 0xFF;
             _logger.Debug("Decoding Opcode: {0} Player Name: {1} from {2}", opcode, Player.Username, context.Channel.RemoteAddress);
         }
     }

@@ -22,9 +22,10 @@ namespace NetScape.Modules.Messages.Builder
 
         private int OpCode { get; }
         private FrameType Type { get; }
-        private IByteBufferAllocator Alloc { get; }
+        public IByteBufferAllocator Alloc { get; }
         private IByteBuffer Buffer { get; }
         private AccessMode Mode { get; set; } = AccessMode.Byte;
+
         private int bitIndex;
 
         public MessageFrameBuilder(IByteBufferAllocator alloc) : this(alloc, -1, FrameType.Raw)

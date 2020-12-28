@@ -53,7 +53,10 @@ namespace NetScape.Modules.DAL
         private Task<Player> GetAsync(string name, DatabaseContext databaseContext)
         {
             var normalizedName = name.ToLower();
-            return databaseContext.Players.FirstOrDefaultAsync(player => player.Username.ToLower().Equals(normalizedName));
+            return databaseContext.Players
+                .Include(t => t.Appearance)
+                .Include(t => t.Position)
+                .FirstOrDefaultAsync(player => player.Username.ToLower().Equals(normalizedName));
         }
 
         public async Task<Player> GetOrCreateAsync(PlayerCredentials playerCredentials)
@@ -62,9 +65,15 @@ namespace NetScape.Modules.DAL
             {
 
                 var playerInDatabase = await GetAsync(playerCredentials.Username, dbContext);
-                if(playerInDatabase == null)
+                if (playerInDatabase == null)
                 {
-                    var defaultPlayer = new Player { Username = playerCredentials.Username, Password = playerCredentials.Password, Position = new Position(3333, 3333) };
+                    var defaultPlayer = new Player
+                    {
+                        Username = playerCredentials.Username,
+                        Password = playerCredentials.Password,
+                        Position = new Position(3333, 3333, 0),
+                        Appearance = Appearance.DefaultAppearance
+                    };
                     dbContext.Attach(defaultPlayer);
                     dbContext.Add(defaultPlayer);
                     await dbContext.SaveChangesAsync();

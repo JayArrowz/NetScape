@@ -10,6 +10,7 @@ using NetScape.Abstractions.IO.Util;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Login;
 using NetScape.Abstractions.Util;
+using NetScape.Modules.World;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -49,12 +50,14 @@ namespace NetScape.Modules.LoginProtocol.Handlers
         private readonly ILogger _logger;
         private readonly ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> _loginProcessor;
         private readonly IMessageProvider _gameMessageProvider;
+        private readonly IWorld _world;
 
-        public LoginDecoder(ILogger logger, ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> loginProcessor, IMessageProvider gameMessageProvider) : base(LoginDecoderState.LoginHandshake)
+        public LoginDecoder(ILogger logger, ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> loginProcessor, IMessageProvider gameMessageProvider, IWorld world) : base(LoginDecoderState.LoginHandshake)
         {
             _logger = logger;
             _gameMessageProvider = gameMessageProvider;
             _loginProcessor = loginProcessor;
+            _world = world;
         }
 
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output, LoginDecoderState state)
@@ -219,7 +222,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                     Password = password,
                     EncodedUsername = _usernameHash,
                     Uid = uid,
-                    HostAddress = hostAddress
+                    HostAddress = hostAddress,
                 };
 
                 var randomPair = new IsaacRandomPair(encodingRandom, decodingRandom);
@@ -277,16 +280,21 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 ctx.Channel.Pipeline.Remove(nameof(LoginDecoder));
                 var gameMessageHandlers = _gameMessageProvider.Provide();
 
-                gameMessageHandlers.Where(t => t is ICipherAwareHandler)
-                    .Cast<ICipherAwareHandler>()
-                    .ToList()
-                    .ForEach(handler => handler.CipherPair = randomPair);
-
-                gameMessageHandlers.Where(t => t is IPlayerAwareHandler)
-                    .Cast<IPlayerAwareHandler>()
-                    .ToList()
-                    .ForEach(handler => handler.Player = player);
-
+                foreach(var gameMessageHandler in gameMessageHandlers)
+                {
+                    if(gameMessageHandler is ICipherAwareHandler)
+                    {
+                        ((ICipherAwareHandler)gameMessageHandler).CipherPair = randomPair;
+                    }
+                    
+                    if(gameMessageHandler is IPlayerAwareHandler)
+                    {
+                        ((IPlayerAwareHandler)gameMessageHandler).Player = player;
+                    }
+                }
+                ctx.GetAttribute(Constants.PlayerAttributeKey).SetIfAbsent(player);
+                player.ChannelHandlerContext = ctx;
+                _world.Add(player);
                 ctx.Channel.Pipeline.AddFirst(gameMessageHandlers);
             }
         }

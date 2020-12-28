@@ -10,6 +10,7 @@ namespace NetScape.Modules.Messages
             builder.RegisterType<MessageProvider>().As<IMessageProvider>().SingleInstance();
             builder.RegisterType<MessageFrameEncoder>();
             builder.RegisterType<MessageHeaderDecoder>();
+            builder.RegisterType<MessageChannelHandler>();
             base.Load(builder);
         }
     }

@@ -119,7 +119,7 @@ namespace NetScape.Abstractions.Model
         {
             get
             {
-                return getLocalX(this);
+                return GetLocalX(this);
             }
         }
 
@@ -128,7 +128,7 @@ namespace NetScape.Abstractions.Model
         /// </summary>
         /// <param name="base"> The base position. </param>
         /// <returns> The local x coordinate. </returns>
-        public int getLocalX(Position @base)
+        public int GetLocalX(Position @base)
         {
             return X - @base.TopLeftRegionX * 8;
         }

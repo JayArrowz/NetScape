@@ -50,7 +50,7 @@ namespace NetScape.Abstractions.Model
 		/// <summary>
 		/// An empty direction array.
 		/// </summary>
-		public static readonly Direction[] EMPTY_DIRECTION_ARRAY = new Direction[0];
+		public static readonly Direction[] EmptyDirectionArray = new Direction[0];
 
 		/// <summary>
 		/// An array of directions without any diagonal directions.

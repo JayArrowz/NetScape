@@ -14,6 +14,8 @@ using System;
 using System.IO;
 using NetScape.Modules.DAL;
 using NetScape.Modules.Messages;
+using NetScape.Modules.World;
+using NetScape.Modules.World.Updating;
 
 namespace NetScape
 {
@@ -60,6 +62,8 @@ namespace NetScape
             containerBuilder.RegisterModule(new DALModule());
             containerBuilder.RegisterModule(new MessagesModule());
             containerBuilder.RegisterModule(new GameServerModule(ConfigurationRoot["BindAddr"], ushort.Parse(ConfigurationRoot["BindPort"])));
+            containerBuilder.RegisterModule(new WorldModule());
+            containerBuilder.RegisterModule(new UpdatingModule());
             containerBuilder.RegisterType<FileSystem>().As<IFileSystem>();
             containerBuilder.RegisterType<ContainerProvider>().SingleInstance();
         }
