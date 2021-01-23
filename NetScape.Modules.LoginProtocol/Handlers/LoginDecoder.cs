@@ -246,6 +246,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
         {
             await ctx.WriteAndFlushAsync(loginResult);
             HandleLoginProcessorResponse(loginResult.Player, loginResult.Status, ctx, randomPair);
+            loginResult.Player.SendInitialMessages();
         }
 
         /**

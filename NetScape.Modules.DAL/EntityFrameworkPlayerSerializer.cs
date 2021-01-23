@@ -43,6 +43,7 @@ namespace NetScape.Modules.DAL
                 }
                 else
                 {
+                    dbContext.Update(player.Position);
                     dbContext.Update(player);
                 }
                 var rowsModified = await dbContext.SaveChangesAsync();
@@ -74,6 +75,7 @@ namespace NetScape.Modules.DAL
                         Appearance = Appearance.DefaultAppearance
                     };
                     dbContext.Attach(defaultPlayer);
+                    dbContext.Add(defaultPlayer.Position); 
                     dbContext.Add(defaultPlayer);
                     await dbContext.SaveChangesAsync();
                     return defaultPlayer;

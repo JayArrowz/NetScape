@@ -11,9 +11,6 @@ namespace NetScape.Abstractions.Model.Game
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public Player Player { get; set; }
-        public int PlayerId { get; set; }
-
         public int[] Colors { get; set; }
 
         [DataType("varchar(20)")]

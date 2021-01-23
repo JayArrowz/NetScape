@@ -69,7 +69,7 @@ namespace NetScape.Modules.World.Updating
             Position old = player.Position;
             //player.getWalkingQueue().pulse();
             var local = true;
-
+            
             if (player.IsTeleporting)
             {
                 player.ResetViewingDistance();
@@ -81,7 +81,6 @@ namespace NetScape.Modules.World.Updating
             {
                 player.RegionChanged = true;
                 local = false;
-
                 player.LastKnownRegion = position;
                 await player.SendAsync(new RegionChangeMessage { CentralRegionX = (short)position.CentralRegionX, CentralRegionY = (short)position.CentralRegionY });
             }

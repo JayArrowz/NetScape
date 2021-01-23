@@ -41,7 +41,7 @@ namespace NetScape.Abstractions.Model.Game
         [NotMapped] public override int Width => 1;
         [NotMapped] public override int Length => 1;
         [NotMapped] public List<Player> LocalPlayerList { get; set; } = new();
-        [NotMapped] public bool IsActive { get; set; }
+        [NotMapped] public bool IsActive => Index != -1;
         [NotMapped] public int[] AppearanceTickets { get; set; } = new int[2000];
         [NotMapped] public bool ExcessivePlayers { get; set; }
 
@@ -64,6 +64,13 @@ namespace NetScape.Abstractions.Model.Game
         {
             BlockSet.Add(SynchronizationBlock.CreateAppearanceBlock(this));
         }
+
+        public void SendInitialMessages()
+        {
+            UpdateAppearance();
+            //send(new IdAssignmentMessage(index, members));
+        }
+
 
         private static int NextAppearanceTicket()
         {
