@@ -1,5 +1,5 @@
 # NetScape
-Modular Runescape Private Server
+Modular Runescape Private Server in C# for learning purposes & fun!
 
 ## Getting Started
 
