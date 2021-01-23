@@ -40,17 +40,17 @@ namespace NetScape.Abstractions.Model.Area
         /**
 		 * The length of the matrix.
 		 */
-        private readonly int length;
+        private readonly int _length;
 
         /**
 		 * The collision matrix, as a {@code short} array.
 		 */
-        private readonly short[] matrix;
+        private readonly short[] _matrix;
 
         /**
 		 * The width of the matrix.
 		 */
-        private readonly int width;
+        private readonly int _width;
 
         /**
 		 * Creates the CollisionMatrix.
@@ -60,9 +60,9 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         public CollisionMatrix(int width, int length)
         {
-            this.width = width;
-            this.length = length;
-            matrix = new short[width * length];
+            this._width = width;
+            this._length = length;
+            _matrix = new short[width * length];
         }
 
         /**
@@ -143,7 +143,7 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         public void Clear(int x, int y, CollisionFlag flag)
         {
-            Set(x, y, (short)(matrix[IndexOf(x, y)] & ~flag.AsShort()));
+            Set(x, y, (short)(_matrix[IndexOf(x, y)] & ~flag.AsShort()));
         }
 
         /**
@@ -155,7 +155,7 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         public void Flag(int x, int y, CollisionFlag flag)
         {
-            matrix[IndexOf(x, y)] |= flag.AsShort();
+            _matrix[IndexOf(x, y)] |= flag.AsShort();
         }
 
         /**
@@ -180,7 +180,7 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         public int Get(int x, int y)
         {
-            return matrix[IndexOf(x, y)] & 0xFFFF;
+            return _matrix[IndexOf(x, y)] & 0xFFFF;
         }
 
         /**
@@ -199,9 +199,9 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         public void Reset()
         {
-            for (int x = 0; x < width; x++)
+            for (int x = 0; x < _width; x++)
             {
-                for (int y = 0; y < width; y++)
+                for (int y = 0; y < _width; y++)
                 {
                     Reset(x, y);
                 }
@@ -269,9 +269,9 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         private int IndexOf(int x, int y)
         {
-            Guard.Argument(x).GreaterThan(0).LessThan(width);
-            Guard.Argument(y).GreaterThan(0).LessThan(length);
-            return y * width + x;
+            Guard.Argument(x).GreaterThan(0).LessThan(_width);
+            Guard.Argument(y).GreaterThan(0).LessThan(_length);
+            return y * _width + x;
         }
 
         /**
@@ -283,7 +283,7 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         private void Set(int x, int y, short value)
         {
-            matrix[IndexOf(x, y)] = value;
+            _matrix[IndexOf(x, y)] = value;
         }
 
     }

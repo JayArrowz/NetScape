@@ -19,13 +19,13 @@ namespace NetScape.Modules.World.Updating
     {
         private readonly RegionRepository _regionRepository;
 
-        private static readonly int MAXIMUM_LOCAL_PLAYERS = 255;
+        private static readonly int MaximumLocalPlayers = 255;
 
         /**
          * The maximum number of players to load per cycle. This prevents the update packet from becoming too large (the
          * client uses a 5000 byte buffer) and also stops old spec PCs from crashing when they login or teleport.
          */
-        private static readonly int NEW_PLAYERS_PER_CYCLE = 20;
+        private static readonly int NewPlayersPerCycle = 20;
 
         public PlayerUpdater(RegionRepository regionRepository)
         {
@@ -220,12 +220,12 @@ namespace NetScape.Modules.World.Updating
 
             foreach (var other in players)
             {
-                if (count >= MAXIMUM_LOCAL_PLAYERS)
+                if (count >= MaximumLocalPlayers)
                 {
                     player.ExcessivePlayers = true;
                     break;
                 }
-                else if (added >= NEW_PLAYERS_PER_CYCLE)
+                else if (added >= NewPlayersPerCycle)
                 {
                     break;
                 }

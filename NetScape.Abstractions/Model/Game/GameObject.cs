@@ -1,6 +1,5 @@
 ﻿using NetScape.Abstractions.Interfaces.Area;
 using NetScape.Abstractions.Model.Area;
-using NetScape.Abstractions.Model.Area.Obj;
 using NetScape.Modules.World;
 using System;
 using System.Collections.Generic;
