@@ -1,8 +1,12 @@
 ﻿using DotNetty.Transport.Channels;
 using NetScape.Abstractions.Model.World.Updating;
+using NetScape.Modules.Messages;
+using NetScape.Modules.Messages.Builder;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.Model.Game
 {
@@ -30,6 +34,9 @@ namespace NetScape.Abstractions.Model.Game
         [NotMapped] public bool IsTeleporting { get; set; }
         [NotMapped] public int ViewingDistance { get; private set; }
         [NotMapped] public IChannelHandlerContext ChannelHandlerContext { get; set; }
+        [NotMapped] public override EntityType EntityType => EntityType.Player;
+        [NotMapped] public override int Width => 1;
+        [NotMapped] public override int Length => 1;
 
         public void UpdateAppearance()
         {
@@ -62,5 +69,13 @@ namespace NetScape.Abstractions.Model.Game
             ViewingDistance = DefaultViewingDistance;
         }
 
+        /// <summary>
+        /// Sends a message to the player.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        public async Task SendAsync(IOutMessage<MessageFrame> message)
+        {
+            await ChannelHandlerContext.WriteAndFlushAsync(message.ToMessage(ChannelHandlerContext.Allocator));
+        }
     }
 }

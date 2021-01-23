@@ -61,9 +61,10 @@ namespace NetScape.Messages.Generator
             strBuilder.Append($@"namespace {generatedNameSpace} {{
 using DotNetty.Buffers;
 using NetScape.Modules.Messages.Builder;
-    public partial class {className} {{
+using NetScape.Modules.Messages.Encoders;
+    public partial class {className} : IOutMessage<MessageFrame> {{
 {{Fields}}        
-        public MessageFrame ToMessageFrame(IByteBufferAllocator alloc) {{
+        public MessageFrame ToMessage(IByteBufferAllocator alloc) {{
 {{GetMethod}}
         }}
     }}
