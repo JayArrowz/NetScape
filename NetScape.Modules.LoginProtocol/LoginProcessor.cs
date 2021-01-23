@@ -94,7 +94,7 @@ namespace NetScape.Modules.LoginProtocol
                         var loginResult = await ProcessAsync(loginRequest);
                         _loginRequests.Remove(loginRequest);
                         loginRequest.Result = loginResult;
-                        _logger.Debug("Processed Login Request: {@LoginRequest}", loginRequest);
+                        _logger.Debug("Processed Login Request: {@LoginRequest}", loginRequest.Credentials);
                         _ = loginRequest.OnResult(loginResult);
                     }
                 }

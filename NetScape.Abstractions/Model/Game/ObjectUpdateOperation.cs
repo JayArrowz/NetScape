@@ -1,11 +1,5 @@
 ﻿using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model.Area;
-using NetScape.Abstractions.Model.Area.Update;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.Model.Game
 {
@@ -25,12 +19,14 @@ namespace NetScape.Abstractions.Model.Game
 
         protected override RegionUpdateMessage Add(int offset)
         {
-            return new SendObjectMessage(entity, offset);
+            return null;
+            //return new SendObjectMessage(entity, offset);
         }
 
         protected override RegionUpdateMessage Remove(int offset)
         {
-            return new RemoveObjectMessage(entity, offset);
+            return null;
+         //   return new RemoveObjectMessage(entity, offset);
         }
     }
 }

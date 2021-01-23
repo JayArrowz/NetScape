@@ -1,6 +1,9 @@
 ﻿using Autofac;
+using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Interfaces.World.Updating;
+using NetScape.Abstractions.Model.Area;
 using NetScape.Abstractions.Model.Game;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,26 +34,33 @@ namespace NetScape.Modules.World
             Players.Remove(player);
         }
 
-        private void Process()
+        private async Task Process()
         {
             var stopwatch = new Stopwatch();
             while (!_exited)
             {
                 stopwatch.Restart();
-                Players.ForEach((player) => {
-                    _playerUpdater.PreUpdate(player);
-                    _playerUpdater.Update(player);
-                    _playerUpdater.PostUpdate(player);
-                });
+                Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> encodes = new(), updates = new();
+
+                foreach(var player in Players) {
+                    try
+                    {
+                        await _playerUpdater.PreUpdateAsync(player, encodes, updates);
+                        await _playerUpdater.UpdateAsync(player);
+                        await _playerUpdater.PostUpdateAsync(player);
+                    } catch(Exception e)
+                    {
+                        Log.Logger.Error(e, nameof(Process));
+                    }
+                }
                 var deltaSleep = 600 - (int)stopwatch.Elapsed.TotalMilliseconds;
-                Thread.Sleep(deltaSleep);
+                await Task.Delay(deltaSleep);
             }
         }
 
         public void Start()
         {
-            var thread = new Thread(new ThreadStart(Process));
-            thread.Start();
+            Task.Factory.StartNew(Process, CancellationToken.None, TaskCreationOptions.LongRunning, TaskScheduler.Default);
         }
 
         public void Dispose()

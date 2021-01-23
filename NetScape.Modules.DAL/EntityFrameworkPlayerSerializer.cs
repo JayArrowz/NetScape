@@ -55,7 +55,6 @@ namespace NetScape.Modules.DAL
             var normalizedName = name.ToLower();
             return databaseContext.Players
                 .Include(t => t.Appearance)
-                .Include(t => t.Position)
                 .FirstOrDefaultAsync(player => player.Username.ToLower().Equals(normalizedName));
         }
 

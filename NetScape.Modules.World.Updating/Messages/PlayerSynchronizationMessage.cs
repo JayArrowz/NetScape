@@ -1,19 +1,14 @@
 ﻿using DotNetty.Buffers;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
-using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
 using NetScape.Modules.Messages.Builder;
 using NetScape.Modules.World.Updating.Segments;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NetScape.Modules.Messages.Outgoing
 {
-    public class PlayerSynchronizationMessage
+    public class PlayerSynchronizationMessage : IOutMessage<MessageFrame>
     {
         public Position LastKnownRegion { get; set; }
         public int LocalPlayers { get; set; }
@@ -22,7 +17,28 @@ namespace NetScape.Modules.Messages.Outgoing
         public SynchronizationSegment Segment { get; set; }
         public List<SynchronizationSegment> Segments { get; set; }
 
-        public MessageFrame ToMessageFrame(IByteBufferAllocator alloc)
+        /**
+         * Creates the player synchronization message.
+         *
+         * @param lastKnownRegion The last known region.
+         * @param position The player's current position.
+         * @param regionChanged A flag indicating if the region has changed.
+         * @param segment The current player's synchronization segment.
+         * @param localPlayers The number of local players.
+         * @param segments A list of segments.
+         */
+        public PlayerSynchronizationMessage(Position lastKnownRegion, Position position, bool regionChanged, SynchronizationSegment segment, int localPlayers, List<SynchronizationSegment> segments)
+        {
+            LastKnownRegion = lastKnownRegion;
+            Position = position;
+            RegionChanged = regionChanged;
+            Segment = segment;
+            LocalPlayers = localPlayers;
+            Segments = segments;
+        }
+
+
+        public MessageFrame ToMessage(IByteBufferAllocator alloc)
         {
             var bldr = new MessageFrameBuilder(alloc, 81, FrameType.VariableShort);
             bldr.SwitchToBitAccess();
@@ -78,13 +94,13 @@ namespace NetScape.Modules.Messages.Outgoing
             builder.PutBits(5, other.X - player.X);
         }
 
-        private static void PutRemovePlayerUpdate(MessageFrameBuilder builder)
+        private void PutRemovePlayerUpdate(MessageFrameBuilder builder)
         {
             builder.PutBits(1, 1);
             builder.PutBits(2, 3);
         }
 
-        private static void PutBlocks(SynchronizationSegment segment, MessageFrameBuilder builder)
+        private void PutBlocks(SynchronizationSegment segment, MessageFrameBuilder builder)
         {
             var blockSet = segment.BlockSet;
             if (blockSet.Size() > 0)
@@ -122,7 +138,7 @@ namespace NetScape.Modules.Messages.Outgoing
             }
         }
 
-        private static void PutAppearanceBlock(AppearanceBlock block, MessageFrameBuilder builder)
+        private void PutAppearanceBlock(AppearanceBlock block, MessageFrameBuilder builder)
         {
             Appearance appearance = block.Appearance;
             var playerProperties = new MessageFrameBuilder(builder.Alloc);
@@ -188,28 +204,29 @@ namespace NetScape.Modules.Messages.Outgoing
 
         }
 
-        private static void PutMovementUpdate(SynchronizationSegment seg, MessageFrameBuilder builder)
+        private void PutMovementUpdate(SynchronizationSegment seg, MessageFrameBuilder builder)
         {
             bool updateRequired = seg.BlockSet.Size() > 0;
             if (seg.Type == SegmentType.Teleport)
             {
-                /*Position position = ((TeleportSegment)seg).getDestination();
-				builder.PutBits(1, 1);
-				builder.PutBits(2, 3);
-				builder.PutBits(2, position.getHeight());
-				builder.PutBits(1, message.hasRegionChanged() ? 0 : 1);
-				builder.PutBits(1, updateRequired ? 1 : 0);
-				builder.PutBits(7, position.getLocalY(message.getLastKnownRegion()));
-				builder.PutBits(7, position.getLocalX(message.getLastKnownRegion()));*/
+                var teleportSeg = ((TeleportSegment)seg);
+                Position position = teleportSeg.Destination;
+                builder.PutBits(1, 1);
+                builder.PutBits(2, 3);
+                builder.PutBits(2, position.Height);
+                builder.PutBits(1, RegionChanged ? 0 : 1);
+                builder.PutBits(1, updateRequired ? 1 : 0);
+                builder.PutBits(7, position.GetLocalY(LastKnownRegion));
+                builder.PutBits(7, position.GetLocalX(LastKnownRegion));
             }
             else if (seg.Type == SegmentType.Run)
             {
-                /*Direction[] directions = ((MovementSegment)seg).getDirections();
-				builder.PutBits(1, 1);
-				builder.PutBits(2, 2);
-				builder.PutBits(3, directions[0].toInteger());
-				builder.PutBits(3, directions[1].toInteger());
-				builder.PutBits(1, updateRequired ? 1 : 0);*/
+                Direction[] directions = ((MovementSegment)seg).Directions;
+                builder.PutBits(1, 1);
+                builder.PutBits(2, 2);
+                builder.PutBits(3, directions[0].IntValue);
+                builder.PutBits(3, directions[1].IntValue);
+                builder.PutBits(1, updateRequired ? 1 : 0);
             }
             else if (seg.Type == SegmentType.Walk)
             {

@@ -22,10 +22,7 @@ namespace NetScape.Abstractions.Model.Area
 		 *
 		 * @return The RegionRepository.
 		 */
-        public static RegionRepository Immutable()
-        {
-            return new RegionRepository(false);
-        }
+        public RegionRepository() : this(false) { }
 
         /**
 		 * Returns a mutable RegionRepository, where {@link Region}s may be removed.
@@ -142,7 +139,7 @@ namespace NetScape.Abstractions.Model.Area
         public Region Get(RegionCoordinates coordinates)
         {
             var valid = regions.TryGetValue(coordinates, out var region);
-            if (valid && region != null)
+            if (!valid)
             {
                 region = new Region(coordinates);
                 Add(region);

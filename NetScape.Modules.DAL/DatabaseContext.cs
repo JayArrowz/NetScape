@@ -24,8 +24,6 @@ namespace NetScape.Modules.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            string v = "";
-            v.Split("D");
             modelBuilder.HasAnnotation("Relational:Collation", "English_United Kingdom.1252");
             modelBuilder
                 .Entity<Appearance>()
@@ -35,7 +33,7 @@ namespace NetScape.Modules.DAL
                 .Entity<Appearance>()
                 .Property(e => e.Style)
                 .HasConversion(v => string.Join(",", v), v => v.Split(",", StringSplitOptions.None).Select(int.Parse).ToArray());
-
+            modelBuilder.Entity<Player>().OwnsOne(t => t.Position);
             OnModelCreatingPartial(modelBuilder);
         }
 

@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Modules.Messages.Region;
 
 namespace NetScape.Modules.Messages
 {

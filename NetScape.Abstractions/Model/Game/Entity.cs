@@ -5,8 +5,6 @@ namespace NetScape.Abstractions.Model.Game
 {
     public abstract class Entity
     {
-        [NotMapped]
-        public IWorld World { get; set; }
 
         [NotMapped]
         public int Index { get; set; }

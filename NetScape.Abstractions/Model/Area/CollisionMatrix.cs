@@ -2,10 +2,7 @@
 using NetScape.Abstractions.Extensions;
 using NetScape.Abstractions.Model.Game;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.Model.Area
 {

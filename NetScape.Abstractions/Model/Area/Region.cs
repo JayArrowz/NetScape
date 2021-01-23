@@ -20,9 +20,9 @@ namespace NetScape.Abstractions.Model.Area
         public void Execute(Region region, Entity entity, EntityUpdateType type)
         {
             var entityType = entity.EntityType;
-            if (!entityType.IsMob())
+            if (!entityType.IsMob() && entity is IGroupableEntity)
             {
-                region.Record((Entity & IGroupableEntity)entity, type);
+                region.Record(entity, type);
             }
         }
     }
@@ -202,7 +202,7 @@ namespace NetScape.Abstractions.Model.Area
 		 * @param types The {@link EntityType}s.
 		 * @return The Stream of Entity objects.
 		 */
-        public HashSet<T> GetEntities<T>(EntityType[] types) where T : Entity
+        public HashSet<T> GetEntities<T>(params EntityType[] types) where T : Entity
         {
             return Entities.Values.SelectMany(t => t)
                 .Where(entity => entity is T && types.Contains(entity.EntityType))
@@ -381,9 +381,9 @@ namespace NetScape.Abstractions.Model.Area
 		 * @param update The {@link EntityUpdateType}.
 		 * @throws UnsupportedOperationException If the specified Entity cannot be operated on in this manner.
 		 */
-        public void Record<T>(T entity, EntityUpdateType update) where T : Entity, IGroupableEntity
+        public void Record<T>(T entity, EntityUpdateType update) where T : Entity
         {
-            UpdateOperation operation = entity.ToUpdateOperation(this, update);
+            UpdateOperation operation = ((IGroupableEntity)entity).ToUpdateOperation(this, update);
             RegionUpdateMessage message = operation.ToMessage(), inverse = operation.Inverse();
 
             int height = entity.Position.Height;

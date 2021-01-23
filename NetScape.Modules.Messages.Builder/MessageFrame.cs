@@ -1,10 +1,12 @@
 ﻿using DotNetty.Buffers;
+using System;
 
 namespace NetScape.Modules.Messages.Builder
 {
     /**
     * @author Graham
     */
+    [Serializable]
     public class MessageFrame
     {
         public int Id { get; }

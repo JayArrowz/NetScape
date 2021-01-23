@@ -2,13 +2,8 @@
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Modules.Messages.Builder;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace NetScape.Abstractions.Model.Area.Update
+namespace NetScape.Modules.Messages.Region
 {
     public class SendObjectMessage : RegionUpdateMessage
     {
@@ -20,7 +15,7 @@ namespace NetScape.Abstractions.Model.Area.Update
         /**
          * The orientation of the object.
          */
-        private readonly int orientation;
+        private readonly int _orientation;
 
         /**
          * The position of the object.
@@ -44,7 +39,7 @@ namespace NetScape.Abstractions.Model.Area.Update
             _id = obj.Id;
             _positionOffset = positionOffset;
             _type = obj.Type;
-            orientation = obj.Orientation;
+            _orientation = obj.Orientation;
         }
 
 
@@ -52,7 +47,8 @@ namespace NetScape.Abstractions.Model.Area.Update
 
         public override bool Equals(object obj)
         {
-            if (obj is SendObjectMessage) {
+            if (obj is SendObjectMessage)
+            {
                 SendObjectMessage other = (SendObjectMessage)obj;
                 if (_id != other._id || _type != other._type)
                 {
@@ -68,14 +64,18 @@ namespace NetScape.Abstractions.Model.Area.Update
         public override int GetHashCode()
         {
             int prime = 31;
-            int result = prime * _id + orientation;
+            int result = prime * _id + _orientation;
             result = prime * result + _type;
             return prime * result + _positionOffset;
         }
 
         public override MessageFrame ToMessage(IByteBufferAllocator alloc)
         {
-            throw new NotImplementedException();
+            MessageFrameBuilder builder = new MessageFrameBuilder(alloc, 151);
+            builder.Put(MessageType.Byte, DataTransformation.Add, _positionOffset);
+            builder.Put(MessageType.Short, DataOrder.Little, _id);
+            builder.Put(MessageType.Byte, DataTransformation.Subtract, _type << 2 | _orientation);
+            return builder.ToMessageFrame();
         }
     }
 }

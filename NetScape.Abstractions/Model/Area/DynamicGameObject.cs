@@ -21,9 +21,9 @@ namespace NetScape.Abstractions.Model.Area
 	     * @param orientation The orientation of the DynamicGameObject.
 	     * @return The DynamicGameObject.
 	     */
-        public static DynamicGameObject CreateLocal(IWorld world, int id, Position position, int type, int orientation)
+        public static DynamicGameObject CreateLocal(int id, Position position, int type, int orientation)
         {
-            return new DynamicGameObject(world, id, position, type, orientation, false);
+            return new DynamicGameObject(id, position, type, orientation, false);
         }
 
         /**
@@ -36,10 +36,10 @@ namespace NetScape.Abstractions.Model.Area
 		 * @param orientation The orientation of the DynamicGameObject.
 		 * @return The DynamicGameObject.
 		 */
-        public static DynamicGameObject CreatePublic(IWorld world, int id, Position position, int type,
+        public static DynamicGameObject CreatePublic(int id, Position position, int type,
                 int orientation)
         {
-            return new DynamicGameObject(world, id, position, type, orientation, true);
+            return new DynamicGameObject(id, position, type, orientation, true);
         }
 
         /**
@@ -62,8 +62,8 @@ namespace NetScape.Abstractions.Model.Area
 		 * @param orientation The orientation of the DynamicGameObject.
 		 * @param alwaysVisible The flag indicates whether or not this DynamicGameObject is visible to every player.
 		 */
-        private DynamicGameObject(IWorld world, int id, Position position, int type, int orientation, bool alwaysVisible)
-            : base(world, id, position, type, orientation)
+        private DynamicGameObject(int id, Position position, int type, int orientation, bool alwaysVisible)
+            : base(id, position, type, orientation)
         {
             this.alwaysVisible = alwaysVisible;
         }

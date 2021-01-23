@@ -13,9 +13,8 @@ namespace NetScape.Abstractions.Model.Game
     public abstract class GameObject : Entity, IGroupableEntity
     {
 
-        public GameObject(IWorld world, Position pos)
+        public GameObject(Position pos)
         {
-            this.World = world;
             this.Position = pos;
         }
 
@@ -33,7 +32,7 @@ namespace NetScape.Abstractions.Model.Game
          * @param type The type of the GameObject.
          * @param orientation The orientation of the GameObject.
          */
-        public GameObject(IWorld world, int id, Position position, int type, int orientation) : this(world, position)
+        public GameObject(int id, Position position, int type, int orientation) : this(position)
         {
             _packed = id << 8 | (type & 0x3F) << 2 | orientation & 0x3;
         }

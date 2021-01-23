@@ -292,10 +292,10 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                         ((IPlayerAwareHandler)gameMessageHandler).Player = player;
                     }
                 }
+                ctx.Channel.Pipeline.AddLast(gameMessageHandlers);
                 ctx.GetAttribute(Constants.PlayerAttributeKey).SetIfAbsent(player);
                 player.ChannelHandlerContext = ctx;
                 _world.Add(player);
-                ctx.Channel.Pipeline.AddFirst(gameMessageHandlers);
             }
         }
     }

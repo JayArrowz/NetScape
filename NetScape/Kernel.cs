@@ -16,6 +16,7 @@ using NetScape.Modules.DAL;
 using NetScape.Modules.Messages;
 using NetScape.Modules.World;
 using NetScape.Modules.World.Updating;
+using NetScape.Abstractions.Model.Area;
 
 namespace NetScape
 {
@@ -65,6 +66,7 @@ namespace NetScape
             containerBuilder.RegisterModule(new WorldModule());
             containerBuilder.RegisterModule(new UpdatingModule());
             containerBuilder.RegisterType<FileSystem>().As<IFileSystem>();
+            containerBuilder.RegisterType<RegionRepository>().SingleInstance();
             containerBuilder.RegisterType<ContainerProvider>().SingleInstance();
         }
 

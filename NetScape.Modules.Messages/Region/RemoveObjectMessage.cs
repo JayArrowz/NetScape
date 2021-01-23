@@ -3,12 +3,8 @@ using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Modules.Messages.Builder;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace NetScape.Abstractions.Model.Area.Update
+namespace NetScape.Modules.Messages.Region
 {
     public class RemoveObjectMessage : RegionUpdateMessage
     {
@@ -47,7 +43,8 @@ namespace NetScape.Abstractions.Model.Area.Update
 
         public override bool Equals(object obj)
         {
-            if (obj is RemoveObjectMessage) {
+            if (obj is RemoveObjectMessage)
+            {
                 RemoveObjectMessage other = (RemoveObjectMessage)obj;
                 return _type == other._type && _orientation == other._orientation && _positionOffset == other._positionOffset;
             }
@@ -64,7 +61,10 @@ namespace NetScape.Abstractions.Model.Area.Update
 
         public override MessageFrame ToMessage(IByteBufferAllocator alloc)
         {
-            throw new NotImplementedException();
+            var bldr = new MessageFrameBuilder(alloc, 101);
+            bldr.Put(MessageType.Byte, DataTransformation.Negate, _type << 2 | _orientation);
+            bldr.Put(MessageType.Byte, _positionOffset);
+            return bldr.ToMessageFrame();
         }
     }
 }

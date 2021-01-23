@@ -4,10 +4,14 @@ using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Area;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.World.Updating;
+using NetScape.Abstractions.Model.World.Updating.Blocks;
 using NetScape.Modules.Messages.Encoders;
+using NetScape.Modules.Messages.Outgoing;
+using NetScape.Modules.Messages.Region;
 using NetScape.Modules.World.Updating.Segments;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace NetScape.Modules.World.Updating
 {
@@ -15,32 +19,35 @@ namespace NetScape.Modules.World.Updating
     {
         private readonly RegionRepository _regionRepository;
 
+        private static readonly int MAXIMUM_LOCAL_PLAYERS = 255;
+
+        /**
+         * The maximum number of players to load per cycle. This prevents the update packet from becoming too large (the
+         * client uses a 5000 byte buffer) and also stops old spec PCs from crashing when they login or teleport.
+         */
+        private static readonly int NEW_PLAYERS_PER_CYCLE = 20;
+
         public PlayerUpdater(RegionRepository regionRepository)
         {
             _regionRepository = regionRepository;
         }
 
-        public void PostUpdate(Player entity)
+        public Task PostUpdateAsync(Player player)
         {
-            Position old = entity.Position;
-            var local = true;
+            player.IsTeleporting = false;
+            player.RegionChanged = false;
+            player.BlockSet = new SynchronizationBlockSet();
 
-            if (entity.IsTeleporting)
+            if (!player.ExcessivePlayers)
             {
-                entity.ResetViewingDistance();
-                local = false;
+                player.IncrementViewingDistance();
             }
-
-            Position position = entity.Position;
-
-            if (!entity.HasLastKnownRegion() || IsRegionUpdateRequired(entity))
+            else
             {
-                entity.RegionChanged = true;
-                local = false;
-
-                entity.LastKnownRegion = position;
-                entity.SendAsync(new ClearRegionMessage { LocalX = (byte)position.LocalX, LocalY = (byte)position.LocalY });
+                player.DecrementViewingDistance();
+                player.ExcessivePlayers = false;
             }
+            return Task.CompletedTask;
         }
 
         private bool IsRegionUpdateRequired(Player player)
@@ -56,7 +63,8 @@ namespace NetScape.Modules.World.Updating
         }
 
 
-        public void PreUpdate(Player player)
+        public async Task PreUpdateAsync(Player player, Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> encodes,
+            Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> updates)
         {
             Position old = player.Position;
             //player.getWalkingQueue().pulse();
@@ -75,7 +83,7 @@ namespace NetScape.Modules.World.Updating
                 local = false;
 
                 player.LastKnownRegion = position;
-                player.SendAsync(new RegionChangeMessage { CentralRegionX = (short) position.CentralRegionX, CentralRegionY = (short) position.CentralRegionY });
+                await player.SendAsync(new RegionChangeMessage { CentralRegionX = (short)position.CentralRegionX, CentralRegionY = (short)position.CentralRegionY });
             }
 
             var oldViewable = _regionRepository.FromPosition(old).GetSurrounding();
@@ -90,7 +98,7 @@ namespace NetScape.Modules.World.Updating
                 full.RemoveWhere(t => oldViewable.Contains(t));
             }
 
-            SendUpdates(player, player.LastKnownRegion, differences, full);
+            await SendUpdates(player, player.LastKnownRegion, differences, full, encodes, updates);
         }
 
         /**
@@ -100,49 +108,153 @@ namespace NetScape.Modules.World.Updating
          * @param differences The {@link Set} of {@link RegionCoordinates} of Regions that changed.
          * @param full The {@link Set} of {@link RegionCoordinates} of Regions that require a full update.
          */
-        private void SendUpdates(Player player, Position position, HashSet<RegionCoordinates> differences, HashSet<RegionCoordinates> full)
+        private async Task SendUpdates(Player player, Position position, HashSet<RegionCoordinates> differences, HashSet<RegionCoordinates> full, Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> encodes, Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> updates)
         {
             RegionRepository repository = _regionRepository;
             int height = position.Height;
 
             foreach (RegionCoordinates coordinates in differences)
             {
-                var messages = updates.computeIfAbsent(coordinates,
-                    coords->repository.get(coords).getUpdates(height));
+                var updatesMsgs = repository.Get(coordinates).GetUpdates(height);
+                var messages = updates.TryAdd(coordinates, updatesMsgs);
 
-                if (!messages.isEmpty())
+                if (messages)
                 {
-                    player.send(new GroupedRegionUpdateMessage(position, coordinates, messages));
+                    await player.SendAsync(new GroupedRegionUpdateMessage(position, coordinates, updatesMsgs));
                 }
             }
 
-            for (RegionCoordinates coordinates : full)
+            foreach (RegionCoordinates coordinates in full)
             {
-                Set<RegionUpdateMessage> messages = encodes.computeIfAbsent(coordinates,
-                    coords->repository.get(coords).encode(height));
+                var addMessages = repository.Get(coordinates).encode(height);
+                var added = encodes.TryAdd(coordinates, addMessages);
 
-                if (!messages.isEmpty())
+                if (added)
                 {
-                    player.send(new ClearRegionMessage(position, coordinates));
-                    player.send(new GroupedRegionUpdateMessage(position, coordinates, messages));
+                    await player.SendAsync(new ClearRegionMessage { LocalX = (byte)position.LocalX, LocalY = (byte)position.LocalX });
+                    await player.SendAsync(new GroupedRegionUpdateMessage(position, coordinates, addMessages));
                 }
             }
         }
 
 
-        public void Update(Player entity)
+        /**
+         * Tests whether or not the specified Player has a cached appearance within
+         * the specified appearance ticket array.
+         * 
+         * @param appearanceTickets The appearance tickets.
+         * @param index The index of the Player.
+         * @param appearanceTicket The current appearance ticket for the Player.
+         * @return {@code true} if the specified Player has a cached appearance
+         *         otherwise {@code false}.
+         */
+        private bool HasCachedAppearance(int[] appearanceTickets, int index, int appearanceTicket)
         {
-            var lastKnownRegion = entity.LastKnownRegion;
-            var regionChanged = entity.RegionChanged;
-            var position = entity.Position;
-            SynchronizationBlockSet blockSet = entity.BlockSet;
-            SynchronizationSegment segment = (entity.IsTeleporting || entity.RegionChanged) ?
-                new TeleportSegment(blockSet, position) : new MovementSegment(blockSet, entity.GetDirections());
-
-            if (regionChanged)
+            if (appearanceTickets[index] != appearanceTicket)
             {
-                entity.ChannelHandlerContext.WriteAndFlushAsync(new RegionChangeMessage { CentralRegionX = (short)position.CentralRegionX, CentralRegionY = (short)position.CentralRegionY });
+                appearanceTickets[index] = appearanceTicket;
+                return false;
             }
+
+            return true;
+        }
+
+        /**
+         * Returns whether or not the specified {@link Player} should be removed.
+         *
+         * @param position The {@link Position} of the Player being updated.
+         * @param other The Player being tested.
+         * @return {@code true} iff the specified Player should be removed.
+         */
+        private bool Removeable(Position position, int distance, Player other)
+        {
+            if (other.IsTeleporting || !other.IsActive)
+            {
+                return true;
+            }
+
+            Position otherPosition = other.Position;
+            return otherPosition.GetLongestDelta(position) > distance || !otherPosition.IsWithinDistance(position, distance);
+        }
+
+        public async Task UpdateAsync(Player player)
+        {
+            Position lastKnownRegion = player.LastKnownRegion;
+            var regionChanged = player.RegionChanged;
+            int[] appearanceTickets = player.AppearanceTickets;
+
+            SynchronizationBlockSet blockSet = player.BlockSet;
+
+            Position position = player.Position;
+
+            SynchronizationSegment segment = (player.IsTeleporting || player.RegionChanged) ?
+                    new TeleportSegment(blockSet, position) : new MovementSegment(blockSet, player.GetDirections());
+
+            List<Player> localPlayers = player.LocalPlayerList;
+            int oldCount = localPlayers.Count;
+
+            List<SynchronizationSegment> segments = new();
+            int distance = player.ViewingDistance;
+
+            foreach (var other in localPlayers.ToList())
+            {
+                if (Removeable(position, distance, other))
+                {
+                    localPlayers.Remove(other);
+                    segments.Add(new RemoveMobSegment());
+                }
+                else
+                {
+                    segments.Add(new MovementSegment(other.BlockSet, other.GetDirections()));
+                }
+            }
+
+            int added = 0, count = localPlayers.Count();
+
+            Region current = _regionRepository.FromPosition(position);
+            HashSet<RegionCoordinates> regions = current.GetSurrounding();
+            regions.Add(current.Coordinates);
+
+            IEnumerable<Player> players = regions.Select(t => _regionRepository.Get(t))
+                    .SelectMany(region => region.GetEntities<Player>(EntityType.Player));
+
+            foreach (var other in players)
+            {
+                if (count >= MAXIMUM_LOCAL_PLAYERS)
+                {
+                    player.ExcessivePlayers = true;
+                    break;
+                }
+                else if (added >= NEW_PLAYERS_PER_CYCLE)
+                {
+                    break;
+                }
+
+                Position local = other.Position;
+
+                if (other != player && local.IsWithinDistance(position, distance) && !localPlayers.Contains(other))
+                {
+                    localPlayers.Add(other);
+                    count++;
+                    added++;
+
+                    blockSet = other.BlockSet;
+
+                    int index = other.Index;
+
+                    if (!blockSet.Contains<AppearanceBlock>() && !HasCachedAppearance(appearanceTickets, index - 1, other.AppearanceTicket))
+                    {
+                        blockSet = (SynchronizationBlockSet)blockSet.Clone();
+                        blockSet.Add(SynchronizationBlock.CreateAppearanceBlock(other));
+                    }
+
+                    segments.Add(new AddPlayerSegment(blockSet, index, local));
+                }
+            }
+
+            PlayerSynchronizationMessage message = new PlayerSynchronizationMessage(lastKnownRegion, position,
+                    regionChanged, segment, oldCount, segments);
+            await player.SendAsync(message);
         }
     }
 }
