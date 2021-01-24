@@ -17,7 +17,6 @@ jobs:
       name: Setup dotnet
       with:
           dotnet-version: 5.0.x
-    - run: dotnet build NetScape.Modules.Messages
     - run: dotnet build
     - name: docfx-action
       # You may pin to the exact commit or the version.
