@@ -42,12 +42,12 @@ namespace NetScape.Abstractions.Model.Area
         /**
          * The map of RegionCoordinates that correspond to the appropriate Regions.
          */
-        private readonly Dictionary<RegionCoordinates, Region> regions = new();
+        private readonly Dictionary<RegionCoordinates, Region> _regions = new();
 
         /**
 		 * A list of default {@link RegionListener}s which will be added to {@link Region}s upon creation.
 		 */
-        private readonly List<IRegionListener> defaultRegionListeners = new();
+        private readonly List<IRegionListener> _defaultRegionListeners = new();
 
         /**
 		 * Creates a new RegionRepository.
@@ -69,13 +69,13 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         private void Add(Region region)
         {
-            if (regions.ContainsKey(region.Coordinates) && !permitRemoval)
+            if (_regions.ContainsKey(region.Coordinates) && !permitRemoval)
             {
                 throw new InvalidOperationException("Cannot add a Region with the same coordinates as an existing Region.");
             }
 
-            defaultRegionListeners.ForEach(region.AddListener);
-            regions.Add(region.Coordinates, region);
+            _defaultRegionListeners.ForEach(region.AddListener);
+            _regions.Add(region.Coordinates, region);
         }
 
         /**
@@ -86,12 +86,12 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         public void AddRegionListener(IRegionListener listener)
         {
-            foreach (Region region in regions.Values)
+            foreach (Region region in _regions.Values)
             {
                 region.AddListener(listener);
             }
 
-            defaultRegionListeners.Add(listener);
+            _defaultRegionListeners.Add(listener);
         }
 
         /**
@@ -114,7 +114,7 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         public bool Contains(RegionCoordinates coordinates)
         {
-            return regions.ContainsKey(coordinates);
+            return _regions.ContainsKey(coordinates);
         }
 
         /**
@@ -138,7 +138,7 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         public Region Get(RegionCoordinates coordinates)
         {
-            var valid = regions.TryGetValue(coordinates, out var region);
+            var valid = _regions.TryGetValue(coordinates, out var region);
             if (!valid)
             {
                 region = new Region(coordinates);
@@ -155,7 +155,7 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         public List<Region> GetRegions()
         {
-            return regions.Values.ToList();
+            return _regions.Values.ToList();
         }
 
         /**
@@ -173,7 +173,7 @@ namespace NetScape.Abstractions.Model.Area
                 throw new NotSupportedException("Cannot remove regions from this repository.");
             }
 
-            return regions.Remove(region.Coordinates);
+            return _regions.Remove(region.Coordinates);
         }
 
     }
