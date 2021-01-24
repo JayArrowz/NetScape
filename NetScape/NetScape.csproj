@@ -34,6 +34,7 @@
     <ProjectReference Include="..\NetScape.Modules.Logging.SeriLog\NetScape.Modules.Logging.SeriLog.csproj" />
     <ProjectReference Include="..\NetScape.Modules.LoginProtocol\NetScape.Modules.LoginProtocol.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Cache\NetScape.Modules.Cache.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Messages.Generator\NetScape.Modules.Messages.Generator.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Messages\NetScape.Modules.Messages.csproj" />
     <ProjectReference Include="..\NetScape.Modules.World.Updating\NetScape.Modules.World.Updating.csproj" />
     <ProjectReference Include="..\NetScape.Modules.World\NetScape.Modules.World.csproj" />

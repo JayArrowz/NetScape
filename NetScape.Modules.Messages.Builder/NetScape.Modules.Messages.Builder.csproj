@@ -1,6 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>NetScape Message Builder Module</Description>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DotNetty.Buffers" Version="0.6.0" />

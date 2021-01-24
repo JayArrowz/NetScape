@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>NetScape 317 Login Protocol Module</Description>
   </PropertyGroup>
 
   <ItemGroup>
