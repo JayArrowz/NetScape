@@ -13,14 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
     - name: docfx-action
       # You may pin to the exact commit or the version.
       # uses: nikeee/docfx-action@b9c2cf92e3b4aa06878a1410833a8828b4bdcd26
