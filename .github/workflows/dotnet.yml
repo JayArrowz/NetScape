@@ -27,6 +27,6 @@ jobs:
     - uses: actions/setup-dotnet@v1
       name: Setup dotnet
       with:
-          dotnet-version: 5.0.1
+          dotnet-version: 5.0.x
     - run: dotnet build NetScape.Modules.Messages
     - run: dotnet build
