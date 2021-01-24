@@ -24,3 +24,9 @@ jobs:
       env:
         BUILD_DIR: docs/_site # docfx's default output directory is _site
         GH_PAT: ${{ secrets.GH_PAT }} # See https://github.com/maxheld83/ghpages
+    - uses: actions/setup-dotnet@v1
+      name: Setup dotnet
+      with:
+          dotnet-version: 5.0.X
+    - run: dotnet build NetScape.Modules.Messages
+    - run: dotnet build
