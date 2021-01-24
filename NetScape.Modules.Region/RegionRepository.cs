@@ -1,9 +1,11 @@
-﻿using NetScape.Abstractions.Interfaces.Area;
+﻿using NetScape.Abstractions.Interfaces.Region;
+using NetScape.Abstractions.Model;
+using NetScape.Abstractions.Model.Region;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NetScape.Abstractions.Model.Area
+namespace NetScape.Modules.Region
 {
     /**
 	 * A repository of {@link Region}s, backed by a {@link HashMap} of {@link RegionCoordinates} that correspond to their
@@ -11,7 +13,7 @@ namespace NetScape.Abstractions.Model.Area
 	 *
 	 * @author Major
 	 */
-    public class RegionRepository
+    public class RegionRepository : IRegionRepository
     {
 
         /**
@@ -42,7 +44,7 @@ namespace NetScape.Abstractions.Model.Area
         /**
          * The map of RegionCoordinates that correspond to the appropriate Regions.
          */
-        private readonly Dictionary<RegionCoordinates, Region> _regions = new();
+        private readonly Dictionary<RegionCoordinates, IRegion> _regions = new();
 
         /**
 		 * A list of default {@link RegionListener}s which will be added to {@link Region}s upon creation.
@@ -67,7 +69,7 @@ namespace NetScape.Abstractions.Model.Area
 		 * @throws UnsupportedOperationException If the coordinates of the provided Region are already mapped (and hence the
 		 *             existing Region would be replaced), and removal of regions is not permitted.
 		 */
-        private void Add(Region region)
+        private void Add(IRegion region)
         {
             if (_regions.ContainsKey(region.Coordinates) && !permitRemoval)
             {
@@ -86,7 +88,7 @@ namespace NetScape.Abstractions.Model.Area
 		 */
         public void AddRegionListener(IRegionListener listener)
         {
-            foreach (Region region in _regions.Values)
+            foreach (IRegion region in _regions.Values)
             {
                 region.AddListener(listener);
             }
@@ -101,7 +103,7 @@ namespace NetScape.Abstractions.Model.Area
 		 * @return {@code true} if this repository contains an entry with {@link RegionCoordinates} equal to the specified
 		 *         Region, otherwise {@code false}.
 		 */
-        public bool Contains(Region region)
+        public bool Contains(IRegion region)
         {
             return Contains(region.Coordinates);
         }
@@ -124,7 +126,7 @@ namespace NetScape.Abstractions.Model.Area
 		 * @param position The position.
 		 * @return The Region.
 		 */
-        public Region FromPosition(Position position)
+        public IRegion FromPosition(Position position)
         {
             return Get(RegionCoordinates.FromPosition(position));
         }
@@ -136,7 +138,7 @@ namespace NetScape.Abstractions.Model.Area
 		 * @param coordinates The RegionCoordinates.
 		 * @return The Region. Will never be null.
 		 */
-        public Region Get(RegionCoordinates coordinates)
+        public IRegion Get(RegionCoordinates coordinates)
         {
             var valid = _regions.TryGetValue(coordinates, out var region);
             if (!valid)
@@ -153,7 +155,7 @@ namespace NetScape.Abstractions.Model.Area
 		 *
 		 * @return The List.
 		 */
-        public List<Region> GetRegions()
+        public List<IRegion> GetRegions()
         {
             return _regions.Values.ToList();
         }
@@ -166,7 +168,7 @@ namespace NetScape.Abstractions.Model.Area
 		 * @return {@code true} if the specified Region existed and was removed, {@code false} if not.
 		 * @throws UnsupportedOperationException If this method is called on a repository that does not permit removal.
 		 */
-        public bool Remove(Region region)
+        public bool Remove(IRegion region)
         {
             if (!permitRemoval)
             {

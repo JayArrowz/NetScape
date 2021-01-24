@@ -1,10 +1,11 @@
 ﻿using Dawn;
 using NetScape.Abstractions.Extensions;
+using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
 using System;
 using System.Linq;
 
-namespace NetScape.Abstractions.Model.Area
+namespace NetScape.Abstractions.Model.Region
 {
     public class CollisionMatrix
     {

@@ -1,20 +1,22 @@
 ﻿using Dawn;
 using NetScape.Abstractions.Extensions;
-using NetScape.Abstractions.Interfaces.Area;
 using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Abstractions.Interfaces.Region;
+using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Region;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NetScape.Abstractions.Model.Area
+namespace NetScape.Modules.Region
 {
 
     public class UpdateRegionListener : IRegionListener
     {
 
-        public void Execute(Region region, Entity entity, EntityUpdateType type)
+        public void Execute(IRegion region, Entity entity, EntityUpdateType type)
         {
             var entityType = entity.EntityType;
             if (!entityType.IsMob() && entity is IGroupableEntity)
@@ -27,28 +29,8 @@ namespace NetScape.Abstractions.Model.Area
     /// <summary>
     /// An 8x8 area of the map.
     /// </summary>
-    public class Region
+    public class Region : IRegion
     {
-        /// <summary>
-        /// The region size
-        /// </summary>
-        public static readonly int Size = 8;
-
-        /// <summary>
-        /// The default size of newly-created Lists, to reduce memory usage.
-        /// </summary>
-        private static readonly int Default_List_Size = 2;
-
-        /// <summary>
-        /// The viewable region radius
-        /// </summary>
-        public static readonly int Viewable_Region_Radius = 3;
-
-        /// <summary>
-        /// The width of the viewport of every Player, in tiles.
-        /// </summary>
-        public static readonly int Viewport_Width = Size * 13;
-
         public RegionCoordinates Coordinates { get; }
 
         /// <summary>
@@ -64,7 +46,7 @@ namespace NetScape.Abstractions.Model.Area
         /// <summary>
         /// The CollisionMatrix.
         /// </summary>
-        private readonly CollisionMatrix[] Matrices = CollisionMatrix.CreateMatrices(Position.HeightLevels, Size, Size);
+        private readonly CollisionMatrix[] Matrices = CollisionMatrix.CreateMatrices(Position.HeightLevels, IRegion.Size, IRegion.Size);
 
         /// <summary>
         /// The List of Sets containing RegionUpdateMessages that specifically remove StaticGameObjects. The
@@ -100,7 +82,7 @@ namespace NetScape.Abstractions.Model.Area
             for (int height = 0; height < Position.HeightLevels; height++)
             {
                 RemovedObjects.Add(new());
-                Updates.Add(new(Default_List_Size));
+                Updates.Add(new(IRegion.Default_List_Size));
             }
         }
 
@@ -118,7 +100,7 @@ namespace NetScape.Abstractions.Model.Area
 
             if (!type.IsTransient())
             {
-                HashSet<Entity> local = Entities.GetOrAdd(position, key => new HashSet<Entity>(Default_List_Size));
+                HashSet<Entity> local = Entities.GetOrAdd(position, key => new HashSet<Entity>(IRegion.Default_List_Size));
                 local.Add(entity);
             }
 
@@ -239,12 +221,12 @@ namespace NetScape.Abstractions.Model.Area
         public HashSet<RegionCoordinates> GetSurrounding()
         {
             int localX = Coordinates.X, localY = Coordinates.Y;
-            int maxX = localX + Viewable_Region_Radius, maxY = localY + Viewable_Region_Radius;
+            int maxX = localX + IRegion.Viewable_Region_Radius, maxY = localY + IRegion.Viewable_Region_Radius;
 
             HashSet<RegionCoordinates> viewable = new();
-            for (int x = localX - Viewable_Region_Radius; x < maxX; x++)
+            for (int x = localX - IRegion.Viewable_Region_Radius; x < maxX; x++)
             {
-                for (int y = localY - Viewable_Region_Radius; y < maxY; y++)
+                for (int y = localY - IRegion.Viewable_Region_Radius; y < maxY; y++)
                 {
                     viewable.Add(new RegionCoordinates(x, y));
                 }
@@ -339,7 +321,7 @@ namespace NetScape.Abstractions.Model.Area
             CollisionMatrix matrix = Matrices[position.Height];
             int x = position.X, y = position.Y;
 
-            return !matrix.Untraversable(x % Size, y % Size, entity, direction);
+            return !matrix.Untraversable(x % IRegion.Size, y % IRegion.Size, entity, direction);
         }
 
         /// <summary>
@@ -359,7 +341,7 @@ namespace NetScape.Abstractions.Model.Area
         /// <param name="update">The update type.</param>
         public void Record<T>(T entity, EntityUpdateType update) where T : Entity
         {
-            UpdateOperation operation = ((IGroupableEntity)entity).ToUpdateOperation(this, update);
+            IRegionUpdateOperation operation = ((IGroupableEntity)entity).ToUpdateOperation(this, update);
             RegionUpdateMessage message = operation.ToMessage(), inverse = operation.Inverse();
 
             int height = entity.Position.Height;

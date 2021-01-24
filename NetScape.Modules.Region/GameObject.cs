@@ -1,8 +1,10 @@
-﻿using NetScape.Abstractions.Interfaces.Area;
-using NetScape.Abstractions.Model.Area;
+﻿using NetScape.Abstractions.Interfaces.Region;
+using NetScape.Abstractions.Model;
+using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Region;
 using NetScape.Modules.World;
 
-namespace NetScape.Abstractions.Model.Game
+namespace NetScape.Modules.Region
 {
     public abstract class GameObject : Entity, IGroupableEntity
     {
@@ -113,7 +115,7 @@ namespace NetScape.Abstractions.Model.Game
         /// <returns> <c>true</c> if the Player can see this GameObject, <c>false</c> if not</returns>
         public abstract bool ViewableBy(Player player, IWorld world);
 
-        public UpdateOperation ToUpdateOperation(Region region, EntityUpdateType type)
+        public IRegionUpdateOperation ToUpdateOperation(IRegion region, EntityUpdateType type)
         {
             return new ObjectUpdateOperation(region, type, this);
         }

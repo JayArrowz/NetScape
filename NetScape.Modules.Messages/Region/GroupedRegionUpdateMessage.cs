@@ -1,7 +1,7 @@
 ﻿using DotNetty.Buffers;
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model;
-using NetScape.Abstractions.Model.Area;
+using NetScape.Abstractions.Model.Region;
 using NetScape.Modules.Messages.Builder;
 using System;
 using System.Collections.Generic;

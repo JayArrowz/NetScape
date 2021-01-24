@@ -1,8 +1,9 @@
-﻿using NetScape.Abstractions.Model.Game;
+﻿using NetScape.Abstractions.Model;
+using NetScape.Abstractions.Model.Game;
 using NetScape.Modules.World;
 using System.Collections.Generic;
 
-namespace NetScape.Abstractions.Model.Area
+namespace NetScape.Modules.Region
 {
     public class DynamicGameObject : GameObject
     {

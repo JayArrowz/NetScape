@@ -6,17 +6,18 @@ using Microsoft.Extensions.DependencyInjection;
 using NetScape.Abstractions.FileSystem;
 using NetScape.Abstractions.Interfaces;
 using NetScape.Abstractions.Interfaces.IO;
+using NetScape.Abstractions.Interfaces.Region;
+using NetScape.Modules.Cache;
+using NetScape.Modules.DAL;
 using NetScape.Modules.Logging.SeriLog;
 using NetScape.Modules.LoginProtocol;
-using NetScape.Modules.Server;
-using NetScape.Modules.Cache;
-using System;
-using System.IO;
-using NetScape.Modules.DAL;
 using NetScape.Modules.Messages;
+using NetScape.Modules.Region;
+using NetScape.Modules.Server;
 using NetScape.Modules.World;
 using NetScape.Modules.World.Updating;
-using NetScape.Abstractions.Model.Area;
+using System;
+using System.IO;
 
 namespace NetScape
 {
@@ -41,7 +42,7 @@ namespace NetScape
             {
                 var gameServer = serviceProvider.GetRequiredService<IGameServer>();
                 _ = gameServer.BindAsync();
-                
+
                 //TODO Make better
                 Console.ReadLine();
                 Exited = true;
@@ -65,8 +66,8 @@ namespace NetScape
             containerBuilder.RegisterModule(new GameServerModule(ConfigurationRoot["BindAddr"], ushort.Parse(ConfigurationRoot["BindPort"])));
             containerBuilder.RegisterModule(new WorldModule());
             containerBuilder.RegisterModule(new UpdatingModule());
+            containerBuilder.RegisterModule(new RegionModule());
             containerBuilder.RegisterType<FileSystem>().As<IFileSystem>();
-            containerBuilder.RegisterType<RegionRepository>().SingleInstance();
             containerBuilder.RegisterType<ContainerProvider>().SingleInstance();
         }
 

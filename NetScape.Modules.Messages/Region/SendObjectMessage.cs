@@ -2,6 +2,7 @@
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Modules.Messages.Builder;
+using NetScape.Modules.Region;
 
 namespace NetScape.Modules.Messages.Region
 {

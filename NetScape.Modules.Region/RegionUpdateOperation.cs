@@ -1,11 +1,14 @@
 ﻿using Dawn;
 using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Abstractions.Interfaces.Region;
+using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Region;
 using System;
 
-namespace NetScape.Abstractions.Model.Area
+namespace NetScape.Modules.Region
 {
-    public abstract class UpdateOperation
+    public abstract class RegionUpdateOperation : IRegionUpdateOperation
     {
         /// <summary>
         /// The Entity involved in this UpdateOperation.
@@ -15,7 +18,7 @@ namespace NetScape.Abstractions.Model.Area
         /// <summary>
         /// The Region in which this type occurred.
         /// </summary>
-        protected readonly Region _region;
+        protected readonly IRegion _region;
 
         /// <summary>
         /// The type of update.
@@ -23,12 +26,12 @@ namespace NetScape.Abstractions.Model.Area
         protected readonly EntityUpdateType _type;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateOperation"/> class.
+        /// Initializes a new instance of the <see cref="RegionUpdateOperation"/> class.
         /// </summary>
         /// <param name="region">The region.</param>
         /// <param name="type">The type.</param>
         /// <param name="entity">The entity.</param>
-        public UpdateOperation(Region region, EntityUpdateType type, Entity entity)
+        public RegionUpdateOperation(IRegion region, EntityUpdateType type, Entity entity)
         {
             Guard.Argument(region).NotNull();
             Guard.Argument(entity).NotNull();
@@ -78,7 +81,7 @@ namespace NetScape.Abstractions.Model.Area
         }
 
         /// <summary>
-        /// Returns a <see cref="RegionUpdateMessage"/> that adds the Entity in this <see cref="UpdateOperation"/>.
+        /// Returns a <see cref="RegionUpdateMessage"/> that adds the Entity in this <see cref="RegionUpdateOperation"/>.
         /// </summary>
         /// <param name="offset">The offset of the <see cref="Position"/> of the Entity from the Position of the <see cref="Region"/>..</param>
         /// <returns>The RegionUpdateMessage</returns>
@@ -102,8 +105,8 @@ namespace NetScape.Abstractions.Model.Area
             int dx = position.X - coordinates.AbsoluteX;
             int dy = position.Y - coordinates.AbsoluteY;
 
-            Guard.Argument(dx).InRange(0, Region.Size);
-            Guard.Argument(dy).InRange(0, Region.Size);
+            Guard.Argument(dx).InRange(0, IRegion.Size);
+            Guard.Argument(dy).InRange(0, IRegion.Size);
             return dx << 4 | dy;
         }
     }

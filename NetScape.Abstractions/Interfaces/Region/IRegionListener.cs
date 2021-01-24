@@ -1,7 +1,7 @@
-﻿using NetScape.Abstractions.Model.Area;
-using NetScape.Abstractions.Model.Game;
+﻿using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Region;
 
-namespace NetScape.Abstractions.Interfaces.Area
+namespace NetScape.Abstractions.Interfaces.Region
 {
     /// <summary>
     ///  A class that should be implemented by listeners that execute actions when an entity is added, moved, or removed from
@@ -10,6 +10,6 @@ namespace NetScape.Abstractions.Interfaces.Area
     /// </summary>
     public interface IRegionListener
     {
-        void Execute(Region region, Entity entity, EntityUpdateType type);
+        void Execute(IRegion region, Entity entity, EntityUpdateType type);
     }
 }

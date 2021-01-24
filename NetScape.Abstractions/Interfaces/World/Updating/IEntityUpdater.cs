@@ -1,6 +1,6 @@
 ﻿using NetScape.Abstractions.Interfaces.Messages;
-using NetScape.Abstractions.Model.Area;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Region;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

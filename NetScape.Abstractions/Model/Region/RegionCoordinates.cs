@@ -1,4 +1,4 @@
-﻿namespace NetScape.Abstractions.Model.Area
+﻿namespace NetScape.Abstractions.Model.Region
 {
 	/// <summary>
 	/// An immutable class representing the coordinates of a region, where the coordinates ({@code x, y}) are the top-left of

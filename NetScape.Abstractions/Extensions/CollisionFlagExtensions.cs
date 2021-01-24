@@ -1,6 +1,5 @@
-﻿using NetScape.Abstractions.Model.Area;
-using NetScape.Abstractions.Model.Game;
-using System;
+﻿using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Region;
 
 namespace NetScape.Abstractions.Extensions
 {

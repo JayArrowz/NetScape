@@ -1,8 +1,9 @@
 ﻿using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Abstractions.Interfaces.Region;
 using NetScape.Abstractions.Interfaces.World.Updating;
 using NetScape.Abstractions.Model;
-using NetScape.Abstractions.Model.Area;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Region;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
 using NetScape.Modules.Messages.Encoders;
@@ -17,7 +18,7 @@ namespace NetScape.Modules.World.Updating
 {
     public class PlayerUpdater : IEntityUpdater<Player>
     {
-        private readonly RegionRepository _regionRepository;
+        private readonly IRegionRepository _regionRepository;
 
         private static readonly int MaximumLocalPlayers = 255;
 
@@ -27,7 +28,7 @@ namespace NetScape.Modules.World.Updating
         /// </summary>
         private static readonly int NewPlayersPerCycle = 20;
 
-        public PlayerUpdater(RegionRepository regionRepository)
+        public PlayerUpdater(IRegionRepository regionRepository)
         {
             _regionRepository = regionRepository;
         }
@@ -58,8 +59,8 @@ namespace NetScape.Modules.World.Updating
             int deltaX = current.GetLocalX(last);
             int deltaY = current.GetLocalY(last);
 
-            return deltaX <= Position.MaxDistance || deltaX >= Region.Viewport_Width - Position.MaxDistance - 1
-                || deltaY <= Position.MaxDistance || deltaY >= Region.Viewport_Width - Position.MaxDistance - 1;
+            return deltaX <= Position.MaxDistance || deltaX >= IRegion.Viewport_Width - Position.MaxDistance - 1
+                || deltaY <= Position.MaxDistance || deltaY >= IRegion.Viewport_Width - Position.MaxDistance - 1;
         }
 
 
@@ -69,7 +70,7 @@ namespace NetScape.Modules.World.Updating
             Position old = player.Position;
             //player.getWalkingQueue().pulse();
             var local = true;
-            
+
             if (player.IsTeleporting)
             {
                 player.ResetViewingDistance();
@@ -111,7 +112,7 @@ namespace NetScape.Modules.World.Updating
         /// <param name="updates">The HashSet of <see cref="RegionCoordinates"/> of regions that require a update.</param>
         private async Task SendUpdates(Player player, Position position, HashSet<RegionCoordinates> differences, HashSet<RegionCoordinates> full, Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> encodes, Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> updates)
         {
-            RegionRepository repository = _regionRepository;
+            IRegionRepository repository = _regionRepository;
             int height = position.Height;
 
             foreach (RegionCoordinates coordinates in differences)
@@ -210,7 +211,7 @@ namespace NetScape.Modules.World.Updating
 
             int added = 0, count = localPlayers.Count();
 
-            Region current = _regionRepository.FromPosition(position);
+            IRegion current = _regionRepository.FromPosition(position);
             HashSet<RegionCoordinates> regions = current.GetSurrounding();
             regions.Add(current.Coordinates);
 

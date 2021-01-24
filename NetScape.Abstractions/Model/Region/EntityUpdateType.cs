@@ -1,4 +1,4 @@
-﻿namespace NetScape.Abstractions.Model.Area
+﻿namespace NetScape.Abstractions.Model.Region
 {
     /// <summary>
     /// <author>Major</author>

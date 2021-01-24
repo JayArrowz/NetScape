@@ -2,6 +2,9 @@
 
 namespace NetScape.Abstractions.Extensions
 {
+    /// <summary>
+    /// Extensions for the EntityType enum
+    /// </summary>
     public static class EntityTypeExtensions
     {
         /// <summary>

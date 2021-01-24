@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NetScape.Abstractions.Model.Area;
+using NetScape.Abstractions.Interfaces.Region;
+using NetScape.Abstractions.Model.Region;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -236,7 +237,7 @@ namespace NetScape.Abstractions.Model
         /// </summary>
         /// <param name="region"> The region. </param>
         /// <returns> {@code true} if this position is inside the specified region, otherwise {@code false}. </returns>
-        public bool Inside(Region region)
+        public bool Inside(IRegion region)
         {
             RegionCoordinates coordinates = region.Coordinates;
             return coordinates.Equals(RegionCoordinates);

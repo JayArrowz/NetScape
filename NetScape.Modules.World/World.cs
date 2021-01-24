@@ -1,8 +1,7 @@
-﻿using Autofac;
-using NetScape.Abstractions.Interfaces.Messages;
+﻿using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Interfaces.World.Updating;
-using NetScape.Abstractions.Model.Area;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Region;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -42,13 +41,15 @@ namespace NetScape.Modules.World
                 stopwatch.Restart();
                 Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> encodes = new(), updates = new();
 
-                foreach(var player in Players) {
+                foreach (var player in Players)
+                {
                     try
                     {
                         await _playerUpdater.PreUpdateAsync(player, encodes, updates);
                         await _playerUpdater.UpdateAsync(player);
                         await _playerUpdater.PostUpdateAsync(player);
-                    } catch(Exception e)
+                    }
+                    catch (Exception e)
                     {
                         Log.Logger.Error(e, nameof(Process));
                     }
