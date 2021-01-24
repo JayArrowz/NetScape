@@ -2,7 +2,7 @@
 Modular Runescape Private Server in C# for learning purposes & fun!
 
 ### Code Docs
-* [All Docs](/api)
+* [All Docs](/NetScape/api)
 
 ## Getting Started
 
