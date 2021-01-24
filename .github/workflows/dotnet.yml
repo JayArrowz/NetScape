@@ -12,6 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/setup-dotnet@v1
+      name: Setup dotnet
+      with:
+          dotnet-version: 5.0.x
+    - run: dotnet build NetScape.Modules.Messages
+    - run: dotnet build
     - uses: actions/checkout@v2
     - name: docfx-action
       # You may pin to the exact commit or the version.
@@ -24,9 +30,3 @@ jobs:
       env:
         BUILD_DIR: docs/_site # docfx's default output directory is _site
         GH_PAT: ${{ secrets.GH_PAT }} # See https://github.com/maxheld83/ghpages
-    - uses: actions/setup-dotnet@v1
-      name: Setup dotnet
-      with:
-          dotnet-version: 5.0.x
-    - run: dotnet build NetScape.Modules.Messages
-    - run: dotnet build
