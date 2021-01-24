@@ -5,15 +5,14 @@
     /// </summary>
     public enum EntityUpdateType
     {
-
-        /**
-		 * The add type, when an Entity has been added to a {@link Region}.
-		 */
+        /// <summary>
+        ///  The add type, when an Entity has been added to a <see cref="Region"/>
+        /// </summary>
         Add,
 
-        /**
-		 * The remove type, when an Entity has been removed from a {@link Region}.
-		 */
+        /// <summary>
+        /// The remove type, when an Entity has been removed from a <see cref="Region"/>
+        /// </summary>
         Remove
     }
 }

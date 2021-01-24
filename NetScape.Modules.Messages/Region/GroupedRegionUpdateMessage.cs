@@ -10,45 +10,43 @@ namespace NetScape.Modules.Messages.Region
 {
     public class GroupedRegionUpdateMessage : IOutMessage<MessageFrame>
     {
+        /// <summary>
+        /// The last known region of the player
+        /// </summary>
+        private readonly Position _lastKnownRegion;
 
-        /**
-		 * The last known region Position of the Player.
-		 */
-        private readonly Position lastKnownRegion;
+        /// <summary>
+        /// The set of the messages to be sent
+        /// </summary>
+        private readonly HashSet<RegionUpdateMessage> _messages;
 
-        /**
-		 * The Set of RegionUpdateMessages to be sent.
-		 */
-        private readonly HashSet<RegionUpdateMessage> messages;
+        /// <summary>
+        /// The position of the region being updated
+        /// </summary>
+        private readonly Position _update;
 
-        /**
-		 * The Position of the Region being updated.
-		 */
-        private readonly Position region;
-
-        /**
-		 * Creates the GroupedRegionUpdateMessage.
-		 *
-		 * @param lastKnownRegion The last known region {@link Position} of the Player.
-		 * @param coordinates The {@link RegionCoordinates} of the Region being updated.
-		 * @param messages The {@link Set} of {@link RegionUpdateMessage}s.
-		 */
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GroupedRegionUpdateMessage"/> class.
+        /// </summary>
+        /// <param name="lastKnownRegion">The last known region.</param>
+        /// <param name="coordinates">The coordinates of the region being updated.</param>
+        /// <param name="messages">The set of the messages to be sent.</param>
         public GroupedRegionUpdateMessage(Position lastKnownRegion, RegionCoordinates coordinates,
                                           HashSet<RegionUpdateMessage> messages)
         {
-            this.lastKnownRegion = lastKnownRegion;
-            region = new Position(coordinates.AbsoluteX, coordinates.AbsoluteY);
-            this.messages = messages;
+            _lastKnownRegion = lastKnownRegion;
+            _update = new Position(coordinates.AbsoluteX, coordinates.AbsoluteY);
+            _messages = messages;
         }
 
         public MessageFrame ToMessage(IByteBufferAllocator alloc)
         {
             MessageFrameBuilder bldr = new MessageFrameBuilder(alloc, 60, FrameType.VariableShort);
-            Position basePos = lastKnownRegion;
+            Position basePos = _lastKnownRegion;
 
-            bldr.Put(MessageType.Byte, region.GetLocalY(basePos));
-            bldr.Put(MessageType.Byte, DataTransformation.Negate, region.GetLocalX(basePos));
-            foreach (RegionUpdateMessage update in messages)
+            bldr.Put(MessageType.Byte, _update.GetLocalY(basePos));
+            bldr.Put(MessageType.Byte, DataTransformation.Negate, _update.GetLocalX(basePos));
+            foreach (RegionUpdateMessage update in _messages)
             {
                 var frame = update.ToMessage(alloc);
                 bldr.Put(MessageType.Byte, frame.Id);

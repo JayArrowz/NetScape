@@ -20,32 +20,32 @@ using System.Threading.Tasks;
 
 namespace NetScape.Modules.LoginProtocol.Handlers
 {
-    /**
-     * @author Graham
-     * Modified by JayArrowz
-     */
+    /// <summary>
+    /// The Game Login decoder
+    /// </summary>
+    /// <seealso cref="NetScape.Abstractions.IO.StatefulFrameDecoder{NetScape.Abstractions.Model.Login.LoginDecoderState}" />
     public class LoginDecoder : StatefulFrameDecoder<LoginDecoderState>
     {
         private static readonly Random Random = new Random();
 
-        /**
-         * The login packet length.
-         */
+        /// <summary>
+        /// The login packet length
+        /// </summary>
         private int _loginLength;
 
-        /**
-         * The reconnecting flag.
-         */
+        /// <summary>
+        /// The reconnecting flag
+        /// </summary>
         private bool _reconnecting;
 
-        /**
-         * The server-side session key.
-         */
+        /// <summary>
+        /// The server side session key
+        /// </summary>
         private long _serverSeed;
 
-        /**
-         * The username hash.
-         */
+        /// <summary>
+        /// The username hash
+        /// </summary>
         private int _usernameHash;
         private readonly ILogger _logger;
         private readonly ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> _loginProcessor;
@@ -79,13 +79,12 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             }
         }
 
-        /**
-         * Decodes in the handshake state.
-         *
-         * @param ctx The channel handler context.
-         * @param buffer The buffer.
-         * @param out The {@link List} of objects to pass forward through the pipeline.
-         */
+        /// <summary>
+        /// Decodes the handshake state.
+        /// </summary>
+        /// <param name="ctx">The ctx.</param>
+        /// <param name="buffer">The buffer.</param>
+        /// <param name="output">The output.</param>
         private void DecodeHandshake(IChannelHandlerContext ctx, IByteBuffer buffer, List<object> output)
         {
             if (buffer.IsReadable())
@@ -102,13 +101,12 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             }
         }
 
-        /**
-         * Decodes in the header state.
-         *
-         * @param ctx The channel handler context.
-         * @param buffer The buffer.
-         * @param out The {@link List} of objects to pass forward through the pipeline.
-         */
+        /// <summary>
+        /// Decodes the header state.
+        /// </summary>
+        /// <param name="ctx">The ctx.</param>
+        /// <param name="buffer">The buffer.</param>
+        /// <param name="output">The output.</param>
         private void DecodeHeader(IChannelHandlerContext ctx, IByteBuffer buffer, List<object> output)
         {
             if (buffer.ReadableBytes >= 2)
@@ -128,13 +126,12 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             }
         }
 
-        /**
-         * Decodes in the payload state.
-         *
-         * @param ctx The channel handler context.
-         * @param buffer The buffer.
-         * @param out The {@link List} of objects to pass forward through the pipeline.
-         */
+        /// <summary>
+        /// Decodes the payload state.
+        /// </summary>
+        /// <param name="ctx">The ctx.</param>
+        /// <param name="buffer">The buffer.</param>
+        /// <param name="output">The output.</param>
         private void DecodePayload(IChannelHandlerContext ctx, IByteBuffer buffer, List<object> output)
         {
             if (buffer.ReadableBytes >= _loginLength)
@@ -249,12 +246,11 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             loginResult.Player.SendInitialMessages();
         }
 
-        /**
-         * Writes a response code to the client and closes the current channel.
-         *
-         * @param ctx The context of the channel handler.
-         * @param response The response code to write.
-         */
+        /// <summary>
+        /// Writes a response code to the client and closes the current channel.
+        /// </summary>
+        /// <param name="ctx">The ctx.</param>
+        /// <param name="response">The response.</param>
         private void WriteResponseCode(IChannelHandlerContext ctx, LoginStatus response)
         {
             var buffer = ctx.Allocator.Buffer(sizeof(byte));
@@ -281,14 +277,14 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 ctx.Channel.Pipeline.Remove(nameof(LoginDecoder));
                 var gameMessageHandlers = _gameMessageProvider.Provide();
 
-                foreach(var gameMessageHandler in gameMessageHandlers)
+                foreach (var gameMessageHandler in gameMessageHandlers)
                 {
-                    if(gameMessageHandler is ICipherAwareHandler)
+                    if (gameMessageHandler is ICipherAwareHandler)
                     {
                         ((ICipherAwareHandler)gameMessageHandler).CipherPair = randomPair;
                     }
-                    
-                    if(gameMessageHandler is IPlayerAwareHandler)
+
+                    if (gameMessageHandler is IPlayerAwareHandler)
                     {
                         ((IPlayerAwareHandler)gameMessageHandler).Player = player;
                     }

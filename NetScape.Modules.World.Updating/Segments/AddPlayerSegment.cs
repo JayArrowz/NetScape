@@ -1,10 +1,5 @@
 ﻿using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.World.Updating;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NetScape.Modules.World.Updating.Segments
 {

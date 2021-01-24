@@ -2,8 +2,7 @@
 {
 	/// <summary>
 	/// An immutable class representing the coordinates of a region, where the coordinates ({@code x, y}) are the top-left of
-	/// the region.
-	/// 
+	/// the region. 
 	/// @author Graham
 	/// @author Major
 	/// </summary>
@@ -43,7 +42,7 @@
 		}
 
 		/// <summary>
-		/// Gets the absolute x coordinate of this Region (which can be compared directly against <seealso cref="Position.getX()"/>.
+		/// Gets the absolute x coordinate of this Region (which can be compared directly against <seealso cref="Position.X"/>.
 		/// </summary>
 		/// <returns> The absolute x coordinate. </returns>
 		public int AbsoluteX
@@ -55,7 +54,7 @@
 		}
 
 		/// <summary>
-		/// Gets the absolute y coordinate of this Region (which can be compared directly against <seealso cref="Position.getY()"/>.
+		/// Gets the absolute y coordinate of this Region (which can be compared directly against <seealso cref="Position.Y"/>.
 		/// </summary>
 		/// <returns> The absolute y coordinate. </returns>
 		public int AbsoluteY

@@ -12,20 +12,20 @@ namespace NetScape.Abstractions.Model.World.Updating.Blocks
         public int HeadIcon { get; set; }
         public int Skill { get; set; }
 
-		public AppearanceBlock(long name, Appearance appearance, int combat, int skill, int headIcon, bool isSkulled) : this(name, appearance, combat, skill, headIcon, isSkulled, -1)
-		{
-		}
+        public AppearanceBlock(long name, Appearance appearance, int combat, int skill, int headIcon, bool isSkulled) : this(name, appearance, combat, skill, headIcon, isSkulled, -1)
+        {
+        }
 
-		public  AppearanceBlock(long name, Appearance appearance, int combat, int skill, int headIcon, bool isSkulled, int npcId)
-		{
-			Name = name;
-			Appearance = appearance;
-			Combat = combat;
-			Skill = skill;
-			//this.equipment = equipment.duplicate();
-			HeadIcon = headIcon;
-			IsSkulled = isSkulled;
-			NpcId = npcId;
-		}
-	}
+        public AppearanceBlock(long name, Appearance appearance, int combat, int skill, int headIcon, bool isSkulled, int npcId)
+        {
+            Name = name;
+            Appearance = appearance;
+            Combat = combat;
+            Skill = skill;
+            //this.equipment = equipment.duplicate();
+            HeadIcon = headIcon;
+            IsSkulled = isSkulled;
+            NpcId = npcId;
+        }
+    }
 }

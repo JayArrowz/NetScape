@@ -1,6 +1,4 @@
-﻿using NetScape.Abstractions.Model.World.Updating;
-
-namespace NetScape.Abstractions.Model.World.Updating.Blocks
+﻿namespace NetScape.Abstractions.Model.World.Updating.Blocks
 {
     public class AnimationBlock : SynchronizationBlock
     {
@@ -8,7 +6,7 @@ namespace NetScape.Abstractions.Model.World.Updating.Blocks
 
         public AnimationBlock(Animation animation)
         {
-            this.Animation = animation;
+            Animation = animation;
         }
     }
 }

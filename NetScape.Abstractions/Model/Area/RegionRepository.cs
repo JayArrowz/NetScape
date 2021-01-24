@@ -74,7 +74,7 @@ namespace NetScape.Abstractions.Model.Area
                 throw new InvalidOperationException("Cannot add a Region with the same coordinates as an existing Region.");
             }
 
-            defaultRegionListeners.ForEach(region.addListener);
+            defaultRegionListeners.ForEach(region.AddListener);
             regions.Add(region.Coordinates, region);
         }
 
@@ -88,7 +88,7 @@ namespace NetScape.Abstractions.Model.Area
         {
             foreach (Region region in regions.Values)
             {
-                region.addListener(listener);
+                region.AddListener(listener);
             }
 
             defaultRegionListeners.Add(listener);

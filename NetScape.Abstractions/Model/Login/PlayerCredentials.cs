@@ -1,41 +1,57 @@
 ﻿namespace NetScape.Abstractions.Model.Login
-{
-    /**
-     * Holds the credentials for a player.
-     *
-     * @author Graham
-     */
+{    
+    /// <summary>
+    /// Holds the player credentials for a player
+    /// </summary>
     public sealed record PlayerCredentials
     {
 
-        /**
-         * The player's username encoded as a long.
-         */
+        /// <summary>
+        /// Gets or sets the encoded username.
+        /// </summary>
+        /// <value>
+        /// The encoded username.
+        /// </value>
         public long EncodedUsername { get; set; }
 
-        /**
-         * The player's password.
-         */
+        /// <summary>
+        /// Gets or sets the password.
+        /// </summary>
+        /// <value>
+        /// The password.
+        /// </value>
         public string Password { get; set; }
 
-        /**
-         * The computer's unique identifier.
-         */
+        /// <summary>
+        /// Gets or sets the uid.
+        /// </summary>
+        /// <value>
+        /// The uid.
+        /// </value>
         public int Uid { get; set; }
 
-        /**
-         * The player's username.
-         */
+        /// <summary>
+        /// Gets or sets the username.
+        /// </summary>
+        /// <value>
+        /// The username.
+        /// </value>
         public string Username { get; set; }
 
-        /**
-         * The hash of the player's username.
-         */
+        /// <summary>
+        /// Gets or sets the username hash.
+        /// </summary>
+        /// <value>
+        /// The username hash.
+        /// </value>
         public string UsernameHash { get; set; }
 
-        /**
-         * The Player's host address, represented as a string.
-         */
+        /// <summary>
+        /// Gets or sets the host address.
+        /// </summary>
+        /// <value>
+        /// The host address.
+        /// </value>
         public string HostAddress { get; set; }
     }
 }

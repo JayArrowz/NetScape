@@ -21,10 +21,10 @@ namespace NetScape.Modules.World.Updating
 
         private static readonly int MaximumLocalPlayers = 255;
 
-        /**
-         * The maximum number of players to load per cycle. This prevents the update packet from becoming too large (the
-         * client uses a 5000 byte buffer) and also stops old spec PCs from crashing when they login or teleport.
-         */
+        /// <summary>
+        /// The maximum number of players to load per cycle. This prevents the update packet from becoming too large (the
+        /// client uses a 5000 byte buffer) and also stops old spec PCs from crashing when they login or teleport.
+        /// </summary>
         private static readonly int NewPlayersPerCycle = 20;
 
         public PlayerUpdater(RegionRepository regionRepository)
@@ -100,13 +100,15 @@ namespace NetScape.Modules.World.Updating
             await SendUpdates(player, player.LastKnownRegion, differences, full, encodes, updates);
         }
 
-        /**
-         * Sends the updates for a {@link Region}
-         *
-         * @param position The {@link Position} of the last known region.
-         * @param differences The {@link Set} of {@link RegionCoordinates} of Regions that changed.
-         * @param full The {@link Set} of {@link RegionCoordinates} of Regions that require a full update.
-         */
+        /// <summary>
+        /// Sends the updates for a <see cref="Region"/>
+        /// </summary>
+        /// <param name="player">The player.</param>
+        /// <param name="position">The position.</param>
+        /// <param name="differences">The differences.</param>
+        /// <param name="full">The HashSet of <see cref="RegionCoordinates"/> of regions that require a full update.</param>
+        /// <param name="encodes">The HashSet of <see cref="RegionCoordinates"/> of regions that changed.</param>
+        /// <param name="updates">The HashSet of <see cref="RegionCoordinates"/> of regions that require a update.</param>
         private async Task SendUpdates(Player player, Position position, HashSet<RegionCoordinates> differences, HashSet<RegionCoordinates> full, Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> encodes, Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> updates)
         {
             RegionRepository repository = _regionRepository;
@@ -125,7 +127,7 @@ namespace NetScape.Modules.World.Updating
 
             foreach (RegionCoordinates coordinates in full)
             {
-                var addMessages = repository.Get(coordinates).encode(height);
+                var addMessages = repository.Get(coordinates).Encode(height);
                 var added = encodes.TryAdd(coordinates, addMessages);
 
                 if (added)
@@ -136,17 +138,15 @@ namespace NetScape.Modules.World.Updating
             }
         }
 
-
-        /**
-         * Tests whether or not the specified Player has a cached appearance within
-         * the specified appearance ticket array.
-         * 
-         * @param appearanceTickets The appearance tickets.
-         * @param index The index of the Player.
-         * @param appearanceTicket The current appearance ticket for the Player.
-         * @return {@code true} if the specified Player has a cached appearance
-         *         otherwise {@code false}.
-         */
+        /// <summary>
+        /// Determines whether [player has cached appearance] [the specified appearance tickets].
+        /// </summary>
+        /// <param name="appearanceTickets">The appearance tickets.</param>
+        /// <param name="index">The index of the player.</param>
+        /// <param name="appearanceTicket">The appearance ticket.</param>
+        /// <returns>
+        ///   <c>true</c> if [player has cached appearance] [the specified appearance tickets]; otherwise, <c>false</c>.
+        /// </returns>
         private bool HasCachedAppearance(int[] appearanceTickets, int index, int appearanceTicket)
         {
             if (appearanceTickets[index] != appearanceTicket)
@@ -158,13 +158,13 @@ namespace NetScape.Modules.World.Updating
             return true;
         }
 
-        /**
-         * Returns whether or not the specified {@link Player} should be removed.
-         *
-         * @param position The {@link Position} of the Player being updated.
-         * @param other The Player being tested.
-         * @return {@code true} iff the specified Player should be removed.
-         */
+        /// <summary>
+        /// Returns whether or not the specified <see cref="Player"/> should be removed.
+        /// </summary>
+        /// <param name="position">The position of the Player being updated.</param>
+        /// <param name="distance">The distance.</param>
+        /// <param name="other">The Player being tested.</param>
+        /// <returns></returns>
         private bool Removeable(Position position, int distance, Player other)
         {
             if (other.IsTeleporting || !other.IsActive)

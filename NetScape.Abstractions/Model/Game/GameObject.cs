@@ -1,11 +1,6 @@
 ﻿using NetScape.Abstractions.Interfaces.Area;
 using NetScape.Abstractions.Model.Area;
 using NetScape.Modules.World;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.Model.Game
 {
@@ -17,26 +12,24 @@ namespace NetScape.Abstractions.Model.Game
             this.Position = pos;
         }
 
-        /**
-         * The packed value that stores this object's id, type, and orientation.
-         */
+        /// <summary>
+        /// The packed value that stores this object's id, type, and orientation.
+        /// </summary>
         private int _packed;
 
-        /**
-         * Creates the GameObject.
-         *
-         * @param world The {@link World} containing the GameObject.
-         * @param id The id of the GameObject
-         * @param position The {@link Position} of the GameObject.
-         * @param type The type of the GameObject.
-         * @param orientation The orientation of the GameObject.
-         */
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GameObject"/> class.
+        /// </summary>
+        /// <param name="id">The ID.</param>
+        /// <param name="position">The position.</param>
+        /// <param name="type">The type.</param>
+        /// <param name="orientation">The orientation.</param>
         public GameObject(int id, Position position, int type, int orientation) : this(position)
         {
             _packed = id << 8 | (type & 0x3F) << 2 | orientation & 0x3;
         }
 
-        public override bool Equals(Object obj)
+        public override bool Equals(object obj)
         {
             if (obj is GameObject)
             {
@@ -46,37 +39,52 @@ namespace NetScape.Abstractions.Model.Game
             return false;
         }
 
-        /**
-         * Gets this object's id.
-         *
-         * @return The id.
-         */
+        /// <summary>
+        /// Gets the identifier.
+        /// </summary>
+        /// <value>
+        /// The identifier.
+        /// </value>
         public int Id => (int)((uint)_packed >> 8);
 
-        /**
-         * Gets this object's orientation.
-         *
-         * @return The orientation.
-         */
+        /// <summary>
+        /// Gets the orientation.
+        /// </summary>
+        /// <value>
+        /// The orientation.
+        /// </value>
         public int Orientation => _packed & 0x3;
 
-        /**
-         * Gets this object's type.
-         *
-         * @return The type.
-         */
+        /// <summary>
+        /// Gets the type.
+        /// </summary>
+        /// <value>
+        /// The type.
+        /// </value>
         public int Type => _packed >> 2 & 0x3F;
 
-
+        /// <summary>
+        /// Gets the length.
+        /// </summary>
+        /// <value>
+        /// The length.
+        /// </value>
         public override int Length =>  /* isRotated() ? getDefinition().getWidth() : getDefinition().getLength()*/ 1;
 
+        /// <summary>
+        /// Gets the width.
+        /// </summary>
+        /// <value>
+        /// The width.
+        /// </value>
         public override int Width => /*isRotated() ? getDefinition().getLength() : getDefinition().getWidth();*/ 1;
 
-        /**
-         * Returns whether or not this GameObject's orientation is rotated {@link Direction#WEST} or {@link Direction#EAST}.
-         *
-         * @return {@code true} iff this GameObject's orientation is rotated.
-         */
+        /// <summary>
+        /// Determines whether this instance is rotated.
+        /// </summary>
+        /// <returns>
+        ///   <c>true</c> if this instance is rotated  <see cref="Direction.West"/> or  <see cref="Direction.East"/>; otherwise, <c>false</c>.
+        /// </returns>
         public bool IsRotated()
         {
             int orientation = Orientation;
@@ -92,19 +100,17 @@ namespace NetScape.Abstractions.Model.Game
                 || direction == Direction.NorthWest || direction == Direction.SouthEast;
         }
 
-
         public override int GetHashCode()
         {
             return _packed;
         }
 
-        /**
-         * Returns whether or not this GameObject can be seen by the specified {@link Player}.
-         *
-         * @param player The Player.
-         * @param world The {@link World} containing the GameObject.
-         * @return {@code true} if the Player can see this GameObject, {@code false} if not.
-         */
+        /// <summary>
+        /// Returns whether or not this GameObject can be seen by the specified player
+        /// </summary>
+        /// <param name="player">The player.</param>
+        /// <param name="world">The world.</param>
+        /// <returns> <c>true</c> if the Player can see this GameObject, <c>false</c> if not</returns>
         public abstract bool ViewableBy(Player player, IWorld world);
 
         public UpdateOperation ToUpdateOperation(Region region, EntityUpdateType type)

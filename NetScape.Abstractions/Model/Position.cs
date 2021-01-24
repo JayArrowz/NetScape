@@ -6,8 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace NetScape.Abstractions.Model
 {
     /// <summary>
-    /// Represents a position in the world.
-    /// 
+    /// Represents a position in the world
     /// @author Graham
     /// </summary>
     [Owned]
@@ -239,9 +238,8 @@ namespace NetScape.Abstractions.Model
         /// <returns> {@code true} if this position is inside the specified region, otherwise {@code false}. </returns>
         public bool Inside(Region region)
         {
-            //RegionCoordinates coordinates = region.Coordinates;
-            //return coordinates.Equals(RegionCoordinates);
-            return true;
+            RegionCoordinates coordinates = region.Coordinates;
+            return coordinates.Equals(RegionCoordinates);
         }
 
         /// <summary>

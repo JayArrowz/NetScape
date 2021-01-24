@@ -10,23 +10,22 @@ namespace NetScape.Modules.Messages.Outgoing
 {
     public class PlayerSynchronizationMessage : IOutMessage<MessageFrame>
     {
-        public Position LastKnownRegion { get; set; }
-        public int LocalPlayers { get; set; }
-        public Position Position { get; set; }
-        public bool RegionChanged { get; set; }
-        public SynchronizationSegment Segment { get; set; }
-        public List<SynchronizationSegment> Segments { get; set; }
+        public Position LastKnownRegion { get; }
+        public int LocalPlayers { get; }
+        public Position Position { get; }
+        public bool RegionChanged { get; }
+        public SynchronizationSegment Segment { get; }
+        public List<SynchronizationSegment> Segments { get; }
 
-        /**
-         * Creates the player synchronization message.
-         *
-         * @param lastKnownRegion The last known region.
-         * @param position The player's current position.
-         * @param regionChanged A flag indicating if the region has changed.
-         * @param segment The current player's synchronization segment.
-         * @param localPlayers The number of local players.
-         * @param segments A list of segments.
-         */
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PlayerSynchronizationMessage"/> class.
+        /// </summary>
+        /// <param name="lastKnownRegion">The last known region.</param>
+        /// <param name="position">The players current position.</param>
+        /// <param name="regionChanged">if set to <c>true</c> [region changed].</param>
+        /// <param name="segment">The current player's synchronization segment.</param>
+        /// <param name="localPlayers">The number local players.</param>
+        /// <param name="segments">The list of segments.</param>
         public PlayerSynchronizationMessage(Position lastKnownRegion, Position position, bool regionChanged, SynchronizationSegment segment, int localPlayers, List<SynchronizationSegment> segments)
         {
             LastKnownRegion = lastKnownRegion;

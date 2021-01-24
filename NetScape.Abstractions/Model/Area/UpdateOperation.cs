@@ -7,100 +7,98 @@ namespace NetScape.Abstractions.Model.Area
 {
     public abstract class UpdateOperation
     {
-        /**
-	     * The Entity involved in this UpdateOperation.
-	     */
-        protected readonly Entity entity;
+        /// <summary>
+        /// The Entity involved in this UpdateOperation.
+        /// </summary>
+        protected readonly Entity _entity;
 
-        /**
-         * The Region in which this type occurred.
-         */
-        protected readonly Region region;
+        /// <summary>
+        /// The Region in which this type occurred.
+        /// </summary>
+        protected readonly Region _region;
 
-        /**
-         * The type of update.
-         */
-        protected readonly EntityUpdateType type;
+        /// <summary>
+        /// The type of update.
+        /// </summary>
+        protected readonly EntityUpdateType _type;
 
-        /**
-         * Creates the UpdateOperation.
-         *
-         * @param region The region in which the UpdateOperation occurred. Must not be {@code null}.
-         * @param type The type of {@link EntityUpdateType}. Must not be {@code null}.
-         * @param entity The {@link Entity} being added or removed. Must not be {@code null}.
-         */
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UpdateOperation"/> class.
+        /// </summary>
+        /// <param name="region">The region.</param>
+        /// <param name="type">The type.</param>
+        /// <param name="entity">The entity.</param>
         public UpdateOperation(Region region, EntityUpdateType type, Entity entity)
         {
-            this.region = region;
-            this.type = type;
-            this.entity = entity;
+            Guard.Argument(region).NotNull();
+            Guard.Argument(entity).NotNull();
+            _region = region;
+            _type = type;
+            _entity = entity;
         }
 
-        /**
-         * Gets a {@link RegionUpdateMessage} that would counteract the effect of this UpdateOperation.
-         *
-         * @return The RegionUpdateMessage.
-         */
+        /// <summary>
+        /// Gets a <see cref="RegionUpdateMessage"/> that would counteract the effect of this UpdateOperation.
+        /// </summary>
+        /// <returns>The RegionUpdateMessage</returns>
+        /// <exception cref="ArgumentException">Unsupported EntityUpdateType</exception>
         public RegionUpdateMessage Inverse()
         {
-            int offset = GetPositionOffset(entity.Position);
+            int offset = GetPositionOffset(_entity.Position);
 
-            switch (type)
+            switch (_type)
             {
                 case EntityUpdateType.Add:
                     return Remove(offset);
                 case EntityUpdateType.Remove:
                     return Add(offset);
                 default:
-                    throw new ArgumentException("Unsupported EntityUpdateType " + type + ".");
+                    throw new ArgumentException("Unsupported EntityUpdateType " + _type + ".");
             }
         }
 
-        /**
-		 * Returns this UpdateOperation as a {@link Message}.
-		 *
-		 * @return The Message.
-		 */
+        /// <summary>
+        /// Returns this UpdateOperation as a RegionUpdateMessage.
+        /// </summary>
+        /// <returns>RegionUpdateMessage</returns>
+        /// <exception cref="ArgumentException">Unsupported EntityUpdateType</exception>
         public RegionUpdateMessage ToMessage()
         {
-            int offset = GetPositionOffset(entity.Position);
+            int offset = GetPositionOffset(_entity.Position);
 
-            switch (type)
+            switch (_type)
             {
                 case EntityUpdateType.Add:
                     return Add(offset);
                 case EntityUpdateType.Remove:
                     return Remove(offset);
                 default:
-                    throw new ArgumentException("Unsupported EntityUpdateType " + type + ".");
+                    throw new ArgumentException("Unsupported EntityUpdateType " + _type + ".");
             }
         }
 
-        /**
-		 * Returns a {@link RegionUpdateMessage} that adds the {@link Entity} in this UpdateOperation.
-		 *
-		 * @param offset The offset of the {@link Position} of the Entity from the Position of the {@link Region}.
-		 * @return The RegionUpdateMessage.
-		 */
+        /// <summary>
+        /// Returns a <see cref="RegionUpdateMessage"/> that adds the Entity in this <see cref="UpdateOperation"/>.
+        /// </summary>
+        /// <param name="offset">The offset of the <see cref="Position"/> of the Entity from the Position of the <see cref="Region"/>..</param>
+        /// <returns>The RegionUpdateMessage</returns>
         protected abstract RegionUpdateMessage Add(int offset);
 
-        /**
-		 * Returns a {@link RegionUpdateMessage} that removes the {@link Entity} in this UpdateOperation.
-		 *
-		 * @param offset The offset of the {@link Position} of the Entity from the Position of the {@link Region}.
-		 * @return The RegionUpdateMessage.
-		 */
+        /// <summary>
+        /// Returns a <see cref="RegionUpdateMessage"/> that removes the <see cref="Entity"/> in this UpdateOperation.
+        /// </summary>
+        /// <param name="offset">The offset.</param>
+        /// <returns>The RegionUpdateMessage</returns>
         protected abstract RegionUpdateMessage Remove(int offset);
 
-        /**
-		 * Gets the position offset for the specified {@link Position}.
-		 *
-		 * @param position The Position.
-		 * @return The position offset.
-		 */
+        /// <summary>
+        /// Gets the position offset for the specified <see cref="Position"/>.
+        /// </summary>
+        /// <param name="position">The position.</param>
+        /// <returns></returns>
         private int GetPositionOffset(Position position)
         {
-            var coordinates = region.Coordinates;
+            var coordinates = _region.Coordinates;
             int dx = position.X - coordinates.AbsoluteX;
             int dy = position.Y - coordinates.AbsoluteY;
 

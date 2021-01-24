@@ -7,24 +7,32 @@ namespace NetScape.Modules.Messages.Region
 {
     public class SendObjectMessage : RegionUpdateMessage
     {
-        /**
-	     * The id of the object.
-	     */
+        /// <summary>
+        /// Gets the priority.
+        /// </summary>
+        /// <value>
+        /// The priority.
+        /// </value>
+        public override int Priority => Low_Priority;
+
+        /// <summary>
+        /// The id of the object.
+        /// </summary>
         private readonly int _id;
 
-        /**
-         * The orientation of the object.
-         */
+        /// <summary>
+        /// The orientation of the object.
+        /// </summary>
         private readonly int _orientation;
 
-        /**
-         * The position of the object.
-         */
+        /// <summary>
+        /// The position of the object.
+        /// </summary>
         private readonly int _positionOffset;
 
-        /**
-         * The type of the object.
-         */
+        /// <summary>
+        /// The type of the object.
+        /// </summary>
         private readonly int _type;
 
 
@@ -34,6 +42,11 @@ namespace NetScape.Modules.Messages.Region
          * @param object The {@link GameObject} to send.
          * @param positionOffset The offset of the object's position from the region's central position.
          */
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SendObjectMessage"/> class.
+        /// </summary>
+        /// <param name="obj">The game object.</param>
+        /// <param name="positionOffset">The position offset.</param>
         public SendObjectMessage(GameObject obj, int positionOffset)
         {
             _id = obj.Id;
@@ -41,9 +54,6 @@ namespace NetScape.Modules.Messages.Region
             _type = obj.Type;
             _orientation = obj.Orientation;
         }
-
-
-        public override int Priority => Low_Priority;
 
         public override bool Equals(object obj)
         {
@@ -58,7 +68,6 @@ namespace NetScape.Modules.Messages.Region
                 return _positionOffset == other._positionOffset && _type == other._type;
             }
             return false;
-
         }
 
         public override int GetHashCode()

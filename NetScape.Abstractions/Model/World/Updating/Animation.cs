@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NetScape.Abstractions.Model.World.Updating
+﻿namespace NetScape.Abstractions.Model.World.Updating
 {
     public record Animation
     {

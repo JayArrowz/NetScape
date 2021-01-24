@@ -8,36 +8,32 @@ namespace NetScape.Modules.Messages.Region
 {
     public class RemoveObjectMessage : RegionUpdateMessage
     {
-
-        /**
-         * The orientation of the object.
-         */
+        /// <summary>
+        /// The orientation of the object.
+        /// </summary>
         private readonly int _orientation;
 
-        /**
-         * The position of the object.
-         */
+        /// <summary>
+        /// The position of the object.
+        /// </summary>
         private readonly int _positionOffset;
 
-        /**
-         * The type of the object.
-         */
+        /// <summary>
+        /// The type of the object.
+        /// </summary>
         private readonly int _type;
 
-
-        /**
-         * Creates the SendObjectMessage.
-         *
-         * @param object The {@link GameObject} to send.
-         * @param positionOffset The offset of the object's position from the region's central position.
-         */
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RemoveObjectMessage"/> class.
+        /// </summary>
+        /// <param name="obj">The <see cref="GameObject"/> to send.</param>
+        /// <param name="positionOffset">The offset of the object's position from the region's central position.</param>
         public RemoveObjectMessage(GameObject obj, int positionOffset)
         {
             _positionOffset = positionOffset;
             _type = obj.Type;
             _orientation = obj.Orientation;
         }
-
 
         public override int Priority => Low_Priority;
 

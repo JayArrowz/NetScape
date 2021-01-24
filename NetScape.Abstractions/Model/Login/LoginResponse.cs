@@ -2,10 +2,10 @@
 
 namespace NetScape.Abstractions.Model.Login
 {
-    /**
-     * Represents a login response.
-     * @author Graham
-     */
+    /// <summary>
+    /// Represents a login response.
+    /// </summary>
+    /// <typeparam name="TStatus">The type of the status.</typeparam>
     public class LoginResponse<TStatus>
     {
 

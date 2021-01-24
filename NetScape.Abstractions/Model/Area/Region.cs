@@ -3,13 +3,10 @@ using NetScape.Abstractions.Extensions;
 using NetScape.Abstractions.Interfaces.Area;
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model.Game;
-using NetScape.Modules.Messages;
-using NetScape.Modules.Messages.Builder;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace NetScape.Abstractions.Model.Area
 {
@@ -32,64 +29,69 @@ namespace NetScape.Abstractions.Model.Area
     /// </summary>
     public class Region
     {
+        /// <summary>
+        /// The region size
+        /// </summary>
         public static readonly int Size = 8;
 
-        /**
-         * The default size of newly-created Lists, to reduce memory usage.
-         */
-        private static readonly int DEFAULT_LIST_SIZE = 2;
-        public static readonly int VIEWABLE_REGION_RADIUS = 3;
+        /// <summary>
+        /// The default size of newly-created Lists, to reduce memory usage.
+        /// </summary>
+        private static readonly int Default_List_Size = 2;
 
-        /**
-         * The width of the viewport of every Player, in tiles.
-         */
+        /// <summary>
+        /// The viewable region radius
+        /// </summary>
+        public static readonly int Viewable_Region_Radius = 3;
+
+        /// <summary>
+        /// The width of the viewport of every Player, in tiles.
+        /// </summary>
         public static readonly int Viewport_Width = Size * 13;
 
         public RegionCoordinates Coordinates { get; }
 
-        /**
-         * The Map of Positions to Entities in that Position.
-         */
+        /// <summary>
+        /// The Map of Positions to Entities in that Position.
+        /// </summary>
         private readonly ConcurrentDictionary<Position, HashSet<Entity>> Entities = new();
 
-        /**
-         * A List of RegionListeners registered to this Region.
-         */
+        /// <summary>
+        ///  A List of RegionListeners registered to this Region.
+        /// </summary>     
         private readonly List<IRegionListener> Listeners = new();
 
-        /**
-         * The CollisionMatrix.
-         */
+        /// <summary>
+        /// The CollisionMatrix.
+        /// </summary>
         private readonly CollisionMatrix[] Matrices = CollisionMatrix.CreateMatrices(Position.HeightLevels, Size, Size);
 
-        /**
-         * The List of Sets containing RegionUpdateMessages that specifically remove StaticGameObjects. The
-         * List is ordered based on the height level the RegionUpdateMessages concern.
-         */
+        /// <summary>
+        /// The List of Sets containing RegionUpdateMessages that specifically remove StaticGameObjects. The
+        /// List is ordered based on the height level the RegionUpdateMessages concern.
+        /// </summary>
         private readonly List<HashSet<RegionUpdateMessage>> RemovedObjects = new(Position.HeightLevels);
 
-        /**
-         * The List of Sets containing RegionUpdateMessages. The List is ordered based on the height level the
-         * RegionUpdateMessages concern. This only contains the updates to this Region that have occurred in the last
-         * pulse.
-         */
+        /// <summary>
+        /// The List of Sets containing RegionUpdateMessages. The List is ordered based on the height level the
+        /// RegionUpdateMessages concern.This only contains the updates to this Region that have occurred in the last
+        /// pulse.
+        /// </summary>
         private readonly List<HashSet<RegionUpdateMessage>> Updates = new(Position.HeightLevels);
 
-        /**
-		 * Creates a new Region.
-		 *
-		 * @param x The x coordinate of the Region.
-		 * @param y The y coordinate of the Region.
-		 */
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Region"/> class.
+        /// </summary>
+        /// <param name="x">The x coordinate of the Region.</param>
+        /// <param name="y">The y coordinate of the Region.</param>    
         public Region(int x, int y) : this(new RegionCoordinates(x, y))
         {
         }
 
-        /**
-		 * Creates a new Region with the specified {@link RegionCoordinates}.
-		 *
-		 * @param coordinates The RegionCoordinates.
-		 */
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Region"/> class.
+        /// </summary>
+        /// <param name="coordinates">The RegionCoordinates.</param>
         public Region(RegionCoordinates coordinates)
         {
             Coordinates = coordinates;
@@ -98,27 +100,25 @@ namespace NetScape.Abstractions.Model.Area
             for (int height = 0; height < Position.HeightLevels; height++)
             {
                 RemovedObjects.Add(new());
-                Updates.Add(new(DEFAULT_LIST_SIZE));
+                Updates.Add(new(Default_List_Size));
             }
         }
 
-        /**
-		 * Adds a {@link Entity} to the Region. Note that this does not spawn the Entity, or do any other action other than
-		 * register it to this Region.
-		 *
-		 * @param entity The Entity.
-		 * @param notify Whether or not the {@link RegionListener}s for this Region should be notified.
-		 * @throws IllegalArgumentException If the Entity does not belong in this Region.
-		 */
-        public void addEntity(Entity entity, bool notify)
+        /// <summary>
+        /// Adds a <see cref="Entity"/> to the Region. Note that this does not spawn the Entity, or do any other action other than
+        /// register it to this Region.
+        /// </summary>
+        /// <param name="entity">The entity.</param>
+        /// <param name="notify">if set to <c>true</c> [notify <see cref="IRegionListener"/>].</param>
+        public void AddEntity(Entity entity, bool notify)
         {
             EntityType type = entity.EntityType;
             Position position = entity.Position;
-            checkPosition(position);
+            CheckPosition(position);
 
             if (!type.IsTransient())
             {
-                HashSet<Entity> local = Entities.GetOrAdd(position, key => new HashSet<Entity>(DEFAULT_LIST_SIZE));
+                HashSet<Entity> local = Entities.GetOrAdd(position, key => new HashSet<Entity>(Default_List_Size));
                 local.Add(entity);
             }
 
@@ -128,57 +128,54 @@ namespace NetScape.Abstractions.Model.Area
             }
         }
 
-        /**
-		 * Adds a {@link Entity} to the Region. Note that this does not spawn the Entity, or do any other action other than
-		 * register it to this Region.
-		 *
-		 * By default, this method notifies RegionListeners for this region of the addition.
-		 *
-		 * @param entity The Entity.
-		 * @throws IllegalArgumentException If the Entity does not belong in this Region.
-		 */
-        public void addEntity(Entity entity)
+        /// <summary>
+        /// Adds a <paramref name="entity"/> to the Region. Note that this does not spawn the Entity, or do any other action other than
+        /// register it to this Region.
+        /// </summary>
+        /// <param name="entity">The entity.</param>
+        public void AddEntity(Entity entity)
         {
-            addEntity(entity, true);
+            AddEntity(entity, true);
         }
 
-        public void addListener(IRegionListener listener)
+        public void AddListener(IRegionListener listener)
         {
             Listeners.Add(listener);
         }
 
-        /**
-		 * Checks if this Region contains the specified Entity.
-		 *
-		 * This method operates in constant time.
-		 *
-		 * @param entity The Entity.
-		 * @return {@code true} if this Region contains the Entity, otherwise {@code false}.
-		 */
-        public bool contains(Entity entity)
+        /// <summary>
+        /// Checks if this Region contains the specified Entity.
+        /// This method operates in constant time.
+        /// </summary>
+        /// <param name="entity">The entity.</param>
+        /// <returns>
+        ///   <c>true</c> if [this Region contains] [the specified entity]; otherwise, <c>false</c>.
+        /// </returns>
+        public bool Contains(Entity entity)
         {
             Position position = entity.Position;
             bool exists = Entities.TryGetValue(position, out var local);
             return local != null && local.Contains(entity);
         }
 
-        /**
-		 * Returns whether or not the specified {@link Position} is inside this Region.
-		 *
-		 * @param position The Position.
-		 * @return {@code true} iff the specified Position is inside this Region.
-		 */
-        public bool contains(Position position)
+        /// <summary>
+        /// Returns whether or not the specified Position is inside this Region.
+        /// </summary>
+        /// <param name="position">The position.</param>
+        /// <returns>
+        ///   <c>true</c> if [Position] [inside region]; otherwise, <c>false</c>.
+        /// </returns>
+        public bool Contains(Position position)
         {
             return Coordinates.Equals(position.RegionCoordinates);
         }
 
-        /**
-		 * Encodes the contents of this Region into a {@link Set} of {@link RegionUpdateMessage}s, to be sent to a client.
-		 *
-		 * @return The Set of RegionUpdateMessages.
-		 */
-        public HashSet<RegionUpdateMessage> encode(int height)
+        /// <summary>
+        /// Encodes the contents of this Region into a <see cref="HashSet{RegionUpdateMessage}"/>, to be sent to a client.
+        /// </summary>
+        /// <param name="height">The height level.</param>
+        /// <returns>A set of region update messages</returns>
+        public HashSet<RegionUpdateMessage> Encode(int height)
         {
             HashSet<RegionUpdateMessage> additions = Entities.Values
                 .SelectMany(t => t)
@@ -193,15 +190,12 @@ namespace NetScape.Abstractions.Model.Area
             return allUpdates;
         }
 
-        /**
-		 * Gets an intermediate {@link Stream} from the {@link Set} of
-		 * {@link Entity}s with the specified {@link EntityType} (s). Type will be
-		 * inferred from the call, so ensure that the Entity type and the reference
-		 * correspond, or this method will fail at runtime.
-		 *
-		 * @param types The {@link EntityType}s.
-		 * @return The Stream of Entity objects.
-		 */
+        /// <summary>
+        /// Gets an intermediate Set of Entities with the specified <paramref name="types"/> (s).
+        /// </summary>
+        /// <typeparam name="T">The entity object type</typeparam>
+        /// <param name="types">The entity type.</param>
+        /// <returns>A collection of <typeparam name="T"/></returns>
         public HashSet<T> GetEntities<T>(params EntityType[] types) where T : Entity
         {
             return Entities.Values.SelectMany(t => t)
@@ -211,28 +205,18 @@ namespace NetScape.Abstractions.Model.Area
         }
 
 
-        /**
-		 * Gets a shallow copy of the {@link Set} of {@link Entity} objects at the specified {@link Position}. The returned
-		 * type will be immutable.
-		 *
-		 * @param position The Position containing the entities.
-		 * @return The Set. Will be immutable.
-		 */
-        public HashSet<Entity> getEntities(Position position)
+        /// <summary>
+        /// Gets a shallow copy of the HashSet of Entity objects at the specified Position.
+        /// </summary>
+        /// <param name="position">The position.</param>
+        /// <returns>Entities</returns>
+        public HashSet<Entity> GetEntities(Position position)
         {
             Entities.TryGetValue(position, out var set);
             return (set == null) ? new() : set.ToHashSet();
         }
 
-        /**
-		 * Gets a shallow copy of the {@link Set} of {@link Entity}s with the specified {@link EntityType}(s). The returned
-		 * type will be immutable. Type will be inferred from the call, so ensure that the Entity type and the reference
-		 * correspond, or this method will fail at runtime.
-		 *
-		 * @param position The {@link Position} containing the entities.
-		 * @param types The {@link EntityType}s.
-		 * @return The Set of Entity objects.
-		 */
+
         public HashSet<T> GetEntities<T>(Position position, params EntityType[] types) where T : Entity
         {
             Entities.TryGetValue(position, out var local);
@@ -248,21 +232,19 @@ namespace NetScape.Abstractions.Model.Area
             return filtered;
         }
 
-        /**
-		 * Gets the {@link Set} of {@link RegionCoordinates} of Regions that are viewable from the specified
-		 * {@link Position}.
-		 *
-		 * @return The Set of RegionCoordinates.
-		 */
+        /// <summary>
+        /// Gets the surrounding <see cref="RegionCoordinates"/> that are viewable from the specified <see cref="Position"/>.
+        /// </summary>
+        /// <returns>A set of RegionCoordinates</returns>
         public HashSet<RegionCoordinates> GetSurrounding()
         {
             int localX = Coordinates.X, localY = Coordinates.Y;
-            int maxX = localX + VIEWABLE_REGION_RADIUS, maxY = localY + VIEWABLE_REGION_RADIUS;
+            int maxX = localX + Viewable_Region_Radius, maxY = localY + Viewable_Region_Radius;
 
             HashSet<RegionCoordinates> viewable = new();
-            for (int x = localX - VIEWABLE_REGION_RADIUS; x < maxX; x++)
+            for (int x = localX - Viewable_Region_Radius; x < maxX; x++)
             {
-                for (int y = localY - VIEWABLE_REGION_RADIUS; y < maxY; y++)
+                for (int y = localY - Viewable_Region_Radius; y < maxY; y++)
                 {
                     viewable.Add(new RegionCoordinates(x, y));
                 }
@@ -271,34 +253,31 @@ namespace NetScape.Abstractions.Model.Area
             return viewable;
         }
 
-        /**
-		 * Gets the {@link CollisionMatrix} at the specified height level.
-		 *
-		 * @param height The height level.
-		 * @return The CollisionMatrix.
-		 */
+        /// <summary>
+        /// Gets the matrix.
+        /// </summary>
+        /// <param name="height">The height.</param>
+        /// <returns>The CollisionMatrix</returns> 
         public CollisionMatrix GetMatrix(int height)
         {
             return Matrices[height];
         }
 
-        /**
-		 * Gets all of the {@link CollisionMatrix} objects in this {@code Region}.
-		 *
-		 * @return The collision matrices of this region.
-		 */
+        /// <summary>
+        /// Gets all the matrices in this region.
+        /// </summary>
+        /// <returns>The CollisionMatrix's</returns>
         public CollisionMatrix[] GetMatrices()
         {
             return Matrices;
         }
 
-        /**
-		 * Gets the {@link Set} of {@link RegionUpdateMessage}s that have occurred in the last pulse. This method can
-		 * only be called <strong>once</strong> per pulse.
-		 *
-		 * @param height The height level to get the RegionUpdateMessages for.
-		 * @return The Set of RegionUpdateMessages.
-		 */
+        /// <summary>
+        /// Gets the Set of <see cref="RegionUpdateMessage"/>s that have occurred in the last pulse. This method can
+        /// only be called <strong>once</strong> per pulse.
+        /// </summary>
+        /// <param name="height">The height.</param>
+        /// <returns>The Set of RegionUpdateMessages</returns>
         public HashSet<RegionUpdateMessage> GetUpdates(int height)
         {
             HashSet<RegionUpdateMessage> updates = Updates[height];
@@ -307,24 +286,25 @@ namespace NetScape.Abstractions.Model.Area
             return copy;
         }
 
-        /**
-		 * Notifies the {@link RegionListener}s registered to this Region that an update has occurred.
-		 *
-		 * @param entity The {@link Entity} that was updated.
-		 * @param type The {@link EntityUpdateType} that occurred.
-		 */
+        /// <summary>
+        /// Notifies the <see cref="IRegionListener"/>s registered to this Region that an update has occurred.
+        /// </summary>
+        /// <param name="entity">The entity that was updated.</param>
+        /// <param name="type">The update type that occured.</param>
         public void NotifyListeners(Entity entity, EntityUpdateType type)
         {
             Listeners.ForEach(listener => listener.Execute(this, entity, type));
         }
 
-        /**
-		 * Removes an {@link Entity} from this Region.
-		 *
-		 * @param entity The Entity.
-		 * @throws IllegalArgumentException If the Entity does not belong in this Region, or if it was never added.
-		 */
-        public void removeEntity(Entity entity)
+        /// <summary>
+        /// Removes the entity from this region
+        /// </summary>
+        /// <param name="entity">The entity.</param>
+        /// <returns></returns>
+        /// <exception cref="NotSupportedException">
+        /// Tried to remove a transient Entity
+        /// </exception>
+        public void RemoveEntity(Entity entity)
         {
             EntityType type = entity.EntityType;
             if (type.IsTransient())
@@ -334,7 +314,7 @@ namespace NetScape.Abstractions.Model.Area
             }
 
             Position position = entity.Position;
-            checkPosition(position);
+            CheckPosition(position);
 
             Entities.TryGetValue(position, out var local);
 
@@ -346,16 +326,15 @@ namespace NetScape.Abstractions.Model.Area
             NotifyListeners(entity, EntityUpdateType.Remove);
         }
 
-        /**
-		 * Returns whether or not an Entity of the specified {@link EntityType type} can traverse the tile at the specified
-		 * coordinate pair.
-		 *
-		 * @param position The {@link Position} of the tile.
-		 * @param entity The {@link EntityType}.
-		 * @param direction The {@link Direction} the Entity is approaching from.
-		 * @return {@code true} if the tile at the specified coordinate pair is traversable, {@code false} if not.
-		 */
-        public bool traversable(Position position, EntityType entity, Direction direction)
+        /// <summary>
+        /// Returns whether or not an Entity of the specified {@link EntityType type} can traverse the tile at the specified
+        /// coordinate pair.
+        /// </summary>
+        /// <param name="position">The position of the tile.</param>
+        /// <param name="entity">The entity type <see cref="EntityType"/>.</param>
+        /// <param name="direction">The <see cref="Direction"/>.</param>
+        /// <returns><c>true</c> [if position] [is traversable] <c>false</c> [if not]</returns>
+        public bool Traversable(Position position, EntityType entity, Direction direction)
         {
             CollisionMatrix matrix = Matrices[position.Height];
             int x = position.X, y = position.Y;
@@ -363,24 +342,21 @@ namespace NetScape.Abstractions.Model.Area
             return !matrix.Untraversable(x % Size, y % Size, entity, direction);
         }
 
-        /**
-		 * Checks that the specified {@link Position} is included in this Region.
-		 *
-		 * @param position The position.
-		 * @throws IllegalArgumentException If the specified position is not included in this Region.
-		 */
-        private void checkPosition(Position position)
+        /// <summary>
+        /// Checks that the specified <see cref="Position"/> is included in this Region.
+        /// </summary>
+        /// <param name="position">The position.</param>
+        private void CheckPosition(Position position)
         {
             Guard.Argument(Coordinates).Equal(RegionCoordinates.FromPosition(position));
         }
 
-        /**
-		 * Records the specified {@link GroupableEntity} as being updated this pulse.
-		 *
-		 * @param entity The GroupableEntity.
-		 * @param update The {@link EntityUpdateType}.
-		 * @throws UnsupportedOperationException If the specified Entity cannot be operated on in this manner.
-		 */
+        /// <summary>
+        /// Records the specified <see cref="IGroupableEntity"/> as being updated this pulse.
+        /// </summary>
+        /// <typeparam name="T">The type of entity</typeparam>
+        /// <param name="entity">The entity.</param>
+        /// <param name="update">The update type.</param>
         public void Record<T>(T entity, EntityUpdateType update) where T : Entity
         {
             UpdateOperation operation = ((IGroupableEntity)entity).ToUpdateOperation(this, update);

@@ -2,23 +2,18 @@
 
 namespace NetScape.Abstractions.Interfaces.Area
 {
-    /**
-	 * An entity that can be sent as part of a grouped region update message.
-	 * <p>
-	 * Only {@link org.apollo.game.model.entity.Entity} extensions may implement this interface.
-	 * 
-	 * @author Major
-	 */
-    public interface IGroupableEntity
+	/// <summary>
+	/// An entity that can be sent as part of a grouped region update message.
+	/// Only <see cref="Model.Game.Entity"/> extensions may implement this interface.
+	/// </summary>
+	public interface IGroupableEntity
     {
-
-        /**
-		 * Gets this Entity, as an {@link UpdateOperation} of a {@link Region}.
-		 *
-		 * @param region The Region.
-		 * @param type The EntityUpdateType.
-		 * @return The UpdateOperation.
-		 */
-        UpdateOperation ToUpdateOperation(Region region, EntityUpdateType type);
+		/// <summary>
+		/// Gets this Entity, as an <see cref="UpdateOperation"/> of a <see cref="Region"/>.
+		/// </summary>
+		/// <param name="region">The region.</param>
+		/// <param name="type">The type.</param>
+		/// <returns>The UpdateOperation.</returns>
+		UpdateOperation ToUpdateOperation(Region region, EntityUpdateType type);
     }
 }
