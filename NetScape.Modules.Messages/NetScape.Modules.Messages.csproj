@@ -10,6 +10,8 @@
     <TargetFramework>netcoreapp5.0</TargetFramework>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>NetScape 317 Messaging Module</Description>
   </PropertyGroup>
 
   <ItemGroup>
