@@ -20,8 +20,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore      
-    - uses: nikeee/docfx-action@v1.0.0
+      run: dotnet build --no-restore
     - name: Build Documentation
+    - uses: nikeee/docfx-action@v1.0.0
       with:
         args: docs/docfx.json
