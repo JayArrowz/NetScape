@@ -9,6 +9,8 @@ These instructions will get you a copy of the project up and running on your loc
 * [PostgresSQL](https://www.postgresql.org/download/)
 * [Net5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
 
+### Code Docs
+* [Code Docs](https://jayarrowz.github.io/NetScape/api/)
 
 ### Installing
 1. Create the folder ```AspNetServerData\Cache``` in your users home folder and add the 317 cache (Currently NetScape only supports the 317 protocol)
