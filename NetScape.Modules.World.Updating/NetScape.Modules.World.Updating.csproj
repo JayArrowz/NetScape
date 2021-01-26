@@ -4,7 +4,6 @@
     <TargetFramework>netcoreapp5.0</TargetFramework>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Description>NetScape Entity Updating Module</Description>
-    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,14 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.Messages\NetScape.Modules.Messages.csproj" />
-    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj" />
-    <ProjectReference PrivateAssets="all" Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Messages\NetScape.Modules.Messages.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj" />
+    <ProjectReference Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
   </ItemGroup>
-  
-  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
-    <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')->WithMetadataValue('PrivateAssets', 'All'))" />
-    </ItemGroup>
-  </Target>
 </Project>

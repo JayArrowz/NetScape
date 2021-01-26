@@ -4,16 +4,9 @@
     <TargetFramework>netcoreapp5.0</TargetFramework>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Description>NetScape Region Modules</Description>
-    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference PrivateAssets="all" Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
+    <ProjectReference Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
   </ItemGroup>
-
-  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
-    <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')->WithMetadataValue('PrivateAssets', 'All'))" />
-    </ItemGroup>
-  </Target>
 </Project>

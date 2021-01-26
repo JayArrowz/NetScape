@@ -10,7 +10,6 @@
     <TargetFramework>netcoreapp5.0</TargetFramework>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>NetScape 317 Messaging Module</Description>
   </PropertyGroup>
 
@@ -27,14 +26,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference PrivateAssets="all" Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
-    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj" />
+    <ProjectReference Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Messages.Generator\NetScape.Modules.Messages.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.Region\NetScape.Modules.Region.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Region\NetScape.Modules.Region.csproj" />
   </ItemGroup>
-  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
-    <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')->WithMetadataValue('PrivateAssets', 'All'))" />
-    </ItemGroup>
-  </Target>
 </Project>
