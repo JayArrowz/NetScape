@@ -1,5 +1,6 @@
 ﻿using DotNetty.Transport.Channels;
 using NetScape.Abstractions.Model.World.Updating;
+using NetScape.Abstractions.Model.World.Updating.Blocks;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;
 using System.Collections.Generic;
@@ -51,13 +52,6 @@ namespace NetScape.Abstractions.Model.Game
         {
             BlockSet.Add(SynchronizationBlock.CreateAppearanceBlock(this));
         }
-
-        public void SendInitialMessages()
-        {
-            UpdateAppearance();
-            //send(new IdAssignmentMessage(index, members));
-        }
-
 
         private static int NextAppearanceTicket()
         {

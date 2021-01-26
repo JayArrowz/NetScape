@@ -11,7 +11,7 @@ namespace NetScape.Abstractions.Model.World.Updating
             return new AnimationBlock(animation);
         }
 
-        public static SynchronizationBlock CreateAppearanceBlock(Player player)
+        public static AppearanceBlock CreateAppearanceBlock(Player player)
         {
             int combat = 3;
             return new AppearanceBlock(TextUtil.NameToLong(player.Username), player.Appearance, combat, 0, 0, false);
