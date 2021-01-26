@@ -2,29 +2,17 @@
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.Model.Game
 {
-    public class Player : Entity
+    public partial class Player : Entity
     {
         private static readonly int DefaultViewingDistance = 15;
         private static int appearanceTicketCounter = 0;
-        private Appearance appearance;
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-
-        [Key]
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public Appearance Appearance { get => appearance; set { appearance = value; UpdateAppearance(); } }
-        public int AppearanceId { get; set; }
 
         [NotMapped] public Direction FirstDirection { get; set; } = Direction.None;
         [NotMapped] public Direction SecondDirection { get; set; } = Direction.None;
@@ -35,8 +23,7 @@ namespace NetScape.Abstractions.Model.Game
         [NotMapped] public bool IsTeleporting { get; set; }
         [NotMapped] public int ViewingDistance { get; private set; }
         [NotMapped] public IChannelHandlerContext ChannelHandlerContext { get; set; }
-
-
+        [NotMapped] public bool Initialized { get; set; }
         [NotMapped] public override EntityType EntityType => EntityType.Player;
         [NotMapped] public override int Width => 1;
         [NotMapped] public override int Length => 1;
@@ -51,8 +38,8 @@ namespace NetScape.Abstractions.Model.Game
             {
                 ViewingDistance++;
             }
-        }    
-        
+        }
+
         public void DecrementViewingDistance()
         {
             if (ViewingDistance > 1)
