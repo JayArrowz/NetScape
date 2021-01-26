@@ -1,8 +1,8 @@
 ﻿using DotNetty.Buffers;
 using DotNetty.Transport.Channels;
 using NetScape.Abstractions;
+using NetScape.Abstractions.Interfaces.World;
 using NetScape.Abstractions.Model.Game;
-using NetScape.Modules.World;
 using Serilog;
 using System;
 using System.Threading.Tasks;

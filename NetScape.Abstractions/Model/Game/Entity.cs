@@ -1,5 +1,4 @@
-﻿using NetScape.Modules.World;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NetScape.Abstractions.Model.Game
 {
