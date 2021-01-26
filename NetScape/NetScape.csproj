@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp5.0</TargetFramework>
+    <Description>NetScape Server</Description>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="appsettings.json">
@@ -29,15 +31,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetScape.GameServer\NetScape.Modules.Server.csproj" />
-    <ProjectReference Include="..\NetScape.Modules.DAL\NetScape.Modules.DAL.csproj" />
-    <ProjectReference Include="..\NetScape.Modules.Logging.SeriLog\NetScape.Modules.Logging.SeriLog.csproj" />
-    <ProjectReference Include="..\NetScape.Modules.LoginProtocol\NetScape.Modules.LoginProtocol.csproj" />
-    <ProjectReference Include="..\NetScape.Modules.Cache\NetScape.Modules.Cache.csproj" />
+    <ProjectReference PrivateAssets="all" Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
+    <ProjectReference PrivateAssets="all" Include="..\NetScape.GameServer\NetScape.Modules.Server.csproj" />
+    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.DAL\NetScape.Modules.DAL.csproj" />
+    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.Logging.SeriLog\NetScape.Modules.Logging.SeriLog.csproj" />
+    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.LoginProtocol\NetScape.Modules.LoginProtocol.csproj" />
+    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.Cache\NetScape.Modules.Cache.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Messages.Generator\NetScape.Modules.Messages.Generator.csproj" />
-    <ProjectReference Include="..\NetScape.Modules.Messages\NetScape.Modules.Messages.csproj" />
-    <ProjectReference Include="..\NetScape.Modules.World.Updating\NetScape.Modules.World.Updating.csproj" />
-    <ProjectReference Include="..\NetScape.Modules.World\NetScape.Modules.World.csproj" />
+    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.Messages\NetScape.Modules.Messages.csproj" />
+    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.Region\NetScape.Modules.Region.csproj" />
+    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.World.Updating\NetScape.Modules.World.Updating.csproj" />
+    <ProjectReference PrivateAssets="all" Include="..\NetScape.Modules.World\NetScape.Modules.World.csproj" />
   </ItemGroup>
-
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')->WithMetadataValue('PrivateAssets', 'All'))" />
+    </ItemGroup>
+  </Target>
 </Project>
