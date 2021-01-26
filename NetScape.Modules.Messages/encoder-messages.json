@@ -88,6 +88,24 @@
       "FrameType": "Fixed",
       "Params": [
       ]
+    },
+    {
+      "Name": "IdAssignmentMessage",
+      "Id": 249,
+      "FrameType": "Fixed",
+      "Params": [
+        {
+          "Name": "IsMembers",
+          "Type": "Byte",
+          "Transform": "Add"
+        },
+        {
+          "Name": "NewId",
+          "Type": "Short",
+          "Order": "Little",
+          "Transform": "Add"
+        }
+      ]
     }
   ]
 }

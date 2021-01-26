@@ -5,12 +5,13 @@ using NetScape.Abstractions;
 using NetScape.Abstractions.Extensions;
 using NetScape.Abstractions.Interfaces.Login;
 using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Abstractions.Interfaces.World;
 using NetScape.Abstractions.IO;
 using NetScape.Abstractions.IO.Util;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Login;
 using NetScape.Abstractions.Util;
-using NetScape.Modules.World;
+using NetScape.Modules.Messages.Encoders;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -243,7 +244,6 @@ namespace NetScape.Modules.LoginProtocol.Handlers
         {
             await ctx.WriteAndFlushAsync(loginResult);
             HandleLoginProcessorResponse(loginResult.Player, loginResult.Status, ctx, randomPair);
-            loginResult.Player.SendInitialMessages();
         }
 
         /// <summary>
@@ -292,7 +292,11 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 ctx.Channel.Pipeline.AddLast(gameMessageHandlers);
                 ctx.GetAttribute(Constants.PlayerAttributeKey).SetIfAbsent(player);
                 player.ChannelHandlerContext = ctx;
+
+                var initMessage = new IdAssignmentMessage { IsMembers = (byte)1, NewId = 0 };
                 _world.Add(player);
+                player.SendAsync(initMessage);
+                player.SendInitialMessages();
             }
         }
     }
