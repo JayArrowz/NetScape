@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using NetScape.Abstractions.Interfaces.World;
 
 namespace NetScape.Modules.World
 {

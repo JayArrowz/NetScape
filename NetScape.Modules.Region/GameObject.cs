@@ -1,8 +1,8 @@
 ﻿using NetScape.Abstractions.Interfaces.Region;
+using NetScape.Abstractions.Interfaces.World;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Region;
-using NetScape.Modules.World;
 
 namespace NetScape.Modules.Region
 {

@@ -1,4 +1,5 @@
 ﻿using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Abstractions.Interfaces.World;
 using NetScape.Abstractions.Interfaces.World.Updating;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Region;

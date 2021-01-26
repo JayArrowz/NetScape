@@ -1,6 +1,6 @@
-﻿using NetScape.Abstractions.Model;
+﻿using NetScape.Abstractions.Interfaces.World;
+using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
-using NetScape.Modules.World;
 using System.Collections.Generic;
 
 namespace NetScape.Modules.Region
