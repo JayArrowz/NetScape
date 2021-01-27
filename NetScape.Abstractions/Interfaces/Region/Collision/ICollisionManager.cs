@@ -22,7 +22,7 @@ namespace NetScape.Abstractions.Interfaces.Region.Collision
         void Block(Position position);
 
         /// <summary>
-        /// Applies the initial {@link CollisionUpdate} to the {@link CollisionMatrix}es for all objects and tiles loaded
+        /// Applies the initial <see cref="ICollisionUpdate"/> to the <see cref="Model.Region.Collision.CollisionMatrix"/>es for all objects and tiles loaded
         /// from the cache.
         /// </summary>
         /// <param name="rebuilding">if set to <c>true</c> [<see cref="Model.Region.Collision.CollisionMatrix"/>es are being rebuilt].</param>
