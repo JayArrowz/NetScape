@@ -1,15 +1,13 @@
 ﻿using Dawn;
 using NetScape.Abstractions.Extensions;
-using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
 using System;
 using System.Linq;
 
-namespace NetScape.Abstractions.Model.Region
+namespace NetScape.Abstractions.Model.Region.Collision
 {
     public class CollisionMatrix
     {
-
         /// <summary>
         /// Indicates that all types of traversal are allowed.
         /// </summary>
@@ -43,7 +41,7 @@ namespace NetScape.Abstractions.Model.Region
         private readonly int _length;
 
         /// <summary>
-        /// The collision matrix, as a {@code short} array.
+        /// The collision matrix, as a <c>short</c> array.
         /// </summary>
         private readonly short[] _matrix;
 
@@ -59,13 +57,13 @@ namespace NetScape.Abstractions.Model.Region
         /// <param name="length">The length of the matrix.</param>
         public CollisionMatrix(int width, int length)
         {
-            this._width = width;
-            this._length = length;
+            _width = width;
+            _length = length;
             _matrix = new short[width * length];
         }
 
         /// <summary>
-        /// Returns whether or not <strong>all</strong> of the specified {@link CollisionFlag}s are set for the specified
+        /// Returns whether or not <strong>all</strong> of the specified <see cref="CollisionFlag"/>s are set for the specified
 		/// coordinate pair.
         /// </summary>
         /// <param name="x">The x coordinate.</param>
@@ -86,7 +84,7 @@ namespace NetScape.Abstractions.Model.Region
         }
 
         /// <summary>
-        /// Returns whether or not <strong>any</strong> of the specified {@link CollisionFlag}s are set for the specified
+        /// Returns whether or not <strong>any</strong> of the specified <see cref="CollisionFlag"/>s are set for the specified
         /// coordinate pair.
         /// </summary>
         /// <param name="x">The x coordinate.</param>
@@ -152,7 +150,7 @@ namespace NetScape.Abstractions.Model.Region
         }
 
         /// <summary>
-        /// Returns whether or not the specified {@link CollisionFlag} is set for the specified coordinate pair.
+        /// Returns whether or not the specified <see cref="CollisionFlag"/> is set for the specified coordinate pair.
         /// </summary>
         /// <param name="x">The x coord.</param>
         /// <param name="y">The y coord.</param>
@@ -211,7 +209,7 @@ namespace NetScape.Abstractions.Model.Region
         }
 
         /// <summary>
-        /// Returns whether or not an Entity of the specified {@link EntityType type} cannot traverse the tile at the
+        /// Returns whether or not an Entity of the specified <see cref="EntityType"/> cannot traverse the tile at the
 		/// specified coordinate pair.
         /// </summary>
         /// <param name="x">The x coord.</param>

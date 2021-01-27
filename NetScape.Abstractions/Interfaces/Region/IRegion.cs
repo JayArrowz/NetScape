@@ -2,6 +2,7 @@
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Region;
+using NetScape.Abstractions.Model.Region.Collision;
 using System.Collections.Generic;
 
 namespace NetScape.Abstractions.Interfaces.Region

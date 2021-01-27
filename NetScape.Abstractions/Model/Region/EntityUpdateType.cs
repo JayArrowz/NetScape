@@ -6,12 +6,12 @@
     public enum EntityUpdateType
     {
         /// <summary>
-        ///  The add type, when an Entity has been added to a <see cref="Region"/>
+        ///  The add type, when an Entity has been added to a <see cref="Interfaces.Region.IRegion"/>
         /// </summary>
         Add,
 
         /// <summary>
-        /// The remove type, when an Entity has been removed from a <see cref="Region"/>
+        /// The remove type, when an Entity has been removed from a <see cref="Interfaces.Region.IRegion"/>
         /// </summary>
         Remove
     }

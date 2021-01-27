@@ -6,12 +6,14 @@ using Microsoft.Extensions.DependencyInjection;
 using NetScape.Abstractions.FileSystem;
 using NetScape.Abstractions.Interfaces;
 using NetScape.Abstractions.Interfaces.IO;
+using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Modules.Cache;
 using NetScape.Modules.DAL;
 using NetScape.Modules.Logging.SeriLog;
 using NetScape.Modules.LoginProtocol;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Region;
+using NetScape.Modules.Region.Collision;
 using NetScape.Modules.Server;
 using NetScape.Modules.World;
 using NetScape.Modules.World.Updating;
@@ -66,6 +68,8 @@ namespace NetScape
             containerBuilder.RegisterModule(new WorldModule());
             containerBuilder.RegisterModule(new UpdatingModule());
             containerBuilder.RegisterModule(new RegionModule());
+            containerBuilder.RegisterModule(new CollisionModule());
+            containerBuilder.RegisterType<WalkingQueueHandler>();
             containerBuilder.RegisterType<FileSystem>().As<IFileSystem>();
             containerBuilder.RegisterType<ContainerProvider>().SingleInstance();
         }

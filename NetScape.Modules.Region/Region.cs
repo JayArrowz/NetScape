@@ -5,6 +5,7 @@ using NetScape.Abstractions.Interfaces.Region;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Region;
+using NetScape.Abstractions.Model.Region.Collision;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;

@@ -1,5 +1,5 @@
 ﻿using NetScape.Abstractions.Model.Game;
-using NetScape.Abstractions.Model.Region;
+using NetScape.Abstractions.Model.Region.Collision;
 
 namespace NetScape.Abstractions.Extensions
 {

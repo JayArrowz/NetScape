@@ -3,6 +3,7 @@ using NetScape.Abstractions.Interfaces.Region;
 using NetScape.Abstractions.Interfaces.World.Updating;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Abstractions.Model.Region;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
@@ -19,7 +20,7 @@ namespace NetScape.Modules.World.Updating
     public class PlayerUpdater : IEntityUpdater<Player>
     {
         private readonly IRegionRepository _regionRepository;
-
+        private readonly WalkingQueueHandler _walkingQueueHandler;
         private static readonly int MaximumLocalPlayers = 255;
 
         /// <summary>
@@ -28,9 +29,10 @@ namespace NetScape.Modules.World.Updating
         /// </summary>
         private static readonly int NewPlayersPerCycle = 20;
 
-        public PlayerUpdater(IRegionRepository regionRepository)
+        public PlayerUpdater(IRegionRepository regionRepository, WalkingQueueHandler walkingQueueHandler)
         {
             _regionRepository = regionRepository;
+            _walkingQueueHandler = walkingQueueHandler;
         }
 
         public Task PostUpdateAsync(Player player)
@@ -68,7 +70,7 @@ namespace NetScape.Modules.World.Updating
             Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> updates)
         {
             Position old = player.Position;
-            //player.getWalkingQueue().pulse();
+            _walkingQueueHandler.Pulse(player);
             var local = true;
 
             if (player.IsTeleporting)

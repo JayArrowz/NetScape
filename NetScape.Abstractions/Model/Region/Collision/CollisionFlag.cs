@@ -1,4 +1,4 @@
-﻿namespace NetScape.Abstractions.Model.Region
+﻿namespace NetScape.Abstractions.Model.Region.Collision
 {
     public enum CollisionFlag
     {

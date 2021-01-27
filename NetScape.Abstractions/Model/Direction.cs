@@ -2,7 +2,7 @@
 
 namespace NetScape.Abstractions.Model
 {
-	public sealed class Direction
+	public sealed record Direction
 	{
 		public static readonly Direction None = new Direction("NONE", InnerDirectionValue.None, -1);
 		public static readonly Direction NorthWest = new Direction("NORTH_WEST", InnerDirectionValue.NorthWest, 0);

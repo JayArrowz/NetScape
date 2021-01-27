@@ -292,12 +292,11 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 ctx.Channel.Pipeline.AddLast(gameMessageHandlers);
                 ctx.GetAttribute(Constants.PlayerAttributeKey).SetIfAbsent(player);
                 player.ChannelHandlerContext = ctx;
-
+                _world.Add(player);
 
                 var initMessage = new IdAssignmentMessage { IsMembers = (byte)1, NewId = 0 };
                 player.SendAsync(initMessage);
                 player.UpdateAppearance();
-                _world.Add(player);
             }
         }
     }
