@@ -242,8 +242,15 @@ namespace NetScape.Modules.LoginProtocol.Handlers
 
         private async Task WriteProcessorResponseAsync(Rs2LoginResponse loginResult, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
         {
-            await ctx.WriteAndFlushAsync(loginResult);
-            HandleLoginProcessorResponse(loginResult.Player, loginResult.Status, ctx, randomPair);
+            try
+            {
+                await ctx.WriteAndFlushAsync(loginResult);
+                HandleLoginProcessorResponse(loginResult.Player, loginResult.Status, ctx, randomPair);
+            } catch(Exception e)
+            {
+                Log.Logger.Error(e, nameof(WriteProcessorResponseAsync));
+                await ctx.CloseAsync();
+            }
         }
 
         /// <summary>
@@ -294,7 +301,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 player.ChannelHandlerContext = ctx;
                 _world.Add(player);
 
-                var initMessage = new IdAssignmentMessage { IsMembers = (byte)1, NewId = 0 };
+                var initMessage = new IdAssignmentMessage { IsMembers = (byte)1, NewId = 1 };
                 player.SendAsync(initMessage);
                 player.UpdateAppearance();
             }
