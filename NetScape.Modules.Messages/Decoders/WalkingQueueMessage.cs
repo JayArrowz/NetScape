@@ -1,6 +1,7 @@
 ﻿using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Modules.Messages.Builder;
 using System;
 
@@ -8,8 +9,11 @@ namespace NetScape.Modules.Messages.Decoders
 {
     public class WalkingQueueMessage : IMessageDecoder
     {
-        public WalkingQueueMessage()
+        private readonly WalkingQueueHandler _walkingQueueHandler;
+
+        public WalkingQueueMessage(WalkingQueueHandler walkingQueueHandler)
         {
+            _walkingQueueHandler = walkingQueueHandler;
         }
 
         public int[] Ids { get; } = new int[] { 248, 164, 98 };
@@ -19,39 +23,46 @@ namespace NetScape.Modules.Messages.Decoders
 
         public void Decode(Player player, MessageFrame frame)
         {
-            try
+            var reader = new MessageFrameReader(frame);
+            var length = frame.Payload.ReadableBytes;
+
+            if (frame.Id == 248)
             {
-                var reader = new MessageFrameReader(frame);
-                var length = reader.GetLength();
+                length -= 14; // strip off anti-cheat data
+            }
 
-                if (frame.Id == 248)
+            int steps = (length - 5) / 2;
+            int[,] path = new int[steps, 2];
+            int x = (int)reader.GetUnsigned(MessageType.Short, DataOrder.Little, DataTransformation.Add);
+            for (int i = 0; i < steps; i++)
+            {
+                path[i, 0] = (int)reader.GetSigned(MessageType.Byte);
+                path[i, 1] = (int)reader.GetSigned(MessageType.Byte);
+            }
+            int y = (int)reader.GetUnsigned(MessageType.Short, DataOrder.Little);
+            Run = reader.GetUnsigned(MessageType.Byte, DataTransformation.Negate) == 1;
+
+            Positions = new Position[steps + 1];
+            Positions[0] = new Position(x, y);
+            for (int i = 0; i < steps; i++)
+            {
+                Positions[i + 1] = new Position(path[i, 0] + x, path[i, 1] + y);
+            }
+
+            for (int index = 0; index < Positions.Length; index++)
+            {
+                Position step = Positions[index];
+                if (index == 0)
                 {
-                    length -= 14; // strip off anti-cheat data
+                    _walkingQueueHandler.AddFirstStep(player, step);
                 }
-
-                int steps = (length - 5) / 2;
-                int[,] path = new int[steps, 2];
-                int x = (int)reader.GetUnsigned(MessageType.Short, DataOrder.Little, DataTransformation.Add);
-                for (int i = 0; i < steps; i++)
+                else
                 {
-                    path[i, 0] = (int)reader.GetSigned(MessageType.Byte);
-                    path[i, 1] = (int)reader.GetSigned(MessageType.Byte);
-                }
-                int y = (int)reader.GetUnsigned(MessageType.Short, DataOrder.Little);
-                Run = reader.GetUnsigned(MessageType.Byte, DataTransformation.Negate) == 1;
-
-                Positions = new Position[steps + 1];
-                Positions[0] = new Position(x, y);
-                for (int i = 0; i < steps; i++)
-                {
-                    Positions[i + 1] = new Position(path[i, 0] + x, path[i, 1] + y);
+                    _walkingQueueHandler.AddStep(player, step);
                 }
             }
-            catch (Exception e)
-            {
 
-            }
+            player.WalkingQueue.Running = Run || player.WalkingQueue.Running;
         }
-
     }
 }

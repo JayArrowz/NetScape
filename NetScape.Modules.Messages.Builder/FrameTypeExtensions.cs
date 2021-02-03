@@ -1,19 +1,19 @@
-﻿namespace NetScape.Modules.Messages.Builder
+﻿using System;
+
+namespace NetScape.Modules.Messages.Builder
 {
     public static class FrameTypeExtensions
     {
-        public static int GetBytes(this FrameType frameType)
+        public static int GetBytes(this FrameType frameType, DotNetty.Buffers.IByteBuffer input)
         {
             switch (frameType)
             {
                 case FrameType.VariableByte:
-                    return sizeof(byte);
+                    return input.ReadByte();
                 case FrameType.VariableShort:
-                    return sizeof(short);
-                case FrameType.Fixed:
-                case FrameType.Raw:
+                    return input.ReadUnsignedShort();
                 default:
-                    return 0;
+                    throw new ArgumentException("Invalid frameType input argument");
             }
         }
     }

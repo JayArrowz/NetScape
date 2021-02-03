@@ -161,7 +161,7 @@ namespace NetScape.Abstractions.Model.Game.Walking
                     position = new Position(next.X, next.Y, height);
                     mob.LastDirection = firstDirection;
 
-                    if (walkingQueue.Running)
+                    if (walkingQueue.Running && walkingQueue.Points.Any())
                     {
                         next = walkingQueue.Points.RemoveFromFront();
                         if (next != null)
