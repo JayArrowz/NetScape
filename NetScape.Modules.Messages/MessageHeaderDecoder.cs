@@ -78,12 +78,9 @@ namespace NetScape.Modules.Messages
                 Log.Logger.Warning("Opcode {0} not recognised", unencodedOpcode);
                 return;
             }
-            else
-            {
-                Log.Logger.Debug("Decoding Opcode: {0} Player Name: {1} from {2} Size {3}", unencodedOpcode, Player.Username, context.Channel.RemoteAddress, size);
-                buffer.ResetReaderIndex();
-                decoder.Decode(player, new MessageFrame(unencodedOpcode, decoder.FrameType, buffer));
-            }
+            Log.Logger.Debug("Decoding Opcode: {0} Player Name: {1} from {2} Size {3}", unencodedOpcode, Player.Username, context.Channel.RemoteAddress, size);
+            buffer.ResetReaderIndex();
+            decoder.Decode(player, new MessageFrame(unencodedOpcode, decoder.FrameType, buffer));
         }
     }
 }
