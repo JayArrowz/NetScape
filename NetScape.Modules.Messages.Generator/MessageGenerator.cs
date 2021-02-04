@@ -62,7 +62,7 @@ namespace NetScape.Messages.Generator
 using DotNetty.Buffers;
 using NetScape.Modules.Messages.Builder;
 using NetScape.Modules.Messages.Encoders;
-    public partial class {className} : IOutMessage<MessageFrame> {{
+    public partial class {className} : IEncoderMessage<MessageFrame> {{
 {{Fields}}        
         public MessageFrame ToMessage(IByteBufferAllocator alloc) {{
 {{GetMethod}}
