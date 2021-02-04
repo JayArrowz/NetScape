@@ -29,7 +29,6 @@ namespace NetScape.Modules.Messages.Decoders
             }
         }
 
-
         public abstract int[] Ids { get; }
         public abstract FrameType FrameType { get; }
         protected abstract TMessage Decode(Player player, MessageFrame frame);
