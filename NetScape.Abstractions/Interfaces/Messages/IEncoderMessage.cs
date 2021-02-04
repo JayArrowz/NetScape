@@ -6,7 +6,7 @@ namespace NetScape.Modules.Messages
     /// Outgoing message encoder
     /// </summary>
     /// <typeparam name="T">The type of message</typeparam>
-    public interface IOutMessage<T>
+    public interface IEncoderMessage<T>
     {
         /// <summary>
         /// Converts to message.

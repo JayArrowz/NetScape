@@ -2,13 +2,14 @@
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
+using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;
 using NetScape.Modules.World.Updating.Segments;
 using System.Collections.Generic;
 
-namespace NetScape.Modules.Messages.Outgoing
+namespace NetScape.Modules.World.Updating
 {
-    public class PlayerSynchronizationMessage : IOutMessage<MessageFrame>
+    public class PlayerSynchronizationMessage : IEncoderMessage<MessageFrame>
     {
         public Position LastKnownRegion { get; }
         public int LocalPlayers { get; }

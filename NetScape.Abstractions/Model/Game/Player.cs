@@ -61,7 +61,7 @@ namespace NetScape.Abstractions.Model.Game
         /// Sends a message to the player.
         /// </summary>
         /// <param name="message">The message.</param>
-        public async Task SendAsync(IOutMessage<MessageFrame> message)
+        public async Task SendAsync(IEncoderMessage<MessageFrame> message)
         {
             var msg = message.ToMessage(ChannelHandlerContext.Allocator);
             await ChannelHandlerContext.Channel.WriteAndFlushAsync(msg);

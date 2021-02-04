@@ -4,7 +4,7 @@ using NetScape.Modules.Messages.Builder;
 
 namespace NetScape.Abstractions.Interfaces.Messages
 {
-    public abstract class RegionUpdateMessage : IOutMessage<MessageFrame>
+    public abstract class RegionUpdateMessage : IEncoderMessage<MessageFrame>
     {
         /// <summary>
         /// The integer value indicating this RegionUpdateMessage is a high-priority message.

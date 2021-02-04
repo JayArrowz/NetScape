@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace NetScape.Modules.Messages.Region
 {
-    public class GroupedRegionUpdateMessage : IOutMessage<MessageFrame>
+    public class GroupedRegionUpdateMessage : IEncoderMessage<MessageFrame>
     {
         /// <summary>
         /// The last known region of the player
