@@ -8,7 +8,6 @@ using NetScape.Abstractions.Model.Region;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
 using NetScape.Modules.Messages.Encoders;
-using NetScape.Modules.Messages.Outgoing;
 using NetScape.Modules.Messages.Region;
 using NetScape.Modules.World.Updating.Segments;
 using System.Collections.Generic;

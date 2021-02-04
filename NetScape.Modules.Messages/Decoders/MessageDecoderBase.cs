@@ -1,5 +1,6 @@
 ﻿using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Model.Messages;
 using NetScape.Modules.Messages.Builder;
 using System;
 using System.Collections.Generic;
