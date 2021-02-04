@@ -254,8 +254,8 @@ namespace NetScape.Abstractions.Model.Region.Collision
         /// <returns>index in the matrix</returns>
         private int IndexOf(int x, int y)
         {
-            Guard.Argument(x).GreaterThan(0).LessThan(_width);
-            Guard.Argument(y).GreaterThan(0).LessThan(_length);
+            Guard.Argument(x).GreaterThan(-1).LessThan(_width + 1);
+            Guard.Argument(y).GreaterThan(-1).LessThan(_length + 1);
             return y * _width + x;
         }
 
