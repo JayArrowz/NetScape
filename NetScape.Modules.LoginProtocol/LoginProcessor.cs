@@ -15,7 +15,7 @@ namespace NetScape.Modules.LoginProtocol
     {
         private readonly ILogger _logger;
         private readonly IPlayerSerializer _playerSerializer;
-        private readonly List<Rs2LoginRequest> _loginRequests = new List<Rs2LoginRequest>();
+        private readonly IList<Rs2LoginRequest> _loginRequests = new List<Rs2LoginRequest>();
 
         private readonly object _lockObject = new object();
 
@@ -89,14 +89,22 @@ namespace NetScape.Modules.LoginProtocol
                 while (_loginRequests.Count > 0)
                 {
                     var requests = _loginRequests.ToList();
-                    foreach (var loginRequest in requests)
+                    var tasks = requests.Select(loginTask =>
+                    (request: loginTask, responseTask: ProcessAsync(loginTask)))
+                        .ToList();
+                    await Task.WhenAll(tasks.Select(t => t.responseTask));
+                    tasks.ForEach(t =>
                     {
-                        var loginResult = await ProcessAsync(loginRequest);
-                        _loginRequests.Remove(loginRequest);
-                        loginRequest.Result = loginResult;
-                        _logger.Debug("Processed Login Request: {@LoginRequest}", loginRequest.Credentials);
-                        _ = loginRequest.OnResult(loginResult);
-                    }
+                        var responseTask = t.responseTask;
+                        var request = t.request;
+                        if (responseTask.IsCompletedSuccessfully)
+                        {
+                            _loginRequests.Remove(t.request);
+                            t.request.Result = request.Result;
+                            _ = request.OnResult(responseTask.Result);
+                            _logger.Debug("Processed Login Request: {@LoginRequest}", request.Credentials);
+                        }
+                    });
                 }
                 await Task.Delay(600);
             }

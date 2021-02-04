@@ -1,12 +1,17 @@
 ﻿using NetScape.Abstractions.Model.Game;
 using NetScape.Modules.Messages.Builder;
+using System;
 
 namespace NetScape.Abstractions.Interfaces.Messages
 {
     public interface IMessageDecoder
     {
         int[] Ids { get; }
+        void DecodeAndPublish(Player player, MessageFrame frame);
         FrameType FrameType { get; }
-        void Decode(Player player, MessageFrame frame);
+    }
+
+    public interface IMessageDecoder<TMessage> : IMessageDecoder, IObservable<TMessage>
+    {
     }
 }

@@ -52,10 +52,8 @@ namespace NetScape.Modules.Messages
 			0, 0, 6, 6, 0, 0, // 250
         };
 
-
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output)
         {
-            var player = context.GetAttribute(Constants.PlayerAttributeKey).Get();
             var isaacValue = CipherPair.DecodingRandom.NextInt();
             int opcode = input.ReadByte();
             int unencodedOpcode = opcode - isaacValue & 0xFF;
@@ -80,7 +78,7 @@ namespace NetScape.Modules.Messages
             }
             Log.Logger.Debug("Decoding Opcode: {0} Player Name: {1} from {2} Size {3}", unencodedOpcode, Player.Username, context.Channel.RemoteAddress, size);
             buffer.ResetReaderIndex();
-            decoder.Decode(player, new MessageFrame(unencodedOpcode, decoder.FrameType, buffer));
+            decoder.DecodeAndPublish(Player, new MessageFrame(unencodedOpcode, decoder.FrameType, buffer));
         }
     }
 }

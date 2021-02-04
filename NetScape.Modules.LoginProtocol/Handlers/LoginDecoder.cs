@@ -302,7 +302,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 _world.Add(player);
 
                 var initMessage = new IdAssignmentMessage { IsMembers = (byte)1, NewId = 1 };
-                player.SendAsync(initMessage);
+                _ = player.SendAsync(initMessage);
                 player.UpdateAppearance();
             }
         }
