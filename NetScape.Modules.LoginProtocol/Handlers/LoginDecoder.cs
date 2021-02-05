@@ -3,6 +3,7 @@ using DotNetty.Common.Utilities;
 using DotNetty.Transport.Channels;
 using NetScape.Abstractions;
 using NetScape.Abstractions.Extensions;
+using NetScape.Abstractions.Interfaces.Game.Player;
 using NetScape.Abstractions.Interfaces.Login;
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Interfaces.World;
@@ -52,13 +53,14 @@ namespace NetScape.Modules.LoginProtocol.Handlers
         private readonly ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> _loginProcessor;
         private readonly IMessageProvider _gameMessageProvider;
         private readonly IWorld _world;
-
-        public LoginDecoder(ILogger logger, ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> loginProcessor, IMessageProvider gameMessageProvider, IWorld world) : base(LoginDecoderState.LoginHandshake)
+        private readonly IPlayerInitializer _playerInitializer;
+        public LoginDecoder(ILogger logger, ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse> loginProcessor, IMessageProvider gameMessageProvider, IWorld world, IPlayerInitializer playerInitializer) : base(LoginDecoderState.LoginHandshake)
         {
             _logger = logger;
             _gameMessageProvider = gameMessageProvider;
             _loginProcessor = loginProcessor;
             _world = world;
+            _playerInitializer = playerInitializer;
         }
 
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output, LoginDecoderState state)
@@ -246,7 +248,8 @@ namespace NetScape.Modules.LoginProtocol.Handlers
             {
                 await ctx.WriteAndFlushAsync(loginResult);
                 HandleLoginProcessorResponse(loginResult.Player, loginResult.Status, ctx, randomPair);
-            } catch(Exception e)
+            }
+            catch (Exception e)
             {
                 Log.Logger.Error(e, nameof(WriteProcessorResponseAsync));
                 await ctx.CloseAsync();
@@ -300,10 +303,7 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 ctx.GetAttribute(Constants.PlayerAttributeKey).SetIfAbsent(player);
                 player.ChannelHandlerContext = ctx;
                 _world.Add(player);
-
-                var initMessage = new IdAssignmentMessage { IsMembers = (byte)1, NewId = 1 };
-                _ = player.SendAsync(initMessage);
-                player.UpdateAppearance();
+                _ = _playerInitializer.InitializeAsync(player);
             }
         }
     }

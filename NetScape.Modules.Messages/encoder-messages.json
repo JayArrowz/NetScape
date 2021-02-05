@@ -106,6 +106,22 @@
           "Transform": "Add"
         }
       ]
+    },
+    {
+      "Name": "SwitchTabInterfaceMessage",
+      "Id": 71,
+      "FrameType": "Fixed",
+      "Params": [
+        {
+          "Name": "InterfaceId",
+          "Type": "Short"
+        },
+        {
+          "Name": "TabId",
+          "Type": "Byte",
+          "Transform": "Add"
+        }
+      ]
     }
   ]
 }

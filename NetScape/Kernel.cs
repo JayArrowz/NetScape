@@ -9,6 +9,7 @@ using NetScape.Abstractions.Interfaces.IO;
 using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Modules.Cache;
 using NetScape.Modules.DAL;
+using NetScape.Modules.Game;
 using NetScape.Modules.Logging.SeriLog;
 using NetScape.Modules.LoginProtocol;
 using NetScape.Modules.Messages;
@@ -69,6 +70,7 @@ namespace NetScape
             containerBuilder.RegisterModule(new UpdatingModule());
             containerBuilder.RegisterModule(new RegionModule());
             containerBuilder.RegisterModule(new CollisionModule());
+            containerBuilder.RegisterModule(new GameModule());
             containerBuilder.RegisterType<WalkingQueueHandler>();
             containerBuilder.RegisterType<FileSystem>().As<IFileSystem>();
             containerBuilder.RegisterType<ContainerProvider>().SingleInstance();
