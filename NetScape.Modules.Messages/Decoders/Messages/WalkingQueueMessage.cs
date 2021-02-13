@@ -6,7 +6,13 @@ namespace NetScape.Modules.Messages.Decoders.Messages
 {
     public class WalkingQueueMessage : DecoderMessage
     {
-        public bool Run { get; set; }
-        public Position[] Positions { get; set; }
+        public WalkingQueueMessage(bool run, Position[] positions)
+        {
+            Run = run;
+            Positions = positions;
+        }
+
+        public bool Run { get; }
+        public Position[] Positions { get; }
     }
 }

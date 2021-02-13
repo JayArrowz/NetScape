@@ -37,7 +37,7 @@ namespace NetScape.Modules.Messages.Decoders
             {
                 positions[i + 1] = new Position(path[i, 0] + x, path[i, 1] + y);
             }
-            return new WalkingQueueMessage { Positions = positions, Run = run };
+            return new WalkingQueueMessage(run, positions);
         }
     }
 }
