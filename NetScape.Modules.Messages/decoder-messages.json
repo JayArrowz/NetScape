@@ -57,6 +57,28 @@
           "Type": "Short"
         }
       ]
+    },
+    {
+      "Id": 132,
+      "Name": "FirstObjectActionMessage",
+      "FrameType": "Fixed",
+      "Params": [
+        {
+          "Name": "X",
+          "Type": "Short",
+          "Order": "Little",
+          "Transform": "Add"
+        },
+        {
+          "Name": "Id",
+          "Type": "Short"
+        },
+        {
+          "Name": "Y",
+          "Type": "Short",
+          "Transform": "Add"
+        }
+      ]
     }
   ]
 }
