@@ -84,7 +84,7 @@ namespace NetScape.Modules.World.Updating
                 player.RegionChanged = true;
                 local = false;
                 player.LastKnownRegion = position;
-                await player.SendAsync(new RegionChangeMessage { CentralRegionX = (short)position.CentralRegionX, CentralRegionY = (short)position.CentralRegionY });
+                await player.SendAsync(new RegionChangeMessage { CentralRegionX = (ushort)position.CentralRegionX, CentralRegionY = (ushort)position.CentralRegionY });
             }
 
             var oldViewable = _regionRepository.FromPosition(old).GetSurrounding();

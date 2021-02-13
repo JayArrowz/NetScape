@@ -1,0 +1,27 @@
+{
+  "Namespace": "NetScape.Modules.Messages.Decoders",
+  "Type": "Decoder",
+  "Messages": [
+    {
+      "Id": 317,
+      "Name": "SecondItemOptionMessage",
+      "FrameType": "Fixed",
+      "Params": [
+        {
+          "Name": "Id",
+          "Type": "Short"
+        },
+        {
+          "Name": "Slot",
+          "Type": "Short",
+          "Transform": "Add"
+        },
+        {
+          "Name": "InterfaceId",
+          "Type": "Short",
+          "Transform": "Add"
+        }
+      ]
+    }
+  ]
+}

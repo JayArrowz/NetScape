@@ -12,7 +12,7 @@ namespace NetScape.Modules.Game.Interface
         {
             var switchTabMessage = new SwitchTabInterfaceMessage
             {
-                InterfaceId = (short)interfaceId,
+                InterfaceId = (ushort)interfaceId,
                 TabId = (byte)tabId
             };
             return player.SendAsync(switchTabMessage);

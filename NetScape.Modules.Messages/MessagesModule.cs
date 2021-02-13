@@ -16,8 +16,10 @@ namespace NetScape.Modules.Messages
             builder.RegisterType<MessageChannelHandler>();
 
             #region Decoders
-            builder.RegisterType<WalkingQueueMessageDecoder>()
-                .AsImplementedInterfaces().SingleInstance();
+            builder.RegisterAssemblyTypes(typeof(MessagesModule).Assembly)
+                .AsClosedTypesOf(typeof(IMessageDecoder<>))
+                .As<IMessageDecoder>()
+                .SingleInstance();
             base.Load(builder);
             #endregion
 

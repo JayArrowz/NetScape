@@ -8,5 +8,6 @@ namespace NetScape.Messages.Generator
         public MessageType Type { get; set; }
         public DataOrder? Order { get; set; }
         public DataTransformation? Transform { get; set; }
+        public bool Signed { get; set; }
     }
 }

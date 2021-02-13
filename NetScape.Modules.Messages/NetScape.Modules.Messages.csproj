@@ -13,9 +13,12 @@
     <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
     <Description>NetScape 317 Messaging Module</Description>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <AdditionalFiles Include="encoder-messages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="decoder-messages.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>
@@ -26,11 +29,15 @@
     <PackageReference Include="Serilog" Version="2.10.0" />
     <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <ProjectReference Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Messages.Generator\NetScape.Modules.Messages.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <ProjectReference Include="..\NetScape.Modules.Region\NetScape.Modules.Region.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Generated\" />
   </ItemGroup>
 </Project>
