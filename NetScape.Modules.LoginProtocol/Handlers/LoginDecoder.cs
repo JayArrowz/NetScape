@@ -303,7 +303,13 @@ namespace NetScape.Modules.LoginProtocol.Handlers
                 ctx.GetAttribute(Constants.PlayerAttributeKey).SetIfAbsent(player);
                 player.ChannelHandlerContext = ctx;
                 _world.Add(player);
-                _ = _playerInitializer.InitializeAsync(player);
+                if (!_reconnecting)
+                {
+                    _ = _playerInitializer.InitializeAsync(player);
+                } else
+                {
+                    player.UpdateAppearance();
+                }
             }
         }
     }
