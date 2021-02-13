@@ -22,6 +22,17 @@
           "Transform": "Add"
         }
       ]
+    },
+    {
+      "Id": 185,
+      "Name": "ButtonMessage",
+      "FrameType": "Fixed",
+      "Params": [
+        {
+          "Name": "InterfaceId",
+          "Type": "Short"
+        }
+      ]
     }
   ]
 }
