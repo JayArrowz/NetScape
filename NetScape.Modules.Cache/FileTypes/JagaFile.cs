@@ -59,7 +59,7 @@ namespace NetScape.Modules.Cache.FileTypes
 
             // The rest of the file is the first chunk
             var containedChunkStartPosition = reader.BaseStream.Position;
-            this.ContainedChunkData = reader.ReadBytes((int)(reader.BaseStream.Length - containedChunkStartPosition));
+            this.ContainedChunkData = reader.ReadBytesExactly((int)(reader.BaseStream.Length - containedChunkStartPosition));
         }
 
         public override byte[] Encode()

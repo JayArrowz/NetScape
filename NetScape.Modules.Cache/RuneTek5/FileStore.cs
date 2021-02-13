@@ -7,6 +7,7 @@ using NetScape.Abstractions.Extensions;
 using NetScape.Abstractions.FileSystem;
 using NetScape.Abstractions.Interfaces.Cache;
 using Autofac;
+using NetScape.Modules.Cache.FileTypes;
 
 namespace NetScape.Modules.Cache.RuneTek5
 {
@@ -24,6 +25,8 @@ namespace NetScape.Modules.Cache.RuneTek5
         ///     Lock that is used when reading data from the streams.
         /// </summary>
         private readonly object _ioLock = new object();
+
+        private const int IndexPointerSize = 6; // filesize + firstSectorPosition
 
         private readonly Dictionary<CacheIndex, Stream> _indexStreams = new Dictionary<CacheIndex, Stream>();
 
@@ -55,7 +58,7 @@ namespace NetScape.Modules.Cache.RuneTek5
             int filesize;
             return this.ReadSectors(index, fileId, out filesize);
         }
-        
+
         /// <summary>
         /// Reads the sectors
         /// </summary>
@@ -67,74 +70,64 @@ namespace NetScape.Modules.Cache.RuneTek5
             int filesize;
             return this.ReadSectors(index, fileId, out filesize).Aggregate(new List<byte>(), (bytes, sector) =>
             {
-                bytes.AddRange(sector.Data);
+                bytes.AddRange(sector.Payload);
                 return bytes;
             }).Take(filesize).ToArray();
         }
-        
+
         private IEnumerable<Sector> ReadSectors(CacheIndex index, int fileId, out int filesize)
         {
             if (!this._indexStreams.ContainsKey(index))
             {
-                throw new FileNotFoundException($"Index does not exist for {(int)index}/{fileId}.");
+                throw new FileNotFoundException($"Cannot read from index {(int)index} as it does not exist.");
             }
 
-            var indexReader = new BinaryReader(this._indexStreams[index]);
-
-            var indexPosition = (long)fileId * IndexPointer.Length;
-
-            if (indexPosition < 0 || indexPosition >= indexReader.BaseStream.Length)
-            {
-                throw new FileNotFoundException($"{(int)index}/{fileId} is outside of the index file's bounds.");
-            }
-
-            var sectors = new List<Sector>();
-
-            // Lock stream, to allow multiple threads from calling this method at the same time
             lock (this._ioLock)
             {
-                indexReader.BaseStream.Position = indexPosition;
-                var indexPointer = IndexPointer.Decode(indexReader.BaseStream);
-
-                filesize = indexPointer.Filesize;
-
-                if (indexPointer.Filesize <= 0)
+                var indexReader = new BinaryReader(this._indexStreams[index]);
+                var indexPosition = (long)fileId * IndexPointerSize;
+                if (indexPosition < 0 || indexPosition >= indexReader.BaseStream.Length)
                 {
-                    throw new FileNotFoundException($"{index}/{fileId} has no size, which means it is not stored in the cache.");
+                    throw new FileNotFoundException($"File {fileId} is outside of index {(int)index}'s file bounds.");
+                }
+
+                var sectors = new List<Sector>();
+                indexReader.BaseStream.Position = indexPosition;
+
+                filesize = indexReader.ReadUInt24BigEndian();
+                var firstSectorPosition = indexReader.ReadUInt24BigEndian();
+                if (filesize <= 0)
+                {
+                    throw new FileNotFoundException(
+                        $"File {fileId} in index {(int)index} has no size meaning it is not stored in the cache."
+                    );
                 }
 
                 var chunkId = 0;
-                var remaining = indexPointer.Filesize;
+                var remaining = filesize;
                 var dataReader = new BinaryReader(this._dataStream);
-                var dataPosition = (long)indexPointer.FirstSectorPosition * Sector.Length;
-
+                var sectorPosition = firstSectorPosition;
                 do
                 {
-                    dataReader.BaseStream.Position = dataPosition;
+                    dataReader.BaseStream.Position = sectorPosition * Sector.Size;
 
-                    var sectorBytes = dataReader.ReadBytes(Sector.Length);
+                    var sectorBytes = dataReader.ReadBytesExactly(Sector.Size);
+                    var sector = Sector.Decode(sectorPosition, sectorBytes, index, fileId, chunkId++);
 
-                    if (sectorBytes.Length != Sector.Length)
-                    {
-                        throw new EndOfStreamException($"One of {index}/{fileId}'s sectors could not be fully read.");
-                    }
-
-                    var sector = new Sector((int)(dataPosition / Sector.Length), index, fileId, chunkId++, sectorBytes);
-
-                    var bytesRead = Math.Min(sector.Data.Length, remaining);
+                    var bytesRead = Math.Min(sector.Payload.Length, remaining);
 
                     remaining -= bytesRead;
 
-                    dataPosition = (long)sector.NextSectorPosition * Sector.Length;
-
                     sectors.Add(sector);
+
+                    sectorPosition = sector.NextSectorPosition.Value;
                 }
                 while (remaining > 0);
+
+                return sectors;
+
             }
-
-            return sectors;
         }
-
         /// <summary>
         /// If available, overwrites the space allocated to the previous file first to save space.
         /// </summary>
@@ -171,14 +164,14 @@ namespace NetScape.Modules.Cache.RuneTek5
                 foreach (var sector in sectors)
                 {
                     // Overwrite existing sector data if available, otherwise append to file
-                    sector.Position = sector.ChunkId < existingSectorPositions.Length
-                        ? existingSectorPositions[sector.ChunkId]
-                        : (int)(dataWriter.BaseStream.Length / Sector.Length);
+                    sector.Position = sector.ChunkIndex < existingSectorPositions.Length
+                        ? existingSectorPositions[sector.ChunkIndex]
+                        : (int)(dataWriter.BaseStream.Length / Sector.Size);
 
                     // Set position of next sector
-                    sector.NextSectorPosition = sector.ChunkId + 1 < existingSectorPositions.Length
-                        ? existingSectorPositions[sector.ChunkId + 1]
-                        : (int)(dataWriter.BaseStream.Length / Sector.Length);
+                    sector.NextSectorPosition = sector.ChunkIndex + 1 < existingSectorPositions.Length
+                        ? existingSectorPositions[sector.ChunkIndex + 1]
+                        : (int)(dataWriter.BaseStream.Length / Sector.Size);
 
                     // Happens if both positions were based on the stream length
                     if (sector.NextSectorPosition == sector.Position)
@@ -187,7 +180,7 @@ namespace NetScape.Modules.Cache.RuneTek5
                     }
 
                     // Add to index
-                    if (sector.ChunkId == 0)
+                    if (sector.ChunkIndex == 0)
                     {
                         var pointer = new IndexPointer
                         {
@@ -222,7 +215,7 @@ namespace NetScape.Modules.Cache.RuneTek5
                     }
 
                     // Write the encoded sector
-                    dataWriter.BaseStream.Position = sector.Position * Sector.Length;
+                    dataWriter.BaseStream.Position = sector.Position * Sector.Size;
                     dataWriter.Write(sector.Encode());
                 }
             }

@@ -16,6 +16,31 @@ namespace NetScape.Abstractions.Extensions
         }
 
         /// <summary>
+        /// Reads <paramref name="count" /> bytes from the current stream into a byte array and advances the current
+        /// position by that number of bytes. If the stream ends before the specified amount of bytes can be read, a
+        /// <see cref="EndOfStreamException" /> will be thrown. Identical to <see cref="BinaryReader.ReadBytes" />
+        /// otherwise.
+        /// </summary>
+        /// <exception cref="System.ArgumentException" />
+        /// <exception cref="System.IO.IOException" />
+        /// <exception cref="System.ObjectDisposedException" />
+        /// <exception cref="System.ArgumentOutOfRangeException" />
+        /// <exception cref="EndOfStreamException" />
+        /// <returns></returns>
+        public static byte[] ReadBytesExactly(this BinaryReader reader, int count)
+        {
+            var bytes = reader.ReadBytes(count);
+            if (bytes.Length != count)
+            {
+                throw new EndOfStreamException(
+                    $"The requested amount of bytes ({count}) could not be read. Only {bytes.Length} bytes were available."
+                );
+            }
+
+            return bytes;
+        }
+
+        /// <summary>
         ///     Reads a 4-byte signed big endian integer and advances the current position of the stream by 4 bytes.
         /// </summary>
         public static int ReadInt32BigEndian(this BinaryReader reader)

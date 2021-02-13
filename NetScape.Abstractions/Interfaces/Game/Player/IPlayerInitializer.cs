@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using NetScape.Abstractions.Model.Login;
+using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.Interfaces.Game.Player
 {
