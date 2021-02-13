@@ -77,7 +77,6 @@ namespace NetScape.Modules.Messages
                 return;
             }
             Log.Logger.Debug("Decoding Opcode: {0} Player Name: {1} from {2} Size {3}", unencodedOpcode, Player.Username, context.Channel.RemoteAddress, size);
-            buffer.ResetReaderIndex();
             decoder.DecodeAndPublish(Player, new MessageFrame(unencodedOpcode, decoder.FrameType, buffer));
         }
     }
