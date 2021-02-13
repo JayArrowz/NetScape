@@ -39,5 +39,6 @@
 
   <ItemGroup>
     <Folder Include="Generated\" />
+    <Folder Include="Generated\NetScape.Modules.Messages.Generator\NetScape.Messages.Generator.MessageGenerator\" />
   </ItemGroup>
 </Project>

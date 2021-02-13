@@ -3,6 +3,30 @@
   "Type": "Decoder",
   "Messages": [
     {
+      "Id": 0,
+      "Name": "IdleMessage",
+      "FrameType": "Fixed",
+      "Params": [
+      ]
+    },
+    {
+      "Id": 86,
+      "Name": "ArrowKeyMessage",
+      "FrameType": "Fixed",
+      "Params": [
+        {
+          "Name": "Roll",
+          "Type": "Short",
+          "Order": "Little"
+        },
+        {
+          "Name": "Yaw",
+          "Type": "Short",
+          "Order": "Little"
+        }
+      ]
+    },
+    {
       "Id": 317,
       "Name": "SecondItemOptionMessage",
       "FrameType": "Fixed",
