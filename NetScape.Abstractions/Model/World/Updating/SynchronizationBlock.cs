@@ -6,7 +6,7 @@ namespace NetScape.Abstractions.Model.World.Updating
 {
     public abstract class SynchronizationBlock
     {
-        public static SynchronizationBlock CreateAnimationBlock(Animation animation)
+        public static AnimationBlock CreateAnimationBlock(Animation animation)
         {
             return new AnimationBlock(animation);
         }

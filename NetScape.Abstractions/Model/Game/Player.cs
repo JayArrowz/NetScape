@@ -2,6 +2,7 @@
 using Google.Protobuf;
 using NetScape.Abstractions.Model.Messages;
 using NetScape.Abstractions.Model.World.Updating;
+using NetScape.Abstractions.Model.World.Updating.Blocks;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;
 using System.Collections.Generic;
@@ -72,6 +73,11 @@ namespace NetScape.Abstractions.Model.Game
         public void UpdateAppearance()
         {
             BlockSet.Add(SynchronizationBlock.CreateAppearanceBlock(this));
+        }
+
+        public void SendAnimation(Animation animation)
+        {
+            BlockSet.Add(SynchronizationBlock.CreateAnimationBlock(animation));
         }
     }
 }
