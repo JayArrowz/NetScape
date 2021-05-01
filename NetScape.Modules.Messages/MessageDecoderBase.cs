@@ -7,8 +7,6 @@ using NetScape.Modules.Messages.Builder;
 using System;
 using System.Collections.Generic;
 using System.Reactive;
-using System.Reactive.Concurrency;
-using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 
@@ -18,11 +16,11 @@ namespace NetScape.Modules.Messages
     {
         private class MessageObserverDisposable : IDisposable
         {
-            private readonly List<IObserver<DecoderMessage<TMessage>>> _observers;
-            private readonly IObserver<DecoderMessage<TMessage>> _observer;
+            private readonly List<KeyValuePair<IObserver<DecoderMessage<TMessage>>, Predicate<DecoderMessage<TMessage>>>> _observers;
+            private readonly KeyValuePair<IObserver<DecoderMessage<TMessage>>, Predicate<DecoderMessage<TMessage>>> _observer;
             private bool _disposed;
 
-            public MessageObserverDisposable(IObserver<DecoderMessage<TMessage>> observer, List<IObserver<DecoderMessage<TMessage>>> observers)
+            public MessageObserverDisposable(KeyValuePair<IObserver<DecoderMessage<TMessage>>, Predicate<DecoderMessage<TMessage>>> observer, List<KeyValuePair<IObserver<DecoderMessage<TMessage>>, Predicate<DecoderMessage<TMessage>>>> observers)
             {
                 _observer = observer;
                 _observers = observers;
@@ -47,7 +45,7 @@ namespace NetScape.Modules.Messages
             return default(TMessage);
         }
 
-        private readonly List<IObserver<DecoderMessage<TMessage>>> _observers = new();
+        private readonly List<KeyValuePair<IObserver<DecoderMessage<TMessage>>, Predicate<DecoderMessage<TMessage>>>> _observers = new();
 
         public void Publish(Player player, object message)
         {
@@ -57,7 +55,17 @@ namespace NetScape.Modules.Messages
                 Message = castedMessage,
                 Player = player
             };
-            _observers.ForEach(t => t.OnNext(decodedMessage));
+            for(int i = 0; i < _observers.Count; i++)
+            {
+                var observerDetails = _observers[i];
+                var observer = observerDetails.Key;
+                var filter = observerDetails.Value;
+                var canRun = filter != null ? filter.Invoke(decodedMessage) : true;
+                if(canRun)
+                {
+                    observer.OnNext(decodedMessage);
+                }
+            }
         }
 
         public void DecodeAndPublish(Player player, MessageFrame frame)
@@ -67,28 +75,31 @@ namespace NetScape.Modules.Messages
             Publish(player, decoded);
         }
 
-        public IDisposable Subscribe(IObserver<DecoderMessage<TMessage>> observer)
+        private IDisposable Subscribe(IObserver<DecoderMessage<TMessage>> observer, Predicate<DecoderMessage<TMessage>> filter)
         {
-            _observers.Add(observer);
-            return new MessageObserverDisposable(observer, _observers);
+            var keyValuePair = new KeyValuePair<IObserver<DecoderMessage<TMessage>>, Predicate<DecoderMessage<TMessage>>>(observer, filter);
+            _observers.Add(keyValuePair);
+            return new MessageObserverDisposable(keyValuePair, _observers);
         }
 
-        public IDisposable SubscribeDelegate(Delegate method)
+        public IDisposable SubscribeDelegate(Delegate method, Delegate filter)
         {
             Action<DecoderMessage<TMessage>> action = Guard.Argument(method).Cast<Action<DecoderMessage<TMessage>>>();
-            return Subscribe(Observer.Create(action));
+            Predicate<DecoderMessage<TMessage>> filterPredicate = filter == null ? null : Guard.Argument(filter).Cast<Predicate<DecoderMessage<TMessage>>>();
+            return Subscribe(Observer.Create(action), filterPredicate);
         }
 
-        public IDisposable SubscribeDelegateAsync(Delegate method)
+        public IDisposable SubscribeDelegateAsync(Delegate method, Delegate filter)
         {
             Func<DecoderMessage<TMessage>, Task> action = Guard.Argument(method).Cast<Func<DecoderMessage<TMessage>, Task>>();
+            Predicate<DecoderMessage<TMessage>> filterPredicate = filter == null ? null : Guard.Argument(filter).Cast<Predicate<DecoderMessage<TMessage>>>();
             
-            var observable = this.SelectMany(async e =>
-            {
-                await action(e);
-                return e;
-            }).Subscribe();
-            return observable;
+            return Subscribe(Observer.Create<DecoderMessage<TMessage>>(async (e) => await action(e)), filterPredicate);
+        }
+
+        public IDisposable Subscribe(IObserver<DecoderMessage<TMessage>> observer)
+        {
+            return new MessageObserverDisposable(new KeyValuePair<IObserver<DecoderMessage<TMessage>>, Predicate<DecoderMessage<TMessage>>>(observer, null), _observers);
         }
     }
 }
