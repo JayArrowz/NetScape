@@ -6,6 +6,7 @@ using NetScape.Abstractions.IO.Util;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Modules.Messages.Builder;
 using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -70,7 +71,7 @@ namespace NetScape.Modules.Messages
             if (!frameType.HasValue)
             {
                 Log.Logger.Warning("Opcode {0} not recognised", unencodedOpcode);
-                if(size > 0)
+                if (size > 0)
                 {
                     input.ReadBytes(size);
                 }

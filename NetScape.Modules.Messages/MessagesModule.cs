@@ -1,15 +1,17 @@
 ﻿using Autofac;
 using Google.Protobuf;
+using Google.Protobuf.Reflection;
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Modules.Messages.Decoders;
 using NetScape.Modules.Messages.Decoders.Handlers;
 using NetScape.Modules.Messages.Models;
 using System;
 using System.Linq;
+using System.Reflection;
 
 namespace NetScape.Modules.Messages
 {
-    public class MessagesModule : Module
+    public class MessagesModule : Autofac.Module
     {
         protected override void Load(ContainerBuilder builder)
         {
@@ -26,15 +28,19 @@ namespace NetScape.Modules.Messages
             builder.RegisterType<MessageChannelHandler>();
 
             #region Decoders
-            builder.RegisterType<MessageChannelHandler>();
             typeof(MessageCodec).Assembly.ExportedTypes.Where(t => t.IsAssignableTo<IMessage>())
                 .ToList()
                 .ForEach(type =>
                 {
-                    Type messageHandlerType = typeof(MessageDecoderBase<>).MakeGenericType(type);
-                    builder.RegisterType(messageHandlerType)
-                    .AsImplementedInterfaces()
-                    .SingleInstance();
+                    var descriptor = (MessageDescriptor)type.GetProperty("Descriptor", BindingFlags.Public | BindingFlags.Static).GetValue(null, null); // get the static property Descriptor
+                    var codecExists = descriptor.CustomOptions.TryGetMessage<MessageCodec>(2001, out var messageCodec);
+                    if (codecExists && !messageCodec.Custom)
+                    {
+                        Type messageHandlerType = typeof(MessageDecoderBase<>).MakeGenericType(type);
+                        builder.RegisterType(messageHandlerType)
+                        .AsImplementedInterfaces()
+                        .SingleInstance();
+                    }
                 });
 
             builder.RegisterAssemblyTypes(typeof(MessagesModule).Assembly)

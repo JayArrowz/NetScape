@@ -80,6 +80,7 @@ message ThreeOneSevenDecoderMessages {
         option (MessageCodecExt).OpCodes = 248;       
         option (MessageCodecExt).OpCodes = 164;       
         option (MessageCodecExt).OpCodes = 98;
+        option (MessageCodecExt).SizeType = VariableByte;
         option (MessageCodecExt).Custom = true;
     }
 }
