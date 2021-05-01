@@ -5,7 +5,7 @@ using Serilog;
 using Autofac;
 using NetScape.Abstractions.Interfaces;
 
-namespace NetScape.Modules.LoginProtocol.Handlers
+namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
 {
     public class LoginProvider : ILoginProvider
     {

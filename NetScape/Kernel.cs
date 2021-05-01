@@ -11,12 +11,12 @@ using NetScape.Modules.Cache;
 using NetScape.Modules.DAL;
 using NetScape.Modules.Game;
 using NetScape.Modules.Logging.SeriLog;
-using NetScape.Modules.LoginProtocol;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Models;
 using NetScape.Modules.Region;
 using NetScape.Modules.Region.Collision;
 using NetScape.Modules.Server;
+using NetScape.Modules.ThreeOneSeven.LoginProtocol;
 using NetScape.Modules.World;
 using NetScape.Modules.World.Updating;
 using System;
@@ -36,7 +36,7 @@ namespace NetScape
             var containerBuilder = new ContainerBuilder();
             containerBuilder.Populate(serviceCollection);
             ConfigureAutofac(containerBuilder);
-            containerBuilder.RegisterBuildCallback(t => t.Resolve<ContainerProvider>().Container = (IContainer) t);
+            containerBuilder.RegisterBuildCallback(t => t.Resolve<ContainerProvider>().Container = (IContainer)t);
             var container = containerBuilder.Build();
             var serviceProvider = new AutofacServiceProvider(container);
 
@@ -61,12 +61,12 @@ namespace NetScape
         private static void ConfigureAutofac(ContainerBuilder containerBuilder)
         {
             containerBuilder.RegisterModule(new SeriLogModule(ConfigurationRoot));
-            containerBuilder.RegisterModule(new LoginModule());
+            containerBuilder.RegisterModule(new ThreeOneSevenLoginModule());
             containerBuilder.RegisterModule(new CacheModule());
             containerBuilder.RegisterModule(new DALModule());
             containerBuilder.RegisterModule(new ThreeOneSevenGameModule());
             containerBuilder.RegisterModule(new MessagesModule(
-                typeof(ThreeOneSevenEncoderMessages.Types), 
+                typeof(ThreeOneSevenEncoderMessages.Types),
                 typeof(ThreeOneSevenDecoderMessages.Types))
             );
             containerBuilder.RegisterModule(new GameServerModule(ConfigurationRoot["BindAddr"], ushort.Parse(ConfigurationRoot["BindPort"])));

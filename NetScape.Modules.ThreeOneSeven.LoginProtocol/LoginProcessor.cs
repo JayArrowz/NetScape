@@ -1,5 +1,4 @@
 ﻿using Autofac;
-using Microsoft.Extensions.Configuration;
 using NetScape.Abstractions.FileSystem;
 using NetScape.Abstractions.Interfaces.Login;
 using Serilog;
@@ -9,7 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace NetScape.Modules.LoginProtocol
+namespace NetScape.Modules.ThreeOneSeven.LoginProtocol
 {
     public class LoginProcessor : ILoginProcessor<Rs2LoginRequest, Rs2LoginResponse>, IStartable, IDisposable
     {

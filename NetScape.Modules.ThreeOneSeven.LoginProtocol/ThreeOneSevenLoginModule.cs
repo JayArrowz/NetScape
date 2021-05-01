@@ -1,10 +1,10 @@
 ﻿using Autofac;
-using NetScape.Modules.LoginProtocol.Handlers;
 using NetScape.Abstractions.Interfaces.Login;
+using NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers;
 
-namespace NetScape.Modules.LoginProtocol
+namespace NetScape.Modules.ThreeOneSeven.LoginProtocol
 {
-    public class LoginModule : Module
+    public class ThreeOneSevenLoginModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

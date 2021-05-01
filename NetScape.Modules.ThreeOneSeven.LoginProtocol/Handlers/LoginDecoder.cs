@@ -19,7 +19,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace NetScape.Modules.LoginProtocol.Handlers
+namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
 {
     /// <summary>
     /// The Game Login decoder

@@ -16,8 +16,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Logging.Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Messages", "NetScape.Modules.Messages\NetScape.Modules.Messages.csproj", "{0AA24266-93AE-4453-9E20-0932ED6D50B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.LoginProtocol", "NetScape.Modules.LoginProtocol\NetScape.Modules.LoginProtocol.csproj", "{EC2A333A-9419-40B8-A006-D7D830E4739E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Cache", "NetScape.Modules.Cache\NetScape.Modules.Cache.csproj", "{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.DAL", "NetScape.Modules.DAL\NetScape.Modules.DAL.csproj", "{22C15816-2EB8-403F-B166-7A508ED73470}"
@@ -35,6 +33,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Region.Collision", "NetScape.Modules.Region.Collision\NetScape.Modules.Region.Collision.csproj", "{DD128036-A424-4432-8B59-CBDB3E10531D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.ThreeOneSeven.Game", "NetScape.Modules.ThreeOneSeven.Game\NetScape.Modules.ThreeOneSeven.Game.csproj", "{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.ThreeOneSeven.LoginProtocol", "NetScape.Modules.ThreeOneSeven.LoginProtocol\NetScape.Modules.ThreeOneSeven.LoginProtocol.csproj", "{73806B1D-9116-4D4D-8BF3-81BF56162F63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,10 +62,6 @@ Global
 		{0AA24266-93AE-4453-9E20-0932ED6D50B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AA24266-93AE-4453-9E20-0932ED6D50B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AA24266-93AE-4453-9E20-0932ED6D50B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC2A333A-9419-40B8-A006-D7D830E4739E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC2A333A-9419-40B8-A006-D7D830E4739E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC2A333A-9419-40B8-A006-D7D830E4739E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC2A333A-9419-40B8-A006-D7D830E4739E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF06986A-A8E2-4BC1-9A4B-BD35217E07F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -102,6 +98,10 @@ Global
 		{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73806B1D-9116-4D4D-8BF3-81BF56162F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73806B1D-9116-4D4D-8BF3-81BF56162F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73806B1D-9116-4D4D-8BF3-81BF56162F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73806B1D-9116-4D4D-8BF3-81BF56162F63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

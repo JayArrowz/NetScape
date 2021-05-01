@@ -35,12 +35,12 @@
     <ProjectReference Include="..\NetScape.GameServer\NetScape.Modules.Server.csproj" />
     <ProjectReference Include="..\NetScape.Modules.DAL\NetScape.Modules.DAL.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Logging.SeriLog\NetScape.Modules.Logging.SeriLog.csproj" />
-    <ProjectReference Include="..\NetScape.Modules.LoginProtocol\NetScape.Modules.LoginProtocol.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Cache\NetScape.Modules.Cache.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Messages\NetScape.Modules.Messages.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Region.Collision\NetScape.Modules.Region.Collision.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Region\NetScape.Modules.Region.csproj" />
     <ProjectReference Include="..\NetScape.Modules.ThreeOneSeven.Game\NetScape.Modules.ThreeOneSeven.Game.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.ThreeOneSeven.LoginProtocol\NetScape.Modules.ThreeOneSeven.LoginProtocol.csproj" />
     <ProjectReference Include="..\NetScape.Modules.ThreeOneSeven.World.Updating\NetScape.Modules.ThreeOneSeven.World.Updating.csproj" />
     <ProjectReference Include="..\NetScape.Modules.World\NetScape.Modules.World.csproj" />
   </ItemGroup>

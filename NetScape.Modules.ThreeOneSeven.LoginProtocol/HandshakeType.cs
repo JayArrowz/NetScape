@@ -1,4 +1,4 @@
-﻿namespace NetScape.Modules.LoginProtocol
+﻿namespace NetScape.Modules.ThreeOneSeven.LoginProtocol
 {
     public enum HandshakeType : byte
     {
