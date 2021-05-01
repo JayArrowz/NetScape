@@ -5,6 +5,7 @@ using NetScape.Modules.Server.IO;
 using NetScape.Modules.Server.IO.EventLoop;
 using Autofac;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Interfaces.Messages;
 
 namespace NetScape.Modules.Server
 {
@@ -24,7 +25,6 @@ namespace NetScape.Modules.Server
             builder.RegisterType<ServerChannelInitializer>();
             builder.RegisterType<GameServerEventLoopGroupFactory>()
                 .As<IEventLoopGroupFactory>();
-
             builder.RegisterInstance(_gameServerParams).As<IGameServerParameters>();
             base.Load(builder);
         }

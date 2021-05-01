@@ -7,13 +7,11 @@ using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Abstractions.Model.Region;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
-using NetScape.Modules.Messages.Models;
-using NetScape.Modules.Messages.Region;
+using NetScape.Modules.ThreeOneSeven.Game.Region;
 using NetScape.Modules.World.Updating.Segments;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static NetScape.Modules.Messages.Models.ThreeOneSevenEncoderMessages;
 using static NetScape.Modules.Messages.Models.ThreeOneSevenEncoderMessages.Types;
 
 namespace NetScape.Modules.World.Updating

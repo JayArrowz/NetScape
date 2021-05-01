@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Reactive;
 
-namespace NetScape.Modules.Messages.Decoders
+namespace NetScape.Modules.Messages
 {
     public class MessageDecoderBase<TMessage> : IMessageDecoder<TMessage> where TMessage : IMessage<TMessage>
     {

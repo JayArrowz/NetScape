@@ -1,11 +1,12 @@
 ﻿using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Abstractions.Model.Messages;
+using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Models;
 using System.Linq;
 
-namespace NetScape.Modules.Messages.Decoders.Handlers
-{
+namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers { 
+
     [MessageHandler]
     public class WalkingQueueMessageHandler
     {

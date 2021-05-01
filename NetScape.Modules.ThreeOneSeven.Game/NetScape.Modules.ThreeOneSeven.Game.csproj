@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp5.0</TargetFramework>
@@ -7,6 +7,12 @@
   <ItemGroup>
     <ProjectReference Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Messages\NetScape.Modules.Messages.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Region\NetScape.Modules.Region.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Messages\Encoders\" />
+    <Folder Include="Updating\" />
   </ItemGroup>
 
 </Project>

@@ -3,7 +3,7 @@ using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Modules.Messages.Models;
 using System.Threading.Tasks;
 
-namespace NetScape.Modules.Game.Interface
+namespace NetScape.Modules.ThreeOneSeven.Game.Interface
 {
     public class TabManager : ITabManager
     {

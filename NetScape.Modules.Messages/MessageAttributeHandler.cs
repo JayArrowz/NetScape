@@ -32,7 +32,8 @@ namespace NetScape.Modules.Messages
 
         public void Start()
         {
-            var methods = Assembly.GetExecutingAssembly().GetTypes()
+            var methods = AppDomain.CurrentDomain.GetAssemblies()
+                       .SelectMany(t => t.GetTypes())
                        .SelectMany(t => t.GetMethods())
                        .Where(t => t.GetCustomAttribute<MessageAttribute>(false) != null)
                        .ToList();

@@ -64,16 +64,16 @@ namespace NetScape
             containerBuilder.RegisterModule(new LoginModule());
             containerBuilder.RegisterModule(new CacheModule());
             containerBuilder.RegisterModule(new DALModule());
+            containerBuilder.RegisterModule(new ThreeOneSevenGameModule());
             containerBuilder.RegisterModule(new MessagesModule(
                 typeof(ThreeOneSevenEncoderMessages.Types), 
                 typeof(ThreeOneSevenDecoderMessages.Types))
             );
             containerBuilder.RegisterModule(new GameServerModule(ConfigurationRoot["BindAddr"], ushort.Parse(ConfigurationRoot["BindPort"])));
             containerBuilder.RegisterModule(new WorldModule());
-            containerBuilder.RegisterModule(new UpdatingModule());
+            containerBuilder.RegisterModule(new ThreeOneSevenUpdatingModule());
             containerBuilder.RegisterModule(new RegionModule());
             containerBuilder.RegisterModule(new CollisionModule());
-            containerBuilder.RegisterModule(new GameModule());
             containerBuilder.RegisterType<WalkingQueueHandler>();
             containerBuilder.RegisterType<FileSystem>().As<IFileSystem>();
             containerBuilder.RegisterType<ContainerProvider>().SingleInstance();

@@ -4,7 +4,7 @@ using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Modules.Messages.Models;
 using System.Threading.Tasks;
 
-namespace NetScape.Modules.Game.Player
+namespace NetScape.Modules.ThreeOneSeven.Game.Players
 {
     public class PlayerInitializer : IPlayerInitializer
     {

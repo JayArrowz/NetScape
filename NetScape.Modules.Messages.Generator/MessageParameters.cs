@@ -1,7 +1,9 @@
 ﻿using NetScape.Modules.Messages.Builder;
+using System;
 
 namespace NetScape.Messages.Generator
 {
+    [Obsolete]
     public class MessageParameters
     {
         public string Name { get; set; }

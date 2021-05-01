@@ -4,7 +4,7 @@ using NetScape.Abstractions.Model.Game;
 
 namespace NetScape.Modules.World.Updating
 {
-    public class UpdatingModule : Module
+    public class ThreeOneSevenUpdatingModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

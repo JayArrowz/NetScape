@@ -1,10 +1,7 @@
 ﻿using Autofac;
-using Dawn;
 using Google.Protobuf;
 using Google.Protobuf.Reflection;
 using NetScape.Abstractions.Interfaces.Messages;
-using NetScape.Modules.Messages.Decoders;
-using NetScape.Modules.Messages.Decoders.Handlers;
 using NetScape.Modules.Messages.Models;
 using System;
 using System.Linq;
@@ -53,16 +50,7 @@ namespace NetScape.Modules.Messages
                         .SingleInstance();
                     }
                 });
-
-            builder.RegisterAssemblyTypes(typeof(MessagesModule).Assembly)
-                .AsClosedTypesOf(typeof(IMessageDecoder<>))
-                .As<IMessageDecoder>()
-                .SingleInstance();
             base.Load(builder);
-            #endregion
-
-            #region Handlers
-            builder.RegisterType<WalkingQueueMessageHandler>().SingleInstance();
             #endregion
         }
     }

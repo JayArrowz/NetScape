@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace NetScape.Messages.Generator
 {
+    [Obsolete]
     public class FrameParameters
     {
         public string Namespace { get; set; }
@@ -9,6 +10,7 @@ namespace NetScape.Messages.Generator
         public GeneratorData[] Messages { get; set; }
     }
 
+    [Obsolete]
     public enum GeneratorMessageType
     {
         Decoder,

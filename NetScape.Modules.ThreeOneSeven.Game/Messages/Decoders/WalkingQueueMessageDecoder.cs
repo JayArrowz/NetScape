@@ -1,10 +1,11 @@
 ﻿using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;
 using NetScape.Modules.Messages.Models;
 using System.Linq;
 
-namespace NetScape.Modules.Messages.Decoders
+namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Decoders
 {
     public class WalkingQueueMessageDecoder : MessageDecoderBase<ThreeOneSevenDecoderMessages.Types.WalkingQueueMessage>
     {
@@ -38,7 +39,7 @@ namespace NetScape.Modules.Messages.Decoders
             {
                 positions[i + 1] = new Position(path[i, 0] + x, path[i, 1] + y);
             }
-            ThreeOneSevenDecoderMessages.Types.WalkingQueueMessage walkingQueueMessage =  new() { Run = run, };
+            ThreeOneSevenDecoderMessages.Types.WalkingQueueMessage walkingQueueMessage = new() { Run = run, };
             walkingQueueMessage.X.Add(positions.Select(t => t.X));
             walkingQueueMessage.Y.Add(positions.Select(t => t.Y));
             return walkingQueueMessage;
