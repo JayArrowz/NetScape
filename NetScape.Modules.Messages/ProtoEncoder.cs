@@ -2,6 +2,7 @@
 using DotNetty.Transport.Channels;
 using NetScape.Abstractions.Model.Messages;
 using NetScape.Modules.Messages.Builder;
+using System;
 using System.Collections.Generic;
 
 namespace NetScape.Modules.Messages
@@ -45,6 +46,9 @@ namespace NetScape.Modules.Messages
                     case Google.Protobuf.Reflection.FieldType.Int64:
                         unboxedInt = (long)value;
                         break;
+
+                    default:
+                        throw new NotSupportedException($"Unsupported type {field.FieldDescriptor.FieldType}");
                 }
                 bldr.Put(messageType, dataOrder, dataTransform, unboxedInt);
             }
