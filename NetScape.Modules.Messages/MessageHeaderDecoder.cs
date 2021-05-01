@@ -115,7 +115,7 @@ namespace NetScape.Modules.Messages
                     }
                 }
 
-                Log.Logger.Debug($"Message Recieved: {message} TypeName: {protoDecoder.TypeName} Player: {Player.Username}");
+                Log.Logger.Debug("Message Recieved: {0} TypeName: {1} Player: {2}", message, protoDecoder.TypeName, Player.Username);
                 protoDecoder.Publish(Player, message);
             }
         }
