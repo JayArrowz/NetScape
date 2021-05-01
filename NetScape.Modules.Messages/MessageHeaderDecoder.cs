@@ -105,13 +105,13 @@ namespace NetScape.Modules.Messages
                     var order = field.FieldCodec.Order.GetDataOrder();
                     var transform = field.FieldCodec.Transform.GetDataTransformation();
                     var rawValue = messageReader.GetUnsigned(messageType, order, transform);
-
                     object value = field.FieldDescriptor.FieldType == Google.Protobuf.Reflection.FieldType.Bool ? (rawValue == 1) : rawValue;
+
                     field.FieldDescriptor.Accessor.SetValue(message, value);
                 }
 
                 Log.Logger.Debug($"Message Recieved: {message} TypeName: {protoDecoder.TypeName} Player: {Player.Username}");
-                protoDecoder.Publish(message);
+                protoDecoder.Publish(Player, message);
             }
         }
     }

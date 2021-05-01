@@ -3,9 +3,9 @@ using NetScape.Abstractions.Model.Game;
 
 namespace NetScape.Abstractions.Model.Messages
 {
-    public class DecoderMessage
+    public class DecoderMessage<TMessage> where TMessage : IMessage<TMessage>
     {
-        public IMessage Message { get; set; }
+        public TMessage Message { get; set; }
         public Player Player { get; set; }
     }
 }

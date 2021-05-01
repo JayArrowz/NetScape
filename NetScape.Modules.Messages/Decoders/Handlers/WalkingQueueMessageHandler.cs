@@ -1,6 +1,8 @@
 ﻿using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game.Walking;
+using NetScape.Abstractions.Model.Messages;
 using NetScape.Modules.Messages.Models;
+using System.Linq;
 
 namespace NetScape.Modules.Messages.Decoders.Handlers
 {
@@ -14,10 +16,16 @@ namespace NetScape.Modules.Messages.Decoders.Handlers
         }
 
         [Message(typeof(ThreeOneSevenDecoderMessages.Types.WalkingQueueMessage))]
-        public void OnWalkQueueMessage(ThreeOneSevenDecoderMessages.Types.WalkingQueueMessage message)
+        public void OnWalkQueueMessage(DecoderMessage<ThreeOneSevenDecoderMessages.Types.WalkingQueueMessage> decoderMessage)
         {
-           /* var player = message.Player;
-            var positions = message.Positions;
+            var player = decoderMessage.Player;
+            var message = decoderMessage.Message;
+            var positions =  Enumerable.Range(0, message.X.Count)
+                .Select(t => new Position
+                {
+                    X = message.X[t],
+                    Y = message.Y[t]
+                }).ToArray();
 
             for (int index = 0; index < positions.Length; index++)
             {
@@ -31,7 +39,7 @@ namespace NetScape.Modules.Messages.Decoders.Handlers
                     _walkingQueueHandler.AddStep(player, step);
                 }
             }
-            player.WalkingQueue.Running = message.Run || player.WalkingQueue.Running;*/
+            player.WalkingQueue.Running = message.Run || player.WalkingQueue.Running;
         }
     }
 }

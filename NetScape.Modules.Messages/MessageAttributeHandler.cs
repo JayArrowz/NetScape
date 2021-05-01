@@ -2,6 +2,7 @@
 using Google.Protobuf;
 using NetScape.Abstractions.Interfaces;
 using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Abstractions.Model.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;

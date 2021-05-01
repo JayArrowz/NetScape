@@ -1,4 +1,5 @@
 ﻿using Dawn;
+using Google.Protobuf;
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Messages;
@@ -9,15 +10,15 @@ using System.Reactive;
 
 namespace NetScape.Modules.Messages.Decoders
 {
-    public class MessageDecoderBase<TMessage> : IMessageDecoder<TMessage> where TMessage : class
+    public class MessageDecoderBase<TMessage> : IMessageDecoder<TMessage> where TMessage : IMessage<TMessage>
     {
         private class MessageObserverDisposable : IDisposable
         {
-            private readonly List<IObserver<TMessage>> _observers;
-            private readonly IObserver<TMessage> _observer;
+            private readonly List<IObserver<DecoderMessage<TMessage>>> _observers;
+            private readonly IObserver<DecoderMessage<TMessage>> _observer;
             private bool _disposed;
 
-            public MessageObserverDisposable(IObserver<TMessage> observer, List<IObserver<TMessage>> observers)
+            public MessageObserverDisposable(IObserver<DecoderMessage<TMessage>> observer, List<IObserver<DecoderMessage<TMessage>>> observers)
             {
                 _observer = observer;
                 _observers = observers;
@@ -39,25 +40,30 @@ namespace NetScape.Modules.Messages.Decoders
 
         protected virtual TMessage Decode(Player player, MessageFrame frame)
         {
-            return null;
+            return default(TMessage);
         }
 
-        private readonly List<IObserver<TMessage>> _observers = new();
+        private readonly List<IObserver<DecoderMessage<TMessage>>> _observers = new();
 
-        public void Publish(object message)
+        public void Publish(Player player, object message)
         {
             var castedMessage = Guard.Argument(message).Cast<TMessage>();
-            _observers.ForEach(t => t.OnNext(castedMessage));
+            var decodedMessage = new DecoderMessage<TMessage>
+            {
+                Message = castedMessage,
+                Player = player
+            };
+            _observers.ForEach(t => t.OnNext(decodedMessage));
         }
 
         public void DecodeAndPublish(Player player, MessageFrame frame)
         {
             var decoded = Decode(player, frame);
             //decoded.Player = player;
-            Publish(decoded);
+            Publish(player, decoded);
         }
 
-        public IDisposable Subscribe(IObserver<TMessage> observer)
+        public IDisposable Subscribe(IObserver<DecoderMessage<TMessage>> observer)
         {
             _observers.Add(observer);
             return new MessageObserverDisposable(observer, _observers);
@@ -65,7 +71,7 @@ namespace NetScape.Modules.Messages.Decoders
 
         public IDisposable SubscribeDelegate(Delegate method)
         {
-            Action<TMessage> action = Guard.Argument(method).Cast<Action<TMessage>>();
+            Action<DecoderMessage<TMessage>> action = Guard.Argument(method).Cast<Action<DecoderMessage<TMessage>>>();
             return Subscribe(Observer.Create(action));
         }
     }

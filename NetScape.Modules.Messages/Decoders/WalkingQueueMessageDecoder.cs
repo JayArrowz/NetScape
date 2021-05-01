@@ -39,7 +39,7 @@ namespace NetScape.Modules.Messages.Decoders
                 positions[i + 1] = new Position(path[i, 0] + x, path[i, 1] + y);
             }
             ThreeOneSevenDecoderMessages.Types.WalkingQueueMessage walkingQueueMessage =  new() { Run = run, };
-            walkingQueueMessage.Y.Add(positions.Select(t => t.X));
+            walkingQueueMessage.X.Add(positions.Select(t => t.X));
             walkingQueueMessage.Y.Add(positions.Select(t => t.Y));
             return walkingQueueMessage;
         }
