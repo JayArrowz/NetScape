@@ -60,18 +60,19 @@ namespace NetScape
 
         private static void ConfigureAutofac(ContainerBuilder containerBuilder)
         {
-            containerBuilder.RegisterModule(new SeriLogModule(ConfigurationRoot));
-            containerBuilder.RegisterModule(new ThreeOneSevenLoginModule());
-            containerBuilder.RegisterModule(new CacheModule());
-            containerBuilder.RegisterModule(new DALModule());
             containerBuilder.RegisterModule(new ThreeOneSevenGameModule());
             containerBuilder.RegisterModule(new MessagesModule(
                 typeof(ThreeOneSevenEncoderMessages.Types),
                 typeof(ThreeOneSevenDecoderMessages.Types))
             );
+            containerBuilder.RegisterModule(new ThreeOneSevenLoginModule());
+            containerBuilder.RegisterModule(new ThreeOneSevenUpdatingModule());
+
+            containerBuilder.RegisterModule(new SeriLogModule(ConfigurationRoot));
+            containerBuilder.RegisterModule(new CacheModule());
+            containerBuilder.RegisterModule(new DALModule());           
             containerBuilder.RegisterModule(new GameServerModule(ConfigurationRoot["BindAddr"], ushort.Parse(ConfigurationRoot["BindPort"])));
             containerBuilder.RegisterModule(new WorldModule());
-            containerBuilder.RegisterModule(new ThreeOneSevenUpdatingModule());
             containerBuilder.RegisterModule(new RegionModule());
             containerBuilder.RegisterModule(new CollisionModule());
             containerBuilder.RegisterType<WalkingQueueHandler>();
