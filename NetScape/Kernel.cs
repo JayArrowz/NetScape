@@ -27,7 +27,6 @@ namespace NetScape
     public class Kernel
     {
         public static IConfigurationRoot ConfigurationRoot { get; set; }
-        public static bool Exited { get; set; }
         public static void Main()
         {
             var serviceCollection = new ServiceCollection();
@@ -47,7 +46,6 @@ namespace NetScape
 
                 //TODO Make better
                 Console.ReadLine();
-                Exited = true;
             }
         }
 
