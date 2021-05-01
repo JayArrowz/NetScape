@@ -15,7 +15,10 @@ namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers
     {
         private Dictionary<int, int> ButtonAnimationMap { get; } = new Dictionary<int, int>
         {
-            { 168, 855 }
+            { 168, 855 },
+            { 169, 856 },
+            { 162, 857 },
+            { 164, 858 },
         };
 
         [Message(typeof(ThreeOneSevenDecoderMessages.Types.ButtonMessage), nameof(Filter))]

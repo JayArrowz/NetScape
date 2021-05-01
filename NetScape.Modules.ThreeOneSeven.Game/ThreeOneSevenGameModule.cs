@@ -19,6 +19,7 @@ namespace NetScape.Modules.Game
             builder.RegisterType<WalkingQueueMessageHandler>().SingleInstance();
             builder.RegisterType<EmoteTabButtonsHandler>().SingleInstance();
             builder.RegisterType<LogoutTabHandler>().SingleInstance();
+            builder.RegisterType<RunButtonsHandler>().SingleInstance();
 
             builder.RegisterAssemblyTypes(typeof(ThreeOneSevenGameModule).Assembly)
                 .AsClosedTypesOf(typeof(IMessageDecoder<>))

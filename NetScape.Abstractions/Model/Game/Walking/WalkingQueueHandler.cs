@@ -26,7 +26,6 @@ namespace NetScape.Abstractions.Model.Game.Walking
         {
             var walkingQueue = mob.WalkingQueue;
             walkingQueue.Points.Clear();
-            walkingQueue.Running = false;
 
             // We need to connect 'current' and 'next' whilst accounting for the
             // fact that the client and server might be out of sync (i.e. what the
@@ -87,7 +86,6 @@ namespace NetScape.Abstractions.Model.Game.Walking
         {
             var walkingQueue = mob.WalkingQueue;
             walkingQueue.Points.Clear();
-            walkingQueue.Running = false;
             walkingQueue.PreviousPoints.Clear();
         }
 
