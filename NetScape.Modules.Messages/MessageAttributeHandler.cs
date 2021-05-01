@@ -62,7 +62,7 @@ namespace NetScape.Modules.Messages
                     {
                         _subscriptions.Add(messageDecoder.SubscribeDelegate(expressionDelegate));
                     }
-                    Serilog.Log.Logger.Debug($"Subscribed to {messageDecoder.GetType().Name} - {subscriptionMethod} for message {messageDecoder.TypeName}");
+                    Serilog.Log.Logger.Debug("Subscribed to {0} - {1} for message {2}", messageDecoder.GetType().Name, subscriptionMethod, messageDecoder.TypeName);
                 }
             }
         }

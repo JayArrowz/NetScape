@@ -20,7 +20,7 @@ namespace NetScape.Modules.Messages
             var protoMessageCodec = _protoMessageCodecHandler.EncoderCodecs[message.Opcode];
             var messageCodec = protoMessageCodec.MessageCodec;
             var fieldCodecs = protoMessageCodec.FieldCodec;
-            Serilog.Log.Logger.Debug($"{message.Message} - {message.Message.Descriptor.ClrType.Name}");
+            Serilog.Log.Logger.Debug("Encoder Sent: {0} - {1} to {2}", message.Message, message.Message.Descriptor.ClrType.Name, message.Player.Username);
             var frameType = messageCodec.SizeType.GetFrameType();
             var bldr = new MessageFrameBuilder(context.Allocator, message.Opcode, frameType);
             foreach (var field in fieldCodecs)
