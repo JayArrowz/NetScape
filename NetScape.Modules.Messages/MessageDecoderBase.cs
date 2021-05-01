@@ -7,6 +7,10 @@ using NetScape.Modules.Messages.Builder;
 using System;
 using System.Collections.Generic;
 using System.Reactive;
+using System.Reactive.Concurrency;
+using System.Reactive.Disposables;
+using System.Reactive.Linq;
+using System.Threading.Tasks;
 
 namespace NetScape.Modules.Messages
 {
@@ -73,6 +77,18 @@ namespace NetScape.Modules.Messages
         {
             Action<DecoderMessage<TMessage>> action = Guard.Argument(method).Cast<Action<DecoderMessage<TMessage>>>();
             return Subscribe(Observer.Create(action));
+        }
+
+        public IDisposable SubscribeDelegateAsync(Delegate method)
+        {
+            Func<DecoderMessage<TMessage>, Task> action = Guard.Argument(method).Cast<Func<DecoderMessage<TMessage>, Task>>();
+            
+            var observable = this.SelectMany(async e =>
+            {
+                await action(e);
+                return e;
+            }).Subscribe();
+            return observable;
         }
     }
 }

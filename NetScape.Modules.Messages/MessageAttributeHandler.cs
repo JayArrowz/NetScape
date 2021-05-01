@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Threading.Tasks;
 using static NetScape.Modules.Messages.Models.ThreeOneSevenDecoderMessages.Types;
 
 namespace NetScape.Modules.Messages
@@ -17,7 +18,7 @@ namespace NetScape.Modules.Messages
         private readonly List<IDisposable> _subscriptions;
         private ContainerProvider _containerProvider;
         private readonly IMessageDecoder[] _decoders;
-        
+
         public MessageAttributeHandler(ContainerProvider containerProvider, IMessageDecoder[] decoders)
         {
             _containerProvider = containerProvider;
@@ -42,16 +43,25 @@ namespace NetScape.Modules.Messages
             {
                 var resolvedClazz = _containerProvider.Container.Resolve(clazz.GetTypeInfo().AsType());
                 var subMethods = methods.Where(t => t.DeclaringType.FullName == clazz.FullName);
-                foreach(var subscriptionMethod in subMethods)
+                foreach (var subscriptionMethod in subMethods)
                 {
                     var customAttribute = subscriptionMethod.GetCustomAttribute<MessageAttribute>(false);
                     var messageDecoder = _decoders.First(decoder => decoder.TypeName == customAttribute.Type.Name);
 
                     var parameters = subscriptionMethod.GetParameters().Select(p => Expression.Parameter(p.ParameterType, p.Name)).ToArray();
                     Expression call = Expression.Call(Expression.Constant(resolvedClazz), subscriptionMethod, parameters);
-                    Type actionType = typeof(Action<>).MakeGenericType(parameters[0].Type);
+                    var isAsync = subscriptionMethod.ReturnType == typeof(Task) ? true : false;
+                    Type actionType = isAsync ? Expression.GetFuncType(parameters[0].Type, typeof(Task)) : typeof(Action<>).MakeGenericType(parameters[0].Type);
                     Delegate expressionDelegate = Expression.Lambda(actionType, call, parameters).Compile();
-                    _subscriptions.Add(messageDecoder.SubscribeDelegate(expressionDelegate));
+
+                    if (isAsync)
+                    {
+                        _subscriptions.Add(messageDecoder.SubscribeDelegateAsync(expressionDelegate));
+                    }
+                    else
+                    {
+                        _subscriptions.Add(messageDecoder.SubscribeDelegate(expressionDelegate));
+                    }
                     Serilog.Log.Logger.Debug($"Subscribed to {messageDecoder.GetType().Name} - {subscriptionMethod} for message {messageDecoder.TypeName}");
                 }
             }

@@ -14,6 +14,7 @@ namespace NetScape.Abstractions.Interfaces.Messages
         FrameType FrameType { get; }
         string TypeName { get; }
         IDisposable SubscribeDelegate(Delegate method);
+        IDisposable SubscribeDelegateAsync(Delegate method);
     }
 
     public interface IMessageDecoder<TMessage> : IMessageDecoder, IObservable<DecoderMessage<TMessage>> where TMessage : IMessage<TMessage>

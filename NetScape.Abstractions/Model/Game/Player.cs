@@ -67,7 +67,11 @@ namespace NetScape.Abstractions.Model.Game
         public async Task SendAsync(IEncoderMessage<MessageFrame> message)
         {
             var msg = message.ToMessage(ChannelHandlerContext.Allocator);
-            await ChannelHandlerContext.Channel.WriteAndFlushAsync(msg);
+
+            if (ChannelHandlerContext.Channel.Active)
+            {
+                await ChannelHandlerContext.Channel.WriteAndFlushAsync(msg);
+            }
         }
 
         public void UpdateAppearance()

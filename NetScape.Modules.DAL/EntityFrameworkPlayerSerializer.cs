@@ -3,6 +3,7 @@ using NetScape.Abstractions.FileSystem;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Login;
+using Serilog;
 using System;
 using System.Threading.Tasks;
 
@@ -34,20 +35,28 @@ namespace NetScape.Modules.DAL
         {
             using (var dbContext = _dbContextFactory.CreateDbContext())
             {
-                var playerInDatabase = await GetAsync(player.Username, dbContext);
+                try
+                {
+                    var playerInDatabase = await GetAsync(player.Username, dbContext);
 
-                if (playerInDatabase == null)
+                    if (playerInDatabase == null)
+                    {
+                        dbContext.Attach(player);
+                        dbContext.Add(player);
+                    }
+                    else
+                    {
+                        dbContext.Entry(playerInDatabase).CurrentValues.SetValues(player);
+                        dbContext.Entry(playerInDatabase).Reference(t => t.Position).CurrentValue = player.Position;
+                        dbContext.Update(playerInDatabase);
+                    }
+                    var rowsModified = await dbContext.SaveChangesAsync();
+                    return rowsModified;
+                } catch(Exception e)
                 {
-                    dbContext.Attach(player);
-                    dbContext.Add(player);
+                    Log.Logger.Error(e, nameof(AddOrUpdateAsync));
+                    throw;
                 }
-                else
-                {
-                    dbContext.Update(player.Position);
-                    dbContext.Update(player);
-                }
-                var rowsModified = await dbContext.SaveChangesAsync();
-                return rowsModified;
             }
         }
 

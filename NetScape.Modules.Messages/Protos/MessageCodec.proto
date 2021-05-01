@@ -103,6 +103,11 @@ message ThreeOneSevenEncoderMessages {
         option (IsEncoder) = true;
     }
 
+    message LogoutMessage {
+        option (MessageCodecExt).OpCodes = 109;
+        option (IsEncoder) = true;
+    }
+
     message RegionChangeMessage { 
         required int32 CentralRegionX = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Transform = Add];
         required int32 CentralRegionY = 2 [(FieldCodecExt).Type = Short];
