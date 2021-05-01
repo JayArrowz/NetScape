@@ -1,16 +1,18 @@
 ﻿using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;
-using NetScape.Modules.Messages.Decoders.Messages;
+using NetScape.Modules.Messages.Models;
+using System.Linq;
 
-namespace NetScape.Modules.Messages.Decoders
+namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Decoders
 {
-    public class WalkingQueueMessageDecoder : MessageDecoderBase<WalkingQueueMessage>
+    public class WalkingQueueMessageDecoder : MessageDecoderBase<ThreeOneSevenDecoderMessages.Types.WalkingQueueMessage>
     {
         public override int[] Ids { get; } = new int[] { 248, 164, 98 };
         public override FrameType FrameType { get; } = FrameType.VariableByte;
 
-        protected override WalkingQueueMessage Decode(Player player, MessageFrame frame)
+        protected override ThreeOneSevenDecoderMessages.Types.WalkingQueueMessage Decode(Player player, MessageFrame frame)
         {
             var reader = new MessageFrameReader(frame);
             var length = frame.Payload.ReadableBytes;
@@ -37,7 +39,10 @@ namespace NetScape.Modules.Messages.Decoders
             {
                 positions[i + 1] = new Position(path[i, 0] + x, path[i, 1] + y);
             }
-            return new WalkingQueueMessage(run, positions);
+            ThreeOneSevenDecoderMessages.Types.WalkingQueueMessage walkingQueueMessage = new() { Run = run, };
+            walkingQueueMessage.X.Add(positions.Select(t => t.X));
+            walkingQueueMessage.Y.Add(positions.Select(t => t.Y));
+            return walkingQueueMessage;
         }
     }
 }

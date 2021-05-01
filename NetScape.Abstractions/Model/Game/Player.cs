@@ -1,4 +1,6 @@
 ﻿using DotNetty.Transport.Channels;
+using Google.Protobuf;
+using NetScape.Abstractions.Model.Messages;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;

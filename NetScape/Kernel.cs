@@ -13,6 +13,7 @@ using NetScape.Modules.Game;
 using NetScape.Modules.Logging.SeriLog;
 using NetScape.Modules.LoginProtocol;
 using NetScape.Modules.Messages;
+using NetScape.Modules.Messages.Models;
 using NetScape.Modules.Region;
 using NetScape.Modules.Region.Collision;
 using NetScape.Modules.Server;
@@ -35,9 +36,8 @@ namespace NetScape
             var containerBuilder = new ContainerBuilder();
             containerBuilder.Populate(serviceCollection);
             ConfigureAutofac(containerBuilder);
-
+            containerBuilder.RegisterBuildCallback(t => t.Resolve<ContainerProvider>().Container = (IContainer) t);
             var container = containerBuilder.Build();
-            container.Resolve<ContainerProvider>().Container = container;
             var serviceProvider = new AutofacServiceProvider(container);
 
             using (ILifetimeScope scope = container.BeginLifetimeScope())
@@ -64,13 +64,16 @@ namespace NetScape
             containerBuilder.RegisterModule(new LoginModule());
             containerBuilder.RegisterModule(new CacheModule());
             containerBuilder.RegisterModule(new DALModule());
-            containerBuilder.RegisterModule(new MessagesModule());
+            containerBuilder.RegisterModule(new ThreeOneSevenGameModule());
+            containerBuilder.RegisterModule(new MessagesModule(
+                typeof(ThreeOneSevenEncoderMessages.Types), 
+                typeof(ThreeOneSevenDecoderMessages.Types))
+            );
             containerBuilder.RegisterModule(new GameServerModule(ConfigurationRoot["BindAddr"], ushort.Parse(ConfigurationRoot["BindPort"])));
             containerBuilder.RegisterModule(new WorldModule());
-            containerBuilder.RegisterModule(new UpdatingModule());
+            containerBuilder.RegisterModule(new ThreeOneSevenUpdatingModule());
             containerBuilder.RegisterModule(new RegionModule());
             containerBuilder.RegisterModule(new CollisionModule());
-            containerBuilder.RegisterModule(new GameModule());
             containerBuilder.RegisterType<WalkingQueueHandler>();
             containerBuilder.RegisterType<FileSystem>().As<IFileSystem>();
             containerBuilder.RegisterType<ContainerProvider>().SingleInstance();

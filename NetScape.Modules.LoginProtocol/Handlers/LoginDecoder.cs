@@ -12,7 +12,6 @@ using NetScape.Abstractions.IO.Util;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Login;
 using NetScape.Abstractions.Util;
-using NetScape.Modules.Messages.Encoders;
 using Serilog;
 using System;
 using System.Collections.Generic;

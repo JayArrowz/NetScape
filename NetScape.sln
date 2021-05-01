@@ -28,13 +28,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Messages.B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.World", "NetScape.Modules.World\NetScape.Modules.World.csproj", "{8F9B05CE-066C-47A5-A365-A59B59193373}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.World.Updating", "NetScape.Modules.World.Updating\NetScape.Modules.World.Updating.csproj", "{606492FE-CC59-4606-AB5F-3A1292B7A003}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.ThreeOneSeven.World.Updating", "NetScape.Modules.ThreeOneSeven.World.Updating\NetScape.Modules.ThreeOneSeven.World.Updating.csproj", "{606492FE-CC59-4606-AB5F-3A1292B7A003}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Region", "NetScape.Modules.Region\NetScape.Modules.Region.csproj", "{C1622972-D92D-41E7-8547-D20BD0D2F6D1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Region.Collision", "NetScape.Modules.Region.Collision\NetScape.Modules.Region.Collision.csproj", "{DD128036-A424-4432-8B59-CBDB3E10531D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.Modules.Game", "NetScape.Modules.Game\NetScape.Modules.Game.csproj", "{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.ThreeOneSeven.Game", "NetScape.Modules.ThreeOneSeven.Game\NetScape.Modules.ThreeOneSeven.Game.csproj", "{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

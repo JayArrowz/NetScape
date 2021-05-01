@@ -2,11 +2,11 @@
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Region;
+using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;
-using System;
 using System.Collections.Generic;
 
-namespace NetScape.Modules.Messages.Region
+namespace NetScape.Modules.ThreeOneSeven.Game.Region
 {
     public class GroupedRegionUpdateMessage : IEncoderMessage<MessageFrame>
     {

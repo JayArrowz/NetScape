@@ -7,12 +7,12 @@ using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Abstractions.Model.Region;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
-using NetScape.Modules.Messages.Encoders;
-using NetScape.Modules.Messages.Region;
+using NetScape.Modules.ThreeOneSeven.Game.Region;
 using NetScape.Modules.World.Updating.Segments;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static NetScape.Modules.Messages.Models.ThreeOneSevenEncoderMessages.Types;
 
 namespace NetScape.Modules.World.Updating
 {
@@ -20,6 +20,7 @@ namespace NetScape.Modules.World.Updating
     {
         private readonly IRegionRepository _regionRepository;
         private readonly WalkingQueueHandler _walkingQueueHandler;
+        private readonly IProtoMessageSender _protoMessageSender;
         private static readonly int MaximumLocalPlayers = 255;
 
         /// <summary>
@@ -28,10 +29,11 @@ namespace NetScape.Modules.World.Updating
         /// </summary>
         private static readonly int NewPlayersPerCycle = 20;
 
-        public PlayerUpdater(IRegionRepository regionRepository, WalkingQueueHandler walkingQueueHandler)
+        public PlayerUpdater(IRegionRepository regionRepository, WalkingQueueHandler walkingQueueHandler, IProtoMessageSender protoMessageSender)
         {
             _regionRepository = regionRepository;
             _walkingQueueHandler = walkingQueueHandler;
+            _protoMessageSender = protoMessageSender;
         }
 
         public Task PostUpdateAsync(Player player)
@@ -84,7 +86,7 @@ namespace NetScape.Modules.World.Updating
                 player.RegionChanged = true;
                 local = false;
                 player.LastKnownRegion = position;
-                await player.SendAsync(new RegionChangeMessage { CentralRegionX = (ushort)position.CentralRegionX, CentralRegionY = (ushort)position.CentralRegionY });
+                await _protoMessageSender.SendAsync(player, new RegionChangeMessage { CentralRegionX = position.CentralRegionX, CentralRegionY = position.CentralRegionY });
             }
 
             var oldViewable = _regionRepository.FromPosition(old).GetSurrounding();
@@ -134,7 +136,7 @@ namespace NetScape.Modules.World.Updating
 
                 if (added)
                 {
-                    await player.SendAsync(new ClearRegionMessage { LocalX = (byte)position.LocalX, LocalY = (byte)position.LocalX });
+                    await _protoMessageSender.SendAsync(player, new ClearRegionMessage { LocalX = position.LocalX, LocalY = position.LocalX });
                     await player.SendAsync(new GroupedRegionUpdateMessage(position, coordinates, addMessages));
                 }
             }

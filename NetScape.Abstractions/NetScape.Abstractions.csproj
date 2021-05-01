@@ -11,6 +11,7 @@
     <PackageReference Include="Dawn.Guard" Version="1.12.0" />
     <PackageReference Include="DotNetty.Codecs" Version="0.6.0" />
     <PackageReference Include="DotNetty.Transport" Version="0.6.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.15.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="5.0.1" />
     <PackageReference Include="Nito.Collections.Deque" Version="1.1.0" />
     <PackageReference Include="Portable.BouncyCastle" Version="1.8.9" />

@@ -1,6 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 using NetScape.Modules.Messages.Builder;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Text;
 
 namespace NetScape.Messages.Generator
 {
+    [Obsolete]
     [Generator]
     public class MessageGenerator : ISourceGenerator
     {
