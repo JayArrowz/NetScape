@@ -51,7 +51,15 @@ namespace NetScape.Modules.Messages
                     var hasFilter = !string.IsNullOrEmpty(customAttribute.FilterPropertyName);
                     Type actionType = isAsync ? Expression.GetFuncType(parameters[0].Type, typeof(Task)) : typeof(Action<>).MakeGenericType(parameters[0].Type);
                     Delegate expressionDelegate = Expression.Lambda(actionType, call, parameters).Compile();
-                    Delegate filterDelegate = hasFilter ? (Delegate) clazz.GetDeclaredProperty(customAttribute.FilterPropertyName).GetValue(resolvedClazz) : null;
+                    Delegate filterDelegate = null;
+
+                    if (hasFilter)
+                    {
+                        var predicateMethod = clazz.GetMethods().FirstOrDefault(t => t.Name == customAttribute.FilterPropertyName);
+                        Type filterType = typeof(Predicate<>).MakeGenericType(parameters[0].Type);
+                        filterDelegate = predicateMethod == null ? (Delegate) clazz.GetProperty(customAttribute.FilterPropertyName).GetValue(resolvedClazz)
+                            : Delegate.CreateDelegate(filterType, resolvedClazz, predicateMethod.Name, true);
+                    }
                     if (isAsync)
                     {
                         _subscriptions.Add(messageDecoder.SubscribeDelegateAsync(expressionDelegate, filterDelegate));

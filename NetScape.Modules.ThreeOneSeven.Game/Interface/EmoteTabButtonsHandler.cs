@@ -21,7 +21,7 @@ namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers
             { 164, 858 },
         };
 
-        [Message(typeof(ThreeOneSevenDecoderMessages.Types.ButtonMessage), nameof(Filter))]
+        [Message(typeof(ThreeOneSevenDecoderMessages.Types.ButtonMessage), nameof(CanExecute))]
         public void OnButtonClick(DecoderMessage<ThreeOneSevenDecoderMessages.Types.ButtonMessage> message)
         {
             var buttonId = message.Message.InterfaceId;
@@ -29,14 +29,7 @@ namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers
             message.Player.SendAnimation(new Animation(animation));
         }
 
-        public Predicate<DecoderMessage<ThreeOneSevenDecoderMessages.Types.ButtonMessage>> Filter { get; }
-
-        public EmoteTabButtonsHandler()
-        {
-            Filter = CanExecute;
-        }
-
-        private bool CanExecute(DecoderMessage<ThreeOneSevenDecoderMessages.Types.ButtonMessage> message)
+        public bool CanExecute(DecoderMessage<ThreeOneSevenDecoderMessages.Types.ButtonMessage> message)
         {
             return ButtonAnimationMap.ContainsKey(message.Message.InterfaceId);
         }
