@@ -67,7 +67,7 @@ namespace NetScape.Modules.Messages
     }
 
     /// <summary>
-    /// This attirbute must be defined if <see cref="MessageAttribute"/> is used to enable scanning.
+    /// This annotation must be defined if <see cref="MessageAttribute"/> is used to enable scanning.
     /// </summary>
     /// <seealso cref="System.Attribute" />
     [AttributeUsage(AttributeTargets.Class, Inherited = false)]
