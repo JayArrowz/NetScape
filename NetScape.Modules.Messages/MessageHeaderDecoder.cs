@@ -105,9 +105,14 @@ namespace NetScape.Modules.Messages
                     var order = field.FieldCodec.Order.GetDataOrder();
                     var transform = field.FieldCodec.Transform.GetDataTransformation();
                     var rawValue = messageReader.GetUnsigned(messageType, order, transform);
-                    object value = field.FieldDescriptor.FieldType == Google.Protobuf.Reflection.FieldType.Bool ? (rawValue == 1) : rawValue;
-
-                    field.FieldDescriptor.Accessor.SetValue(message, value);
+                    object value = field.FieldDescriptor.FieldType == Google.Protobuf.Reflection.FieldType.Bool ? (rawValue == 1) : field.ToObject(rawValue);
+                    try
+                    {
+                        field.FieldDescriptor.Accessor.SetValue(message, value);
+                    } catch(Exception e)
+                    {
+                        Log.Logger.Error("Error decoding field {0}, Error: {1}", field.FieldCodec, e);
+                    }
                 }
 
                 Log.Logger.Debug($"Message Recieved: {message} TypeName: {protoDecoder.TypeName} Player: {Player.Username}");

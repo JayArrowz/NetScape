@@ -72,6 +72,16 @@ message ThreeOneSevenDecoderMessages {
         option (MessageCodecExt).OpCodes = 317;
     }
 
+    message ButtonMessage {
+        required int32 InterfaceId = 1 [(FieldCodecExt).Type = Short];
+        option (MessageCodecExt).OpCodes = 185;
+    }
+
+    message MouseClickedMessage {
+        required int32 Value = 1 [(FieldCodecExt).Type = Int];
+        option (MessageCodecExt).OpCodes = 241;
+    }
+
     message WalkingQueueMessage {
         required bool Run = 1;
         repeated int32 X = 2;

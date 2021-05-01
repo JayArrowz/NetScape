@@ -22,7 +22,7 @@ namespace NetScape.Modules.Game.Player
             var initMessage = new ThreeOneSevenEncoderMessages.Types.
                 IdAssignmentMessage
             { IsMembers = true, NewId = 1 };
-            await _protoMessageSender.SendAsync(player, initMessage);
+            _ = _protoMessageSender.SendAsync(player, initMessage);
             player.UpdateAppearance();
 
             var defaultTabs = _tabManager.Default;
