@@ -57,7 +57,7 @@ namespace NetScape.Modules.World
                         Log.Logger.Error(e, nameof(Process));
                     }
                 }
-                var deltaSleep = Math.Max(0, 600 - (int)stopwatch.Elapsed.TotalMilliseconds);
+                var deltaSleep = 600 - (int)stopwatch.Elapsed.TotalMilliseconds;
                 if (deltaSleep > 0)
                 {
                     await Task.Delay(deltaSleep, _cancellationToken);
