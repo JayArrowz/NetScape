@@ -1,7 +1,6 @@
 ﻿using DotNetty.Buffers;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
-using NetScape.Abstractions;
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.IO.Util;
 using NetScape.Abstractions.Model.Game;
@@ -15,9 +14,12 @@ namespace NetScape.Modules.Messages
     public class MessageHeaderDecoder : ByteToMessageDecoder, ICipherAwareHandler, IPlayerAwareHandler
     {
         private readonly IMessageDecoder[] _messageDecoders;
-        public MessageHeaderDecoder(IMessageDecoder[] messageDecoders)
+        private readonly ProtoMessageCodecHandler _protoMessageCodecHandler;
+
+        public MessageHeaderDecoder(IMessageDecoder[] messageDecoders, ProtoMessageCodecHandler protoMessageCodecHandler)
         {
             _messageDecoders = messageDecoders;
+            _protoMessageCodecHandler = protoMessageCodecHandler;
         }
 
         public IsaacRandomPair CipherPair { get; set; }
@@ -57,27 +59,59 @@ namespace NetScape.Modules.Messages
             var isaacValue = CipherPair.DecodingRandom.NextInt();
             int opcode = input.ReadByte();
             int unencodedOpcode = opcode - isaacValue & 0xFF;
-            var decoder = _messageDecoders.FirstOrDefault(decoder => decoder.Ids.Contains(unencodedOpcode));
-            var frameType = decoder?.FrameType ?? FrameType.Fixed;
-            var size = 0;
+
+            var protoCodec = _protoMessageCodecHandler.DecoderCodecs.ContainsKey(unencodedOpcode) ?
+                _protoMessageCodecHandler.DecoderCodecs[unencodedOpcode] : null;
+            var decoder = _messageDecoders
+                .Where(t => t.Ids != null)
+                .FirstOrDefault(decoder => decoder.Ids.Contains(unencodedOpcode));
+            var frameType = protoCodec == null ? decoder?.FrameType : protoCodec.MessageCodec.SizeType.GetFrameType();
+            var size = PacketLengths[unencodedOpcode];
+            if (!frameType.HasValue)
+            {
+                Log.Logger.Warning("Opcode {0} not recognised", unencodedOpcode);
+                if(size > 0)
+                {
+                    input.ReadBytes(size);
+                }
+                return;
+            }
 
             if (frameType != FrameType.Fixed)
             {
-                size = frameType.GetBytes(input);
+                size = frameType.Value.GetBytes(input);
             }
             else
             {
                 size = PacketLengths[unencodedOpcode];
             }
-
             var buffer = input.ReadBytes(size);
-            if (decoder == null)
+            var messageFrame = new MessageFrame(unencodedOpcode, frameType.Value, buffer);
+            if (protoCodec?.MessageCodec?.Custom ?? true)
             {
-                Log.Logger.Warning("Opcode {0} not recognised", unencodedOpcode);
-                return;
+                Log.Logger.Debug("Decoding Opcode: {0} Player Name: {1} from {2} Size {3}", unencodedOpcode, Player.Username, context.Channel.RemoteAddress, size);
+                decoder.DecodeAndPublish(Player, messageFrame);
             }
-            Log.Logger.Debug("Decoding Opcode: {0} Player Name: {1} from {2} Size {3}", unencodedOpcode, Player.Username, context.Channel.RemoteAddress, size);
-            decoder.DecodeAndPublish(Player, new MessageFrame(unencodedOpcode, decoder.FrameType, buffer));
+            else
+            {
+                var message = protoCodec.CreationMethod.Invoke();
+                var messageReader = new MessageFrameReader(messageFrame);
+                var protoDecoder = _messageDecoders.First(t => t.TypeName == message.Descriptor.ClrType.Name);
+
+                foreach (var field in protoCodec.FieldCodec)
+                {
+                    var messageType = field.FieldCodec.Type.GetMessageType();
+                    var order = field.FieldCodec.Order.GetDataOrder();
+                    var transform = field.FieldCodec.Transform.GetDataTransformation();
+                    var rawValue = messageReader.GetUnsigned(messageType, order, transform);
+
+                    object value = field.FieldDescriptor.FieldType == Google.Protobuf.Reflection.FieldType.Bool ? (rawValue == 1) : rawValue;
+                    field.FieldDescriptor.Accessor.SetValue(message, value);
+                }
+
+                Log.Logger.Debug($"Message Recieved: {message} TypeName: {protoDecoder.TypeName} Player: {Player.Username}");
+                protoDecoder.Publish(message);
+            }
         }
     }
 }

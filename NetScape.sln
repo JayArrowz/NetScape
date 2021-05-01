@@ -34,7 +34,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Region", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Region.Collision", "NetScape.Modules.Region.Collision\NetScape.Modules.Region.Collision.csproj", "{DD128036-A424-4432-8B59-CBDB3E10531D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.Modules.Game", "NetScape.Modules.Game\NetScape.Modules.Game.csproj", "{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.Game", "NetScape.Modules.Game\NetScape.Modules.Game.csproj", "{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.Modules.Message.Test", "NetScape.Modules.Message.Test\NetScape.Modules.Message.Test.csproj", "{FF7756B9-1AF8-495C-BEC4-FE7F1DDA7B07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,6 +104,10 @@ Global
 		{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F68D1D5-2637-4B34-A2F7-4DCDAC66A74A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF7756B9-1AF8-495C-BEC4-FE7F1DDA7B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7756B9-1AF8-495C-BEC4-FE7F1DDA7B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7756B9-1AF8-495C-BEC4-FE7F1DDA7B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7756B9-1AF8-495C-BEC4-FE7F1DDA7B07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

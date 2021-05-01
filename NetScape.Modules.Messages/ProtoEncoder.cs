@@ -1,0 +1,54 @@
+﻿using DotNetty.Codecs;
+using DotNetty.Transport.Channels;
+using NetScape.Abstractions.Model.Messages;
+using NetScape.Modules.Messages.Builder;
+using System.Collections.Generic;
+
+namespace NetScape.Modules.Messages
+{
+    public class ProtoEncoder : MessageToMessageEncoder<ProtoMessage>
+    {
+        private readonly ProtoMessageCodecHandler _protoMessageCodecHandler;
+        public ProtoEncoder(ProtoMessageCodecHandler protoMessageCodecHandler)
+        {
+            _protoMessageCodecHandler = protoMessageCodecHandler;
+        }
+
+        protected override void Encode(IChannelHandlerContext context, ProtoMessage message, List<object> output)
+        {
+            var protoMessageCodec = _protoMessageCodecHandler.EncoderCodecs[message.Opcode];
+            var messageCodec = protoMessageCodec.MessageCodec;
+            var fieldCodecs = protoMessageCodec.FieldCodec;
+            Serilog.Log.Logger.Debug($"{message.Message}");
+            var frameType = messageCodec.SizeType.GetFrameType();
+            var bldr = new MessageFrameBuilder(context.Allocator, message.Opcode, frameType);
+            foreach (var field in fieldCodecs)
+            {
+                var messageType = field.FieldCodec.Type.GetMessageType();
+                var dataTransform = field.FieldCodec.Transform.GetDataTransformation();
+                var dataOrder = field.FieldCodec.Order.GetDataOrder();
+                object value = field.FieldDescriptor.Accessor.GetValue(message.Message);
+                long unboxedInt = 0;
+                switch (field.FieldDescriptor.FieldType)
+                {
+                    case Google.Protobuf.Reflection.FieldType.Bool:
+                        unboxedInt = ((bool)value) ? 1 : 0;
+                        break;
+                    case Google.Protobuf.Reflection.FieldType.Int32:
+                    case Google.Protobuf.Reflection.FieldType.SInt32:
+                    case Google.Protobuf.Reflection.FieldType.UInt32:
+                        unboxedInt = (int)value;
+                        break;
+
+                    case Google.Protobuf.Reflection.FieldType.UInt64:
+                    case Google.Protobuf.Reflection.FieldType.SInt64:
+                    case Google.Protobuf.Reflection.FieldType.Int64:
+                        unboxedInt = (long)value;
+                        break;
+                }
+                bldr.Put(messageType, dataOrder, dataTransform, unboxedInt);
+            }
+            output.Add(bldr.ToMessageFrame());
+        }
+    }
+}

@@ -35,9 +35,8 @@ namespace NetScape
             var containerBuilder = new ContainerBuilder();
             containerBuilder.Populate(serviceCollection);
             ConfigureAutofac(containerBuilder);
-
+            containerBuilder.RegisterBuildCallback(t => t.Resolve<ContainerProvider>().Container = (IContainer) t);
             var container = containerBuilder.Build();
-            container.Resolve<ContainerProvider>().Container = container;
             var serviceProvider = new AutofacServiceProvider(container);
 
             using (ILifetimeScope scope = container.BeginLifetimeScope())

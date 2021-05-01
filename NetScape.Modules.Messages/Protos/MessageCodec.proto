@@ -1,0 +1,137 @@
+﻿syntax = "proto2";
+import "google/protobuf/descriptor.proto";
+
+option csharp_namespace = "NetScape.Modules.Messages.Models";
+
+enum FrameSizeType {
+    FixedByte = 0;
+    Raw = 1;
+    VariableByte = 2;
+    VariableShort = 3;
+}
+
+enum FieldType {
+    Byte = 0;
+    Short = 1;
+    TriByte = 2;
+    Int = 3;
+    Long = 4;
+}
+
+enum FieldOrder {
+    Big = 0;
+    Little = 1;
+    Middle = 2;
+    InversedMiddle = 3;
+}
+
+
+enum FieldTransform {
+    None = 0;
+    Add = 1;
+    Negate = 2;
+    Subtract = 3;
+}
+
+extend google.protobuf.MessageOptions {
+  optional MessageCodec MessageCodecExt = 2001;
+  optional bool IsEncoder = 2002;
+}
+
+message MessageCodec {
+  repeated uint32 OpCodes = 1;  
+  optional FrameSizeType SizeType = 2; 
+  optional bool Custom = 3; 
+}
+
+message FieldCodec {
+  optional FieldType Type = 1;
+  optional FieldOrder Order = 2;
+  optional FieldTransform Transform = 3;
+}
+
+extend google.protobuf.FieldOptions {
+  optional FieldCodec FieldCodecExt = 2003;
+}
+
+message ThreeOneSevenDecoderMessages {
+    message IdleMessage {
+        option (MessageCodecExt).OpCodes = 0;
+    }
+       
+    message ArrowKeyMessage {
+        required int32 Roll = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little];
+        required int32 Yaw = 2 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little];
+        option (MessageCodecExt).OpCodes = 86;
+    }
+
+    message SecondItemOptionMessage {
+        required int32 Id = 1 [(FieldCodecExt).Type = Short];
+        required int32 Slot = 2 [(FieldCodecExt).Type = Short, (FieldCodecExt).Transform = Add];
+        required int32 InterfaceId = 3 [(FieldCodecExt).Type = Short, (FieldCodecExt).Transform = Add];
+        option (MessageCodecExt).OpCodes = 317;
+    }
+
+    message WalkingQueueMessage {
+        required bool Run = 1;
+        repeated int32 X = 2;
+        repeated int32 Y = 3;      
+        
+        option (MessageCodecExt).OpCodes = 248;       
+        option (MessageCodecExt).OpCodes = 164;       
+        option (MessageCodecExt).OpCodes = 98;
+        option (MessageCodecExt).Custom = true;
+    }
+}
+
+message ThreeOneSevenEncoderMessages {
+    message ClearRegionMessage {
+        required int32 LocalX = 1 [(FieldCodecExt).Type = Byte, (FieldCodecExt).Transform = Negate];
+        required int32 LocalY = 2 [(FieldCodecExt).Type = Byte, (FieldCodecExt).Transform = Subtract];
+        option (MessageCodecExt).OpCodes = 64;
+        option (IsEncoder) = true;
+    }
+
+    message RegionChangeMessage { 
+        required int32 CentralRegionX = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Transform = Add];
+        required int32 CentralRegionY = 2 [(FieldCodecExt).Type = Short];
+        option (MessageCodecExt).OpCodes = 73;
+        option (IsEncoder) = true;
+    }
+    
+    message AddGlobalTileItemMessage { 
+        required uint32 ItemId = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Transform = Subtract];
+        required int32 PositionOffset = 2 [(FieldCodecExt).Type = Byte, (FieldCodecExt).Transform = Subtract];
+        required uint32 PlayerIndex = 3 [(FieldCodecExt).Type = Short, (FieldCodecExt).Transform = Add];
+        required uint32 Amount = 4 [(FieldCodecExt).Type = Short];
+        option (MessageCodecExt).OpCodes = 215;
+        option (IsEncoder) = true;
+    }
+
+    message AddTileItemMessage {
+        required uint32 ItemId = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little, (FieldCodecExt).Transform = Add];
+        required uint32 Amount = 2 [(FieldCodecExt).Type = Short];
+        required int32 PositionOffset = 3 [(FieldCodecExt).Type = Byte];
+        option (MessageCodecExt).OpCodes = 44;
+        option (IsEncoder) = true;
+    }
+
+    message CloseInterfaceMessage {
+        option (MessageCodecExt).OpCodes = 219;
+        option (IsEncoder) = true;
+    }
+
+    message SwitchTabInterfaceMessage {
+        required int32 InterfaceId = 1 [(FieldCodecExt).Type = Short];
+        required int32 TabId = 2 [(FieldCodecExt).Type = Byte, (FieldCodecExt).Transform = Add];
+        option (MessageCodecExt).OpCodes = 71;
+        option (IsEncoder) = true;
+    }
+
+    message IdAssignmentMessage {
+        required bool IsMembers = 1 [(FieldCodecExt).Type = Byte, (FieldCodecExt).Transform = Add];
+        required uint32 NewId = 2 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little, (FieldCodecExt).Transform = Add];
+        option (MessageCodecExt).OpCodes = 249;
+        option (IsEncoder) = true;
+    }
+}

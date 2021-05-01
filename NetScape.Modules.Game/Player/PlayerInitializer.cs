@@ -1,6 +1,7 @@
 ﻿using NetScape.Abstractions.Interfaces.Game.Interface;
 using NetScape.Abstractions.Interfaces.Game.Player;
-using NetScape.Modules.Messages.Encoders;
+using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Modules.Messages.Models;
 using System.Threading.Tasks;
 
 namespace NetScape.Modules.Game.Player
@@ -8,16 +9,20 @@ namespace NetScape.Modules.Game.Player
     public class PlayerInitializer : IPlayerInitializer
     {
         private readonly ITabManager _tabManager;
+        private readonly IProtoMessageSender _protoMessageSender;
 
-        public PlayerInitializer(ITabManager tabManager)
+        public PlayerInitializer(ITabManager tabManager, IProtoMessageSender protoMessageSender)
         {
             _tabManager = tabManager;
+            _protoMessageSender = protoMessageSender;
         }
 
         public async Task InitializeAsync(Abstractions.Model.Game.Player player)
         {
-            var initMessage = new IdAssignmentMessage { IsMembers = 1, NewId = 1 };
-            await player.SendAsync(initMessage);
+            var initMessage = new ThreeOneSevenEncoderMessages.Types.
+                IdAssignmentMessage
+            { IsMembers = true, NewId = 1 };
+            await _protoMessageSender.SendAsync(player, initMessage);
             player.UpdateAppearance();
 
             var defaultTabs = _tabManager.Default;

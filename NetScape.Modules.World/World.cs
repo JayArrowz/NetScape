@@ -14,14 +14,16 @@ namespace NetScape.Modules.World
 {
     public class World : IWorld, IDisposable
     {
-        private bool _exited = false;
         private readonly IEntityUpdater<Player> _playerUpdater;
-
+        private readonly CancellationTokenSource _cancellationTokenSource;
+        private readonly CancellationToken _cancellationToken;
         public List<Player> Players { get; } = new List<Player>();
 
         public World(IEntityUpdater<Player> playerUpdater)
         {
             _playerUpdater = playerUpdater;
+            _cancellationTokenSource = new CancellationTokenSource();
+            _cancellationToken = _cancellationTokenSource.Token;
         }
 
         public void Add(Player player)
@@ -37,7 +39,7 @@ namespace NetScape.Modules.World
         private async Task Process()
         {
             var stopwatch = new Stopwatch();
-            while (!_exited)
+            while (!_cancellationToken.IsCancellationRequested)
             {
                 stopwatch.Restart();
                 Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> encodes = new(), updates = new();
@@ -55,19 +57,23 @@ namespace NetScape.Modules.World
                         Log.Logger.Error(e, nameof(Process));
                     }
                 }
-                var deltaSleep = 600 - (int)stopwatch.Elapsed.TotalMilliseconds;
-                await Task.Delay(deltaSleep);
+                var deltaSleep = Math.Max(0, 600 - (int)stopwatch.Elapsed.TotalMilliseconds);
+                if (deltaSleep > 0)
+                {
+                    await Task.Delay(deltaSleep, _cancellationToken);
+                }
             }
         }
 
         public void Start()
         {
-            Task.Factory.StartNew(Process, CancellationToken.None, TaskCreationOptions.LongRunning, TaskScheduler.Default);
+            Task.Factory.StartNew(Process, _cancellationToken, TaskCreationOptions.LongRunning, TaskScheduler.Default);
         }
 
         public void Dispose()
         {
-            _exited = true;
+            _cancellationTokenSource.Cancel();
+            _cancellationTokenSource.Dispose();
         }
     }
 }
