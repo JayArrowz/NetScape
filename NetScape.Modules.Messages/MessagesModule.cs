@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Dawn;
 using Google.Protobuf;
 using Google.Protobuf.Reflection;
 using NetScape.Abstractions.Interfaces.Messages;
@@ -13,6 +14,13 @@ namespace NetScape.Modules.Messages
 {
     public class MessagesModule : Autofac.Module
     {
+        private readonly Type[] _messageCodecTypes;
+
+        public MessagesModule(params Type[] messageCodecTypes)
+        {
+            _messageCodecTypes = messageCodecTypes;
+        }
+
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<MessageProvider>().As<IMessageProvider>().SingleInstance();
@@ -24,7 +32,10 @@ namespace NetScape.Modules.Messages
 
             builder.RegisterType<MessageFrameEncoder>();
             builder.RegisterType<MessageHeaderDecoder>();
-            builder.RegisterType<ProtoMessageCodecHandler>().As<IStartable>().AsSelf().SingleInstance();
+            builder.RegisterInstance(new ProtoMessageCodecHandler(_messageCodecTypes))
+                .As<IStartable>()
+                .AsSelf()
+                .SingleInstance();
             builder.RegisterType<MessageChannelHandler>();
 
             #region Decoders

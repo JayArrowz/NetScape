@@ -13,6 +13,7 @@ using NetScape.Modules.Game;
 using NetScape.Modules.Logging.SeriLog;
 using NetScape.Modules.LoginProtocol;
 using NetScape.Modules.Messages;
+using NetScape.Modules.Messages.Models;
 using NetScape.Modules.Region;
 using NetScape.Modules.Region.Collision;
 using NetScape.Modules.Server;
@@ -63,7 +64,10 @@ namespace NetScape
             containerBuilder.RegisterModule(new LoginModule());
             containerBuilder.RegisterModule(new CacheModule());
             containerBuilder.RegisterModule(new DALModule());
-            containerBuilder.RegisterModule(new MessagesModule());
+            containerBuilder.RegisterModule(new MessagesModule(
+                typeof(ThreeOneSevenEncoderMessages.Types), 
+                typeof(ThreeOneSevenDecoderMessages.Types))
+            );
             containerBuilder.RegisterModule(new GameServerModule(ConfigurationRoot["BindAddr"], ushort.Parse(ConfigurationRoot["BindPort"])));
             containerBuilder.RegisterModule(new WorldModule());
             containerBuilder.RegisterModule(new UpdatingModule());

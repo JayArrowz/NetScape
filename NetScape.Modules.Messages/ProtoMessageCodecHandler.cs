@@ -2,6 +2,7 @@
 using Google.Protobuf;
 using Google.Protobuf.Reflection;
 using NetScape.Modules.Messages.Models;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,12 @@ namespace NetScape.Modules.Messages
 {
     public class ProtoMessageCodecHandler : IStartable
     {
+        private readonly Type[] _codecTypes;
+        public ProtoMessageCodecHandler(Type[] codecTypes)
+        {
+            _codecTypes = codecTypes;
+        }
+
         public Dictionary<int, ProtoMessageCodec> EncoderCodecs { get; set; }
         public Dictionary<int, ProtoMessageCodec> DecoderCodecs { get; set; }
 
@@ -21,7 +28,7 @@ namespace NetScape.Modules.Messages
             EncoderCodecs = new();
             DecoderCodecs = new();
             EncoderTypeMap = new();
-            typeof(MessageCodec).Assembly.ExportedTypes.Where(t => t.IsAssignableTo<IMessage>())
+            typeof(MessageCodec).Assembly.ExportedTypes.Where(t => t.IsAssignableTo<IMessage>() && _codecTypes.Contains(t.DeclaringType))
                 .ToList()
                 .ForEach(t =>
                 {
@@ -41,6 +48,7 @@ namespace NetScape.Modules.Messages
                                 EncoderTypeMap.Add(t, (int)opcode);
                             }
 
+                            Log.Logger.Debug("Added message codec {0} - {1}", opcode, t);
                             map.Add((int)opcode, new ProtoMessageCodec(creationMethod, messageCodec, descriptor
                                 .Fields
                                 .InFieldNumberOrder()
