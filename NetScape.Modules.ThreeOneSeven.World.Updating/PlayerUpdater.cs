@@ -7,7 +7,7 @@ using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Abstractions.Model.Region;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
-using NetScape.Modules.ThreeOneSeven.Game.Region;
+using NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders;
 using NetScape.Modules.World.Updating.Segments;
 using System.Collections.Generic;
 using System.Linq;

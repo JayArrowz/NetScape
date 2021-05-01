@@ -6,7 +6,7 @@ using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;
 using System.Collections.Generic;
 
-namespace NetScape.Modules.ThreeOneSeven.Game.Region
+namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders
 {
     public class GroupedRegionUpdateMessage : IEncoderMessage<MessageFrame>
     {

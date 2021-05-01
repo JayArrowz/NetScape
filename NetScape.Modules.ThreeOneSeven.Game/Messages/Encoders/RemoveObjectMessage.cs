@@ -3,7 +3,7 @@ using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Modules.Messages.Builder;
 using NetScape.Modules.Region;
 
-namespace NetScape.Modules.ThreeOneSeven.Game.Region
+namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders
 {
     public class RemoveObjectMessage : RegionUpdateMessage
     {

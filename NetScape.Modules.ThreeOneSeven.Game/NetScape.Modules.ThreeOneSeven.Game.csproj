@@ -10,9 +10,4 @@
     <ProjectReference Include="..\NetScape.Modules.Region\NetScape.Modules.Region.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Messages\Encoders\" />
-    <Folder Include="Updating\" />
-  </ItemGroup>
-
 </Project>
