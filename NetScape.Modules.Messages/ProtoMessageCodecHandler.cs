@@ -48,7 +48,7 @@ namespace NetScape.Modules.Messages
                                 EncoderTypeMap.Add(t, (int)opcode);
                             }
 
-                            Log.Logger.Debug("Added message codec {0} - {1}", opcode, t);
+                            Log.Logger.Debug("Detected MessageCodec {0} - {1}", opcode, t);
                             map.Add((int)opcode, new ProtoMessageCodec(creationMethod, messageCodec, descriptor
                                 .Fields
                                 .InFieldNumberOrder()
