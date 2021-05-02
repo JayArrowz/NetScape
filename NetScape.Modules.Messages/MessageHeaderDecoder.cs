@@ -73,7 +73,7 @@ namespace NetScape.Modules.Messages
                 Log.Logger.Warning("Opcode {0} not recognised", unencodedOpcode);
                 if (size > 0)
                 {
-                    input.ReadBytes(size);
+                    input.SkipBytes(size);
                 }
                 return;
             }
