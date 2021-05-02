@@ -70,7 +70,7 @@ namespace NetScape.Modules.Messages
             var size = 0;
             if (!frameType.HasValue)
             {
-                Log.Logger.Warning("Opcode {0} not recognised", unencodedOpcode);
+                Log.Logger.Warning("Opcode {0} not recognised, sent by player {1}", unencodedOpcode, Player.Username);
                 _ = context.CloseAsync();
                 return;
             }
