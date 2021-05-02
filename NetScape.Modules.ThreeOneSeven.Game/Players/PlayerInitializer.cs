@@ -17,7 +17,7 @@ namespace NetScape.Modules.ThreeOneSeven.Game.Players
             _protoMessageSender = protoMessageSender;
         }
 
-        public async Task InitializeAsync(Abstractions.Model.Game.Player player)
+        public Task InitializeAsync(Abstractions.Model.Game.Player player)
         {
             var initMessage = new ThreeOneSevenEncoderMessages.Types.
                 IdAssignmentMessage
@@ -31,6 +31,7 @@ namespace NetScape.Modules.ThreeOneSeven.Game.Players
                 var interfaceId = defaultTabs[tab];
                 _ = _tabManager.SetTabAsync(player, tab, interfaceId);
             }
+            return Task.CompletedTask;
         }
     }
 }
