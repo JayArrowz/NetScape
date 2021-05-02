@@ -42,7 +42,7 @@ extend google.protobuf.MessageOptions {
 message MessageCodec {
   repeated uint32 OpCodes = 1;  
   optional FrameSizeType SizeType = 2; 
-  optional bool Custom = 3; 
+  optional bool Custom = 3;
 }
 
 message FieldCodec {
@@ -64,6 +64,24 @@ message ThreeOneSevenDecoderMessages {
         required string Command = 1 [(FieldCodecExt).Type = String];
         option (MessageCodecExt).OpCodes = 103;
         option (MessageCodecExt).SizeType = VariableByte;
+    }
+
+    message FocusUpdateMessage {
+        required bool Focused = 1 [(FieldCodecExt).Type = Byte];
+        option (MessageCodecExt).OpCodes = 3;
+    }
+
+    message SpamMessage {
+        required int32 AIntOne = 1 [(FieldCodecExt).Type = Short];
+        required int32 AIntTwo = 2 [(FieldCodecExt).Type = Short];
+        
+        option (MessageCodecExt).OpCodes = 210;
+        option (MessageCodecExt).OpCodes = 77;
+        option (MessageCodecExt).OpCodes = 78;
+        option (MessageCodecExt).OpCodes = 165;
+        option (MessageCodecExt).OpCodes = 189;
+        option (MessageCodecExt).OpCodes = 226;
+        option (MessageCodecExt).OpCodes = 121;
     }
        
     message ArrowKeyMessage {

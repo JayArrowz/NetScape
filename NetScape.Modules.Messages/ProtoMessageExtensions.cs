@@ -95,6 +95,24 @@ namespace NetScape.Modules.Messages
             throw new NotSupportedException($"FieldOrder Not Supported {order}");
         }
 
+        public static int GetSize(this Models.FieldType fieldType)
+        {
+            switch (fieldType)
+            {
+                case Models.FieldType.Byte:
+                    return 1;
+                case Models.FieldType.Int:
+                    return 4;
+                case Models.FieldType.Long:
+                    return 8;
+                case Models.FieldType.Short:
+                    return 2;
+                case Models.FieldType.TriByte:
+                    return 3;
+            }
+            return 0;
+        }
+
         public static MessageType GetMessageType(this Models.FieldType fieldType)
         {
             switch (fieldType)

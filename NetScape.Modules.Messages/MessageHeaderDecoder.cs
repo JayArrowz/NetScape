@@ -67,14 +67,11 @@ namespace NetScape.Modules.Messages
                 .Where(t => t.Ids != null)
                 .FirstOrDefault(decoder => decoder.Ids.Contains(unencodedOpcode));
             var frameType = protoCodec == null ? decoder?.FrameType : protoCodec.MessageCodec.SizeType.GetFrameType();
-            var size = PacketLengths[unencodedOpcode];
+            var size = 0;
             if (!frameType.HasValue)
             {
                 Log.Logger.Warning("Opcode {0} not recognised", unencodedOpcode);
-                if (size > 0)
-                {
-                    input.SkipBytes(size);
-                }
+                _ = context.CloseAsync();
                 return;
             }
 
@@ -84,7 +81,7 @@ namespace NetScape.Modules.Messages
             }
             else
             {
-                size = PacketLengths[unencodedOpcode];
+                size = protoCodec.FieldCodec.Sum(t => t.FieldCodec.Type.GetSize());
             }
             var buffer = input.ReadBytes(size);
             var messageFrame = new MessageFrame(unencodedOpcode, frameType.Value, buffer);
@@ -106,15 +103,16 @@ namespace NetScape.Modules.Messages
                     MessageType? messageType = isString ? null : field.FieldCodec.Type.GetMessageType();
                     var order = field.FieldCodec.Order.GetDataOrder();
                     var transform = field.FieldCodec.Transform.GetDataTransformation();
-                   
+
                     object rawValue = isString ? messageReader.ReadString() : messageReader.GetUnsigned(messageType.Value, order, transform);
                     object value = fieldType == Google.Protobuf.Reflection.FieldType.Bool ? ((ulong)rawValue == 1)
                         : isString ? (string)rawValue
-                        : field.ToObject((ulong) rawValue);
+                        : field.ToObject((ulong)rawValue);
                     try
                     {
                         field.FieldDescriptor.Accessor.SetValue(message, value);
-                    } catch(Exception e)
+                    }
+                    catch (Exception e)
                     {
                         Log.Logger.Error("Error decoding field {0}, Error: {1}", field.FieldCodec, e);
                     }
