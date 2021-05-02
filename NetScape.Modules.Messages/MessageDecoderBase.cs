@@ -7,6 +7,7 @@ using NetScape.Modules.Messages.Builder;
 using System;
 using System.Collections.Generic;
 using System.Reactive;
+using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 
@@ -86,15 +87,14 @@ namespace NetScape.Modules.Messages
         {
             Action<DecoderMessage<TMessage>> action = Guard.Argument(method).Cast<Action<DecoderMessage<TMessage>>>();
             Predicate<DecoderMessage<TMessage>> filterPredicate = filter == null ? null : Guard.Argument(filter).Cast<Predicate<DecoderMessage<TMessage>>>();
-            return Subscribe(Observer.Create(action), filterPredicate);
+            return Subscribe(Observer.Create(action).NotifyOn(TaskPoolScheduler.Default), filterPredicate);
         }
 
         public IDisposable SubscribeDelegateAsync(Delegate method, Delegate filter)
         {
             Func<DecoderMessage<TMessage>, Task> action = Guard.Argument(method).Cast<Func<DecoderMessage<TMessage>, Task>>();
             Predicate<DecoderMessage<TMessage>> filterPredicate = filter == null ? null : Guard.Argument(filter).Cast<Predicate<DecoderMessage<TMessage>>>();
-            
-            return Subscribe(Observer.Create<DecoderMessage<TMessage>>(async (e) => await action(e)), filterPredicate);
+            return Subscribe(Observer.Create<DecoderMessage<TMessage>>(async (e) => await action(e)).NotifyOn(TaskPoolScheduler.Default), filterPredicate);
         }
 
         public IDisposable Subscribe(IObserver<DecoderMessage<TMessage>> observer)
