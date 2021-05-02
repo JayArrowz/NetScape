@@ -28,6 +28,21 @@ namespace NetScape.Modules.Messages
             _subscriptions.ForEach(t => t.Dispose());
         }
 
+        public static void RegisterHandlers(ContainerBuilder builder)
+        {
+
+            var types = AppDomain.CurrentDomain.GetAssemblies()
+                       .SelectMany(t => t.GetTypes())
+                       .Where(t => t.GetCustomAttribute<MessageHandlerAttribute>(false) != null);
+            foreach (var type in types)
+            {
+                builder.RegisterType(type)
+                    .AsSelf()
+                    .AsImplementedInterfaces()
+                    .SingleInstance();
+            }
+        }
+
         public void Start()
         {
             var methods = AppDomain.CurrentDomain.GetAssemblies()

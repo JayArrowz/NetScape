@@ -16,6 +16,7 @@ enum FieldType {
     TriByte = 2;
     Int = 3;
     Long = 4;
+    String = 5;
 }
 
 enum FieldOrder {

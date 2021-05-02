@@ -25,12 +25,20 @@ namespace NetScape.Modules.Messages
             var bldr = new MessageFrameBuilder(context.Allocator, message.Opcode, frameType);
             foreach (var field in fieldCodecs)
             {
-                var messageType = field.FieldCodec.Type.GetMessageType();
+                var isString = field.FieldCodec.Type == Models.FieldType.String;
+                MessageType? messageType = isString ? null : field.FieldCodec.Type.GetMessageType();
                 var dataTransform = field.FieldCodec.Transform.GetDataTransformation();
                 var dataOrder = field.FieldCodec.Order.GetDataOrder();
                 object value = field.FieldDescriptor.Accessor.GetValue(message.Message);
-                long unboxedInt = field.ToUnboxedNumber(value);
-                bldr.Put(messageType, dataOrder, dataTransform, unboxedInt);
+
+                if (!isString)
+                {
+                    long unboxedInt = field.ToUnboxedNumber(value);
+                    bldr.Put(messageType.Value, dataOrder, dataTransform, unboxedInt);
+                } else
+                {
+                    bldr.PutString((string)value);
+                }
             }
             output.Add(bldr.ToMessageFrame());
         }

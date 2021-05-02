@@ -35,6 +35,10 @@ namespace NetScape.Modules.Messages
                 .SingleInstance();
             builder.RegisterType<MessageChannelHandler>();
 
+            #region Attribute types
+            MessageAttributeHandler.RegisterHandlers(builder);
+            #endregion
+
             #region Decoders
             typeof(MessageCodec).Assembly.ExportedTypes.Where(t => t.IsAssignableTo<IMessage>())
                 .ToList()

@@ -471,6 +471,18 @@ namespace NetScape.Modules.Messages.Builder
             _mode = AccessMode.Byte;
             _buffer.SetReaderIndex((_bitIndex + 7) / 8);
         }
+
+        public string ReadString()
+        {
+            Guard.Argument(_mode).Equal(AccessMode.Byte);
+            var strBldr = new StringBuilder();
+            int charByte;
+            while ((charByte = _buffer.ReadByte()) != 10)
+            {
+                strBldr.Append((char)charByte);
+            }
+            return strBldr.ToString();
+        }
     }
 
 }

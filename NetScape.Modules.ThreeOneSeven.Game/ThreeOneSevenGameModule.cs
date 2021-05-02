@@ -2,13 +2,16 @@
 using NetScape.Abstractions.Interfaces.Game.Interface;
 using NetScape.Abstractions.Interfaces.Game.Player;
 using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Modules.Messages;
 using NetScape.Modules.ThreeOneSeven.Game.Interface;
 using NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers;
 using NetScape.Modules.ThreeOneSeven.Game.Players;
+using System.Linq;
+using System.Reflection;
 
 namespace NetScape.Modules.Game
 {
-    public class ThreeOneSevenGameModule : Module
+    public class ThreeOneSevenGameModule : Autofac.Module
     {
         protected override void Load(ContainerBuilder builder)
         {
@@ -16,11 +19,6 @@ namespace NetScape.Modules.Game
             builder.RegisterType<PlayerInitializer>().As<IPlayerInitializer>();
 
             #region Handlers
-            builder.RegisterType<WalkingQueueMessageHandler>().SingleInstance();
-            builder.RegisterType<EmoteTabButtonsHandler>().SingleInstance();
-            builder.RegisterType<LogoutTabHandler>().SingleInstance();
-            builder.RegisterType<RunButtonsHandler>().SingleInstance();
-
             builder.RegisterAssemblyTypes(typeof(ThreeOneSevenGameModule).Assembly)
                 .AsClosedTypesOf(typeof(IMessageDecoder<>))
                 .As<IMessageDecoder>()

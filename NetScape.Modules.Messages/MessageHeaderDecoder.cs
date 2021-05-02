@@ -101,11 +101,16 @@ namespace NetScape.Modules.Messages
 
                 foreach (var field in protoCodec.FieldCodec)
                 {
-                    var messageType = field.FieldCodec.Type.GetMessageType();
+                    var fieldType = field.FieldDescriptor.FieldType;
+                    var isString = field.FieldCodec.Type == Models.FieldType.String;
+                    MessageType? messageType = isString ? null : field.FieldCodec.Type.GetMessageType();
                     var order = field.FieldCodec.Order.GetDataOrder();
                     var transform = field.FieldCodec.Transform.GetDataTransformation();
-                    var rawValue = messageReader.GetUnsigned(messageType, order, transform);
-                    object value = field.FieldDescriptor.FieldType == Google.Protobuf.Reflection.FieldType.Bool ? (rawValue == 1) : field.ToObject(rawValue);
+                   
+                    object rawValue = isString ? messageReader.ReadString() : messageReader.GetUnsigned(messageType.Value, order, transform);
+                    object value = fieldType == Google.Protobuf.Reflection.FieldType.Bool ? ((ulong)rawValue == 1)
+                        : isString ? (string)rawValue
+                        : field.ToObject((ulong) rawValue);
                     try
                     {
                         field.FieldDescriptor.Accessor.SetValue(message, value);
