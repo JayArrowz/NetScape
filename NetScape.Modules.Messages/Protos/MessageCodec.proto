@@ -59,6 +59,12 @@ message ThreeOneSevenDecoderMessages {
     message IdleMessage {
         option (MessageCodecExt).OpCodes = 0;
     }
+
+    message CommandMessage {
+        required string Command = 1 [(FieldCodecExt).Type = String];
+        option (MessageCodecExt).OpCodes = 103;
+        option (MessageCodecExt).SizeType = VariableByte;
+    }
        
     message ArrowKeyMessage {
         required int32 Roll = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little];
