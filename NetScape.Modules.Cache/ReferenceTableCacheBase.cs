@@ -38,6 +38,8 @@ namespace NetScape.Modules.Cache
             });
         }
 
+
+
         public sealed override CacheFileInfo GetFileInfo(CacheIndex index, int fileId)
         {
             if (index != CacheIndex.ReferenceTables)

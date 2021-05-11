@@ -36,6 +36,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.ThreeOneSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.ThreeOneSeven.LoginProtocol", "NetScape.Modules.ThreeOneSeven.LoginProtocol\NetScape.Modules.ThreeOneSeven.LoginProtocol.csproj", "{73806B1D-9116-4D4D-8BF3-81BF56162F63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.Modules.Osrs.LoginProtocol", "NetScape.Modules.Osrs.LoginProtocol\NetScape.Modules.Osrs.LoginProtocol.csproj", "{F417FCC7-6777-4FD0-9CBF-FBB116B2F846}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.Modules.Osrs.WorldList", "NetScape.Modules.Osrs.WorldList\NetScape.Modules.Osrs.WorldList.csproj", "{694CC899-6CA3-4FE2-9B63-531EBE006DE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +106,14 @@ Global
 		{73806B1D-9116-4D4D-8BF3-81BF56162F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73806B1D-9116-4D4D-8BF3-81BF56162F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73806B1D-9116-4D4D-8BF3-81BF56162F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F417FCC7-6777-4FD0-9CBF-FBB116B2F846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F417FCC7-6777-4FD0-9CBF-FBB116B2F846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F417FCC7-6777-4FD0-9CBF-FBB116B2F846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F417FCC7-6777-4FD0-9CBF-FBB116B2F846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{694CC899-6CA3-4FE2-9B63-531EBE006DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{694CC899-6CA3-4FE2-9B63-531EBE006DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{694CC899-6CA3-4FE2-9B63-531EBE006DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{694CC899-6CA3-4FE2-9B63-531EBE006DE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

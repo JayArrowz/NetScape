@@ -62,6 +62,21 @@ namespace NetScape.Modules.Cache
             return decodedFile;
         }
 
+
+        /// <summary>
+        /// Returns the requested file converted to the requested type.
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="fileId"></param>
+        /// <returns></returns>
+        public byte[] GetFileBytes<T>(CacheIndex index, int fileId) where T : CacheFileBase
+        {
+            // Obtain the file
+            var info = this.GetFileInfo(index, fileId);
+            var file = this.GetBinaryFile(info);
+            return file.Data;
+        }
+
         /// <summary>
         /// Implements the logic for actually retrieving file from the cache.
         /// </summary>

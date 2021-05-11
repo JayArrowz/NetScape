@@ -13,6 +13,7 @@ using NetScape.Modules.Game;
 using NetScape.Modules.Logging.SeriLog;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Models;
+using NetScape.Modules.Osrs.LoginProtocol;
 using NetScape.Modules.Region;
 using NetScape.Modules.Region.Collision;
 using NetScape.Modules.Server;
@@ -63,7 +64,9 @@ namespace NetScape
                 typeof(ThreeOneSevenEncoderMessages.Types),
                 typeof(ThreeOneSevenDecoderMessages.Types))
             );
-            containerBuilder.RegisterModule(new ThreeOneSevenLoginModule());
+
+            //containerBuilder.RegisterModule(new ThreeOneSevenLoginModule());
+            containerBuilder.RegisterModule(new OsrsLoginModule());
             containerBuilder.RegisterModule(new ThreeOneSevenUpdatingModule());
 
             containerBuilder.RegisterModule(new SeriLogModule(ConfigurationRoot));

@@ -37,6 +37,7 @@
     <ProjectReference Include="..\NetScape.Modules.Logging.SeriLog\NetScape.Modules.Logging.SeriLog.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Cache\NetScape.Modules.Cache.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Messages\NetScape.Modules.Messages.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Osrs.LoginProtocol\NetScape.Modules.Osrs.LoginProtocol.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Region.Collision\NetScape.Modules.Region.Collision.csproj" />
     <ProjectReference Include="..\NetScape.Modules.Region\NetScape.Modules.Region.csproj" />
     <ProjectReference Include="..\NetScape.Modules.ThreeOneSeven.Game\NetScape.Modules.ThreeOneSeven.Game.csproj" />
