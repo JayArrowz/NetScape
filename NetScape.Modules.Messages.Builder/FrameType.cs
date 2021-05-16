@@ -2,6 +2,6 @@
 {
     public enum FrameType
     {
-        Raw, Fixed, VariableByte, VariableShort
+        Raw, Fixed, VariableByte, VariableShort, ReadAll
     }
 }

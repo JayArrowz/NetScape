@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
+namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
 {
     /// <summary>
     /// The Game Login decoder
@@ -95,7 +95,6 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
 
                 var response = ctx.Allocator.Buffer(17);
                 response.WriteByte((int)LoginStatus.StatusExchangeData);
-                response.WriteLong(0);
                 response.WriteLong(_serverSeed);
                 ctx.Channel.WriteAndFlushAsync(response);
                 SetState(LoginDecoderState.LoginHeader);
@@ -138,9 +137,7 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
             if (buffer.ReadableBytes >= _loginLength)
             {
                 IByteBuffer payload = buffer.ReadBytes(_loginLength);
-                var version = 255 - payload.ReadByte();
-
-                var release = payload.ReadShort();
+                var version = payload.ReadInt();
 
                 var memoryStatus = payload.ReadByte();
                 if (memoryStatus != 0 && memoryStatus != 1)
@@ -152,19 +149,22 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
 
                 var lowMemory = memoryStatus == 1;
 
-                var crcs = new int[Constants.ArchiveCount];
+                payload.SkipBytes(24);
+                payload.SkipBytes(64);
+
+                /*var crcs = new int[Constants.ArchiveCount];
                 for (var index = 0; index < Constants.ArchiveCount; index++)
                 {
                     crcs[index] = payload.ReadInt();
-                }
+                }*/
 
-                var length = payload.ReadByte();
+               /* var length = payload.ReadByte();
                 if (length != _loginLength - 41)
                 {
                     _logger.Information("Login packet unexpected length ({0})", length);
                     WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
                     return;
-                }
+                }*/
 
                 /*
                 var secureBytes = payload.ReadBytes(length);
@@ -194,9 +194,8 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
                     return;
                 }
 
-                var uid = payload.ReadInt();
-                var username = payload.ReadString();
-                var password = payload.ReadString();
+                var username = TextUtil.LongToName(payload.ReadLong());
+                var password = payload.ReadString(0);
                 var socketAddress = (IPEndPoint)ctx.Channel.RemoteAddress;
                 var hostAddress = socketAddress.Address.ToString();
 
@@ -219,7 +218,7 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
                     Username = username,
                     Password = password,
                     EncodedUsername = _usernameHash,
-                    Uid = uid,
+                    Uid = -1,
                     HostAddress = hostAddress,
                 };
 
@@ -230,8 +229,8 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
                     RandomPair = randomPair,
                     Reconnecting = _reconnecting,
                     LowMemory = lowMemory,
-                    ReleaseNumber = release,
-                    ArchiveCrcs = crcs,
+                    ReleaseNumber = version,
+                    ArchiveCrcs = null,
                     ClientVersion = version,
                     OnResult = (loginTask) => WriteProcessorResponseAsync(loginTask, ctx, randomPair)
                 };
@@ -287,10 +286,10 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
 
                 foreach (var gameMessageHandler in gameMessageHandlers)
                 {
-                    if (gameMessageHandler is ICipherAwareHandler)
+                    /*if (gameMessageHandler is ICipherAwareHandler)
                     {
                         ((ICipherAwareHandler)gameMessageHandler).CipherPair = randomPair;
-                    }
+                    }*/
 
                     if (gameMessageHandler is IPlayerAwareHandler)
                     {

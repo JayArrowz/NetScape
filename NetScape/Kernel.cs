@@ -9,6 +9,9 @@ using NetScape.Abstractions.Interfaces.IO;
 using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Modules.Cache;
 using NetScape.Modules.DAL;
+using NetScape.Modules.FourSevenFour.Game;
+using NetScape.Modules.FourSevenFour.LoginProtocol;
+using NetScape.Modules.FourSevenFour.World.Updating;
 using NetScape.Modules.Game;
 using NetScape.Modules.Logging.SeriLog;
 using NetScape.Modules.Messages;
@@ -58,13 +61,13 @@ namespace NetScape
 
         private static void ConfigureAutofac(ContainerBuilder containerBuilder)
         {
-            containerBuilder.RegisterModule(new ThreeOneSevenGameModule());
+            containerBuilder.RegisterModule(new FourSevenFourGameModule());
             containerBuilder.RegisterModule(new MessagesModule(
-                typeof(ThreeOneSevenEncoderMessages.Types),
-                typeof(ThreeOneSevenDecoderMessages.Types))
+                typeof(FourSevenFourEncoderMessages.Types),
+                typeof(FourSevenFourDecoderMessages.Types))
             );
-            containerBuilder.RegisterModule(new ThreeOneSevenLoginModule());
-            containerBuilder.RegisterModule(new ThreeOneSevenUpdatingModule());
+            containerBuilder.RegisterModule(new FourSevenFourLoginModule());
+            containerBuilder.RegisterModule(new FourSevenFourUpdatingModule());
 
             containerBuilder.RegisterModule(new SeriLogModule(ConfigurationRoot));
             containerBuilder.RegisterModule(new CacheModule());

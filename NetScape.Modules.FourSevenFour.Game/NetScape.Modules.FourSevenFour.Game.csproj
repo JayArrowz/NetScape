@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp5.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>NetScape 474 Game Module</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Messages\NetScape.Modules.Messages.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Region.Collision\NetScape.Modules.Region.Collision.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Region\NetScape.Modules.Region.csproj" />
+  </ItemGroup>
+
+</Project>
