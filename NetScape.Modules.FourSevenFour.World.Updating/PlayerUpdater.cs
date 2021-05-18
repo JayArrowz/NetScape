@@ -3,7 +3,6 @@ using NetScape.Abstractions.Interfaces.Region;
 using NetScape.Abstractions.Interfaces.World.Updating;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
-using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Abstractions.Model.Region;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
@@ -12,7 +11,6 @@ using NetScape.Modules.FourSevenFour.World.Updating.Segements;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static NetScape.Modules.Messages.Models.ThreeOneSevenEncoderMessages.Types;
 
 namespace NetScape.Modules.FourSevenFour.World.Updating
 {
@@ -86,7 +84,6 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
                 player.RegionChanged = true;
                 local = false;
                 player.LastKnownRegion = position;
-                //await _protoMessageSender.SendAsync(player, new RegionChangeMessage { CentralRegionX = position.CentralRegionX, CentralRegionY = position.CentralRegionY });
                 await player.SendAsync(new SendMapRegionMessage(player));
             }
 
@@ -124,10 +121,10 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
                 var updatesMsgs = repository.Get(coordinates).GetUpdates(height);
                 var messages = updates.TryAdd(coordinates, updatesMsgs);
 
-                if (messages)
+                /*if (messages)
                 {
                     await player.SendAsync(new GroupedRegionUpdateMessage(position, coordinates, updatesMsgs));
-                }
+                }*/
             }
 
             foreach (RegionCoordinates coordinates in full)
@@ -139,7 +136,7 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
                 {
                     //await _protoMessageSender.SendAsync(player, new ClearRegionMessage { LocalX = position.LocalX, LocalY = position.LocalX });
                     await player.SendAsync(new SendMapRegionMessage(player));
-                    await player.SendAsync(new GroupedRegionUpdateMessage(position, coordinates, addMessages));
+                    //await player.SendAsync(new GroupedRegionUpdateMessage(position, coordinates, addMessages));
                 }
             }
         }
@@ -253,7 +250,7 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
                         blockSet.Add(SynchronizationBlock.CreateAppearanceBlock(other));
                     }
 
-                    segments.Add(new AddPlayerSegment(blockSet, index, local));
+                    segments.Add(new AddPlayerSegment(blockSet, index, local, other.LastDirection));
                 }
             }
 

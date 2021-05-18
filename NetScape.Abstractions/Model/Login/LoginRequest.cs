@@ -1,5 +1,7 @@
 ﻿using DotNetty.Transport.Channels;
 using NetScape.Abstractions.IO.Util;
+using System;
+using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.Model.Login
 {
@@ -19,5 +21,10 @@ namespace NetScape.Abstractions.Model.Login
 
         public int ReleaseNumber { get; set; }
         public TRes Result { get; set; }
+
+        /// <summary>
+        /// Called on response of request <seealso cref="LoginProcessor.ProcessLoginsAsync"/>
+        /// </summary>
+        public Func<TRes, Task> OnResult { get; set; }
     }
 }

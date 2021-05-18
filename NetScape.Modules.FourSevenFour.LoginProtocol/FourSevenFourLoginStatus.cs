@@ -1,6 +1,6 @@
-﻿namespace NetScape.Modules.ThreeOneSeven.LoginProtocol
+﻿namespace NetScape.Modules.FourSevenFour.LoginProtocol
 {
-    public enum LoginStatus
+    public enum FourSevenFourLoginStatus
     {
         StatusExchangeData = 0,
         StatusDelay = 1,

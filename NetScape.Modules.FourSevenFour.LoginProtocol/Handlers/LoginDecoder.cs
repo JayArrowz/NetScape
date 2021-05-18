@@ -94,7 +94,7 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
                 _serverSeed = Random.NextLong();
 
                 var response = ctx.Allocator.Buffer(17);
-                response.WriteByte((int)LoginStatus.StatusExchangeData);
+                response.WriteByte((int)FourSevenFourLoginStatus.StatusExchangeData);
                 response.WriteLong(_serverSeed);
                 ctx.Channel.WriteAndFlushAsync(response);
                 SetState(LoginDecoderState.LoginHeader);
@@ -113,14 +113,14 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
             {
                 var type = buffer.ReadByte();
 
-                if (type != (int)LoginStatus.TypeStandard && type != (int)LoginStatus.TypeReconnection)
+                if (type != (int)FourSevenFourLoginStatus.TypeStandard && type != (int)FourSevenFourLoginStatus.TypeReconnection)
                 {
                     _logger.Information("Failed to decode login header.");
-                    WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
+                    WriteResponseCode(ctx, FourSevenFourLoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
 
-                _reconnecting = type == (int)LoginStatus.TypeReconnection;
+                _reconnecting = type == (int)FourSevenFourLoginStatus.TypeReconnection;
                 _loginLength = buffer.ReadByte();
                 SetState(LoginDecoderState.LoginPayload);
             }
@@ -143,7 +143,7 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
                 if (memoryStatus != 0 && memoryStatus != 1)
                 {
                     _logger.Information("Login memoryStatus ({0}) not in expected range of [0, 1].", memoryStatus);
-                    WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
+                    WriteResponseCode(ctx, FourSevenFourLoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
 
@@ -180,7 +180,7 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
                 if (id != 10)
                 {
                     _logger.Information("Unable to read id from secure payload.");
-                    WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
+                    WriteResponseCode(ctx, FourSevenFourLoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
 
@@ -190,7 +190,7 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
                 if (reportedSeed != _serverSeed)
                 {
                     _logger.Information("Reported seed differed from server seed.");
-                    WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
+                    WriteResponseCode(ctx, FourSevenFourLoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
 
@@ -258,7 +258,7 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
         /// </summary>
         /// <param name="ctx">The ctx.</param>
         /// <param name="response">The response.</param>
-        private void WriteResponseCode(IChannelHandlerContext ctx, LoginStatus response)
+        private void WriteResponseCode(IChannelHandlerContext ctx, FourSevenFourLoginStatus response)
         {
             var buffer = ctx.Allocator.Buffer(sizeof(byte));
             buffer.WriteByte((int)response);
@@ -266,9 +266,9 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
             HandleLoginProcessorResponse(null, response, ctx, null);
         }
 
-        private void HandleLoginProcessorResponse(Player player, LoginStatus response, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
+        private void HandleLoginProcessorResponse(Player player, FourSevenFourLoginStatus response, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
         {
-            if (response != LoginStatus.StatusOk)
+            if (response != FourSevenFourLoginStatus.StatusOk)
             {
                 ctx.CloseAsync();
             }

@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NetScape.Abstractions.FileSystem;
 using NetScape.Abstractions.Interfaces;
 using NetScape.Abstractions.Interfaces.IO;
-using NetScape.Abstractions.Model.Game.Walking;
+using NetScape.Abstractions.Model.Game;
 using NetScape.Modules.Cache;
 using NetScape.Modules.DAL;
 using NetScape.Modules.FourSevenFour.Game;
@@ -30,14 +30,14 @@ namespace NetScape
     public class Kernel
     {
         public static IConfigurationRoot ConfigurationRoot { get; set; }
-        public static void Main()
+        public static void Main(string[] args)
         {
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
 
             var containerBuilder = new ContainerBuilder();
             containerBuilder.Populate(serviceCollection);
-            ConfigureAutofac(containerBuilder);
+            ConfigureAutofac(containerBuilder, args);
             containerBuilder.RegisterBuildCallback(t => t.Resolve<ContainerProvider>().Container = (IContainer)t);
             var container = containerBuilder.Build();
             var serviceProvider = new AutofacServiceProvider(container);
@@ -59,19 +59,19 @@ namespace NetScape
                     .Assembly.GetName().Name));
         }
 
-        private static void ConfigureAutofac(ContainerBuilder containerBuilder)
+        private static void ConfigureAutofac(ContainerBuilder containerBuilder, string[] args)
         {
-            containerBuilder.RegisterModule(new FourSevenFourGameModule());
+            containerBuilder.RegisterModule(new ThreeOneSevenGameModule());
             containerBuilder.RegisterModule(new MessagesModule(
-                typeof(FourSevenFourEncoderMessages.Types),
-                typeof(FourSevenFourDecoderMessages.Types))
+                typeof(ThreeOneSevenEncoderMessages.Types),
+                typeof(ThreeOneSevenDecoderMessages.Types))
             );
-            containerBuilder.RegisterModule(new FourSevenFourLoginModule());
-            containerBuilder.RegisterModule(new FourSevenFourUpdatingModule());
+            containerBuilder.RegisterModule(new ThreeOneSevenLoginModule());
+            containerBuilder.RegisterModule(new ThreeOneSevenUpdatingModule());
 
             containerBuilder.RegisterModule(new SeriLogModule(ConfigurationRoot));
             containerBuilder.RegisterModule(new CacheModule());
-            containerBuilder.RegisterModule(new DALModule());           
+            containerBuilder.RegisterModule(new DALModule());
             containerBuilder.RegisterModule(new GameServerModule(ConfigurationRoot["BindAddr"], ushort.Parse(ConfigurationRoot["BindPort"])));
             containerBuilder.RegisterModule(new WorldModule());
             containerBuilder.RegisterModule(new RegionModule());

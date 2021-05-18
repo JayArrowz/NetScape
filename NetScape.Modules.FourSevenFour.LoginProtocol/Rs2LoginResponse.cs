@@ -2,7 +2,7 @@
 
 namespace NetScape.Modules.FourSevenFour.LoginProtocol
 {
-    public class Rs2LoginResponse : LoginResponse<LoginStatus>
+    public class Rs2LoginResponse : LoginResponse<FourSevenFourLoginStatus>
     {
     }
 }

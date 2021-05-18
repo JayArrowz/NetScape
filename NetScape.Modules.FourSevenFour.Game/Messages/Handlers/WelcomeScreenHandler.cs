@@ -27,6 +27,7 @@ namespace NetScape.Modules.FourSevenFour.Game.Messages.Handlers
             {
                 case 6:
                     await _messageSender.SendAsync(player, new SendInterfaceMessage { InterfaceId = 548 });
+                    player.UpdateAppearance();
                     return;
             }
         }

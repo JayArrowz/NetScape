@@ -89,9 +89,10 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
             Position other = seg.Position;
             builder.PutBits(11, seg.Index);
             builder.PutBits(1, updateRequired ? 1 : 0);
-            builder.PutBits(1, 1); // discard walking queue?
-            builder.PutBits(5, other.Y - player.Y);
+            builder.PutBits(3, seg.Direction.IntValue);
             builder.PutBits(5, other.X - player.X);
+            builder.PutBits(1, 1);
+            builder.PutBits(5, other.Y - player.Y);
         }
 
         private void PutRemovePlayerUpdate(MessageFrameBuilder builder)
@@ -118,8 +119,9 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
 
                 if (mask >= 0x100)
                 {
-                    mask |= 0x40;
-                    builder.Put(MessageType.Short, DataOrder.Little, mask);
+                    mask |= 0x20;
+                    builder.Put(MessageType.Byte, (mask & 0xFF));
+                    builder.Put(MessageType.Byte, (mask >> 8));
                 }
                 else
                 {
@@ -145,6 +147,7 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
 
             playerProperties.Put(MessageType.Byte, (int)appearance.Gender);
             playerProperties.Put(MessageType.Byte, 0);
+            playerProperties.Put(MessageType.Byte, 0);
 
             if (block.NpcId > 0)
             {
@@ -163,14 +166,14 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
                     playerProperties.Put(MessageType.Byte, 0);
                 }
 
-                playerProperties.Put(MessageType.Short, 0x100 + style[2]);
-                playerProperties.Put(MessageType.Byte, 0);
-                playerProperties.Put(MessageType.Short, 0x100 + style[3]);
-                playerProperties.Put(MessageType.Short, 0x100 + style[5]);
-                playerProperties.Put(MessageType.Short, 0x100 + style[0]);
-                playerProperties.Put(MessageType.Short, 0x100 + style[4]);
-                playerProperties.Put(MessageType.Short, 0x100 + style[6]);
-                playerProperties.Put(MessageType.Short, 0x100 + style[1]);
+                playerProperties.Put(MessageType.Short, 0x100 + style[2]); //Chest
+                playerProperties.Put(MessageType.Byte, 0); //Shield
+                playerProperties.Put(MessageType.Short, 0x100 + style[3]); //Arms
+                playerProperties.Put(MessageType.Short, 0x100 + style[5]); //Legs
+                playerProperties.Put(MessageType.Short, 0x100 + style[0]); //Helm
+                playerProperties.Put(MessageType.Short, 0x100 + style[4]); //Hands
+                playerProperties.Put(MessageType.Short, 0x100 + style[6]); //Feet
+                playerProperties.Put(MessageType.Short, 0x100 + style[1]); //Beard
             }
 
             int[] colors = appearance.Colors;
@@ -192,7 +195,6 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
             playerProperties.Put(MessageType.Short, block.Skill);
 
             builder.Put(MessageType.Byte, DataTransformation.Add, playerProperties.GetLength());
-
             builder.PutRawBuilder(playerProperties);
         }
 
@@ -213,11 +215,11 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
                 Position position = teleportSeg.Destination;
                 builder.PutBits(1, 1);
                 builder.PutBits(2, 3);
-                builder.PutBits(2, position.Height);
                 builder.PutBits(1, RegionChanged ? 0 : 1);
                 builder.PutBits(1, updateRequired ? 1 : 0);
-                builder.PutBits(7, position.GetLocalY(LastKnownRegion));
                 builder.PutBits(7, position.GetLocalX(LastKnownRegion));
+                builder.PutBits(2, position.Height);
+                builder.PutBits(7, position.GetLocalY(LastKnownRegion));
             }
             else if (seg.Type == SegmentType.Run)
             {

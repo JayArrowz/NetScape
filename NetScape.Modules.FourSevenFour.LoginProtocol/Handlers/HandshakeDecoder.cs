@@ -49,7 +49,9 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
                     int version = buffer.ReadInt();
                     ctx.Channel.Pipeline.AddLast(nameof(JS5Decoder), _jS5Decoder);
                     ctx.Channel.Pipeline.AddLast(nameof(JS5Encoder), _jS5Encoder);
-                    _ = ctx.Channel.WriteAndFlushAsync(ctx.Allocator.Buffer(1).WriteByte((int)LoginStatus.StatusExchangeData));
+
+                    //Really should do version checking
+                    _ = ctx.Channel.WriteAndFlushAsync(ctx.Allocator.Buffer(1).WriteByte((int)FourSevenFourLoginStatus.StatusExchangeData));
                     break;
 
                 default:

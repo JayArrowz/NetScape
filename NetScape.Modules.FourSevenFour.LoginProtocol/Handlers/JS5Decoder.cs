@@ -1,14 +1,8 @@
 ﻿using DotNetty.Buffers;
 using DotNetty.Codecs;
-using DotNetty.Common.Utilities;
 using DotNetty.Transport.Channels;
-using NetScape.Abstractions;
 using Serilog;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
 {
@@ -39,10 +33,11 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
                 else if (opcode == 2 || opcode == 3 || opcode == 6)
                 {
                     input.SkipBytes(3);
-                } else if(opcode == 4)
+                }
+                else if (opcode == 4)
                 {
                     _encryptionKey = input.ReadByte();
-                    if(input.ReadShort() != 0)
+                    if (input.ReadShort() != 0)
                     {
                         _ = context.Channel.DisconnectAsync();
                     }

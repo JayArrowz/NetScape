@@ -4,13 +4,9 @@ using DotNetty.Transport.Channels;
 using NetScape.Abstractions.Cache;
 using NetScape.Abstractions.Extensions;
 using NetScape.Abstractions.Interfaces.Cache;
-using NetScape.Modules.Cache.FileTypes;
-using NetScape.Modules.Cache.RuneTek5;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
 {
@@ -29,7 +25,7 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
         {
             try
             {
-                bool encrypt = false;
+                bool allowEncryption = false;
                 int index = message.Index;
                 int file = message.File;
 
@@ -44,12 +40,12 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
                 else if (index == 255)
                 {
                     fileData = GetReferenceTableData(file);
-                    encrypt = true;
+                    allowEncryption = true;
                 }
                 else
                 {
                     fileData = GetFileData(index, file);
-                    encrypt = true;
+                    allowEncryption = true;
                 }
 
                 foreach (byte b in fileData)
@@ -62,7 +58,7 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
                     output.WriteByte(b);
                 }
 
-                if(encrypt)
+                if (allowEncryption)
                 {
                     if (message.EncryptionKey != 0)
                     {
@@ -89,24 +85,6 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
             var cacheIndex = (CacheIndex)index;
             return _referenceTableCache.GetFile<BinaryFile>(cacheIndex, file).Data;
         }
-
-        private byte[] Trim(byte[] b)
-        {
-            var buffer = Unpooled.WrappedBuffer(b);
-            int compression = buffer.ReadByte();
-            int size = buffer.ReadInt();
-
-            byte[] n = new byte[size + (compression == 0 ? 5 : 9)];
-            Array.Copy(b, 0, n, 0, size + (compression == 0 ? 5 : 9));
-
-
-            /*var compressionExtraSize = _referenceTableCache.CachedReferenceTables[(CacheIndex)file].Info.CompressionType == CompressionType.None ? 5 : 9;
-            var compressedSize = _referenceTableCache.CachedReferenceTables[(CacheIndex)file].Info.CompressedSize.GetValueOrDefault();
-            byte[] n = new byte[compressionExtraSize + compressedSize];
-            Array.Copy(b, 0, n, 0, compressionExtraSize + compressedSize);*/
-            return n;
-        }
-
         private byte[] GetIndexSizeData(IChannelHandlerContext ctx)
         {
 

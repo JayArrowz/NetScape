@@ -20,7 +20,6 @@ namespace NetScape.Modules.FourSevenFour.Game.Players
 
         public Task InitializeAsync(Abstractions.Model.Game.Player player)
         {
-            //player.UpdateAppearance();
             _ = player.SendAsync(new SendMapRegionMessage(player)).ContinueWith(_ =>
             {
 
