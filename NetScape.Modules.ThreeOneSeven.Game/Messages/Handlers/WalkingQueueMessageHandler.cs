@@ -1,11 +1,12 @@
 ﻿using NetScape.Abstractions.Model;
-using NetScape.Abstractions.Model.Game.Walking;
+using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Messages;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Models;
 using System.Linq;
 
-namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers { 
+namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers
+{
 
     [MessageHandler]
     public class WalkingQueueMessageHandler
@@ -21,7 +22,7 @@ namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers {
         {
             var player = decoderMessage.Player;
             var message = decoderMessage.Message;
-            var positions =  Enumerable.Range(0, message.X.Count)
+            var positions = Enumerable.Range(0, message.X.Count)
                 .Select(t => new Position
                 {
                     X = message.X[t],

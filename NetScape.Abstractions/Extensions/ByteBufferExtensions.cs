@@ -9,9 +9,14 @@ namespace NetScape.Abstractions.Extensions
     {
         public static string ReadString(this IByteBuffer buffer)
         {
+            return ReadString(buffer, 10);
+        }
+
+        public static string ReadString(this IByteBuffer buffer, int terminator)
+        {
             var strBldr = new StringBuilder();
             int charByte;
-            while ((charByte = buffer.ReadByte()) != 10)
+            while ((charByte = buffer.ReadByte()) != terminator)
             {
                 strBldr.Append((char)charByte);
             }

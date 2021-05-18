@@ -110,7 +110,7 @@ namespace NetScape.Modules.Cache.RuneTek5
             var nextSectorPosition = dataReader.ReadUInt24BigEndian();
 
             var actualIndex = (CacheIndex)dataReader.ReadByte();
-            if (actualIndex - 1 != expectedIndex)
+            if (actualIndex != expectedIndex)
             {
                 throw new DecodeException($"Expected sector for index {(int)expectedIndex}, got {(int)actualIndex}.");
             }

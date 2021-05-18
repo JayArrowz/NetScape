@@ -2,7 +2,7 @@
 
 namespace NetScape.Modules.ThreeOneSeven.LoginProtocol
 {
-    public class Rs2LoginResponse : LoginResponse<LoginStatus>
+    public class Rs2LoginResponse : LoginResponse<ThreeOneSevenLoginStatus>
     {
     }
 }

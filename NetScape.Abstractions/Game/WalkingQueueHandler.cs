@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NetScape.Abstractions.Model.Game.Walking
+namespace NetScape.Abstractions.Model.Game
 {
     public class WalkingQueueHandler
     {

@@ -5,6 +5,7 @@ using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;
+using Serilog;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading;
@@ -17,6 +18,7 @@ namespace NetScape.Abstractions.Model.Game
         private static readonly int DefaultViewingDistance = 15;
         private static int _appearanceTicketCounter = 0;
 
+        [NotMapped] public int PingCount { get; set; }
         [NotMapped] public Position LastKnownRegion { get; set; }
         [NotMapped] public bool RegionChanged { get; set; }
         [NotMapped] public int AppearanceTicket { get; } = NextAppearanceTicket();
@@ -66,6 +68,7 @@ namespace NetScape.Abstractions.Model.Game
         /// <param name="message">The message.</param>
         public async Task SendAsync(IEncoderMessage<MessageFrame> message)
         {
+            Log.Logger.Debug("Sending {0} to player {1}", message, Username);
             var msg = message.ToMessage(ChannelHandlerContext.Allocator);
 
             if (ChannelHandlerContext.Channel.Active)

@@ -15,7 +15,6 @@ using NetScape.Abstractions.Util;
 using Serilog;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -95,7 +94,7 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
                 _serverSeed = Random.NextLong();
 
                 var response = ctx.Allocator.Buffer(17);
-                response.WriteByte((int)LoginStatus.StatusExchangeData);
+                response.WriteByte((int)ThreeOneSevenLoginStatus.StatusExchangeData);
                 response.WriteLong(0);
                 response.WriteLong(_serverSeed);
                 ctx.Channel.WriteAndFlushAsync(response);
@@ -115,14 +114,14 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
             {
                 var type = buffer.ReadByte();
 
-                if (type != (int)LoginStatus.TypeStandard && type != (int)LoginStatus.TypeReconnection)
+                if (type != (int)ThreeOneSevenLoginStatus.TypeStandard && type != (int)ThreeOneSevenLoginStatus.TypeReconnection)
                 {
                     _logger.Information("Failed to decode login header.");
-                    WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
+                    WriteResponseCode(ctx, ThreeOneSevenLoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
 
-                _reconnecting = type == (int)LoginStatus.TypeReconnection;
+                _reconnecting = type == (int)ThreeOneSevenLoginStatus.TypeReconnection;
                 _loginLength = buffer.ReadByte();
                 SetState(LoginDecoderState.LoginPayload);
             }
@@ -147,14 +146,14 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
                 if (memoryStatus != 0 && memoryStatus != 1)
                 {
                     _logger.Information("Login memoryStatus ({0}) not in expected range of [0, 1].", memoryStatus);
-                    WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
+                    WriteResponseCode(ctx, ThreeOneSevenLoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
 
                 var lowMemory = memoryStatus == 1;
 
-                var crcs = new int[Constants.ArchiveCount];
-                for (var index = 0; index < Constants.ArchiveCount; index++)
+                var crcs = new int[9];
+                for (var index = 0; index < 9; index++)
                 {
                     crcs[index] = payload.ReadInt();
                 }
@@ -163,7 +162,7 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
                 if (length != _loginLength - 41)
                 {
                     _logger.Information("Login packet unexpected length ({0})", length);
-                    WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
+                    WriteResponseCode(ctx, ThreeOneSevenLoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
 
@@ -181,7 +180,7 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
                 if (id != 10)
                 {
                     _logger.Information("Unable to read id from secure payload.");
-                    WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
+                    WriteResponseCode(ctx, ThreeOneSevenLoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
 
@@ -191,7 +190,7 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
                 if (reportedSeed != _serverSeed)
                 {
                     _logger.Information("Reported seed differed from server seed.");
-                    WriteResponseCode(ctx, LoginStatus.StatusLoginServerRejectedSession);
+                    WriteResponseCode(ctx, ThreeOneSevenLoginStatus.StatusLoginServerRejectedSession);
                     return;
                 }
 
@@ -260,7 +259,7 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
         /// </summary>
         /// <param name="ctx">The ctx.</param>
         /// <param name="response">The response.</param>
-        private void WriteResponseCode(IChannelHandlerContext ctx, LoginStatus response)
+        private void WriteResponseCode(IChannelHandlerContext ctx, ThreeOneSevenLoginStatus response)
         {
             var buffer = ctx.Allocator.Buffer(sizeof(byte));
             buffer.WriteByte((int)response);
@@ -268,9 +267,9 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
             HandleLoginProcessorResponse(null, response, ctx, null);
         }
 
-        private void HandleLoginProcessorResponse(Player player, LoginStatus response, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
+        private void HandleLoginProcessorResponse(Player player, ThreeOneSevenLoginStatus response, IChannelHandlerContext ctx, IsaacRandomPair randomPair)
         {
-            if (response != LoginStatus.StatusOk)
+            if (response != ThreeOneSevenLoginStatus.StatusOk)
             {
                 ctx.CloseAsync();
             }
@@ -305,7 +304,8 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
                 if (!_reconnecting)
                 {
                     _ = _playerInitializer.InitializeAsync(player);
-                } else
+                }
+                else
                 {
                     player.UpdateAppearance();
                 }

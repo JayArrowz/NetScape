@@ -208,6 +208,24 @@ namespace NetScape.Abstractions.Model
         }
 
         /// <summary>
+        /// Gets the region x.
+        /// </summary>
+        /// <value>
+        /// The region x.
+        /// </value>
+        [NotMapped]
+        public int RegionX => (X >> 3) - 6;
+
+        /// <summary>
+        /// Gets the region y.
+        /// </summary>
+        /// <value>
+        /// The region y.
+        /// </value>
+        [NotMapped]
+        public int RegionY => (Y >> 3) - 6;
+
+        /// <summary>
         /// Gets the x coordinate.
         /// </summary>
         /// <returns> The x coordinate. </returns>

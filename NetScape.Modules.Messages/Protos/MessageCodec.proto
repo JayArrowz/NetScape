@@ -8,6 +8,7 @@ enum FrameSizeType {
     Raw = 1;
     VariableByte = 2;
     VariableShort = 3;
+    ReadAll = 4;
 }
 
 enum FieldType {
@@ -141,17 +142,17 @@ message ThreeOneSevenEncoderMessages {
     }
     
     message AddGlobalTileItemMessage { 
-        required uint32 ItemId = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Transform = Subtract];
+        required int32 ItemId = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Transform = Subtract];
         required int32 PositionOffset = 2 [(FieldCodecExt).Type = Byte, (FieldCodecExt).Transform = Subtract];
-        required uint32 PlayerIndex = 3 [(FieldCodecExt).Type = Short, (FieldCodecExt).Transform = Add];
-        required uint32 Amount = 4 [(FieldCodecExt).Type = Short];
+        required int32 PlayerIndex = 3 [(FieldCodecExt).Type = Short, (FieldCodecExt).Transform = Add];
+        required int32 Amount = 4 [(FieldCodecExt).Type = Short];
         option (MessageCodecExt).OpCodes = 215;
         option (IsEncoder) = true;
     }
 
     message AddTileItemMessage {
-        required uint32 ItemId = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little, (FieldCodecExt).Transform = Add];
-        required uint32 Amount = 2 [(FieldCodecExt).Type = Short];
+        required int32 ItemId = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little, (FieldCodecExt).Transform = Add];
+        required int32 Amount = 2 [(FieldCodecExt).Type = Short];
         required int32 PositionOffset = 3 [(FieldCodecExt).Type = Byte];
         option (MessageCodecExt).OpCodes = 44;
         option (IsEncoder) = true;
@@ -171,8 +172,92 @@ message ThreeOneSevenEncoderMessages {
 
     message IdAssignmentMessage {
         required bool IsMembers = 1 [(FieldCodecExt).Type = Byte, (FieldCodecExt).Transform = Add];
-        required uint32 NewId = 2 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little, (FieldCodecExt).Transform = Add];
+        required int32 NewId = 2 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little, (FieldCodecExt).Transform = Add];
         option (MessageCodecExt).OpCodes = 249;
         option (IsEncoder) = true;
+    }
+}
+
+message FourSevenFourEncoderMessages {
+    message LogoutMessage {    
+        option (MessageCodecExt).OpCodes = 166;
+        option (IsEncoder) = true;
+    }    
+
+    message OpenInterfaceMessage {
+        required bool Walkable = 1 [(FieldCodecExt).Type = Byte, (FieldCodecExt).Transform = Add];
+        required int32 InterfaceId = 2 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little];
+        required int32 Position = 3 [(FieldCodecExt).Type = Short];
+        required int32 Window = 4 [(FieldCodecExt).Type = Short];
+        option (MessageCodecExt).OpCodes = 17;
+        option (IsEncoder) = true;
+    }
+
+    message SendInterfaceMessage {
+        required int32 InterfaceId = 1 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little];
+        option (MessageCodecExt).OpCodes = 251;
+        option (IsEncoder) = true;
+    }
+}
+
+message FourSevenFourDecoderMessages {
+    message ChangeRegionMessage {
+        option (MessageCodecExt).OpCodes = 176;
+    }
+    
+    message WalkingQueueMessage {
+        required bool Run = 1;
+        repeated int32 X = 2;
+        repeated int32 Y = 3;      
+        
+        option (MessageCodecExt).OpCodes = 11;  
+        option (MessageCodecExt).OpCodes = 46;  
+        option (MessageCodecExt).OpCodes = 59;  
+        option (MessageCodecExt).SizeType = VariableByte;
+        option (MessageCodecExt).Custom = true;
+    }
+    
+    message FirstClickInterfaceOption {    
+        required int32 InterfaceId = 1 [(FieldCodecExt).Type = Short];
+        required int32 ButtonId = 2 [(FieldCodecExt).Type = Short];
+        required int32 Slot = 3 [(FieldCodecExt).Type = Short];
+        option (MessageCodecExt).OpCodes = 234;
+    }
+
+    message LandscapeChangeMessage {        
+        option (MessageCodecExt).OpCodes = 150;
+        required int32 LandscapeId = 1 [(FieldCodecExt).Type = Int, (FieldCodecExt).Order = Little];
+    }
+
+    message UnknownMessageOne {
+        option (MessageCodecExt).SizeType = ReadAll;
+        option (MessageCodecExt).OpCodes = 149;
+        option (MessageCodecExt).OpCodes = 34;
+        option (MessageCodecExt).OpCodes = 169;
+    }
+
+    message ClickScreenMessage {
+        option (MessageCodecExt).OpCodes = 167;
+        required int32 ScreenPackedInt = 1 [(FieldCodecExt).Type = Int];
+    }
+
+    message ClickButtonMessage {
+        option (MessageCodecExt).OpCodes = 215;
+        required int32 InterfaceId = 1 [(FieldCodecExt).Type = Short];
+        required int32 ButtonId = 2 [(FieldCodecExt).Type = Short];
+    }
+
+    message QuietMessage {
+        option (MessageCodecExt).OpCodes = 8;
+    }
+
+    message CloseInterfaceMessage {
+        required int32 InterfaceId = 1 [(FieldCodecExt).Type = Int, (FieldCodecExt).Order = Little];
+        required int32 ChildId = 2 [(FieldCodecExt).Type = Short, (FieldCodecExt).Order = Little];
+        option (MessageCodecExt).OpCodes = 64;
+    }
+
+    message PingMessage {
+        option (MessageCodecExt).OpCodes = 186;
     }
 }

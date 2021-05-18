@@ -3,7 +3,6 @@ using NetScape.Abstractions.Interfaces.Region;
 using NetScape.Abstractions.Interfaces.World.Updating;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
-using NetScape.Abstractions.Model.Game.Walking;
 using NetScape.Abstractions.Model.Region;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;

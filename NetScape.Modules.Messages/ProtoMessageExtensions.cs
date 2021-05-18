@@ -65,6 +65,8 @@ namespace NetScape.Modules.Messages
         {
             switch (sizeType)
             {
+                case FrameSizeType.ReadAll:
+                    return FrameType.ReadAll;
                 case FrameSizeType.FixedByte:
                     return FrameType.Fixed;
                 case FrameSizeType.Raw:

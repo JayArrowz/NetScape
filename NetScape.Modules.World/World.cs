@@ -43,9 +43,9 @@ namespace NetScape.Modules.World
             {
                 stopwatch.Restart();
                 Dictionary<RegionCoordinates, HashSet<RegionUpdateMessage>> encodes = new(), updates = new();
-
-                foreach (var player in Players)
+                for (int playerId = Players.Count - 1; playerId >= 0; playerId--)
                 {
+                    Player player = Players[playerId];
                     try
                     {
                         await _playerUpdater.PreUpdateAsync(player, encodes, updates);
@@ -57,6 +57,7 @@ namespace NetScape.Modules.World
                         Log.Logger.Error(e, nameof(Process));
                     }
                 }
+
                 var deltaSleep = 600 - (int)stopwatch.Elapsed.TotalMilliseconds;
                 if (deltaSleep > 0)
                 {

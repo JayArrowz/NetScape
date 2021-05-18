@@ -19,8 +19,8 @@ namespace NetScape.Modules.Messages
             IByteBuffer payload = frame.Payload;
             int opcode = frame.Id;
 
-            var isaacValue = CipherPair.EncodingRandom.NextInt();
-            opcode = opcode + isaacValue & 0xFF;
+            int? isaacValue = CipherPair?.EncodingRandom?.NextInt() ?? null;
+            opcode = isaacValue.HasValue ? opcode + isaacValue.Value & 0xFF : opcode & 0XFF;
 
             output.WriteByte(opcode);
             if (type == FrameType.VariableByte)

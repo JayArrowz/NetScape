@@ -8,6 +8,8 @@ namespace NetScape.Modules.Messages.Builder
         {
             switch (frameType)
             {
+                case FrameType.ReadAll:
+                    return input.ReadableBytes;
                 case FrameType.VariableByte:
                     return input.ReadByte();
                 case FrameType.VariableShort:

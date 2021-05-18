@@ -28,9 +28,9 @@ namespace NetScape.Modules.Messages
 
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output)
         {
-            var isaacValue = CipherPair.DecodingRandom.NextInt();
+            int? isaacValue = CipherPair?.DecodingRandom?.NextInt() ?? null;
             int opcode = input.ReadByte();
-            int unencodedOpcode = opcode - isaacValue & 0xFF;
+            int unencodedOpcode =  isaacValue.HasValue ? opcode - isaacValue.Value & 0xFF : opcode & 0XFF;
 
             var protoCodec = _protoMessageCodecHandler.DecoderCodecs.ContainsKey(unencodedOpcode) ?
                 _protoMessageCodecHandler.DecoderCodecs[unencodedOpcode] : null;
@@ -89,7 +89,7 @@ namespace NetScape.Modules.Messages
                     }
                 }
 
-                Log.Logger.Debug("Message Recieved: {0} TypeName: {1} Player: {2}", message, protoDecoder.TypeName, Player.Username);
+                Log.Logger.Debug("Message Recieved: {0} TypeName: {1} Player: {2} Size: {3} Opcode: {4}", message, protoDecoder.TypeName, Player.Username, size, unencodedOpcode);
                 protoDecoder.Publish(Player, message);
             }
         }

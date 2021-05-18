@@ -5,13 +5,13 @@ using NetScape.Abstractions.Model.Login;
 
 namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
 {
-    public class LoginEncoder : MessageToByteEncoder<LoginResponse<LoginStatus>>
+    public class LoginEncoder : MessageToByteEncoder<LoginResponse<ThreeOneSevenLoginStatus>>
     {
-        protected override void Encode(IChannelHandlerContext context, LoginResponse<LoginStatus> message, IByteBuffer output)
+        protected override void Encode(IChannelHandlerContext context, LoginResponse<ThreeOneSevenLoginStatus> message, IByteBuffer output)
         {
-            output.WriteByte((int) message.Status);
+            output.WriteByte((int)message.Status);
 
-            if (message.Status == LoginStatus.StatusOk)
+            if (message.Status == ThreeOneSevenLoginStatus.StatusOk)
             {
                 output.WriteByte(message.Rights);
                 output.WriteByte(message.Flagged ? 1 : 0);

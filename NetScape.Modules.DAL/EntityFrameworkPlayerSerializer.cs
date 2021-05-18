@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NetScape.Abstractions;
 using NetScape.Abstractions.FileSystem;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
@@ -80,7 +81,7 @@ namespace NetScape.Modules.DAL
                     {
                         Username = playerCredentials.Username,
                         Password = playerCredentials.Password,
-                        Position = new Position(3333, 3333, 0),
+                        Position = Constants.HomePosition,
                         Appearance = Appearance.DefaultAppearance
                     };
                     dbContext.Attach(defaultPlayer);

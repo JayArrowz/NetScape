@@ -36,7 +36,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.ThreeOneSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.ThreeOneSeven.LoginProtocol", "NetScape.Modules.ThreeOneSeven.LoginProtocol\NetScape.Modules.ThreeOneSeven.LoginProtocol.csproj", "{73806B1D-9116-4D4D-8BF3-81BF56162F63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.Modules.DAL.Test", "NetScape.Modules.DAL.Test\NetScape.Modules.DAL.Test.csproj", "{C663F250-D88B-4043-BD77-0EC27AD386AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetScape.Modules.DAL.Test", "NetScape.Modules.DAL.Test\NetScape.Modules.DAL.Test.csproj", "{C663F250-D88B-4043-BD77-0EC27AD386AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.Modules.FourSevenFour.LoginProtocol", "NetScape.Modules.FourSevenFour.LoginProtocol\NetScape.Modules.FourSevenFour.LoginProtocol.csproj", "{D111F2C7-6CE7-46BB-8624-5F032E3FA554}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.Modules.FourSevenFour.Game", "NetScape.Modules.FourSevenFour.Game\NetScape.Modules.FourSevenFour.Game.csproj", "{60279A5D-B40C-4D58-9279-C85E07B7606D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetScape.Modules.FourSevenFour.World.Updating", "NetScape.Modules.FourSevenFour.World.Updating\NetScape.Modules.FourSevenFour.World.Updating.csproj", "{F644F124-9C5E-44BC-B483-E3114DD0B373}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -108,6 +114,18 @@ Global
 		{C663F250-D88B-4043-BD77-0EC27AD386AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C663F250-D88B-4043-BD77-0EC27AD386AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C663F250-D88B-4043-BD77-0EC27AD386AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D111F2C7-6CE7-46BB-8624-5F032E3FA554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D111F2C7-6CE7-46BB-8624-5F032E3FA554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D111F2C7-6CE7-46BB-8624-5F032E3FA554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D111F2C7-6CE7-46BB-8624-5F032E3FA554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60279A5D-B40C-4D58-9279-C85E07B7606D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60279A5D-B40C-4D58-9279-C85E07B7606D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60279A5D-B40C-4D58-9279-C85E07B7606D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60279A5D-B40C-4D58-9279-C85E07B7606D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F644F124-9C5E-44BC-B483-E3114DD0B373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F644F124-9C5E-44BC-B483-E3114DD0B373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F644F124-9C5E-44BC-B483-E3114DD0B373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F644F124-9C5E-44BC-B483-E3114DD0B373}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
