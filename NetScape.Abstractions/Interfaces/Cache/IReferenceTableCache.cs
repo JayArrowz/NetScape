@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using Autofac;
 using NetScape.Abstractions.Cache;
 
 namespace NetScape.Abstractions.Interfaces.Cache
 {
-    public interface IReferenceTableCache : IDisposable
+    public interface IReferenceTableCache : IDisposable, IStartable
     {
         ConcurrentDictionary<CacheIndex, ReferenceTableFile> CachedReferenceTables { get; set; }
         void FlushCachedReferenceTables();

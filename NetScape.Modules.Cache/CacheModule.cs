@@ -10,7 +10,7 @@ namespace NetScape.Modules.Cache
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<FileStore>().As<IFileStore>().As<IStartable>().SingleInstance();
-            builder.RegisterType<RuneTek5Cache>().As<IReferenceTableCache>().SingleInstance();
+            builder.RegisterType<RuneTek5Cache>().As<IReferenceTableCache>().As<IStartable>().SingleInstance();
         }
     }
 }

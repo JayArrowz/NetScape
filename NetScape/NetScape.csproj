@@ -34,6 +34,7 @@
     <ProjectReference Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
     <ProjectReference Include="..\NetScape.GameServer\NetScape.Modules.Server.csproj" />
     <ProjectReference Include="..\NetScape.Modules.DAL\NetScape.Modules.DAL.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.FiveZeroEight.LoginProtocol\NetScape.Modules.FiveZeroEight.LoginProtocol.csproj" />
     <ProjectReference Include="..\NetScape.Modules.FourSevenFour.Game\NetScape.Modules.FourSevenFour.Game.csproj" />
     <ProjectReference Include="..\NetScape.Modules.FourSevenFour.LoginProtocol\NetScape.Modules.FourSevenFour.LoginProtocol.csproj" />
     <ProjectReference Include="..\NetScape.Modules.FourSevenFour.World.Updating\NetScape.Modules.FourSevenFour.World.Updating.csproj" />

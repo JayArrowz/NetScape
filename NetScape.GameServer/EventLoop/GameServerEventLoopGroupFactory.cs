@@ -1,9 +1,8 @@
-﻿using NetScape.Abstractions.Interfaces.IO.EventLoop;
-using DotNetty.Transport.Channels;
-using System.Threading.Tasks;
+﻿using DotNetty.Transport.Channels;
 using Microsoft.Extensions.Configuration;
+using NetScape.Abstractions.Interfaces.IO.EventLoop;
 
-namespace NetScape.Modules.Server.IO.EventLoop
+namespace NetScape.Modules.Server.EventLoop
 {
     public class GameServerEventLoopGroupFactory : BaseLoopGroupFactory, IEventLoopGroupFactory
     {

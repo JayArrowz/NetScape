@@ -1,5 +1,6 @@
 ﻿using NetScape.Abstractions.Cache;
 using NetScape.Abstractions.Interfaces.Cache;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -60,6 +61,27 @@ namespace NetScape.Modules.Cache.RuneTek5
             {
                 this._fileStore.Dispose();
                 this._fileStore = null;
+            }
+        }
+
+        public void Start()
+        {
+            var indexes = GetIndexes();
+            foreach(var index in indexes)
+            {
+                var dataMap = new Dictionary<int, byte[]>();
+                var fileIds = this.GetFileIds(index);
+                
+                foreach(var id in fileIds)
+                {
+                    try
+                    {
+                        _fileStore.ReadFileData(index, id);
+                    } catch(Exception e)
+                    {
+                        Log.Logger.Error("Could not cache Index: {0} Id: {1} Error: {2}", index, id, e);
+                    }
+                }
             }
         }
     }

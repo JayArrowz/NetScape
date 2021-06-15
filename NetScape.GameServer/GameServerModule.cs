@@ -1,11 +1,9 @@
-﻿using NetScape.Abstractions.Interfaces.IO;
+﻿using Autofac;
+using NetScape.Abstractions.Interfaces.IO;
 using NetScape.Abstractions.Interfaces.IO.EventLoop;
 using NetScape.Abstractions.IO;
-using NetScape.Modules.Server.IO;
-using NetScape.Modules.Server.IO.EventLoop;
-using Autofac;
 using NetScape.Abstractions.Model.Game;
-using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Modules.Server.EventLoop;
 
 namespace NetScape.Modules.Server
 {
@@ -23,6 +21,7 @@ namespace NetScape.Modules.Server
         {
             builder.RegisterType<GameServer>().As<IGameServer>();
             builder.RegisterType<ServerChannelInitializer>();
+            builder.RegisterType<GameServerChannelHandler>().AsSelf();
             builder.RegisterType<GameServerEventLoopGroupFactory>()
                 .As<IEventLoopGroupFactory>();
             builder.RegisterInstance(_gameServerParams).As<IGameServerParameters>();

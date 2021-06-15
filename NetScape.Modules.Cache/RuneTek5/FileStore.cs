@@ -29,6 +29,7 @@ namespace NetScape.Modules.Cache.RuneTek5
         private const int IndexPointerSize = 6; // filesize + firstSectorPosition
 
         private readonly Dictionary<CacheIndex, Stream> _indexStreams = new Dictionary<CacheIndex, Stream>();
+        private Dictionary<CacheIndex, Dictionary<int, byte[]>> CachedStorage { get; } = new();
 
         private Stream _dataStream;
 
@@ -43,7 +44,6 @@ namespace NetScape.Modules.Cache.RuneTek5
 
         public bool ReadOnly { get; private set; }
         public string CacheDirectory { get; private set; }
-        public IReferenceTableCache ReferenceTableCache { get; set; }
 
         /// <summary>
         ///     The loaded/existing indexes.
@@ -67,12 +67,26 @@ namespace NetScape.Modules.Cache.RuneTek5
         /// <returns></returns>
         public byte[] ReadFileData(CacheIndex index, int fileId)
         {
+            if(CachedStorage.ContainsKey(index))
+            {
+                if(CachedStorage[index].ContainsKey(fileId))
+                {
+                    return CachedStorage[index][fileId];
+                }
+            } else
+            {
+                CachedStorage.Add(index, new());
+            }
+
             int filesize;
-            return this.ReadSectors(index, fileId, out filesize).Aggregate(new List<byte>(), (bytes, sector) =>
+            var fileData = this.ReadSectors(index, fileId, out filesize).Aggregate(new List<byte>(), (bytes, sector) =>
             {
                 bytes.AddRange(sector.Payload);
                 return bytes;
             }).Take(filesize).ToArray();
+            CachedStorage[index].Add(fileId, fileData);
+            return fileData;
+
         }
 
         private IEnumerable<Sector> ReadSectors(CacheIndex index, int fileId, out int filesize)

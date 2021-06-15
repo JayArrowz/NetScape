@@ -1,14 +1,13 @@
-﻿using NetScape.Abstractions.Interfaces.IO;
-using NetScape.Abstractions.Interfaces.IO.EventLoop;
-using NetScape.Abstractions.IO;
-using DotNetty.Transport.Bootstrapping;
+﻿using DotNetty.Transport.Bootstrapping;
 using DotNetty.Transport.Channels;
 using DotNetty.Transport.Channels.Sockets;
+using NetScape.Abstractions.Interfaces.IO;
+using NetScape.Abstractions.Interfaces.IO.EventLoop;
 using Serilog;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace NetScape.Modules.Server.IO
+namespace NetScape.Modules.Server
 {
     public sealed class GameServer : IGameServer
     {

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj" />
+  </ItemGroup>
+
+</Project>

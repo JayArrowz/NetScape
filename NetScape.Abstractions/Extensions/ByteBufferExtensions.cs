@@ -7,6 +7,8 @@ namespace NetScape.Abstractions.Extensions
 {
     public static class ByteBufferExtensions
     {
+        static Encoding Iso_8859 { get; } = Encoding.GetEncoding("ISO-8859-1");
+
         public static string ReadString(this IByteBuffer buffer)
         {
             return ReadString(buffer, 10);
@@ -21,6 +23,21 @@ namespace NetScape.Abstractions.Extensions
                 strBldr.Append((char)charByte);
             }
             return strBldr.ToString();
+        }
+
+        public static void WriteSmart(this IByteBuffer buffer, int value)
+        {
+            if (value < 128)
+                buffer.WriteByte(value);
+            else
+                buffer.WriteShort(32768 + value);
+        }
+
+        public static void Write8859String(this IByteBuffer buffer, string str)
+        {
+            byte[] bytes = Iso_8859.GetBytes(str);
+            buffer.WriteBytes(bytes);
+            buffer.WriteByte(0);
         }
 
         public static IByteBuffer CompressGzip(this IByteBuffer buffer)
@@ -79,8 +96,8 @@ namespace NetScape.Abstractions.Extensions
                     k1 -= (l1 >> 5 ^ l1 << 4) + l1 ^ keys[sum & 3] + sum;
                 }
                 buffer.SetReaderIndex(buffer.ReaderIndex - 8);
-                buffer.WriteInt((int) k1);
-                buffer.WriteInt((int) l1);
+                buffer.WriteInt((int)k1);
+                buffer.WriteInt((int)l1);
             }
             buffer.SetReaderIndex(l);
         }
@@ -105,8 +122,8 @@ namespace NetScape.Abstractions.Extensions
                 }
 
                 buffer.SetWriterIndex(buffer.WriterIndex - 8);
-                buffer.WriteInt((int) l);
-                buffer.WriteInt((int) i1);
+                buffer.WriteInt((int)l);
+                buffer.WriteInt((int)i1);
             }
             buffer.SetWriterIndex(o);
         }

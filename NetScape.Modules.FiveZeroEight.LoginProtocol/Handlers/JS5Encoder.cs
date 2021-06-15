@@ -8,7 +8,7 @@ using System;
 using System.Linq;
 using System.Text;
 
-namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
+namespace NetScape.Modules.FiveZeroEight.LoginProtocol.Handlers
 {
     public class JS5Encoder : MessageToByteEncoder<JS5Request>
     {
@@ -45,6 +45,12 @@ namespace NetScape.Modules.FourSevenFour.LoginProtocol.Handlers
                 else
                 {
                     fileData = GetFileData(index, file);
+
+                    if (message.Priority)
+                    {
+                        fileData[0] |= 0x80;
+                    }
+
                     allowEncryption = true;
                 }
 

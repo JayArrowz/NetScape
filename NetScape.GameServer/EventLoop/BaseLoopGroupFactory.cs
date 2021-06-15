@@ -1,11 +1,11 @@
-﻿using System;
+﻿using DotNetty.Transport.Channels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using DotNetty.Transport.Channels;
 
-namespace NetScape.Modules.Server.IO.EventLoop
+namespace NetScape.Modules.Server.EventLoop
 {
     /// <summary>
     /// The <see cref="BaseLoopGroupFactory"/> class keeps references of event loop groups that are created

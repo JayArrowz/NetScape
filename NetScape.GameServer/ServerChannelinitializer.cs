@@ -1,7 +1,8 @@
-﻿using DotNetty.Transport.Channels;
+﻿using DotNetty.Handlers.Logging;
+using DotNetty.Transport.Channels;
 using NetScape.Abstractions.Interfaces.Login;
 
-namespace NetScape.Abstractions.IO
+namespace NetScape.Modules.Server
 {
     public class ServerChannelInitializer : ChannelInitializer<IChannel>
     {
@@ -15,6 +16,7 @@ namespace NetScape.Abstractions.IO
         protected override void InitChannel(IChannel channel)
         {
             var pipeline = channel.Pipeline;
+            pipeline.AddLast(new GameServerChannelHandler());
             pipeline.AddLast(_loginProvider.Provide());
         }
     }
