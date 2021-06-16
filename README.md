@@ -1,6 +1,9 @@
 # NetScape
 Modular Runescape Private Server in C# for learning purposes & fun!
 
+# Badges
+[![wakatime](https://wakatime.com/badge/github/JayArrowz/NetScape.svg)](https://wakatime.com/badge/github/JayArrowz/NetScape)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
