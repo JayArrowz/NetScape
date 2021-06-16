@@ -1,8 +1,8 @@
 # NetScape
 Modular Runescape Private Server in C# for learning purposes & fun!
 
-# Badges
-[![wakatime](https://wakatime.com/badge/github/JayArrowz/NetScape.svg)](https://wakatime.com/badge/github/JayArrowz/NetScape)
+# Badges 
+[![wakatime](https://wakatime.com/badge/github/JayArrowz/NetScape.svg)](https://wakatime.com/badge/github/JayArrowz/NetScape) [![.NET](https://github.com/JayArrowz/NetScape/actions/workflows/docs.yml/badge.svg?branch=master)](https://github.com/JayArrowz/NetScape/actions/workflows/docs.yml)
 
 ## Getting Started
 
