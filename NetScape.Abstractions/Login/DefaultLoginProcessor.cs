@@ -51,7 +51,7 @@ namespace NetScape.Abstractions.Login
         }
 
         /// <summary>
-        /// Processes a single by retriving the player from <see cref="IPlayerSerializer"/>
+        /// Processes a single by retriving the player from <see cref="IPlayerRepository"/>
         /// </summary>
         /// <param name="request">The login request.</param>
         /// <returns></returns>

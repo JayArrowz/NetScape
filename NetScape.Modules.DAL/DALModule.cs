@@ -7,7 +7,7 @@ namespace NetScape.Modules.DAL
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<EntityFrameworkPlayerSerializer>().As<IPlayerSerializer>();
+            builder.RegisterType<EntityFrameworkPlayerRepository>().As<IPlayerRepository>();
         }
     }
 }

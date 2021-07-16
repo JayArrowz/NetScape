@@ -13,12 +13,12 @@ namespace NetScape.Modules.DAL
     /// <summary>
     /// Serializes/Deserializes players using entity framework
     /// </summary>
-    /// <seealso cref="NetScape.Abstractions.FileSystem.IPlayerSerializer" />
-    public class EntityFrameworkPlayerSerializer : IPlayerSerializer
+    /// <seealso cref="IPlayerRepository" />
+    public class EntityFrameworkPlayerRepository : IPlayerRepository
     {
         private readonly IDbContextFactory<DatabaseContext> _dbContextFactory;
 
-        public EntityFrameworkPlayerSerializer(IDbContextFactory<DatabaseContext> dbContextFactory)
+        public EntityFrameworkPlayerRepository(IDbContextFactory<DatabaseContext> dbContextFactory)
         {
             _dbContextFactory = dbContextFactory;
         }

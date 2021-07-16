@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace NetScape.Abstractions.FileSystem
 {
-    public interface IPlayerSerializer
+    public interface IPlayerRepository
     {
         /// <summary>
         /// Retrive player for name

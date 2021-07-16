@@ -8,15 +8,15 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol
 
     public class LoginProcessor : DefaultLoginProcessor<Rs2LoginRequest, Rs2LoginResponse>
     {
-        private readonly IPlayerSerializer _playerSerializer;
+        private readonly IPlayerRepository _playerRepository;
 
-        public LoginProcessor(ILogger logger, IPlayerSerializer playerSerializer) : base(logger)
+        public LoginProcessor(ILogger logger, IPlayerRepository playerRepository) : base(logger)
         {
-            _playerSerializer = playerSerializer;
+            _playerRepository = playerRepository;
         }
 
         /// <summary>
-        /// Processes a single by retriving the player from <see cref="IPlayerSerializer"/>
+        /// Processes a single by retriving the player from <see cref="IPlayerRepository"/>
         /// </summary>
         /// <param name="request">The login request.</param>
         /// <returns></returns>
@@ -32,7 +32,7 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol
                 return new Rs2LoginResponse { Status = ThreeOneSevenLoginStatus.StatusInvalidCredentials };
             }
 
-            var playerInDatabase = await _playerSerializer.GetAsync(username);
+            var playerInDatabase = await _playerRepository.GetAsync(username);
 
             if (playerInDatabase != null && !playerInDatabase.Password.Equals(password))
             {
@@ -41,7 +41,7 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol
 
             var createdNewPlayer = playerInDatabase == null;
 
-            var player = await _playerSerializer.GetOrCreateAsync(request.Credentials);
+            var player = await _playerRepository.GetOrCreateAsync(request.Credentials);
             return new Rs2LoginResponse { Status = ThreeOneSevenLoginStatus.StatusOk, Player = player, Created = createdNewPlayer };
         }
     }

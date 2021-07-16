@@ -11,7 +11,7 @@ namespace NetScape.Modules.DAL.Test
 {
     public class EntityFrameworkPlayerSerializerTests
     {
-        private readonly EntityFrameworkPlayerSerializer _entityFrameworkPlayerSerializer;
+        private readonly EntityFrameworkPlayerRepository _entityFrameworkPlayerRepository;
         private readonly IDbContextFactory<DatabaseContext> _fakeDbContextFactory;
 
         public EntityFrameworkPlayerSerializerTests()
@@ -23,7 +23,7 @@ namespace NetScape.Modules.DAL.Test
                     new DbContextOptionsBuilder<DatabaseContext>().UseInMemoryDatabase(seedDbId).Options
                 )
             );
-            _entityFrameworkPlayerSerializer = new EntityFrameworkPlayerSerializer(_fakeDbContextFactory);
+            _entityFrameworkPlayerRepository = new EntityFrameworkPlayerRepository(_fakeDbContextFactory);
         }
 
         [Fact]
@@ -41,7 +41,7 @@ namespace NetScape.Modules.DAL.Test
         public async Task CanGet()
         {
             await AddSeedPlayer("Test", "Test");
-            var player = await _entityFrameworkPlayerSerializer.GetAsync("Test");
+            var player = await _entityFrameworkPlayerRepository.GetAsync("Test");
             player.Should().NotBeNull();
         }
 
@@ -52,7 +52,7 @@ namespace NetScape.Modules.DAL.Test
             using (var dbContext = _fakeDbContextFactory.CreateDbContext())
             {
                 player.Username = "Jill";
-                await _entityFrameworkPlayerSerializer.AddOrUpdateAsync(player);
+                await _entityFrameworkPlayerRepository.AddOrUpdateAsync(player);
 
                 var dbPlayer = await dbContext.Players.FirstOrDefaultAsync(t => t.Username.Equals("Jill"));
                 dbPlayer.Should().NotBeNull();
@@ -65,7 +65,7 @@ namespace NetScape.Modules.DAL.Test
         [InlineData("Nooba", "Letaaa")]
         public async Task CanGetOrCreate(string username, string password)
         {
-            var player = await _entityFrameworkPlayerSerializer.GetOrCreateAsync(new PlayerCredentials
+            var player = await _entityFrameworkPlayerRepository.GetOrCreateAsync(new PlayerCredentials
             {
                 Username = username,
                 Password = password
@@ -84,7 +84,7 @@ namespace NetScape.Modules.DAL.Test
                 Password = pass,
                 Appearance = new Appearance { Style = new int[1], Colors = new int[1], Gender = Gender.Female }
             };
-            await _entityFrameworkPlayerSerializer.AddOrUpdateAsync(player);
+            await _entityFrameworkPlayerRepository.AddOrUpdateAsync(player);
             return player;
         }
     }

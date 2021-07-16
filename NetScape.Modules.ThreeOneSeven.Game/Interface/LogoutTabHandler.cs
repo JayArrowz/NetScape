@@ -14,17 +14,17 @@ namespace NetScape.Modules.ThreeOneSeven.Game.Interface
     public class LogoutTabHandler
     {
         private readonly IProtoMessageSender _protoMessageSender;
-        private readonly IPlayerSerializer _playerSerializer;
-        public LogoutTabHandler(IProtoMessageSender protoMessageSender, IPlayerSerializer playerSerializer)
+        private readonly IPlayerRepository _playerRepository;
+        public LogoutTabHandler(IProtoMessageSender protoMessageSender, IPlayerRepository playerRepository)
         {
             _protoMessageSender = protoMessageSender;
-            _playerSerializer = playerSerializer;
+            _playerRepository = playerRepository;
         }
 
         [Message(typeof(ButtonMessage), nameof(Filter))]
         public async Task OnLogoutClick(DecoderMessage<ButtonMessage> buttonMessage)
         {
-            await _playerSerializer.AddOrUpdateAsync(buttonMessage.Player);
+            await _playerRepository.AddOrUpdateAsync(buttonMessage.Player);
             await _protoMessageSender.SendAsync(buttonMessage.Player, new LogoutMessage());
         }
 
