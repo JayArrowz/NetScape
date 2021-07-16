@@ -3,12 +3,17 @@
     <IsPackable>true</IsPackable>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <RepositoryUrl>http://github.com/jayarrowz/NetScape</RepositoryUrl>
+    <RepositoryUrl>https://github.com/jayarrowz/NetScape</RepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
     <PackageTags>NetScape</PackageTags>
-    <PackageDescription>NetScape 474 Updating</PackageDescription>
+    <PackageDescription>NetScape 474 Updating Module</PackageDescription>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="../LICENSE.txt" Pack="true" PackagePath="LICENSE.txt"/>
+  </ItemGroup>
 </Project>
