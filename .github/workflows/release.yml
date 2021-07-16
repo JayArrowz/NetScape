@@ -32,4 +32,4 @@ jobs:
         with:
           # NuGet version to install. Can be `latest`, `preview`, a concrete version like `5.3.1`, or a semver range specifier like `5.x`.
           nuget-api-key: ${{ secrets.NUGET_KEY }}
-      - run: dotnet nuget push packed/**.nupkg -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json
+      - run: dotnet nuget push packed/**.nupkg --skip-duplicate --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_KEY }}
