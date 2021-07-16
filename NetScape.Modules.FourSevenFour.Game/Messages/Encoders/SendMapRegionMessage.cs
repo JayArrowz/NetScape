@@ -1,19 +1,15 @@
 ﻿using DotNetty.Buffers;
-using NetScape.Abstractions.Model.Game;
-using NetScape.Modules.Messages;
-using NetScape.Modules.Messages.Builder;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using NetScape.Abstractions.Interfaces.Messages;
+using NetScape.Modules.Messages.Builder;
+using NetScape.Abstractions.Model.Game;
 
 namespace NetScape.Modules.FourSevenFour.Game.Messages.Encoders
 {
     public class SendMapRegionMessage : IEncoderMessage<MessageFrame>
     {
-        public Player Player { get; }
+        public Abstractions.Model.Game.Player Player { get; }
 
-        public SendMapRegionMessage(Player player)
+        public SendMapRegionMessage(Abstractions.Model.Game.Player player)
         {
             Player = player;
         }
@@ -23,7 +19,7 @@ namespace NetScape.Modules.FourSevenFour.Game.Messages.Encoders
             var messageFrameBuilder = new MessageFrameBuilder(alloc, 61, FrameType.VariableShort);
             var playerPos = Player.Position;
             var clearRegion = false;
-            
+
             var regionX = playerPos.RegionX;
             var regionY = playerPos.RegionY;
             var absoluteRegionX = (regionX + 6) / 8;

@@ -8,9 +8,9 @@ namespace NetScape.Modules.FourSevenFour.Game.Messages.Encoders
 {
     public class SendPingMessage : IEncoderMessage<MessageFrame>
     {
-        public Player Player { get; }
+        public Abstractions.Model.Game.Player Player { get; }
 
-        public SendPingMessage(Player player)
+        public SendPingMessage(Abstractions.Model.Game.Player player)
         {
             Player = player;
         }

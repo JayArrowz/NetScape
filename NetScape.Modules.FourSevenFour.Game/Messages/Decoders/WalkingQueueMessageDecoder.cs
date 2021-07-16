@@ -12,7 +12,7 @@ namespace NetScape.Modules.FourSevenFour.Game.Messages.Decoders
         public override int[] Ids { get; } = new int[] { 11, 46, 59 };
         public override FrameType FrameType { get; } = FrameType.VariableByte;
 
-        protected override FourSevenFourDecoderMessages.Types.WalkingQueueMessage Decode(Player player, MessageFrame frame)
+        protected override FourSevenFourDecoderMessages.Types.WalkingQueueMessage Decode(Abstractions.Model.Game.Player player, MessageFrame frame)
         {
             var reader = new MessageFrameReader(frame);
             var length = frame.Payload.ReadableBytes;
