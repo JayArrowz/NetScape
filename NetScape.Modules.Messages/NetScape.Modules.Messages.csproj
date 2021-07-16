@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
+  <Import Project="Nuget.Projects.props" />
   <Target Name="RemoveSourceGeneratedFiles" BeforeTargets="CoreCompile">
     <ItemGroup>
       <Compile Remove="**/*.SourceGenerated.cs" />
@@ -7,12 +7,18 @@
   </Target>
 
   <PropertyGroup>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
     <TargetFramework>netcoreapp5.0</TargetFramework>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
     <Description>NetScape 317 Messaging Module</Description>
   </PropertyGroup>
+  <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
   <ItemGroup>
     <None Remove="Protos\MessageCodec.proto" />
   </ItemGroup>

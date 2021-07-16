@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <RepositoryUrl>http://github.com/jayarrowz/NetScape</RepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <PackageTags>NetScape</PackageTags>
+    <PackageDescription>NetScape 317 Game Module</PackageDescription>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+</Project>
