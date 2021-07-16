@@ -1,6 +1,6 @@
 ﻿using NetScape.Abstractions.Model.World.Updating;
 
-namespace NetScape.Modules.World.Updating.Segments
+namespace NetScape.Modules.ThreeOneSeven.World.Updating.Segments
 {
     public class RemoveMobSegment : SynchronizationSegment
     {

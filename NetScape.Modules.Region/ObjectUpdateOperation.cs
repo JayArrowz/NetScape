@@ -1,9 +1,8 @@
 ﻿using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Interfaces.Region;
 using NetScape.Abstractions.Model.Region;
-using NetScape.Modules.Region;
 
-namespace NetScape.Abstractions.Model.Game
+namespace NetScape.Modules.Region
 {
     public class ObjectUpdateOperation : RegionUpdateOperation
     {

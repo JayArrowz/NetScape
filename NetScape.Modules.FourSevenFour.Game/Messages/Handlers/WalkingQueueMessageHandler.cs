@@ -4,6 +4,7 @@ using NetScape.Abstractions.Model.Messages;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Models;
 using System.Linq;
+using NetScape.Abstractions.Game;
 
 namespace NetScape.Modules.FourSevenFour.Game.Messages.Handlers { 
 

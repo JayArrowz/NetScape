@@ -2,8 +2,8 @@
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 using NetScape.Abstractions.Interfaces.Messages;
-using NetScape.Abstractions.IO.Util;
 using NetScape.Abstractions.Model.Game;
+using NetScape.Abstractions.Util;
 using NetScape.Modules.Messages.Builder;
 
 namespace NetScape.Modules.Messages

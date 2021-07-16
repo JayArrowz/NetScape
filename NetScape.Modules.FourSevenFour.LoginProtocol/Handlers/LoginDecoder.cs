@@ -8,7 +8,6 @@ using NetScape.Abstractions.Interfaces.Login;
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Interfaces.World;
 using NetScape.Abstractions.IO;
-using NetScape.Abstractions.IO.Util;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.Login;
 using NetScape.Abstractions.Util;

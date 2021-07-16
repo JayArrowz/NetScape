@@ -4,6 +4,7 @@ using DotNetty.Transport.Channels;
 using Serilog;
 using Autofac;
 using NetScape.Abstractions.Interfaces;
+using NetScape.Abstractions.Server;
 
 namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
 {

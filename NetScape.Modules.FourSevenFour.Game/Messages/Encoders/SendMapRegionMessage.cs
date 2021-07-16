@@ -5,6 +5,7 @@ using NetScape.Modules.Messages.Builder;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using NetScape.Abstractions.Interfaces.Messages;
 
 namespace NetScape.Modules.FourSevenFour.Game.Messages.Encoders
 {

@@ -2,14 +2,10 @@
 using NetScape.Abstractions.Interfaces.Game.Interface;
 using NetScape.Abstractions.Interfaces.Game.Player;
 using NetScape.Abstractions.Interfaces.Messages;
-using NetScape.Modules.Messages;
 using NetScape.Modules.ThreeOneSeven.Game.Interface;
-using NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers;
 using NetScape.Modules.ThreeOneSeven.Game.Players;
-using System.Linq;
-using System.Reflection;
 
-namespace NetScape.Modules.Game
+namespace NetScape.Modules.ThreeOneSeven.Game
 {
     public class ThreeOneSevenGameModule : Autofac.Module
     {

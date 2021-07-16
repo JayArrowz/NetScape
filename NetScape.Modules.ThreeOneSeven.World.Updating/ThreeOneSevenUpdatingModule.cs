@@ -2,7 +2,7 @@
 using NetScape.Abstractions.Interfaces.World.Updating;
 using NetScape.Abstractions.Model.Game;
 
-namespace NetScape.Modules.World.Updating
+namespace NetScape.Modules.ThreeOneSeven.World.Updating
 {
     public class ThreeOneSevenUpdatingModule : Module
     {

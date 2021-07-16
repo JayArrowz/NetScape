@@ -1,4 +1,8 @@
-﻿using NetScape.Abstractions.Interfaces.Messages;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using NetScape.Abstractions.Game;
+using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Interfaces.Region;
 using NetScape.Abstractions.Interfaces.World.Updating;
 using NetScape.Abstractions.Model;
@@ -7,13 +11,11 @@ using NetScape.Abstractions.Model.Region;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
 using NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders;
-using NetScape.Modules.World.Updating.Segments;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using NetScape.Modules.ThreeOneSeven.World.Updating.Messages;
+using NetScape.Modules.ThreeOneSeven.World.Updating.Segments;
 using static NetScape.Modules.Messages.Models.ThreeOneSevenEncoderMessages.Types;
 
-namespace NetScape.Modules.World.Updating
+namespace NetScape.Modules.ThreeOneSeven.World.Updating
 {
     public class PlayerUpdater : IEntityUpdater<Player>
     {

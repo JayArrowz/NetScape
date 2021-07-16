@@ -1,6 +1,4 @@
-﻿using NetScape.Abstractions.Util;
-
-namespace NetScape.Abstractions.IO.Util
+﻿namespace NetScape.Abstractions.Util
 {
     public class IsaacRandomPair
     {

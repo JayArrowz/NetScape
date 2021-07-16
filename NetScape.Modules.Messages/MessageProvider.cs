@@ -3,6 +3,7 @@ using DotNetty.Transport.Channels;
 using NetScape.Abstractions.Interfaces;
 using NetScape.Abstractions.Interfaces.Messages;
 using System;
+using NetScape.Abstractions.Server;
 
 namespace NetScape.Modules.Messages
 {

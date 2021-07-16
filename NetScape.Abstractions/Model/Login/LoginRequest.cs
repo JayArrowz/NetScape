@@ -1,7 +1,7 @@
 ﻿using DotNetty.Transport.Channels;
-using NetScape.Abstractions.IO.Util;
 using System;
 using System.Threading.Tasks;
+using NetScape.Abstractions.Util;
 
 namespace NetScape.Abstractions.Model.Login
 {

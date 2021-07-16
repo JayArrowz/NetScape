@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetScape.Messages.Generator
+namespace NetScape.Modules.Messages.Generator
 {
     [Obsolete]
     public class FrameParameters

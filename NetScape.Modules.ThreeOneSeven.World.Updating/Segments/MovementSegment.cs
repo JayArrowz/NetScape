@@ -1,9 +1,9 @@
-﻿using Dawn;
+﻿using System;
+using Dawn;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.World.Updating;
-using System;
 
-namespace NetScape.Modules.World.Updating.Segments
+namespace NetScape.Modules.ThreeOneSeven.World.Updating.Segments
 {
     public class MovementSegment : SynchronizationSegment
     {

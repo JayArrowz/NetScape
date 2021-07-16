@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading;
 using System.Threading.Tasks;
+using NetScape.Abstractions.Interfaces.Messages;
 
 namespace NetScape.Abstractions.Model.Game
 {

@@ -1,9 +1,9 @@
-﻿using NetScape.Abstractions.Interfaces.Game.Interface;
+﻿using System.Threading.Tasks;
+using NetScape.Abstractions.Interfaces.Game.Interface;
 using NetScape.Abstractions.Interfaces.Messages;
-using System.Threading.Tasks;
 using static NetScape.Modules.Messages.Models.FourSevenFourEncoderMessages.Types;
 
-namespace NetScape.Modules.FourSevenFour.Game.Interface
+namespace NetScape.Modules.FourSevenFour.Game.Player
 {
     public class TabManager : ITabManager
     {

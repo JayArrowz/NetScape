@@ -1,4 +1,5 @@
 ﻿using DotNetty.Buffers;
+using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Builder;

@@ -2,13 +2,12 @@
 using NetScape.Abstractions.Interfaces.Game.Interface;
 using NetScape.Abstractions.Interfaces.Game.Player;
 using NetScape.Abstractions.Interfaces.Messages;
-using NetScape.Modules.FourSevenFour.Game.Interface;
-using NetScape.Modules.FourSevenFour.Game.Players;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NetScape.Modules.FourSevenFour.Game.Player;
 
 namespace NetScape.Modules.FourSevenFour.Game
 {

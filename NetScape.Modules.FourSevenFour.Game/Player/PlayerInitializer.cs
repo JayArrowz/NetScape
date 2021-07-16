@@ -1,11 +1,11 @@
-﻿using NetScape.Abstractions.Interfaces.Game.Interface;
+﻿using System.Threading.Tasks;
+using NetScape.Abstractions.Interfaces.Game.Interface;
 using NetScape.Abstractions.Interfaces.Game.Player;
 using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Modules.FourSevenFour.Game.Messages.Encoders;
-using System.Threading.Tasks;
 using static NetScape.Modules.Messages.Models.FourSevenFourEncoderMessages.Types;
 
-namespace NetScape.Modules.FourSevenFour.Game.Players
+namespace NetScape.Modules.FourSevenFour.Game.Player
 {
     public class PlayerInitializer : IPlayerInitializer
     {

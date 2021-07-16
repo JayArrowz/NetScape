@@ -1,13 +1,12 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Text;
-using NetScape.Modules.Messages.Builder;
-using System;
-using System.Diagnostics;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.Text;
+using NetScape.Modules.Messages.Builder;
 
-namespace NetScape.Messages.Generator
+namespace NetScape.Modules.Messages.Generator
 {
     [Obsolete]
     [Generator]

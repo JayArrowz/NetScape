@@ -1,7 +1,7 @@
-﻿using NetScape.Modules.Messages.Builder;
-using System;
+﻿using System;
+using NetScape.Modules.Messages.Builder;
 
-namespace NetScape.Messages.Generator
+namespace NetScape.Modules.Messages.Generator
 {
     [Obsolete]
     public class GeneratorData

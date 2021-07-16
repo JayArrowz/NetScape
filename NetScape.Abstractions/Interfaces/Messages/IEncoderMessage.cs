@@ -1,6 +1,6 @@
 ﻿using DotNetty.Buffers;
 
-namespace NetScape.Modules.Messages
+namespace NetScape.Abstractions.Interfaces.Messages
 {
     /// <summary>
     /// Outgoing message encoder

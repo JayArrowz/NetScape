@@ -1,10 +1,12 @@
-﻿using NetScape.Abstractions.Interfaces.Region;
-using NetScape.Abstractions.Interfaces.Region.Collision;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NetScape.Abstractions.Interfaces.Region;
+using NetScape.Abstractions.Interfaces.Region.Collision;
+using NetScape.Abstractions.Model;
+using NetScape.Abstractions.Model.Game;
 
-namespace NetScape.Abstractions.Model.Game
+namespace NetScape.Abstractions.Game
 {
     public class WalkingQueueHandler
     {

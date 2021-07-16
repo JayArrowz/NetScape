@@ -1,4 +1,4 @@
-﻿namespace NetScape.Modules.FourSevenFour.World.Updating.Segements
+﻿namespace NetScape.Modules.FourSevenFour.World.Updating.Segments
 {
     public enum SegmentType
     {

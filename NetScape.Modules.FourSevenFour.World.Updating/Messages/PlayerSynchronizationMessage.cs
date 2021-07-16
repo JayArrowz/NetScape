@@ -1,13 +1,13 @@
-﻿using DotNetty.Buffers;
+﻿using System.Collections.Generic;
+using DotNetty.Buffers;
+using NetScape.Abstractions.Interfaces.Messages;
 using NetScape.Abstractions.Model;
 using NetScape.Abstractions.Model.Game;
 using NetScape.Abstractions.Model.World.Updating.Blocks;
-using NetScape.Modules.FourSevenFour.World.Updating.Segements;
-using NetScape.Modules.Messages;
+using NetScape.Modules.FourSevenFour.World.Updating.Segments;
 using NetScape.Modules.Messages.Builder;
-using System.Collections.Generic;
 
-namespace NetScape.Modules.FourSevenFour.World.Updating
+namespace NetScape.Modules.FourSevenFour.World.Updating.Messages
 {
     public class PlayerSynchronizationMessage : IEncoderMessage<MessageFrame>
     {

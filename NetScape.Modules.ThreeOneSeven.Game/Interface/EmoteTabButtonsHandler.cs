@@ -1,14 +1,10 @@
-﻿using NetScape.Abstractions.Model.Messages;
+﻿using System.Collections.Generic;
+using NetScape.Abstractions.Model.Messages;
 using NetScape.Abstractions.Model.World.Updating;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers
+namespace NetScape.Modules.ThreeOneSeven.Game.Interface
 {
     [MessageHandler]
     public class EmoteTabButtonsHandler
