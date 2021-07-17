@@ -3,12 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using NetScape.Abstractions.Model.Game;
 using NetScape.Modules.DAL;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace NetScape.Modules.DAL.Migrations
 {
-    [DbContext(typeof(DatabaseContext))]
+    [DbContext(typeof(DatabaseContext<Player>))]
     [Migration("20210123212503_RemoveAppearanceFields")]
     partial class RemoveAppearanceFields
     {

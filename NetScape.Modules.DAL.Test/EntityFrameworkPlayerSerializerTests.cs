@@ -11,19 +11,19 @@ namespace NetScape.Modules.DAL.Test
 {
     public class EntityFrameworkPlayerSerializerTests
     {
-        private readonly EntityFrameworkPlayerRepository _entityFrameworkPlayerRepository;
-        private readonly IDbContextFactory<DatabaseContext> _fakeDbContextFactory;
+        private readonly EntityFrameworkPlayerRepository<Player> _entityFrameworkPlayerRepository;
+        private readonly IDbContextFactory<DatabaseContext<Player>> _fakeDbContextFactory;
 
         public EntityFrameworkPlayerSerializerTests()
         {
             var seedDbId = Guid.NewGuid().ToString();
-            _fakeDbContextFactory = Substitute.For<IDbContextFactory<DatabaseContext>>();
+            _fakeDbContextFactory = Substitute.For<IDbContextFactory<DatabaseContext<Player>>>();
             _fakeDbContextFactory.CreateDbContext().ReturnsForAnyArgs(x =>
-                new DatabaseContext(
-                    new DbContextOptionsBuilder<DatabaseContext>().UseInMemoryDatabase(seedDbId).Options
+                new DatabaseContext<Player>(
+                    new DbContextOptionsBuilder<DatabaseContext<Player>>().UseInMemoryDatabase(seedDbId).Options
                 )
             );
-            _entityFrameworkPlayerRepository = new EntityFrameworkPlayerRepository(_fakeDbContextFactory);
+            _entityFrameworkPlayerRepository = new EntityFrameworkPlayerRepository<Player>(_fakeDbContextFactory);
         }
 
         [Fact]

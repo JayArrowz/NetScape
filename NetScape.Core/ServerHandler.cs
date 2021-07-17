@@ -17,18 +17,20 @@ using NetScape.Modules.World;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using NetScape.Abstractions.Model.Game;
 
 namespace NetScape.Core
 {
     public static class ServerHandler
     {
-        public static ILifetimeScope RunServer(string configFileName, Action<DbContextOptionsBuilder, IConfigurationRoot> dbOptions, List<Module> modules)
+        public static ILifetimeScope RunServer<TPlayer>(string configFileName, Action<DbContextOptionsBuilder, IConfigurationRoot> dbOptions, List<Module> modules)
+            where TPlayer : Player, new()
         {
             var serviceCollection = new ServiceCollection();
-            var config = ConfigureServices(serviceCollection, configFileName, dbOptions);
+            var config = ConfigureServices<TPlayer>(serviceCollection, configFileName, dbOptions);
             var containerBuilder = new ContainerBuilder();
             containerBuilder.Populate(serviceCollection);
-            ConfigureAutofac(containerBuilder, config, modules);
+            ConfigureAutofac<TPlayer>(containerBuilder, config, modules);
             containerBuilder.RegisterBuildCallback(t => t.Resolve<ContainerProvider>().Container = (IContainer)t);
             var container = containerBuilder.Build();
             var serviceProvider = new AutofacServiceProvider(container);
@@ -39,11 +41,12 @@ namespace NetScape.Core
             return scope;
         }
 
-        public static void ConfigureCore(this ContainerBuilder containerBuilder, IConfigurationRoot configurationRoot)
+        public static void ConfigureCore<TPlayer>(this ContainerBuilder containerBuilder, IConfigurationRoot configurationRoot)
+            where TPlayer : Player, new()
         {
             containerBuilder.RegisterModule(new SeriLogModule(configurationRoot));
             containerBuilder.RegisterModule(new CacheModule());
-            containerBuilder.RegisterModule(new DALModule());
+            containerBuilder.RegisterModule(new DALModule<TPlayer>());
             containerBuilder.RegisterModule(new GameServerModule(configurationRoot["BindAddr"], ushort.Parse(configurationRoot["BindPort"])));
             containerBuilder.RegisterModule(new WorldModule());
             containerBuilder.RegisterModule(new RegionModule());
@@ -53,17 +56,19 @@ namespace NetScape.Core
             containerBuilder.RegisterType<ContainerProvider>().SingleInstance();
         }
 
-        private static void ConfigureAutofac(ContainerBuilder containerBuilder, IConfigurationRoot configurationRoot, List<Module> modules)
+        private static void ConfigureAutofac<TPlayer>(ContainerBuilder containerBuilder, IConfigurationRoot configurationRoot, List<Module> modules)
+            where TPlayer : Player, new()
         {
             foreach (var module in modules)
             {
                 containerBuilder.RegisterModule(module);
             }
 
-            containerBuilder.ConfigureCore(configurationRoot);
+            containerBuilder.ConfigureCore<TPlayer>(configurationRoot);
         }
 
-        public static IConfigurationRoot ConfigureServices(this IServiceCollection serviceCollection, string configFileName, Action<DbContextOptionsBuilder, IConfigurationRoot> optionsAction)
+        public static IConfigurationRoot ConfigureServices<TPlayer>(this IServiceCollection serviceCollection, string configFileName, Action<DbContextOptionsBuilder, IConfigurationRoot> optionsAction)
+            where TPlayer : Player, new()
         {
             var configurationRoot = CreateConfigurationRoot(configFileName);
 
@@ -71,7 +76,7 @@ namespace NetScape.Core
             serviceCollection.AddLogging();
 
             //Build DB Connection
-            serviceCollection.AddDbContextFactory<DatabaseContext>(opts => optionsAction(opts, configurationRoot));
+            serviceCollection.AddDbContextFactory<DatabaseContext<TPlayer>>(opts => optionsAction(opts, configurationRoot));
 
             // Add access to generic IConfigurationRoot
             serviceCollection.AddSingleton(configurationRoot);

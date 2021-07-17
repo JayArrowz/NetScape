@@ -9,17 +9,17 @@ using NetScape.Abstractions.Model.Game;
 
 namespace NetScape.Modules.DAL
 {
-    public partial class DatabaseContext : DbContext
+    public partial class DatabaseContext<TPlayer> : DbContext where TPlayer : Player
     {
         private readonly ILoggerFactory _loggerFactory;
 
-        public DatabaseContext(DbContextOptions<DatabaseContext> options, ILoggerFactory loggerFactory = null)
+        public DatabaseContext(DbContextOptions<DatabaseContext<TPlayer>> options, ILoggerFactory loggerFactory = null)
             : base(options)
         {
             _loggerFactory = loggerFactory;
         }
 
-        public DbSet<Player> Players { get; set; }
+        public DbSet<TPlayer> Players { get; set; }
         public DbSet<Appearance> Appearances { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

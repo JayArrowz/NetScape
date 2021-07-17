@@ -10,6 +10,7 @@ using NetScape.Modules.ThreeOneSeven.Game;
 using NetScape.Modules.ThreeOneSeven.LoginProtocol;
 using NetScape.Modules.ThreeOneSeven.World.Updating;
 using System.Collections.Generic;
+using NetScape.Abstractions.Model.Game;
 
 namespace NetScape
 {
@@ -27,14 +28,14 @@ namespace NetScape
                 new ThreeOneSevenLoginModule(),
                 new ThreeOneSevenUpdatingModule()
             };
-            ServerHandler.RunServer("appsettings.json", BuildDbOptions, modules);
+            ServerHandler.RunServer<Player>("appsettings.json", BuildDbOptions, modules);
             Console.ReadLine();
         }
 
         private static void BuildDbOptions(DbContextOptionsBuilder optionsBuilder, IConfigurationRoot configurationRoot)
         {
             optionsBuilder.UseNpgsql(configurationRoot.GetConnectionString("NetScape"),
-                 x => x.MigrationsAssembly(typeof(DatabaseContext)
+                 x => x.MigrationsAssembly(typeof(DatabaseContext<Player>)
                     .Assembly.FullName));
         }
     }

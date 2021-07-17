@@ -14,16 +14,16 @@ namespace NetScape.Modules.DAL
     /// Serializes/Deserializes players using entity framework
     /// </summary>
     /// <seealso cref="IPlayerRepository" />
-    public class EntityFrameworkPlayerRepository : IPlayerRepository
+    public class EntityFrameworkPlayerRepository<TPlayer> : IPlayerRepository where TPlayer : Player, new()
     {
-        private readonly IDbContextFactory<DatabaseContext> _dbContextFactory;
+        private readonly IDbContextFactory<DatabaseContext<TPlayer>> _dbContextFactory;
 
-        public EntityFrameworkPlayerRepository(IDbContextFactory<DatabaseContext> dbContextFactory)
+        public EntityFrameworkPlayerRepository(IDbContextFactory<DatabaseContext<TPlayer>> dbContextFactory)
         {
             _dbContextFactory = dbContextFactory;
         }
 
-        public async Task<Player> GetAsync(string name)
+        public async Task<TPlayer> GetAsync(string name)
         {
             using (var dbContext = _dbContextFactory.CreateDbContext())
             {
@@ -32,7 +32,17 @@ namespace NetScape.Modules.DAL
             }
         }
 
+        async Task<Player> IPlayerRepository.GetOrCreateAsync(PlayerCredentials playerCredentials)
+        {
+            return await GetOrCreateAsync(playerCredentials);
+        }
+
         public async Task<int> AddOrUpdateAsync(Player player)
+        {
+            return await AddOrUpdateAsync((TPlayer) player);
+        }
+
+        public async Task<int> AddOrUpdateAsync(TPlayer player)
         {
             using (var dbContext = _dbContextFactory.CreateDbContext())
             {
@@ -61,7 +71,7 @@ namespace NetScape.Modules.DAL
             }
         }
 
-        private Task<Player> GetAsync(string name, DatabaseContext databaseContext)
+        private Task<TPlayer> GetAsync(string name, DatabaseContext<TPlayer> databaseContext)
         {
             var normalizedName = name.ToLower();
             return databaseContext.Players
@@ -69,7 +79,12 @@ namespace NetScape.Modules.DAL
                 .FirstOrDefaultAsync(player => player.Username.ToLower().Equals(normalizedName));
         }
 
-        public async Task<Player> GetOrCreateAsync(PlayerCredentials playerCredentials)
+        async Task<Player> IPlayerRepository.GetAsync(string name)
+        {
+            return await GetAsync(name);
+        }
+
+        public async Task<TPlayer> GetOrCreateAsync(PlayerCredentials playerCredentials)
         {
             using (var dbContext = _dbContextFactory.CreateDbContext())
             {
@@ -77,7 +92,7 @@ namespace NetScape.Modules.DAL
                 var playerInDatabase = await GetAsync(playerCredentials.Username, dbContext);
                 if (playerInDatabase == null)
                 {
-                    var defaultPlayer = new Player
+                    var defaultPlayer = new TPlayer
                     {
                         Username = playerCredentials.Username,
                         Password = playerCredentials.Password,
