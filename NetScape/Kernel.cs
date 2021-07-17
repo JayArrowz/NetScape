@@ -1,104 +1,41 @@
-﻿using Autofac;
-using Autofac.Extensions.DependencyInjection;
+﻿using System;
+using Autofac;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using NetScape.Abstractions.FileSystem;
-using NetScape.Abstractions.Game;
-using NetScape.Abstractions.Interfaces.IO;
-using NetScape.Abstractions.Server;
-using NetScape.Modules.Cache;
+using NetScape.Core;
 using NetScape.Modules.DAL;
-using NetScape.Modules.Logging.SeriLog;
 using NetScape.Modules.Messages;
 using NetScape.Modules.Messages.Models;
-using NetScape.Modules.Region;
-using NetScape.Modules.Region.Collision;
-using NetScape.Modules.Server;
 using NetScape.Modules.ThreeOneSeven.Game;
 using NetScape.Modules.ThreeOneSeven.LoginProtocol;
 using NetScape.Modules.ThreeOneSeven.World.Updating;
-using NetScape.Modules.World;
-using System;
-using System.IO;
+using System.Collections.Generic;
 
 namespace NetScape
 {
     public class Kernel
     {
-        public static IConfigurationRoot ConfigurationRoot { get; set; }
         public static void Main(string[] args)
         {
-            var serviceCollection = new ServiceCollection();
-            ConfigureServices(serviceCollection);
-
-            var containerBuilder = new ContainerBuilder();
-            containerBuilder.Populate(serviceCollection);
-            ConfigureAutofac(containerBuilder, args);
-            containerBuilder.RegisterBuildCallback(t => t.Resolve<ContainerProvider>().Container = (IContainer)t);
-            var container = containerBuilder.Build();
-            var serviceProvider = new AutofacServiceProvider(container);
-
-            using (ILifetimeScope scope = container.BeginLifetimeScope())
+            List<Module> modules = new()
             {
-                var gameServer = serviceProvider.GetRequiredService<IGameServer>();
-                _ = gameServer.BindAsync();
-
-                //TODO Make better
-                Console.ReadLine();
-            }
+                new ThreeOneSevenGameModule(),
+                new MessagesModule(
+                    typeof(ThreeOneSevenEncoderMessages.Types),
+                    typeof(ThreeOneSevenDecoderMessages.Types)
+                ),
+                new ThreeOneSevenLoginModule(),
+                new ThreeOneSevenUpdatingModule()
+            };
+            ServerHandler.RunServer("appsettings.json", BuildDbOptions, modules);
+            Console.ReadLine();
         }
 
-        private static void BuildDbOptions(DbContextOptionsBuilder optionsBuilder)
+        private static void BuildDbOptions(DbContextOptionsBuilder optionsBuilder, IConfigurationRoot configurationRoot)
         {
-            optionsBuilder.UseNpgsql(ConfigurationRoot.GetConnectionString("NetScape"),
+            optionsBuilder.UseNpgsql(configurationRoot.GetConnectionString("NetScape"),
                  x => x.MigrationsAssembly(typeof(DatabaseContext)
-                    .Assembly.GetName().Name));
+                    .Assembly.FullName));
         }
-
-        private static void ConfigureAutofac(ContainerBuilder containerBuilder, string[] args)
-        {
-            containerBuilder.RegisterModule(new ThreeOneSevenGameModule());
-            containerBuilder.RegisterModule(new MessagesModule(
-                typeof(ThreeOneSevenEncoderMessages.Types),
-                typeof(ThreeOneSevenDecoderMessages.Types))
-            );
-            containerBuilder.RegisterModule(new ThreeOneSevenLoginModule());
-            containerBuilder.RegisterModule(new ThreeOneSevenUpdatingModule());
-
-            containerBuilder.RegisterModule(new SeriLogModule(ConfigurationRoot));
-            containerBuilder.RegisterModule(new CacheModule());
-            containerBuilder.RegisterModule(new DALModule());
-            containerBuilder.RegisterModule(new GameServerModule(ConfigurationRoot["BindAddr"], ushort.Parse(ConfigurationRoot["BindPort"])));
-            containerBuilder.RegisterModule(new WorldModule());
-            containerBuilder.RegisterModule(new RegionModule());
-            containerBuilder.RegisterModule(new CollisionModule());
-            containerBuilder.RegisterType<WalkingQueueHandler>();
-            containerBuilder.RegisterType<FileSystem>().As<IFileSystem>();
-            containerBuilder.RegisterType<ContainerProvider>().SingleInstance();
-        }
-
-        public static void SetConfigRoot()
-        {
-            ConfigurationRoot = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetParent(AppContext.BaseDirectory).FullName)
-                .AddJsonFile("appsettings.json", false)
-                .Build();
-        }
-
-        private static void ConfigureServices(IServiceCollection serviceCollection)
-        {
-            SetConfigRoot();
-
-            // Add logging
-            serviceCollection.AddLogging();
-
-            //Build DB Connection
-            serviceCollection.AddDbContextFactory<DatabaseContext>(BuildDbOptions);
-
-            // Add access to generic IConfigurationRoot
-            serviceCollection.AddSingleton(ConfigurationRoot);
-        }
-
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using NetScape.Core;
 using NetScape.Modules.DAL;
 
 namespace NetScape
@@ -9,9 +10,9 @@ namespace NetScape
     {
         public DatabaseContext CreateDbContext(string[] args)
         {
-            Kernel.SetConfigRoot();
+            var configRoot = ServerHandler.CreateConfigurationRoot("appsettings.json");
             var optionsBuilder = new DbContextOptionsBuilder<DatabaseContext>();
-            optionsBuilder.UseNpgsql(Kernel.ConfigurationRoot.GetConnectionString("NetScape"),
+            optionsBuilder.UseNpgsql(configRoot.GetConnectionString("NetScape"),
                  x => x.MigrationsAssembly(typeof(DatabaseContext)
                     .Assembly.GetName().Name));
             return new DatabaseContext(optionsBuilder.Options);

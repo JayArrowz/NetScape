@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="Nuget.Projects.props" />
+  <PropertyGroup>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Autofac" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetScape.GameServer\NetScape.Modules.Server.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Cache\NetScape.Modules.Cache.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.DAL\NetScape.Modules.DAL.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Logging.SeriLog\NetScape.Modules.Logging.SeriLog.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Region.Collision\NetScape.Modules.Region.Collision.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.World\NetScape.Modules.World.csproj" />
+  </ItemGroup>
+
+</Project>
