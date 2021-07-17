@@ -6,7 +6,7 @@
     <RepositoryUrl>https://github.com/jayarrowz/NetScape</RepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+
     <PackageTags>NetScape</PackageTags>
     <PackageDescription>NetScape 317 Login Protocol Module</PackageDescription>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
