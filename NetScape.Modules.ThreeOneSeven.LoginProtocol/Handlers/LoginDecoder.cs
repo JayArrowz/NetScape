@@ -286,14 +286,14 @@ namespace NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers
 
                 foreach (var gameMessageHandler in gameMessageHandlers)
                 {
-                    if (gameMessageHandler is ICipherAwareHandler)
+                    if (gameMessageHandler is ICipherAwareHandler awareHandler)
                     {
-                        ((ICipherAwareHandler)gameMessageHandler).CipherPair = randomPair;
+                        awareHandler.CipherPair = randomPair;
                     }
 
-                    if (gameMessageHandler is IPlayerAwareHandler)
+                    if (gameMessageHandler is IPlayerAwareHandler handler)
                     {
-                        ((IPlayerAwareHandler)gameMessageHandler).Player = player;
+                        handler.Player = player;
                     }
                 }
                 ctx.Channel.Pipeline.AddLast(gameMessageHandlers);

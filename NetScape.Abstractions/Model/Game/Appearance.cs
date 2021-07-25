@@ -6,7 +6,7 @@ namespace NetScape.Abstractions.Model.Game
 {
     public record Appearance
     {
-        public static readonly Appearance DefaultAppearance = new Appearance(Gender.Male, new int[] { 0, 10, 18, 26, 33, 36, 42 }, new int[5]);
+        public static Appearance DefaultAppearance => new Appearance(Gender.Male, new int[] { 0, 10, 18, 26, 33, 36, 42 }, new int[5]);
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

@@ -60,31 +60,38 @@ namespace NetScape.Abstractions.Login
         /// <summary>
         /// Handles the login queue
         /// </summary>
-        private async Task ProcessLoginsAsync()
+        private void ProcessLogins()
         {
             while (!_cancellationToken.IsCancellationRequested)
             {
-                while (_loginRequests.Count > 0)
+                lock (_lockObject)
                 {
-                    var requests = _loginRequests.ToList();
-                    var tasks = requests.Select(loginTask =>
-                    (request: loginTask, responseTask: ProcessAsync(loginTask)))
-                        .ToList();
-                    await Task.WhenAll(tasks.Select(t => t.responseTask));
-                    tasks.ForEach(t =>
+                    while (_loginRequests.Count > 0)
                     {
-                        var responseTask = t.responseTask;
-                        var request = t.request;
-                        if (responseTask.IsCompletedSuccessfully)
+                        var requests = _loginRequests.Take(100);
+                        var tasks = requests.Select(loginTask =>
+                                (request: loginTask, responseTask: ProcessAsync(loginTask)))
+                            .ToList();
+                        Task.WhenAll(tasks.Select(t => t.responseTask)).GetAwaiter().GetResult();
+                        tasks.ForEach(t =>
                         {
-                            _loginRequests.Remove(t.request);
-                            t.request.Result = request.Result;
-                            _ = request.OnResult(responseTask.Result);
-                            _logger.Debug("Processed Login Request: {@LoginRequest}", request.Credentials);
-                        }
-                    });
+                            var responseTask = t.responseTask;
+                            var request = t.request;
+                            if (responseTask.IsCompletedSuccessfully)
+                            {
+                                _loginRequests.Remove(t.request);
+                                t.request.Result = request.Result;
+                                _ = request.OnResult(responseTask.Result).ConfigureAwait(false);
+                                _logger.Debug("Processed Login Request: {@LoginRequest}", request.Credentials);
+                            }
+                            else
+                            {
+                                _logger.Error(responseTask.Exception, nameof(ProcessLogins));
+                            }
+                        });
+                    }
+                    Thread.Sleep(100);
                 }
-                await Task.Delay(600);
             }
         }
 
@@ -95,7 +102,11 @@ namespace NetScape.Abstractions.Login
         {
             _cancellationTokenSource = new CancellationTokenSource();
             _cancellationToken = _cancellationTokenSource.Token;
-            Task.Factory.StartNew(ProcessLoginsAsync, _cancellationToken, TaskCreationOptions.LongRunning, TaskScheduler.Default);
+            Thread t = new Thread(ProcessLogins)
+            {
+                Name = "LoginProcessorThread"
+            };
+            t.Start();
         }
 
         /// <summary>

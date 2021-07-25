@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NetScape.Abstractions.Game;
@@ -23,7 +24,7 @@ namespace NetScape.Modules.ThreeOneSeven.World.Updating
         private readonly WalkingQueueHandler _walkingQueueHandler;
         private readonly IProtoMessageSender _protoMessageSender;
         private static readonly int MaximumLocalPlayers = 255;
-
+        
         /// <summary>
         /// The maximum number of players to load per cycle. This prevents the update packet from becoming too large (the
         /// client uses a 5000 byte buffer) and also stops old spec PCs from crashing when they login or teleport.
@@ -213,7 +214,7 @@ namespace NetScape.Modules.ThreeOneSeven.World.Updating
                 }
             }
 
-            int added = 0, count = localPlayers.Count();
+            int added = 0, count = localPlayers.Count;
 
             IRegion current = _regionRepository.FromPosition(position);
             HashSet<RegionCoordinates> regions = current.GetSurrounding();
@@ -221,7 +222,6 @@ namespace NetScape.Modules.ThreeOneSeven.World.Updating
 
             IEnumerable<Player> players = regions.Select(t => _regionRepository.Get(t))
                     .SelectMany(region => region.GetEntities<Player>(EntityType.Player));
-
             foreach (var other in players)
             {
                 if (count >= MaximumLocalPlayers)
@@ -251,7 +251,6 @@ namespace NetScape.Modules.ThreeOneSeven.World.Updating
                         blockSet = (SynchronizationBlockSet)blockSet.Clone();
                         blockSet.Add(SynchronizationBlock.CreateAppearanceBlock(other));
                     }
-
                     segments.Add(new AddPlayerSegment(blockSet, index, local));
                 }
             }

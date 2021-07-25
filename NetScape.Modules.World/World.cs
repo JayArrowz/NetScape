@@ -44,6 +44,7 @@ namespace NetScape.Modules.World
             var region = RegionRepository.FromPosition(player.Position);
             region.RemoveEntity(player);
             _playerEntityList.Remove(player);
+            player.Index = -1;
         }
 
 
@@ -57,14 +58,14 @@ namespace NetScape.Modules.World
                 for (int playerId = _playerEntityList.Entities.Length - 1; playerId >= 0; playerId--)
                 {
                     Player player = _playerEntityList.Entities[playerId];
-                    if (player == null)
+                    if (player == null || !player.IsActive)
                     {
                         continue;
                     }
                     try
                     {
-                        await _playerUpdater.PreUpdateAsync(player, encodes, updates).ConfigureAwait(false);
-                        await _playerUpdater.UpdateAsync(player).ConfigureAwait(false);
+                        await _playerUpdater.PreUpdateAsync(player, encodes, updates);
+                        await _playerUpdater.UpdateAsync(player);
                         await _playerUpdater.PostUpdateAsync(player).ConfigureAwait(false);
                     }
                     catch (Exception e)

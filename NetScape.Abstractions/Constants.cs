@@ -8,6 +8,6 @@ namespace NetScape.Abstractions
     {
         public static int RegionSize { get; } = 8;
         public static AttributeKey<Player> PlayerAttributeKey { get; } = AttributeKey<Player>.ValueOf("Player");
-        public static Position HomePosition { get; } = new Position(3333, 3333, 0);
+        public static Position HomePosition => new Position(3333, 3333, 0);
     }
 }

@@ -11,8 +11,7 @@ namespace NetScape.Abstractions.Model.Game
         [NotMapped]
         public IWorld World { get; set; }
 
-        [NotMapped]
-        public int Index { get; set; }
+        [NotMapped] public int Index { get; set; } = -1;
 
         public Position Position
         {

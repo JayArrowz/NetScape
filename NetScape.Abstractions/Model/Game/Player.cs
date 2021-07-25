@@ -1,4 +1,5 @@
-﻿using DotNetty.Transport.Channels;
+﻿using System;
+using DotNetty.Transport.Channels;
 using Google.Protobuf;
 using NetScape.Abstractions.Model.Messages;
 using NetScape.Abstractions.Model.World.Updating;
@@ -50,7 +51,12 @@ namespace NetScape.Abstractions.Model.Game
 
         private static int NextAppearanceTicket()
         {
-            return Interlocked.Increment(ref _appearanceTicketCounter);
+            if (Interlocked.Increment(ref _appearanceTicketCounter) == 0)
+            {
+                _appearanceTicketCounter = 1;
+            }
+
+            return _appearanceTicketCounter;
         }
 
         public bool HasLastKnownRegion()
