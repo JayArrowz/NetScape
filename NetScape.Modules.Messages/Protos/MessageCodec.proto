@@ -67,6 +67,10 @@ message ThreeOneSevenDecoderMessages {
         option (MessageCodecExt).SizeType = VariableByte;
     }
 
+    message ChangeRegionMessage {        
+	    option (MessageCodecExt).OpCodes = 121;
+    }
+
     message FocusUpdateMessage {
         required bool Focused = 1 [(FieldCodecExt).Type = Byte];
         option (MessageCodecExt).OpCodes = 3;
@@ -82,7 +86,6 @@ message ThreeOneSevenDecoderMessages {
         option (MessageCodecExt).OpCodes = 165;
         option (MessageCodecExt).OpCodes = 189;
         option (MessageCodecExt).OpCodes = 226;
-        option (MessageCodecExt).OpCodes = 121;
     }
        
     message ArrowKeyMessage {
