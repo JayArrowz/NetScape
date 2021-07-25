@@ -8,7 +8,7 @@
   </PropertyGroup>
   <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
     <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
     </ItemGroup>
   </Target>
 
@@ -18,5 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NetScape.Abstractions\NetScape.Abstractions.csproj" />
+    <ProjectReference Include="..\NetScape.Modules.Region\NetScape.Modules.Region.csproj" />
   </ItemGroup>
 </Project>

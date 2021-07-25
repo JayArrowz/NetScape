@@ -11,7 +11,7 @@ namespace NetScape.Abstractions.Model
     /// @author Graham
     /// </summary>
     [Owned]
-    public class Position
+    public record Position
     {
 
         /// <summary>
@@ -50,43 +50,20 @@ namespace NetScape.Abstractions.Model
             Y = y;
             Height = height;
         }
-
-        public override bool Equals(object obj)
-        {
-            if (obj is Position)
-            {
-                Position other = (Position)obj;
-                return GetHashCode() == other.GetHashCode();
-            }
-
-            return false;
-        }
-
+        
         /// <summary>
         /// Gets the x coordinate of the central region.
         /// </summary>
         /// <returns> The x coordinate of the central region. </returns>
         [NotMapped]
-        public int CentralRegionX
-        {
-            get
-            {
-                return X / 8;
-            }
-        }
+        public int CentralRegionX => X / 8;
 
         /// <summary>
         /// Gets the y coordinate of the central region.
         /// </summary>
         /// <returns> The y coordinate of the central region. </returns>
         [NotMapped]
-        public int CentralRegionY
-        {
-            get
-            {
-                return Y / 8;
-            }
-        }
+        public int CentralRegionY => Y / 8;
 
         /// <summary>
         /// Gets the distance between this position and another position. Only x and y are considered (i.e. 2 dimensions).
@@ -115,13 +92,7 @@ namespace NetScape.Abstractions.Model
         /// </summary>
         /// <returns> The local x coordinate. </returns>
         [NotMapped]
-        public int LocalX
-        {
-            get
-            {
-                return GetLocalX(this);
-            }
-        }
+        public int LocalX => GetLocalX(this);
 
         /// <summary>
         /// Gets the local x coordinate inside the region of the {@code base} position.
@@ -138,13 +109,7 @@ namespace NetScape.Abstractions.Model
         /// </summary>
         /// <returns> The local y coordinate. </returns>
         [NotMapped]
-        public int LocalY
-        {
-            get
-            {
-                return GetLocalY(this);
-            }
-        }
+        public int LocalY => GetLocalY(this);
 
         /// <summary>
         /// Gets the local y coordinate inside the region of the {@code base} position.
@@ -173,39 +138,21 @@ namespace NetScape.Abstractions.Model
         /// </summary>
         /// <returns> The region coordinates. </returns>
         [NotMapped]
-        public RegionCoordinates RegionCoordinates
-        {
-            get
-            {
-                return RegionCoordinates.FromPosition(this);
-            }
-        }
+        public RegionCoordinates RegionCoordinates => RegionCoordinates.FromPosition(this);
 
         /// <summary>
         /// Gets the x coordinate of the region this position is in.
         /// </summary>
         /// <returns> The region x coordinate. </returns>
         [NotMapped]
-        public int TopLeftRegionX
-        {
-            get
-            {
-                return X / 8 - 6;
-            }
-        }
+        public int TopLeftRegionX => X / 8 - 6;
 
         /// <summary>
         /// Gets the y coordinate of the region this position is in.
         /// </summary>
         /// <returns> The region y coordinate. </returns>
         [NotMapped]
-        public int TopLeftRegionY
-        {
-            get
-            {
-                return Y / 8 - 6;
-            }
-        }
+        public int TopLeftRegionY => Y / 8 - 6;
 
         /// <summary>
         /// Gets the region x.
@@ -245,11 +192,6 @@ namespace NetScape.Abstractions.Model
             set;
         }
 
-        public override int GetHashCode()
-        {
-            return Height << 30 | (Y & 0x7FFF) << 15 | X & 0x7FFF;
-        }
-
         /// <summary>
         /// Returns whether or not this position is inside the specified <seealso cref="Region"/>.
         /// </summary>
@@ -282,7 +224,7 @@ namespace NetScape.Abstractions.Model
         /// <returns> A new {@code Position} that is {@code num} steps in {@code direction} ahead of this one. </returns>
         public Position Step(int num, Direction direction)
         {
-            return new Position(X + (num * direction.DeltaX()), Y + (num * direction.DeltaY()), Height);
+            return new(X + (num * direction.DeltaX()), Y + (num * direction.DeltaY()), Height);
         }
     }
 }

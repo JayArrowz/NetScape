@@ -21,7 +21,7 @@ namespace NetScape.Modules.ThreeOneSeven.Game.Players
         {
             var initMessage = new ThreeOneSevenEncoderMessages.Types.
                 IdAssignmentMessage
-            { IsMembers = true, NewId = 1 };
+            { IsMembers = true, NewId = player.Index };
             _ = _protoMessageSender.SendAsync(player, initMessage);
             player.UpdateAppearance();
 

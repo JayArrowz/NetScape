@@ -6,7 +6,7 @@
 	/// @author Graham
 	/// @author Major
 	/// </summary>
-	public sealed class RegionCoordinates
+	public record RegionCoordinates
 	{
 
 		/// <summary>
@@ -29,18 +29,7 @@
 			this.X = x;
 			this.Y = y;
 		}
-
-		public override bool Equals(object obj)
-		{
-			if (obj is RegionCoordinates)
-			{
-				RegionCoordinates other = (RegionCoordinates)obj;
-				return X == other.X && Y == other.Y;
-			}
-
-			return false;
-		}
-
+		
 		/// <summary>
 		/// Gets the absolute x coordinate of this Region (which can be compared directly against <seealso cref="Position.X"/>.
 		/// </summary>
@@ -76,11 +65,5 @@
 		/// </summary>
 		/// <returns> The y coordinate. </returns>
 		public int Y { get; }
-
-		public override int GetHashCode()
-		{
-			return X << 16 | Y;
-		}
-
-	}
+    }
 }
