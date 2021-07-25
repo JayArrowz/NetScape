@@ -59,7 +59,7 @@ namespace NetScape.Modules.Messages
             if (protoCodec?.MessageCodec?.Custom ?? true)
             {
                 Log.Logger.Debug("Decoding Opcode: {0} Player Name: {1} from {2} Size {3}", unencodedOpcode, Player.Username, context.Channel.RemoteAddress, size);
-                decoder.DecodeAndPublish(Player, messageFrame);
+                decoder?.DecodeAndPublish(Player, messageFrame);
             }
             else
             {
