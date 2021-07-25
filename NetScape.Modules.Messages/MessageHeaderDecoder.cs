@@ -37,7 +37,7 @@ namespace NetScape.Modules.Messages
             var decoder = _messageDecoders
                 .Where(t => t.Ids != null)
                 .FirstOrDefault(decoder => decoder.Ids.Contains(unencodedOpcode));
-            var frameType = protoCodec == null ? decoder?.FrameType : protoCodec.MessageCodec.SizeType.GetFrameType();
+            var frameType = protoCodec?.MessageCodec.SizeType.GetFrameType() ?? decoder?.FrameType;
             var size = 0;
             if (!frameType.HasValue)
             {
@@ -89,7 +89,7 @@ namespace NetScape.Modules.Messages
                     }
                 }
 
-                Log.Logger.Debug("Message Recieved: {0} TypeName: {1} Player: {2} Size: {3} Opcode: {4}", message, protoDecoder.TypeName, Player.Username, size, unencodedOpcode);
+                Log.Logger.Debug("Message Received: {0} TypeName: {1} Player: {2} Size: {3} Opcode: {4}", message, protoDecoder.TypeName, Player.Username, size, unencodedOpcode);
                 protoDecoder.Publish(Player, message);
             }
         }
