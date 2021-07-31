@@ -20,7 +20,6 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
     {
         private readonly IRegionRepository _regionRepository;
         private readonly WalkingQueueHandler _walkingQueueHandler;
-        private readonly IProtoMessageSender _protoMessageSender;
         private static readonly int MaximumLocalPlayers = 255;
 
         /// <summary>
@@ -29,11 +28,10 @@ namespace NetScape.Modules.FourSevenFour.World.Updating
         /// </summary>
         private static readonly int NewPlayersPerCycle = 20;
 
-        public PlayerUpdater(IRegionRepository regionRepository, WalkingQueueHandler walkingQueueHandler, IProtoMessageSender protoMessageSender)
+        public PlayerUpdater(IRegionRepository regionRepository, WalkingQueueHandler walkingQueueHandler)
         {
             _regionRepository = regionRepository;
             _walkingQueueHandler = walkingQueueHandler;
-            _protoMessageSender = protoMessageSender;
         }
 
         public Task PostUpdateAsync(Player player)
