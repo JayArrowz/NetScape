@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NetScape.Modules.FourSevenFour.LoginProtocol
+﻿namespace NetScape.Modules.FourSevenFour.LoginProtocol
 {
     public class JS5Request
     {
