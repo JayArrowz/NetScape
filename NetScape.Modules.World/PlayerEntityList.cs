@@ -12,7 +12,7 @@ namespace NetScape.Modules.World
     {
         private readonly Player[] _entities = new Player[2048];
         private int _entityCount = 0;
-        private List<int> _freeIndexes = new();
+        private readonly List<int> _freeIndexes = new();
 
         public void Add(Player entity)
         {
@@ -32,6 +32,7 @@ namespace NetScape.Modules.World
 
         private void SetIndex(Player entity, int index)
         {
+            _freeIndexes.Remove(index);
             entity.Index = index;
             _entities[index] = entity;
         }
@@ -39,7 +40,6 @@ namespace NetScape.Modules.World
         public void Remove(Player entity)
         {
             _entities[entity.Index] = null;
-            _freeIndexes.Remove(entity.Index);
             Interlocked.Decrement(ref _entityCount);
         }
 
