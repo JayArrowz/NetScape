@@ -23,13 +23,20 @@ namespace NetScape.Modules.Messages
         public Dictionary<int, ProtoMessageCodec> DecoderCodecs { get; set; }
 
         public Dictionary<Type, int> EncoderTypeMap { get; set; }
+
+        public static List<Type> GetExporedTypesForCodec(Type[] codecTypes)
+        {
+            return typeof(MessageCodec).Assembly.ExportedTypes.Where(t =>
+                t.IsAssignableTo<IMessage>() && codecTypes.Contains(t.DeclaringType))
+                .ToList();
+        }
+
         public void Start()
         {
             EncoderCodecs = new();
             DecoderCodecs = new();
             EncoderTypeMap = new();
-            typeof(MessageCodec).Assembly.ExportedTypes.Where(t => t.IsAssignableTo<IMessage>() && _codecTypes.Contains(t.DeclaringType))
-                .ToList()
+            GetExporedTypesForCodec(_codecTypes)
                 .ForEach(t =>
                 {
                     var descriptor = (MessageDescriptor)t.GetProperty("Descriptor", BindingFlags.Public | BindingFlags.Static).GetValue(null, null); // get the static property Descriptor
@@ -39,11 +46,11 @@ namespace NetScape.Modules.Messages
                         descriptor.CustomOptions.TryGetBool(2002, out bool isEncoder);
                         messageCodec.OpCodes.ToList().ForEach(opcode =>
                         {
-                            var creationMethod = (Func<IMessage>) Expression.Lambda(typeof(Func<IMessage>),
+                            var creationMethod = (Func<IMessage>)Expression.Lambda(typeof(Func<IMessage>),
                                                  Expression.New(t)
                                                 ).Compile();
                             var map = isEncoder ? EncoderCodecs : DecoderCodecs;
-                            if(isEncoder)
+                            if (isEncoder)
                             {
                                 EncoderTypeMap.Add(t, (int)opcode);
                             }

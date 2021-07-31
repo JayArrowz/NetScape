@@ -40,7 +40,7 @@ namespace NetScape.Modules.Messages
             #endregion
 
             #region Decoders
-            typeof(MessageCodec).Assembly.ExportedTypes.Where(t => t.IsAssignableTo<IMessage>())
+            ProtoMessageCodecHandler.GetExporedTypesForCodec(_messageCodecTypes)
                 .ToList()
                 .ForEach(type =>
                 {
