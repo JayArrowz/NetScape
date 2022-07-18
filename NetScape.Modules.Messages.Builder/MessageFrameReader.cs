@@ -483,6 +483,11 @@ namespace NetScape.Modules.Messages.Builder
             }
             return strBldr.ToString();
         }
+
+        public int GetBitIndex()
+        {
+            return _bitIndex;
+        }
     }
 
 }
