@@ -1,0 +1,902 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Player
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Player
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NetScape.Abstractions.Model.Game.Player">
+  
+  
+  <h1 id="NetScape_Abstractions_Model_Game_Player" data-uid="NetScape.Abstractions.Model.Game.Player" class="text-break">Class Player
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="NetScape.Abstractions.Model.Game.Entity.html">Entity</a></div>
+    <div class="level2"><a class="xref" href="NetScape.Abstractions.Model.Mob.html">Mob</a></div>
+    <div class="level3"><span class="xref">Player</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Mob.html#NetScape_Abstractions_Model_Mob_FirstDirection">Mob.FirstDirection</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Mob.html#NetScape_Abstractions_Model_Mob_SecondDirection">Mob.SecondDirection</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Mob.html#NetScape_Abstractions_Model_Mob_LastDirection">Mob.LastDirection</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Mob.html#NetScape_Abstractions_Model_Mob_BlockSet">Mob.BlockSet</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Mob.html#NetScape_Abstractions_Model_Mob_IsActive">Mob.IsActive</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Mob.html#NetScape_Abstractions_Model_Mob_IsTeleporting">Mob.IsTeleporting</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Mob.html#NetScape_Abstractions_Model_Mob_WalkingQueue">Mob.WalkingQueue</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Mob.html#NetScape_Abstractions_Model_Mob_GetDirections">Mob.GetDirections()</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Game.Entity.html#NetScape_Abstractions_Model_Game_Entity_World">Entity.World</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Game.Entity.html#NetScape_Abstractions_Model_Game_Entity_Index">Entity.Index</a>
+    </div>
+    <div>
+      <a class="xref" href="NetScape.Abstractions.Model.Game.Entity.html#NetScape_Abstractions_Model_Game_Entity_Position">Entity.Position</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NetScape.Abstractions.Model.Game.html">NetScape.Abstractions.Model.Game</a></h6>
+  <h6><strong>Assembly</strong>: NetScape.Abstractions.dll</h6>
+  <h5 id="NetScape_Abstractions_Model_Game_Player_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Player : Mob</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_Appearance.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.Appearance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/PlayerSave.cs/#L14">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_Appearance_" data-uid="NetScape.Abstractions.Model.Game.Player.Appearance*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_Appearance" data-uid="NetScape.Abstractions.Model.Game.Player.Appearance">Appearance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Appearance Appearance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Appearance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_AppearanceId.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.AppearanceId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/PlayerSave.cs/#L15">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_AppearanceId_" data-uid="NetScape.Abstractions.Model.Game.Player.AppearanceId*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_AppearanceId" data-uid="NetScape.Abstractions.Model.Game.Player.AppearanceId">AppearanceId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AppearanceId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_AppearanceTicket.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.AppearanceTicket%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L26">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_AppearanceTicket_" data-uid="NetScape.Abstractions.Model.Game.Player.AppearanceTicket*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_AppearanceTicket" data-uid="NetScape.Abstractions.Model.Game.Player.AppearanceTicket">AppearanceTicket</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AppearanceTicket { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_AppearanceTickets.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.AppearanceTickets%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L34">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_AppearanceTickets_" data-uid="NetScape.Abstractions.Model.Game.Player.AppearanceTickets*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_AppearanceTickets" data-uid="NetScape.Abstractions.Model.Game.Player.AppearanceTickets">AppearanceTickets</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int[] AppearanceTickets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_ChannelHandlerContext.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.ChannelHandlerContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L28">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_ChannelHandlerContext_" data-uid="NetScape.Abstractions.Model.Game.Player.ChannelHandlerContext*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_ChannelHandlerContext" data-uid="NetScape.Abstractions.Model.Game.Player.ChannelHandlerContext">ChannelHandlerContext</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IChannelHandlerContext ChannelHandlerContext { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IChannelHandlerContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_EntityType.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.EntityType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L30">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_EntityType_" data-uid="NetScape.Abstractions.Model.Game.Player.EntityType*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_EntityType" data-uid="NetScape.Abstractions.Model.Game.Player.EntityType">EntityType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override EntityType EntityType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Model.Game.EntityType.html">EntityType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NetScape.Abstractions.Model.Game.Entity.html#NetScape_Abstractions_Model_Game_Entity_EntityType">Entity.EntityType</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_ExcessivePlayers.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.ExcessivePlayers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L35">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_ExcessivePlayers_" data-uid="NetScape.Abstractions.Model.Game.Player.ExcessivePlayers*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_ExcessivePlayers" data-uid="NetScape.Abstractions.Model.Game.Player.ExcessivePlayers">ExcessivePlayers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExcessivePlayers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_Id.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/PlayerSave.cs/#L8">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_Id_" data-uid="NetScape.Abstractions.Model.Game.Player.Id*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_Id" data-uid="NetScape.Abstractions.Model.Game.Player.Id">Id</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_Initialized.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.Initialized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L29">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_Initialized_" data-uid="NetScape.Abstractions.Model.Game.Player.Initialized*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_Initialized" data-uid="NetScape.Abstractions.Model.Game.Player.Initialized">Initialized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Initialized { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_LastKnownRegion.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.LastKnownRegion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L24">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_LastKnownRegion_" data-uid="NetScape.Abstractions.Model.Game.Player.LastKnownRegion*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_LastKnownRegion" data-uid="NetScape.Abstractions.Model.Game.Player.LastKnownRegion">LastKnownRegion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Position LastKnownRegion { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_Length.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L32">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_Length_" data-uid="NetScape.Abstractions.Model.Game.Player.Length*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_Length" data-uid="NetScape.Abstractions.Model.Game.Player.Length">Length</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Length { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NetScape.Abstractions.Model.Game.Entity.html#NetScape_Abstractions_Model_Game_Entity_Length">Entity.Length</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_LocalPlayerList.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.LocalPlayerList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L33">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_LocalPlayerList_" data-uid="NetScape.Abstractions.Model.Game.Player.LocalPlayerList*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_LocalPlayerList" data-uid="NetScape.Abstractions.Model.Game.Player.LocalPlayerList">LocalPlayerList</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Player&gt; LocalPlayerList { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="NetScape.Abstractions.Model.Game.Player.html">Player</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_Password.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.Password%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/PlayerSave.cs/#L13">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_Password_" data-uid="NetScape.Abstractions.Model.Game.Player.Password*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_Password" data-uid="NetScape.Abstractions.Model.Game.Player.Password">Password</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Password { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_PingCount.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.PingCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L23">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_PingCount_" data-uid="NetScape.Abstractions.Model.Game.Player.PingCount*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_PingCount" data-uid="NetScape.Abstractions.Model.Game.Player.PingCount">PingCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PingCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_RegionChanged.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.RegionChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L25">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_RegionChanged_" data-uid="NetScape.Abstractions.Model.Game.Player.RegionChanged*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_RegionChanged" data-uid="NetScape.Abstractions.Model.Game.Player.RegionChanged">RegionChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RegionChanged { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_Username.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.Username%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/PlayerSave.cs/#L11">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_Username_" data-uid="NetScape.Abstractions.Model.Game.Player.Username*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_Username" data-uid="NetScape.Abstractions.Model.Game.Player.Username">Username</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Username { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_ViewingDistance.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.ViewingDistance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L27">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_ViewingDistance_" data-uid="NetScape.Abstractions.Model.Game.Player.ViewingDistance*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_ViewingDistance" data-uid="NetScape.Abstractions.Model.Game.Player.ViewingDistance">ViewingDistance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ViewingDistance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_Width.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.Width%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L31">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_Width_" data-uid="NetScape.Abstractions.Model.Game.Player.Width*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_Width" data-uid="NetScape.Abstractions.Model.Game.Player.Width">Width</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Width { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="NetScape.Abstractions.Model.Game.Entity.html#NetScape_Abstractions_Model_Game_Entity_Width">Entity.Width</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_DecrementViewingDistance.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.DecrementViewingDistance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L44">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_DecrementViewingDistance_" data-uid="NetScape.Abstractions.Model.Game.Player.DecrementViewingDistance*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_DecrementViewingDistance" data-uid="NetScape.Abstractions.Model.Game.Player.DecrementViewingDistance">DecrementViewingDistance()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DecrementViewingDistance()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_HasLastKnownRegion.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.HasLastKnownRegion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L62">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_HasLastKnownRegion_" data-uid="NetScape.Abstractions.Model.Game.Player.HasLastKnownRegion*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_HasLastKnownRegion" data-uid="NetScape.Abstractions.Model.Game.Player.HasLastKnownRegion">HasLastKnownRegion()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasLastKnownRegion()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_IncrementViewingDistance.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.IncrementViewingDistance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L36">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_IncrementViewingDistance_" data-uid="NetScape.Abstractions.Model.Game.Player.IncrementViewingDistance*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_IncrementViewingDistance" data-uid="NetScape.Abstractions.Model.Game.Player.IncrementViewingDistance">IncrementViewingDistance()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void IncrementViewingDistance()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_ResetViewingDistance.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.ResetViewingDistance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L67">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_ResetViewingDistance_" data-uid="NetScape.Abstractions.Model.Game.Player.ResetViewingDistance*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_ResetViewingDistance" data-uid="NetScape.Abstractions.Model.Game.Player.ResetViewingDistance">ResetViewingDistance()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetViewingDistance()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_SendAnimation_Animation_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.SendAnimation(Animation)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L92">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_SendAnimation_" data-uid="NetScape.Abstractions.Model.Game.Player.SendAnimation*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_SendAnimation_Animation_" data-uid="NetScape.Abstractions.Model.Game.Player.SendAnimation(Animation)">SendAnimation(Animation)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendAnimation(Animation animation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Animation</span></td>
+        <td><span class="parametername">animation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_SendAsync_NetScape_Abstractions_Interfaces_Messages_IEncoderMessage_NetScape_Modules_Messages_Builder_MessageFrame__.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.SendAsync(NetScape.Abstractions.Interfaces.Messages.IEncoderMessage%7BNetScape.Modules.Messages.Builder.MessageFrame%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L76">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_SendAsync_" data-uid="NetScape.Abstractions.Model.Game.Player.SendAsync*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_SendAsync_NetScape_Abstractions_Interfaces_Messages_IEncoderMessage_NetScape_Modules_Messages_Builder_MessageFrame__" data-uid="NetScape.Abstractions.Model.Game.Player.SendAsync(NetScape.Abstractions.Interfaces.Messages.IEncoderMessage{NetScape.Modules.Messages.Builder.MessageFrame})">SendAsync(IEncoderMessage&lt;MessageFrame&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sends a message to the player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SendAsync(IEncoderMessage&lt;MessageFrame&gt; message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Interfaces.Messages.IEncoderMessage-1.html">IEncoderMessage</a>&lt;<a class="xref" href="NetScape.Modules.Messages.Builder.MessageFrame.html">MessageFrame</a>&gt;</td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player_UpdateAppearance.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player.UpdateAppearance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/Player.cs/#L87">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Model_Game_Player_UpdateAppearance_" data-uid="NetScape.Abstractions.Model.Game.Player.UpdateAppearance*"></a>
+  <h4 id="NetScape_Abstractions_Model_Game_Player_UpdateAppearance" data-uid="NetScape.Abstractions.Model.Game.Player.UpdateAppearance">UpdateAppearance()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateAppearance()</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Model_Game_Player.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Model.Game.Player%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Model/Game/PlayerSave.cs/#L6" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

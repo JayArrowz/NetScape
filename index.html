@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>NetScape </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="NetScape ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="netscape">NetScape</h1>
+
+<p>Modular Runescape Private Server in C# for learning purposes &amp; fun!</p>
+<h3 id="code-docs">Code Docs</h3>
+<ul>
+<li><a href="/NetScape/api">All Docs</a></li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><a href="https://www.postgresql.org/download/">PostgresSQL</a></li>
+<li><a href="https://dotnet.microsoft.com/download/dotnet/5.0">Net5.0</a></li>
+</ul>
+<h3 id="installing">Installing</h3>
+<ol>
+<li>Create the folder <code>AspNetServerData\Cache</code> in your users home folder and add the 317 cache (Currently NetScape only supports the 317 protocol)</li>
+<li>Go to <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape/appsettings.json">appsettings.json</a> and ensure the ConnectionString to your database is correct</li>
+<li>Go to your Terminal (Make sure its current directory is matching the root of this repo) or VS Console then type:</li>
+</ol>
+<pre><code>dotnet tool install -g dotnet-ef
+dotnet build
+dotnet ef database update --project NetScape
+</code></pre>
+<p>To Run in Terminal:</p>
+<pre><code>dotnet run --project netscape
+</code></pre>
+<h2 id="contributing">Contributing</h2>
+<p>Please read <a href="https://gist.github.com/PurpleBooth/b24679402957c63ec426">CONTRIBUTING.md</a> for details on our code of conduct, and the process for submitting pull requests to us.</p>
+<h2 id="versioning">Versioning</h2>
+<p>We use <a href="http://semver.org/">SemVer</a> for versioning. For the versions available, see the <a href="https://github.com/JayArrowz/NetScape/tags">tags on this repository</a>.</p>
+<h2 id="authors">Authors</h2>
+<ul>
+<li><strong>JayArrowz</strong> - <a href="https://github.com/JayArrowz">JayArrowz</a></li>
+</ul>
+<p>See also the list of <a href="https://github.com/JayArrowz/NetScape/contributors">contributors</a> who participated in this project.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<ul>
+<li>JayArrowz</li>
+<li>Graham</li>
+<li>Major</li>
+<li>Scu11</li>
+<li><a href="https://github.com/villermen/runescape-cache-tools">https://github.com/villermen/runescape-cache-tools</a></li>
+<li><a href="https://github.com/apollo-rsps/apollo">https://github.com/apollo-rsps/apollo</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/blob/master/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="styles/toggle-theme.js"></script>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

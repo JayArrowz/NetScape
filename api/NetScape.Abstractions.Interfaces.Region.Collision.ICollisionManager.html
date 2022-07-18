@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ICollisionManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ICollisionManager
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager">
+  
+  
+  <h1 id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager" class="text-break">Interface ICollisionManager
+  </h1>
+  <div class="markdown level0 summary"><p>Manages applying <a class="xref" href="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionUpdate.html">ICollisionUpdate</a>s to the appropriate <a class="xref" href="NetScape.Abstractions.Model.Region.Collision.CollisionMatrix.html">CollisionMatrix</a>, and keeping
+a record of collision state(i.e., which tiles are bridged).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NetScape.Abstractions.Interfaces.Region.Collision.html">NetScape.Abstractions.Interfaces.Region.Collision</a></h6>
+  <h6><strong>Assembly</strong>: NetScape.Abstractions.dll</h6>
+  <h5 id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICollisionManager</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Apply_NetScape_Abstractions_Interfaces_Region_Collision_ICollisionUpdate_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Apply(NetScape.Abstractions.Interfaces.Region.Collision.ICollisionUpdate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Interfaces/Region/Collision/ICollisionManager.cs/#L16">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Apply_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Apply*"></a>
+  <h4 id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Apply_NetScape_Abstractions_Interfaces_Region_Collision_ICollisionUpdate_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Apply(NetScape.Abstractions.Interfaces.Region.Collision.ICollisionUpdate)">Apply(ICollisionUpdate)</h4>
+  <div class="markdown level1 summary"><p>Apply a <a class="xref" href="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionUpdate.html">ICollisionUpdate</a> to the game world.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Apply(ICollisionUpdate update)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionUpdate.html">ICollisionUpdate</a></td>
+        <td><span class="parametername">update</span></td>
+        <td><p>The update to apply.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Block_Position_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Block(Position)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Interfaces/Region/Collision/ICollisionManager.cs/#L22">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Block_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Block*"></a>
+  <h4 id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Block_Position_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Block(Position)">Block(Position)</h4>
+  <div class="markdown level1 summary"><p>Marks a tile as completely untraversable from all directions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Block(Position position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Position</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The <see cref="!:Position"></see> of the tile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Build_System_Boolean_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Build(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Interfaces/Region/Collision/ICollisionManager.cs/#L29">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Build_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Build*"></a>
+  <h4 id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Build_System_Boolean_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Build(System.Boolean)">Build(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Applies the initial <a class="xref" href="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionUpdate.html">ICollisionUpdate</a> to the <a class="xref" href="NetScape.Abstractions.Model.Region.Collision.CollisionMatrix.html">CollisionMatrix</a>es for all objects and tiles loaded
+from the cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Build(bool rebuilding)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">rebuilding</span></td>
+        <td><p>if set to <code>true</code> [<a class="xref" href="NetScape.Abstractions.Model.Region.Collision.CollisionMatrix.html">CollisionMatrix</a>es are being rebuilt].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_MarkBridged_Position_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.MarkBridged(Position)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Interfaces/Region/Collision/ICollisionManager.cs/#L35">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_MarkBridged_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.MarkBridged*"></a>
+  <h4 id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_MarkBridged_Position_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.MarkBridged(Position)">MarkBridged(Position)</h4>
+  <div class="markdown level1 summary"><p>Marks a tile as part of a bridge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MarkBridged(Position position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Position</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The <see cref="!:Position"></see> of the tile.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Raycast_Position_Position_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Raycast(Position%2CPosition)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Interfaces/Region/Collision/ICollisionManager.cs/#L44">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Raycast_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Raycast*"></a>
+  <h4 id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Raycast_Position_Position_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Raycast(Position,Position)">Raycast(Position, Position)</h4>
+  <div class="markdown level1 summary"><p>Casts a ray into the world to check for impenetrable objects  from the given <code data-dev-comment-type="paramref" class="paramref">start</code> position to the
+<code data-dev-comment-type="paramref" class="paramref">end</code> position using Bresenham's line algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Raycast(Position start, Position end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Position</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start position of the ray.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Position</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end position of the ray.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if [an impentrable object was hit] else <code>false</code> [otherwise]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Traversable_Position_NetScape_Abstractions_Model_Game_EntityType_Direction_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Traversable(Position%2CNetScape.Abstractions.Model.Game.EntityType%2CDirection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Interfaces/Region/Collision/ICollisionManager.cs/#L54">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Traversable_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Traversable*"></a>
+  <h4 id="NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager_Traversable_Position_NetScape_Abstractions_Model_Game_EntityType_Direction_" data-uid="NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.Traversable(Position,NetScape.Abstractions.Model.Game.EntityType,Direction)">Traversable(Position, EntityType, Direction)</h4>
+  <div class="markdown level1 summary"><p>Checks if the given <a class="xref" href="NetScape.Abstractions.Model.Game.EntityType.html">EntityType</a> can traverse to the next tile from <code data-dev-comment-type="paramref" class="paramref">position</code> in the given
+<code data-dev-comment-type="paramref" class="paramref">direction</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Traversable(Position position, EntityType type, Direction direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Position</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The current position of the entity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Model.Game.EntityType.html">EntityType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Direction</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>The direction the entity is travelling.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if [next tile is traversable] otherwise <code>false</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Interfaces_Region_Collision_ICollisionManager.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Interfaces/Region/Collision/ICollisionManager.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

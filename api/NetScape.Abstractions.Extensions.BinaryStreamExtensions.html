@@ -1,0 +1,945 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BinaryStreamExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BinaryStreamExtensions
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions">
+  
+  
+  <h1 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions" class="text-break">Class BinaryStreamExtensions
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BinaryStreamExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NetScape.Abstractions.Extensions.html">NetScape.Abstractions.Extensions</a></h6>
+  <h6><strong>Assembly</strong>: NetScape.Abstractions.dll</h6>
+  <h5 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class BinaryStreamExtensions : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadAwkwardChar_BinaryReader_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadAwkwardChar(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L168">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadAwkwardChar_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadAwkwardChar*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadAwkwardChar_BinaryReader_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadAwkwardChar(BinaryReader)">ReadAwkwardChar(BinaryReader)</h4>
+  <div class="markdown level1 summary"><p>Reads a byte, and turns it into a char using some awkward ruleset Jagex came up with.
+I mean...
+It could've just been a regular char.
+But no, that would've been too normal for Jagex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static char ReadAwkwardChar(this BinaryReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadAwkwardInt_BinaryReader_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadAwkwardInt(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L197">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadAwkwardInt_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadAwkwardInt*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadAwkwardInt_BinaryReader_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadAwkwardInt(BinaryReader)">ReadAwkwardInt(BinaryReader)</h4>
+  <div class="markdown level1 summary"><p>Reads either an unsigned int or an unsigned short depending on the first byte read.
+Oh if the short is its maximum value -1 is returned. Wat?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ReadAwkwardInt(this BinaryReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadAwkwardShort_BinaryReader_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadAwkwardShort(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L214">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadAwkwardShort_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadAwkwardShort*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadAwkwardShort_BinaryReader_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadAwkwardShort(BinaryReader)">ReadAwkwardShort(BinaryReader)</h4>
+  <div class="markdown level1 summary"><p>Reads either a byte or an unsigned short depending on the first byte read.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static short ReadAwkwardShort(this BinaryReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadBytesExactly_BinaryReader_System_Int32_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadBytesExactly(BinaryReader%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L30">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadBytesExactly_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadBytesExactly*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadBytesExactly_BinaryReader_System_Int32_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadBytesExactly(BinaryReader,System.Int32)">ReadBytesExactly(BinaryReader, Int32)</h4>
+  <div class="markdown level1 summary"><p>Reads <code data-dev-comment-type="paramref" class="paramref">count</code> bytes from the current stream into a byte array and advances the current
+position by that number of bytes. If the stream ends before the specified amount of bytes can be read, a
+<see cref="!:EndOfStreamException"></see> will be thrown. Identical to <see cref="!:BinaryReader.ReadBytes"></see>
+otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] ReadBytesExactly(this BinaryReader reader, int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadInt16BigEndian_BinaryReader_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadInt16BigEndian(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L13">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadInt16BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadInt16BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadInt16BigEndian_BinaryReader_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadInt16BigEndian(BinaryReader)">ReadInt16BigEndian(BinaryReader)</h4>
+  <div class="markdown level1 summary"><p>Reads a 2-byte signed big endian integer and advances the current position of the stream by 2 bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static short ReadInt16BigEndian(this BinaryReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadInt32BigEndian_BinaryReader_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadInt32BigEndian(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L46">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadInt32BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadInt32BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadInt32BigEndian_BinaryReader_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadInt32BigEndian(BinaryReader)">ReadInt32BigEndian(BinaryReader)</h4>
+  <div class="markdown level1 summary"><p>Reads a 4-byte signed big endian integer and advances the current position of the stream by 4 bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ReadInt32BigEndian(this BinaryReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadNullTerminatedString_BinaryReader_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadNullTerminatedString(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L136">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadNullTerminatedString_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadNullTerminatedString*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadNullTerminatedString_BinaryReader_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadNullTerminatedString(BinaryReader)">ReadNullTerminatedString(BinaryReader)</h4>
+  <div class="markdown level1 summary"><p>Reads characters based on the current stream text encoding into a string until \0 or EOF occurs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ReadNullTerminatedString(this BinaryReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt16BigEndian_BinaryReader_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt16BigEndian(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L54">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt16BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt16BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt16BigEndian_BinaryReader_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt16BigEndian(BinaryReader)">ReadUInt16BigEndian(BinaryReader)</h4>
+  <div class="markdown level1 summary"><p>Reads a 2-byte unsigned big endian integer and advances the current position of the stream by 2 bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ushort ReadUInt16BigEndian(this BinaryReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt24BigEndian_BinaryReader_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt24BigEndian(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L62">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt24BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt24BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt24BigEndian_BinaryReader_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt24BigEndian(BinaryReader)">ReadUInt24BigEndian(BinaryReader)</h4>
+  <div class="markdown level1 summary"><p>Reads a 3-byte unsigned big endian integer and advances the current position of the stream by 3 bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ReadUInt24BigEndian(this BinaryReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt32BigEndian_BinaryReader_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt32BigEndian(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L70">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt32BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt32BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt32BigEndian_BinaryReader_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt32BigEndian(BinaryReader)">ReadUInt32BigEndian(BinaryReader)</h4>
+  <div class="markdown level1 summary"><p>Reads a 4-byte unsigned big endian integer and advances the current position of the stream by 4 bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static uint ReadUInt32BigEndian(this BinaryReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt48BigEndian_BinaryReader_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt48BigEndian(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L79">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt48BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt48BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_ReadUInt48BigEndian_BinaryReader_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.ReadUInt48BigEndian(BinaryReader)">ReadUInt48BigEndian(BinaryReader)</h4>
+  <div class="markdown level1 summary"><p>Reads a 6-byte unsigned big endian integer and advances the current position of the stream by 6 bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long ReadUInt48BigEndian(this BinaryReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteAwkwardInt_BinaryWriter_System_Int32_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteAwkwardInt(BinaryWriter%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L235">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteAwkwardInt_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteAwkwardInt*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteAwkwardInt_BinaryWriter_System_Int32_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteAwkwardInt(BinaryWriter,System.Int32)">WriteAwkwardInt(BinaryWriter, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteAwkwardInt(this BinaryWriter writer, int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryWriter</span></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteInt16BigEndian_BinaryWriter_System_Int16_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteInt16BigEndian(BinaryWriter%2CSystem.Int16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L85">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteInt16BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteInt16BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteInt16BigEndian_BinaryWriter_System_Int16_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteInt16BigEndian(BinaryWriter,System.Int16)">WriteInt16BigEndian(BinaryWriter, Int16)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteInt16BigEndian(this BinaryWriter writer, short value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryWriter</span></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int16</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteInt32BigEndian_BinaryWriter_System_Int32_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteInt32BigEndian(BinaryWriter%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L91">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteInt32BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteInt32BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteInt32BigEndian_BinaryWriter_System_Int32_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteInt32BigEndian(BinaryWriter,System.Int32)">WriteInt32BigEndian(BinaryWriter, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteInt32BigEndian(this BinaryWriter writer, int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryWriter</span></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteNullTerminatedString_BinaryWriter_System_String_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteNullTerminatedString(BinaryWriter%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L229">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteNullTerminatedString_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteNullTerminatedString*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteNullTerminatedString_BinaryWriter_System_String_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteNullTerminatedString(BinaryWriter,System.String)">WriteNullTerminatedString(BinaryWriter, String)</h4>
+  <div class="markdown level1 summary"><p>Writes characters into a string and suffixes it with \0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteNullTerminatedString(this BinaryWriter writer, string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryWriter</span></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteUInt16BigEndian_BinaryWriter_System_UInt16_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteUInt16BigEndian(BinaryWriter%2CSystem.UInt16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L99">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteUInt16BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteUInt16BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteUInt16BigEndian_BinaryWriter_System_UInt16_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteUInt16BigEndian(BinaryWriter,System.UInt16)">WriteUInt16BigEndian(BinaryWriter, UInt16)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteUInt16BigEndian(this BinaryWriter writer, ushort value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryWriter</span></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteUInt24BigEndian_BinaryWriter_System_Int32_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteUInt24BigEndian(BinaryWriter%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L105">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteUInt24BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteUInt24BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteUInt24BigEndian_BinaryWriter_System_Int32_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteUInt24BigEndian(BinaryWriter,System.Int32)">WriteUInt24BigEndian(BinaryWriter, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteUInt24BigEndian(this BinaryWriter writer, int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryWriter</span></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteUInt32BigEndian_BinaryWriter_System_UInt32_.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteUInt32BigEndian(BinaryWriter%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L112">View Source</a>
+  </span>
+  <a id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteUInt32BigEndian_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteUInt32BigEndian*"></a>
+  <h4 id="NetScape_Abstractions_Extensions_BinaryStreamExtensions_WriteUInt32BigEndian_BinaryWriter_System_UInt32_" data-uid="NetScape.Abstractions.Extensions.BinaryStreamExtensions.WriteUInt32BigEndian(BinaryWriter,System.UInt32)">WriteUInt32BigEndian(BinaryWriter, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteUInt32BigEndian(this BinaryWriter writer, uint value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BinaryWriter</span></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Abstractions_Extensions_BinaryStreamExtensions.md&amp;value=---%0Auid%3A%20NetScape.Abstractions.Extensions.BinaryStreamExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Abstractions/Extensions/BinaryStreamExtensions.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

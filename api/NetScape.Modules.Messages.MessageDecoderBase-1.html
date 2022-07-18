@@ -1,0 +1,547 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MessageDecoderBase&lt;TMessage&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MessageDecoderBase&lt;TMessage&gt;
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1">
+  
+  
+  <h1 id="NetScape_Modules_Messages_MessageDecoderBase_1" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1" class="text-break">Class MessageDecoderBase&lt;TMessage&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MessageDecoderBase&lt;TMessage&gt;</span></div>
+      <div class="level2"><a class="xref" href="NetScape.Modules.FourSevenFour.Game.Messages.Decoders.WalkingQueueMessageDecoder.html">WalkingQueueMessageDecoder</a></div>
+      <div class="level2"><a class="xref" href="NetScape.Modules.ThreeOneSeven.Game.Messages.Decoders.WalkingQueueMessageDecoder.html">WalkingQueueMessageDecoder</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="NetScape.Abstractions.Interfaces.Messages.IMessageDecoder-1.html">IMessageDecoder</a>&lt;TMessage&gt;</div>
+    <div><a class="xref" href="NetScape.Abstractions.Interfaces.Messages.IMessageDecoder.html">IMessageDecoder</a></div>
+    <div><span class="xref">IObservable</span>&lt;<a class="xref" href="NetScape.Abstractions.Model.Messages.DecoderMessage-1.html">DecoderMessage</a>&lt;TMessage&gt;&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NetScape.Modules.Messages.html">NetScape.Modules.Messages</a></h6>
+  <h6><strong>Assembly</strong>: NetScape.Modules.Messages.dll</h6>
+  <h5 id="NetScape_Modules_Messages_MessageDecoderBase_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MessageDecoderBase&lt;TMessage&gt; : object, IMessageDecoder&lt;TMessage&gt;, IMessageDecoder, IObservable&lt;DecoderMessage&lt;TMessage&gt;&gt; where TMessage : IMessage&lt;TMessage&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMessage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Messages_MessageDecoderBase_1_FrameType.md&amp;value=---%0Auid%3A%20NetScape.Modules.Messages.MessageDecoderBase%601.FrameType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Modules.Messages/MessageDecoderBase.cs/#L40">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Messages_MessageDecoderBase_1_FrameType_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.FrameType*"></a>
+  <h4 id="NetScape_Modules_Messages_MessageDecoderBase_1_FrameType" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.FrameType">FrameType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual FrameType FrameType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Modules.Messages.Builder.FrameType.html">FrameType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Messages_MessageDecoderBase_1_Ids.md&amp;value=---%0Auid%3A%20NetScape.Modules.Messages.MessageDecoderBase%601.Ids%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Modules.Messages/MessageDecoderBase.cs/#L39">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Messages_MessageDecoderBase_1_Ids_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.Ids*"></a>
+  <h4 id="NetScape_Modules_Messages_MessageDecoderBase_1_Ids" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.Ids">Ids</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int[] Ids { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Messages_MessageDecoderBase_1_TypeName.md&amp;value=---%0Auid%3A%20NetScape.Modules.Messages.MessageDecoderBase%601.TypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Modules.Messages/MessageDecoderBase.cs/#L42">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Messages_MessageDecoderBase_1_TypeName_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.TypeName*"></a>
+  <h4 id="NetScape_Modules_Messages_MessageDecoderBase_1_TypeName" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.TypeName">TypeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TypeName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Messages_MessageDecoderBase_1_Decode_NetScape_Abstractions_Model_Game_Player_NetScape_Modules_Messages_Builder_MessageFrame_.md&amp;value=---%0Auid%3A%20NetScape.Modules.Messages.MessageDecoderBase%601.Decode(NetScape.Abstractions.Model.Game.Player%2CNetScape.Modules.Messages.Builder.MessageFrame)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Modules.Messages/MessageDecoderBase.cs/#L44">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Messages_MessageDecoderBase_1_Decode_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.Decode*"></a>
+  <h4 id="NetScape_Modules_Messages_MessageDecoderBase_1_Decode_NetScape_Abstractions_Model_Game_Player_NetScape_Modules_Messages_Builder_MessageFrame_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.Decode(NetScape.Abstractions.Model.Game.Player,NetScape.Modules.Messages.Builder.MessageFrame)">Decode(Player, MessageFrame)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual TMessage Decode(Player player, MessageFrame frame)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Model.Game.Player.html">Player</a></td>
+        <td><span class="parametername">player</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NetScape.Modules.Messages.Builder.MessageFrame.html">MessageFrame</a></td>
+        <td><span class="parametername">frame</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMessage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Messages_MessageDecoderBase_1_DecodeAndPublish_NetScape_Abstractions_Model_Game_Player_NetScape_Modules_Messages_Builder_MessageFrame_.md&amp;value=---%0Auid%3A%20NetScape.Modules.Messages.MessageDecoderBase%601.DecodeAndPublish(NetScape.Abstractions.Model.Game.Player%2CNetScape.Modules.Messages.Builder.MessageFrame)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Modules.Messages/MessageDecoderBase.cs/#L72">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Messages_MessageDecoderBase_1_DecodeAndPublish_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.DecodeAndPublish*"></a>
+  <h4 id="NetScape_Modules_Messages_MessageDecoderBase_1_DecodeAndPublish_NetScape_Abstractions_Model_Game_Player_NetScape_Modules_Messages_Builder_MessageFrame_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.DecodeAndPublish(NetScape.Abstractions.Model.Game.Player,NetScape.Modules.Messages.Builder.MessageFrame)">DecodeAndPublish(Player, MessageFrame)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DecodeAndPublish(Player player, MessageFrame frame)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Model.Game.Player.html">Player</a></td>
+        <td><span class="parametername">player</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="NetScape.Modules.Messages.Builder.MessageFrame.html">MessageFrame</a></td>
+        <td><span class="parametername">frame</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Messages_MessageDecoderBase_1_Publish_NetScape_Abstractions_Model_Game_Player_System_Object_.md&amp;value=---%0Auid%3A%20NetScape.Modules.Messages.MessageDecoderBase%601.Publish(NetScape.Abstractions.Model.Game.Player%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Modules.Messages/MessageDecoderBase.cs/#L51">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Messages_MessageDecoderBase_1_Publish_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.Publish*"></a>
+  <h4 id="NetScape_Modules_Messages_MessageDecoderBase_1_Publish_NetScape_Abstractions_Model_Game_Player_System_Object_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.Publish(NetScape.Abstractions.Model.Game.Player,System.Object)">Publish(Player, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Publish(Player player, object message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NetScape.Abstractions.Model.Game.Player.html">Player</a></td>
+        <td><span class="parametername">player</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Messages_MessageDecoderBase_1_Subscribe_IObserver_NetScape_Abstractions_Model_Messages_DecoderMessage__0___.md&amp;value=---%0Auid%3A%20NetScape.Modules.Messages.MessageDecoderBase%601.Subscribe(IObserver%7BNetScape.Abstractions.Model.Messages.DecoderMessage%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Modules.Messages/MessageDecoderBase.cs/#L100">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Messages_MessageDecoderBase_1_Subscribe_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.Subscribe*"></a>
+  <h4 id="NetScape_Modules_Messages_MessageDecoderBase_1_Subscribe_IObserver_NetScape_Abstractions_Model_Messages_DecoderMessage__0___" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.Subscribe(IObserver{NetScape.Abstractions.Model.Messages.DecoderMessage{`0}})">Subscribe(IObserver&lt;DecoderMessage&lt;TMessage&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable Subscribe(IObserver&lt;DecoderMessage&lt;TMessage&gt;&gt; observer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IObserver</span>&lt;<a class="xref" href="NetScape.Abstractions.Model.Messages.DecoderMessage-1.html">DecoderMessage</a>&lt;TMessage&gt;&gt;</td>
+        <td><span class="parametername">observer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDisposable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Messages_MessageDecoderBase_1_SubscribeDelegate_Delegate_Delegate_.md&amp;value=---%0Auid%3A%20NetScape.Modules.Messages.MessageDecoderBase%601.SubscribeDelegate(Delegate%2CDelegate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Modules.Messages/MessageDecoderBase.cs/#L86">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Messages_MessageDecoderBase_1_SubscribeDelegate_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.SubscribeDelegate*"></a>
+  <h4 id="NetScape_Modules_Messages_MessageDecoderBase_1_SubscribeDelegate_Delegate_Delegate_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.SubscribeDelegate(Delegate,Delegate)">SubscribeDelegate(Delegate, Delegate)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable SubscribeDelegate(Delegate method, Delegate filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Delegate</span></td>
+        <td><span class="parametername">method</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Delegate</span></td>
+        <td><span class="parametername">filter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDisposable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Messages_MessageDecoderBase_1_SubscribeDelegateAsync_Delegate_Delegate_.md&amp;value=---%0Auid%3A%20NetScape.Modules.Messages.MessageDecoderBase%601.SubscribeDelegateAsync(Delegate%2CDelegate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Modules.Messages/MessageDecoderBase.cs/#L93">View Source</a>
+  </span>
+  <a id="NetScape_Modules_Messages_MessageDecoderBase_1_SubscribeDelegateAsync_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.SubscribeDelegateAsync*"></a>
+  <h4 id="NetScape_Modules_Messages_MessageDecoderBase_1_SubscribeDelegateAsync_Delegate_Delegate_" data-uid="NetScape.Modules.Messages.MessageDecoderBase`1.SubscribeDelegateAsync(Delegate,Delegate)">SubscribeDelegateAsync(Delegate, Delegate)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable SubscribeDelegateAsync(Delegate method, Delegate filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Delegate</span></td>
+        <td><span class="parametername">method</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Delegate</span></td>
+        <td><span class="parametername">filter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDisposable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="NetScape.Abstractions.Interfaces.Messages.IMessageDecoder-1.html">IMessageDecoder&lt;TMessage&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="NetScape.Abstractions.Interfaces.Messages.IMessageDecoder.html">IMessageDecoder</a>
+  </div>
+  <div>
+      <span class="xref">IObservable&lt;&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/new/master/apiSpec/new?filename=NetScape_Modules_Messages_MessageDecoderBase_1.md&amp;value=---%0Auid%3A%20NetScape.Modules.Messages.MessageDecoderBase%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JayArrowz/NetScape/blob/master/NetScape.Modules.Messages/MessageDecoderBase.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

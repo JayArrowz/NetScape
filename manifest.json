@@ -1,0 +1,3632 @@
+{
+  "homepages": [],
+  "source_base_path": "/github/workspace/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.BinaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.BinaryFile.html",
+          "hash": "ACmiXohA7uhzwYejR3sZow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.CacheFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.CacheFile.html",
+          "hash": "purioBv8VncB985KnL75OQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.CacheFileBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.CacheFileBase.html",
+          "hash": "f7MGijQhWw3puHjlrDXtdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.CacheFileEntryInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.CacheFileEntryInfo.html",
+          "hash": "/r6cS0bqrfHWLdYtr9dcmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.CacheFileInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.CacheFileInfo.html",
+          "hash": "COuNkfNbMYdDZrr7fiEdJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.CacheFileOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.CacheFileOptions.html",
+          "hash": "EID+5F31daZlYHoTaA7nvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.CacheIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.CacheIndex.html",
+          "hash": "r0dL82t93hJUN04ReYISsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.CompressionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.CompressionType.html",
+          "hash": "uOBPzwQzAZwgOlbwvnHSuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.DecodeException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.DecodeException.html",
+          "hash": "+545QgABonueXttD1E1bCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.ReferenceTableFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.ReferenceTableFile.html",
+          "hash": "HabEfuImz+eaz/NDbrVbOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Cache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Cache.html",
+          "hash": "ZQ4EdkPqH++MB3CTmT1Clg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Constants.html",
+          "hash": "p2wniyo4KOMjNCv3s8qsnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Extensions.BinaryStreamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Extensions.BinaryStreamExtensions.html",
+          "hash": "q5AvELgmPP79dVP0QpxAXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Extensions.ByteBufferExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Extensions.ByteBufferExtensions.html",
+          "hash": "oGFQupHtqK7yvOy6zWawKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Extensions.CollisionFlagExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Extensions.CollisionFlagExtensions.html",
+          "hash": "2FLqlExLZC6ekHl78YA3xw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Extensions.EntityTypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Extensions.EntityTypeExtensions.html",
+          "hash": "FSg96iII0eub3RQj8+Lalw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Extensions.ExtensionGuesser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Extensions.ExtensionGuesser.html",
+          "hash": "tShcrgW9jlwe+ODHUwYIiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Extensions.Formatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Extensions.Formatter.html",
+          "hash": "2SrSFRN5GbhM4d2JtcugpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Extensions.PathExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Extensions.PathExtensions.html",
+          "hash": "t/vqfjifVq3v7AzSfimViw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Extensions.html",
+          "hash": "tqRtS51VUacFvh+ECYwTmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.FileSystem.IFileSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.FileSystem.IFileSystem.html",
+          "hash": "81AVp4fQ54fSSbu9jS9iGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.FileSystem.IPlayerRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.FileSystem.IPlayerRepository.html",
+          "hash": "xa7FDBXLzad8CHCnjOMZiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.FileSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.FileSystem.html",
+          "hash": "XAUjwCxysLSCvghEa8VyuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Game.WalkingQueueHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Game.WalkingQueueHandler.html",
+          "hash": "aSot+geoyqm07Fmi7K+e7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Game.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Game.html",
+          "hash": "YVcPRaJGHFESx6sOE/noXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.IO.ServerChannelInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.IO.ServerChannelInitializer.html",
+          "hash": "EmJ5t1jlJZmjv09rV84VlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.IO.StatefulFrameDecoder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.IO.StatefulFrameDecoder-1.html",
+          "hash": "yqiBb0F2fxbDAVD1cLRdJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.IO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.IO.html",
+          "hash": "EwE29XI4cqcLCxZFpxGEVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Cache.ICacheSector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Cache.ICacheSector.html",
+          "hash": "kovUFeG+7Rr9smhDvOwLUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Cache.IFileStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Cache.IFileStore.html",
+          "hash": "bf6RbFQ0G9HACx8hZ1k12g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Cache.IReferenceTableCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Cache.IReferenceTableCache.html",
+          "hash": "ONMhd1Q+XXBVFLCLFxSkUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Cache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Cache.html",
+          "hash": "JoQqZaf9QIesmQ3HJ1+O9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Game.Interface.ITabManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Game.Interface.ITabManager.html",
+          "hash": "HX2LsMi4iaJsfvvjwh8gtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Game.Interface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Game.Interface.html",
+          "hash": "rRVns5EXvlvHkHxjGSg3Nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Game.Player.IPlayerInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Game.Player.IPlayerInitializer.html",
+          "hash": "cWO4aABRMWuzH2ORUHDssQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Game.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Game.Player.html",
+          "hash": "QZpyS9xm2fq+tCoR4zWjSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.IO.EventLoop.IEventLoopGroupFactory.html",
+          "hash": "tFIm5sxzX3zw7bv/LJ1w1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.IO.EventLoop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.IO.EventLoop.html",
+          "hash": "La3/RsCeKalspfWbCKn0KQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.IO.IChannelHandlerProvider.html",
+          "hash": "nEH3eiUHoGxNlZQv09qBVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.IO.IGameServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.IO.IGameServer.html",
+          "hash": "UvazNNz3LuCwwtdnlEg/2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.IO.IGameServerParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.IO.IGameServerParameters.html",
+          "hash": "WAT0aM2zHUsmFcS2oCqgPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.IO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.IO.html",
+          "hash": "fmE336B71xzht3UT6MhggA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Login.ILoginProcessor-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Login.ILoginProcessor-2.html",
+          "hash": "xZlqbTwPCmUSiURy22qYQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Login.ILoginProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Login.ILoginProvider.html",
+          "hash": "wz/6RHGjibm9hAgrlCafQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Login.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Login.html",
+          "hash": "bfKJf1qcPyxMWj82AmO5CQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Messages.ICipherAwareHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Messages.ICipherAwareHandler.html",
+          "hash": "QtbAssKOq6FIBRFhCsj/Ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IEncoderMessage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IEncoderMessage-1.html",
+          "hash": "Ng6FOQrR8zQstks0EDVr/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IMessageDecoder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IMessageDecoder-1.html",
+          "hash": "ueZTPsIn152Z7xcc/qgYYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IMessageDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IMessageDecoder.html",
+          "hash": "fbUVirkpKyeUX1h5MqhBIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IMessageProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IMessageProvider.html",
+          "hash": "4TWnYj85VBc2g4QwA9l+aA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IPlayerAwareHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IPlayerAwareHandler.html",
+          "hash": "LvfYPZ1TB1kVOOMQVJYW/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IProtoMessageSender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Messages.IProtoMessageSender.html",
+          "hash": "AyCwkz/X6BgDg7wkNGC2KQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Messages.RegionUpdateMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Messages.RegionUpdateMessage.html",
+          "hash": "V9dR4R/xsi6mDS6wFi1NQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Messages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Messages.html",
+          "hash": "yrdYq2BgFmt0ucm/KlSxHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Region.Collision.ICollisionManager.html",
+          "hash": "9p4bZUTDial/N1SK1ju4mQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Region.Collision.ICollisionUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Region.Collision.ICollisionUpdate.html",
+          "hash": "7sGx/Cp23zkmP9ElBsqlEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Region.Collision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Region.Collision.html",
+          "hash": "vLmyJiXf172V/8b5Gsf7Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Region.IGroupableEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Region.IGroupableEntity.html",
+          "hash": "BpknDdu6yaCX5sDSxOIdjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Region.IRegion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Region.IRegion.html",
+          "hash": "m9kwCgmiKVOX6wMAR9qNhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Region.IRegionListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Region.IRegionListener.html",
+          "hash": "5iz1xNmht8qn7DFqi5w8kA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Region.IRegionRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Region.IRegionRepository.html",
+          "hash": "gbe1/9kw3k4rvWgPRanm5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Region.IRegionUpdateOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Region.IRegionUpdateOperation.html",
+          "hash": "wBfhYJuqUGrpVCKIVePsmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.Region.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.Region.html",
+          "hash": "5CNQ/nJ9iFznTQ8/Yi2CNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.World.IEntityList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.World.IEntityList-1.html",
+          "hash": "p+srWQZBSy4hzI1GRVwDfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.World.IWorld.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.World.IWorld.html",
+          "hash": "B8fGwYfYb46/nd21r7ob/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.World.Updating.IEntityUpdater-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.World.Updating.IEntityUpdater-1.html",
+          "hash": "BaX1SWtBoJNFdJ3qMrbXdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.World.Updating.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.World.Updating.html",
+          "hash": "94p3X3ytBi/IgAyOy61KIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Interfaces.World.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Interfaces.World.html",
+          "hash": "KKaIW1WZw6qUy7Jpp8y2Xw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Login.DefaultLoginProcessor-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Login.DefaultLoginProcessor-2.html",
+          "hash": "i+4scdkctxGh1R3tj1RW8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Login.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Login.html",
+          "hash": "vzkOhjU4fTAeZSeBkqsAvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Game.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Game.Entity.html",
+          "hash": "uAZa8vydnwX013IisjW1fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Game.EntityType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Game.EntityType.html",
+          "hash": "gK5hfZxCHri4LUc98uYX7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Game.GameServerParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Game.GameServerParameters.html",
+          "hash": "0Sv3KRHP08buKWpT1IgR+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Game.Gender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Game.Gender.html",
+          "hash": "NGuG0NxHBPvDujN544JPHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Game.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Game.Player.html",
+          "hash": "tQptY8/woghS1l60axhGvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Game.WalkingQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Game.WalkingQueue.html",
+          "hash": "7d3h2LI538bVwB6ru/l6XA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Game.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Game.html",
+          "hash": "2o4JhF0zsnrOo0innWa2BA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.InnerDirectionValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.InnerDirectionValue.html",
+          "hash": "r7vo+fxsmxZ5wScWS0n+Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Login.LoginDecoderState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Login.LoginDecoderState.html",
+          "hash": "JmK9BcK7Pa0iRiE4H8L3Kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Login.LoginResponse-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Login.LoginResponse-1.html",
+          "hash": "Gxmz4e/1HWLKJ1N2KbJUYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Login.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Login.html",
+          "hash": "ZSA5J4O4HtZRWzZZC8mstA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Messages.DecoderMessage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Messages.DecoderMessage-1.html",
+          "hash": "5vdKFJjeBHbRq2l0y0dbBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Messages.ProtoMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Messages.ProtoMessage.html",
+          "hash": "gPc9myXrCkg6nwwiX10Kyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Messages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Messages.html",
+          "hash": "IcaSZ3H6x6oE+rgaF5mPKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Mob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Mob.html",
+          "hash": "dHku/vlXuLNLGlsYwN5a5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Region.Collision.CollisionFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Region.Collision.CollisionFlag.html",
+          "hash": "Y1iYgiqWThXHPH7micvl6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Region.Collision.CollisionMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Region.Collision.CollisionMatrix.html",
+          "hash": "LcMIuRaPTsmdKUUPytde1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Region.Collision.CollisionUpdateType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Region.Collision.CollisionUpdateType.html",
+          "hash": "5nrOGgezeT431l8bF+X5Vg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Region.Collision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Region.Collision.html",
+          "hash": "p6Qwhm8cxh0F48ZRV8BMsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Region.EntityUpdateType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Region.EntityUpdateType.html",
+          "hash": "ttLnBR4kHgfX/Gs6yWFY4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Region.ObjectGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Region.ObjectGroup.html",
+          "hash": "1lh0M1+FW9SICFxaZr881Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Region.ObjectType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Region.ObjectType.html",
+          "hash": "Zcva9lgsQbr6xnjK3ZyCKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.Region.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.Region.html",
+          "hash": "nhVJgdALaKO5y/MXPHFiIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.World.Updating.Blocks.AnimationBlock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.World.Updating.Blocks.AnimationBlock.html",
+          "hash": "ayUtU2JHn3b+XXBhGh8uaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.World.Updating.Blocks.AppearanceBlock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.World.Updating.Blocks.AppearanceBlock.html",
+          "hash": "qo0Q0CmQTYZx3vEFY6cpDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.World.Updating.Blocks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.World.Updating.Blocks.html",
+          "hash": "TyDI1M1q5bmySorC6Glthg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.World.Updating.SynchronizationBlock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.World.Updating.SynchronizationBlock.html",
+          "hash": "vr37InGVbVZl53a7RkscXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.World.Updating.SynchronizationBlockSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.World.Updating.SynchronizationBlockSet.html",
+          "hash": "gRkpnyjcVYP7TSQzF9OaPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.World.Updating.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.World.Updating.html",
+          "hash": "G0xuGjdwGi6ZeAJnjUDtiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Model.html",
+          "hash": "GjuaaphBTEd8h2OQqlCD9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Server.ContainerProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Server.ContainerProvider.html",
+          "hash": "wt6pYbEH0n8BuI3NwY6XNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Server.html",
+          "hash": "e5UXqRG7ClHVFvJG970Vfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Util.IsaacRandom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Util.IsaacRandom.html",
+          "hash": "V2ErDZNdMPAekslNlRXivA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Util.IsaacRandomPair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Util.IsaacRandomPair.html",
+          "hash": "gQMatB8A5AO8DuUvbVjw9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Util.TextUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Util.TextUtil.html",
+          "hash": "mi9uCkzzUXag1BjDagCpew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.Util.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.Util.html",
+          "hash": "njEsiPg+TrIIilPlZBH2kA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Abstractions.html",
+          "hash": "sMkWZD4vN7/ZwHcC6Zyeyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Core.FileSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Core.FileSystem.html",
+          "hash": "2xhlB+c2/4zt1KziVqgdBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Core.FileSystemConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Core.FileSystemConfig.html",
+          "hash": "2/GyFcA3qArUa70QKlqIJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Core.ServerHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Core.ServerHandler.html",
+          "hash": "PT1mf0Ghu8jWoXc3Z7YEZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Core.html",
+          "hash": "JaTcuyJwWR6/DN7/m9XKzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.DesignTimeDbContextFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.DesignTimeDbContextFactory.html",
+          "hash": "jPGP87xqkFG9NQhDLDdIag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Kernel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Kernel.html",
+          "hash": "QGUHkYL6TOjdNxUAaXu6cA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.BaseVarType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.BaseVarType.html",
+          "hash": "XZry+BszsTvzxhipNSufeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.CacheBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.CacheBase.html",
+          "hash": "FPWvqBTcnC243O+z4PR3AA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.CacheModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.CacheModule.html",
+          "hash": "emYUSHqURQSfEZZH24OZJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.Exceptions.DownloaderException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.Exceptions.DownloaderException.html",
+          "hash": "kAhg1VOVuTThZv47Bsxsdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.Exceptions.SoundtrackException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.Exceptions.SoundtrackException.html",
+          "hash": "eq9VabidLhMhliw04fdBRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.Exceptions.html",
+          "hash": "//Acm9GRyJMLqKG6vVlGnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FileTypes.EntryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FileTypes.EntryFile.html",
+          "hash": "/P2YGSTuU5KQk74Z2n83CQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FileTypes.EnumFile.Opcode.html",
+          "hash": "ohEdd/wCotHLfnfep1P1nQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FileTypes.EnumFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FileTypes.EnumFile.html",
+          "hash": "xu89dyS27h85h1GtKQOozg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.PropertyKey.html",
+          "hash": "Q7JQ6BO+ce6VS61LcpOWew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FileTypes.ItemDefinitionFile.html",
+          "hash": "drd9IVHBOewSi4n4cUgGUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FileTypes.JagaFile.AudioChunkDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FileTypes.JagaFile.AudioChunkDescriptor.html",
+          "hash": "xC3pnU5/hZ7omApG6gHUpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FileTypes.JagaFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FileTypes.JagaFile.html",
+          "hash": "m577TdyXqc4DJutxDg4BDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FileTypes.MasterReferenceTableFile.ReferenceTableInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FileTypes.MasterReferenceTableFile.ReferenceTableInfo.html",
+          "hash": "aFBCYK0lp0fbZTlgkV7Vdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FileTypes.MasterReferenceTableFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FileTypes.MasterReferenceTableFile.html",
+          "hash": "5wwO4TkvAyUXYlxYRchwyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FileTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FileTypes.html",
+          "hash": "DSTRU/lQBo+xnQOUXt+cxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FlatFile.FlatFileCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FlatFile.FlatFileCache.html",
+          "hash": "fqhUdKbz1SeW2vdIIltevA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.FlatFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.FlatFile.html",
+          "hash": "TgufJfAw5TFXQqu6KAlKRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.Language.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.Language.html",
+          "hash": "r2fw7RQ9UW9gvA6oDlgJ/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.ReferenceTableCacheBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.ReferenceTableCacheBase.html",
+          "hash": "yyRQ8yjwZydBfSgOvWnRIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.RuneTek5.FileStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.RuneTek5.FileStore.html",
+          "hash": "IDcsnF1FVwgMmFVdjEDKnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.RuneTek5.IndexPointer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.RuneTek5.IndexPointer.html",
+          "hash": "GJAsr1RfOr2dHi0OsyzdRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.RuneTek5.RuneTek5Cache.html",
+          "hash": "FYeqEGjpKHdsodcC3c4tdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.RuneTek5.Sector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.RuneTek5.Sector.html",
+          "hash": "SJ1poGp8PhowX25IM2RgxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.RuneTek5.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.RuneTek5.html",
+          "hash": "HRTSLdSPlWYajiwdevPGTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.ScriptVarType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.ScriptVarType.html",
+          "hash": "fDUTTKkQIPvxLrCb/f000A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.Vector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.Vector3.html",
+          "hash": "ywb+mbvAFwjnjwhzUBP0Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Cache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Cache.html",
+          "hash": "/CdVeyvrF9D442b9f5okRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.DAL.DALModule-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.DAL.DALModule-1.html",
+          "hash": "AfCM2HRk0YvHHVyUYbQ7gw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.DAL.DatabaseContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.DAL.DatabaseContext-1.html",
+          "hash": "E2c86SspivuXEOGtO1rzJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.DAL.EntityFrameworkPlayerRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.DAL.EntityFrameworkPlayerRepository-1.html",
+          "hash": "MchX2tRTlGgcK+WXLBUB5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.DAL.Migrations.AddInitial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.DAL.Migrations.AddInitial.html",
+          "hash": "tjsfrMKj+PUqaAJPx4DA3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.DAL.Migrations.RemoveAppearanceFields.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.DAL.Migrations.RemoveAppearanceFields.html",
+          "hash": "iIGM20vlbj/o0MNT4a+DXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.DAL.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.DAL.Migrations.html",
+          "hash": "Jax1ASUS3Hp7h/rWvFeA1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.DAL.Test.EntityFrameworkPlayerSerializerTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.DAL.Test.EntityFrameworkPlayerSerializerTests.html",
+          "hash": "5fRzlUM3cd+MCzYZwUwzOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.DAL.Test.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.DAL.Test.html",
+          "hash": "fmmKt8voGyx+/6LJ6GLiZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.DAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.DAL.html",
+          "hash": "WEdCkMmU/yPfjiB3EUPeIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.FourSevenFourGameModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.FourSevenFourGameModule.html",
+          "hash": "8TbxNqwX0kR2yBs8ZlWExw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Decoders.WalkingQueueMessageDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Decoders.WalkingQueueMessageDecoder.html",
+          "hash": "zcOF3MRTIxy2AZt3OAdpQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Decoders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Decoders.html",
+          "hash": "DiJJtyfHLlCsbeS6/7NY3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.GroupedRegionUpdateMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.GroupedRegionUpdateMessage.html",
+          "hash": "XOErVd63QPcR8xhlOcMgfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.RemoveObjectMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.RemoveObjectMessage.html",
+          "hash": "PXOBXCfVEosiDINtauGpmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.SendMapRegionMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.SendMapRegionMessage.html",
+          "hash": "wGBVqOJf1W7KjGCPNTK+hQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.SendObjectMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.SendObjectMessage.html",
+          "hash": "ZfPXC8rmN2sOR7MvzRsdhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.SendPingMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.SendPingMessage.html",
+          "hash": "gUrBIrR5BG2Hik2/yy7GOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Encoders.html",
+          "hash": "uYCPVNbRGY62cnzjdSRXRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Handlers.PingMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Handlers.PingMessageHandler.html",
+          "hash": "G5KLBjkrmGXIjr2xx7OQNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Handlers.WalkingQueueMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Handlers.WalkingQueueMessageHandler.html",
+          "hash": "AJ5SvuJ3TG6G1gEJ4c1yMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Handlers.WelcomeScreenHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Handlers.WelcomeScreenHandler.html",
+          "hash": "EyJ6+vUBJWVpJU5adX45iQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Handlers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Messages.Handlers.html",
+          "hash": "6VVGq5mKsHIARhgyF/VGUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Player.PlayerInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Player.PlayerInitializer.html",
+          "hash": "xFqsU+mniMrVwQPxc9fMSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Player.TabManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Player.TabManager.html",
+          "hash": "kjb/GDTqtCPdoAiBMaothQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.Player.html",
+          "hash": "b24UUunoymCnCe6eZozrUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.Game.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.Game.html",
+          "hash": "Z/Kz1+73ne8bUntuITW7EQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.FourSevenFourLoginModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.FourSevenFourLoginModule.html",
+          "hash": "rp4DQm8cBrikvl9QkmYkPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.FourSevenFourLoginStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.FourSevenFourLoginStatus.html",
+          "hash": "CmRJKXqlAGNIKW5R1P8RdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.HandshakeDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.HandshakeDecoder.html",
+          "hash": "eTZlfYGWkUiXnW9wuxRN7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.JS5Decoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.JS5Decoder.html",
+          "hash": "zBh3ARvBP39o04OiJuoJmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.JS5Encoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.JS5Encoder.html",
+          "hash": "f3/nbbVu2B2oaZel3ysoeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.LoginDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.LoginDecoder.html",
+          "hash": "k+Gbpp0aJaVmtE3DeMWKRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.LoginEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.LoginEncoder.html",
+          "hash": "PbknEVSxuh7v+6K+X+/k8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.LoginProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.LoginProvider.html",
+          "hash": "6I5vc14C92okPKmd6R2VrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Handlers.html",
+          "hash": "2krV3jh/XdDOmercid8f7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.HandshakeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.HandshakeType.html",
+          "hash": "rHeGswfKkqIZEn0U09tdYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.JS5Request.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.JS5Request.html",
+          "hash": "N56b2jKwC/YQYSGVAXicqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.LoginProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.LoginProcessor.html",
+          "hash": "OWux4/AY9s0JUjC3QaJfhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Rs2LoginResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.Rs2LoginResponse.html",
+          "hash": "6MfxgHWQdGWN/rCpAO+MWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.LoginProtocol.html",
+          "hash": "cY84/+Xfl7nrQcU/9pAwfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.FourSevenFourUpdatingModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.FourSevenFourUpdatingModule.html",
+          "hash": "CPbg2i5RGLKNo+2/qXkNTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Messages.PlayerSynchronizationMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Messages.PlayerSynchronizationMessage.html",
+          "hash": "rqaRKDB7t/7FCmBBfiZDgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Messages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Messages.html",
+          "hash": "dhdQIiNcHcj5ndU8bqNQzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.PlayerUpdater.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.PlayerUpdater.html",
+          "hash": "H4HFB0AdkiTJssITlEDKkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.AddPlayerSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.AddPlayerSegment.html",
+          "hash": "SMlxy8uUMIZqRNMFa5MHrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.MovementSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.MovementSegment.html",
+          "hash": "Gmo96wUcZi07U98WV4c0ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.RemoveMobSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.RemoveMobSegment.html",
+          "hash": "AYGdLyBdhSHXiZNla3QaTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.SegmentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.SegmentType.html",
+          "hash": "9o514tEm0f/KNGJix4fwgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.SynchronizationSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.SynchronizationSegment.html",
+          "hash": "8+jr3vuozSXMG8bFm6Q4sA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.TeleportSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.TeleportSegment.html",
+          "hash": "SszjiOEaOsccnzU9I++KHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.Segments.html",
+          "hash": "rre4FvKj+eTm32217v3Fcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.FourSevenFour.World.Updating.html",
+          "hash": "Fmqold6FgzzDu9yhpUr0DA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Logging.SeriLog.SeriLogModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Logging.SeriLog.SeriLogModule.html",
+          "hash": "D7q7xx7nXTHSaGLzf/nOcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Logging.SeriLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Logging.SeriLog.html",
+          "hash": "23fBv0qBMmv5BrCfpXl3LA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Builder.AccessMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Builder.AccessMode.html",
+          "hash": "uxHLxJUI3BnwpGaiKZBJZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Builder.DataOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Builder.DataOrder.html",
+          "hash": "dpOyROLzIYCKwRlafpEVkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Builder.DataTransformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Builder.DataTransformation.html",
+          "hash": "WXQcv1BH3HY22Xwt8XjI5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Builder.FrameType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Builder.FrameType.html",
+          "hash": "Fui7WB9hKD+eQd0zPynPjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Builder.FrameTypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Builder.FrameTypeExtensions.html",
+          "hash": "xcm5e4vvLJoy9wmN4U7KOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Builder.MessageFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Builder.MessageFrame.html",
+          "hash": "v5zRPVdmsvrKIpdBCsbSVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Builder.MessageFrameBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Builder.MessageFrameBuilder.html",
+          "hash": "CD1m2d6lgt12r0qZJh7DNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Builder.MessageFrameReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Builder.MessageFrameReader.html",
+          "hash": "Suv3ddtBshdNVZ55DIudsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Builder.MessageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Builder.MessageType.html",
+          "hash": "rax8CFZQzaTmOjheejkUNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Builder.html",
+          "hash": "ehi5QANpx9aK2Q/ShDnUsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Generator.FrameParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Generator.FrameParameters.html",
+          "hash": "VyIvnlWRO0B7EAkgYNHvow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Generator.GeneratorData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Generator.GeneratorData.html",
+          "hash": "hSX+CRxTprPbtglUC8m7nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Generator.GeneratorMessageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Generator.GeneratorMessageType.html",
+          "hash": "Ui4WFGQ3KW+8NTdmEoAeDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Generator.MessageGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Generator.MessageGenerator.html",
+          "hash": "bY0oIV8p8Z985ev2pguZVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Generator.MessageParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Generator.MessageParameters.html",
+          "hash": "NRImxs+W1eHTyYbCQsPc4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Generator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Generator.html",
+          "hash": "TFYoLXbPLsdSV4tOF50Tiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.MessageAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.MessageAttribute.html",
+          "hash": "CInX/72bZe7gBmmwIx4hsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.MessageAttributeHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.MessageAttributeHandler.html",
+          "hash": "l0VONlBUBQh8IuCDfCDjlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.MessageChannelHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.MessageChannelHandler.html",
+          "hash": "c81+3IsCh7RDjsbgDvLwdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.MessageDecoderBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.MessageDecoderBase-1.html",
+          "hash": "HAs+/AyJ8BzgK1kbE78PlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.MessageFrameEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.MessageFrameEncoder.html",
+          "hash": "m9hm53ZfKfeiM8wlVGVoGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.MessageHandlerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.MessageHandlerAttribute.html",
+          "hash": "34p1Nic4ggK9FuOl9+3pcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.MessageHeaderDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.MessageHeaderDecoder.html",
+          "hash": "dTko8b8O/L5c7dgL8WTevQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.MessageProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.MessageProvider.html",
+          "hash": "HumsOwT5mmBU574x+9AwRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.MessagesModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.MessagesModule.html",
+          "hash": "OwunkukV1cIuhSwH5pv0qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Models.ProtoFieldCodec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Models.ProtoFieldCodec.html",
+          "hash": "yeWGyxX/7DQrh1kD1SJh3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Models.ProtoMessageCodec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Models.ProtoMessageCodec.html",
+          "hash": "ZfUW3hlfBo7184ZoV7d0xw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.Models.html",
+          "hash": "4XSLt4oyTvvL/O7jb1MLAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.ProtoEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.ProtoEncoder.html",
+          "hash": "VM7BCICEdPqJGu6ZdpIuTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.ProtoMessageCodecHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.ProtoMessageCodecHandler.html",
+          "hash": "Q8vmVRgTVHTs/hXwE7thFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.ProtoMessageExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.ProtoMessageExtensions.html",
+          "hash": "fObMvGvftnDf2qmgiBKMtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.ProtoMessageSender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.ProtoMessageSender.html",
+          "hash": "TUkx7hZQTsilpO2Cs/je1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Messages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Messages.html",
+          "hash": "byBoLZVfQVa7GAcan0W8qg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.Collision.CollisionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.Collision.CollisionManager.html",
+          "hash": "z+h40pN3r6O8IhQ3Se3VLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.Collision.CollisionModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.Collision.CollisionModule.html",
+          "hash": "sMFgNNccaUfnd6Zq10nM9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.Collision.CollisionUpdate.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.Collision.CollisionUpdate.Builder.html",
+          "hash": "+4nvuu0yxZdMv7wWaOvDHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.Collision.CollisionUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.Collision.CollisionUpdate.html",
+          "hash": "FWtMHTHwwIqKwg9EonNxyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.Collision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.Collision.html",
+          "hash": "U/clZqeODehmu28/dTbYHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.DynamicGameObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.DynamicGameObject.html",
+          "hash": "QVtYbHUCAnbluvDQtBgQhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.GameObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.GameObject.html",
+          "hash": "uhhhXSoS/a6e7TdhghQDQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.ObjectUpdateOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.ObjectUpdateOperation.html",
+          "hash": "tQmVz5WoGu8z5A1r201TmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.Region.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.Region.html",
+          "hash": "B365wOFwvBZYPYdrgcivhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.RegionModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.RegionModule.html",
+          "hash": "vOK10J+Z18gi6ZBiTLZwIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.RegionRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.RegionRepository.html",
+          "hash": "GPc0ojkxQfg9OXXYIvIaow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.RegionUpdateOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.RegionUpdateOperation.html",
+          "hash": "vvIxk9d9hSNKaNEghN1SvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.UpdateRegionListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.UpdateRegionListener.html",
+          "hash": "oV3UFxsYw0qjWTfXLcwMMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Region.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Region.html",
+          "hash": "GT4DZTuIt5QaJuMnm4xAWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Server.GameServerModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Server.GameServerModule.html",
+          "hash": "R/7E2T6+WL7tNvuwowrq0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Server.IO.EventLoop.BaseLoopGroupFactory.html",
+          "hash": "Oumorqymiskl2cyOpQaNCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Server.IO.EventLoop.GameServerEventLoopGroupFactory.html",
+          "hash": "waNOjU7Qq/IB8oBuyiGduw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Server.IO.EventLoop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Server.IO.EventLoop.html",
+          "hash": "5rJXl+462uD9FaJ0h983kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Server.IO.GameServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Server.IO.GameServer.html",
+          "hash": "9itybzafkmKl6wqaBbeWvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Server.IO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Server.IO.html",
+          "hash": "JysJ/A3yJB2djhTpYrCYzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.Server.html",
+          "hash": "9JRzAvkyjaeEVDnKz82zIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Interface.EmoteTabButtonsHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Interface.EmoteTabButtonsHandler.html",
+          "hash": "0aZjSzpJuS5ijBwbwsM0pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Interface.LogoutTabHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Interface.LogoutTabHandler.html",
+          "hash": "MsA1d7N0BPZmnlbfAZcNHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Interface.RunButtonsHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Interface.RunButtonsHandler.html",
+          "hash": "GLRYNyjjS/njdcpOZOQZzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Interface.TabManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Interface.TabManager.html",
+          "hash": "SB92sntVczi3c1UXT6a9tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Interface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Interface.html",
+          "hash": "FbFKqFnsuxY9Zkh3ge4FdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Decoders.WalkingQueueMessageDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Decoders.WalkingQueueMessageDecoder.html",
+          "hash": "J0JwsNhvD+RqfTa6RtxIyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Decoders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Decoders.html",
+          "hash": "2EVTCiCaR+TT8ZT7kVPztQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders.GroupedRegionUpdateMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders.GroupedRegionUpdateMessage.html",
+          "hash": "ivX5zBMlbzLiMcQfqApBBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders.RemoveObjectMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders.RemoveObjectMessage.html",
+          "hash": "277yDPu706CFEQSVSmhJMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders.SendObjectMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders.SendObjectMessage.html",
+          "hash": "vyf/wa2aDlpCYckMDjtmfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Encoders.html",
+          "hash": "swd0Ssk2eM45n+SHb6YgRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers.CommandMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers.CommandMessageHandler.html",
+          "hash": "XVgODurq7APMDduoDnbSYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers.WalkingQueueMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers.WalkingQueueMessageHandler.html",
+          "hash": "KgWzUj7ae/UERdlc8Za/gQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Messages.Handlers.html",
+          "hash": "HEq55+3aa8nYd39SrltAvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Players.PlayerInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Players.PlayerInitializer.html",
+          "hash": "0gh7Qf0Q67OVpRIq5mRDOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Players.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.Players.html",
+          "hash": "E6UMVllV7HQlE9ehyfMDjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.ThreeOneSevenGameModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.ThreeOneSevenGameModule.html",
+          "hash": "4czsq3mj1TGNZW9K7JJZcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.Game.html",
+          "hash": "M0DHoV3C5MIWm7+8PAVztw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers.HandshakeDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers.HandshakeDecoder.html",
+          "hash": "CnjfkzKaWCtlVu5M8+O2FQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers.LoginDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers.LoginDecoder.html",
+          "hash": "rrxWDG8mr7g/Mh/r/pNQ9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers.LoginEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers.LoginEncoder.html",
+          "hash": "FyxGNdkRiAZunG+SThyoAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers.LoginProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers.LoginProvider.html",
+          "hash": "xS65FaLR/o8aHKiVmo4sUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Handlers.html",
+          "hash": "I2dWPxWa8og2aN/zO+J9fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.HandshakeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.HandshakeType.html",
+          "hash": "EKaPCnbySw/UHuQqRxRH+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.LoginProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.LoginProcessor.html",
+          "hash": "rZYidAqyDYGQPX4L83bmXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Rs2LoginResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.Rs2LoginResponse.html",
+          "hash": "OPzUNTbT+ak4E6rJLzQXFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.ThreeOneSevenLoginModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.ThreeOneSevenLoginModule.html",
+          "hash": "ZN5r/GyqibELjxdL9zxJ3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.ThreeOneSevenLoginStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.ThreeOneSevenLoginStatus.html",
+          "hash": "tjinD+oAIKIk+FFjbywrfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.LoginProtocol.html",
+          "hash": "OprY/sbQb84qRT6BL4tlNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Messages.PlayerSynchronizationMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Messages.PlayerSynchronizationMessage.html",
+          "hash": "va3Y9VhCimYvf/0MXRE2Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Messages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Messages.html",
+          "hash": "SWI3qUUGYTCep9HQyHHUoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.PlayerUpdater.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.PlayerUpdater.html",
+          "hash": "5HJLEywApiwwZWIWOIosbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.AddPlayerSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.AddPlayerSegment.html",
+          "hash": "G/jxED8Iapl8UrAeuHCwpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.MovementSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.MovementSegment.html",
+          "hash": "e67sXyo4GzWDyD4LzTYU/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.RemoveMobSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.RemoveMobSegment.html",
+          "hash": "1jCjBClCx3DWIu64uG6Z4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.SegmentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.SegmentType.html",
+          "hash": "vMSxvMhUKM3b4B+rb05ARg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.SynchronizationSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.SynchronizationSegment.html",
+          "hash": "GXWzb6IlAT24t6QtCYkWSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.TeleportSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.TeleportSegment.html",
+          "hash": "tKCTz8DtCd5GKNYpn7AoPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.Segments.html",
+          "hash": "yHOr0ggxOyVcCG3L9gCxYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.ThreeOneSevenUpdatingModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.ThreeOneSevenUpdatingModule.html",
+          "hash": "a9vsUEyjauOvs9DOigqzrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.ThreeOneSeven.World.Updating.html",
+          "hash": "LJGogz+qV+x7Ki3JkEqn8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.World.PlayerEntityList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.World.PlayerEntityList.html",
+          "hash": "hnY2JGNtOENvpH0neKdpuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.World.World.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.World.World.html",
+          "hash": "kjXYwaidsneNpTnb8oyXhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.World.WorldModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.World.WorldModule.html",
+          "hash": "72nhxgQn5dcrqxrIqMR0+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.Modules.World.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.Modules.World.html",
+          "hash": "WLzxwm6cCjrCDImEvDKRNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NetScape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NetScape.html",
+          "hash": "ZSyzxtpH/CGZTU42OIvyOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "PtMSuL6RIPR5MRl0i1+JNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "axepYL+ZcRAwbnuCj7nSNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "5El0u9fCgt/8tcekOuGAEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 295,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
