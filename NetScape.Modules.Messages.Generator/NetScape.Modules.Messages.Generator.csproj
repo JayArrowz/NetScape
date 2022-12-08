@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <!-- Generator dependencies -->
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" GeneratePathProperty="true" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" GeneratePathProperty="true" PrivateAssets="all" />
     <ProjectReference Include="..\NetScape.Modules.Messages.Builder\NetScape.Modules.Messages.Builder.csproj" GeneratePathProperty="true" PrivateAssets="all" />
   </ItemGroup>
 
